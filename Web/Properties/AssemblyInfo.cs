@@ -7,6 +7,6 @@ using System.Runtime.CompilerServices;
 [assembly: ScriptAssembly("")]
 
 [assembly: AssemblyCompany("Erik Källén")]
-[assembly: AssemblyProduct("Saltarelle QUnit bindings")]
+[assembly: AssemblyProduct("Saltarelle Web bindings")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
