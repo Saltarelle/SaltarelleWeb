@@ -51,6 +51,7 @@ Task Build-NuGetPackages -Depends Determine-Version, Build-Solution {
 	</metadata>
 	<files>
 		<file src="$baseDir\License.txt" target=""/>
+		<file src="$baseDir\history.txt" target=""/>
 		<file src="$baseDir\Web\bin\Saltarelle.Web.dll" target="lib"/>
 		<file src="$baseDir\Web\bin\Saltarelle.Web.xml" target="lib"/>
 	</files>
