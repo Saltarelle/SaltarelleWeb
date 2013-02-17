@@ -60,9 +60,9 @@ namespace System.Html {
         }
 
         [IntrinsicProperty]
-        public string Detail {
+        public int Detail {
             get {
-                return null;
+                return 0;
             }
         }
 
