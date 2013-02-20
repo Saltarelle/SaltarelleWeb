@@ -12,8 +12,11 @@ namespace System.Html.Media.Graphics.WebGL
 	[IgnoreNamespace, Imported]
 	public class WebGLActiveInfo
 	{
-		public readonly int size;
-		public readonly long type;
-		public readonly string name;
+		[ScriptName("size")]
+		public int Size;
+		[ScriptName("type")]
+		public long Type;
+		[ScriptName("name")]
+		public string Name;
 	}
 }

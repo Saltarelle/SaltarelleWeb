@@ -317,7 +317,7 @@ namespace System.Html.Media.Graphics
 		[PreserveCase] public readonly int BROWSER_DEFAULT_WEBGL = 0x9244;
 
 		//[WebGLHandlesContextLoss]
-		public Dictionary<string, bool> getContextAttributes()
+		public WebGLContextAttributes getContextAttributes()
 		{
 			return null;
 		}

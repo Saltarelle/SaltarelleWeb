@@ -5,28 +5,28 @@
 // Added by Delta Engine for Web Support - see http://deltaengine.net
 //
 
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL
 {
-	[IgnoreNamespace]
-	public static class WebGLContextAttributes
+	[IgnoreNamespace, Imported, Serializable]
+	public class WebGLContextAttributes
 	{
-		[InlineCode(
-			"{{alpha: {alpha}, depth: {depth}, stencil: {stencil}, antialias: {antialias}, premultipliedAlpha: {premultipliedAlpha}, preserveDrawingBuffer: {preserveDrawingBuffer}}}"
-			)]
-		public static Dictionary<string, bool> Get(bool alpha, bool depth, bool stencil,
-		                                           bool antialias, bool premultipliedAlpha, bool preserveDrawingBuffer)
+		public WebGLContextAttributes(bool alpha, bool depth, bool stencil,
+		                              bool antialias, bool premultipliedAlpha, bool preserveDrawingBuffer)
 		{
-			var result = new Dictionary<string, bool>();
-			result.Add("alpha", alpha);
-			result.Add("depth", depth);
-			result.Add("stencil", stencil);
-			result.Add("antialias", antialias);
-			result.Add("premultipliedAlpha", premultipliedAlpha);
-			result.Add("preserveDrawingBuffer", preserveDrawingBuffer);
-			return result;
 		}
+
+		[ScriptName("alpha")] public bool Alpha;
+
+		[ScriptName("depth")] public bool Depth;
+
+		[ScriptName("stencil")] public bool Stencil;
+
+		[ScriptName("antialias")] public bool AntiAlias;
+
+		[ScriptName("premultipliedAlpha")] public bool PremultipliedAlpha;
+
+		[ScriptName("preserveDrawingBuffer")] public bool PreserveDrawingBuffer;
 	}
 }

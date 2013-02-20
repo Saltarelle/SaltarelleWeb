@@ -12,9 +12,11 @@ namespace System.Html.Media.Graphics.WebGL
 	[IgnoreNamespace, Imported]
 	public class ArrayBuffer
 	{
-		public readonly uint byteLength;
+		[ScriptName("byteLength")]
+		public uint ByteLength;
 
-		private ArrayBuffer slice(long begin, long end = 0)
+		[ScriptName("slice")]
+		private ArrayBuffer Slice(long begin, long end = 0)
 		{
 			return new ArrayBuffer();
 		}

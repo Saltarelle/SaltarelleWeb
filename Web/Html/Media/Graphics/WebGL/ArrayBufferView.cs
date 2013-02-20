@@ -12,8 +12,11 @@ namespace System.Html.Media.Graphics.WebGL
 	[IgnoreNamespace, Imported]
 	public class ArrayBufferView
 	{
-		public readonly ArrayBuffer buffer;
-		public readonly uint byteOffset;
-		public readonly uint byteLength;
+		[ScriptName("buffer")]
+		public ArrayBuffer Buffer;
+		[ScriptName("byteOffset")]
+		public uint ByteOffset;
+		[ScriptName("byteLength")]
+		public uint ByteLength;
 	}
 }

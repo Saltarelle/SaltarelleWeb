@@ -12,8 +12,11 @@ namespace System.Html.Media.Graphics.WebGL
 	[IgnoreNamespace, Imported]
 	public class WebGLShaderPrecisionFormat
 	{
-		public readonly int rangeMin;
-		public readonly int rangeMax;
-		public readonly int precision;
+		[ScriptName("rangeMin")]
+		public int RangeMin;
+		[ScriptName("rangeMax")]
+		public int RangeMax;
+		[ScriptName("precision")]
+		public int Precision;
 	}
 }
