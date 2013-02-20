@@ -4,6 +4,7 @@
 //
 
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Html.Media.Graphics;
 
@@ -36,6 +37,10 @@ namespace System.Html {
         }
 
         public CanvasContext GetContext(string contextID) {
+            return null;
+        }
+
+        public CanvasContext GetContext(string contextID, Dictionary<string, bool> attributes) {
             return null;
         }
 
