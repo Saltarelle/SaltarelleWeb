@@ -13,7 +13,10 @@ namespace System.Html.Media.Graphics.WebGL
 	/// The WebGLUniformLocation interface represents the location of a uniform variable in a shader program.
 	/// </summary>
 	[IgnoreNamespace, Imported]
-	public interface WebGLUniformLocation : WebGLObject
+	public class WebGLUniformLocation : WebGLObject
 	{
+		private WebGLUniformLocation()
+		{
+		}
 	}
 }

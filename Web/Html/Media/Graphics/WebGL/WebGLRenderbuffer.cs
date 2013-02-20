@@ -16,7 +16,10 @@ namespace System.Html.Media.Graphics.WebGL
 	/// calling glDeleteRenderbuffers.
 	/// </summary>
 	[IgnoreNamespace, Imported]
-	public interface WebGLRenderbuffer : WebGLObject
+	public class WebGLRenderbuffer : WebGLObject
 	{
+		private WebGLRenderbuffer()
+		{
+		}
 	}
 }

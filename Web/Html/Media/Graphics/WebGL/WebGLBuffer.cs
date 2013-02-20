@@ -16,7 +16,10 @@ namespace System.Html.Media.Graphics.WebGL
 	/// by calling glDeleteBuffers.
 	/// </summary>
 	[IgnoreNamespace, Imported]
-	public interface WebGLBuffer : WebGLObject
+	public class WebGLBuffer : WebGLObject
 	{
+		private WebGLBuffer()
+		{
+		}
 	}
 }

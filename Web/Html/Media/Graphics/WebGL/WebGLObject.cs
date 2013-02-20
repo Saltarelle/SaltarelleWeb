@@ -13,7 +13,7 @@ namespace System.Html.Media.Graphics.WebGL
 	/// The WebGLObject interface is the parent interface for all GL objects.
 	/// </summary>
 	[IgnoreNamespace, Imported]
-	public interface WebGLObject
+	public abstract class WebGLObject
 	{
 	}
 }

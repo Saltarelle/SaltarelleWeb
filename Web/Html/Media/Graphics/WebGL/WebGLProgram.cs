@@ -16,7 +16,10 @@ namespace System.Html.Media.Graphics.WebGL
 	/// by calling glDeleteProgram.
 	/// </summary>
 	[IgnoreNamespace, Imported]
-	public interface WebGLProgram : WebGLObject
+	public class WebGLProgram : WebGLObject
 	{
+		private WebGLProgram()
+		{
+		}
 	}
 }

@@ -16,7 +16,10 @@ namespace System.Html.Media.Graphics.WebGL
 	/// by calling glDeleteFramebuffers.
 	/// </summary>
 	[IgnoreNamespace, Imported]
-	public interface WebGLFramebuffer : WebGLObject
+	public class WebGLFramebuffer : WebGLObject
 	{
+		private WebGLFramebuffer()
+		{
+		}
 	}
 }

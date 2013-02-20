@@ -16,7 +16,10 @@ namespace System.Html.Media.Graphics.WebGL
 	/// by calling glDeleteTextures.
 	/// </summary>
 	[IgnoreNamespace, Imported]
-	public interface WebGLTexture : WebGLObject
+	public class WebGLTexture : WebGLObject
 	{
+		private WebGLTexture()
+		{
+		}
 	}
 }

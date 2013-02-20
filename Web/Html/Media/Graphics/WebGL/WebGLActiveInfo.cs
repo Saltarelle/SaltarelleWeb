@@ -14,19 +14,25 @@ namespace System.Html.Media.Graphics.WebGL
 	/// from the getActiveAttrib and getActiveUniform calls.
 	/// </summary>
 	[IgnoreNamespace, Imported]
-	public interface WebGLActiveInfo
+	public class WebGLActiveInfo
 	{
+		private WebGLActiveInfo()
+		{
+		}
+
 		/// <summary>
 		/// The size of the requested variable.
 		/// </summary>
-		int Size { get; }
+		public int Size;
+
 		/// <summary>
 		/// The data type of the requested variable.
 		/// </summary>
-		long Type { get; }
+		public long Type;
+
 		/// <summary>
 		/// The name of the requested variable.
 		/// </summary>
-		string Name { get; }
+		public string Name;
 	}
 }

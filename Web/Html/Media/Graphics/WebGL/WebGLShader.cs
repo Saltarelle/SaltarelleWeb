@@ -16,7 +16,10 @@ namespace System.Html.Media.Graphics.WebGL
 	/// destroyed as if by calling glDeleteShader.
 	/// </summary>
 	[IgnoreNamespace, Imported]
-	public interface WebGLShader : WebGLObject
+	public class WebGLShader : WebGLObject
 	{
+		private WebGLShader()
+		{
+		}
 	}
 }
