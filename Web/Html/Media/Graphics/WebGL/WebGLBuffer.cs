@@ -9,8 +9,14 @@ using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL
 {
+	/// <summary>
+	/// The WebGLBuffer interface represents an OpenGL Buffer Object.
+	/// The underlying object is created as if by calling glGenBuffers,
+	/// bound as if by calling glBindBuffer and destroyed as if
+	/// by calling glDeleteBuffers.
+	/// </summary>
 	[IgnoreNamespace, Imported]
-	public class WebGLBuffer : WebGLObject
+	public interface WebGLBuffer : WebGLObject
 	{
 	}
 }

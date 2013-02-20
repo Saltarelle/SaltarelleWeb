@@ -9,14 +9,24 @@ using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL
 {
+	/// <summary>
+	/// The WebGLActiveInfo interface represents the information returned
+	/// from the getActiveAttrib and getActiveUniform calls.
+	/// </summary>
 	[IgnoreNamespace, Imported]
-	public class WebGLActiveInfo
+	public interface WebGLActiveInfo
 	{
-		[ScriptName("size")]
-		public int Size;
-		[ScriptName("type")]
-		public long Type;
-		[ScriptName("name")]
-		public string Name;
+		/// <summary>
+		/// The size of the requested variable.
+		/// </summary>
+		int Size { get; }
+		/// <summary>
+		/// The data type of the requested variable.
+		/// </summary>
+		long Type { get; }
+		/// <summary>
+		/// The name of the requested variable.
+		/// </summary>
+		string Name { get; }
 	}
 }

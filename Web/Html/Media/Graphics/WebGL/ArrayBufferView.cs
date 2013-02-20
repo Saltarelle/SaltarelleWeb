@@ -9,14 +9,25 @@ using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL
 {
+	/// <summary>
+	/// The ArrayBufferView type holds information shared among
+	/// all of the types of views of ArrayBuffers.
+	/// </summary>
 	[IgnoreNamespace, Imported]
 	public class ArrayBufferView
 	{
-		[ScriptName("buffer")]
+		/// <summary>
+		/// The ArrayBuffer that this ArrayBufferView references.
+		/// </summary>
 		public ArrayBuffer Buffer;
-		[ScriptName("byteOffset")]
+		/// <summary>
+		/// The offset of this ArrayBufferView from the start of
+		/// its ArrayBuffer, in bytes, as fixed at construction time.
+		/// </summary>
 		public uint ByteOffset;
-		[ScriptName("byteLength")]
+		/// <summary>
+		/// The length of the ArrayBufferView in bytes, as fixed at construction time.
+		/// </summary>
 		public uint ByteLength;
 	}
 }

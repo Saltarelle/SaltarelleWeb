@@ -9,8 +9,11 @@ using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL
 {
+	/// <summary>
+	/// The WebGLObject interface is the parent interface for all GL objects.
+	/// </summary>
 	[IgnoreNamespace, Imported]
-	public abstract class WebGLObject
+	public interface WebGLObject
 	{
 	}
 }

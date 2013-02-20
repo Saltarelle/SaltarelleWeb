@@ -9,16 +9,30 @@ using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL
 {
+	/// <summary>
+	/// The ArrayBuffer type describes a buffer used to store data for the array buffer views.
+	/// </summary>
 	[IgnoreNamespace, Imported]
 	public class ArrayBuffer
 	{
-		[ScriptName("byteLength")]
+		protected ArrayBuffer()
+		{
+		}
+
+		/// <summary>
+		/// The length of the ArrayBuffer in bytes, as fixed at construction time.
+		/// </summary>
 		public uint ByteLength;
 
-		[ScriptName("slice")]
-		private ArrayBuffer Slice(long begin, long end = 0)
+		/// <summary>
+		/// Returns a new ArrayBuffer whose contents are a copy of this
+		/// ArrayBuffer's bytes from begin, inclusive, up to end, exclusive.
+		/// If either begin or end is negative, it refers to an index from the
+		/// end of the array, as opposed to from the beginning.
+		/// </summary>
+		public ArrayBuffer Slice(long begin, long end = 0)
 		{
-			return new ArrayBuffer();
+			return null;
 		}
 	}
 }

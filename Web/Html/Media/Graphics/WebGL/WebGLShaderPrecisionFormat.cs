@@ -9,14 +9,27 @@ using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL
 {
+	/// <summary>
+	/// The WebGLShaderPrecisionFormat interface represents the information
+	/// returned from the getShaderPrecisionFormat call. 
+	/// </summary>
 	[IgnoreNamespace, Imported]
-	public class WebGLShaderPrecisionFormat
+	public interface WebGLShaderPrecisionFormat
 	{
-		[ScriptName("rangeMin")]
-		public int RangeMin;
-		[ScriptName("rangeMax")]
-		public int RangeMax;
-		[ScriptName("precision")]
-		public int Precision;
+		/// <summary>
+		/// The base 2 log of the absolute value of the minimum value
+		/// that can be represented.
+		/// </summary>
+		int RangeMin { get; }
+		/// <summary>
+		/// The base 2 log of the absolute value of the maximum value
+		/// that can be represented.
+		/// </summary>
+		int RangeMax { get; }
+		/// <summary>
+		/// The number of bits of precision that can be represented.
+		/// For integer formats this value is always 0.
+		/// </summary>
+		int Precision { get; }
 	}
 }
