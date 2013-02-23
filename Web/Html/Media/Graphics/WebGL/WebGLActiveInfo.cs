@@ -13,26 +13,25 @@ namespace System.Html.Media.Graphics.WebGL
 	/// The WebGLActiveInfo interface represents the information returned
 	/// from the getActiveAttrib and getActiveUniform calls.
 	/// </summary>
-	[IgnoreNamespace, Imported]
+	[Imported, Serializable]
 	public class WebGLActiveInfo
 	{
-		private WebGLActiveInfo()
-		{
+		private WebGLActiveInfo() {
 		}
 
 		/// <summary>
 		/// The size of the requested variable.
 		/// </summary>
-		public int Size;
+		public int Size { get; set; }
 
 		/// <summary>
 		/// The data type of the requested variable.
 		/// </summary>
-		public long Type;
+		public long Type { get; set; }
 
 		/// <summary>
 		/// The name of the requested variable.
 		/// </summary>
-		public string Name;
+		public string Name { get; set; }
 	}
 }

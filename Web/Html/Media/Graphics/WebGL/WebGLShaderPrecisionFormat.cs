@@ -13,7 +13,7 @@ namespace System.Html.Media.Graphics.WebGL
 	/// The WebGLShaderPrecisionFormat interface represents the information
 	/// returned from the getShaderPrecisionFormat call. 
 	/// </summary>
-	[IgnoreNamespace, Imported]
+	[Imported, Serializable]
 	public class WebGLShaderPrecisionFormat
 	{
 		private WebGLShaderPrecisionFormat()
@@ -24,18 +24,18 @@ namespace System.Html.Media.Graphics.WebGL
 		/// The base 2 log of the absolute value of the minimum value
 		/// that can be represented.
 		/// </summary>
-		public int RangeMin;
+		public int RangeMin { get; set; }
 
 		/// <summary>
 		/// The base 2 log of the absolute value of the maximum value
 		/// that can be represented.
 		/// </summary>
-		public int RangeMax;
+		public int RangeMax { get; set; }
 
 		/// <summary>
 		/// The number of bits of precision that can be represented.
 		/// For integer formats this value is always 0.
 		/// </summary>
-		public int Precision;
+		public int Precision { get; set; }
 	}
 }
