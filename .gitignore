@@ -2,3 +2,7 @@ bin
 Web.v11.suo
 obj
 Web/Properties/Version.cs
+*.ncrunchsolution
+*.ncrunchsolution.user
+*.ncrunchproject
+_ReSharper.Web

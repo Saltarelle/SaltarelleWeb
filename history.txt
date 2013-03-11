@@ -1,2 +1,6 @@
+2.1.0
+WebGL support (thanks to Marcel F and Delta Engine)
+Updated custom event signatures to match DOM specification (thanks to Michael Busby)
+
 2.0.0
 Initial version

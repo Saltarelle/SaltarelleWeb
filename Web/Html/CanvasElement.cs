@@ -3,14 +3,14 @@
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 //
 
-using System;
+using System.Html.Media.Graphics.WebGL;
 using System.Runtime.CompilerServices;
 using System.Html.Media.Graphics;
 
 namespace System.Html {
 
     [IgnoreNamespace]
-	[ScriptName("Element")]
+    [ScriptName("Element")]
     [Imported(ObeysTypeSystem = true)]
     public sealed class CanvasElement : Element {
 
@@ -36,6 +36,10 @@ namespace System.Html {
         }
 
         public CanvasContext GetContext(string contextID) {
+            return null;
+        }
+
+        public CanvasContext GetContext(string contextID, WebGLContextAttributes attributes) {
             return null;
         }
 
