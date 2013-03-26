@@ -88,6 +88,20 @@ namespace System.Html {
         }
 
         [IntrinsicProperty]
+        public int ClientX {
+            get {
+                return 0;
+            }
+        }
+
+        [IntrinsicProperty]
+        public int ClientY {
+            get {
+                return 0;
+            }
+        }
+
+        [IntrinsicProperty]
         public int OffsetX {
             get {
                 return 0;
