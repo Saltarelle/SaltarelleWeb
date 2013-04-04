@@ -13,26 +13,32 @@ namespace System.Html.Media.Graphics.WebGL
     [IgnoreNamespace, Imported]
     public class Float64Array : ArrayBufferView
     {
+        [ScriptName("")]
         public Float64Array(int length)
         {
         }
 
+        [ScriptName("")]
         public Float64Array(Float64Array array)
         {
         }
 
+        [ScriptName("")]
         public Float64Array(CSHARPTYPE[] values)
         {
         }
 
+        [ScriptName("")]
         public Float64Array(ArrayBuffer buffer)
         {
         }
 
+        [ScriptName("")]
         public Float64Array(ArrayBuffer buffer, int byteOffset)
         {
         }
 
+        [ScriptName("")]
         public Float64Array(ArrayBuffer buffer, int byteOffset, int length)
         {
         }

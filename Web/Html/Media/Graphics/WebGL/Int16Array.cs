@@ -13,26 +13,32 @@ namespace System.Html.Media.Graphics.WebGL
     [IgnoreNamespace, Imported]
     public class Int16Array : ArrayBufferView
     {
+        [ScriptName("")]
         public Int16Array(int length)
         {
         }
 
+        [ScriptName("")]
         public Int16Array(Int16Array array)
         {
         }
 
+        [ScriptName("")]
         public Int16Array(CSHARPTYPE[] values)
         {
         }
 
+        [ScriptName("")]
         public Int16Array(ArrayBuffer buffer)
         {
         }
 
+        [ScriptName("")]
         public Int16Array(ArrayBuffer buffer, int byteOffset)
         {
         }
 
+        [ScriptName("")]
         public Int16Array(ArrayBuffer buffer, int byteOffset, int length)
         {
         }

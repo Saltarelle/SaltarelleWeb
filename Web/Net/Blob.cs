@@ -8,14 +8,17 @@ namespace System.Net
     [IgnoreNamespace, Imported]
     public class Blob
     {
+        [ScriptName("")]
         public Blob()
         {
         }
 
+        [ScriptName("")]
         public Blob(Array parts)
         {
         }
 
+        [ScriptName("")]
         public Blob(Array parts, BlobPropertyBag properties)
         {
         }

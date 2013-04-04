@@ -17,26 +17,32 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
+        [ScriptName("")]
         public Uint8Array(int length)
         {
         }
 
+        [ScriptName("")]
         public Uint8Array(Uint8Array array)
         {
         }
 
+        [ScriptName("")]
         public Uint8Array(CSHARPTYPE[] values)
         {
         }
 
+        [ScriptName("")]
         public Uint8Array(ArrayBuffer buffer)
         {
         }
 
+        [ScriptName("")]
         public Uint8Array(ArrayBuffer buffer, int byteOffset)
         {
         }
 
+        [ScriptName("")]
         public Uint8Array(ArrayBuffer buffer, int byteOffset, int length)
         {
         }

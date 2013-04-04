@@ -9,30 +9,37 @@ namespace System.Html.Media.Graphics.WebGL
     [IgnoreNamespace, Imported]
     public class Uint8ClampedArray : Uint8Array
     {
+        [ScriptName("")]
         public Uint8ClampedArray(int length)
         {
         }
 
+        [ScriptName("")]
         public Uint8ClampedArray(Uint8ClampedArray array)
         {
         }
 
+        [ScriptName("")]
         public Uint8ClampedArray(Uint8Array array)
         {
         }
 
+        [ScriptName("")]
         public Uint8ClampedArray(CSHARPTYPE[] values)
         {
         }
 
+        [ScriptName("")]
         public Uint8ClampedArray(ArrayBuffer buffer)
         {
         }
 
+        [ScriptName("")]
         public Uint8ClampedArray(ArrayBuffer buffer, int byteOffset)
         {
         }
 
+        [ScriptName("")]
         public Uint8ClampedArray(ArrayBuffer buffer, int byteOffset, int length)
         {
         }

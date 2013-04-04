@@ -13,26 +13,32 @@ namespace System.Html.Media.Graphics.WebGL
 	[IgnoreNamespace, Imported]
 	public class Int8Array : ArrayBufferView
 	{
+        [ScriptName("")]
         public Int8Array(int length)
         {
         }
 
+        [ScriptName("")]
         public Int8Array(Int8Array array)
         {
         }
 
+        [ScriptName("")]
         public Int8Array(CSHARPTYPE[] values)
 		{
 		}
 
+        [ScriptName("")]
         public Int8Array(ArrayBuffer buffer)
         {
         }
 
+        [ScriptName("")]
         public Int8Array(ArrayBuffer buffer, int byteOffset)
         {
         }
 
+        [ScriptName("")]
         public Int8Array(ArrayBuffer buffer, int byteOffset, int length)
         {
         }

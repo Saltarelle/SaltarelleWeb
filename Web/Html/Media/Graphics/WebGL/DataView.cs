@@ -8,14 +8,17 @@ namespace System.Html.Media.Graphics.WebGL
     [IgnoreNamespace, Imported]
     public class DataView : ArrayBufferView
     {
+        [ScriptName("")]
         public DataView(ArrayBuffer buffer)
         {
         }
 
+        [ScriptName("")]
         public DataView(ArrayBuffer buffer, uint byteOffset)
         {
         }
 
+        [ScriptName("")]
         public DataView(ArrayBuffer buffer, uint byteOffset, uint byteLength)
         {
         }
