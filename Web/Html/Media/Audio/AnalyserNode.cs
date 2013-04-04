@@ -62,13 +62,13 @@ namespace System.Html.Media.Audio
         /// The size of the FFT used for frequency-domain analysis. This must be a power of two.
         /// </summary>
         [IntrinsicProperty]
-        public ulong FftSize { get; set; }
+        public uint FftSize { get; set; }
 
         /// <summary>
         /// Half the FFT size.
         /// </summary>
         [IntrinsicProperty]
-        public ulong FrequencyBinCount { get; private set; }
+        public uint FrequencyBinCount { get; private set; }
 
         /// <summary>
         /// The minimum power value in the scaling range for the FFT analysis data 

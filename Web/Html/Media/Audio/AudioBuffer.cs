@@ -34,7 +34,7 @@ namespace System.Html.Media.Audio
         /// Length of the PCM audio data in sample-frames.
         /// </summary>
         [IntrinsicProperty]
-        public long Length { get; private set; }
+        public int Length { get; private set; }
 
         /// <summary>
         /// Duration of the PCM audio data in seconds.
@@ -46,7 +46,7 @@ namespace System.Html.Media.Audio
         /// The number of discrete audio channels.
         /// </summary>
         [IntrinsicProperty]
-        public long NumberOfChannels { get; private set; }
+        public int NumberOfChannels { get; private set; }
 
         /// <summary>
         /// Returns the Float32Array representing the PCM audio data for the specific channel.
@@ -55,7 +55,7 @@ namespace System.Html.Media.Audio
         /// channel to get data for. An index value of 0 represents the first channel. This 
         /// index value MUST be less than numberOfChannels or an exception will be thrown.</param>
         /// <returns>The Float32Array filled with the PCM audio data for the requested channel.</returns>
-        public Float32Array GetChannelData(ulong channel)
+        public Float32Array GetChannelData(uint channel)
         {
             return null;
         }

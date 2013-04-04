@@ -72,7 +72,7 @@ namespace System.Html.Media.Audio
         /// The number of AudioBufferSourceNodes that are currently playing.
         /// </summary>
         [IntrinsicProperty]
-        public ulong ActiveSourceCount { get; private set; }
+        public uint ActiveSourceCount { get; private set; }
 
         /// <summary>
         /// Creates an AudioBuffer of the given size. The audio data in the buffer will be zero-initialized 
@@ -85,7 +85,7 @@ namespace System.Html.Media.Audio
         /// data in the buffer in sample-frames per second. An implementation must support sample-rates in at 
         /// least the range 22050 to 96000.</param>
         /// <returns>Returns the newly created AudioBuffer object.</returns>
-        public AudioBuffer CreateBuffer(ulong numberOfChannels, ulong length, float sampleRate)
+        public AudioBuffer CreateBuffer(uint numberOfChannels, uint length, float sampleRate)
         {
             return null;
         }
@@ -178,7 +178,7 @@ namespace System.Html.Media.Audio
         /// values will be necessary to avoid audio breakup and glitches. The value chosen must carefully balance 
         /// between latency and audio quality.</param>
         /// <returns>The newly created ScriptProcessorNode object.</returns>
-        public ScriptProcessorNode CreateScriptProcessor(ulong bufferSize)
+        public ScriptProcessorNode CreateScriptProcessor(uint bufferSize)
         {
             return null;
         }
@@ -196,7 +196,7 @@ namespace System.Html.Media.Audio
         /// <param name="numberOfInputChannels">The numberOfInputChannels parameter (defaults to 2) and determines 
         /// the number of channels for this node's input. Values of up to 32 must be supported.</param>
         /// <returns>The newly created ScriptProcessorNode object.</returns>
-        public ScriptProcessorNode CreateScriptProcessor(ulong bufferSize, ulong numberOfInputChannels)
+        public ScriptProcessorNode CreateScriptProcessor(uint bufferSize, uint numberOfInputChannels)
         {
             return null;
         }
@@ -216,7 +216,7 @@ namespace System.Html.Media.Audio
         /// <param name="numberOfOutputChannels">The numberOfOutputChannels parameter (defaults to 2) and determines 
         /// the number of channels for this node's output. Values of up to 32 must be supported.</param>
         /// <returns>The newly created ScriptProcessorNode object.</returns>
-        public ScriptProcessorNode CreateScriptProcessor(ulong bufferSize, ulong numberOfInputChannels, ulong numberOfOutputChannels)
+        public ScriptProcessorNode CreateScriptProcessor(uint bufferSize, uint numberOfInputChannels, uint numberOfOutputChannels)
         {
             return null;
         }
@@ -317,7 +317,7 @@ namespace System.Html.Media.Audio
         /// <param name="numberOfOutputs">The numberOfOutputs parameter determines
         /// the number of outputs. Values of up to 32 must be supported.</param>
         /// <returns>The newly created ChannelSplitterNode object.</returns>
-        public ChannelSplitterNode CreateChannelSplitter(ulong numberOfOutputs)
+        public ChannelSplitterNode CreateChannelSplitter(uint numberOfOutputs)
         {
             return null;
         }
@@ -339,7 +339,7 @@ namespace System.Html.Media.Audio
         /// <param name="numberOfInputs">The numberOfInputs parameter determines the 
         /// number of inputs. Values of up to 32 must be supported.</param>
         /// <returns>The newly created ChannelMergerNode object.</returns>
-        public ChannelMergerNode CreateChannelMerger(ulong numberOfInputs)
+        public ChannelMergerNode CreateChannelMerger(uint numberOfInputs)
         {
             return null;
         }

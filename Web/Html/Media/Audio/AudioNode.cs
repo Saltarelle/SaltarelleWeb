@@ -36,7 +36,7 @@ namespace System.Html.Media.Audio
         /// <param name="destination">The destination parameter is the AudioNode to connect to.</param>
         /// <param name="output">The output parameter is an index describing which output of the AudioNode 
         /// from which to connect. An out-of-bound value throws an exception.</param>
-        public void Connect(AudioNode destination, ulong output)
+        public void Connect(AudioNode destination, uint output)
         {
         }
 
@@ -48,7 +48,7 @@ namespace System.Html.Media.Audio
         /// from which to connect. An out-of-bound value throws an exception.</param>
         /// <param name="input">The input parameter is an index describing which input of the destination
         /// AudioNode to connect to. An out-of-bound value throws an exception.</param>
-        public void Connect(AudioNode destination, ulong output, ulong input)
+        public void Connect(AudioNode destination, uint output, uint input)
         {
         }
 
@@ -66,7 +66,7 @@ namespace System.Html.Media.Audio
         /// <param name="destination">The destination parameter is the AudioParam to connect to.</param>
         /// <param name="output">The output parameter is an index describing which output of the AudioNode
         /// from which to connect. An out-of-bound value throws an exception.</param>
-        public void Connect(AudioParam destination, ulong output)
+        public void Connect(AudioParam destination, uint output)
         {
         }
 
@@ -82,7 +82,7 @@ namespace System.Html.Media.Audio
         /// </summary>
         /// <param name="output">The output parameter is an index describing which output of the 
         /// AudioNode to disconnect. An out-of-bound value throws an exception.</param>
-        public void Disconnect(ulong output)
+        public void Disconnect(uint output)
         {
         }
 
@@ -96,12 +96,12 @@ namespace System.Html.Media.Audio
         /// The number of inputs feeding into the AudioNode. This will be 0 for an AudioSourceNode.
         /// </summary>
         [IntrinsicProperty]
-        public ulong NumberOfInputs { get; private set; }
+        public uint NumberOfInputs { get; private set; }
 
         /// <summary>
         /// The number of outputs coming out of the AudioNode. This will be 0 for an AudioDestinationNode.
         /// </summary>
         [IntrinsicProperty]
-        public ulong NumberOfOutputs { get; private set; }
+        public uint NumberOfOutputs { get; private set; }
     }
 }

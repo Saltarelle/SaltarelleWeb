@@ -36,7 +36,7 @@ namespace System.Html.Media.Audio
         /// changed. This will be the case for an AudioDestinationNode in an OfflineAudioContext.
         /// </summary>
         [IntrinsicProperty]
-        public ulong MaxNumberOfChannels { get; private set; }
+        public uint MaxNumberOfChannels { get; private set; }
 
         /// <summary>
         /// The number of channels of the destination's input. This value will default to 2, and may 
@@ -46,6 +46,6 @@ namespace System.Html.Media.Audio
         /// to 8, and render 8-channels of output.
         /// </summary>
         [IntrinsicProperty]
-        ulong NumberOfChannels { get; set; }
+        uint NumberOfChannels { get; set; }
     }
 }

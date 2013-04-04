@@ -28,7 +28,7 @@ namespace System.Html.Media.Audio
         /// of channels to render to.</param>
         /// <param name="length">The length parameter specifies the number of samples to render.</param>
         /// <param name="sampleRate">The sampleRate parameter specifies the sample rate to render with.</param>
-        public OfflineAudioContext(ulong numberOfChannels, ulong length, float sampleRate)
+        public OfflineAudioContext(uint numberOfChannels, uint length, float sampleRate)
         {
         }
 
