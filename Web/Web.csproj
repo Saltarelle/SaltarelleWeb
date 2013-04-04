@@ -68,8 +68,6 @@
     <Compile Include="Html\Media\Audio\ChannelMergerNode.cs" />
     <Compile Include="Html\Media\Audio\ChannelSplitterNode.cs" />
     <Compile Include="Html\Media\Audio\ConvolverNode.cs" />
-    <Compile Include="Html\Media\Audio\DecodeErrorCallback.cs" />
-    <Compile Include="Html\Media\Audio\DecodeSuccessCallback.cs" />
     <Compile Include="Html\Media\Audio\DelayNode.cs" />
     <Compile Include="Html\Media\Audio\DistanceModelType.cs" />
     <Compile Include="Html\Media\Audio\DynamicsCompressorNode.cs" />
@@ -77,7 +75,6 @@
     <Compile Include="Html\Media\Audio\MediaElementAudioSourceNode.cs" />
     <Compile Include="Html\Media\Audio\MediaStreamAudioSourceNode.cs" />
     <Compile Include="Html\Media\Audio\OfflineAudioContext.cs" />
-    <Compile Include="Html\Media\Audio\OfflineRenderSuccessCallback.cs" />
     <Compile Include="Html\Media\Audio\OscillatorNode.cs" />
     <Compile Include="Html\Media\Audio\OscillatorNodePlaybackState.cs" />
     <Compile Include="Html\Media\Audio\OscillatorType.cs" />

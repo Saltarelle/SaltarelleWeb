@@ -13,6 +13,7 @@ using System.Text;
 namespace System.Html.Media.Audio
 {
     [NamedValues]
+    [IgnoreNamespace, Imported]
     public enum DistanceModelType
     {
         [ScriptName("linear")]

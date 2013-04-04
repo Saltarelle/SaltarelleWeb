@@ -12,6 +12,7 @@ using System.Text;
 namespace System.Html.Media.Audio
 {
     [NumericValues]
+    [IgnoreNamespace, Imported]
     public enum AudioBufferSourceNodePlaybackState : ushort
     {
         UnscheduledState = 0,

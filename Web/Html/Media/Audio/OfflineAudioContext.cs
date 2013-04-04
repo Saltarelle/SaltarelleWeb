@@ -45,6 +45,6 @@ namespace System.Html.Media.Audio
         /// </summary>
         [IntrinsicProperty]
         [ScriptName("oncomplete")]
-        public OfflineRenderSuccessCallback OnComplete { get; set; }
+        public Action<AudioBuffer> OnComplete { get; set; }
     }
 }

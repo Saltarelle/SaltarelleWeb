@@ -114,7 +114,7 @@ namespace System.Html.Media.Audio
         /// <param name="successCallback">successCallback is a callback function which will be invoked when the 
         /// decoding is finished. The single argument to this callback is an AudioBuffer representing the decoded 
         /// PCM audio data.</param>
-        public void DecodeAudioData(ArrayBuffer audioData, DecodeSuccessCallback successCallback)
+        public void DecodeAudioData(ArrayBuffer audioData, Action<AudioBuffer> successCallback)
         {
         }
 
@@ -129,7 +129,7 @@ namespace System.Html.Media.Audio
         /// PCM audio data.</param>
         /// <param name="errorCallback">errorCallback is a callback function which will be invoked if there is 
         /// an error decoding the audio file data.</param>
-        public void DecodeAudioData(ArrayBuffer audioData, DecodeSuccessCallback successCallback, DecodeErrorCallback errorCallback)
+        public void DecodeAudioData(ArrayBuffer audioData, Action<AudioBuffer> successCallback, Action errorCallback)
         {
         }
 
