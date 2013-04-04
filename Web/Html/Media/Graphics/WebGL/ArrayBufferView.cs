@@ -19,15 +19,20 @@ namespace System.Html.Media.Graphics.WebGL
 		/// <summary>
 		/// The ArrayBuffer that this ArrayBufferView references.
 		/// </summary>
-		public ArrayBuffer Buffer;
+        [IntrinsicProperty]
+        public ArrayBuffer Buffer { get; private set; }
+
 		/// <summary>
 		/// The offset of this ArrayBufferView from the start of
 		/// its ArrayBuffer, in bytes, as fixed at construction time.
 		/// </summary>
-		public uint ByteOffset;
+        [IntrinsicProperty]
+        public uint ByteOffset { get; private set; }
+
 		/// <summary>
 		/// The length of the ArrayBufferView in bytes, as fixed at construction time.
 		/// </summary>
-		public uint ByteLength;
+        [IntrinsicProperty]
+        public uint ByteLength { get; private set; }
 	}
 }
