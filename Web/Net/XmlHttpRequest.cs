@@ -47,6 +47,22 @@ namespace System.Net {
         }
 
         [IntrinsicProperty]
+        public string ResponseType {
+            get {
+                return null;
+            }
+            set {
+            }
+        }
+
+        [IntrinsicProperty]
+        public object Response {
+            get {
+                return null;
+            }
+        }
+
+        [IntrinsicProperty]
         public int Status {
             get {
                 return 0;
@@ -57,6 +73,24 @@ namespace System.Net {
         public string StatusText {
             get {
                 return null;
+            }
+        }
+
+        [IntrinsicProperty]
+        public uint Timeout {
+            get {
+                return 0;
+            }
+            set {
+            }
+        }
+
+        [IntrinsicProperty]
+        public bool WithCredentials {
+            get {
+                return false;
+            }
+            set {
             }
         }
 
@@ -87,6 +121,9 @@ namespace System.Net {
         }
 
         public void Open(HttpVerb verb, string url, bool @async, string userName, string password) {
+        }
+
+        public void OverrideMimeType(string mimetype) {
         }
 
         public void Send() {

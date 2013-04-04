@@ -6,14 +6,83 @@
 //
 
 using System.Runtime.CompilerServices;
+using CSHARPTYPE = System.Int16;
 
 namespace System.Html.Media.Graphics.WebGL
 {
-	[IgnoreNamespace, Imported]
-	public class Int16Array : ArrayBuffer
-	{
-		public Int16Array(short[] values)
-		{
-		}
-	}
+    [IgnoreNamespace, Imported]
+    public class Int16Array : ArrayBufferView
+    {
+        [ScriptName("")]
+        public Int16Array(int length)
+        {
+        }
+
+        [ScriptName("")]
+        public Int16Array(Int16Array array)
+        {
+        }
+
+        [ScriptName("")]
+        public Int16Array(CSHARPTYPE[] values)
+        {
+        }
+
+        [ScriptName("")]
+        public Int16Array(ArrayBuffer buffer)
+        {
+        }
+
+        [ScriptName("")]
+        public Int16Array(ArrayBuffer buffer, int byteOffset)
+        {
+        }
+
+        [ScriptName("")]
+        public Int16Array(ArrayBuffer buffer, int byteOffset, int length)
+        {
+        }
+
+        public static int BytesPerElement
+        {
+            [InlineCode("Int16Array.BYTES_PER_ELEMENT")]
+            get;
+            private set;
+        }
+
+        public int Length { get; private set; }
+
+        [IntrinsicProperty]
+        public CSHARPTYPE this[int index]
+        {
+            get { return default(CSHARPTYPE); }
+            set { }
+        }
+
+        public void Set(Int16Array array)
+        {
+        }
+
+        public void Set(Int16Array array, int offset)
+        {
+        }
+
+        public void Set(CSHARPTYPE[] array)
+        {
+        }
+
+        public void Set(CSHARPTYPE[] array, int offset)
+        {
+        }
+
+        public Int16Array Subarray(int begin)
+        {
+            return null;
+        }
+
+        public Int16Array Subarray(int begin, int end)
+        {
+            return null;
+        }
+    }
 }
