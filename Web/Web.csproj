@@ -196,6 +196,8 @@
     <Compile Include="Html\Media\Filters\VisualTransitionState.cs" />
     <Compile Include="Html\Window.cs" />
     <Compile Include="Html\WindowInstance.cs" />
+    <Compile Include="Net\Blob.cs" />
+    <Compile Include="Net\BlobPropertyBag.cs" />
     <Compile Include="Net\HttpVerb.cs" />
     <Compile Include="Net\ReadyState.cs" />
     <Compile Include="Net\XmlHttpRequest.cs" />
@@ -217,7 +219,6 @@
     <Reference Include="mscorlib">
       <HintPath>$(SolutionDir)packages\Saltarelle.Runtime.2.0.0\tools\Assemblies\mscorlib.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Html\Media\Audio\Readme.txt" />
