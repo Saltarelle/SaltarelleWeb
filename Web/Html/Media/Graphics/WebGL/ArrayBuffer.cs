@@ -15,7 +15,7 @@ namespace System.Html.Media.Graphics.WebGL
 	[IgnoreNamespace, Imported]
 	public class ArrayBuffer
 	{
-		protected ArrayBuffer()
+		public ArrayBuffer(uint byteLength)
 		{
 		}
 
