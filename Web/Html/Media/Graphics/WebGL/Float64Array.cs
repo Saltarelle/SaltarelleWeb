@@ -13,7 +13,7 @@ namespace System.Html.Media.Graphics.WebGL
     [IgnoreNamespace, Imported]
     public class Float64Array : ArrayBufferView
     {
-        public Float64Array(uint length)
+        public Float64Array(int length)
         {
         }
 
@@ -29,25 +29,25 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public Float64Array(ArrayBuffer buffer, uint byteOffset)
+        public Float64Array(ArrayBuffer buffer, int byteOffset)
         {
         }
 
-        public Float64Array(ArrayBuffer buffer, uint byteOffset, uint length)
+        public Float64Array(ArrayBuffer buffer, int byteOffset, int length)
         {
         }
 
-        public static uint BytesPerElement
+        public static int BytesPerElement
         {
             [InlineCode("Float64Array.BYTES_PER_ELEMENT")]
             get;
             private set;
         }
 
-        public uint Length { get; private set; }
+        public int Length { get; private set; }
 
         [IntrinsicProperty]
-        public CSHARPTYPE this[uint index]
+        public CSHARPTYPE this[int index]
         {
             get { return default(CSHARPTYPE); }
             set { }
@@ -57,7 +57,7 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(Float64Array array, uint offset)
+        public void Set(Float64Array array, int offset)
         {
         }
 
@@ -65,7 +65,7 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(CSHARPTYPE[] array, uint offset)
+        public void Set(CSHARPTYPE[] array, int offset)
         {
         }
 

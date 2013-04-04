@@ -9,7 +9,7 @@ namespace System.Html.Media.Graphics.WebGL
     [IgnoreNamespace, Imported]
     public class Uint8ClampedArray : Uint8Array
     {
-        public Uint8ClampedArray(uint length)
+        public Uint8ClampedArray(int length)
         {
         }
 
@@ -29,15 +29,15 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public Uint8ClampedArray(ArrayBuffer buffer, uint byteOffset)
+        public Uint8ClampedArray(ArrayBuffer buffer, int byteOffset)
         {
         }
 
-        public Uint8ClampedArray(ArrayBuffer buffer, uint byteOffset, uint length)
+        public Uint8ClampedArray(ArrayBuffer buffer, int byteOffset, int length)
         {
         }
 
-        public new static uint BytesPerElement
+        public new static int BytesPerElement
         {
             [InlineCode("Uint8ClampedArray.BYTES_PER_ELEMENT")]
             get;
@@ -48,7 +48,7 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(Uint8ClampedArray array, uint offset)
+        public void Set(Uint8ClampedArray array, int offset)
         {
         }
 

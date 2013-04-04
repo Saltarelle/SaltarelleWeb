@@ -27,12 +27,12 @@ namespace System.Html.Media.Graphics.WebGL
 		/// its ArrayBuffer, in bytes, as fixed at construction time.
 		/// </summary>
         [IntrinsicProperty]
-        public uint ByteOffset { get; private set; }
+        public int ByteOffset { get; private set; }
 
 		/// <summary>
 		/// The length of the ArrayBufferView in bytes, as fixed at construction time.
 		/// </summary>
         [IntrinsicProperty]
-        public uint ByteLength { get; private set; }
+        public int ByteLength { get; private set; }
 	}
 }

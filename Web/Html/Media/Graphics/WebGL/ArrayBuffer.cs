@@ -23,7 +23,7 @@ namespace System.Html.Media.Graphics.WebGL
 		/// The length of the ArrayBuffer in bytes, as fixed at construction time.
 		/// </summary>
         [IntrinsicProperty]
-        public uint ByteLength { get; private set; }
+        public int ByteLength { get; private set; }
 
 		/// <summary>
 		/// Returns a new ArrayBuffer whose contents are a copy of this

@@ -13,7 +13,7 @@ namespace System.Html.Media.Graphics.WebGL
     [IgnoreNamespace, Imported]
     public class Int16Array : ArrayBufferView
     {
-        public Int16Array(uint length)
+        public Int16Array(int length)
         {
         }
 
@@ -29,25 +29,25 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public Int16Array(ArrayBuffer buffer, uint byteOffset)
+        public Int16Array(ArrayBuffer buffer, int byteOffset)
         {
         }
 
-        public Int16Array(ArrayBuffer buffer, uint byteOffset, uint length)
+        public Int16Array(ArrayBuffer buffer, int byteOffset, int length)
         {
         }
 
-        public static uint BytesPerElement
+        public static int BytesPerElement
         {
             [InlineCode("Int16Array.BYTES_PER_ELEMENT")]
             get;
             private set;
         }
 
-        public uint Length { get; private set; }
+        public int Length { get; private set; }
 
         [IntrinsicProperty]
-        public CSHARPTYPE this[uint index]
+        public CSHARPTYPE this[int index]
         {
             get { return default(CSHARPTYPE); }
             set { }
@@ -57,7 +57,7 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(Int16Array array, uint offset)
+        public void Set(Int16Array array, int offset)
         {
         }
 
@@ -65,7 +65,7 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(CSHARPTYPE[] array, uint offset)
+        public void Set(CSHARPTYPE[] array, int offset)
         {
         }
 

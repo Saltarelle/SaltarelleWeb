@@ -20,129 +20,129 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public sbyte GetInt8(uint byteOffset)
+        public sbyte GetInt8(int byteOffset)
         {
             return 0;
         }
 
-        public byte GetUint8(uint byteOffset)
+        public byte GetUint8(int byteOffset)
         {
             return 0;
         }
 
-        public short GetInt16(uint byteOffset)
+        public short GetInt16(int byteOffset)
         {
             return 0;
         }
 
-        public short GetInt16(uint byteOffset, bool littleEndian)
+        public short GetInt16(int byteOffset, bool littleEndian)
         {
             return 0;
         }
 
-        public ushort GetUint16(uint byteOffset)
+        public ushort GetUint16(int byteOffset)
         {
             return 0;
         }
 
-        public ushort GetUint16(uint byteOffset, bool littleEndian)
+        public ushort GetUint16(int byteOffset, bool littleEndian)
         {
             return 0;
         }
 
-        public int GetInt32(uint byteOffset)
+        public int GetInt32(int byteOffset)
         {
             return 0;
         }
 
-        public int GetInt32(uint byteOffset, bool littleEndian)
+        public int GetInt32(int byteOffset, bool littleEndian)
         {
             return 0;
         }
 
-        public uint GetUint32(uint byteOffset)
+        public uint GetUint32(int byteOffset)
         {
             return 0;
         }
 
-        public uint GetUint32(uint byteOffset, bool littleEndian)
+        public uint GetUint32(int byteOffset, bool littleEndian)
         {
             return 0;
         }
 
-        public float GetFloat32(uint byteOffset)
+        public float GetFloat32(int byteOffset)
         {
             return 0;
         }
 
-        public float GetFloat32(uint byteOffset, bool littleEndian)
+        public float GetFloat32(int byteOffset, bool littleEndian)
         {
             return 0;
         }
 
-        public double GetFloat64(uint byteOffset)
+        public double GetFloat64(int byteOffset)
         {
             return 0;
         }
 
-        public double GetFloat64(uint byteOffset, bool littleEndian)
+        public double GetFloat64(int byteOffset, bool littleEndian)
         {
             return 0;
         }
 
-        public void SetInt8(uint byteOffset, sbyte value)
+        public void SetInt8(int byteOffset, sbyte value)
         {
         }
 
-        public void SetUint8(uint byteOffset, byte value)
+        public void SetUint8(int byteOffset, byte value)
         {
         }
 
-        public void SetInt16(uint byteOffset, short value)
+        public void SetInt16(int byteOffset, short value)
         {
         }
 
-        public void SetInt16(uint byteOffset, short value, bool littleEndian)
+        public void SetInt16(int byteOffset, short value, bool littleEndian)
         {
         }
 
-        public void SetUint16(uint byteOffset, ushort value)
+        public void SetUint16(int byteOffset, ushort value)
         {
         }
 
-        public void SetUint16(uint byteOffset, ushort value, bool littleEndian)
+        public void SetUint16(int byteOffset, ushort value, bool littleEndian)
         {
         }
 
-        public void SetInt32(uint byteOffset, int value)
+        public void SetInt32(int byteOffset, int value)
         {
         }
 
-        public void SetInt32(uint byteOffset, int value, bool littleEndian)
+        public void SetInt32(int byteOffset, int value, bool littleEndian)
         {
         }
 
-        public void SetUint32(uint byteOffset, uint value)
+        public void SetUint32(int byteOffset, uint value)
         {
         }
 
-        public void SetUint32(uint byteOffset, uint value, bool littleEndian)
+        public void SetUint32(int byteOffset, uint value, bool littleEndian)
         {
         }
 
-        public void SetFloat32(uint byteOffset, float value)
+        public void SetFloat32(int byteOffset, float value)
         {
         }
 
-        public void SetFloat32(uint byteOffset, float value, bool littleEndian)
+        public void SetFloat32(int byteOffset, float value, bool littleEndian)
         {
         }
 
-        public void SetFloat64(uint byteOffset, double value)
+        public void SetFloat64(int byteOffset, double value)
         {
         }
 
-        public void SetFloat64(uint byteOffset, double value, bool littleEndian)
+        public void SetFloat64(int byteOffset, double value, bool littleEndian)
         {
         }
     }
