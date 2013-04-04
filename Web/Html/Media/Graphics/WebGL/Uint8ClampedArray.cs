@@ -37,7 +37,7 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public static uint BytesPerElement
+        public new static uint BytesPerElement
         {
             [InlineCode("Uint8ClampedArray.BYTES_PER_ELEMENT")]
             get;

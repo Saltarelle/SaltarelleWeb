@@ -8,12 +8,12 @@ namespace System.Net
     [IgnoreNamespace, Imported]
     public class BlobPropertyBag
     {
-        [InlineCode("{}")]
+        [InlineCode("{{}}")]
         public BlobPropertyBag()
         {
         }
 
-        [InlineCode("{'type':{type}}")]
+        [InlineCode("{{ 'type': {type} }}")]
         public BlobPropertyBag(string type)
         {
         }

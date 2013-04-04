@@ -47,7 +47,11 @@ namespace System.Html.Media.Graphics.WebGL
         public uint Length { get; private set; }
 
         [IntrinsicProperty]
-        public CSHARPTYPE this[uint index] { get; set; }
+        public CSHARPTYPE this[uint index]
+        {
+            get { return default(CSHARPTYPE); }
+            set { }
+        }
 
         public void Set(Int32Array array)
         {
