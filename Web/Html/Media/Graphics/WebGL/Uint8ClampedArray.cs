@@ -1,4 +1,4 @@
-﻿// Int16Array.cs
+﻿// Uint8ClampedArray.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 //
@@ -10,24 +10,24 @@ using System.Runtime.CompilerServices;
 namespace System.Html.Media.Graphics.WebGL
 {
 	[IgnoreNamespace, Imported]
-	public class Int16Array : TypedArray
+	public class Uint8ClampedArray : TypedArray
 	{
 		[ScriptName("")]
-		public Int16Array(long length) { }
+		public Uint8ClampedArray(long length) { }
 
 		[ScriptName("")]
-		public Int16Array(short[] values) { }
+		public Uint8ClampedArray(byte[] values) { }
 
 		[ScriptName("")]
-		public Int16Array(TypedArray buffer) { }
+		public Uint8ClampedArray(TypedArray buffer) { }
 
 		[ScriptName("")]
-		public Int16Array(ArrayBuffer buffer) { }
+		public Uint8ClampedArray(ArrayBuffer buffer) { }
 
 		[ScriptName("")]
-		public Int16Array(ArrayBuffer buffer, int offset) { }
+		public Uint8ClampedArray(ArrayBuffer buffer, int offset) { }
 
 		[ScriptName("")]
-		public Int16Array(ArrayBuffer buffer, int offset, int length) { }
+		public Uint8ClampedArray(ArrayBuffer buffer, int offset, int length) { }
 	}
 }

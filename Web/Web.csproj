@@ -55,12 +55,16 @@
     <Compile Include="Html\Media\Graphics\CanvasContextWebGL.cs" />
     <Compile Include="Html\Media\Graphics\Rendering.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\ArrayBuffer.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\TypedArray.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\DataView.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\ArrayBufferView.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\Float32Array.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\Float64Array.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\Int8Array.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\Int16Array.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\Int32Array.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\Uint8Array.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\Uint8ClampedArray.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\Uint16Array.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\Uint32Array.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\WebGLActiveInfo.cs" />

@@ -10,10 +10,24 @@ using System.Runtime.CompilerServices;
 namespace System.Html.Media.Graphics.WebGL
 {
 	[IgnoreNamespace, Imported]
-	public class Float32Array : ArrayBuffer
+	public class Float32Array : TypedArray
 	{
-		public Float32Array(float[] values)
-		{
-		}
+		[ScriptName("")]
+		public Float32Array(long length) { }
+
+		[ScriptName("")]
+		public Float32Array(float[] values) { }
+
+		[ScriptName("")]
+		public Float32Array(TypedArray buffer) { }
+
+		[ScriptName("")]
+		public Float32Array(ArrayBuffer buffer) { }
+
+		[ScriptName("")]
+		public Float32Array(ArrayBuffer buffer, int offset) { }
+
+		[ScriptName("")]
+		public Float32Array(ArrayBuffer buffer, int offset, int length) { }
 	}
 }

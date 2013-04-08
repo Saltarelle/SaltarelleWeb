@@ -15,14 +15,12 @@ namespace System.Html.Media.Graphics.WebGL
 	[IgnoreNamespace, Imported]
 	public class ArrayBuffer
 	{
-		protected ArrayBuffer()
-		{
-		}
+		public ArrayBuffer(long length) { }
 
 		/// <summary>
 		/// The length of the ArrayBuffer in bytes, as fixed at construction time.
 		/// </summary>
-		public uint ByteLength;
+		public long ByteLength;
 
 		/// <summary>
 		/// Returns a new ArrayBuffer whose contents are a copy of this
