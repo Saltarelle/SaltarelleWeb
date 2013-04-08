@@ -24,10 +24,10 @@ namespace System.Html.Media.Graphics.WebGL
 		/// The offset of this ArrayBufferView from the start of
 		/// its ArrayBuffer, in bytes, as fixed at construction time.
 		/// </summary>
-		public uint ByteOffset;
+		public long ByteOffset;
 		/// <summary>
 		/// The length of the ArrayBufferView in bytes, as fixed at construction time.
 		/// </summary>
-		public uint ByteLength;
+		public long ByteLength;
 	}
 }

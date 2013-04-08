@@ -10,10 +10,24 @@ using System.Runtime.CompilerServices;
 namespace System.Html.Media.Graphics.WebGL
 {
 	[IgnoreNamespace, Imported]
-	public class Int8Array : ArrayBuffer
+	public class Int8Array : TypedArray
 	{
-		public Int8Array(byte[] values)
-		{
-		}
+		[ScriptName("")]
+		public Int8Array(long length) { }
+
+		[ScriptName("")]
+		public Int8Array(sbyte[] values) { }
+
+		[ScriptName("")]
+		public Int8Array(TypedArray buffer) { }
+
+		[ScriptName("")]
+		public Int8Array(ArrayBuffer buffer) { }
+
+		[ScriptName("")]
+		public Int8Array(ArrayBuffer buffer, int offset) { }
+
+		[ScriptName("")]
+		public Int8Array(ArrayBuffer buffer, int offset, int length) { }
 	}
 }
