@@ -14,7 +14,7 @@ namespace System.Html.Media.Graphics.WebGL
 	public class Int8Array : ArrayBufferView
 	{
         [ScriptName("")]
-        public Int8Array(int length)
+        public Int8Array(long length)
         {
         }
 
@@ -34,23 +34,22 @@ namespace System.Html.Media.Graphics.WebGL
         }
 
         [ScriptName("")]
-        public Int8Array(ArrayBuffer buffer, int byteOffset)
+        public Int8Array(ArrayBuffer buffer, long byteOffset)
         {
         }
 
         [ScriptName("")]
-        public Int8Array(ArrayBuffer buffer, int byteOffset, int length)
+        public Int8Array(ArrayBuffer buffer, long byteOffset, long length)
         {
         }
 
-        public static int BytesPerElement 
-        { 
-            [InlineCode("Int8Array.BYTES_PER_ELEMENT")]
-            get; 
-            private set; 
-        }
+        [IntrinsicProperty, ScriptName("BYTES_PER_ELEMENT")]
+        public static int BytesPerElementStatic { get { return 0; } }
 
-        public int Length { get; private set; }
+        [IntrinsicProperty, ScriptName("BYTES_PER_ELEMENT")]
+        public int BytesPerElement { get { return 0; } }
+
+        public long Length { get; private set; }
 
         [IntrinsicProperty]
         public CSHARPTYPE this[int index]
@@ -63,7 +62,7 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(Int8Array array, int offset)
+        public void Set(Int8Array array, long offset)
         {
         }
 
@@ -71,16 +70,16 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(CSHARPTYPE[] array, int offset)
+        public void Set(CSHARPTYPE[] array, long offset)
         {
         }
 
-        public Int8Array Subarray(int begin)
+        public Int8Array Subarray(long begin)
         {
             return null;
         }
 
-        public Int8Array Subarray(int begin, int end)
+        public Int8Array Subarray(long begin, long end)
         {
             return null;
         }

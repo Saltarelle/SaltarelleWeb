@@ -6,7 +6,7 @@
 //
 
 using System.Runtime.CompilerServices;
-using CSHARPTYPE = System.Int32;
+using CSHARPTYPE = System.UInt32;
 
 namespace System.Html.Media.Graphics.WebGL
 {
@@ -14,7 +14,7 @@ namespace System.Html.Media.Graphics.WebGL
     public class Uint32Array : ArrayBufferView
     {
         [ScriptName("")]
-        public Uint32Array(int length)
+        public Uint32Array(long length)
         {
         }
 
@@ -34,23 +34,22 @@ namespace System.Html.Media.Graphics.WebGL
         }
 
         [ScriptName("")]
-        public Uint32Array(ArrayBuffer buffer, int byteOffset)
+        public Uint32Array(ArrayBuffer buffer, long byteOffset)
         {
         }
 
         [ScriptName("")]
-        public Uint32Array(ArrayBuffer buffer, int byteOffset, int length)
+        public Uint32Array(ArrayBuffer buffer, long byteOffset, long length)
         {
         }
 
-        public static int BytesPerElement
-        {
-            [InlineCode("Uint32Array.BYTES_PER_ELEMENT")]
-            get;
-            private set;
-        }
+        [IntrinsicProperty, ScriptName("BYTES_PER_ELEMENT")]
+        public static int BytesPerElementStatic { get { return 0; } }
 
-        public int Length { get; private set; }
+        [IntrinsicProperty, ScriptName("BYTES_PER_ELEMENT")]
+        public int BytesPerElement { get { return 0; } }
+
+        public long Length { get; private set; }
 
         [IntrinsicProperty]
         public CSHARPTYPE this[int index]
@@ -63,7 +62,7 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(Uint32Array array, int offset)
+        public void Set(Uint32Array array, long offset)
         {
         }
 
@@ -71,16 +70,16 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(CSHARPTYPE[] array, int offset)
+        public void Set(CSHARPTYPE[] array, long offset)
         {
         }
 
-        public Uint32Array Subarray(int begin)
+        public Uint32Array Subarray(long begin)
         {
             return null;
         }
 
-        public Uint32Array Subarray(int begin, int end)
+        public Uint32Array Subarray(long begin, long end)
         {
             return null;
         }

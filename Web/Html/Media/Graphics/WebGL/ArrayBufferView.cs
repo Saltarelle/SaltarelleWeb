@@ -1,4 +1,4 @@
-﻿// ArrayBufferView.cs
+// ArrayBufferView.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 //
@@ -19,20 +19,20 @@ namespace System.Html.Media.Graphics.WebGL
 		/// <summary>
 		/// The ArrayBuffer that this ArrayBufferView references.
 		/// </summary>
-        [IntrinsicProperty]
-        public ArrayBuffer Buffer { get; private set; }
+		[IntrinsicProperty]
+		public ArrayBuffer Buffer { get; private set; }
 
 		/// <summary>
 		/// The offset of this ArrayBufferView from the start of
 		/// its ArrayBuffer, in bytes, as fixed at construction time.
 		/// </summary>
-        [IntrinsicProperty]
-        public int ByteOffset { get; private set; }
+		[IntrinsicProperty]
+		public long ByteOffset { get; private set; }
 
 		/// <summary>
 		/// The length of the ArrayBufferView in bytes, as fixed at construction time.
 		/// </summary>
-        [IntrinsicProperty]
-        public int ByteLength { get; private set; }
+		[IntrinsicProperty]
+		public long ByteLength { get; private set; }
 	}
 }

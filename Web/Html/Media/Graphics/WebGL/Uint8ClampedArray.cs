@@ -10,7 +10,7 @@ namespace System.Html.Media.Graphics.WebGL
     public class Uint8ClampedArray : Uint8Array
     {
         [ScriptName("")]
-        public Uint8ClampedArray(int length)
+        public Uint8ClampedArray(long length)
         {
         }
 
@@ -35,36 +35,32 @@ namespace System.Html.Media.Graphics.WebGL
         }
 
         [ScriptName("")]
-        public Uint8ClampedArray(ArrayBuffer buffer, int byteOffset)
+        public Uint8ClampedArray(ArrayBuffer buffer, long byteOffset)
         {
         }
 
         [ScriptName("")]
-        public Uint8ClampedArray(ArrayBuffer buffer, int byteOffset, int length)
+        public Uint8ClampedArray(ArrayBuffer buffer, long byteOffset, long length)
         {
         }
 
-        public new static int BytesPerElement
-        {
-            [InlineCode("Uint8ClampedArray.BYTES_PER_ELEMENT")]
-            get;
-            private set;
-        }
+        [IntrinsicProperty, ScriptName("BYTES_PER_ELEMENT")]
+        public static new int BytesPerElementStatic { get { return 0; } }
 
         public void Set(Uint8ClampedArray array)
         {
         }
 
-        public void Set(Uint8ClampedArray array, int offset)
+        public void Set(Uint8ClampedArray array, long offset)
         {
         }
 
-        public new Uint8ClampedArray Subarray(int begin)
+        public new Uint8ClampedArray Subarray(long begin)
         {
             return null;
         }
 
-        public new Uint8ClampedArray Subarray(int begin, int end)
+        public new Uint8ClampedArray Subarray(long begin, long end)
         {
             return null;
         }

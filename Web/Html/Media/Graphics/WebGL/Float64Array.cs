@@ -14,7 +14,7 @@ namespace System.Html.Media.Graphics.WebGL
     public class Float64Array : ArrayBufferView
     {
         [ScriptName("")]
-        public Float64Array(int length)
+        public Float64Array(long length)
         {
         }
 
@@ -34,23 +34,22 @@ namespace System.Html.Media.Graphics.WebGL
         }
 
         [ScriptName("")]
-        public Float64Array(ArrayBuffer buffer, int byteOffset)
+        public Float64Array(ArrayBuffer buffer, long byteOffset)
         {
         }
 
         [ScriptName("")]
-        public Float64Array(ArrayBuffer buffer, int byteOffset, int length)
+        public Float64Array(ArrayBuffer buffer, long byteOffset, long length)
         {
         }
 
-        public static int BytesPerElement
-        {
-            [InlineCode("Float64Array.BYTES_PER_ELEMENT")]
-            get;
-            private set;
-        }
+        [IntrinsicProperty, ScriptName("BYTES_PER_ELEMENT")]
+        public static int BytesPerElementStatic { get { return 0; } }
 
-        public int Length { get; private set; }
+        [IntrinsicProperty, ScriptName("BYTES_PER_ELEMENT")]
+        public int BytesPerElement { get { return 0; } }
+
+        public long Length { get; private set; }
 
         [IntrinsicProperty]
         public CSHARPTYPE this[int index]
@@ -63,7 +62,7 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(Float64Array array, int offset)
+        public void Set(Float64Array array, long offset)
         {
         }
 
@@ -71,16 +70,16 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public void Set(CSHARPTYPE[] array, int offset)
+        public void Set(CSHARPTYPE[] array, long offset)
         {
         }
 
-        public Float64Array Subarray(int begin)
+        public Float64Array Subarray(long begin)
         {
             return null;
         }
 
-        public Float64Array Subarray(int begin, int end)
+        public Float64Array Subarray(long begin, long end)
         {
             return null;
         }
