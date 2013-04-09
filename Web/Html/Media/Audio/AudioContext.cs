@@ -1,4 +1,4 @@
-﻿// AudioContext.cs
+// AudioContext.cs
 // SaltarelleWeb/Html/Media/Audio
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 //
@@ -27,10 +27,10 @@ namespace System.Html.Media.Audio
         /// <summary>
         /// Create a new AudioContext.
         /// </summary>
-        [InlineCode("new (window.AudioContext | " +
-                         "window.webkitAudioContext | " +
-                         "window.mozAudioContext | " +
-                         "window.msAudioContext | " +
+        [InlineCode("new (window.AudioContext || " +
+                         "window.webkitAudioContext || " +
+                         "window.mozAudioContext || " +
+                         "window.msAudioContext || " +
                          "window.oAudioContext)()")]
         public AudioContext()
         {
