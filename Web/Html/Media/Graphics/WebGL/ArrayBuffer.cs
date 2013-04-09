@@ -15,14 +15,15 @@ namespace System.Html.Media.Graphics.WebGL
 	[IgnoreNamespace, Imported]
 	public class ArrayBuffer
 	{
-		protected ArrayBuffer()
+		public ArrayBuffer(uint byteLength)
 		{
 		}
 
 		/// <summary>
 		/// The length of the ArrayBuffer in bytes, as fixed at construction time.
 		/// </summary>
-		public uint ByteLength;
+        [IntrinsicProperty]
+        public int ByteLength { get; private set; }
 
 		/// <summary>
 		/// Returns a new ArrayBuffer whose contents are a copy of this
@@ -30,7 +31,12 @@ namespace System.Html.Media.Graphics.WebGL
 		/// If either begin or end is negative, it refers to an index from the
 		/// end of the array, as opposed to from the beginning.
 		/// </summary>
-		public ArrayBuffer Slice(long begin, long end = 0)
+        public ArrayBuffer Slice(int begin)
+        {
+            return null;
+        }
+
+        public ArrayBuffer Slice(int begin, int end)
 		{
 			return null;
 		}

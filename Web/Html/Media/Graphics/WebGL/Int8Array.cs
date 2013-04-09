@@ -1,4 +1,4 @@
-﻿// Float32Array.cs
+﻿// Int8Array.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 //
@@ -6,48 +6,48 @@
 //
 
 using System.Runtime.CompilerServices;
-using CSHARPTYPE = System.Single;
+using CSHARPTYPE = System.SByte;
 
 namespace System.Html.Media.Graphics.WebGL
 {
-    [IgnoreNamespace, Imported]
-    public class Float32Array : ArrayBufferView
-    {
+	[IgnoreNamespace, Imported]
+	public class Int8Array : ArrayBufferView
+	{
         [ScriptName("")]
-        public Float32Array(int length)
+        public Int8Array(int length)
         {
         }
 
         [ScriptName("")]
-        public Float32Array(Float32Array array)
+        public Int8Array(Int8Array array)
         {
         }
 
         [ScriptName("")]
-        public Float32Array(CSHARPTYPE[] values)
+        public Int8Array(CSHARPTYPE[] values)
+		{
+		}
+
+        [ScriptName("")]
+        public Int8Array(ArrayBuffer buffer)
         {
         }
 
         [ScriptName("")]
-        public Float32Array(ArrayBuffer buffer)
+        public Int8Array(ArrayBuffer buffer, int byteOffset)
         {
         }
 
         [ScriptName("")]
-        public Float32Array(ArrayBuffer buffer, int byteOffset)
+        public Int8Array(ArrayBuffer buffer, int byteOffset, int length)
         {
         }
 
-        [ScriptName("")]
-        public Float32Array(ArrayBuffer buffer, int byteOffset, int length)
-        {
-        }
-
-        public static int BytesPerElement
-        {
-            [InlineCode("Float32Array.BYTES_PER_ELEMENT")]
-            get;
-            private set;
+        public static int BytesPerElement 
+        { 
+            [InlineCode("Int8Array.BYTES_PER_ELEMENT")]
+            get; 
+            private set; 
         }
 
         public int Length { get; private set; }
@@ -59,11 +59,11 @@ namespace System.Html.Media.Graphics.WebGL
             set { }
         }
 
-        public void Set(Float32Array array)
+        public void Set(Int8Array array)
         {
         }
 
-        public void Set(Float32Array array, int offset)
+        public void Set(Int8Array array, int offset)
         {
         }
 
@@ -75,14 +75,14 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public Float32Array Subarray(int begin)
+        public Int8Array Subarray(int begin)
         {
             return null;
         }
 
-        public Float32Array Subarray(int begin, int end)
+        public Int8Array Subarray(int begin, int end)
         {
             return null;
         }
-    }
+	}
 }

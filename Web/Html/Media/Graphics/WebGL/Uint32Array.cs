@@ -1,4 +1,4 @@
-﻿// Float32Array.cs
+﻿// Uint32Array.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 //
@@ -6,46 +6,46 @@
 //
 
 using System.Runtime.CompilerServices;
-using CSHARPTYPE = System.Single;
+using CSHARPTYPE = System.Int32;
 
 namespace System.Html.Media.Graphics.WebGL
 {
     [IgnoreNamespace, Imported]
-    public class Float32Array : ArrayBufferView
+    public class Uint32Array : ArrayBufferView
     {
         [ScriptName("")]
-        public Float32Array(int length)
+        public Uint32Array(int length)
         {
         }
 
         [ScriptName("")]
-        public Float32Array(Float32Array array)
+        public Uint32Array(Uint32Array array)
         {
         }
 
         [ScriptName("")]
-        public Float32Array(CSHARPTYPE[] values)
+        public Uint32Array(CSHARPTYPE[] values)
         {
         }
 
         [ScriptName("")]
-        public Float32Array(ArrayBuffer buffer)
+        public Uint32Array(ArrayBuffer buffer)
         {
         }
 
         [ScriptName("")]
-        public Float32Array(ArrayBuffer buffer, int byteOffset)
+        public Uint32Array(ArrayBuffer buffer, int byteOffset)
         {
         }
 
         [ScriptName("")]
-        public Float32Array(ArrayBuffer buffer, int byteOffset, int length)
+        public Uint32Array(ArrayBuffer buffer, int byteOffset, int length)
         {
         }
 
         public static int BytesPerElement
         {
-            [InlineCode("Float32Array.BYTES_PER_ELEMENT")]
+            [InlineCode("Uint32Array.BYTES_PER_ELEMENT")]
             get;
             private set;
         }
@@ -59,11 +59,11 @@ namespace System.Html.Media.Graphics.WebGL
             set { }
         }
 
-        public void Set(Float32Array array)
+        public void Set(Uint32Array array)
         {
         }
 
-        public void Set(Float32Array array, int offset)
+        public void Set(Uint32Array array, int offset)
         {
         }
 
@@ -75,12 +75,12 @@ namespace System.Html.Media.Graphics.WebGL
         {
         }
 
-        public Float32Array Subarray(int begin)
+        public Uint32Array Subarray(int begin)
         {
             return null;
         }
 
-        public Float32Array Subarray(int begin, int end)
+        public Uint32Array Subarray(int begin, int end)
         {
             return null;
         }

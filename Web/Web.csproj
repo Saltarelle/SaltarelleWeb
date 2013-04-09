@@ -52,12 +52,51 @@
     <Compile Include="Html\ElementEventListener.cs" />
     <Compile Include="Html\GestureEvent.cs" />
     <Compile Include="Html\CustomEvent.cs" />
+    <Compile Include="Html\Media\Audio\AnalyserNode.cs" />
+    <Compile Include="Html\Media\Audio\AudioBuffer.cs" />
+    <Compile Include="Html\Media\Audio\AudioBufferSourceNode.cs" />
+    <Compile Include="Html\Media\Audio\AudioBufferSourceNodePlaybackState.cs" />
+    <Compile Include="Html\Media\Audio\AudioContext.cs" />
+    <Compile Include="Html\Media\Audio\AudioDestinationNode.cs" />
+    <Compile Include="Html\Media\Audio\AudioListener.cs" />
+    <Compile Include="Html\Media\Audio\AudioNode.cs" />
+    <Compile Include="Html\Media\Audio\AudioParam.cs" />
+    <Compile Include="Html\Media\Audio\AudioProcessingEvent.cs" />
+    <Compile Include="Html\Media\Audio\AudioSourceNode.cs" />
+    <Compile Include="Html\Media\Audio\BiquadFilterNode.cs" />
+    <Compile Include="Html\Media\Audio\BiquadFilterType.cs" />
+    <Compile Include="Html\Media\Audio\ChannelMergerNode.cs" />
+    <Compile Include="Html\Media\Audio\ChannelSplitterNode.cs" />
+    <Compile Include="Html\Media\Audio\ConvolverNode.cs" />
+    <Compile Include="Html\Media\Audio\DelayNode.cs" />
+    <Compile Include="Html\Media\Audio\DistanceModelType.cs" />
+    <Compile Include="Html\Media\Audio\DynamicsCompressorNode.cs" />
+    <Compile Include="Html\Media\Audio\GainNode.cs" />
+    <Compile Include="Html\Media\Audio\MediaElementAudioSourceNode.cs" />
+    <Compile Include="Html\Media\Audio\MediaStreamAudioSourceNode.cs" />
+    <Compile Include="Html\Media\Audio\OfflineAudioContext.cs" />
+    <Compile Include="Html\Media\Audio\OscillatorNode.cs" />
+    <Compile Include="Html\Media\Audio\OscillatorNodePlaybackState.cs" />
+    <Compile Include="Html\Media\Audio\OscillatorType.cs" />
+    <Compile Include="Html\Media\Audio\PannerNode.cs" />
+    <Compile Include="Html\Media\Audio\PanningModelType.cs" />
+    <Compile Include="Html\Media\Audio\ScriptProcessorNode.cs" />
+    <Compile Include="Html\Media\Audio\WaveShaperNode.cs" />
+    <Compile Include="Html\Media\Audio\WaveTable.cs" />
     <Compile Include="Html\Media\Graphics\CanvasContextWebGL.cs" />
     <Compile Include="Html\Media\Graphics\Rendering.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\ArrayBuffer.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\ArrayBufferView.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\DataView.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\Float32Array.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\Float64Array.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\Int8Array.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\Int16Array.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\Int32Array.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\Uint16Array.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\Uint32Array.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\Uint8Array.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\Uint8ClampedArray.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\WebGLActiveInfo.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\WebGLBuffer.cs" />
     <Compile Include="Html\Media\Graphics\WebGL\WebGLContextAttributes.cs" />
@@ -154,6 +193,8 @@
     <Compile Include="Html\Media\Filters\VisualTransitionState.cs" />
     <Compile Include="Html\Window.cs" />
     <Compile Include="Html\WindowInstance.cs" />
+    <Compile Include="Net\Blob.cs" />
+    <Compile Include="Net\BlobPropertyBag.cs" />
     <Compile Include="Net\HttpVerb.cs" />
     <Compile Include="Net\ReadyState.cs" />
     <Compile Include="Net\XmlHttpRequest.cs" />
@@ -175,6 +216,9 @@
     <Reference Include="mscorlib">
       <HintPath>$(SolutionDir)packages\Saltarelle.Runtime.2.0.0\tools\Assemblies\mscorlib.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Html\Media\Audio\Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="!Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.0.0\tools\Saltarelle.Compiler.targets')" />
   <Import Project="$(SolutionDir)packages\Saltarelle.Compiler.2.0.0\tools\Saltarelle.Compiler.targets" Condition="Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.0.0\tools\Saltarelle.Compiler.targets')" />
