@@ -21,14 +21,5 @@ namespace System.Html {
                 return null;
             }
         }
-
-        [IntrinsicProperty]
-        public object Detail
-        {
-            get
-            {
-                return null;
-            }
-        }
     }
 }
