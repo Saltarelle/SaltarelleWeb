@@ -6,6 +6,7 @@
 //
 
 using System.Collections.Generic;
+using System.Collections.TypedArrays;
 using System.Runtime.CompilerServices;
 using System.Html.Media.Graphics.WebGL;
 
