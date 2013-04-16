@@ -151,7 +151,7 @@ namespace System.Html.Media.Audio
         /// <param name="mediaElement">mediaElement is an HTMLMediaElement (e.g. audio or video) whose
         /// audio playback should be rerouted into the AudioContext</param>
         /// <returns>The newly created MediaElementAudioSourceNode object.</returns>
-        public MediaElementAudioSourceNode CreateMediaElementSource(System.Html.Element mediaElement)
+        public MediaElementAudioSourceNode CreateMediaElementSource(MediaElement mediaElement)
         {
             return null;
         }

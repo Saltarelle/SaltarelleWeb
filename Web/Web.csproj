@@ -49,9 +49,16 @@
     <Compile Include="Html\CheckBoxElement.cs" />
     <Compile Include="Html\CanvasElement.cs" />
     <Compile Include="Html\ClientRectList.cs" />
+    <Compile Include="Html\MediaCrossOriginPolicy.cs" />
+    <Compile Include="Html\MediaPreload.cs" />
+    <Compile Include="Html\VideoElement.cs" />
+    <Compile Include="Html\MediaElement.cs" />
     <Compile Include="Html\ElementEventListener.cs" />
     <Compile Include="Html\GestureEvent.cs" />
     <Compile Include="Html\CustomEvent.cs" />
+    <Compile Include="Html\MediaElementNetworkState.cs" />
+    <Compile Include="Html\MediaElementReadyState.cs" />
+    <Compile Include="Html\MediaPlayability.cs" />
     <Compile Include="Html\Media\Audio\AnalyserNode.cs" />
     <Compile Include="Html\Media\Audio\AudioBuffer.cs" />
     <Compile Include="Html\Media\Audio\AudioBufferSourceNode.cs" />
@@ -100,6 +107,7 @@
     <Compile Include="Html\ClientRect.cs" />
     <Compile Include="Html\Plugin.cs" />
     <Compile Include="Html\PluginArray.cs" />
+    <Compile Include="Html\TimeRanges.cs" />
     <Compile Include="Html\TokenList.cs" />
     <Compile Include="Html\TouchInfo.cs" />
     <Compile Include="Html\TouchEvent.cs" />
