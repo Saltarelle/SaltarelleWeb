@@ -1,3 +1,5 @@
+Works with compiler/runtime 2.3.0
+
 2.2.0
 Web audio API (thanks to Timothy Fries)
 
