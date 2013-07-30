@@ -130,11 +130,10 @@ namespace Generator {
 
 		private static bool Process(Arguments args) {
 			var errors = new ConcurrentStack<string>();
-			var allParts = new ConcurrentStack<Definitions>();
-			Parallel.ForEach(args.Sources, file => {
+			var allParts = new Definitions[args.Sources.Count];
+			Parallel.ForEach(args.Sources, (file, _, i) => {
 				try {
-					var current = WebIDLParser.Parse(new StreamReader(file, Encoding.UTF8));
-					allParts.Push(current);
+					allParts[i] = WebIDLParser.Parse(new StreamReader(file, Encoding.UTF8));
 				}
 				catch (IOException ex) {
 					errors.Push("Error reading file " + file + ": " + ex.Message);
@@ -146,6 +145,14 @@ namespace Generator {
 
 			if (errors.Count > 0) {
 				foreach (var e in errors)
+					Console.Error.WriteLine(e);
+				return false;
+			}
+
+			var resolvedDefinitionsAndErrors = WebIDLResolver.Resolve(allParts);
+
+			if (resolvedDefinitionsAndErrors.Item2.Count > 0) {
+				foreach (var e in resolvedDefinitionsAndErrors.Item2)
 					Console.Error.WriteLine(e);
 				return false;
 			}

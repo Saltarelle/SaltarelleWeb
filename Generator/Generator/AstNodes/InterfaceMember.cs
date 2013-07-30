@@ -120,7 +120,7 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public T Decompose<T>(Func<ConstData, T> @const, Func<NamedOperationData, T> namedOperation, Func<UnnamedOperationData, T> unnamedOperation, Func<AttributeData, T> attribute, Func<JsonifierData, T> jsonifier) {
+		public T DecomposeWithResult<T>(Func<ConstData, T> @const, Func<NamedOperationData, T> namedOperation, Func<UnnamedOperationData, T> unnamedOperation, Func<AttributeData, T> attribute, Func<JsonifierData, T> jsonifier) {
 			if (_const != null) {
 				if (@const != null)
 					return @const(_const);

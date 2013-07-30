@@ -21,10 +21,17 @@ namespace Generator.Tests {
 
 		private readonly Regex _spaceRe = new Regex("\\s");
 		private readonly Regex _hexRe = new Regex(@"\b0x[0-9a-f]+\b", RegexOptions.IgnoreCase);
+		private readonly Regex _objectRe = new Regex(@"\bobject\b");
 		private string Normalize(string text) {
-			return _hexRe.Replace(_spaceRe.Replace(text.Trim(), " ").Replace(", ", ",").Replace(" (", "("), m => {
+			text = _spaceRe.Replace(text.Trim(), " ");
+			text = _hexRe.Replace(text, m => {
 				return int.Parse(m.Value.Substring(2), NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture).ToString(CultureInfo.InvariantCulture);
-			}).Replace("stringifier;", "stringifier DOMString();"); // These are equivalent according to the spec, and our AST doesn't differentiate between them
+			});
+			text = _objectRe.Replace(text, "Object");
+			text = text.Replace("stringifier;", "stringifier DOMString();") // These are equivalent according to the spec, and our AST doesn't differentiate between them
+			           .Replace(", ", ",")
+			           .Replace(" (", "(");
+			return text;
 		}
 
 		[Test]
@@ -50,6 +57,15 @@ namespace Generator.Tests {
 				}
 				actualIndex++;
 			}
+		}
+
+		[Test]
+		public void CanResolveTestcase() {
+			string testcase = GetTestcase();
+			var ast = WebIDLParser.Parse(new StringReader(testcase));
+			var resolved = WebIDLResolver.Resolve(new[] { ast });
+
+			Assert.AreEqual(resolved.Item2.Count, 0, "Errors:" + Environment.NewLine + string.Join(Environment.NewLine, resolved.Item2));
 		}
 	}
 }

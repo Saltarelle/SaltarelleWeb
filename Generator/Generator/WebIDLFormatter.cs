@@ -162,7 +162,7 @@ namespace Generator {
 					_sb.Append(" " + field.Name);
 				}
 			);
-			_sb.Append(";");
+			_sb.AppendLine(";");
 		}
 
 		private void Visit(WebIDLType type) {
@@ -383,6 +383,42 @@ namespace Generator {
 		public static string Format(Definitions definitions) {
 			var f = new WebIDLFormatter(); 
 			f.Visit(definitions);
+			return f._sb.ToString();
+		}
+
+		public static string Format(WebIDLType type) {
+			var f = new WebIDLFormatter(); 
+			f.Visit(type);
+			return f._sb.ToString();
+		}
+
+		public static string Format(ExtendedAttribute attribute) {
+			var f = new WebIDLFormatter(); 
+			f.Visit(attribute);
+			return f._sb.ToString();
+		}
+
+		public static string Format(InterfaceMember member) {
+			var f = new WebIDLFormatter(); 
+			f.Visit(member);
+			return f._sb.ToString();
+		}
+
+		public static string Format(DictionaryMember member) {
+			var f = new WebIDLFormatter(); 
+			f.Visit(member);
+			return f._sb.ToString();
+		}
+
+		public static string Format(ExceptionMember member) {
+			var f = new WebIDLFormatter(); 
+			f.Visit(member);
+			return f._sb.ToString();
+		}
+
+		public static string Format(Argument argument) {
+			var f = new WebIDLFormatter(); 
+			f.Visit(argument);
 			return f._sb.ToString();
 		}
 	}

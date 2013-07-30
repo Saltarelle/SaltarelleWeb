@@ -224,7 +224,7 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public T Decompose<T>(Func<InterfaceData, T> @interface, Func<InterfaceData, T> callbackInterface, Func<PartialInterfaceData, T> partialInterface, Func<DictionaryData, T> dictionary, Func<PartialDictionaryData, T> partialDictionary, Func<CallbackData, T> callback, Func<ImplementsData, T> implements, Func<ExceptionData, T> exception, Func<TypedefData, T> typedef, Func<EnumData, T> @enum, Func<InterfaceDeclarationData, T> interfaceDeclaration) {
+		public T DecomposeWithResult<T>(Func<InterfaceData, T> @interface, Func<InterfaceData, T> callbackInterface, Func<PartialInterfaceData, T> partialInterface, Func<DictionaryData, T> dictionary, Func<PartialDictionaryData, T> partialDictionary, Func<CallbackData, T> callback, Func<ImplementsData, T> implements, Func<ExceptionData, T> exception, Func<TypedefData, T> typedef, Func<EnumData, T> @enum, Func<InterfaceDeclarationData, T> interfaceDeclaration) {
 			if (_interface != null) {
 				if (@interface != null)
 					return @interface(_interface);

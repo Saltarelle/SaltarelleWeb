@@ -73,7 +73,7 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public T Decompose<T>(Func<RequiredData, T> required, Func<OptionalData, T> optional, Func<EllipsisData, T> ellipsis) {
+		public T DecomposeWithResult<T>(Func<RequiredData, T> required, Func<OptionalData, T> optional, Func<EllipsisData, T> ellipsis) {
 			if (_required != null) {
 				if (required != null)
 					return required(_required);

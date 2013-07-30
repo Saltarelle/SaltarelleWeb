@@ -50,6 +50,7 @@
     <Compile Include="AstNodes\ExceptionMember.cs" />
     <Compile Include="AstNodes\OperationQualifiers.cs" />
     <Compile Include="AstNodes\AttributeQualifiers.cs" />
+    <Compile Include="AstNodes\ResolvedDefinition.cs" />
     <Compile Include="AstNodes\SpecialValue.cs" />
     <Compile Include="AstNodes\Value.cs" />
     <Compile Include="AstNodes\DictionaryMember.cs" />
@@ -62,8 +63,10 @@
     <Compile Include="Mono.Options\Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TopologicalSorter.cs" />
     <Compile Include="WebIDLFormatter.cs" />
     <Compile Include="WebIDLParser.cs" />
+    <Compile Include="WebIDLResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

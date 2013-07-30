@@ -186,7 +186,7 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public T Decompose<T>(Func<BuiltinData, T> builtin, Func<VoidData, T> @void, Func<UnionData, T> union, Func<TypeReferenceData, T> typeReference, Func<ArrayData, T> array, Func<SequenceData, T> sequence, Func<NullableData, T> nullable) {
+		public T DecomposeWithResult<T>(Func<BuiltinData, T> builtin, Func<VoidData, T> @void, Func<UnionData, T> union, Func<TypeReferenceData, T> typeReference, Func<ArrayData, T> array, Func<SequenceData, T> sequence, Func<NullableData, T> nullable) {
 			if (_builtin != null) {
 				if (builtin != null)
 					return builtin(_builtin);

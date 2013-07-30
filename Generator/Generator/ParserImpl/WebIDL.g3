@@ -32,7 +32,6 @@ tokens {
 	LONG         = 'long';
 	NAN          = 'NaN';
 	NULL         = 'null';
-	OBJECT       = 'Object';
 	OCTET        = 'octet';
 	OPTIONAL     = 'optional';
 	OR           = 'or';
@@ -114,6 +113,8 @@ using Generator.AstNodes;
 		return negative ? -result : result;
 	}
 }
+
+OBJECT : ('O' | 'o') 'bject';
 
 Integer   : '-'? ('0' ( '0'..'7'* | (('X' | 'x') ('0'..'9' | 'A'..'F' | 'a'..'f')+)) | ('1'..'9' '0'..'9'*));
 Float     :   ('0'..'9')+ '.' ('0'..'9')* Exponent?

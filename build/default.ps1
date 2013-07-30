@@ -261,6 +261,19 @@ Task Download-WebIDL {
 			Write-Error "Don't know how to generate the file $_"
 		}
 	}
+	
+"""
+interface Float32Array;
+interface Uint8Array;
+interface ArrayBuffer;
+interface ArrayBufferView;
+interface DOMTimeStamp;
+interface ByteString;
+interface Uint8ClampedArray;
+interface Int32Array;
+""" | Out-File -FilePath "$webidlDir\_builtin.webidl" -Encoding UTF8
+
+	$sources["webidl_files"] = "_builtin.webidl" + $sources["webidl_files"]
 }
 
 Task Generate-Source {

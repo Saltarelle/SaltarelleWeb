@@ -56,7 +56,7 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public T Decompose<T>(Func<ConstData, T> @const, Func<FieldData, T> field) {
+		public T DecomposeWithResult<T>(Func<ConstData, T> @const, Func<FieldData, T> field) {
 			if (_const != null) {
 				if (@const != null)
 					return @const(_const);

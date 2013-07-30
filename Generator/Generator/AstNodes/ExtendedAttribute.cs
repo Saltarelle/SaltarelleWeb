@@ -81,7 +81,7 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public T Decompose<T>(Func<NoArgsData, T> noArgs, Func<ArgListData, T> argList, Func<NamedArgListData, T> namedArgList, Func<IdentData, T> ident, Func<ValueData, T> value) {
+		public T DecomposeWithResult<T>(Func<NoArgsData, T> noArgs, Func<ArgListData, T> argList, Func<NamedArgListData, T> namedArgList, Func<IdentData, T> ident, Func<ValueData, T> value) {
 			if (_noArgs != null) {
 				if (noArgs != null)
 					return noArgs(_noArgs);

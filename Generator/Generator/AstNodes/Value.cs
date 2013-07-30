@@ -78,7 +78,7 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public T Decompose<T>(Func<int, T> integer, Func<double, T> @float, Func<string, T> @string, Func<SpecialData, T> special) {
+		public T DecomposeWithResult<T>(Func<int, T> integer, Func<double, T> @float, Func<string, T> @string, Func<SpecialData, T> special) {
 			if (_intValue != null) {
 				if (integer != null)
 					return integer(_intValue.Value);
