@@ -81,13 +81,13 @@ using Generator.AstNodes;
 
 @lexer::members {
 	public override void ReportError(RecognitionException ex) {
-		throw new System.Exception("Lexer error at (" + ex.Line + ", " + ex.CharPositionInLine + "): " + ex.GetType().Name + ": " + ex.Message);
+		throw ex;
 	}
 }
 
 @parser::members {
 	public override void ReportError(RecognitionException ex) {
-		throw new System.Exception("Parser error at (" + ex.Line + ", " + ex.CharPositionInLine + "): " + ex.GetType().Name + ": " + ex.Message);
+		throw ex;
 	}
 
 	private int ParseInt(string text) {

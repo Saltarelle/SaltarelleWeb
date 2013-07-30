@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Antlr.Runtime;
+using Generator.AstNodes;
 using Mono.Options;
 
 namespace Generator {
@@ -115,20 +118,39 @@ namespace Generator {
 						}
 					}
 
-					Process(parsedArgs);
+					return Process(parsedArgs) ? 0 : 1;
 				}
 			}
 			catch (OptionException ex) {
-				Console.WriteLine(ex.Message);
+				Console.Error.WriteLine(ex.Message);
 				return 1;
 			}
 			return 0;
 		}
 
-		private static void Process(Arguments args) {
-			Console.WriteLine("Output: " + args.OutputDirectory);
-			foreach (var s in args.Sources)
-				Console.WriteLine("Source: " + s);
+		private static bool Process(Arguments args) {
+			var errors = new ConcurrentStack<string>();
+			var allParts = new ConcurrentStack<Definitions>();
+			Parallel.ForEach(args.Sources, file => {
+				try {
+					var current = WebIDLParser.Parse(new StreamReader(file, Encoding.UTF8));
+					allParts.Push(current);
+				}
+				catch (IOException ex) {
+					errors.Push("Error reading file " + file + ": " + ex.Message);
+				}
+				catch (RecognitionException ex) {
+					errors.Push(file + "(" + ex.Line + ":" + ex.CharPositionInLine + "): " + ex.GetType().Name + ": " + ex.Message);
+				}
+			});
+
+			if (errors.Count > 0) {
+				foreach (var e in errors)
+					Console.Error.WriteLine(e);
+				return false;
+			}
+
+			return true;
 		}
 	}
 }

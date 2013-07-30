@@ -1,4 +1,4 @@
-﻿/* vim: set shiftwidth=2 tabstop=8 autoindent cindent expandtab: */
+/* vim: set shiftwidth=2 tabstop=8 autoindent cindent expandtab: */
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
@@ -57,4 +57,3 @@ CSS_PROP_ALIAS(-moz-animation-play-state, animation_play_state, MozAnimationPlay
 CSS_PROP_ALIAS(-moz-animation-timing-function, animation_timing_function, MozAnimationTimingFunction, "layout.css.prefixes.animations")
 CSS_PROP_ALIAS(font-feature-settings, font_feature_settings, FontFeatureSettings, "layout.css.font-features.enabled")
 CSS_PROP_ALIAS(font-language-override, font_language_override, FontLanguageOverride, "layout.css.font-features.enabled")
-

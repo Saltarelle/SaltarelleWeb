@@ -1,5 +1,4 @@
 /* -*- Mode: IDL; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
-
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -18,14 +17,13 @@
  * and create derivative works of this document.
  */
 
-
 interface MozPowerManager;
 interface MozWakeLock;
 
 // http://www.whatwg.org/specs/web-apps/current-work/#the-navigator-object
 [HeaderFile="Navigator.h", NeedNewResolve]
 interface Navigator {
-// objects implementing this interface also implement the interfaces given below
+  // objects implementing this interface also implement the interfaces given below
 };
 Navigator implements NavigatorID;
 Navigator implements NavigatorLanguage;
@@ -43,9 +41,9 @@ interface NavigatorID {
   [Throws]
   readonly attribute DOMString userAgent;
 
-// Spec has this as a const, but that's wrong because it should not
-// be on the interface object.
-//const DOMString product = "Gecko"; // for historical reasons
+  // Spec has this as a const, but that's wrong because it should not
+  // be on the interface object.
+  //const DOMString product = "Gecko"; // for historical reasons
   readonly attribute DOMString product;
 };
 
@@ -61,22 +59,22 @@ interface NavigatorOnLine {
 
 [NoInterfaceObject]
 interface NavigatorContentUtils {
-// content handler registration
+  // content handler registration
   [Throws]
   void registerProtocolHandler(DOMString scheme, DOMString url, DOMString title);
   [Throws]
   void registerContentHandler(DOMString mimeType, DOMString url, DOMString title);
-// NOT IMPLEMENTED
-//DOMString isProtocolHandlerRegistered(DOMString scheme, DOMString url);
-//DOMString isContentHandlerRegistered(DOMString mimeType, DOMString url);
-//void unregisterProtocolHandler(DOMString scheme, DOMString url);
-//void unregisterContentHandler(DOMString mimeType, DOMString url);
+  // NOT IMPLEMENTED
+  //DOMString isProtocolHandlerRegistered(DOMString scheme, DOMString url);
+  //DOMString isContentHandlerRegistered(DOMString mimeType, DOMString url);
+  //void unregisterProtocolHandler(DOMString scheme, DOMString url);
+  //void unregisterContentHandler(DOMString mimeType, DOMString url);
 };
 
 [NoInterfaceObject]
 interface NavigatorStorageUtils {
-// NOT IMPLEMENTED
-//void yieldForStorageUpdates();
+  // NOT IMPLEMENTED
+  //void yieldForStorageUpdates();
 };
 
 // Things that definitely need to be in the spec and and are not for some
@@ -104,8 +102,8 @@ Navigator implements NavigatorGeolocation;
 // http://www.w3.org/TR/battery-status/#navigatorbattery-interface
 [NoInterfaceObject]
 interface NavigatorBattery {
-// XXXbz Per spec this should be non-nullable, but we return null in
-// torn-down windows.  See bug 884925.
+    // XXXbz Per spec this should be non-nullable, but we return null in
+    // torn-down windows.  See bug 884925.
     [Throws, Func="Navigator::HasBatterySupport"]
     readonly attribute BatteryManager? battery;
 };
@@ -113,10 +111,10 @@ Navigator implements NavigatorBattery;
 
 // http://www.w3.org/TR/vibration/#vibration-interface
 partial interface Navigator {
-// We don't support sequences in unions yet
-//boolean vibrate ((unsigned long or sequence<unsigned long>) pattern);
-// XXXbz also, per spec we should be returning a boolean, and we just don't.
-// See bug 884935.
+    // We don't support sequences in unions yet
+    //boolean vibrate ((unsigned long or sequence<unsigned long>) pattern);
+    // XXXbz also, per spec we should be returning a boolean, and we just don't.
+    // See bug 884935.
     [Throws]
     void vibrate(unsigned long duration);
     [Throws]
@@ -126,8 +124,8 @@ partial interface Navigator {
 // Mozilla-specific extensions
 
 callback interface MozIdleObserver {
-// Time is in seconds and is read only when idle observers are added
-// and removed.
+  // Time is in seconds and is read only when idle observers are added
+  // and removed.
   readonly attribute unsigned long time;
   void onidle();
   void onactive();
@@ -135,45 +133,43 @@ callback interface MozIdleObserver {
 
 // nsIDOMNavigator
 partial interface Navigator {
-// WebKit/Blink/Trident/Presto support this (hardcoded "Mozilla").
+  // WebKit/Blink/Trident/Presto support this (hardcoded "Mozilla").
   [Throws]
   readonly attribute DOMString appCodeName;
   [Throws]
   readonly attribute DOMString oscpu;
-// WebKit/Blink support this; Trident/Presto do not.
+  // WebKit/Blink support this; Trident/Presto do not.
   readonly attribute DOMString vendor;
-// WebKit/Blink supports this (hardcoded ""); Trident/Presto do not.
+  // WebKit/Blink supports this (hardcoded ""); Trident/Presto do not.
   readonly attribute DOMString vendorSub;
-// WebKit/Blink supports this (hardcoded "20030107"); Trident/Presto don't
+  // WebKit/Blink supports this (hardcoded "20030107"); Trident/Presto don't
   readonly attribute DOMString productSub;
-// WebKit/Blink/Trident/Presto support this.
+  // WebKit/Blink/Trident/Presto support this.
   readonly attribute boolean cookieEnabled;
   [Throws]
   readonly attribute DOMString buildID;
   [Throws, Func="Navigator::HasPowerSupport"]
   readonly attribute MozPowerManager mozPower;
 
-// WebKit/Blink/Trident/Presto support this.
+  // WebKit/Blink/Trident/Presto support this.
   [Throws]
   boolean javaEnabled();
-// Everyone but WebKit/Blink supports this.  See bug 679971.
+  // Everyone but WebKit/Blink supports this.  See bug 679971.
   boolean taintEnabled();
 
-/**
+  /**
    * Navigator requests to add an idle observer to the existing window.
    */
-
   [Throws, Func="Navigator::HasIdleSupport"]
   void addIdleObserver(MozIdleObserver aIdleObserver);
 
-/**
+  /**
    * Navigator requests to remove an idle observer from the existing window.
    */
-
   [Throws, Func="Navigator::HasIdleSupport"]
   void removeIdleObserver(MozIdleObserver aIdleObserver);
 
-/**
+  /**
    * Request a wake lock for a resource.
    *
    * A page holds a wake lock to request that a resource not be turned
@@ -201,7 +197,6 @@ partial interface Navigator {
    *
    * @param aTopic resource name
    */
-
   [Throws, Func="Navigator::HasWakeLockSupport"]
   MozWakeLock requestWakeLock(DOMString aTopic);
 };
@@ -251,12 +246,12 @@ partial interface Navigator {
 callback systemMessageCallback = void (optional object message);
 partial interface Navigator {
   [Throws, Pref="dom.sysmsg.enabled"]
-  void mozSetMessageHandler (DOMString type, systemMessageCallback? callback);
+  void    mozSetMessageHandler (DOMString type, systemMessageCallback? callback);
   [Throws, Pref="dom.sysmsg.enabled"]
   boolean mozHasPendingMessage (DOMString type);
 };
 
-
+#ifdef MOZ_B2G_RIL
 interface MozTelephony;
 // nsIDOMNavigatorTelephony
 partial interface Navigator {
@@ -291,42 +286,42 @@ partial interface Navigator {
   [Throws, Func="Navigator::HasIccManagerSupport"]
   readonly attribute MozIccManager? mozIccManager;
 };
-// MOZ_B2G_RIL
+#endif // MOZ_B2G_RIL
 
-
+#ifdef MOZ_GAMEPAD
 // https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#navigator-interface-extension
 partial interface Navigator {
   [Throws, Pref="dom.gamepad.enabled"]
   sequence<Gamepad?> getGamepads();
 };
-// MOZ_GAMEPAD
+#endif // MOZ_GAMEPAD
 
-
+#ifdef MOZ_B2G_BT
 // nsIDOMNavigatorBluetooth
 interface MozBluetoothManager;
 partial interface Navigator {
   [Throws, Func="Navigator::HasBluetoothSupport"]
   readonly attribute MozBluetoothManager mozBluetooth;
 };
-// MOZ_B2G_BT
+#endif // MOZ_B2G_BT
 
-
+#ifdef MOZ_TIME_MANAGER
 // nsIDOMMozNavigatorTime
 partial interface Navigator {
   [Throws, Func="Navigator::HasTimeSupport"]
   readonly attribute MozTimeManager mozTime;
 };
-// MOZ_TIME_MANAGER
+#endif // MOZ_TIME_MANAGER
 
-
+#ifdef MOZ_AUDIO_CHANNEL_MANAGER
 // nsIMozNavigatorAudioChannelManager
 partial interface Navigator {
   [Throws]
   readonly attribute AudioChannelManager mozAudioChannelManager;
 };
-// MOZ_AUDIO_CHANNEL_MANAGER
+#endif // MOZ_AUDIO_CHANNEL_MANAGER
 
-
+#ifdef MOZ_MEDIA_NAVIGATOR
 // nsIDOMNavigatorUserMedia
 callback MozDOMGetUserMediaSuccessCallback = void (nsISupports? value);
 callback MozDOMGetUserMediaErrorCallback = void (DOMString error);
@@ -345,4 +340,4 @@ partial interface Navigator {
   void mozGetUserMediaDevices(MozGetUserMediaDevicesSuccessCallback? onsuccess,
                               MozDOMGetUserMediaErrorCallback? onerror);
 };
-// MOZ_MEDIA_NAVIGATOR
+#endif // MOZ_MEDIA_NAVIGATOR

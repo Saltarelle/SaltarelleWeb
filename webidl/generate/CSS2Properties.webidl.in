@@ -1,4 +1,3 @@
-﻿interface CSS2Properties : CSSStyleDeclaration {
+interface CSS2Properties : CSSStyleDeclaration {
 ${props}
 };
-

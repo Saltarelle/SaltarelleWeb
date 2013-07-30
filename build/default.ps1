@@ -173,14 +173,14 @@ function Get-Sources($makefile, $symbols) {
 }
 
 function Generate-CSS2Properties($root, $workDir, $targetFile) {
-	(New-Object System.Net.WebClient).DownloadString("$($root)/layout/style/nsCSSPropList.h?raw=1") | Out-File -FilePath "$workDir\nsCSSPropList.h" -Encoding UTF8
-	(New-Object System.Net.WebClient).DownloadString("$($root)/layout/style/nsCSSPropAliasList.h?raw=1") | Out-File -FilePath "$workDir\nsCSSPropAliasList.h" -Encoding UTF8
-	(New-Object System.Net.WebClient).DownloadString("$($root)/dom/webidl/CSS2Properties.webidl.in?raw=1") | Out-File -FilePath "$workDir\CSS2Properties.webidl.in" -Encoding UTF8
-	(New-Object System.Net.WebClient).DownloadString("$($root)/dom/webidl/CSS2PropertiesProps.h?raw=1") | Out-File -FilePath "$workDir\CSS2PropertiesProps.h" -Encoding UTF8
+	(New-Object System.Net.WebClient).DownloadFile("$($root)/layout/style/nsCSSPropList.h?raw=1", "$workDir\nsCSSPropList.h")
+	(New-Object System.Net.WebClient).DownloadFile("$($root)/layout/style/nsCSSPropAliasList.h?raw=1", "$workDir\nsCSSPropAliasList.h")
+	(New-Object System.Net.WebClient).DownloadFile("$($root)/dom/webidl/CSS2Properties.webidl.in?raw=1", "$workDir\CSS2Properties.webidl.in")
+	(New-Object System.Net.WebClient).DownloadFile("$($root)/dom/webidl/CSS2PropertiesProps.h?raw=1", "$workDir\CSS2PropertiesProps.h")
 
 	# This logic is from the file http://dxr.mozilla.org/mozilla-central/source/dom/bindings/GenerateCSS2PropertiesWebIDL.py
 
-	$content = & "$buildtoolsDir\mcpp.exe" -P "$workDir\CSS2PropertiesProps.h"
+	$content = & "$buildtoolsDir\mcpp.exe" -e utf8 -P "$workDir\CSS2PropertiesProps.h"
 	$out = New-Object System.Text.StringBuilder
 	$content -split "`n" | % {
 		$match = Select-String -Pattern "^\s*\[\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*\]\s*,\s*$" -InputObject $_
@@ -216,34 +216,50 @@ Task Download-WebIDL {
 	md $webidlDir >$null
 	md $genDir >$null
 
-	(New-Object System.Net.WebClient).DownloadString($webidlRoot + "WebIDL.mk?raw=1") | Out-File -FilePath "$webidlDir\WebIDL.mk"
+	(New-Object System.Net.WebClient).DownloadFile($webidlRoot + "WebIDL.mk?raw=1", "$webidlDir\WebIDL.mk")
 	$symbols = $webIDLSymbols -split ","
 
 	$sources = Get-Sources "$webidlDir\WebIDL.mk" $symbols
 
+	$total = $sources["webidl_files"].Count + $sources["preprocessed_webidl_files"].Count
+	$current = 0
+
+	#simple downloads
 	$sources["webidl_files"] | % {
-		Write-Host "Downloading $_"
-		(New-Object System.Net.WebClient).DownloadString("$webidlRoot$($_)?raw=1") | Out-File -FilePath "$webidlDir\$_" -Encoding UTF8
+		$current++
+		Write-Host "Downloading $_ ($current of $total)"
+		(New-Object System.Net.WebClient).DownloadFile("$webidlRoot$($_)?raw=1", "$webidlDir\$_")
 	}
 
+	#downloads for preprcessing
+	$sources["preprocessed_webidl_files"] | % {
+		$current++
+		Write-Host "Downloading $_.raw ($current of $total)"
+		(New-Object System.Net.WebClient).DownloadFile("$webidlRoot$($_)?raw=1", "$webidlDir\$_.raw")
+	}
+
+	#preprocessing
+	$total = $sources["preprocessed_webidl_files"].Count
+	$current = 0
+	$sources["preprocessed_webidl_files"] | % {
+		$current++
+		Write-Host "Preprocessing $_ ($current of $total)"
+		$defines = ($symbols | % { "-D $_" }) -join " "
+		$content = iex "$buildtoolsDir\mcpp.exe -e utf8 $defines -P -C -o `"$webidlDir\$_`" `"$webidlDir\$_.raw`""
+	}
+
+	#generation
+	$total = $sources["preprocessed_webidl_files"].Count
+	$current = 0
 	$sources["generated_webidl_files"] | % {
+		$current++
 		if ($_ -eq "CSS2Properties.webidl") {
-			Write-Host "Generating $_"
+			Write-Host "Generating $_ ($current of $total)"
 			Generate-CSS2Properties $root $genDir "$webidlDir\$_"
 		}
 		else {
 			Write-Error "Don't know how to generate the file $_"
 		}
-	}
-
-	$sources["preprocessed_webidl_files"] | % {
-		Write-Host "Downloading $_"
-		(New-Object System.Net.WebClient).DownloadString("$webidlRoot$($_)?raw=1") | Out-File -FilePath "$webidlDir\$_" -Encoding UTF8
-
-		Write-Host "Preprocessing $_"
-		$defines = ($symbols | % { "-D $_" }) -join " "
-		$content = iex "$buildtoolsDir\mcpp.exe $defines -P -C `"$webidlDir\$_`""
-		$content | Out-File -FilePath "$webidlDir\$_" -Encoding UTF8
 	}
 }
 

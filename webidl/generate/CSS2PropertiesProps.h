@@ -1,4 +1,4 @@
-﻿/* A file meant as input to the preprocessor only */
+/* A file meant as input to the preprocessor only */
 
 /* DO_PROP serves as an extra level of indirection to allow expansion
    of CSS_PROP_DOMPROP_PREFIXED */
@@ -32,4 +32,3 @@
 #undef DO_PROP
 
 ]
-
