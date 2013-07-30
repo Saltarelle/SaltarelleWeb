@@ -246,3 +246,26 @@ Task Download-WebIDL {
 		$content | Out-File -FilePath "$webidlDir\$_" -Encoding UTF8
 	}
 }
+
+Task Generate-Source {
+	$webidlDir = "$baseDir\webidl"
+	$sources = Get-Sources "$webidlDir\WebIDL.mk" $symbols
+	$sourceList = $sources["webidl_files"] + $sources["generated_webidl_files"] + $sources["preprocessed_webidl_files"]
+
+	try {
+		$oldLocation = pwd
+		cd $webidlDir
+		Exec { msbuild "$baseDir\Generator\Generator.sln" /verbosity:minimal /p:"Configuration=$configuration" }
+		rmdir -Force -Recurse -ErrorAction SilentlyContinue "$baseDir\Web\Generated" | Out-Null
+		try {
+			"$($sourceList -join ' ')" | Out-File "$webidlDir\sources.in"
+			Exec { & "$baseDir\Generator\Generator\bin\Generator.exe" -o "$baseDir\Web\Generated" "@sources.in" }
+		}
+		finally {
+			del "$webidlDir\sources.in" -ErrorAction Ignore
+		}
+	}
+	finally {
+		cd $oldLocation
+	}
+}

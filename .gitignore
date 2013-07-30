@@ -6,3 +6,9 @@ Web/Properties/Version.cs
 *.ncrunchsolution.user
 *.ncrunchproject
 _ReSharper.Web
+Generator/Generator.sln.DotSettings.user
+Generator/Generator.Tests/Generator.Tests.csproj.user
+Generator/Generator.v11.suo
+Generator/Generator/ParserImpl/WebIDL.tokens
+Generator/Generator/ParserImpl/WebIDLLexer.cs
+Generator/Generator/ParserImpl/WebIDLParser.cs

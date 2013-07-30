@@ -1,0 +1,470 @@
+﻿grammar WebIDL;
+
+options
+{
+	language = CSharp3;
+}
+
+tokens {
+	ANY          = 'any';
+	ATTRIBUTE    = 'attribute';
+	BOOLEAN      = 'boolean';
+	BYTE         = 'byte';
+	CALLBACK     = 'callback';
+	CONST        = 'const';
+	CREATOR      = 'creator';
+	DATE         = 'Date';
+	DELETER      = 'deleter';
+	DICTIONARY   = 'dictionary';
+	DOMString    = 'DOMString';
+	DOUBLE       = 'double';
+	ENUM         = 'enum';
+	EXCEPTION    = 'exception';
+	FALSE        = 'false';
+	FLOAT        = 'float';
+	GETTER       = 'getter';
+	IMPLEMENTS   = 'implements';
+	INFINITY     = 'Infinity';
+	INHERIT      = 'inherit';
+	INTERFACE    = 'interface';
+	JSONIFIER    = 'jsonifier';
+	LEGACYCALLER = 'legacycaller';
+	LONG         = 'long';
+	NAN          = 'NaN';
+	NULL         = 'null';
+	OBJECT       = 'Object';
+	OCTET        = 'octet';
+	OPTIONAL     = 'optional';
+	OR           = 'or';
+	PARTIAL      = 'partial';
+	READONLY     = 'readonly';
+	SEQUENCE     = 'sequence';
+	SETTER       = 'setter';
+	SHORT        = 'short';
+	STATIC       = 'static';
+	STRINGIFIER  = 'stringifier';
+	TRUE         = 'true';
+	TYPEDEF      = 'typedef';
+	UNRESTRICTED = 'unrestricted';
+	UNSIGNED     = 'unsigned';
+	VOID         = 'void';
+
+	LPAREN       = '(';
+	RPAREN       = ')';
+	LBRACE       = '{';
+	RBRACE       = '}';
+	LBRACK       = '[';
+	RBRACK       = ']';
+	LANG         = '<';
+	RANG         = '>';
+	COMMA        = ',';
+	SEMIC        = ';';
+	QUESTION     = '?';
+	EQ           = '=';
+	MINUS        = '-';
+	COLON        = ':';
+	ELLIPSIS     = '...';
+}
+
+@lexer::namespace { Generator.ParserImpl }
+
+@lexer::header { #pragma warning disable 3021 }
+
+@parser::namespace { Generator.ParserImpl }
+
+@parser::header {
+#pragma warning disable 3021
+using System;
+using System.Globalization;
+using Generator.AstNodes;
+}
+
+@lexer::members {
+	public override void ReportError(RecognitionException ex) {
+		throw new System.Exception("Lexer error at (" + ex.Line + ", " + ex.CharPositionInLine + "): " + ex.GetType().Name + ": " + ex.Message);
+	}
+}
+
+@parser::members {
+	public override void ReportError(RecognitionException ex) {
+		throw new System.Exception("Parser error at (" + ex.Line + ", " + ex.CharPositionInLine + "): " + ex.GetType().Name + ": " + ex.Message);
+	}
+
+	private int ParseInt(string text) {
+		bool negative = false;
+		if (text.StartsWith("-")) {
+			negative = true;
+			text = text.Substring(1);
+		}
+
+		int result;
+		if (text.StartsWith("0x", StringComparison.OrdinalIgnoreCase)) {
+			result = int.Parse(text.Substring(2), NumberStyles.AllowHexSpecifier, CultureInfo.InvariantCulture);
+		}
+		else if (text.StartsWith("0", StringComparison.Ordinal)) {
+			result = 0;
+			for (int i = text.Length - 1; i > 1; i++) {
+				result = result * 8 + (text[i] - '0');
+			}
+		}
+		else {
+			result = int.Parse(text, NumberStyles.None, CultureInfo.InvariantCulture);
+		}
+
+		return negative ? -result : result;
+	}
+}
+
+Integer   : '-'? ('0' ( '0'..'7'* | (('X' | 'x') ('0'..'9' | 'A'..'F' | 'a'..'f')+)) | ('1'..'9' '0'..'9'*));
+Float     :   ('0'..'9')+ '.' ('0'..'9')* Exponent?
+            | '.' ('0'..'9')+ Exponent?
+            | ('0'..'9')+ Exponent;
+
+Identifier : ('A'..'Z' | '_' | 'a'..'z') ('A'..'Z' | '_' | 'a'..'z' | '0'..'9')*;
+String     : '"' ~'"'* '"' { $text = $text.Substring(1, $text.Length - 2).Replace("\"\"", "\""); };
+Whitespace : ( '\t' | ' ' | '\r' | '\n'| '\u000C' )+ { $channel = Hidden; };
+
+MultiLineComment
+	: '/*' ( options { greedy = false; } : . )* '*/' { $channel = Hidden; }
+	;
+
+SingleLineComment
+	: '//' (~('\r' | '\n'))* { $channel = Hidden; }
+	;
+
+fragment Exponent : ('e'|'E') ('+'|'-')? ('0'..'9')+;
+
+//////////////////////////////////////// Parser rules ////////////////////////////////////////
+
+public definitions returns [Definitions result]
+	@init { var list = new List<Definition>(); }
+	: (l=extendedAttributeList d=definition[l] { list.Add(d); })* EOF { $result = new Definitions(list); }
+	;
+
+definition[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: ( r=callbackOrInterface[extendedAttributes]
+	  | r=partial[extendedAttributes]
+	  | r=dictionary[extendedAttributes]
+	  | r=exception[extendedAttributes]
+	  | r=enum[extendedAttributes]
+	  | r=typedef
+	  | r=implementsStatement
+	  | r=interfaceDeclaration
+	) { $result = r; };
+
+callbackOrInterface[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: (  CALLBACK r=callbackRestOrInterface[extendedAttributes]
+	   | r=interface[extendedAttributes, false]
+	) { $result = r; };
+
+callbackRestOrInterface[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: ( r=callbackRest[extendedAttributes]
+	  | r=interface[extendedAttributes, true]
+	) { $result = r; };
+
+interface[IEnumerable<ExtendedAttribute> extendedAttributes, bool isCallback] returns [Definition result]
+	: INTERFACE name=Identifier baseInterface=inheritance? LBRACE members=interfaceMembers RBRACE SEMIC { $result = isCallback ? Definition.CallbackInterface($name.Text, baseInterface, members, extendedAttributes) : Definition.Interface($name.Text, baseInterface, members, extendedAttributes); }
+	;
+
+partial[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: PARTIAL (r=partialInterface[extendedAttributes] | r=partialDictionary[extendedAttributes]) { $result = r; }
+	;
+
+partialInterface[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: INTERFACE name=Identifier LBRACE members=interfaceMembers RBRACE SEMIC { $result = Definition.PartialInterface($name.Text, members, extendedAttributes); }
+	;
+
+interfaceMembers returns [List<InterfaceMember> result]
+	@init { $result = new List<InterfaceMember>(); }
+	: (l=extendedAttributeList m=interfaceMember[l] { $result.Add(m); })*
+	;
+
+interfaceMember[IEnumerable<ExtendedAttribute> extendedAttributes] returns [InterfaceMember result]
+	: c=const { $result = InterfaceMember.Const(c.Item2, c.Item1, c.Item3, extendedAttributes); } | r=attributeOrOperation[extendedAttributes] { $result = r; }
+	;
+
+dictionary[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: DICTIONARY name=Identifier baseType=inheritance? LBRACE members=dictionaryMembers RBRACE SEMIC { $result = Definition.Dictionary($name.Text, baseType, members, extendedAttributes); }
+	;
+
+dictionaryMembers returns [List<DictionaryMember> result]
+	@init { $result = new List<DictionaryMember>(); }
+	: (l=extendedAttributeList m=dictionaryMember[l] { $result.Add(m); })*
+	;
+
+dictionaryMember[IEnumerable<ExtendedAttribute> extendedAttributes] returns [DictionaryMember result]
+	: t=type name=Identifier def=default? SEMIC { $result = DictionaryMember.Create(t, $name.text, def, extendedAttributes); }
+	;
+
+partialDictionary[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: DICTIONARY name=Identifier LBRACE members=dictionaryMembers RBRACE SEMIC { $result = Definition.PartialDictionary($name.Text, members, extendedAttributes); }
+	;
+
+default returns [Value result]
+	: EQ v=defaultValue { $result = v; }
+	;
+
+defaultValue returns [Value result]
+	: v=constValue { $result = v; }
+	| s=String { $result = Value.String($s.Text); }
+	;
+
+constValue returns [Value result]
+	: v=booleanLiteral { $result = v; }
+	| v=floatLiteral { $result = v; }
+	| i=Integer { $result = Value.Integer(ParseInt($i.text)); }
+	| NULL { $result = Value.Null(); }
+	;
+
+booleanLiteral returns [Value result]
+	: TRUE { $result = Value.True(); }
+	| FALSE { $result = Value.False(); }
+	;
+
+floatLiteral returns [Value result]
+	: Float { $result = Value.Float(double.Parse($Float.text, System.Globalization.CultureInfo.InvariantCulture)); }
+	| MINUS INFINITY { $result = Value.NegativeInfinity(); }
+	| INFINITY { $result = Value.PositiveInfinity(); }
+	| NAN { $result = Value.NaN(); }
+	;
+
+exception[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: EXCEPTION name=Identifier b=inheritance? LBRACE members=exceptionMembers RBRACE SEMIC { $result = Definition.Exception($name.Text, b, members, extendedAttributes); }
+	;
+
+exceptionMembers returns [List<ExceptionMember> result]
+	@init { $result = new List<ExceptionMember>(); }
+	: (l=extendedAttributeList m=exceptionMember[l] { $result.Add(m); })*
+	;
+
+inheritance returns [string result]
+	: COLON Identifier { $result = $Identifier.text; }
+	;
+
+enum[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: ENUM name=Identifier LBRACE v=enumValueList RBRACE SEMIC { $result = Definition.Enum($name.text, v, extendedAttributes); }
+	;
+
+enumValueList returns [List<string> result]
+	@init { $result = new List<string>(); }
+	: v=String { $result.Add($v.text); } (COMMA v=String { $result.Add($v.text); })*
+	;
+
+callbackRest[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
+	: name=Identifier EQ t=returnType LPAREN args=argumentList RPAREN SEMIC { $result = Definition.Callback($name.text, t, args, extendedAttributes); }
+	;
+
+typedef returns [Definition result]
+	: TYPEDEF typeAttributes=extendedAttributeList t=type name=Identifier SEMIC { $result = Definition.Typedef($name.text, t, typeAttributes); }
+	;
+
+implementsStatement returns [Definition result]
+	: name=Identifier IMPLEMENTS b=Identifier SEMIC { $result = Definition.Implements($name.text, $b.text); }
+	;
+
+interfaceDeclaration returns [Definition result]
+	: INTERFACE name=Identifier SEMIC { $result = Definition.InterfaceDeclaration($name.text); }
+	;
+
+const returns [Tuple<WebIDLType, string, Value> result]
+	: CONST t=constType name=Identifier EQ val=constValue SEMIC { $result = Tuple.Create(t, $name.text, val); }
+	;
+
+attributeOrOperation[IEnumerable<ExtendedAttribute> extendedAttributes] returns [InterfaceMember result]
+	: (  STRINGIFIER v=stringifierAttributeOrOperation[extendedAttributes]
+	  | v=attribute[extendedAttributes, false]
+	  | v=operation[extendedAttributes]
+	  ) { $result = v; }
+	| JSONIFIER SEMIC { $result = InterfaceMember.Jsonifier(extendedAttributes); }
+	;
+
+stringifierAttributeOrOperation[IEnumerable<ExtendedAttribute> extendedAttributes] returns [InterfaceMember result]
+	: r=attribute[extendedAttributes, true] { $result = r; }
+	| r=operationRest[OperationQualifiers.Stringifier, extendedAttributes] { $result = r; }
+	| SEMIC { $result = InterfaceMember.UnnamedOperation(WebIDLType.DOMString(), new Argument[0], OperationQualifiers.Stringifier, extendedAttributes); }
+	;
+
+attribute[IEnumerable<ExtendedAttribute> extendedAttributes, bool isStringifier] returns [InterfaceMember result]
+	: s=STATIC? inh=INHERIT? ro=READONLY? ATTRIBUTE t=type name=Identifier SEMIC { $result = InterfaceMember.Attribute($name.text, t, (s != null ? AttributeQualifiers.Static : 0) | (inh != null ? AttributeQualifiers.Inherit : 0) | (ro != null ? AttributeQualifiers.ReadOnly : 0) | (isStringifier ? AttributeQualifiers.Stringifier : 0), extendedAttributes); }
+	;
+
+operation[IEnumerable<ExtendedAttribute> extendedAttributes] returns [InterfaceMember result]
+	: q=qualifiers r=operationRest[q, extendedAttributes] { $result = r; }
+	;
+
+qualifiers returns [OperationQualifiers result]
+	@init { $result = OperationQualifiers.None; }
+	: (STATIC { $result |= OperationQualifiers.Static; })?
+	  (   GETTER       { $result |= OperationQualifiers.Getter; }
+	    | SETTER       { $result |= OperationQualifiers.Setter; }
+	    | CREATOR      { $result |= OperationQualifiers.Creator; }
+	    | DELETER      { $result |= OperationQualifiers.Deleter; }
+	    | LEGACYCALLER { $result |= OperationQualifiers.LegacyCaller; }
+	  )*
+	;
+
+operationRest[OperationQualifiers qualifiers, IEnumerable<ExtendedAttribute> extendedAttributes] returns [InterfaceMember result]
+	: t=returnType name=Identifier? LPAREN args=argumentList RPAREN SEMIC { $result = name != null ? InterfaceMember.NamedOperation($name.text, t, args, qualifiers, extendedAttributes) : InterfaceMember.UnnamedOperation(t, args, qualifiers, extendedAttributes); }
+	;
+
+argumentList returns [List<Argument> result]
+	@init { $result = new List<Argument>(); }
+	: (a=argument { $result.Add(a); } (COMMA a=argument { $result.Add(a); })* )?
+	;
+
+argument returns [Argument result]
+	: l=extendedAttributeList r=optionalOrRequiredArgument[l] { $result = r; }
+	;
+
+optionalOrRequiredArgument[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Argument result]
+	: OPTIONAL t=type name=argumentName def=default? { $result = Argument.Optional(name, t, def, extendedAttributes); }
+	| t=type ell=ELLIPSIS? name=argumentName { $result = ell != null ? Argument.Ellipsis(name, t, extendedAttributes) : Argument.Required(name, t, extendedAttributes); }
+	;
+
+argumentName returns [string result]
+	: r=argumentNameKeyword { $result = r; }
+	| Identifier { $result = $Identifier.text; }
+	;
+
+exceptionMember[IEnumerable<ExtendedAttribute> extendedAttributes] returns [ExceptionMember result]
+	: c=const { $result = ExceptionMember.Const(c.Item2, c.Item1, c.Item3, extendedAttributes); }
+	| r=exceptionField[extendedAttributes] { $result = r; }
+	;
+
+exceptionField[IEnumerable<ExtendedAttribute> extendedAttributes] returns [ExceptionMember result]
+	: t=type name=Identifier SEMIC { $result = ExceptionMember.Field($name.text, t, extendedAttributes); }
+	;
+
+extendedAttributeList returns[List<ExtendedAttribute> result]
+	: (LBRACK { $result = new List<ExtendedAttribute>(); } a=extendedAttribute { $result.Add(a); } (COMMA a=extendedAttribute { $result.Add(a); })* RBRACK)?
+	;
+
+extendedAttribute returns [ExtendedAttribute result]
+	: ( r=extendedAttributeNoArgs
+	  | r=extendedAttributeArgList
+	  | r=extendedAttributeIdent
+	  | r=extendedAttributeNamedArgList
+	  | r=extendedAttributeValue
+	) { $result = r; }
+	;
+
+extendedAttributeNoArgs returns [ExtendedAttribute result]
+	: name=Identifier { $result = ExtendedAttribute.NoArgs($name.text); }
+	;
+
+extendedAttributeArgList returns [ExtendedAttribute result]
+	: name=Identifier LPAREN args=argumentList RPAREN { $result = ExtendedAttribute.ArgList($name.text, args); }
+	;
+
+extendedAttributeIdent returns [ExtendedAttribute result]
+	: name=Identifier EQ ident=Identifier { $result = ExtendedAttribute.Ident($name.text, $ident.text); }
+	;
+
+extendedAttributeNamedArgList returns [ExtendedAttribute result]
+	: name=Identifier EQ ident=Identifier LPAREN args=argumentList RPAREN { $result = ExtendedAttribute.NamedArgList($name.text, $ident.text, args); }
+	;
+
+extendedAttributeValue returns [ExtendedAttribute result]
+	: name=Identifier EQ value=defaultValue { $result = ExtendedAttribute.Value($name.text, value); }
+	;
+
+argumentNameKeyword returns [string result]
+	: ( i=ATTRIBUTE
+	  | i=CALLBACK
+	  | i=CONST
+	  | i=CREATOR
+	  | i=DELETER
+	  | i=DICTIONARY
+	  | i=ENUM
+	  | i=EXCEPTION
+	  | i=GETTER
+	  | i=IMPLEMENTS
+	  | i=INHERIT
+	  | i=INTERFACE
+	  | i=JSONIFIER
+	  | i=LEGACYCALLER
+	  | i=PARTIAL
+	  | i=SETTER
+	  | i=STATIC
+	  | i=STRINGIFIER
+	  | i=TYPEDEF
+	  | i=UNRESTRICTED
+	) { $result = $i.text; }
+	;
+
+type returns [WebIDLType result]
+	: r=singleType { $result = r; }
+	| u=unionType r=typeSuffix[u] { $result = r; }
+	;
+
+singleType returns [WebIDLType result]
+	: r=nonAnyType { $result = r; }
+	| ANY { $result = WebIDLType.Any(); } r=typeSuffixStartingWithArray[$result] { $result = r; }
+	;
+
+unionType returns [WebIDLType result]
+	@init { var members = new List<WebIDLType>(); }
+	: LPAREN m=unionMemberType { members.Add(m); } (OR m=unionMemberType { members.Add(m); })+ RPAREN { $result = WebIDLType.Union(members); }
+	;
+
+unionMemberType returns [WebIDLType result]
+	: r=nonAnyType { $result = r; }
+	| t=unionType r=typeSuffix[t] { $result = r; }
+	| ANY LBRACK RBRACK { $result = WebIDLType.Array(WebIDLType.Any()); } r=typeSuffix[$result] { $result = r; }
+	;
+
+nonAnyType returns [WebIDLType result]
+	: (r=primitiveType { $result = r; } | DOMString { $result = WebIDLType.DOMString(); } | i=Identifier { $result = WebIDLType.TypeReference($i.text); } | OBJECT { $result = WebIDLType.Object(); } | DATE { $result = WebIDLType.Date(); }) r=typeSuffix[$result] { $result = r; }
+	| SEQUENCE LANG t=type RANG { $result = WebIDLType.Sequence(t); } r=nullable[$result] { $result = r; }
+	;
+
+constType returns [WebIDLType result]
+	: (r=primitiveType { $result = r; } | i=Identifier { $result = WebIDLType.TypeReference($i.text); }) r=nullable[$result] { $result = r; }
+	;
+
+primitiveType returns [WebIDLType result]
+	: r=unsignedIntegerType { $result = r; }
+	| r=unrestrictedFloatType { $result = r; }
+	| BOOLEAN { $result = WebIDLType.Boolean(); }
+	| BYTE { $result = WebIDLType.Byte(); }
+	| OCTET { $result = WebIDLType.Octet(); }
+	;
+
+unrestrictedFloatType returns [WebIDLType result]
+	: u=UNRESTRICTED? r=floatType[u != null] { $result = r; }
+	;
+
+floatType[bool unrestricted] returns [WebIDLType result]
+	: FLOAT { $result = unrestricted ? WebIDLType.UnrestrictedFloat() : WebIDLType.Float(); } | DOUBLE { $result = unrestricted ? WebIDLType.UnrestrictedDouble() : WebIDLType.Double(); } 
+	;
+
+unsignedIntegerType returns [WebIDLType result]
+	: u=UNSIGNED? r=integerType[u != null] { $result = r; }
+	;
+
+integerType[bool isUnsigned] returns [WebIDLType result]
+	: SHORT { $result = isUnsigned ? WebIDLType.UnsignedShort() : WebIDLType.Short(); }
+	| LONG { $result = isUnsigned ? WebIDLType.UnsignedLong() : WebIDLType.Long(); } (LONG { $result = isUnsigned ? WebIDLType.UnsignedLongLong() : WebIDLType.LongLong(); })?
+	;
+
+typeSuffix[WebIDLType baseType] returns [WebIDLType result]
+	@init { $result = baseType; }
+	: ( LBRACK RBRACK { $result = WebIDLType.Array($result); } r=typeSuffix[$result] { $result = r; }
+	  | QUESTION { $result = WebIDLType.Nullable($result); } r=typeSuffixStartingWithArray[$result] { $result = r; }
+	)?
+	;
+
+typeSuffixStartingWithArray[WebIDLType baseType] returns [WebIDLType result]
+	@init { $result = baseType; }
+	: ( LBRACK RBRACK { $result = WebIDLType.Array($result); } r=typeSuffix[$result] { $result = r; })?
+	;
+
+nullable[WebIDLType baseType] returns [WebIDLType result]
+	@init { $result = baseType; }
+	: (QUESTION { $result = WebIDLType.Nullable($result); })?
+	;
+
+returnType returns[WebIDLType result]
+	: r=type { $result = r; }
+	| VOID { $result = WebIDLType.Void(); }
+	;
