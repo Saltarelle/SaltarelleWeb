@@ -262,7 +262,8 @@ Task Download-WebIDL {
 		}
 	}
 	
-"""
+	Write-Host "Generating _builtin.webidl"
+@"
 interface Float32Array;
 interface Uint8Array;
 interface ArrayBuffer;
@@ -271,15 +272,14 @@ interface DOMTimeStamp;
 interface ByteString;
 interface Uint8ClampedArray;
 interface Int32Array;
-""" | Out-File -FilePath "$webidlDir\_builtin.webidl" -Encoding UTF8
-
-	$sources["webidl_files"] = "_builtin.webidl" + $sources["webidl_files"]
+"@ | Out-File -FilePath "$webidlDir\_builtin.webidl" -Encoding UTF8
 }
 
 Task Generate-Source {
 	$webidlDir = "$baseDir\webidl"
+	$symbols = $webIDLSymbols -split ","
 	$sources = Get-Sources "$webidlDir\WebIDL.mk" $symbols
-	$sourceList = $sources["webidl_files"] + $sources["generated_webidl_files"] + $sources["preprocessed_webidl_files"]
+	$sourceList = @("_builtin.webidl") + $sources["webidl_files"] + $sources["generated_webidl_files"] + $sources["preprocessed_webidl_files"]
 
 	try {
 		$oldLocation = pwd
