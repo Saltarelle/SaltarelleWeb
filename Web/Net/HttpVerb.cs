@@ -1,13 +1,7 @@
-// HttpVerb.cs
-// Script#/Libraries/Web
-// This source code is subject to terms and conditions of the Apache License, Version 2.0.
-// 
-
 using System.Runtime.CompilerServices;
 
 namespace System.Net {
-	[Imported]
-	[NamedValues]
+	[Imported, NamedValues]
 	public enum HttpVerb {
 		[ScriptName("GET")] Get = 0,
 		[ScriptName("POST")] Post = 1,

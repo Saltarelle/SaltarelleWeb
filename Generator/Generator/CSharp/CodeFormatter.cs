@@ -269,13 +269,10 @@ namespace Generator.CSharp {
 				}
 			);
 
+			_sb.AppendLine("}");
+
 			string content = _sb.ToString();
-			_sb.Clear()
-			  .AppendLine("// " + type.Name + @".cs")
-			  .AppendLine("// Script#/Libraries/Web")
-			  .AppendLine("// This source code is subject to terms and conditions of the Apache License, Version 2.0.")
-			  .AppendLine("// ")
-			  .AppendLine();
+			_sb.Clear();
 
 			if (_namespaces.Count > 0) {
 				foreach (var ns in _namespaces.Where(ns => ns != type.Namespace && !type.Namespace.StartsWith(ns + ".")).OrderBy(ns => ns))
@@ -283,8 +280,7 @@ namespace Generator.CSharp {
 				_sb.AppendLine();
 			}
 
-			_sb.Append(content)
-			  .AppendLine("}");
+			_sb.Append(content);
 		}
 
 		public static string Format(TypeDefinition type) {
