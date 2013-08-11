@@ -28,7 +28,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Saltarelle.Web.xml</DocumentationFile>
-    <NoWarn>1591, 0661, 0660, 1684</NoWarn>
+    <NoWarn>1591, 108</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -39,183 +39,70 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Script.Web.xml</DocumentationFile>
-    <NoWarn>1591, 0661, 0660, 1684</NoWarn>
+    <NoWarn>1591, 108</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Html\ActiveXObject.cs" />
-    <Compile Include="Html\AnchorElement.cs" />
-    <Compile Include="Html\AreaElement.cs" />
-    <Compile Include="Html\AudioElement.cs" />
-    <Compile Include="Html\CheckBoxElement.cs" />
+    <Compile Include="Generated\**\*.cs" />
+    <Compile Include="Data\Sql\SqlDatabaseCallback.cs" />
+    <Compile Include="Data\Sql\SqlErrorCallback.cs" />
+    <Compile Include="Data\Sql\SqlStatementCallback.cs" />
+    <Compile Include="Data\Sql\SqlStatementErrorCallback.cs" />
+    <Compile Include="Data\Sql\SqlTransactionCallback.cs" />
     <Compile Include="Html\CanvasElement.cs" />
-    <Compile Include="Html\ClientRectList.cs" />
-    <Compile Include="Html\MediaCrossOriginPolicy.cs" />
-    <Compile Include="Html\MediaPreload.cs" />
-    <Compile Include="Html\VideoElement.cs" />
-    <Compile Include="Html\MediaElement.cs" />
-    <Compile Include="Html\ElementEventListener.cs" />
-    <Compile Include="Html\GestureEvent.cs" />
-    <Compile Include="Html\CustomEvent.cs" />
-    <Compile Include="Html\MediaElementNetworkState.cs" />
-    <Compile Include="Html\MediaElementReadyState.cs" />
-    <Compile Include="Html\MediaPlayability.cs" />
-    <Compile Include="Html\Media\Audio\AnalyserNode.cs" />
-    <Compile Include="Html\Media\Audio\AudioBuffer.cs" />
-    <Compile Include="Html\Media\Audio\AudioBufferSourceNode.cs" />
-    <Compile Include="Html\Media\Audio\AudioBufferSourceNodePlaybackState.cs" />
+    <Compile Include="Html\DOMParser.cs" />
+    <Compile Include="Html\EventPhase.cs" />
     <Compile Include="Html\Media\Audio\AudioContext.cs" />
-    <Compile Include="Html\Media\Audio\AudioDestinationNode.cs" />
-    <Compile Include="Html\Media\Audio\AudioListener.cs" />
-    <Compile Include="Html\Media\Audio\AudioNode.cs" />
-    <Compile Include="Html\Media\Audio\AudioParam.cs" />
-    <Compile Include="Html\Media\Audio\AudioProcessingEvent.cs" />
-    <Compile Include="Html\Media\Audio\AudioSourceNode.cs" />
-    <Compile Include="Html\Media\Audio\BiquadFilterNode.cs" />
-    <Compile Include="Html\Media\Audio\BiquadFilterType.cs" />
-    <Compile Include="Html\Media\Audio\ChannelMergerNode.cs" />
-    <Compile Include="Html\Media\Audio\ChannelSplitterNode.cs" />
-    <Compile Include="Html\Media\Audio\ConvolverNode.cs" />
-    <Compile Include="Html\Media\Audio\DelayNode.cs" />
-    <Compile Include="Html\Media\Audio\DistanceModelType.cs" />
-    <Compile Include="Html\Media\Audio\DynamicsCompressorNode.cs" />
-    <Compile Include="Html\Media\Audio\GainNode.cs" />
-    <Compile Include="Html\Media\Audio\MediaElementAudioSourceNode.cs" />
-    <Compile Include="Html\Media\Audio\MediaStreamAudioSourceNode.cs" />
-    <Compile Include="Html\Media\Audio\OfflineAudioContext.cs" />
-    <Compile Include="Html\Media\Audio\OscillatorNode.cs" />
-    <Compile Include="Html\Media\Audio\OscillatorNodePlaybackState.cs" />
-    <Compile Include="Html\Media\Audio\OscillatorType.cs" />
-    <Compile Include="Html\Media\Audio\PannerNode.cs" />
-    <Compile Include="Html\Media\Audio\PanningModelType.cs" />
-    <Compile Include="Html\Media\Audio\ScriptProcessorNode.cs" />
-    <Compile Include="Html\Media\Audio\WaveShaperNode.cs" />
-    <Compile Include="Html\Media\Audio\WaveTable.cs" />
-    <Compile Include="Html\Media\Graphics\CanvasContextWebGL.cs" />
-    <Compile Include="Html\Media\Graphics\Rendering.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLActiveInfo.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLBuffer.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLContextAttributes.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLFramebuffer.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLObject.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLProgram.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLRenderbuffer.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLShader.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLShaderPrecisionFormat.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLTexture.cs" />
-    <Compile Include="Html\Media\Graphics\WebGL\WebGLUniformLocation.cs" />
-    <Compile Include="Html\MutableEvent.cs" />
-    <Compile Include="Html\ClientRect.cs" />
-    <Compile Include="Html\Plugin.cs" />
-    <Compile Include="Html\PluginArray.cs" />
-    <Compile Include="Html\TimeRanges.cs" />
-    <Compile Include="Html\TokenList.cs" />
-    <Compile Include="Html\TouchInfo.cs" />
-    <Compile Include="Html\TouchEvent.cs" />
-    <Compile Include="Html\Data\ApplicationCache.cs" />
-    <Compile Include="Html\Data\ApplicationCacheStatus.cs" />
-    <Compile Include="Html\Data\ApplicationCacheEvent.cs" />
-    <Compile Include="Html\Data\SqlResultSet.cs" />
-    <Compile Include="Html\Data\SqlResultSetRow.cs" />
-    <Compile Include="Html\Data\SqlResultSetRowList.cs" />
-    <Compile Include="Html\Data\SqlError.cs" />
-    <Compile Include="Html\Data\SqlTransaction.cs" />
-    <Compile Include="Html\Data\SqlDatabase.cs" />
-    <Compile Include="Html\Media\Graphics\Pattern.cs" />
-    <Compile Include="Html\Media\Graphics\Gradient.cs" />
-    <Compile Include="Html\Orientation.cs" />
-    <Compile Include="Html\Data\Storage.cs" />
-    <Compile Include="Html\IElementEventHandler.cs" />
-    <Compile Include="Html\Editing\ControlRange.cs" />
-    <Compile Include="Html\DataFormat.cs" />
-    <Compile Include="Html\DataTransfer.cs" />
-    <Compile Include="Html\DivElement.cs" />
-    <Compile Include="Html\Document.cs" />
-    <Compile Include="Html\ElementAttribute.cs" />
-    <Compile Include="Html\ElementAttributeCollection.cs" />
-    <Compile Include="Html\ElementAttributeName.cs" />
-    <Compile Include="Html\DocumentInstance.cs" />
-    <Compile Include="Html\DocumentFragment.cs" />
-    <Compile Include="Html\Element.cs" />
-    <Compile Include="Html\ElementCollection.cs" />
-    <Compile Include="Html\ElementType.cs" />
-    <Compile Include="Html\ElementEventHandler.cs" />
-    <Compile Include="Html\DocumentImplementation.cs" />
-    <Compile Include="Html\DropEffect.cs" />
-    <Compile Include="Html\AllowedDropEffect.cs" />
-    <Compile Include="Html\ErrorHandler.cs" />
-    <Compile Include="Html\ElementEvent.cs" />
-    <Compile Include="Html\FormElement.cs" />
-    <Compile Include="Html\History.cs" />
-    <Compile Include="Html\IFrameElement.cs" />
-    <Compile Include="Html\ImageElement.cs" />
-    <Compile Include="Html\InputElement.cs" />
-    <Compile Include="Html\Location.cs" />
-    <Compile Include="Html\MapElement.cs" />
+    <Compile Include="Html\Media\Graphics\SVG\SVGAnimatedEnumeration.cs" />
+    <Compile Include="Html\Media\MediaStreamOptions.cs" />
+    <Compile Include="Html\Media\Graphics\CanvasRenderingContext2D.cs" />
+    <Compile Include="Html\Media\Graphics\CanvasRenderingContext.cs" />
+    <Compile Include="Html\Media\Graphics\CanvasContextId.cs" />
     <Compile Include="Html\Media\Graphics\CompositeOperation.cs" />
-    <Compile Include="Html\Media\Graphics\CanvasContext2D.cs" />
-    <Compile Include="Html\Media\Graphics\CanvasContext.cs" />
-    <Compile Include="Html\Media\Graphics\ImageData.cs" />
-    <Compile Include="Html\Media\Graphics\PixelArray.cs" />
-    <Compile Include="Html\Media\Graphics\TextMetrics.cs" />
-    <Compile Include="Html\Media\Graphics\TextBaseline.cs" />
-    <Compile Include="Html\Media\Graphics\TextAlign.cs" />
-    <Compile Include="Html\Media\Graphics\LineJoin.cs" />
     <Compile Include="Html\Media\Graphics\LineCap.cs" />
-    <Compile Include="Html\MessageEvent.cs" />
+    <Compile Include="Html\Media\Graphics\LineJoin.cs" />
+    <Compile Include="Html\Media\Graphics\TextAlign.cs" />
+    <Compile Include="Html\Media\Graphics\TextBaseline.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\WebGLRenderingContext.cs" />
     <Compile Include="Html\Navigator.cs" />
-    <Compile Include="Html\OptionElement.cs" />
-    <Compile Include="Html\Editing\Range.cs" />
-    <Compile Include="Html\Screen.cs" />
-    <Compile Include="Html\ScriptElement.cs" />
-    <Compile Include="Html\SelectElement.cs" />
-    <Compile Include="Html\Editing\Selection.cs" />
-    <Compile Include="Html\Services\GeolocationErrorCode.cs" />
-    <Compile Include="Html\Services\GeolocationOptions.cs" />
-    <Compile Include="Html\Services\GeolocationError.cs" />
-    <Compile Include="Html\Services\GeoCoordinates.cs" />
-    <Compile Include="Html\Services\Geolocation.cs" />
-    <Compile Include="Html\Services\GeolocationService.cs" />
+    <Compile Include="Html\NavigatorInstance.cs" />
     <Compile Include="Html\Style.cs" />
-    <Compile Include="Html\TableCellElement.cs" />
-    <Compile Include="Html\TableElement.cs" />
-    <Compile Include="Html\TableRowElement.cs" />
-    <Compile Include="Html\TableSectionElement.cs" />
-    <Compile Include="Html\TextAreaElement.cs" />
-    <Compile Include="Html\TextElement.cs" />
-    <Compile Include="Html\Editing\TextRange.cs" />
-    <Compile Include="Html\Media\Filters\VisualFilter.cs" />
-    <Compile Include="Html\Media\Filters\VisualFilterCollection.cs" />
-    <Compile Include="Html\Media\Filters\VisualTransition.cs" />
-    <Compile Include="Html\Media\Filters\VisualTransitionState.cs" />
     <Compile Include="Html\Window.cs" />
-    <Compile Include="Html\WindowInstance.cs" />
-    <Compile Include="Net\Blob.cs" />
-    <Compile Include="Net\BlobPropertyBag.cs" />
-    <Compile Include="Net\HttpVerb.cs" />
-    <Compile Include="Net\ReadyState.cs" />
+    <Compile Include="Html\Document.cs" />
+    <Compile Include="Html\Element.cs" />
+    <Compile Include="Html\HtmlEventHandler.cs" />
+    <Compile Include="Html\EventTarget.cs" />
+    <Compile Include="Html\HtmlEventHandlerWithTarget.cs" />
+    <Compile Include="Html\Media\TextTrackCue.cs" />
+    <Compile Include="Html\Media\MediaCrossOriginPolicy.cs" />
+    <Compile Include="Data\Sql\SqlResultSet.cs" />
+    <Compile Include="Data\Sql\SqlResultSetRow.cs" />
+    <Compile Include="Data\Sql\SqlResultSetRowList.cs" />
+    <Compile Include="Data\Sql\SqlError.cs" />
+    <Compile Include="Data\Sql\SqlTransaction.cs" />
+    <Compile Include="Data\Sql\SqlDatabase.cs" />
+    <Compile Include="Html\Media\MediaPlayability.cs" />
+    <Compile Include="Html\Media\MediaPreload.cs" />
     <Compile Include="Net\XmlHttpRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Version.cs" />
-    <Compile Include="Xml\XmlAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Net\HttpVerb.cs" />
     <Compile Include="Xml\XmlDocument.cs" />
     <Compile Include="Xml\XmlDocumentParser.cs" />
-    <Compile Include="Xml\XmlNamedNodeMap.cs" />
     <Compile Include="Xml\XmlNode.cs" />
     <Compile Include="Xml\XmlNodeList.cs" />
-    <Compile Include="Xml\XmlNodeType.cs" />
-    <Compile Include="Xml\XmlText.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Html\Media\Audio\Readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib">
       <HintPath>$(SolutionDir)packages\Saltarelle.Runtime.2.3.0\tools\Assemblies\mscorlib.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="!Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.3.0\tools\Saltarelle.Compiler.targets')" />
   <Import Project="$(SolutionDir)packages\Saltarelle.Compiler.2.3.0\tools\Saltarelle.Compiler.targets" Condition="Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.3.0\tools\Saltarelle.Compiler.targets')" />
 </Project>

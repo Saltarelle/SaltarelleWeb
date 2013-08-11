@@ -1,0 +1,2661 @@
+﻿AbstractWorker
+	mixin
+
+ActivityOptions
+	nogenerate
+
+AllowedDropEffect
+	namespace = System.Html
+
+AnalyserNode
+	namespace = System.Html.Media.Audio
+
+AnimationEvent
+	namespace = System.Html
+
+AnimationEventInit
+	namespace = System.Html
+
+AnyCallback
+	namespace = System
+	name = Delegate
+	nogenerate
+
+ApplicationCache
+	namespace = System.Data.Offline
+	typeOverride status = System.Data.Offline.ApplicationCacheStatus
+
+ArchiveReader
+	nogenerate
+
+ArchiveReaderOptions
+	nogenerate
+
+ArchiveRequest
+	nogenerate
+
+ArrayBuffer
+	namespace = System.Collections.TypedArrays
+	nogenerate
+
+ArrayBufferView
+	namespace = System.Collections.TypedArrays
+	nogenerate
+
+Attr
+	namespace = System.Xml
+	name = XmlAttribute
+
+AudioBuffer
+	namespace = System.Html.Media.Audio
+
+AudioBufferSourceNode
+	namespace = System.Html.Media.Audio
+
+AudioChannelManager
+	namespace = System.Html.Media.Audio
+
+AudioContext
+	namespace = System.Html.Media.Audio
+	noconstructors
+
+AudioDestinationNode
+	namespace = System.Html.Media.Audio
+
+AudioListener
+	namespace = System.Html.Media.Audio
+
+AudioNode
+	namespace = System.Html.Media.Audio
+
+AudioParam
+	namespace = System.Html.Media.Audio
+
+AudioProcessingEvent
+	namespace = System.Html.Media.Audio
+
+AudioStreamTrack
+	namespace = System.Html.Media.Audio
+
+AutoKeyword
+	namespace = System.Html.Media
+
+BarProp
+	namespace = System.Html
+
+BatteryManager
+	namespace = System.Html.Mobile
+
+BeforeUnloadEvent
+	namespace = System.Html
+
+BeforeUnloadEventHandlerNonNull
+	namespace = System.Html
+
+BinaryType
+	namespace = System.Net.WebSockets
+
+BiquadFilterNode
+	namespace = System.Html.Media.Audio
+
+BiquadFilterType
+	namespace = System.Html.Media.Audio
+
+Blob
+	namespace = System.IO
+
+BlobEvent
+	namespace = System.IO
+
+BlobEventInit
+	namespace = System.IO
+
+BlobPropertyBag
+	namespace = System.IO
+
+ByteString
+	alias = string
+
+CameraErrorCallback
+	nogenerate
+
+CameraManager
+	nogenerate
+
+CameraPictureOptions
+	nogenerate
+
+CameraSelector
+	nogenerate
+
+CanvasDrawingStyles
+	typeOverride lineCap = System.Html.Media.Graphics.LineCap
+	typeOverride lineJoin = System.Html.Media.Graphics.LineJoin
+	typeOverride textAlign = System.Html.Media.Graphics.TextAlign
+	typeOverride textBaseline = System.Html.Media.Graphics.TextBaseline
+	mixin
+
+CanvasGradient
+	namespace = System.Html.Media.Graphics
+
+CanvasPathMethods
+	mixin
+
+CanvasPattern
+	namespace = System.Html.Media.Graphics
+
+CanvasRenderingContext2D
+	namespace = System.Html.Media.Graphics
+	typeOverride globalCompositeOperation = System.Html.Media.Graphics.CompositeOperation
+
+CanvasWindingRule
+	namespace = System.Html.Media.Graphics
+
+CaretPosition
+	namespace = System.Html
+
+CDATASection
+	namespace = System.Xml
+	name = XmlCDataSection
+
+ChannelCountMode
+	namespace = System.Html.Media.Audio
+
+ChannelInterpretation
+	namespace = System.Html.Media.Audio
+
+ChannelMergerNode
+	namespace = System.Html.Media.Audio
+
+ChannelSplitterNode
+	namespace = System.Html.Media.Audio
+
+CharacterData
+	namespace = System.Xml
+	name = XmlCharacterData
+
+ChildNode
+	mixin
+
+ClientRect
+	namespace = System.Html
+
+ClientRectList
+	namespace = System.Html
+
+ClipboardEvent
+	namespace = System.Html
+
+ClipboardEventInit
+	namespace = System.Html
+
+CloseEvent
+	namespace = System.Html
+
+CloseEventInit
+	namespace = System.Html
+
+CommandEvent
+	namespace = System.Html
+
+Comment
+	namespace = System.Xml
+	name = XmlComment
+
+CompositionEvent
+	namespace = System.Html
+
+ConnStatusDict
+	nogenerate
+
+ConvolverNode
+	namespace = System.Html.Media.Audio
+
+Coordinates
+	namespace = System.Html.Geolocation
+
+Counter
+	namespace = System.Html
+
+Crypto
+	namespace = System.Security.Cryptography
+
+CSS
+	namespace = System.Html
+
+CSS2Properties
+	namespace = System.Html
+	name = Style
+	ScriptName = CSSStyleDeclaration
+
+CSSPrimitiveValue
+	namespace = System.Html
+
+CSSRule
+	namespace = System.Html
+	typeOverride type = System.Html.CSSRuleType
+
+CSSRuleList
+	alias = System.Html.CSSRule[]
+	nogenerate
+
+CSSStyleDeclaration
+	alias = System.Html.Style
+	mixin
+	nogenerate
+
+CSSStyleSheet
+	namespace = System.Html
+
+CSSValue
+	namespace = System.Html
+
+CSSValueList
+	namespace = System.Html
+
+CustomEvent
+	namespace = System.Html
+
+CustomEventInit
+	namespace = System.Html
+
+DataChannel
+	namespace = System.Net.WebRTC
+	name = RTCDataChannel
+
+DataContainerEvent
+	nogenerate
+
+DataTransfer
+	namespace = System.Html
+
+DataTransferItem
+	namespace = System.Html
+
+DataTransferItemKind
+	namespace = System.Html
+
+DataTransferItemList
+	namespace = System.Html
+
+DecodeErrorCallback
+	namespace = System.Html.Media.Audio
+
+DecodeSuccessCallback
+	namespace = System.Html.Media.Audio
+
+DedicatedWorkerGlobalScope
+	nogenerate
+
+DelayNode
+	namespace = System.Html.Media.Audio
+
+DesktopNotification
+	nogenerate
+
+DesktopNotificationCenter
+	nogenerate
+
+DeviceAcceleration
+	namespace = System.Html.Mobile
+
+DeviceLightEvent
+	namespace = System.Html.Mobile
+
+DeviceLightEventInit
+	namespace = System.Html.Mobile
+
+DeviceMotionEvent
+	namespace = System.Html.Mobile
+
+DeviceOrientationEvent
+	namespace = System.Html.Mobile
+
+DeviceOrientationEventInit
+	namespace = System.Html.Mobile
+
+DeviceProximityEvent
+	namespace = System.Html.Mobile
+
+DeviceProximityEventInit
+	namespace = System.Html.Mobile
+
+DeviceRotationRate
+	namespace = System.Html.Mobile
+
+DeviceStorage
+	nogenerate
+
+DeviceStorageChangeEvent
+	nogenerate
+
+DeviceStorageChangeEventInit
+	nogenerate
+
+DeviceStorageEnumerationParameters
+	nogenerate
+
+DistanceModelType
+	namespace = System.Html.Media.Audio
+
+DNSCacheDict
+	nogenerate
+
+DNSLookupDict
+	nogenerate
+
+Document
+	namespace = System.Xml
+	name = DocumentBase
+	typeOverride whatToShow = System.Xml.NodeFilter
+	remove register
+	remove undoManager
+
+DocumentFragment
+	namespace = System.Xml
+	name = XmlDocumentFragment
+
+DocumentType
+	namespace = System.Html
+
+DOMCursor
+	nogenerate
+
+DOMError
+	namespace = System.Html
+
+DOMImplementation
+	namespace = System.Html
+
+DOMMMIError
+	nogenerate
+
+DOMParser
+	namespace = System.Html
+	noconstructors
+
+DOMRequest
+	nogenerate
+
+DOMRequestReadyState
+	nogenerate
+
+DOMSettableTokenList
+	namespace = System.Html
+
+DOMStringList
+	namespace = System.Html
+
+DOMStringMap
+	namespace = System.Html
+
+DOMTimeStamp
+	alias = long
+
+DOMTokenList
+	namespace = System.Html
+	name = TokenList
+
+DOMTransaction
+	nogenerate
+
+DOMTransactionCallback
+	nogenerate
+
+DOMTransactionEvent
+	nogenerate
+
+DOMTransactionEventInit
+	nogenerate
+
+DragEvent
+	namespace = System.Html
+
+DropEffect
+	namespace = System.Html
+
+DummyInterface
+	nogenerate
+
+DummyInterfaceWorkers
+	nogenerate
+
+DynamicsCompressorNode
+	namespace = System.Html.Media.Audio
+
+Element
+	namespace = System.Xml
+	name = XmlElement
+	remove undoManager
+	remove undoScope
+
+ElementRegistrationOptions
+	nogenerate
+
+ElementReplaceEvent
+	nogenerate
+
+ElementReplaceEventInit
+	nogenerate
+
+EndingTypes
+	namespace = System.IO
+
+Event
+	namespace = System.Html
+	typeOverride eventPhase = System.Html.EventPhase
+
+EventHandlerNonNull
+	namespace = System.Html
+	name = HtmlEventHandler
+	nogenerate
+
+EventInit
+	namespace = System.Html
+
+EventListener
+	namespace = System.Html
+	name = IEventListener
+
+EventSource
+	namespace = System.Net.ServerEvents
+
+EventSourceInit
+	namespace = System.Net.ServerEvents
+
+EventTarget
+	namespace = System.Html
+
+File
+	namespace = System.IO
+
+FileCallback
+	nogenerate
+
+FileHandle
+	nogenerate
+
+FileList
+	namespace = System.IO
+
+FileMode
+	nogenerate
+
+FilePropertyBag
+	namespace = System.IO
+
+FileReader
+	namespace = System.IO
+
+FileReaderSync
+	namespace = System.IO
+
+FileRequest
+	nogenerate
+
+Float32Array
+	namespace = System.Collections.TypedArrays
+	nogenerate
+
+FocusEvent
+	namespace = System.Html
+
+FocusEventInit
+	namespace = System.Html
+
+FormData
+	namespace = System.Net
+
+FrameRequestCallback
+	nogenerate
+
+Function
+	nogenerate
+
+FunctionStringCallback
+	alias = Action<string>
+
+GainNode
+	namespace = System.Html.Media.Audio
+
+Gamepad
+	nogenerate
+
+GamepadAxisMoveEvent
+	nogenerate
+
+GamepadAxisMoveEventInit
+	nogenerate
+
+GamepadButtonEvent
+	nogenerate
+
+GamepadButtonEventInit
+	nogenerate
+
+GamepadEvent
+	nogenerate
+
+GamepadEventInit
+	nogenerate
+
+Geolocation
+	namespace = System.Html.Geolocation
+	name = GeolocationService
+
+GetCameraCallback
+	nogenerate
+
+GlobalEventHandlers
+	mixin
+
+HalfOpenInfoDict
+	nogenerate
+
+HashChangeEvent
+	namespace = System.Html
+
+HashChangeEventInit
+	namespace = System.Html
+
+History
+	namespace = System.Html
+
+HTMLAnchorElement
+	namespace = System.Html
+	tagname = a
+	name = AnchorElement
+
+HTMLAppletElement
+	namespace = System.Html
+	tagname = applet
+	name = AppletElement
+
+HTMLAreaElement
+	namespace = System.Html
+	tagname = area
+	name = AreaElement
+
+HTMLAudioElement
+	namespace = System.Html
+	tagname = audio
+	name = AudioElement
+
+HTMLBaseElement
+	namespace = System.Html
+	tagname = base
+	name = BaseElement
+
+HTMLBodyElement
+	namespace = System.Html
+	tagname = body
+	name = BodyElement
+
+HTMLBRElement
+	namespace = System.Html
+	tagname = br
+	name = BRElement
+
+HTMLButtonElement
+	namespace = System.Html
+	tagname = button
+	name = ButtonElement
+
+HTMLCanvasElement
+	namespace = System.Html
+	tagname = canvas
+	name = CanvasElement
+	typeOverride getContext = System.Html.Media.Graphics.CanvasRenderingContext
+	typeOverride callback = System.Action<System.IO.Blob>
+
+HTMLCollection
+	namespace = System.Html
+	name = ElementCollection
+
+HTMLDataElement
+	namespace = System.Html
+	tagname = data
+	name = DataElement
+
+HTMLDataListElement
+	namespace = System.Html
+	tagname = datalist
+	name = DataListElement
+
+HTMLDirectoryElement
+	namespace = System.Html
+	tagname = dir
+	name = DirectoryElement
+
+HTMLDivElement
+	namespace = System.Html
+	tagname = div
+	name = DivElement
+
+HTMLDListElement
+	namespace = System.Html
+	tagname = dl
+	name = DListElement
+
+HTMLDocument
+	namespace = System.Html
+	name = DocumentInstance
+
+HTMLElement
+	namespace = System.Html
+	name = Element
+	remove properties
+
+HTMLEmbedElement
+	namespace = System.Html
+	tagname = embed
+	name = EmbedElement
+
+HTMLFieldSetElement
+	namespace = System.Html
+	tagname = fieldset
+	name = FieldSetElement
+
+HTMLFontElement
+	namespace = System.Html
+	tagname = font
+	name = FontElement
+
+HTMLFormElement
+	namespace = System.Html
+	tagname = form
+	name = FormElement
+	typeOverride "getter nsISupports (DOMString name)" = System.Html.Element
+
+HTMLFrameElement
+	namespace = System.Html
+	tagname = frame
+	name = FrameElement
+
+HTMLFrameSetElement
+	namespace = System.Html
+	tagname = frameset
+	name = FrameSetElement
+
+HTMLHeadElement
+	namespace = System.Html
+	tagname = head
+	name = HeadElement
+
+HTMLHeadingElement
+	namespace = System.Html
+	tagname = h1, h2, h3, h4, h5, h6
+	name = HeadingElement
+
+HTMLHRElement
+	namespace = System.Html
+	tagname = hr
+	name = HRElement
+
+HTMLHtmlElement
+	namespace = System.Html
+	tagname = html
+	name = HtmlElement
+
+HTMLIFrameElement
+	namespace = System.Html
+	tagname = iframe
+	name = IFrameElement
+
+HTMLImageElement
+	namespace = System.Html
+	tagname = img
+	name = ImageElement
+
+HTMLInputElement
+	namespace = System.Html
+	tagname = input
+	name = InputElement
+	remove controllers
+
+HTMLLabelElement
+	namespace = System.Html
+	tagname = label
+	name = LabelElement
+
+HTMLLegendElement
+	namespace = System.Html
+	tagname = legend
+	name = LegendElement
+
+HTMLLIElement
+	namespace = System.Html
+	tagname = li
+	name = LIElement
+
+HTMLLinkElement
+	namespace = System.Html
+	tagname = link
+	name = LinkElement
+
+HTMLMapElement
+	namespace = System.Html
+	tagname = map
+	name = MapElement
+
+HTMLMediaElement
+	namespace = System.Html
+	tagname = media
+	name = MediaElement
+	typeOverride networkState = System.Html.Media.MediaElementNetworkState
+	typeOverride readyState = System.Html.Media.MediaElementReadyState
+	typeOverride canPlayType = System.Html.Media.MediaPlayability
+	typeOverride preload = System.Html.Media.MediaPreload
+	typeOverride crossOrigin = System.Html.Media.MediaCrossOriginPolicy
+
+HTMLMenuElement
+	namespace = System.Html
+	tagname = menu
+	name = MenuElement
+
+HTMLMenuItemElement
+	namespace = System.Html
+	tagname = menuitem
+	name = MenuItemElement
+
+HTMLMetaElement
+	namespace = System.Html
+	tagname = meta
+	name = MetaElement
+
+HTMLMeterElement
+	namespace = System.Html
+	tagname = meter
+	name = MeterElement
+
+HTMLModElement
+	namespace = System.Html
+	tagname = ins, del
+	name = ModElement
+
+HTMLObjectElement
+	namespace = System.Html
+	tagname = object
+	name = ObjectElement
+
+HTMLOListElement
+	namespace = System.Html
+	tagname = ol
+	name = OListElement
+
+HTMLOptGroupElement
+	namespace = System.Html
+	tagname = optgroup
+	name = OptGroupElement
+
+HTMLOptionElement
+	namespace = System.Html
+	tagname = option
+	name = OptionElement
+
+HTMLOptionsCollection
+	namespace = System.Html
+	name = HtmlOptionsCollection
+
+HTMLOutputElement
+	namespace = System.Html
+	tagname = output
+	name = OutputElement
+
+HTMLParagraphElement
+	namespace = System.Html
+	tagname = p
+	name = ParagraphElement
+
+HTMLParamElement
+	namespace = System.Html
+	tagname = param
+	name = ParamElement
+
+HTMLPreElement
+	namespace = System.Html
+	tagname = pre
+	name = PreElement
+
+HTMLProgressElement
+	namespace = System.Html
+	tagname = progress
+	name = ProgressElement
+
+HTMLPropertiesCollection
+	nogenerate
+
+HTMLQuoteElement
+	namespace = System.Html
+	tagname = q
+	name = QuoteElement
+
+HTMLScriptElement
+	namespace = System.Html
+	tagname = script
+	name = ScriptElement
+
+HTMLSelectElement
+	namespace = System.Html
+	tagname = select
+	name = SelectElement
+
+HTMLSourceElement
+	namespace = System.Html
+	tagname = source
+	name = SourceElement
+
+HTMLSpanElement
+	namespace = System.Html
+	tagname = span
+	name = SpanElement
+
+HTMLStyleElement
+	namespace = System.Html
+	tagname = style
+	name = StyleElement
+
+HTMLTableCaptionElement
+	namespace = System.Html
+	tagname = caption
+	name = TableCaptionElement
+
+HTMLTableCellElement
+	namespace = System.Html
+	tagname = td, th
+	name = TableCellElement
+
+HTMLTableColElement
+	namespace = System.Html
+	tagname = col, colgroup
+	name = TableColElement
+
+HTMLTableElement
+	namespace = System.Html
+	tagname = table
+	name = TableElement
+
+HTMLTableRowElement
+	namespace = System.Html
+	tagname = tr
+	name = TableRowElement
+
+HTMLTableSectionElement
+	namespace = System.Html
+	tagname = thead, tfoot, tbody
+	name = TableSectionElement
+
+HTMLTemplateElement
+	namespace = System.Html
+	tagname = template
+	name = TemplateElement
+
+HTMLTextAreaElement
+	namespace = System.Html
+	tagname = textarea
+	name = TextAreaElement
+
+HTMLTimeElement
+	namespace = System.Html
+	tagname = time
+	name = TimeElement
+
+HTMLTitleElement
+	namespace = System.Html
+	tagname = title
+	name = TitleElement
+
+HTMLTrackElement
+	namespace = System.Html
+	tagname = track
+	name = TrackElement
+
+HTMLUListElement
+	namespace = System.Html
+	tagname = ul
+	name = UListElement
+
+HTMLUnknownElement
+	namespace = System.Html
+	name = UnknownElement
+
+HTMLVideoElement
+	namespace = System.Html
+	tagname = video
+	name = VideoElement
+
+HttpConnDict
+	nogenerate
+
+HttpConnInfoDict
+	nogenerate
+
+IDBCursor
+	namespace = System.Data.IndexedDB
+	name = Cursor
+	typeOverride source = System.TypeOption<System.Data.IndexedDB.ObjectStore, Index>
+
+IDBCursorWithValue
+	namespace = System.Data.IndexedDB
+	name = CursorWithValue
+
+IDBCursorDirection
+	namespace = System.Data.IndexedDB
+	name = CursorDirection
+
+IDBDatabase
+	namespace = System.Data.IndexedDB
+	name = Database
+
+IDBEnvironment
+	mixin
+
+IDBFactory
+	namespace = System.Data.IndexedDB
+	name = Factory
+
+IDBFileHandle
+	nogenerate
+
+IDBIndex
+	namespace = System.Data.IndexedDB
+	name = Index
+
+IDBIndexParameters
+	namespace = System.Data.IndexedDB
+	name = IndexParameters
+
+IDBKeyRange
+	namespace = System.Data.IndexedDB
+	name = KeyRange
+
+IDBObjectStore
+	namespace = System.Data.IndexedDB
+	name = ObjectStore
+
+IDBObjectStoreParameters
+	namespace = System.Data.IndexedDB
+	name = ObjectStoreParameters
+
+IDBOpenDBRequest
+	namespace = System.Data.IndexedDB
+	name = OpenDBRequest
+
+IDBRequest
+	namespace = System.Data.IndexedDB
+	name = Request
+	typeOverride source = System.TypeOption<System.Data.IndexedDB.ObjectStore, Index, System.Data.IndexedDB.Cursor>
+
+IDBRequestReadyState
+	namespace = System.Data.IndexedDB
+	name = RequestReadyState
+
+IDBTransaction
+	namespace = System.Data.IndexedDB
+	name = Transaction
+
+IDBTransactionMode
+	namespace = System.Data.IndexedDB
+	name = TransactionMode
+
+IDBVersionChangeEvent
+	namespace = System.Data.IndexedDB
+	name = VersionChangeEvent
+
+IDBVersionChangeEventInit
+	namespace = System.Data.IndexedDB
+	name = VersionChangeEventInit
+
+IID
+	nogenerate
+
+ImageData
+	namespace = System.Html.Media.Graphics
+
+ImageDocument
+	nogenerate
+
+imgINotificationObserver
+	nogenerate
+
+imgIRequest
+	nogenerate
+
+InputStream
+	nogenerate
+
+InspectorRGBTriple
+	nogenerate
+
+Int32Array
+	namespace = System.Collections.TypedArrays
+	nogenerate
+
+KeyboardEvent
+	namespace = System.Html
+
+KeyEvent
+	mixin
+
+LifecycleCallbacks
+	nogenerate
+
+LifecycleCreatedCallback
+	nogenerate
+
+LineEndings
+	mixin
+
+LinkStyle
+	mixin
+
+LocalMediaStream
+	namespace = System.Html.Media
+
+Location
+	namespace = System.Html
+
+LockedFile
+	nogenerate
+
+MediaElementAudioSourceNode
+	namespace = System.Html.Media.Audio
+
+MediaError
+	namespace = System.Html.Media
+	typeOverride code = System.Html.Media.MediaErrorCode
+
+MediaList
+	namespace = System.Html
+
+MediaQueryList
+	namespace = System.Html
+
+MediaQueryListListener
+	namespace = System.Html
+
+MediaRecorder
+	namespace = System.Media.Recording
+
+MediaSource
+	namespace = System.Media.Source
+
+MediaSourceEndOfStreamError
+	namespace = System.Media.Source
+
+MediaSourceReadyState
+	namespace = System.Media.Source
+
+MediaStream
+	namespace = System.Html.Media
+
+MediaStreamAudioDestinationNode
+	namespace = System.Html.Media.Audio
+
+MediaStreamAudioSourceNode
+	namespace = System.Html.Media.Audio
+
+MediaStreamEvent
+	namespace = System.Html.Media
+
+MediaStreamEventInit
+	namespace = System.Html.Media
+
+MediaStreamList
+	namespace = System.Html.Media
+
+MediaStreamTrack
+	namespace = System.Net.WebRTC
+
+MenuBuilder
+	nogenerate
+
+MessageEvent
+	namespace = System.Net.WebSockets
+
+MessagePort
+	namespace = System.Threading.WebWorkers
+
+MimeType
+	namespace = System.Html
+
+MimeTypeArray
+	namespace = System.Html
+
+MmsAttachment
+	nogenerate
+
+MmsParameters
+	nogenerate
+
+MouseEvent
+	namespace = System.Html
+	remove initNSMouseEvent
+
+MouseEventInit
+	namespace = System.Html
+
+MouseScrollEvent
+	nogenerate
+
+MozActivity
+	nogenerate
+
+MozApplicationEvent
+	nogenerate
+
+MozApplicationEventInit
+	nogenerate
+
+MozBoxObject
+	nogenerate
+
+MozChannel
+	nogenerate
+
+MozConnection
+	nogenerate
+
+MozContactChangeEvent
+	nogenerate
+
+MozContactChangeEventInit
+	nogenerate
+
+MozControllers
+	nogenerate
+
+MozDOMGetUserMediaErrorCallback
+	nogenerate
+
+MozDOMGetUserMediaSuccessCallback
+	nogenerate
+
+MozFrameLoader
+	nogenerate
+	noinherit
+
+MozFrameLoaderOwner
+	nogenerate
+	noinherit
+
+MozGetUserMediaDevicesSuccessCallback
+	namespace = nogenerate
+
+MozIdleObserver
+	nogenerate
+
+mozIDOMApplication
+	nogenerate
+
+MozImageLoadingContent
+	nogenerate
+	noinherit
+
+MozMediaStreamOptions
+	nogenerate
+
+MozMmsEvent
+	nogenerate
+
+MozMmsEventInit
+	nogenerate
+
+MozMmsMessage
+	nogenerate
+
+MozMobileMessageManager
+	nogenerate
+
+MozNamedAttrMap
+	namespace = System.Html
+	name = AttributeCollection
+	scriptName = Object
+
+MozObjectLoadingContent
+	nogenerate
+	noinherit
+
+MozObserver
+	nogenerate
+
+MozPhonetic
+	nogenerate
+	noinherit
+
+MozPowerManager
+	nogenerate
+
+MozRDFCompositeDataSource
+	nogenerate
+
+MozRDFResource
+	nogenerate
+
+mozRTCIceCandidate
+	namespace = System.Net.WebRTC
+	name = RTCIceCandidate
+	scriptName = Object
+
+mozRTCPeerConnection
+	nogenerate
+
+mozRTCSessionDescription
+	nogenerate
+
+MozSettingsEvent
+	nogenerate
+
+MozSettingsEventInit
+	nogenerate
+
+MozSmsEvent
+	nogenerate
+
+MozSmsEventInit
+	nogenerate
+
+MozSmsMessage
+	nogenerate
+
+MozTimeManager
+	nogenerate
+
+MozTreeBoxObject
+	nogenerate
+
+MozTreeColumn
+	nogenerate
+
+MozWakeLock
+	nogenerate
+
+MozXMLHttpRequestParameters
+	nogenerate
+
+MozXULTemplateBuilder
+	nogenerate
+
+MutationCallback
+	namespace = System.Html
+
+MutationEvent
+	namespace = System.Html
+
+MutationObserver
+	namespace = System.Html
+
+MutationObserverInit
+	namespace = System.Html
+
+MutationRecord
+	namespace = System.Html
+
+Navigator
+	namespace = System.Html
+	name = NavigatorInstance
+	remove getDeviceStorage
+	remove getDeviceStorages
+	remove getGamepads
+	remove requestWakeLock
+	remove addIdleObserver
+	remove removeIdleObserver
+
+NavigatorBattery
+	mixin
+
+NavigatorContentUtils
+	mixin
+
+NavigatorGeolocation
+	mixin
+
+NavigatorID
+	mixin
+
+NavigatorLanguage
+	mixin
+
+NavigatorOnLine
+	mixin
+
+NavigatorStorageUtils
+	nogenerate
+	noinherit
+
+Node
+	namespace = System.Xml
+	name = XmlNode
+	typeOverride nodeType = System.Xml.XmlNodeType
+	typeOverride compareDocumentPosition = System.Xml.DocumentPosition
+	remove setUserData
+
+NodeEventHandlers
+	mixin
+
+NodeFilter
+	namespace = System.Xml
+	name = INodeFilter
+	typeOverride acceptNode = System.Xml.NodeFilterReturn
+
+NodeIterator
+	namespace = System.Xml
+	typeOverride whatToShow = System.Xml.NodeFilter
+
+NodeList
+	namespace = System.Xml
+	name = XmlNodeList
+
+Notification
+	namespace = System.Html.Notifications
+
+NotificationDirection
+	namespace = System.Html.Notifications
+
+NotificationOptions
+	namespace = System.Html.Notifications
+
+NotificationPermission
+	namespace = System.Html.Notifications
+
+NotificationPermissionCallback
+	namespace = System.Html.Notifications
+
+NotifyAudioAvailableEvent
+	namespace = System.Html.Media.Audio
+
+NotifyPaintEvent
+	nogenerate
+
+nsIControllers
+	nogenerate
+
+nsIEditor
+	nogenerate
+
+nsIInputStreamCallback
+	nogenerate
+
+nsIStreamListener
+	nogenerate
+
+nsISupports
+	nogenerate
+
+nsIVariant
+	nogenerate
+
+objectURLOptions
+	namespace = System.Html
+	name = ObjectUrlOptions
+
+OfflineAudioCompletionEvent
+	namespace = System.Html.Media.Audio
+
+OfflineAudioContext
+	namespace = System.Html.Media.Audio
+
+OfflineRenderSuccessCallback
+	namespace = System.Html.Media.Audio
+
+OfflineResourceList
+	namespace = System.Data.Offline
+	name = ApplicationCache
+	nogenerate
+
+OnErrorEventHandlerNonNull
+	namespace = System.Html
+	name = ErrorEventHandler
+
+OscillatorNode
+	namespace = System.Html.Media.Audio
+
+OscillatorType
+	namespace = System.Html.Media.Audio
+
+OutputStream
+	nogenerate
+
+OverSampleType
+	namespace = System.Html.Media.Graphics.WebGL
+
+PageTransitionEvent
+	namespace = System.Html
+
+PageTransitionEventInit
+	namespace = System.Html
+
+PaintRequest
+	nogenerate
+
+PaintRequestList
+	nogenerate
+
+PannerNode
+	namespace = System.Html.Media.Audio
+
+PanningModelType
+	namespace = System.Html.Media.Audio
+
+ParentNode
+	mixin
+
+Performance
+	namespace = System.Performance
+	name = PerformanceDetails
+
+PerformanceNavigation
+	namespace = System.Performance
+
+PerformanceTiming
+	namespace = System.Performance
+
+PeriodicWave
+	namespace = System.Html.Media.Audio
+
+Plugin
+	namespace = System.Html
+
+PluginArray
+	namespace = System.Html
+
+PopStateEvent
+	namespace = System.Html
+
+PopStateEventInit
+	namespace = System.Html
+
+PopupBlockedEvent
+	nogenerate
+
+PopupBlockedEventInit
+	nogenerate
+
+Position
+	namespace = System.Html.Geolocation
+
+PositionCallback
+	namespace = System.Html.Geolocation
+
+PositionError
+	namespace = System.Html.Geolocation
+
+PositionErrorCallback
+	namespace = System.Html.Geolocation
+
+PositionOptions
+	namespace = System.Html.Geolocation
+
+Principal
+	nogenerate
+
+PrintCallback
+	nogenerate
+
+ProcessingInstruction
+	namespace = System.Xml
+	name = XmlProcessingInstruction
+
+ProgressEvent
+	namespace = System.Net
+
+ProgressEventInit
+	namespace = System.Net
+
+Promise
+	nogenerate
+
+PromiseInit
+	nogenerate
+
+PromiseResolver
+	nogenerate
+
+PropertyNodeList
+	nogenerate
+
+PushManager
+	nogenerate
+
+RandomSource
+	namespace = System.Security.Cryptography
+	name = IRandomSource
+	interface
+
+Range
+	namespace = System.Html.Editing
+	typeOverride how = System.Html.Editing.RangeComparison
+
+RecordErrorEvent
+	namespace = System.Media.Recording
+
+RecordErrorEventInit
+	namespace = System.Media.Recording
+
+RecordingState
+	namespace = System.Media.Recording
+
+Rect
+	namespace = System.Html
+
+RGBColor
+	namespace = System.Html
+
+RTCConfiguration
+	namespace = System.Net.WebRTC
+
+RTCDataChannel
+	namespace = System.Net.WebRTC
+	nogenerate
+
+RTCDataChannelEvent
+	namespace = System.Net.WebRTC
+	nogenerate # Generated from DataChannel
+
+RTCDataChannelEventInit
+	namespace = System.Net.WebRTC
+
+RTCDataChannelInit
+	namespace = System.Net.WebRTC
+
+RTCDataChannelState
+	namespace = System.Net.WebRTC
+
+RTCDataChannelType
+	namespace = System.Net.WebRTC
+
+RTCIceCandidateInit
+	namespace = System.Net.WebRTC
+
+RTCIceConnectionState
+	namespace = System.Net.WebRTC
+
+RTCIceGatheringState
+	namespace = System.Net.WebRTC
+
+RTCIceServer
+	namespace = System.Net.WebRTC
+
+RTCPeerConnectionErrorCallback
+	namespace = System.Net.WebRTC
+
+RTCPeerConnectionIceEvent
+	namespace = System.Net.WebRTC
+
+RTCPeerConnectionIceEventInit
+	namespace = System.Net.WebRTC
+
+RTCSdpType
+	namespace = System.Net.WebRTC
+
+RTCSessionDescriptionCallback
+	nogenerate
+
+RTCSessionDescriptionInit
+	namespace = System.Net.WebRTC
+
+RTCSignalingState
+	namespace = System.Net.WebRTC
+
+Screen
+	namespace = System.Html
+
+ScriptProcessorNode
+	namespace = System.Html.Media.Audio
+
+ScrollAreaEvent
+	nogenerate
+
+Selection
+	namespace = System.Html.Editing
+
+SettingChange
+	nogenerate
+
+SettingChangeCallback
+	nogenerate
+
+SettingsLock
+	nogenerate
+
+SettingsManager
+	nogenerate
+
+SharedWorker
+	namespace = System.Threading.WebWorkers
+
+SharedWorkerGlobalScope
+	nogenerate
+
+SimpleGestureEvent
+	nogenerate
+
+SmartCardEvent
+	nogenerate
+
+SmartCardEventInit
+	nogenerate
+
+SocketsDict
+	nogenerate
+
+SourceBuffer
+	namespace = System.Html.Media.Audio
+
+SourceBufferAppendMode
+	namespace = System.Html.Media.Audio
+
+SourceBufferList
+	namespace = System.Html.Media.Audio
+
+SpeechGrammar
+	namespace = System.Html.Speech
+
+SpeechGrammarList
+	namespace = System.Html.Speech
+
+SpeechRecognition
+	namespace = System.Html.Speech
+
+SpeechRecognitionAlternative
+	namespace = System.Html.Speech
+
+SpeechRecognitionError
+	namespace = System.Html.Speech
+
+SpeechRecognitionErrorCode
+	namespace = System.Html.Speech
+
+SpeechRecognitionErrorInit
+	namespace = System.Html.Speech
+
+SpeechRecognitionEvent
+	namespace = System.Html.Speech
+	typeOverride results = object
+
+SpeechRecognitionEventInit
+	namespace = System.Html.Speech
+	typeOverride results = object
+
+SpeechRecognitionResult
+	namespace = System.Html.Speech
+
+SpeechRecognitionResultList
+	namespace = System.Html.Speech
+
+SpeechSynthesis
+	namespace = System.Html.Speech
+
+SpeechSynthesisEvent
+	namespace = System.Html.Speech
+
+SpeechSynthesisEventInit
+	namespace = System.Html.Speech
+
+SpeechSynthesisUtterance
+	namespace = System.Html.Speech
+
+SpeechSynthesisVoice
+	namespace = System.Html.Speech
+
+Storage
+	namespace = System.Data.WebStorage
+
+StorageEvent
+	namespace = System.Data.WebStorage
+
+StorageEventInit
+	namespace = System.Data.WebStorage
+
+StyleRuleChangeEvent
+	namespace = System.Html
+
+StyleRuleChangeEventInit
+	namespace = System.Html
+
+StyleSheet
+	namespace = System.Html
+
+StyleSheetApplicableStateChangeEvent
+	namespace = System.Html
+
+StyleSheetApplicableStateChangeEventInit
+	namespace = System.Html
+
+StyleSheetChangeEvent
+	namespace = System.Html
+
+StyleSheetChangeEventInit
+	namespace = System.Html
+
+StyleSheetList
+	namespace = System.Html
+
+SupportedType
+	namespace = System.Html
+	name = DOMParserSupportedType
+
+SVGAElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAltGlyphElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAngle
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride unitType = System.Html.Media.Graphics.SVG.SVGAngleUnitType
+
+SVGAnimatedAngle
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedBoolean
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedEnumeration
+	namespace = System.Html.Media.Graphics.SVG
+	nogenerate
+
+SVGAnimatedInteger
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedLength
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedLengthList
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedNumber
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedNumberList
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedPathData
+	mixin
+
+SVGAnimatedPoints
+	mixin
+
+SVGAnimatedPreserveAspectRatio
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedRect
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedString
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimatedTransformList
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimateElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimateMotionElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimateTransformElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGAnimationElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGCircleElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGClipPathElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride clipPathUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+
+SVGComponentTransferFunctionElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride type = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGComponentTransferType>
+
+SVGDefsElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGDescElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGDocument
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGEllipseElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEBlendElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride mode = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEBlendMode>
+
+SVGFEColorMatrixElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride type = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEColorMatrixType>
+
+SVGFEComponentTransferElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFECompositeElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride operator = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFECompositeOperator>
+
+SVGFEConvolveMatrixElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride edgeMode = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEConvolveMatrixEdgeMode>
+
+SVGFEDiffuseLightingElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEDisplacementMapElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride xChannelSelector = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector>
+	typeOverride yChannelSelector = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector>
+
+SVGFEDistantLightElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEFloodElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEFuncAElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEFuncBElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEFuncGElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEFuncRElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEGaussianBlurElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEImageElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEMergeElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEMergeNodeElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEMorphologyElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride operator = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEMorphologyOperator>
+
+SVGFEOffsetElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEPointLightElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFESpecularLightingElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFESpotLightElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFETileElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFETurbulenceElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride stitchTiles = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEStitchType>
+	typeOverride type = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFETurbulenceType>
+
+SVGFilterElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride filterUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+	typeOverride primitiveUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+
+SVGFilterPrimitiveStandardAttributes
+	mixin
+
+SVGFitToViewBox
+	mixin
+
+SVGForeignObjectElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGGElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGGradientElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride spreadMethod = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGSpreadMethod>
+	typeOverride gradientUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+
+SVGGraphicsElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGImageElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGLength
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride unitType = System.Html.Media.Graphics.SVG.SVGLengthType
+
+SVGLengthList
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGLinearGradientElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGLineElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGMarkerElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride markerUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGMarkerUnits>
+	typeOverride orientType = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGMarkerOrient>
+
+SVGMaskElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride maskContentUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+	typeOverride maskUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+
+SVGMatrix
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGMetadataElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGMPathElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGNumber
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGNumberList
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSeg
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride pathSegType = System.Html.Media.Graphics.SVG.SVGPathSegType
+
+SVGPathSegArcAbs
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegArcRel
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegClosePath
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegCurvetoCubicAbs
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegCurvetoCubicRel
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegCurvetoCubicSmoothAbs
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegCurvetoCubicSmoothRel
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegCurvetoQuadraticAbs
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegCurvetoQuadraticRel
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegCurvetoQuadraticSmoothAbs
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegCurvetoQuadraticSmoothRel
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegLinetoAbs
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegLinetoHorizontalAbs
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegLinetoHorizontalRel
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegLinetoRel
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegLinetoVerticalAbs
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegLinetoVerticalRel
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegList
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegMovetoAbs
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPathSegMovetoRel
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPatternElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride patternUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+	typeOverride patternContentUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+
+SVGPoint
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPointList
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPolygonElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPolylineElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGPreserveAspectRatio
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride align = System.Html.Media.Graphics.SVG.SVGAlign
+	typeOverride meetOrSlice = System.Html.Media.Graphics.SVG.SVGMeetOrSlice
+
+SVGRadialGradientElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGRect
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGRectElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGScriptElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGSetElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGStopElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGStringList
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGStyleElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGSVGElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGSwitchElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGSymbolElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGTests
+	mixin
+
+SVGTextContentElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride lengthAdjust = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGLengthAdjust>
+
+SVGTextElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGTextPathElement
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride method = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGTextPathMethod>
+	typeOverride spacing = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGTextPathSpacing>
+
+SVGTextPositioningElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGTitleElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGTransform
+	namespace = System.Html.Media.Graphics.SVG
+	typeOverride type = System.Html.Media.Graphics.SVG.SVGTransformType
+
+SVGTransformList
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGTSpanElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGUnitTypes
+	namespace = System.Html.Media.Graphics.SVG
+	mixin
+
+SVGURIReference
+	mixin
+
+SVGUseElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGViewElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGZoomAndPan
+	mixin
+	typeOverride zoomAndPan = System.Html.Media.Graphics.SVG.SVGZoomAndPanType
+
+SVGZoomEvent
+	namespace = System.Html.Media.Graphics.SVG
+
+systemMessageCallback
+	alias = System.Action<object>
+
+Text
+	namespace = System.Xml
+	name = XmlText
+
+TextDecodeOptions
+	namespace = System.Text
+
+TextDecoder
+	namespace = System.Text
+
+TextDecoderOptions
+	namespace = System.Text
+
+TextEncodeOptions
+	namespace = System.Text
+
+TextEncoder
+	namespace = System.Text
+
+TextMetrics
+	namespace = System.Html.Media.Graphics
+
+TextTrack
+	namespace = System.Html.Media
+
+TextTrackCue
+	namespace = System.Html.Media
+
+TextTrackCueAlign
+	namespace = System.Html.Media
+
+TextTrackCueList
+	namespace = System.Html.Media
+
+TextTrackKind
+	namespace = System.Html.Media
+
+TextTrackList
+	namespace = System.Html.Media
+
+TextTrackMode
+	namespace = System.Html.Media
+
+TimeEvent
+	namespace = System.Html
+
+TimeRanges
+	namespace = System.Html.Media
+
+Touch
+	namespace = System.Html
+
+TouchEvent
+	namespace = System.Html
+
+TouchEventHandlers
+	mixin
+
+TouchList
+	namespace = System.Html
+
+Transferable
+	namespace = System.Html
+	name = ITransferable
+	interface
+
+TransitionEvent
+	namespace = System.Html
+
+TransitionEventInit
+	namespace = System.Html
+
+TreeColumns
+	namespace = X
+
+TreeWalker
+	namespace = System.Xml
+	typeOverride whatToShow = System.Xml.NodeFilter
+
+UIEvent
+	namespace = System.Html
+
+UIEventInit
+	namespace = System.Html
+
+Uint8Array
+	namespace = System.Collections.TypedArrays
+	nogenerate
+
+Uint8ClampedArray
+	namespace = System.Collections.TypedArrays
+	nogenerate
+
+UndoManager
+	nogenerate
+
+URI
+	nogenerate
+
+URL
+	namespace = System.Html
+
+URLUtils
+	mixin
+
+URLUtilsReadOnly
+	mixin
+
+UserDataHandler
+	nogenerate
+
+UserProximityEvent
+	namespace = System.Html.Mobile
+
+UserProximityEventInit
+	namespace = System.Html.Mobile
+
+ValidityState
+	namespace = System.Html
+
+WaveShaperNode
+	namespace = System.Html.Media.Audio
+
+WaveTable
+	namespace = System.Html.Media.Audio
+
+WebGL2RenderingContext
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLActiveInfo
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLBuffer
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLContextAttributes
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionCompressedTextureATC
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionCompressedTexturePVRTC
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionCompressedTextureS3TC
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionDebugRendererInfo
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionDepthTexture
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionDrawBuffers
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionElementIndexUint
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionLoseContext
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionStandardDerivatives
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionTextureFilterAnisotropic
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionTextureFloat
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionTextureFloatLinear
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionVertexArray
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLFramebuffer
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLProgram
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLQuery
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLRenderbuffer
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLRenderingContext
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLShader
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLShaderPrecisionFormat
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLTexture
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLUniformLocation
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLVertexArray
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebSocket
+	namespace = System.Net.WebSockets
+	typeOverride readyState = System.Net.WebSockets.ReadyState
+
+WebSocketDict
+	namespace = System.Net.WebSockets
+
+WheelEvent
+	namespace = System.Html
+	typeOverride deltaMode = System.Html.WheelDeltaMode
+
+WheelEventInit
+	namespace = System.Html
+
+VideoPlaybackQuality
+	namespace = System.Html.Media.Graphics
+
+VideoStreamTrack
+	namespace = System.Html.Media.Graphics
+
+Window
+	namespace = System.Html
+	name = WindowInstance
+	nogenerate
+
+WindowDeviceEvents
+	mixin
+
+WindowEventHandlers
+	mixin
+
+WindowLocalStorage
+	mixin
+
+WindowSessionStorage
+	mixin
+
+WindowBase64
+	namespace = System.Html
+	name = IWindowBase64
+	interface
+
+WindowTimers
+	namespace = System.Html
+	name = IWindowTimers
+	interface
+
+WindowProxy
+	namespace = System.Html
+	name = WindowInstance
+	scriptName = Window
+	rename window = Instance
+
+VisibilityState
+	namespace = System.Html
+
+VoidFunction
+	namespace = System
+	name = Action
+	nogenerate
+
+Worker
+	namespace = System.Threading.WebWorkers
+
+WorkerGlobalScope
+	namespace = System.Threading.WebWorkers
+
+WorkerLocation
+	namespace = System.Threading.WebWorkers
+
+WorkerNavigator
+	namespace = System.Threading.WebWorkers
+
+XMLDocument
+	namespace = System.Xml
+	name = XmlDocument
+
+XMLHttpRequest
+	namespace = System.Net
+	name = XmlHttpRequest
+	typeOverride readyState = System.Net.ReadyState
+	rename onreadystatechange = OnReadyStateChange
+	remove "void send(InputStream data)"
+	noconstructors
+
+XMLHttpRequestEventTarget
+	namespace = System.Net
+	name = XmlHttpRequestEventTarget
+
+XMLHttpRequestResponseType
+	namespace = System.Net
+	name = XmlHttpRequestResponseType
+	rename "" = String
+
+XMLHttpRequestUpload
+	namespace = System.Net
+	name = XmlHttpRequestUpload
+
+XMLSerializer
+	namespace = System.Xml
+	name = XmlSerializer
+
+XMLStylesheetProcessingInstruction
+	namespace = System.Xml
+	name = XmlStylesheetProcessingInstruction
+
+XPathEvaluator
+	namespace = System.Xml.XPath
+	name = IXPathEvaluator
+	interface
+
+XPathExpression
+	namespace = System.Xml.XPath
+	typeOverride type = System.Xml.XPath.ResultType
+
+XPathNSResolver
+	namespace = System.Xml.XPath
+
+XPathResult
+	namespace = System.Xml.XPath
+	typeOverride resultType = System.Xml.XPath.ResultType
+
+XULCommandDispatcher
+	nogenerate
+
+XULCommandEvent
+	nogenerate
+
+XULDocument
+	nogenerate
+
+XULElement
+	nogenerate
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGAngleUnitType
+	container = SVGAngle
+	constants = "SVG_ANGLETYPE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGComponentTransferType
+	container = SVGComponentTransferFunctionElement
+	constants = "SVG_FECOMPONENTTRANSFER_TYPE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGFEBlendMode
+	container = SVGFEBlendElement
+	constants = "SVG_FEBLEND_MODE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGFEColorMatrixType
+	container = SVGFEColorMatrixElement
+	constants = "SVG_FECOLORMATRIX_TYPE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGFECompositeOperator
+	container = SVGFECompositeElement
+	constants = "SVG_FECOMPOSITE_OPERATOR_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGFEConvolveMatrixEdgeMode
+	container = SVGFEConvolveMatrixElement
+	constants = "SVG_EDGEMODE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector
+	container = SVGFEDisplacementMapElement
+	constants = "SVG_CHANNEL_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGFEMorphologyOperator
+	container = SVGFEMorphologyElement
+	constants = "SVG_MORPHOLOGY_OPERATOR_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGFEStitchType
+	container = SVGFETurbulenceElement
+	constants = "SVG_STITCHTYPE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGFETurbulenceType
+	container = SVGFETurbulenceElement
+	constants = "SVG_TURBULENCE_TYPE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGSpreadMethod
+	container = SVGGradientElement
+	constants = "SVG_SPREADMETHOD_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGMarkerUnits
+	container = SVGMarkerElement
+	constants = "SVG_MARKERUNITS_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGMarkerOrient
+	container = SVGMarkerElement
+	constants = "SVG_MARKER_ORIENT_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGPathSegType
+	container = SVGPathSeg
+	constants = "PATHSEG_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGAlign
+	container = SVGPreserveAspectRatio
+	constants = "SVG_PRESERVEASPECTRATIO_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGMeetOrSlice
+	container = SVGPreserveAspectRatio
+	constants = "SVG_MEETORSLICE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGLengthAdjust
+	container = SVGTextContentElement
+	constants = "LENGTHADJUST_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGLengthType
+	container = SVGLength
+	constants = "SVG_LENGTHTYPE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGTextPathMethod
+	container = SVGTextPathElement
+	constants = "TEXTPATH_METHODTYPE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGTextPathSpacing
+	container = SVGTextPathElement
+	constants = "TEXTPATH_SPACINGTYPE_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGTransformType
+	container = SVGTransform
+	constants = "SVG_TRANSFORM_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGZoomAndPanType
+	container = SVGZoomAndPan
+	constants = "SVG_ZOOMANDPAN_(.+)"
+
+enumFromConstants System.Html.Media.Graphics.SVG.SVGUnitType
+	container = SVGUnitTypes
+	constants = "SVG_UNIT_TYPE_(.+)"
+
+enumFromConstants System.Net.WebSockets.ReadyState
+	container = WebSocket
+	constants = "(.+)"
+
+enumFromConstants System.Net.ReadyState
+	container = XMLHttpRequest
+	constants = "(.+)"
+
+enumFromConstants System.Xml.XmlNodeType
+	container = Node
+	constants = "(.+)_NODE"
+	name CDATA_SECTION = CDATA
+
+enumFromConstants System.Xml.DocumentPosition
+	container = Node
+	constants = "DOCUMENT_POSITION_(.+)"
+
+enumFromConstants System.Html.Editing.RangeComparison
+	container = Range
+	constants = "(.+)"
+
+enumFromConstants System.Html.Media.MediaElementNetworkState
+	container = HTMLMediaElement
+	constants = "NETWORK_(.+)"
+
+enumFromConstants System.Html.Media.MediaElementReadyState
+	container = HTMLMediaElement
+	constants = "((?=HAVE_).+)"
+
+enumFromConstants System.Data.Offline.ApplicationCacheStatus
+	container = ApplicationCache
+	constants = "(.+)"
+
+enumFromConstants System.Html.Media.MediaErrorCode
+	container = MediaError
+	constants = "MEDIA_ERR_(.+)"
+
+enumFromConstants System.Xml.NodeFilterReturn
+	container = NodeFilter
+	constants = "FILTER_(.+)"
+
+enumFromConstants System.Xml.NodeFilter
+	container = NodeFilter
+	constants = "((?=SHOW_).+)"
+	flags
+
+enumFromConstants System.Xml.XPath.ResultType
+	container = XPathResult
+	constants = "(.+)_TYPE"
+
+enumFromConstants System.Html.WheelDeltaMode
+	container = WheelEvent
+	constants = "DOM_DELTA_(.+)"
+
+enumFromConstants System.Html.CSSRuleType
+	container = CSSRule
+	constants = "(.+)_RULE"
+
+staticInstance System.Html.Document
+	instanceName = document
+	type = HTMLDocument
+
+staticInstance System.Html.Window
+	instanceName = window
+	type = WindowProxy
+
+staticInstance System.Html.Navigator
+	instanceName = navigator
+	type = Navigator
+
+staticInstance System.Threading.WebWorkers.SharedWorkerGlobalScope
+	type = SharedWorkerGlobalScope
+	globalMethods
+
+staticInstance System.Threading.WebWorkers.DedicatedWorkerGlobalScope
+	type = DedicatedWorkerGlobalScope
+	globalMethods

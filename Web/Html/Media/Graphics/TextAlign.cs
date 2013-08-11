@@ -1,26 +1,23 @@
 // TextAlign.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics {
+	[IgnoreNamespace]
+	[Imported]
+	[NamedValues]
+	public enum TextAlign {
+		Start = 0,
 
-    [IgnoreNamespace]
-    [Imported]
-    [NamedValues]
-    public enum TextAlign {
+		End = 1,
 
-        Start = 0,
+		Left = 2,
 
-        End = 1,
+		Right = 3,
 
-        Left = 2,
-
-        Right = 3,
-
-        Center = 4
-    }
+		Center = 4
+	}
 }
