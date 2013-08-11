@@ -1,35 +1,55 @@
-// MediaElement.cs
+﻿// MediaElement.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
+using System.Html.Media;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[ScriptName("Element")]
-	[Imported(ObeysTypeSystem = true)]
-	public class MediaElement : Element {
+	[IgnoreNamespace, Imported(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'MEDIA'"), ScriptName("Element")]
+	public partial class MediaElement : Element {
 		internal MediaElement() {
 		}
 
-		[IntrinsicProperty]
-		public bool Autoplay { get; set; }
+		public TextTrack AddTextTrack(TextTrackKind kind) {
+			return default(TextTrack);
+		}
+
+		public TextTrack AddTextTrack(TextTrackKind kind, string label) {
+			return default(TextTrack);
+		}
+
+		public TextTrack AddTextTrack(TextTrackKind kind, string label, string language) {
+			return default(TextTrack);
+		}
 
 		[IntrinsicProperty]
-		public bool Buffered {
+		public bool Autoplay {
 			get { return false; }
+			set { }
+		}
+
+		[IntrinsicProperty]
+		public TimeRanges Buffered {
+			get { return default(TimeRanges); }
 		}
 
 		public MediaPlayability CanPlayType(string type) {
-			return MediaPlayability.No;
+			return default(MediaPlayability);
 		}
 
 		[IntrinsicProperty]
-		public bool Controls { get; set; }
+		public bool Controls {
+			get { return false; }
+			set { }
+		}
 
 		[IntrinsicProperty]
-		public MediaCrossOriginPolicy CrossOrigin { get; set; }
+		public MediaCrossOriginPolicy CrossOrigin {
+			get { return default(MediaCrossOriginPolicy); }
+			set { }
+		}
 
 		[IntrinsicProperty]
 		public string CurrentSrc {
@@ -37,13 +57,22 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public double CurrentTime { get; set; }
+		public double CurrentTime {
+			get { return 0; }
+			set { }
+		}
 
 		[IntrinsicProperty]
-		public bool DefaultMuted { get; set; }
+		public bool DefaultMuted {
+			get { return false; }
+			set { }
+		}
 
 		[IntrinsicProperty]
-		public double DefaultPlaybackRate { get; set; }
+		public double DefaultPlaybackRate {
+			get { return 0; }
+			set { }
+		}
 
 		[IntrinsicProperty]
 		public double Duration {
@@ -56,27 +85,55 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public bool Error {
-			get { return false; }
+		public MediaError Error {
+			get { return default(MediaError); }
 		}
 
-		[IntrinsicProperty]
-		public double InitialTime {
-			get { return 0; }
-		}
+		[ScriptName("HAVE_CURRENT_DATA")]
+		public const ushort HAVE_CURRENT_DATA = 2;
+
+		[ScriptName("HAVE_ENOUGH_DATA")]
+		public const ushort HAVE_ENOUGH_DATA = 4;
+
+		[ScriptName("HAVE_FUTURE_DATA")]
+		public const ushort HAVE_FUTURE_DATA = 3;
+
+		[ScriptName("HAVE_METADATA")]
+		public const ushort HAVE_METADATA = 1;
+
+		[ScriptName("HAVE_NOTHING")]
+		public const ushort HAVE_NOTHING = 0;
 
 		public void Load() {
 		}
 
 		[IntrinsicProperty]
-		public bool Loop { get; set; }
+		public bool Loop {
+			get { return false; }
+			set { }
+		}
 
 		[IntrinsicProperty]
-		public bool Muted { get; set; }
+		public bool Muted {
+			get { return false; }
+			set { }
+		}
+
+		[ScriptName("NETWORK_EMPTY")]
+		public const ushort NETWORK_EMPTY = 0;
+
+		[ScriptName("NETWORK_IDLE")]
+		public const ushort NETWORK_IDLE = 1;
+
+		[ScriptName("NETWORK_LOADING")]
+		public const ushort NETWORK_LOADING = 2;
+
+		[ScriptName("NETWORK_NO_SOURCE")]
+		public const ushort NETWORK_NO_SOURCE = 3;
 
 		[IntrinsicProperty]
 		public MediaElementNetworkState NetworkState {
-			get { return MediaElementNetworkState.Empty; }
+			get { return default(MediaElementNetworkState); }
 		}
 
 		public void Pause() {
@@ -91,33 +148,52 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public double PlaybackRate { get; set; }
-
-		[IntrinsicProperty]
-		public TimeRanges Played {
-			get { return null; }
+		public double PlaybackRate {
+			get { return 0; }
+			set { }
 		}
 
 		[IntrinsicProperty]
-		public MediaPreload Preload { get; set; }
+		public TimeRanges Played {
+			get { return default(TimeRanges); }
+		}
+
+		[IntrinsicProperty]
+		public MediaPreload Preload {
+			get { return default(MediaPreload); }
+			set { }
+		}
 
 		[IntrinsicProperty]
 		public MediaElementReadyState ReadyState {
-			get { return MediaElementReadyState.HaveNothing; }
+			get { return default(MediaElementReadyState); }
 		}
 
 		[IntrinsicProperty]
 		public TimeRanges Seekable {
-			get { return null; }
+			get { return default(TimeRanges); }
 		}
 
 		[IntrinsicProperty]
-		public string Src { get; set; }
+		public bool Seeking {
+			get { return false; }
+		}
 
 		[IntrinsicProperty]
-		public DateTime StartOffsetTime { get; set; }
+		public string Src {
+			get { return null; }
+			set { }
+		}
 
 		[IntrinsicProperty]
-		public float Volume { get; set; }
+		public TextTrackList TextTracks {
+			get { return default(TextTrackList); }
+		}
+
+		[IntrinsicProperty]
+		public double Volume {
+			get { return 0; }
+			set { }
+		}
 	}
 }

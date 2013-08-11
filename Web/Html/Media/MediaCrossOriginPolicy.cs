@@ -5,7 +5,7 @@
 
 using System.Runtime.CompilerServices;
 
-namespace System.Html {
+namespace System.Html.Media {
 	[NamedValues, Imported]
 	public enum MediaCrossOriginPolicy {
 		Anonymous,

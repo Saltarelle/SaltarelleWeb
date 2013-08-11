@@ -1,4 +1,4 @@
-// ReadyState.cs
+﻿// ReadyState.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
@@ -6,18 +6,12 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Net {
-	[IgnoreNamespace]
 	[Imported]
-	[NumericValues]
 	public enum ReadyState {
-		Uninitialized = 0,
-
-		Open = 1,
-
-		Sent = 2,
-
-		Receiving = 3,
-
-		Loaded = 4
+		Unsent = 0,
+		Opened = 1,
+		HeadersReceived = 2,
+		Loading = 3,
+		Done = 4,
 	}
 }

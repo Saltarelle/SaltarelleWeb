@@ -1,44 +1,42 @@
-// Storage.cs
+﻿// Storage.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
 using System.Runtime.CompilerServices;
 
-namespace System.Html.Data {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class Storage {
-		private Storage() {
+namespace System.Data.WebStorage {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class Storage {
+		internal Storage() {
+		}
+
+		[IndexerName("__Item"), IntrinsicProperty]
+		public string this[string key] {
+			get { return null; }
+			set { }
 		}
 
 		public void Clear() {
 		}
 
-		public object GetItem(string key) {
+		public string GetItem(string key) {
 			return null;
 		}
 
-		[ScriptName("key")]
-		public string GetKey(int index) {
+		public string Key(uint index) {
 			return null;
 		}
 
 		[IntrinsicProperty]
-		public object this[string key] {
-			get { return null; }
-			set { }
-		}
-
-		[IntrinsicProperty]
-		public int Length {
+		public uint Length {
 			get { return 0; }
 		}
 
 		public void RemoveItem(string key) {
 		}
 
-		public void SetItem(string key, object value) {
+		public void SetItem(string key, string value) {
 		}
 	}
 }

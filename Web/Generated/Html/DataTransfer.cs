@@ -1,41 +1,59 @@
-// DataTransfer.cs
+﻿// DataTransfer.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
+using System.IO;
 using System.Runtime.CompilerServices;
+using System.Xml;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class DataTransfer {
-		private DataTransfer() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class DataTransfer {
+		internal DataTransfer() {
 		}
 
 		public void ClearData() {
 		}
 
-		public void ClearData(DataFormat format) {
+		public void ClearData(string format) {
 		}
 
 		[IntrinsicProperty]
 		public DropEffect DropEffect {
-			get { return DropEffect.None; }
+			get { return default(DropEffect); }
 			set { }
 		}
 
 		[IntrinsicProperty]
 		public AllowedDropEffect EffectAllowed {
-			get { return AllowedDropEffect.None; }
+			get { return default(AllowedDropEffect); }
 			set { }
 		}
 
-		public string GetData(DataFormat format) {
+		[IntrinsicProperty]
+		public FileList Files {
+			get { return default(FileList); }
+		}
+
+		public string GetData(string format) {
 			return null;
 		}
 
-		public bool SetData(DataFormat format, string data) {
-			return false;
+		[IntrinsicProperty]
+		public DataTransferItemList Items {
+			get { return default(DataTransferItemList); }
+		}
+
+		public void SetData(string format, string data) {
+		}
+
+		public void SetDragImage(XmlElement image, int x, int y) {
+		}
+
+		[IntrinsicProperty]
+		public string[] Types {
+			get { return null; }
 		}
 	}
 }

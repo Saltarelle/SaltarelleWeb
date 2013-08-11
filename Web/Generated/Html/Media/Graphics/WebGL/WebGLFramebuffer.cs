@@ -6,15 +6,9 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL {
-	/// <summary>
-	/// The WebGLFramebuffer interface represents an OpenGL Framebuffer Object.
-	/// The underlying object is created as if by calling glGenFramebuffers,
-	/// bound as if by calling glBindFramebuffer and destroyed as if
-	/// by calling glDeleteFramebuffers.
-	/// </summary>
-	[IgnoreNamespace, Imported]
-	public class WebGLFramebuffer : WebGLObject {
-		private WebGLFramebuffer() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class WebGLFramebuffer {
+		internal WebGLFramebuffer() {
 		}
 	}
 }

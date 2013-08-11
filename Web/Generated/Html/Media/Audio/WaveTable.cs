@@ -6,13 +6,9 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Audio {
-	/// <summary>
-	/// WaveTable represents an arbitrary periodic waveform to be used with an OscillatorNode.
-	/// </summary>
-	/// <reference>http://www.w3.org/TR/2012/WD-webaudio-20121213/#WaveTable</reference>
-	[IgnoreNamespace, Imported]
-	public class WaveTable {
-		private WaveTable() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class WaveTable {
+		internal WaveTable() {
 		}
 	}
 }

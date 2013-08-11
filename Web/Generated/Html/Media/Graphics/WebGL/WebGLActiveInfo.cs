@@ -6,28 +6,24 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL {
-	/// <summary>
-	/// The WebGLActiveInfo interface represents the information returned
-	/// from the getActiveAttrib and getActiveUniform calls.
-	/// </summary>
-	[Imported, Serializable]
-	public class WebGLActiveInfo {
-		private WebGLActiveInfo() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class WebGLActiveInfo {
+		internal WebGLActiveInfo() {
 		}
 
-		/// <summary>
-		/// The name of the requested variable.
-		/// </summary>
-		public string Name { get; set; }
+		[IntrinsicProperty]
+		public string Name {
+			get { return null; }
+		}
 
-		/// <summary>
-		/// The size of the requested variable.
-		/// </summary>
-		public int Size { get; set; }
+		[IntrinsicProperty]
+		public int Size {
+			get { return 0; }
+		}
 
-		/// <summary>
-		/// The data type of the requested variable.
-		/// </summary>
-		public long Type { get; set; }
+		[IntrinsicProperty]
+		public uint Type {
+			get { return 0; }
+		}
 	}
 }

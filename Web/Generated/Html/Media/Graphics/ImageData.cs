@@ -1,29 +1,29 @@
-// ImageData.cs
+﻿// ImageData.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
+using System.Collections.TypedArrays;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class ImageData {
-		private ImageData() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class ImageData {
+		internal ImageData() {
 		}
 
 		[IntrinsicProperty]
-		public PixelArray Data {
-			get { return null; }
+		public Uint8ClampedArray Data {
+			get { return default(Uint8ClampedArray); }
 		}
 
 		[IntrinsicProperty]
-		public int Height {
+		public uint Height {
 			get { return 0; }
 		}
 
 		[IntrinsicProperty]
-		public int Width {
+		public uint Width {
 			get { return 0; }
 		}
 	}

@@ -6,15 +6,9 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL {
-	/// <summary>
-	/// The WebGLProgram interface represents an OpenGL Program Object.
-	/// The underlying object is created as if by calling glCreateProgram,
-	/// used as if by calling glUseProgram and destroyed as if
-	/// by calling glDeleteProgram.
-	/// </summary>
-	[IgnoreNamespace, Imported]
-	public class WebGLProgram : WebGLObject {
-		private WebGLProgram() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class WebGLProgram {
+		internal WebGLProgram() {
 		}
 	}
 }

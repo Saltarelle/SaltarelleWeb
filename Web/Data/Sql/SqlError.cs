@@ -5,7 +5,7 @@
 
 using System.Runtime.CompilerServices;
 
-namespace System.Html.Data {
+namespace System.Data.Sql {
 	[IgnoreNamespace]
 	[Imported]
 	public sealed class SqlError {

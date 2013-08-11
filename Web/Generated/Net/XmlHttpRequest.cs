@@ -1,58 +1,61 @@
-// XmlHttpRequest.cs
+﻿// XmlHttpRequest.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
+using System.Collections.TypedArrays;
+using System.Html;
+using System.IO;
 using System.Runtime.CompilerServices;
 using System.Xml;
 
 namespace System.Net {
-	[IgnoreNamespace]
-	[Imported]
-	[ScriptName("XMLHttpRequest")]
-	public sealed class XmlHttpRequest {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("XMLHttpRequest")]
+	public partial class XmlHttpRequest : XmlHttpRequestEventTarget {
 		public void Abort() {
 		}
+
+		public const ushort DONE = 4;
 
 		public string GetAllResponseHeaders() {
 			return null;
 		}
 
-		public string GetResponseHeader(string name) {
+		public string GetResponseHeader(string header) {
 			return null;
 		}
 
-		[IntrinsicProperty]
-		[ScriptName("onreadystatechange")]
-		public Action OnReadyStateChange {
-			get { return null; }
+		[ScriptName("HEADERS_RECEIVED")]
+		public const ushort HEADERS_RECEIVED = 2;
+
+		public const ushort LOADING = 3;
+
+		[IntrinsicProperty, ScriptName("onreadystatechange")]
+		public HtmlEventHandler OnReadyStateChange {
+			get { return default(HtmlEventHandler); }
 			set { }
 		}
 
 		public void Open(string method, string url) {
 		}
 
-		public void Open(HttpVerb verb, string url) {
+		public void Open(string method, string url, bool async) {
 		}
 
-		public void Open(string method, string url, bool @async) {
+		public void Open(string method, string url, bool async, string user) {
 		}
 
-		public void Open(HttpVerb verb, string url, bool @async) {
+		public void Open(string method, string url, bool async, string user, string password) {
 		}
 
-		public void Open(string method, string url, bool @async, string userName, string password) {
-		}
+		public const ushort OPENED = 1;
 
-		public void Open(HttpVerb verb, string url, bool @async, string userName, string password) {
-		}
-
-		public void OverrideMimeType(string mimetype) {
+		public void OverrideMimeType(string mime) {
 		}
 
 		[IntrinsicProperty]
 		public ReadyState ReadyState {
-			get { return ReadyState.Uninitialized; }
+			get { return default(ReadyState); }
 		}
 
 		[IntrinsicProperty]
@@ -66,28 +69,45 @@ namespace System.Net {
 		}
 
 		[IntrinsicProperty]
-		public string ResponseType {
-			get { return null; }
+		public XmlHttpRequestResponseType ResponseType {
+			get { return default(XmlHttpRequestResponseType); }
 			set { }
 		}
 
 		[IntrinsicProperty]
-		[ScriptName("responseXML")]
-		public XmlDocument ResponseXml {
-			get { return null; }
+		public DocumentBase ResponseXML {
+			get { return default(DocumentBase); }
 		}
 
 		public void Send() {
 		}
 
-		public void Send(string body) {
+		public void Send(ArrayBuffer data) {
 		}
 
-		public void SetRequestHeader(string name, string value) {
+		public void Send(ArrayBufferView data) {
+		}
+
+		public void Send(Blob data) {
+		}
+
+		public void Send(DocumentBase data) {
+		}
+
+		public void Send(FormData data) {
+		}
+
+		public void Send(string data) {
+		}
+
+		public void SendAsBinary(string body) {
+		}
+
+		public void SetRequestHeader(string header, string value) {
 		}
 
 		[IntrinsicProperty]
-		public int Status {
+		public ushort Status {
 			get { return 0; }
 		}
 
@@ -100,6 +120,13 @@ namespace System.Net {
 		public uint Timeout {
 			get { return 0; }
 			set { }
+		}
+
+		public const ushort UNSENT = 0;
+
+		[IntrinsicProperty]
+		public XmlHttpRequestUpload Upload {
+			get { return default(XmlHttpRequestUpload); }
 		}
 
 		[IntrinsicProperty]

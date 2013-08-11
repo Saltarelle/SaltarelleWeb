@@ -1,18 +1,15 @@
-// Element.cs
+﻿// Element.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
-using System.Html.Media.Filters;
 using System.Runtime.CompilerServices;
+using System.Xml;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[ScriptName("Element")]
-	[Imported(ObeysTypeSystem = true)]
-	public class Element {
-		[NonScriptable]
-		protected Element() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("HTMLElement")]
+	public partial class Element : XmlElement {
+		internal Element() {
 		}
 
 		[IntrinsicProperty]
@@ -21,61 +18,12 @@ namespace System.Html {
 			set { }
 		}
 
-		/// <summary>
-		/// Adds a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-		public void AddEventListener(string eventName, ElementEventListener listener, bool useCapture) {
-		}
-
-		/// <summary>
-		/// Adds a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="handler">The handler to be invoked in response to the event.</param>
-		/// <param name="useCapture">Whether the handler wants to initiate capturing the event.</param>
-		public void AddEventListener(string eventName, IElementEventHandler handler, bool useCapture) {
-		}
-
-		public Element AppendChild(Element child) {
-			return null;
-		}
-
-		public Element AppendChild(DocumentFragment child) {
-			return null;
-		}
-
-		[ScriptSkip]
-		public TElement As<TElement>() where TElement : Element {
-			return null;
-		}
-
-		public void AttachEvent(string eventName, ElementEventHandler handler) {
-		}
-
 		[IntrinsicProperty]
-		public ElementAttributeCollection Attributes {
+		public string AccessKeyLabel {
 			get { return null; }
 		}
 
 		public void Blur() {
-		}
-
-		[IntrinsicProperty]
-		public ElementCollection ChildNodes {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public ElementCollection Children {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public TokenList ClassList {
-			get { return null; }
 		}
 
 		[IntrinsicProperty]
@@ -88,43 +36,19 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public int ClientHeight {
-			get { return 0; }
-		}
-
-		[IntrinsicProperty]
-		public int ClientLeft {
-			get { return 0; }
-		}
-
-		[IntrinsicProperty]
-		public int ClientTop {
-			get { return 0; }
-		}
-
-		[IntrinsicProperty]
-		public int ClientWidth {
-			get { return 0; }
-		}
-
-		public Element CloneNode() {
-			return null;
-		}
-
-		public Element CloneNode(bool deep) {
-			return null;
-		}
-
-		public bool Contains(Element element) {
-			return false;
-		}
-
-		[IntrinsicProperty]
-		public Style CurrentStyle {
+		public string ContentEditable {
 			get { return null; }
+			set { }
 		}
 
-		public void DetachEvent(string eventName, ElementEventHandler handler) {
+		[IntrinsicProperty]
+		public MenuElement ContextMenu {
+			get { return default(MenuElement); }
+		}
+
+		[IntrinsicProperty]
+		public DOMStringMap Dataset {
+			get { return default(DOMStringMap); }
 		}
 
 		[IntrinsicProperty]
@@ -133,123 +57,63 @@ namespace System.Html {
 			set { }
 		}
 
-		// TODO: Is this on Element or just some types of elements?
 		[IntrinsicProperty]
-		public bool Disabled {
+		public bool Draggable {
 			get { return false; }
 			set { }
-		}
-
-		public bool DispatchEvent(MutableEvent eventObject) {
-			return false;
-		}
-
-		public bool DragDrop() {
-			return false;
-		}
-
-		[IntrinsicProperty]
-		public VisualFilterCollection Filters {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public Element FirstChild {
-			get { return null; }
 		}
 
 		public void Focus() {
 		}
 
-		public object GetAttribute(string name) {
-			return null;
-		}
-
-		public object GetAttribute(ElementAttributeName name) {
-			return null;
-		}
-
-		public ElementAttribute GetAttributeNode(string name) {
-			return null;
-		}
-
-		public ElementAttribute GetAttributeNode(ElementAttributeName name) {
-			return null;
-		}
-
-		public ClientRectList GetClientRects() {
-			return null;
-		}
-
-		public ElementCollection GetElementsByClassName(string className) {
-			return null;
-		}
-
-		public ElementCollection GetElementsByTagName(string tagName) {
-			return null;
-		}
-
-		public bool HasAttribute(string name) {
-			return false;
-		}
-
-		public bool HasAttribute(ElementAttributeName name) {
-			return false;
-		}
-
-		public bool HasChildNodes() {
-			return false;
+		[IntrinsicProperty]
+		public bool Hidden {
+			get { return false; }
+			set { }
 		}
 
 		[IntrinsicProperty]
-		public string ID {
+		public bool IsContentEditable {
+			get { return false; }
+		}
+
+		[IntrinsicProperty]
+		public string ItemId {
 			get { return null; }
 			set { }
 		}
 
 		[IntrinsicProperty]
-		public string InnerHTML {
+		public DOMSettableTokenList ItemProp {
+			get { return default(DOMSettableTokenList); }
+		}
+
+		[IntrinsicProperty]
+		public DOMSettableTokenList ItemRef {
+			get { return default(DOMSettableTokenList); }
+		}
+
+		[IntrinsicProperty]
+		public bool ItemScope {
+			get { return false; }
+			set { }
+		}
+
+		[IntrinsicProperty]
+		public DOMSettableTokenList ItemType {
+			get { return default(DOMSettableTokenList); }
+		}
+
+		[IntrinsicProperty]
+		public object ItemValue {
 			get { return null; }
 			set { }
 		}
 
 		[IntrinsicProperty]
-		public string InnerText {
+		public string Lang {
 			get { return null; }
 			set { }
-		}
-
-		public Element InsertBefore(Element newChild) {
-			return null;
-		}
-
-		public Element InsertBefore(Element newChild, Element referenceChild) {
-			return null;
-		}
-
-		[IntrinsicProperty]
-		public Element LastChild {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public Element NextSibling {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public string NodeName {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public ElementType NodeType {
-			get { return 0; }
-		}
-
-		[IntrinsicProperty]
-		public string NodeValue {
-			get { return null; }
 		}
 
 		[IntrinsicProperty]
@@ -263,8 +127,8 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public Element OffsetParent {
-			get { return null; }
+		public XmlElement OffsetParent {
+			get { return default(XmlElement); }
 		}
 
 		[IntrinsicProperty]
@@ -277,132 +141,380 @@ namespace System.Html {
 			get { return 0; }
 		}
 
-		[IntrinsicProperty]
-		public DocumentInstance OwnerDocument {
-			get { return null; }
+		[IntrinsicProperty, ScriptName("onabort")]
+		public HtmlEventHandler OnAbort {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		[IntrinsicProperty]
-		public Element ParentNode {
-			get { return null; }
+		[IntrinsicProperty, ScriptName("onblur")]
+		public HtmlEventHandler OnBlur {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		[IntrinsicProperty]
-		public Element PreviousSibling {
-			get { return null; }
+		[IntrinsicProperty, ScriptName("oncanplay")]
+		public HtmlEventHandler OnCanplay {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public Element QuerySelector(string selector) {
-			return null;
+		[IntrinsicProperty, ScriptName("oncanplaythrough")]
+		public HtmlEventHandler OnCanplaythrough {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public ElementCollection QuerySelectorAll(string selector) {
-			return null;
+		[IntrinsicProperty, ScriptName("onchange")]
+		public HtmlEventHandler OnChange {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public bool RemoveAttribute(string name) {
-			return false;
+		[IntrinsicProperty, ScriptName("onclick")]
+		public HtmlEventHandler OnClick {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public bool RemoveAttribute(ElementAttributeName name) {
-			return false;
+		[IntrinsicProperty, ScriptName("oncontextmenu")]
+		public HtmlEventHandler OnContextmenu {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public ElementAttribute RemoveAttributeNode(ElementAttribute attribute) {
-			return null;
+		[IntrinsicProperty, ScriptName("oncopy")]
+		public HtmlEventHandler OnCopy {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public Element RemoveChild(Element child) {
-			return null;
+		[IntrinsicProperty, ScriptName("oncut")]
+		public HtmlEventHandler OnCut {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		/// <summary>
-		/// Removes a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-		public void RemoveEventListener(string eventName, ElementEventListener listener, bool useCapture) {
+		[IntrinsicProperty, ScriptName("ondblclick")]
+		public HtmlEventHandler OnDblclick {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		/// <summary>
-		/// Removes a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="handler">The handler to be invoked in response to the event.</param>
-		/// <param name="useCapture">Whether the handler wants to initiate capturing the event.</param>
-		public void RemoveEventListener(string eventName, IElementEventHandler handler, bool useCapture) {
+		[IntrinsicProperty, ScriptName("ondrag")]
+		public HtmlEventHandler OnDrag {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public Element ReplaceChild(Element newChild, Element oldChild) {
-			return null;
+		[IntrinsicProperty, ScriptName("ondragend")]
+		public HtmlEventHandler OnDragend {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		[IntrinsicProperty]
-		public Style RuntimeStyle {
-			get { return null; }
+		[IntrinsicProperty, ScriptName("ondragenter")]
+		public HtmlEventHandler OnDragenter {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		[IntrinsicProperty]
-		public int ScrollHeight {
-			get { return 0; }
+		[IntrinsicProperty, ScriptName("ondragleave")]
+		public HtmlEventHandler OnDragleave {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public void ScrollIntoView() {
+		[IntrinsicProperty, ScriptName("ondragover")]
+		public HtmlEventHandler OnDragover {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public void ScrollIntoView(bool alignTop) {
+		[IntrinsicProperty, ScriptName("ondragstart")]
+		public HtmlEventHandler OnDragstart {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		[IntrinsicProperty]
-		public int ScrollLeft {
-			get { return 0; }
+		[IntrinsicProperty, ScriptName("ondrop")]
+		public HtmlEventHandler OnDrop {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondurationchange")]
+		public HtmlEventHandler OnDurationchange {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onemptied")]
+		public HtmlEventHandler OnEmptied {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onended")]
+		public HtmlEventHandler OnEnded {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onerror")]
+		public HtmlEventHandler OnError {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onfocus")]
+		public HtmlEventHandler OnFocus {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("oninput")]
+		public HtmlEventHandler OnInput {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("oninvalid")]
+		public HtmlEventHandler OnInvalid {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onkeydown")]
+		public HtmlEventHandler OnKeydown {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onkeypress")]
+		public HtmlEventHandler OnKeypress {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onkeyup")]
+		public HtmlEventHandler OnKeyup {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onload")]
+		public HtmlEventHandler OnLoad {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onloadeddata")]
+		public HtmlEventHandler OnLoadeddata {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onloadedmetadata")]
+		public HtmlEventHandler OnLoadedmetadata {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onloadstart")]
+		public HtmlEventHandler OnLoadstart {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmousedown")]
+		public HtmlEventHandler OnMousedown {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmousemove")]
+		public HtmlEventHandler OnMousemove {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseout")]
+		public HtmlEventHandler OnMouseout {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseover")]
+		public HtmlEventHandler OnMouseover {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseup")]
+		public HtmlEventHandler OnMouseup {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onpaste")]
+		public HtmlEventHandler OnPaste {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onpause")]
+		public HtmlEventHandler OnPause {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onplay")]
+		public HtmlEventHandler OnPlay {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onplaying")]
+		public HtmlEventHandler OnPlaying {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onprogress")]
+		public HtmlEventHandler OnProgress {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onratechange")]
+		public HtmlEventHandler OnRatechange {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onreset")]
+		public HtmlEventHandler OnReset {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onscroll")]
+		public HtmlEventHandler OnScroll {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onseeked")]
+		public HtmlEventHandler OnSeeked {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onseeking")]
+		public HtmlEventHandler OnSeeking {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onselect")]
+		public HtmlEventHandler OnSelect {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onshow")]
+		public HtmlEventHandler OnShow {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onstalled")]
+		public HtmlEventHandler OnStalled {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onsubmit")]
+		public HtmlEventHandler OnSubmit {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onsuspend")]
+		public HtmlEventHandler OnSuspend {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ontimeupdate")]
+		public HtmlEventHandler OnTimeupdate {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchcancel")]
+		public HtmlEventHandler OnTouchcancel {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchend")]
+		public HtmlEventHandler OnTouchend {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchenter")]
+		public HtmlEventHandler OnTouchenter {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchleave")]
+		public HtmlEventHandler OnTouchleave {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchmove")]
+		public HtmlEventHandler OnTouchmove {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchstart")]
+		public HtmlEventHandler OnTouchstart {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onwaiting")]
+		public HtmlEventHandler OnWaiting {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onvolumechange")]
+		public HtmlEventHandler OnVolumechange {
+			get { return default(HtmlEventHandler); }
 			set { }
 		}
 
 		[IntrinsicProperty]
-		public int ScrollTop {
-			get { return 0; }
+		public bool Spellcheck {
+			get { return false; }
 			set { }
-		}
-
-		[IntrinsicProperty]
-		public int ScrollWidth {
-			get { return 0; }
-		}
-
-		public void SetActive() {
-		}
-
-		public void SetAttribute(string name, object value) {
-		}
-
-		public void SetAttribute(ElementAttributeName name, object value) {
-		}
-
-		public ElementAttribute SetAttributeNode(ElementAttribute attribute) {
-			return null;
 		}
 
 		[IntrinsicProperty]
 		public Style Style {
-			get { return null; }
+			get { return default(Style); }
 		}
 
 		[IntrinsicProperty]
 		public int TabIndex {
 			get { return 0; }
-			set { }
-		}
-
-		[IntrinsicProperty]
-		public string TagName {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public string TextContent {
-			get { return null; }
 			set { }
 		}
 

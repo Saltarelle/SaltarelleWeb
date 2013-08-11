@@ -6,58 +6,39 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Audio {
-	/// <summary>
-	/// DynamicsCompressorNode is an AudioNode processor implementing a dynamics compression effect.
-	/// </summary>
-	/// <reference>http://www.w3.org/TR/2012/WD-webaudio-20121213/#DynamicsCompressorNode</reference>
-	[IgnoreNamespace, Imported]
-	public class DynamicsCompressorNode : AudioNode {
-		private DynamicsCompressorNode() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class DynamicsCompressorNode : AudioNode {
+		internal DynamicsCompressorNode() {
 		}
 
-		/// <summary>
-		/// The amount of time (in seconds) to reduce the gain by 10dB. Its default value is 
-		/// 0.003, with a nominal range of 0 to 1.  This parameter is k-rate.
-		/// </summary>
 		[IntrinsicProperty]
-		public AudioParam Attack { get; private set; }
+		public AudioParam Attack {
+			get { return default(AudioParam); }
+		}
 
-		/// <summary>
-		/// A decibel value representing the range above the threshold where the curve smoothly 
-		/// transitions to the "ratio" portion. Its default value is 30, with a nominal range 
-		/// of 0 to 40.  This parameter is k-rate.
-		/// </summary>
 		[IntrinsicProperty]
-		public AudioParam Knee { get; private set; }
+		public AudioParam Knee {
+			get { return default(AudioParam); }
+		}
 
-		/// <summary>
-		/// The amount of dB change in input for a 1 dB change in output. Its default value is 
-		/// 12, with a nominal range of 1 to 20.  This parameter is k-rate.
-		/// </summary>
 		[IntrinsicProperty]
-		public AudioParam Ratio { get; private set; }
+		public AudioParam Ratio {
+			get { return default(AudioParam); }
+		}
 
-		/// <summary>
-		/// A read-only decibel value for metering purposes, representing the current amount of 
-		/// gain reduction that the compressor is applying to the signal. If fed no signal the 
-		/// value will be 0 (no gain reduction). The nominal range is -20 to 0. This
-		/// parameter is k-rate.
-		/// </summary>
 		[IntrinsicProperty]
-		public AudioParam Reduction { get; private set; }
+		public AudioParam Reduction {
+			get { return default(AudioParam); }
+		}
 
-		/// <summary>
-		/// The amount of time (in seconds) to increase the gain by 10dB. Its default value 
-		/// is 0.250, with a nominal range of 0 to 1.  This parameter is k-rate.
-		/// </summary>
 		[IntrinsicProperty]
-		public AudioParam Release { get; private set; }
+		public AudioParam Release {
+			get { return default(AudioParam); }
+		}
 
-		/// <summary>
-		/// The decibel value above which the compression will start taking effect. Its default 
-		/// value is -24, with a nominal range of -100 to 0.  This parameter is k-rate.
-		/// </summary>
 		[IntrinsicProperty]
-		public AudioParam Threshold { get; private set; }
+		public AudioParam Threshold {
+			get { return default(AudioParam); }
+		}
 	}
 }

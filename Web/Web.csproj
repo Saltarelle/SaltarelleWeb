@@ -28,7 +28,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Saltarelle.Web.xml</DocumentationFile>
-    <NoWarn>1591, 0661, 0660, 1684</NoWarn>
+    <NoWarn>1591, 108</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -39,43 +39,70 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Script.Web.xml</DocumentationFile>
-    <NoWarn>1591, 0661, 0660, 1684</NoWarn>
+    <NoWarn>1591, 108</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Html\ActiveXObject.cs" />
     <Compile Include="Generated\**\*.cs" />
-    <Compile Include="Data\Sql\SqlDatabase.cs" />
     <Compile Include="Data\Sql\SqlDatabaseCallback.cs" />
-    <Compile Include="Data\Sql\SqlError.cs" />
     <Compile Include="Data\Sql\SqlErrorCallback.cs" />
-    <Compile Include="Data\Sql\SqlResultSet.cs" />
-    <Compile Include="Data\Sql\SqlResultSetRow.cs" />
-    <Compile Include="Data\Sql\SqlResultSetRowList.cs" />
     <Compile Include="Data\Sql\SqlStatementCallback.cs" />
     <Compile Include="Data\Sql\SqlStatementErrorCallback.cs" />
-    <Compile Include="Data\Sql\SqlTransaction.cs" />
     <Compile Include="Data\Sql\SqlTransactionCallback.cs" />
-    <Compile Include="Html\ActiveXObject.cs" />
+    <Compile Include="Html\CanvasElement.cs" />
+    <Compile Include="Html\DOMParser.cs" />
+    <Compile Include="Html\EventPhase.cs" />
+    <Compile Include="Html\Media\Audio\AudioContext.cs" />
+    <Compile Include="Html\Media\Graphics\SVG\SVGAnimatedEnumeration.cs" />
+    <Compile Include="Html\Media\MediaStreamOptions.cs" />
+    <Compile Include="Html\Media\Graphics\CanvasRenderingContext2D.cs" />
+    <Compile Include="Html\Media\Graphics\CanvasRenderingContext.cs" />
+    <Compile Include="Html\Media\Graphics\CanvasContextId.cs" />
     <Compile Include="Html\Media\Graphics\CompositeOperation.cs" />
     <Compile Include="Html\Media\Graphics\LineCap.cs" />
     <Compile Include="Html\Media\Graphics\LineJoin.cs" />
     <Compile Include="Html\Media\Graphics\TextAlign.cs" />
     <Compile Include="Html\Media\Graphics\TextBaseline.cs" />
+    <Compile Include="Html\Media\Graphics\WebGL\WebGLRenderingContext.cs" />
+    <Compile Include="Html\Navigator.cs" />
+    <Compile Include="Html\NavigatorInstance.cs" />
+    <Compile Include="Html\Style.cs" />
+    <Compile Include="Html\Window.cs" />
+    <Compile Include="Html\Document.cs" />
+    <Compile Include="Html\Element.cs" />
+    <Compile Include="Html\HtmlEventHandler.cs" />
+    <Compile Include="Html\EventTarget.cs" />
+    <Compile Include="Html\HtmlEventHandlerWithTarget.cs" />
+    <Compile Include="Html\Media\TextTrackCue.cs" />
     <Compile Include="Html\Media\MediaCrossOriginPolicy.cs" />
+    <Compile Include="Data\Sql\SqlResultSet.cs" />
+    <Compile Include="Data\Sql\SqlResultSetRow.cs" />
+    <Compile Include="Data\Sql\SqlResultSetRowList.cs" />
+    <Compile Include="Data\Sql\SqlError.cs" />
+    <Compile Include="Data\Sql\SqlTransaction.cs" />
+    <Compile Include="Data\Sql\SqlDatabase.cs" />
     <Compile Include="Html\Media\MediaPlayability.cs" />
     <Compile Include="Html\Media\MediaPreload.cs" />
-    <Compile Include="Net\HttpVerb.cs" />
+    <Compile Include="Net\XmlHttpRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Version.cs" />
-    <Compile Include="Xml\XmlDocumentParser.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Net\HttpVerb.cs" />
+    <Compile Include="Xml\XmlDocument.cs" />
+    <Compile Include="Xml\XmlDocumentParser.cs" />
+    <Compile Include="Xml\XmlNode.cs" />
+    <Compile Include="Xml\XmlNodeList.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib">
       <HintPath>$(SolutionDir)packages\Saltarelle.Runtime.2.3.0\tools\Assemblies\mscorlib.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="!Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.3.0\tools\Saltarelle.Compiler.targets')" />
   <Import Project="$(SolutionDir)packages\Saltarelle.Compiler.2.3.0\tools\Saltarelle.Compiler.targets" Condition="Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.3.0\tools\Saltarelle.Compiler.targets')" />
 </Project>

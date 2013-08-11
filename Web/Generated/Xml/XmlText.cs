@@ -1,4 +1,4 @@
-// XmlText.cs
+﻿// XmlText.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
@@ -6,25 +6,21 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Xml {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class XmlText : XmlNode {
-		internal XmlText() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("Text")]
+	public partial class XmlText : XmlCharacterData {
+		public XmlText() {
+		}
+
+		public XmlText(string data) {
+		}
+
+		public XmlText SplitText(uint offset) {
+			return default(XmlText);
 		}
 
 		[IntrinsicProperty]
-		public string Data {
+		public string WholeText {
 			get { return null; }
-			set { }
-		}
-
-		[IntrinsicProperty]
-		public int Length {
-			get { return 0; }
-		}
-
-		public XmlText SplitText(int offset) {
-			return null;
 		}
 	}
 }

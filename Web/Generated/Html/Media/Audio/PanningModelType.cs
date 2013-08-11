@@ -6,13 +6,13 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Audio {
-	[NamedValues]
-	[IgnoreNamespace, Imported]
+	[Imported, NamedValues]
 	public enum PanningModelType {
-		[ScriptName("equalpower")] EqualPower,
-
-		[ScriptName("HRTF")] HRTF,
-
-		[ScriptName("soundfield")] SoundField
+		[ScriptName("0")]
+		_0,
+		[ScriptName("1")]
+		_1,
+		Equalpower,
+		HRTF,
 	}
 }

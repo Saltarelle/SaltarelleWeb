@@ -6,17 +6,12 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Audio {
-	[NamedValues]
-	[IgnoreNamespace, Imported]
+	[Imported, NamedValues]
 	public enum OscillatorType {
-		[ScriptName("sine")] Sine,
-
-		[ScriptName("square")] Square,
-
-		[ScriptName("sawtooth")] Sawtooth,
-
-		[ScriptName("triangle")] Triangle,
-
-		[ScriptName("custom")] Custom
+		Sine,
+		Square,
+		Sawtooth,
+		Triangle,
+		Custom,
 	}
 }

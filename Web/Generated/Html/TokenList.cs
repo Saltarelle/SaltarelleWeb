@@ -1,15 +1,20 @@
-// TokenList.cs
+﻿// TokenList.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class TokenList {
-		private TokenList() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("DOMTokenList")]
+	public partial class TokenList {
+		internal TokenList() {
+		}
+
+		[IndexerName("__Item"), IntrinsicProperty]
+		public string this[uint index] {
+			get { return null; }
 		}
 
 		public void Add(string token) {
@@ -19,25 +24,28 @@ namespace System.Html {
 			return false;
 		}
 
-		[IntrinsicProperty]
-		[ScriptName("length")]
-		public int Count {
-			get { return 0; }
+		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
+		public IEnumerator<string> GetEnumerator() {
+			return default(IEnumerator<string>);
+		}
+
+		public string Item(uint index) {
+			return null;
 		}
 
 		[IntrinsicProperty]
-		public string this[int index] {
-			get { return null; }
+		public uint Length {
+			get { return 0; }
 		}
 
 		public void Remove(string token) {
 		}
 
-		public override string ToString() {
-			return null;
+		public bool Toggle(string token) {
+			return false;
 		}
 
-		public bool Toggle(string token) {
+		public bool Toggle(string token, bool force) {
 			return false;
 		}
 	}

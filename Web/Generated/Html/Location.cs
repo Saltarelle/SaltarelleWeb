@@ -1,4 +1,4 @@
-// Location.cs
+﻿// Location.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
@@ -6,16 +6,11 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class Location {
-		private Location() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class Location {
+		internal Location() {
 		}
 
-		/// <summary>
-		/// Navigates the window to a new location and updates the browser's history.
-		/// </summary>
-		/// <param name="url">The URL to navigate to.</param>
 		public void Assign(string url) {
 		}
 
@@ -26,14 +21,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public string Hostname {
+		public string Host {
 			get { return null; }
+			set { }
 		}
 
 		[IntrinsicProperty]
-		[ScriptName("host")]
-		public string HostnameAndPort {
+		public string Hostname {
 			get { return null; }
+			set { }
 		}
 
 		[IntrinsicProperty]
@@ -45,41 +41,31 @@ namespace System.Html {
 		[IntrinsicProperty]
 		public string Pathname {
 			get { return null; }
+			set { }
 		}
 
 		[IntrinsicProperty]
 		public string Port {
 			get { return null; }
+			set { }
 		}
 
 		[IntrinsicProperty]
 		public string Protocol {
 			get { return null; }
+			set { }
 		}
 
-		/// <summary>
-		/// Reload the current document.
-		/// </summary>
 		public void Reload() {
 		}
 
-		/// <summary>
-		/// Reload the current document.
-		/// </summary>
-		/// <param name="forceGet">If true, the document will be reloaded from the server, otherwise it may be loaded from the browser's cache.</param>
-		public void Reload(bool forceGet) {
-		}
-
-		/// <summary>
-		/// Navigates the window to a new location without updating the browser's history.
-		/// </summary>
-		/// <param name="url">The URL to navigate to.</param>
 		public void Replace(string url) {
 		}
 
 		[IntrinsicProperty]
 		public string Search {
 			get { return null; }
+			set { }
 		}
 	}
 }

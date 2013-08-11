@@ -1,4 +1,4 @@
-// TableRowElement.cs
+﻿// TableRowElement.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
@@ -6,30 +6,49 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[ScriptName("Element")]
-	[Imported(ObeysTypeSystem = true)]
-	public sealed class TableRowElement : Element {
-		private TableRowElement() {
+	[IgnoreNamespace, Imported(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'TR'"), ScriptName("Element")]
+	public partial class TableRowElement : Element {
+		internal TableRowElement() {
+		}
+
+		[IntrinsicProperty]
+		public string Align {
+			get { return null; }
+			set { }
+		}
+
+		[IntrinsicProperty]
+		public string BgColor {
+			get { return null; }
+			set { }
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Cells {
-			get { return null; }
+			get { return default(ElementCollection); }
 		}
 
-		public void DeleteCell() {
+		[IntrinsicProperty]
+		public string Ch {
+			get { return null; }
+			set { }
+		}
+
+		[IntrinsicProperty]
+		public string ChOff {
+			get { return null; }
+			set { }
 		}
 
 		public void DeleteCell(int index) {
 		}
 
-		public TableCellElement InsertCell() {
-			return null;
+		public Element InsertCell() {
+			return default(Element);
 		}
 
-		public TableCellElement InsertCell(int index) {
-			return null;
+		public Element InsertCell(int index) {
+			return default(Element);
 		}
 
 		[IntrinsicProperty]
@@ -40,6 +59,12 @@ namespace System.Html {
 		[IntrinsicProperty]
 		public int SectionRowIndex {
 			get { return 0; }
+		}
+
+		[IntrinsicProperty]
+		public string VAlign {
+			get { return null; }
+			set { }
 		}
 	}
 }

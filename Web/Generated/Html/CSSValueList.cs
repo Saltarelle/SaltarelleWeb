@@ -1,0 +1,34 @@
+﻿// CSSValueList.cs
+// Script#/Libraries/Web
+// This source code is subject to terms and conditions of the Apache License, Version 2.0.
+// 
+
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+
+namespace System.Html {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class CSSValueList : CSSValue {
+		internal CSSValueList() {
+		}
+
+		[IndexerName("__Item"), IntrinsicProperty]
+		public CSSValue this[uint index] {
+			get { return default(CSSValue); }
+		}
+
+		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
+		public IEnumerator<CSSValue> GetEnumerator() {
+			return default(IEnumerator<CSSValue>);
+		}
+
+		public CSSValue Item(uint index) {
+			return default(CSSValue);
+		}
+
+		[IntrinsicProperty]
+		public uint Length {
+			get { return 0; }
+		}
+	}
+}

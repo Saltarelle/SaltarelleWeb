@@ -1,4 +1,4 @@
-// XmlDocument.cs
+﻿// XmlDocument.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
@@ -6,52 +6,19 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Xml {
-	/// <summary>
-	/// Represents the hierarchy of node objects parsed from XML markup.
-	/// </summary>
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class XmlDocument : XmlNode {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("XMLDocument")]
+	public partial class XmlDocument : DocumentBase {
 		internal XmlDocument() {
 		}
 
-		public XmlAttribute CreateAttribute(string name) {
-			return null;
-		}
-
-		[ScriptName("createCDATASection")]
-		public XmlNode CreateCDataSection(string data) {
-			return null;
-		}
-
-		public XmlNode CreateComment(string text) {
-			return null;
-		}
-
-		public XmlNode CreateElement(string tagName) {
-			return null;
-		}
-
-		public XmlNode CreateEntityReference(string name) {
-			return null;
-		}
-
-		public XmlNode CreateProcessingInstruction(string target, string data) {
-			return null;
-		}
-
-		public XmlText CreateTextNode(string text) {
-			return null;
-		}
-
 		[IntrinsicProperty]
-		public string Doctype {
-			get { return null; }
+		public bool Async {
+			get { return false; }
+			set { }
 		}
 
-		[IntrinsicProperty]
-		public XmlNode DocumentElement {
-			get { return null; }
+		public bool Load(string url) {
+			return false;
 		}
 	}
 }

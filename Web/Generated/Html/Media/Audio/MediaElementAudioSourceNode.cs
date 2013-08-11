@@ -6,13 +6,9 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Audio {
-	/// <summary>
-	/// MediaElementAudioSourceNode represents an audio source from an audio or video element.
-	/// </summary>
-	/// <reference>http://www.w3.org/TR/2012/WD-webaudio-20121213/#MediaElementAudioSourceNode</reference>
-	[IgnoreNamespace, Imported]
-	public class MediaElementAudioSourceNode : AudioSourceNode {
-		private MediaElementAudioSourceNode() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class MediaElementAudioSourceNode : AudioNode {
+		internal MediaElementAudioSourceNode() {
 		}
 	}
 }

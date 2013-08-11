@@ -1,55 +1,55 @@
-// CanvasElement.cs
+﻿// CanvasElement.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
 using System.Html.Media.Graphics;
-using System.Html.Media.Graphics.WebGL;
+using System.IO;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[ScriptName("Element")]
-	[Imported(ObeysTypeSystem = true)]
-	public sealed class CanvasElement : Element {
-		private CanvasElement() {
+	[IgnoreNamespace, Imported(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'CANVAS'"), ScriptName("Element")]
+	public partial class CanvasElement : Element {
+		internal CanvasElement() {
 		}
 
-		public CanvasContext GetContext(string contextID) {
-			return null;
+		public CanvasRenderingContext GetContext(string contextId) {
+			return default(CanvasRenderingContext);
 		}
 
-		public CanvasContext GetContext(string contextID, WebGLContextAttributes attributes) {
-			return null;
-		}
-
-		public CanvasContext GetContext(Rendering renderingType) {
-			return null;
-		}
-
-		[ScriptName("toDataURL")]
-		public string GetDataUrl() {
-			return null;
-		}
-
-		[ScriptName("toDataURL")]
-		public string GetDataUrl(string type) {
-			return null;
-		}
-
-		[ScriptName("toDataURL")]
-		public string GetDataUrl(string type, params object[] typeArguments) {
-			return null;
+		public CanvasRenderingContext GetContext(string contextId, object contextOptions) {
+			return default(CanvasRenderingContext);
 		}
 
 		[IntrinsicProperty]
-		public int Height {
+		public uint Height {
 			get { return 0; }
 			set { }
 		}
 
+		public void ToBlob(Action<Blob> callback) {
+		}
+
+		public void ToBlob(Action<Blob> callback, string type) {
+		}
+
+		public void ToBlob(Action<Blob> callback, string type, object encoderOptions) {
+		}
+
+		public string ToDataURL() {
+			return null;
+		}
+
+		public string ToDataURL(string type) {
+			return null;
+		}
+
+		public string ToDataURL(string type, object encoderOptions) {
+			return null;
+		}
+
 		[IntrinsicProperty]
-		public int Width {
+		public uint Width {
 			get { return 0; }
 			set { }
 		}

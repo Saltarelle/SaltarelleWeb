@@ -6,15 +6,9 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.WebGL {
-	/// <summary>
-	/// The WebGLShader interface represents an OpenGL Shader Object.
-	/// The underlying object is created as if by calling glCreateShader,
-	/// attached to a Program as if by calling glAttachShader and
-	/// destroyed as if by calling glDeleteShader.
-	/// </summary>
-	[IgnoreNamespace, Imported]
-	public class WebGLShader : WebGLObject {
-		private WebGLShader() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class WebGLShader {
+		internal WebGLShader() {
 		}
 	}
 }

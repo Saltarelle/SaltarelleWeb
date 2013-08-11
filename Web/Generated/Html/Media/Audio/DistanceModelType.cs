@@ -6,13 +6,16 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Audio {
-	[NamedValues]
-	[IgnoreNamespace, Imported]
+	[Imported, NamedValues]
 	public enum DistanceModelType {
-		[ScriptName("linear")] Linear,
-
-		[ScriptName("inverse")] Inverse,
-
-		[ScriptName("exponential")] Exponential
+		[ScriptName("0")]
+		_0,
+		[ScriptName("1")]
+		_1,
+		[ScriptName("2")]
+		_2,
+		Linear,
+		Inverse,
+		Exponential,
 	}
 }

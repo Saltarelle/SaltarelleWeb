@@ -1,46 +1,60 @@
-// DocumentInstance.cs
+﻿// DocumentInstance.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
 using System.Html.Editing;
 using System.Runtime.CompilerServices;
+using System.Xml;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class DocumentInstance {
-		private DocumentInstance() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("HTMLDocument")]
+	public partial class DocumentInstance : DocumentBase {
+		internal DocumentInstance() {
 		}
 
-		[IntrinsicProperty]
-		public Element ActiveElement {
+		[IndexerName("__Item"), IntrinsicProperty]
+		public object this[string name] {
 			get { return null; }
 		}
 
-		/// <summary>
-		/// Adds a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		public void AddEventListener(string eventName, ElementEventListener listener) {
+		[IntrinsicProperty]
+		public string AlinkColor {
+			get { return null; }
+			set { }
 		}
 
-		/// <summary>
-		/// Adds a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-		public void AddEventListener(string eventName, ElementEventListener listener, bool useCapture) {
+		[IntrinsicProperty]
+		public object All {
+			get { return null; }
 		}
 
-		public void AttachEvent(string eventName, ElementEventHandler handler) {
+		[IntrinsicProperty]
+		public ElementCollection Anchors {
+			get { return default(ElementCollection); }
+		}
+
+		[IntrinsicProperty]
+		public ElementCollection Applets {
+			get { return default(ElementCollection); }
+		}
+
+		[IntrinsicProperty]
+		public string BgColor {
+			get { return null; }
+			set { }
 		}
 
 		[IntrinsicProperty]
 		public Element Body {
-			get { return null; }
+			get { return default(Element); }
+			set { }
+		}
+
+		public void CaptureEvents(int eventFlags) {
+		}
+
+		public void Clear() {
 		}
 
 		public void Close() {
@@ -52,47 +66,10 @@ namespace System.Html {
 			set { }
 		}
 
-		public ElementAttribute CreateAttribute(string name) {
-			return null;
-		}
-
-		public DocumentFragment CreateDocumentFragment() {
-			return null;
-		}
-
-		public Element CreateElement(string tagName) {
-			return null;
-		}
-
-		public MutableEvent CreateEvent(string eventType) {
-			return null;
-		}
-
-		public Element CreateTextNode(string tagName) {
-			return null;
-		}
-
 		[IntrinsicProperty]
 		public string DesignMode {
 			get { return null; }
 			set { }
-		}
-
-		public void DetachEvent(string eventName, ElementEventHandler handler) {
-		}
-
-		public bool DispatchEvent(MutableEvent eventObject) {
-			return false;
-		}
-
-		[IntrinsicProperty]
-		public string Doctype {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public Element DocumentElement {
-			get { return null; }
 		}
 
 		[IntrinsicProperty]
@@ -101,125 +78,136 @@ namespace System.Html {
 			set { }
 		}
 
-		public Element ElementFromPoint(int x, int y) {
-			return null;
+		[IntrinsicProperty]
+		public ElementCollection Embeds {
+			get { return default(ElementCollection); }
 		}
 
-		public bool ExecCommand(string command, bool displayUserInterface, object value) {
+		public bool ExecCommand(string commandId) {
 			return false;
 		}
 
-		public void Focus() {
+		public bool ExecCommand(string commandId, bool showUI) {
+			return false;
 		}
 
-		public Element GetElementById(string id) {
-			return null;
-		}
-
-		public ElementCollection GetElementsByClassName(string className) {
-			return null;
-		}
-
-		public ElementCollection GetElementsByName(string name) {
-			return null;
-		}
-
-		public ElementCollection GetElementsByTagName(string tagName) {
-			return null;
-		}
-
-		public bool HasFocus() {
+		public bool ExecCommand(string commandId, bool showUI, string value) {
 			return false;
 		}
 
 		[IntrinsicProperty]
-		public DocumentImplementation Implementation {
-			get { return null; }
-		}
-
-		public void Open() {
-		}
-
-		[IntrinsicProperty]
-		public WindowInstance ParentWindow {
-			get { return null; }
-		}
-
-		public bool QueryCommandEnabled(string command) {
-			return false;
-		}
-
-		public bool QueryCommandIndeterm(string command) {
-			return false;
-		}
-
-		public bool QueryCommandState(string command) {
-			return false;
-		}
-
-		public bool QueryCommandSupported(string command) {
-			return false;
-		}
-
-		public object QueryCommandValue(string command) {
-			return null;
-		}
-
-		public Element QuerySelector(string selector) {
-			return null;
-		}
-
-		public ElementCollection QuerySelectorAll(string selector) {
-			return null;
-		}
-
-		[IntrinsicProperty]
-		public string ReadyState {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public string Referrer {
-			get { return null; }
-		}
-
-		/// <summary>
-		/// Removes a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		public void RemoveEventListener(string eventName, ElementEventListener listener) {
-		}
-
-		/// <summary>
-		/// Removes a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-		public void RemoveEventListener(string eventName, ElementEventListener listener, bool useCapture) {
-		}
-
-		[IntrinsicProperty]
-		public Selection Selection {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public string Title {
+		public string FgColor {
 			get { return null; }
 			set { }
 		}
 
 		[IntrinsicProperty]
-		public string URL {
+		public ElementCollection Forms {
+			get { return default(ElementCollection); }
+		}
+
+		public XmlNodeList GetElementsByName(string elementName) {
+			return default(XmlNodeList);
+		}
+
+		public XmlNodeList GetItems() {
+			return default(XmlNodeList);
+		}
+
+		public XmlNodeList GetItems(string typeNames) {
+			return default(XmlNodeList);
+		}
+
+		public Selection GetSelection() {
+			return default(Selection);
+		}
+
+		[IntrinsicProperty]
+		public HeadElement Head {
+			get { return default(HeadElement); }
+		}
+
+		[IntrinsicProperty]
+		public ElementCollection Images {
+			get { return default(ElementCollection); }
+		}
+
+		[IntrinsicProperty]
+		public string LinkColor {
 			get { return null; }
+			set { }
 		}
 
-		public void Write(string text) {
+		[IntrinsicProperty]
+		public ElementCollection Links {
+			get { return default(ElementCollection); }
 		}
 
-		public void Writeln(string text) {
+		public DocumentBase Open() {
+			return default(DocumentBase);
+		}
+
+		public DocumentBase Open(string type) {
+			return default(DocumentBase);
+		}
+
+		public DocumentBase Open(string type, string replace) {
+			return default(DocumentBase);
+		}
+
+		public WindowInstance Open(string url, string name, string features) {
+			return default(WindowInstance);
+		}
+
+		public WindowInstance Open(string url, string name, string features, bool replace) {
+			return default(WindowInstance);
+		}
+
+		[IntrinsicProperty]
+		public ElementCollection Plugins {
+			get { return default(ElementCollection); }
+		}
+
+		public bool QueryCommandEnabled(string commandId) {
+			return false;
+		}
+
+		public bool QueryCommandIndeterm(string commandId) {
+			return false;
+		}
+
+		public bool QueryCommandState(string commandId) {
+			return false;
+		}
+
+		public bool QueryCommandSupported(string commandId) {
+			return false;
+		}
+
+		public string QueryCommandValue(string commandId) {
+			return null;
+		}
+
+		public void ReleaseEvents(int eventFlags) {
+		}
+
+		[IntrinsicProperty]
+		public ElementCollection Scripts {
+			get { return default(ElementCollection); }
+		}
+
+		[IntrinsicProperty]
+		public string VlinkColor {
+			get { return null; }
+			set { }
+		}
+
+		[ExpandParams]
+		public void Write(params string[] text) {
+		}
+
+		[ExpandParams]
+		public void Writeln(params string[] text) {
 		}
 	}
 }

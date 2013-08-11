@@ -1,44 +1,89 @@
-// ApplicationCache.cs
+﻿// ApplicationCache.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
+using System.Html;
 using System.Runtime.CompilerServices;
 
-namespace System.Html.Data {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class ApplicationCache {
-		private ApplicationCache() {
+namespace System.Data.Offline {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class ApplicationCache : EventTarget {
+		internal ApplicationCache() {
 		}
 
-		public void Add(string uri) {
+		public void Abort() {
 		}
 
-		public void AddEventListener(ApplicationCacheEvent eventName, ElementEventListener listener, bool useCapture) {
+		public const ushort CHECKING = 2;
+
+		public const ushort DOWNLOADING = 3;
+
+		public const ushort IDLE = 1;
+
+		public const ushort OBSOLETE = 5;
+
+		[IntrinsicProperty, ScriptName("oncached")]
+		public HtmlEventHandler OnCached {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public void RemoveEventListener(ApplicationCacheEvent eventName, ElementEventListener listener, bool useCapture) {
+		[IntrinsicProperty, ScriptName("onchecking")]
+		public HtmlEventHandler OnChecking {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		/// <summary>
-		/// Gets the current status of the application cache.
-		/// </summary>
+		[IntrinsicProperty, ScriptName("ondownloading")]
+		public HtmlEventHandler OnDownloading {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onerror")]
+		public HtmlEventHandler OnError {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onnoupdate")]
+		public HtmlEventHandler OnNoupdate {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onobsolete")]
+		public HtmlEventHandler OnObsolete {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onprogress")]
+		public HtmlEventHandler OnProgress {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onupdateready")]
+		public HtmlEventHandler OnUpdateready {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
 		[IntrinsicProperty]
 		public ApplicationCacheStatus Status {
-			get { return ApplicationCacheStatus.Uncached; }
+			get { return default(ApplicationCacheStatus); }
 		}
 
-		/// <summary>
-		/// Replaces the active cache with the latest version.
-		/// </summary>
 		public void SwapCache() {
 		}
 
-		/// <summary>
-		/// Manually triggers the update process.
-		/// </summary>
+		public const ushort UNCACHED = 0;
+
 		public void Update() {
 		}
+
+		public const ushort UPDATEREADY = 4;
 	}
 }

@@ -1,108 +1,128 @@
-// Navigator.cs
+﻿// Navigator.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
-using System.Html.Services;
+using System.Html.Geolocation;
+using System.Html.Mobile;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class Navigator {
-		private Navigator() {
-		}
-
-		/// <summary>
-		/// Returns the name of the browser.
-		/// </summary>
+	[IgnoreNamespace, Imported, ScriptName("navigator")]
+	public static partial class Navigator {
 		[IntrinsicProperty]
-		public string AppName {
-			get { return null; }
-		}
-
-		/// <summary>
-		/// Returns the version of the browser.
-		/// </summary>
-		[IntrinsicProperty]
-		public string AppVersion {
-			get { return null; }
-		}
-
-		/// <summary>
-		/// Retrieves the current language (applies to IE and Opera).
-		/// </summary>
-		[IntrinsicProperty]
-		public string BrowserLanguage {
+		public static string AppCodeName {
 			get { return null; }
 		}
 
 		[IntrinsicProperty]
-		public bool CookieEnabled {
+		public static string AppName {
+			get { return null; }
+		}
+
+		[IntrinsicProperty]
+		public static string AppVersion {
+			get { return null; }
+		}
+
+		[IntrinsicProperty]
+		public static BatteryManager Battery {
+			get { return default(BatteryManager); }
+		}
+
+		[IntrinsicProperty]
+		public static string BuildID {
+			get { return null; }
+		}
+
+		[IntrinsicProperty]
+		public static bool CookieEnabled {
 			get { return false; }
 		}
 
 		[IntrinsicProperty]
-		public GeolocationService Geolocation {
-			get { return null; }
-		}
-
-		/// <summary>
-		/// Returns a string representing the language of the browser (applies to Gecko, Opera, and WebKit).
-		/// </summary>
-		[IntrinsicProperty]
-		public string Language {
+		public static string DoNotTrack {
 			get { return null; }
 		}
 
 		[IntrinsicProperty]
-		public bool OnLine {
+		public static GeolocationService Geolocation {
+			get { return default(GeolocationService); }
+		}
+
+		public static bool JavaEnabled() {
+			return false;
+		}
+
+		[IntrinsicProperty]
+		public static string Language {
+			get { return null; }
+		}
+
+		[IntrinsicProperty]
+		public static MimeTypeArray MimeTypes {
+			get { return default(MimeTypeArray); }
+		}
+
+		[IntrinsicProperty]
+		public static bool OnLine {
 			get { return false; }
 		}
 
-		/// <summary>
-		/// Returns the name of the platform.
-		/// </summary>
 		[IntrinsicProperty]
-		public string Platform {
-			get { return null; }
-		}
-
-		/// <summary>
-		/// Returns a PluginArray object, listing the plugins installed in the application.
-		/// </summary>
-		[IntrinsicProperty]
-		public PluginArray Plugins {
+		public static string Oscpu {
 			get { return null; }
 		}
 
 		[IntrinsicProperty]
-		public bool Standalone {
-			get { return false; }
-		}
-
-		/// <summary>
-		/// Retrieves the default language used by the operating system (applies to IE).
-		/// </summary>
-		[IntrinsicProperty]
-		public string SystemLanguage {
+		public static string Platform {
 			get { return null; }
 		}
 
-		/// <summary>
-		/// Returns the complete User-Agent header.
-		/// </summary>
 		[IntrinsicProperty]
-		public string UserAgent {
+		public static PluginArray Plugins {
+			get { return default(PluginArray); }
+		}
+
+		[IntrinsicProperty]
+		public static string Product {
 			get { return null; }
 		}
 
-		/// <summary>
-		/// Retrieves the operating system's natural language setting (applies to IE and Opera).
-		/// </summary>
 		[IntrinsicProperty]
-		public string UserLanguage {
+		public static string ProductSub {
 			get { return null; }
+		}
+
+		public static void RegisterContentHandler(string mimeType, string url, string title) {
+		}
+
+		public static void RegisterProtocolHandler(string scheme, string url, string title) {
+		}
+
+		public static bool TaintEnabled() {
+			return false;
+		}
+
+		[IntrinsicProperty]
+		public static string UserAgent {
+			get { return null; }
+		}
+
+		[IntrinsicProperty]
+		public static string Vendor {
+			get { return null; }
+		}
+
+		[IntrinsicProperty]
+		public static string VendorSub {
+			get { return null; }
+		}
+
+		public static void Vibrate(uint duration) {
+		}
+
+		public static void Vibrate(uint[] pattern) {
 		}
 	}
 }

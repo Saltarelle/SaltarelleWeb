@@ -6,10 +6,9 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[Imported]
+	[IgnoreNamespace, Imported]
 	public sealed class ActiveXObject {
-		public ActiveXObject(string progID) {
+		public ActiveXObject(string progId) {
 		}
 	}
 }

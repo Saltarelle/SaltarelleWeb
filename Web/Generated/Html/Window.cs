@@ -1,88 +1,55 @@
-// Window.cs
+﻿// Window.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
-using System.Html.Data;
+using System.Data.IndexedDB;
+using System.Data.Offline;
+using System.Data.WebStorage;
+using System.Html.Editing;
+using System.Performance;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
+using System.Xml;
 
 namespace System.Html {
-	/// <summary>
-	/// The window object represents the current browser window, and is the top-level
-	/// scripting object.
-	/// </summary>
-	[IgnoreNamespace]
-	[Imported]
-	[ScriptName("window")]
-	public static class Window {
-		/// <summary>
-		/// Adds a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		public static void AddEventListener(string eventName, ElementEventListener listener) {
+	[IgnoreNamespace, Imported, ScriptName("window")]
+	public static partial class Window {
+		public static void AddEventListener(string type, IEventListener listener) {
 		}
 
-		/// <summary>
-		/// Adds a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-		public static void AddEventListener(string eventName, ElementEventListener listener, bool useCapture) {
+		public static void AddEventListener(string type, IEventListener listener, bool capture) {
 		}
 
-		/// <summary>
-		/// Displays a message box containing the specified message text.
-		/// </summary>
-		/// <param name="message">The text of the message.</param>
+		public static void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted) {
+		}
+
 		public static void Alert(string message) {
-		}
-
-		/// <summary>
-		/// Displays a message box containing the specified value converted
-		/// into a string.
-		/// </summary>
-		/// <param name="b">The boolean to display.</param>
-		public static void Alert(bool b) {
-		}
-
-		/// <summary>
-		/// Displays a message box containing the specified value converted
-		/// into a string.
-		/// </summary>
-		/// <param name="d">The date to display.</param>
-		public static void Alert(DateTime d) {
-		}
-
-		/// <summary>
-		/// Displays a message box containing the specified value converted
-		/// into a string.
-		/// </summary>
-		/// <param name="d">The number to display.</param>
-		public static void Alert(double d) {
 		}
 
 		[IntrinsicProperty]
 		public static ApplicationCache ApplicationCache {
-			get { return null; }
+			get { return default(ApplicationCache); }
 		}
 
-		public static void AttachEvent(string eventName, ElementEventHandler handler) {
+		public static string Atob(string stringToEncode) {
+			return null;
 		}
 
-		public static void ClearInterval(int intervalID) {
+		public static void Back() {
 		}
 
-		public static void ClearTimeout(int timeoutID) {
+		public static void Blur() {
 		}
 
-		/// <summary>
-		/// IE only.
-		/// </summary>
-		[IntrinsicProperty]
-		public static DataTransfer ClipboardData {
-			get { return null; }
+		public static string Btoa(string encodedString) {
+			return null;
+		}
+
+		public static void ClearInterval(int intervalId) {
+		}
+
+		public static void ClearTimeout(int timeoutId) {
 		}
 
 		public static void Close() {
@@ -93,22 +60,13 @@ namespace System.Html {
 			get { return false; }
 		}
 
-		/// <summary>
-		/// Prompts the user with a yes/no question.
-		/// </summary>
-		/// <param name="message">The text of the question.</param>
-		/// <returns>true if the user chooses yes; false otherwise.</returns>
 		public static bool Confirm(string message) {
 			return false;
 		}
 
 		[IntrinsicProperty]
-		public static string DefaultStatus {
-			get { return null; }
-			set { }
-		}
-
-		public static void DetachEvent(string eventName, ElementEventHandler handler) {
+		public static Crypto Crypto {
+			get { return default(Crypto); }
 		}
 
 		[IntrinsicProperty]
@@ -116,36 +74,86 @@ namespace System.Html {
 			get { return null; }
 		}
 
-		public static bool DispatchEvent(MutableEvent eventObject) {
+		public static bool DispatchEvent(Event @event) {
 			return false;
 		}
 
 		[IntrinsicProperty]
 		public static DocumentInstance Document {
+			get { return default(DocumentInstance); }
+		}
+
+		public static string Escape(string regular) {
+			return null;
+		}
+
+		public static bool Find(string aString) {
+			return false;
+		}
+
+		public static bool Find(string aString, bool aCaseSensitive) {
+			return false;
+		}
+
+		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards) {
+			return false;
+		}
+
+		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards, bool aWrapAround) {
+			return false;
+		}
+
+		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards, bool aWrapAround, bool aWholeWord) {
+			return false;
+		}
+
+		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards, bool aWrapAround, bool aWholeWord, bool aSearchInFrames) {
+			return false;
+		}
+
+		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards, bool aWrapAround, bool aWholeWord, bool aSearchInFrames, bool aShowDialog) {
+			return false;
+		}
+
+		public static void Focus() {
+		}
+
+		[IntrinsicProperty]
+		public static Element FrameElement {
+			get { return default(Element); }
+		}
+
+		[IntrinsicProperty]
+		public static Element[] Frames {
 			get { return null; }
 		}
 
-		/// <summary>
-		/// Provides information about the current event being handled.
-		/// </summary>
 		[IntrinsicProperty]
-		public static ElementEvent Event {
-			get { return null; }
+		public static bool FullScreen {
+			get { return false; }
+			set { }
 		}
 
-		[IntrinsicProperty]
-		public static IFrameElement FrameElement {
-			get { return null; }
+		public static Style GetComputedStyle(XmlElement element) {
+			return default(Style);
 		}
 
-		[IntrinsicProperty]
-		public static WindowInstance[] Frames {
-			get { return null; }
+		public static Style GetComputedStyle(XmlElement element, string pseudoElt) {
+			return default(Style);
+		}
+
+		public static Selection GetSelection() {
+			return default(Selection);
 		}
 
 		[IntrinsicProperty]
 		public static History History {
-			get { return null; }
+			get { return default(History); }
+		}
+
+		[IntrinsicProperty]
+		public static Factory IndexedDB {
+			get { return default(Factory); }
 		}
 
 		[IntrinsicProperty]
@@ -159,75 +167,492 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		[ScriptAlias("window")]
 		public static WindowInstance Instance {
-			get { return null; }
+			get { return default(WindowInstance); }
+		}
+
+		[IntrinsicProperty]
+		public static int Length {
+			get { return 0; }
 		}
 
 		[IntrinsicProperty]
 		public static Storage LocalStorage {
-			get { return null; }
+			get { return default(Storage); }
 		}
 
 		[IntrinsicProperty]
 		public static Location Location {
-			get { return null; }
-		}
-
-		public static void Navigate(string url) {
+			get { return default(Location); }
 		}
 
 		[IntrinsicProperty]
-		public static Navigator Navigator {
-			get { return null; }
+		public static BarProp Locationbar {
+			get { return default(BarProp); }
+		}
+
+		public static MediaQueryList MatchMedia(string mediaQueryString) {
+			return default(MediaQueryList);
 		}
 
 		[IntrinsicProperty]
-		public static ErrorHandler Onerror {
+		public static BarProp Menubar {
+			get { return default(BarProp); }
+		}
+
+		public static void MoveBy(int deltaX, int deltaY) {
+		}
+
+		public static void MoveTo(int x, int y) {
+		}
+
+		[IntrinsicProperty]
+		public static string Name {
 			get { return null; }
 			set { }
 		}
 
-		public static WindowInstance Open(string url) {
-			return null;
+		[IntrinsicProperty]
+		public static NavigatorInstance Navigator {
+			get { return default(NavigatorInstance); }
 		}
 
-		public static WindowInstance Open(string url, string targetName) {
-			return null;
+		[IntrinsicProperty, ScriptName("onabort")]
+		public static HtmlEventHandler OnAbort {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public static WindowInstance Open(string url, string targetName, string features) {
-			return null;
+		[IntrinsicProperty, ScriptName("onafterprint")]
+		public static HtmlEventHandler OnAfterprint {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public static WindowInstance Open(string url, string targetName, string features, bool replace) {
-			return null;
+		[IntrinsicProperty, ScriptName("onbeforeprint")]
+		public static HtmlEventHandler OnBeforeprint {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public static SqlDatabase OpenDatabase(string name, string version) {
-			return null;
+		[IntrinsicProperty, ScriptName("onbeforeunload")]
+		public static BeforeUnloadEventHandlerNonNull OnBeforeunload {
+			get { return default(BeforeUnloadEventHandlerNonNull); }
+			set { }
 		}
 
-		public static SqlDatabase OpenDatabase(string name, string version, string displayName) {
-			return null;
+		[IntrinsicProperty, ScriptName("onblur")]
+		public static HtmlEventHandler OnBlur {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public static SqlDatabase OpenDatabase(string name, string version, string displayName, int estimatedSize) {
-			return null;
+		[IntrinsicProperty, ScriptName("oncanplay")]
+		public static HtmlEventHandler OnCanplay {
+			get { return default(HtmlEventHandler); }
+			set { }
 		}
 
-		public static SqlDatabase OpenDatabase(string name, string version, string displayName, int estimatedSize, SqlDatabaseCallback creationCallback) {
-			return null;
+		[IntrinsicProperty, ScriptName("oncanplaythrough")]
+		public static HtmlEventHandler OnCanplaythrough {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onchange")]
+		public static HtmlEventHandler OnChange {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onclick")]
+		public static HtmlEventHandler OnClick {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("oncontextmenu")]
+		public static HtmlEventHandler OnContextmenu {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondblclick")]
+		public static HtmlEventHandler OnDblclick {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondevicelight")]
+		public static HtmlEventHandler OnDevicelight {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondevicemotion")]
+		public static HtmlEventHandler OnDevicemotion {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondeviceorientation")]
+		public static HtmlEventHandler OnDeviceorientation {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondeviceproximity")]
+		public static HtmlEventHandler OnDeviceproximity {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondrag")]
+		public static HtmlEventHandler OnDrag {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondragend")]
+		public static HtmlEventHandler OnDragend {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondragenter")]
+		public static HtmlEventHandler OnDragenter {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondragleave")]
+		public static HtmlEventHandler OnDragleave {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondragover")]
+		public static HtmlEventHandler OnDragover {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondragstart")]
+		public static HtmlEventHandler OnDragstart {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondrop")]
+		public static HtmlEventHandler OnDrop {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ondurationchange")]
+		public static HtmlEventHandler OnDurationchange {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onemptied")]
+		public static HtmlEventHandler OnEmptied {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onended")]
+		public static HtmlEventHandler OnEnded {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onerror")]
+		public static HtmlEventHandler OnError {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onfocus")]
+		public static HtmlEventHandler OnFocus {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onhashchange")]
+		public static HtmlEventHandler OnHashchange {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("oninput")]
+		public static HtmlEventHandler OnInput {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("oninvalid")]
+		public static HtmlEventHandler OnInvalid {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onkeydown")]
+		public static HtmlEventHandler OnKeydown {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onkeypress")]
+		public static HtmlEventHandler OnKeypress {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onkeyup")]
+		public static HtmlEventHandler OnKeyup {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onload")]
+		public static HtmlEventHandler OnLoad {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onloadeddata")]
+		public static HtmlEventHandler OnLoadeddata {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onloadedmetadata")]
+		public static HtmlEventHandler OnLoadedmetadata {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onloadstart")]
+		public static HtmlEventHandler OnLoadstart {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmessage")]
+		public static HtmlEventHandler OnMessage {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmousedown")]
+		public static HtmlEventHandler OnMousedown {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmousemove")]
+		public static HtmlEventHandler OnMousemove {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseout")]
+		public static HtmlEventHandler OnMouseout {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseover")]
+		public static HtmlEventHandler OnMouseover {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseup")]
+		public static HtmlEventHandler OnMouseup {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onoffline")]
+		public static HtmlEventHandler OnOffline {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ononline")]
+		public static HtmlEventHandler OnOnline {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onpagehide")]
+		public static HtmlEventHandler OnPagehide {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onpageshow")]
+		public static HtmlEventHandler OnPageshow {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onpause")]
+		public static HtmlEventHandler OnPause {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onplay")]
+		public static HtmlEventHandler OnPlay {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onplaying")]
+		public static HtmlEventHandler OnPlaying {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onpopstate")]
+		public static HtmlEventHandler OnPopstate {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onprogress")]
+		public static HtmlEventHandler OnProgress {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onratechange")]
+		public static HtmlEventHandler OnRatechange {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onreset")]
+		public static HtmlEventHandler OnReset {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onresize")]
+		public static HtmlEventHandler OnResize {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onscroll")]
+		public static HtmlEventHandler OnScroll {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onseeked")]
+		public static HtmlEventHandler OnSeeked {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onseeking")]
+		public static HtmlEventHandler OnSeeking {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onselect")]
+		public static HtmlEventHandler OnSelect {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onshow")]
+		public static HtmlEventHandler OnShow {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onstalled")]
+		public static HtmlEventHandler OnStalled {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onsubmit")]
+		public static HtmlEventHandler OnSubmit {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onsuspend")]
+		public static HtmlEventHandler OnSuspend {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("ontimeupdate")]
+		public static HtmlEventHandler OnTimeupdate {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onunload")]
+		public static HtmlEventHandler OnUnload {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onuserproximity")]
+		public static HtmlEventHandler OnUserproximity {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onwaiting")]
+		public static HtmlEventHandler OnWaiting {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		[IntrinsicProperty, ScriptName("onvolumechange")]
+		public static HtmlEventHandler OnVolumechange {
+			get { return default(HtmlEventHandler); }
+			set { }
+		}
+
+		public static WindowInstance Open(string strUrl) {
+			return default(WindowInstance);
+		}
+
+		public static WindowInstance Open(string strUrl, string strWindowName) {
+			return default(WindowInstance);
+		}
+
+		public static WindowInstance Open(string strUrl, string strWindowName, string strWindowFeatures) {
+			return default(WindowInstance);
+		}
+
+		public static WindowInstance OpenDialog(string url) {
+			return default(WindowInstance);
+		}
+
+		public static WindowInstance OpenDialog(string url, string name) {
+			return default(WindowInstance);
+		}
+
+		[ExpandParams]
+		public static WindowInstance OpenDialog(string url, string name, string features, params object[] args) {
+			return default(WindowInstance);
 		}
 
 		[IntrinsicProperty]
 		public static WindowInstance Opener {
-			get { return null; }
-		}
-
-		[IntrinsicProperty]
-		public static Orientation Orientation {
-			get { return Orientation.Portrait; }
+			get { return default(WindowInstance); }
 		}
 
 		[IntrinsicProperty]
@@ -252,113 +677,156 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static WindowInstance Parent {
-			get { return null; }
+			get { return default(WindowInstance); }
 		}
 
-		public static void PostMessage(string message, string targetOrigin) {
+		[IntrinsicProperty]
+		public static PerformanceDetails Performance {
+			get { return default(PerformanceDetails); }
+		}
+
+		[IntrinsicProperty]
+		public static BarProp Personalbar {
+			get { return default(BarProp); }
+		}
+
+		public static void PostMessage(object message) {
+		}
+
+		public static void PostMessage(object message, string targetOrigin) {
 		}
 
 		public static void Print() {
 		}
 
-		/// <summary>
-		/// Prompts the user to enter a value.
-		/// </summary>
-		/// <param name="message">The text of the prompt.</param>
-		/// <returns>The value entered by the user.</returns>
-		public static string Prompt(string message) {
+		public static string Prompt(string text) {
 			return null;
 		}
 
-		/// <summary>
-		/// Prompts the user to enter a value, along with providing a default
-		/// value.
-		/// </summary>
-		/// <param name="message">The text of the prompt.</param>
-		/// <param name="defaultValue">The default value for the prompt.</param>
-		/// <returns>The value entered by the user.</returns>
-		public static string Prompt(string message, string defaultValue) {
+		public static string Prompt(string text, string value) {
 			return null;
 		}
 
-		/// <summary>
-		/// Removes a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		public static void RemoveEventListener(string eventName, ElementEventListener listener) {
+		public static void RemoveEventListener(string type, IEventListener listener) {
 		}
 
-		/// <summary>
-		/// Removes a listener for the specified event.
-		/// </summary>
-		/// <param name="eventName">The name of the event such as 'load'.</param>
-		/// <param name="listener">The listener to be invoked in response to the event.</param>
-		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-		public static void RemoveEventListener(string eventName, ElementEventListener listener, bool useCapture) {
+		public static void RemoveEventListener(string type, IEventListener listener, bool capture) {
+		}
+
+		public static void ResizeBy(int xDelta, int yDelta) {
+		}
+
+		public static void ResizeTo(int iWidth, int iHeight) {
+		}
+
+		[IntrinsicProperty]
+		public static object ReturnValue {
+			get { return null; }
+			set { }
 		}
 
 		[IntrinsicProperty]
 		public static Screen Screen {
-			get { return null; }
+			get { return default(Screen); }
+		}
+
+		[IntrinsicProperty]
+		public static int ScreenX {
+			get { return 0; }
+		}
+
+		[IntrinsicProperty]
+		public static int ScreenY {
+			get { return 0; }
 		}
 
 		public static void Scroll(int x, int y) {
 		}
 
-		public static void ScrollBy(int x, int y) {
+		[IntrinsicProperty]
+		public static BarProp Scrollbars {
+			get { return default(BarProp); }
+		}
+
+		public static void ScrollBy(int xDelta, int yDelta) {
+		}
+
+		[IntrinsicProperty]
+		public static int ScrollMaxX {
+			get { return 0; }
+		}
+
+		[IntrinsicProperty]
+		public static int ScrollMaxY {
+			get { return 0; }
 		}
 
 		public static void ScrollTo(int x, int y) {
 		}
 
 		[IntrinsicProperty]
+		public static int ScrollX {
+			get { return 0; }
+		}
+
+		[IntrinsicProperty]
+		public static int ScrollY {
+			get { return 0; }
+		}
+
+		[IntrinsicProperty]
 		public static WindowInstance Self {
-			get { return null; }
+			get { return default(WindowInstance); }
 		}
 
 		[IntrinsicProperty]
 		public static Storage SessionStorage {
-			get { return null; }
+			get { return default(Storage); }
 		}
 
-		public static int SetInterval(string code, int milliseconds) {
+		public static int SetInterval(Function func) {
 			return 0;
 		}
 
-		public static int SetInterval(Action callback, int milliseconds) {
+		[ExpandParams]
+		public static int SetInterval(Function func, int delay, params object[] args) {
 			return 0;
 		}
 
-		public static int SetInterval(Delegate d, int milliseconds) {
+		public static int SetInterval(string code) {
 			return 0;
 		}
 
-		[InlineCode("window.location = {url}")]
-		public static void SetLocation(string url) {
-		}
-
-		public static int SetTimeout(string code, int milliseconds) {
+		public static int SetInterval(string code, int delay) {
 			return 0;
 		}
 
-		public static int SetTimeout(Action callback, int milliseconds) {
+		public static int SetTimeout(Function func) {
 			return 0;
 		}
 
-		public static int SetTimeout(Delegate d, int milliseconds) {
+		[ExpandParams]
+		public static int SetTimeout(Function func, int delay, params object[] args) {
 			return 0;
 		}
 
-		/// <summary>
-		/// Delegate that indicates the ability of the browser
-		/// to show a modal dialog.
-		/// </summary>
-		/// <remarks>
-		/// Not all browsers support this function, so code using
-		/// this needs to check for existence of the feature or the browser.
-		/// </remarks>
-		public static WindowInstance ShowModalDialog(string url, object dialogArguments, string features) {
+		public static int SetTimeout(string code) {
+			return 0;
+		}
+
+		public static int SetTimeout(string code, int delay) {
+			return 0;
+		}
+
+		public static object ShowModalDialog(string uri) {
+			return null;
+		}
+
+		public static object ShowModalDialog(string uri, object arguments) {
+			return null;
+		}
+
+		public static object ShowModalDialog(string uri, object arguments, string options) {
 			return null;
 		}
 
@@ -369,8 +837,25 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public static BarProp Statusbar {
+			get { return default(BarProp); }
+		}
+
+		public static void Stop() {
+		}
+
+		[IntrinsicProperty]
+		public static BarProp Toolbar {
+			get { return default(BarProp); }
+		}
+
+		[IntrinsicProperty]
 		public static WindowInstance Top {
-			get { return null; }
+			get { return default(WindowInstance); }
+		}
+
+		public static string Unescape(string escaped) {
+			return null;
 		}
 	}
 }

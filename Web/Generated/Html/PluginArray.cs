@@ -1,56 +1,49 @@
-// PluginArray.cs
+﻿// PluginArray.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class PluginArray {
-		private PluginArray() {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
+	public partial class PluginArray {
+		internal PluginArray() {
 		}
 
-		/// <summary>
-		/// Returns the Plugin at the specified index into the array.
-		/// </summary>
-		[IntrinsicProperty]
-		public Plugin this[int index] {
-			get { return null; }
-		}
-
-		/// <summary>
-		/// Returns the Plugin with the specified name.
-		/// </summary>
-		/// <param name="name"></param>
-		/// <returns></returns>
-		[IntrinsicProperty]
+		[IndexerName("__Item"), IntrinsicProperty]
 		public Plugin this[string name] {
-			get { return null; }
+			get { return default(Plugin); }
 		}
 
-		/// <summary>
-		/// Returns the Plugin at the specified index into the array.
-		/// </summary>
-		[ScriptName("item")]
-		public Plugin ItemAt(int index) {
-			return null;
+		[IndexerName("__Item"), IntrinsicProperty]
+		public Plugin this[uint index] {
+			get { return default(Plugin); }
 		}
 
-		/// <summary>
-		/// The number of plugins in the array.
-		/// </summary>
+		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
+		public IEnumerator<Plugin> GetEnumerator() {
+			return default(IEnumerator<Plugin>);
+		}
+
+		public Plugin Item(uint index) {
+			return default(Plugin);
+		}
+
 		[IntrinsicProperty]
-		public long Length {
+		public uint Length {
 			get { return 0; }
 		}
 
-		/// <summary>
-		/// Returns the Plugin with the specified name.
-		/// </summary>
 		public Plugin NamedItem(string name) {
-			return null;
+			return default(Plugin);
+		}
+
+		public void Refresh() {
+		}
+
+		public void Refresh(bool reloadDocuments) {
 		}
 	}
 }

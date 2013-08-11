@@ -1,26 +1,34 @@
-// XmlNodeList.cs
+﻿// XmlNodeList.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
 // 
 
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace System.Xml {
-	[IgnoreNamespace]
-	[Imported]
-	public sealed class XmlNodeList {
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("NodeList")]
+	public partial class XmlNodeList {
 		internal XmlNodeList() {
 		}
 
-		[IntrinsicProperty]
-		[ScriptName("length")]
-		public int Count {
-			get { return 0; }
+		[IndexerName("__Item"), IntrinsicProperty]
+		public XmlNode this[uint index] {
+			get { return default(XmlNode); }
+		}
+
+		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
+		public IEnumerator<XmlNode> GetEnumerator() {
+			return default(IEnumerator<XmlNode>);
+		}
+
+		public XmlNode Item(uint index) {
+			return default(XmlNode);
 		}
 
 		[IntrinsicProperty]
-		public XmlNode this[int index] {
-			get { return null; }
+		public uint Length {
+			get { return 0; }
 		}
 	}
 }
