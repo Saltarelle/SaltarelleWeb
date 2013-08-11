@@ -114,6 +114,7 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozFontLanguageOverride;
   [Throws, TreatNullAs=EmptyString] attribute DOMString fontSize;
   [Throws, TreatNullAs=EmptyString] attribute DOMString fontSizeAdjust;
+  [Throws, TreatNullAs=EmptyString, Pref="layout.css.osx-font-smoothing.enabled"] attribute DOMString MozOSXFontSmoothing;
   [Throws, TreatNullAs=EmptyString] attribute DOMString fontStretch;
   [Throws, TreatNullAs=EmptyString] attribute DOMString fontStyle;
   [Throws, TreatNullAs=EmptyString, Pref="layout.css.font-features.enabled"] attribute DOMString fontSynthesis;
@@ -149,6 +150,7 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString maxWidth;
   [Throws, TreatNullAs=EmptyString] attribute DOMString minHeight;
   [Throws, TreatNullAs=EmptyString] attribute DOMString minWidth;
+  [Throws, TreatNullAs=EmptyString, Pref="layout.css.mix-blend-mode.enabled"] attribute DOMString mixBlendMode;
   [Throws, TreatNullAs=EmptyString] attribute DOMString opacity;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozOrient;
   [Throws, TreatNullAs=EmptyString] attribute DOMString orphans;
@@ -183,7 +185,6 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString textAlign;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextAlignLast;
   [Throws, TreatNullAs=EmptyString] attribute DOMString textDecoration;
-  [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextBlink;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextDecorationColor;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextDecorationLine;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextDecorationStyle;

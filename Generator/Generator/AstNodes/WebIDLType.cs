@@ -4,6 +4,8 @@ using Generator.ExtensionMethods;
 
 namespace Generator.AstNodes {
 	public class WebIDLType {
+		private WebIDLType() {}
+
 		public class BuiltinData {
 			public BuiltinType BuiltinType { get; private set; }
 

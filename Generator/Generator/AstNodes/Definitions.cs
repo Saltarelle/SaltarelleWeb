@@ -7,6 +7,8 @@ using Generator.ExtensionMethods;
 
 namespace Generator.AstNodes {
 	public class Definitions {
+		private Definitions() {}
+
 		public IReadOnlyList<Definition> Items { get; private set; }
 
 		public Definitions(IEnumerable<Definition> items) {

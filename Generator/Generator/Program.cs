@@ -8,16 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Antlr.Runtime;
 using Generator.AstNodes;
+using Generator.Meta;
 using Mono.Options;
 
 namespace Generator {
-	class Program {
+	static class Program {
 		public class Arguments {
 			public string OutputDirectory { get; set; }
 			public List<string> Sources { get; private set; }
+			public List<string> RootNamespaces { get; private set; }
+			public string Metadata { get; set; }
 
 			public Arguments() {
 				Sources = new List<string>();
+				RootNamespaces = new List<string>();
 			}
 		}
 
@@ -74,10 +78,13 @@ namespace Generator {
 				}
 
 				bool showHelp = actualArgs.Count == 0;
+				var metadataFiles = new List<string>();
 				var parsedArgs = new Arguments();
 				var opts = new OptionSet {
 					{ "?|help", v => showHelp = true },
 					{ "o|out=", v => parsedArgs.OutputDirectory = v },
+					{ "r|root=", v => parsedArgs.RootNamespaces.Add(v) },
+					{ "m|meta=", v => metadataFiles.Add(v) },
 				};
 
 				var sources = opts.Parse(actualArgs);
@@ -87,9 +94,11 @@ namespace Generator {
 					Console.WriteLine("Usage: " + Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly().Location) + " options source-files");
 					Console.WriteLine();
 					Console.WriteLine("Options:" );
-					Console.WriteLine("    --help, -?   Show this message." );
-					Console.WriteLine("    --out, -o    Specifies the output directory (mandatory)." );
-					Console.WriteLine("    @file        Treat the file as if its entire content were passed on the command line." );
+					Console.WriteLine("    --help, -?  Show this message." );
+					Console.WriteLine("    --meta, -m  Use the specified metadata file (mandatory, can be more than one).");
+					Console.WriteLine("    --out, -o   Specifies the output directory (mandatory).");
+					Console.WriteLine("    --root, -r  Adds a root namespace (a namespace that doesn't create a subdirectory).");
+					Console.WriteLine("    @file       Treat the file as if its entire content were passed on the command line.");
 				}
 				else {
 					if (string.IsNullOrEmpty(parsedArgs.OutputDirectory)) {
@@ -104,6 +113,21 @@ namespace Generator {
 						throw new OptionException("Error creating output directory + " + parsedArgs.OutputDirectory + ": " + ex.Message, "out");
 					}
 	
+					if (metadataFiles.Count == 0) {
+						throw new OptionException("The metadata file (-m) must be specified (use the option -? for help).", "out");
+					}
+
+					var sb = new StringBuilder();
+					foreach (var f in metadataFiles) {
+						try {
+							sb.AppendLine(File.ReadAllText(f));
+						}
+						catch (IOException ex) {
+							throw new OptionException("Error reading file  + " + parsedArgs.OutputDirectory + ": " + ex.Message, "out");
+						}
+						parsedArgs.Metadata = sb.ToString();
+					}
+
 					foreach (var src in sources) {
 						string filename = src;
 						try {
@@ -128,10 +152,10 @@ namespace Generator {
 			return 0;
 		}
 
-		private static bool Process(Arguments args) {
+		private static Tuple<IReadOnlyList<Definitions>, IReadOnlyList<string>> Parse(IReadOnlyList<string> files) {
 			var errors = new ConcurrentStack<string>();
-			var allParts = new Definitions[args.Sources.Count];
-			Parallel.ForEach(args.Sources, (file, _, i) => {
+			var allParts = new Definitions[files.Count];
+			Parallel.ForEach(files, (file, _, i) => {
 				try {
 					allParts[i] = WebIDLParser.Parse(new StreamReader(file, Encoding.UTF8));
 				}
@@ -142,17 +166,56 @@ namespace Generator {
 					errors.Push(file + "(" + ex.Line + ":" + ex.CharPositionInLine + "): " + ex.GetType().Name + ": " + ex.Message);
 				}
 			});
+			return Tuple.Create<IReadOnlyList<Definitions>, IReadOnlyList<string>>(allParts, errors.ToList());
+		}
 
-			if (errors.Count > 0) {
-				foreach (var e in errors)
+		private static bool Process(Arguments args) {
+			var parseResult = Parse(args.Sources);
+
+			if (parseResult.Item2.Count > 0) {
+				foreach (var e in parseResult.Item2)
 					Console.Error.WriteLine(e);
 				return false;
 			}
 
-			var resolvedDefinitionsAndErrors = WebIDLResolver.Resolve(allParts);
+			var metadata = MetadataParser.Parse(args.Metadata);
+			if (metadata.Item2.Count > 0) {
+				foreach (var e in metadata.Item2)
+					Console.Error.WriteLine(e);
+				return false;
+			}
 
+			var resolvedDefinitionsAndErrors = WebIDLResolver.Resolve(parseResult.Item1);
 			if (resolvedDefinitionsAndErrors.Item2.Count > 0) {
 				foreach (var e in resolvedDefinitionsAndErrors.Item2)
+					Console.Error.WriteLine(e);
+				return false;
+			}
+
+			var model = Converter.BuildCSharpModel(resolvedDefinitionsAndErrors.Item1, metadata.Item1);
+			if (model.Item2.Count > 0) {
+				foreach (var e in model.Item2)
+					Console.Error.WriteLine(e);
+				return false;
+			}
+
+			var generated = model.Item1.Select(t => Tuple.Create(t.Namespace, t.Name, CSharp.CodeFormatter.Format(t))).ToList();
+
+			var errors = new ConcurrentStack<string>();
+			Parallel.ForEach(generated, c => {
+				var rootLength = args.RootNamespaces.DefaultIfEmpty("").Max(r => c.Item1 == r ? c.Item1.Length : (c.Item1.StartsWith(r + ".") ? r.Length + 1 : 0));
+				string filepath = Path.Combine(args.OutputDirectory, c.Item1.Substring(rootLength).Replace('.', Path.DirectorySeparatorChar), c.Item2 + ".cs");
+
+				try {
+					Directory.CreateDirectory(Path.GetDirectoryName(filepath));
+					File.WriteAllText(filepath, c.Item3, Encoding.UTF8);
+				}
+				catch (IOException ex) {
+					errors.Push("Error writing file " + filepath + ": " + ex.Message);
+				}
+			});
+			if (errors.Count > 0) {
+				foreach (var e in model.Item2)
 					Console.Error.WriteLine(e);
 				return false;
 			}

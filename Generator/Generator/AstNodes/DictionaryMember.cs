@@ -7,6 +7,8 @@ using Generator.ExtensionMethods;
 
 namespace Generator.AstNodes {
 	public class DictionaryMember {
+		private DictionaryMember() {}
+
 		public WebIDLType Type { get; private set; }
 		public string Name { get; private set; }
 		public Value Default { get; private set; }

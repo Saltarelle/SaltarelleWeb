@@ -6,10 +6,12 @@ namespace Generator.AstNodes {
 		None         =  0,
 		Stringifier  =  1,
 		Static       =  2,
-		Getter       =  4,
-		Setter       =  8,
-		Creator      = 16,
-		Deleter      = 32,
-		LegacyCaller = 64,
+		LegacyCaller =  4,
+		Getter       =  8,
+		Setter       = 16,
+		Creator      = 32,
+		Deleter      = 64,
+
+		Accessor = Getter | Setter | Creator | Deleter,
 	}
 }

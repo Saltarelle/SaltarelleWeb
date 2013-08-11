@@ -7,7 +7,7 @@ properties {
 	$configuration = "Debug"
 	$releaseTagPattern = "release-(.*)"
 	$autoVersion = $true
-	$webIDLSymbols = "MOZ_AUDIO_CHANNEL_MANAGER,MOZ_WEBGL,RELEASE_BUILD,MOZ_WEBRTC,MOZ_WEBSPEECH,MOZ_GAMEPAD,MOZ_B2G_RIL,MOZ_B2G_BT,MOZ_MEDIA_NAVIGATOR,MOZ_TIME_MANAGER"
+	$webIDLSymbols = "MOZ_AUDIO_CHANNEL_MANAGER,MOZ_WEBGL,RELEASE_BUILD,MOZ_WEBRTC,MOZ_WEBSPEECH,MOZ_GAMEPAD,MOZ_MEDIA_NAVIGATOR,MOZ_TIME_MANAGER,MOZ_DISABLE_CRYPTOLEGACY"
 }
 
 Function Get-DotNetVersion($RawVersion) {
@@ -261,25 +261,13 @@ Task Download-WebIDL {
 			Write-Error "Don't know how to generate the file $_"
 		}
 	}
-	
-	Write-Host "Generating _builtin.webidl"
-@"
-interface Float32Array;
-interface Uint8Array;
-interface ArrayBuffer;
-interface ArrayBufferView;
-interface DOMTimeStamp;
-interface ByteString;
-interface Uint8ClampedArray;
-interface Int32Array;
-"@ | Out-File -FilePath "$webidlDir\_builtin.webidl" -Encoding UTF8
 }
 
 Task Generate-Source {
 	$webidlDir = "$baseDir\webidl"
 	$symbols = $webIDLSymbols -split ","
 	$sources = Get-Sources "$webidlDir\WebIDL.mk" $symbols
-	$sourceList = @("_builtin.webidl") + $sources["webidl_files"] + $sources["generated_webidl_files"] + $sources["preprocessed_webidl_files"]
+	$sourceList = @("$buildtoolsDir\custom.webidl") + $sources["webidl_files"] + $sources["generated_webidl_files"] + $sources["preprocessed_webidl_files"]
 
 	try {
 		$oldLocation = pwd
@@ -288,7 +276,7 @@ Task Generate-Source {
 		rmdir -Force -Recurse -ErrorAction SilentlyContinue "$baseDir\Web\Generated" | Out-Null
 		try {
 			"$($sourceList -join ' ')" | Out-File "$webidlDir\sources.in"
-			Exec { & "$baseDir\Generator\Generator\bin\Generator.exe" -o "$baseDir\Web\Generated" "@sources.in" }
+			Exec { & "$baseDir\Generator\Generator\bin\Generator.exe" -o "$baseDir\Web\Generated" -r System -m "$buildtoolsDir\types.meta" "@sources.in" }
 		}
 		finally {
 			del "$webidlDir\sources.in" -ErrorAction Ignore

@@ -1,24 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Generator.AstNodes {
 	public class Value {
-		public class SpecialData {
-			public SpecialValue Value { get; private set; }
-
-			public SpecialData(SpecialValue value) {
-				Value = value;
-			}
-		}
+		private Value() {}
 
 		private int? _intValue;
 		private double? _floatValue;
 		private string _stringValue;
-		private SpecialData _special;
+		private SpecialValue? _special;
 
 		public static Value Integer(int value) {
 			return new Value { _intValue = value };
@@ -33,34 +22,34 @@ namespace Generator.AstNodes {
 		}
 
 		public static Value True() {
-			return new Value { _special = new SpecialData(SpecialValue.True) };
+			return new Value { _special = SpecialValue.True };
 		}
 
 		public static Value False() {
-			return new Value { _special = new SpecialData(SpecialValue.False) };
+			return new Value { _special = SpecialValue.False };
 		}
 
 		public static Value Null() {
-			return new Value { _special = new SpecialData(SpecialValue.Null) };
+			return new Value { _special = SpecialValue.Null };
 		}
 
 		public static Value PositiveInfinity() {
-			return new Value { _special = new SpecialData(SpecialValue.PositiveInfinity) };
+			return new Value { _special = SpecialValue.PositiveInfinity };
 		}
 
 		public static Value NegativeInfinity() {
-			return new Value { _special = new SpecialData(SpecialValue.NegativeInfinity) };
+			return new Value { _special = SpecialValue.NegativeInfinity };
 		}
 
 		public static Value NaN() {
-			return new Value { _special = new SpecialData(SpecialValue.NaN) };
+			return new Value { _special = SpecialValue.NaN };
 		}
 
 		public static Value Special(SpecialValue value) {
-			return new Value { _special = new SpecialData(value) };
+			return new Value { _special = value };
 		}
 
-		public void Decompose(Action<int> integer, Action<double> @float, Action<string> @string, Action<SpecialData> special) {
+		public void Decompose(Action<int> integer, Action<double> @float, Action<string> @string, Action<SpecialValue> special) {
 			if (_intValue != null) {
 				if (integer != null) integer(_intValue.Value);
 			}
@@ -71,14 +60,14 @@ namespace Generator.AstNodes {
 				if (@string != null) @string(_stringValue);
 			}
 			else if (_special != null) {
-				if (special != null) special(_special);
+				if (special != null) special(_special.Value);
 			}
 			else {
 				throw new InvalidOperationException("Invalid state");
 			}
 		}
 
-		public T DecomposeWithResult<T>(Func<int, T> integer, Func<double, T> @float, Func<string, T> @string, Func<SpecialData, T> special) {
+		public T DecomposeWithResult<T>(Func<int, T> integer, Func<double, T> @float, Func<string, T> @string, Func<SpecialValue, T> special) {
 			if (_intValue != null) {
 				if (integer != null)
 					return integer(_intValue.Value);
@@ -99,7 +88,7 @@ namespace Generator.AstNodes {
 			}
 			else if (_special != null) {
 				if (special != null)
-					return special(_special);
+					return special(_special.Value);
 				else
 					throw new InvalidOperationException("Case 'Special' not handled");
 			}

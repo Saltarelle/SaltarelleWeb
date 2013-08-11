@@ -50,7 +50,7 @@ namespace Generator {
 			_sb.AppendLine("{");
 			foreach (var m in members) {
 				_sb.Append("\t");
-				Visit(m);
+				Visit(m, signatureOnly: false);
 				_sb.AppendLine();
 			}
 			_sb.Append("}");
@@ -99,41 +99,41 @@ namespace Generator {
 			);
 		}
 
-		private void Visit(InterfaceMember member) {
+		private void Visit(InterfaceMember member, bool signatureOnly) {
 			member.Decompose(
 				@const => {
-					Visit(@const.ExtendedAttributes, ExtendedAttributeMode.Member);
+					if (!signatureOnly)
+						Visit(@const.ExtendedAttributes, ExtendedAttributeMode.Member);
 					_sb.Append("const ");
 					Visit(@const.Type);
-					_sb.Append(" " + @const.Name + " = ");
+					if (!signatureOnly)
+						_sb.Append(" " + @const.Name + " = ");
 					Visit(@const.Value);
 				},
-				namedOperation => {
-					Visit(namedOperation.ExtendedAttributes, ExtendedAttributeMode.Member);
-					Visit(namedOperation.Qualifiers);
-					Visit(namedOperation.ReturnType);
-					_sb.Append(" " + namedOperation.Name);
-					Visit(namedOperation.Arguments);
-				},
-				unnamedOperation => {
-					Visit(unnamedOperation.ExtendedAttributes, ExtendedAttributeMode.Member);
-					Visit(unnamedOperation.Qualifiers);
-					Visit(unnamedOperation.ReturnType);
-					Visit(unnamedOperation.Arguments);
+				operation => {
+					if (!signatureOnly)
+						Visit(operation.ExtendedAttributes, ExtendedAttributeMode.Member);
+					Visit(operation.Qualifiers);
+					Visit(operation.ReturnType);
+					_sb.Append(" " + (operation.Name ?? ""));
+					Visit(operation.Arguments);
 				},
 				attribute => {
-					Visit(attribute.ExtendedAttributes, ExtendedAttributeMode.Member);
+					if (!signatureOnly)
+						Visit(attribute.ExtendedAttributes, ExtendedAttributeMode.Member);
 					Visit(attribute.Qualifiers);
 					_sb.Append("attribute ");
 					Visit(attribute.Type);
 					_sb.Append(" " + attribute.Name);
 				},
 				jsonifier => {
-					Visit(jsonifier.ExtendedAttributes, ExtendedAttributeMode.Member);
+					if (!signatureOnly)
+						Visit(jsonifier.ExtendedAttributes, ExtendedAttributeMode.Member);
 					_sb.Append("jsonifier");
 				}
 			);
-			_sb.AppendLine(";");
+			if (!signatureOnly)
+				_sb.AppendLine(";");
 		}
 
 		private void Visit(DictionaryMember member) {
@@ -257,14 +257,14 @@ namespace Generator {
 					_sb.Append("\"" + @string + "\"");
 				},
 				special => {
-					switch (special.Value) {
+					switch (special) {
 						case SpecialValue.True:             _sb.Append("true");      break;
 						case SpecialValue.False:            _sb.Append("false");     break;
 						case SpecialValue.Null:             _sb.Append("null");      break;
 						case SpecialValue.PositiveInfinity: _sb.Append("Infinity");  break;
 						case SpecialValue.NegativeInfinity: _sb.Append("-Infinity"); break;
 						case SpecialValue.NaN:              _sb.Append("NaN");       break;
-						default: throw new ArgumentException("Invalid special value " + special.Value);
+						default: throw new ArgumentException("Invalid special value " + special);
 					}
 				}
 			);
@@ -286,7 +286,8 @@ namespace Generator {
 				_sb.Append("stringifier ");
 			if ((qualifiers & OperationQualifiers.Static) != 0)
 				_sb.Append("static ");
-
+			if ((qualifiers & OperationQualifiers.LegacyCaller) != 0)
+				_sb.Append("legacycaller ");
 			if ((qualifiers & OperationQualifiers.Getter) != 0)
 				_sb.Append("getter ");
 			if ((qualifiers & OperationQualifiers.Setter) != 0)
@@ -295,8 +296,6 @@ namespace Generator {
 				_sb.Append("creator ");
 			if ((qualifiers & OperationQualifiers.Deleter) != 0)
 				_sb.Append("deleter ");
-			if ((qualifiers & OperationQualifiers.LegacyCaller) != 0)
-				_sb.Append("legacycaller ");
 		}
 
 		private void Visit(Definition def) {
@@ -400,7 +399,13 @@ namespace Generator {
 
 		public static string Format(InterfaceMember member) {
 			var f = new WebIDLFormatter(); 
-			f.Visit(member);
+			f.Visit(member, signatureOnly: false);
+			return f._sb.ToString();
+		}
+
+		public static string FormatSignature(InterfaceMember member) {
+			var f = new WebIDLFormatter(); 
+			f.Visit(member, signatureOnly: true);
 			return f._sb.ToString();
 		}
 

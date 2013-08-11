@@ -188,7 +188,10 @@ namespace Generator {
 
 						if (error == null) {
 							if (_entities.TryGetValue(implements.ImplementedType, out d)) {
-								if (!(d is InterfaceData))
+								var id = d as InterfaceData;
+								if (id != null)
+									id.IsUsed = true;
+								else
 									error = "The interface `" + implements.ImplementingType + "' cannot implement `" + implements.ImplementedType + "' because the type `" + implements.ImplementedType + "' is a " + d.DefinitionType + ", not an interface";
 							}
 							else
@@ -219,21 +222,22 @@ namespace Generator {
 			}
 		}
 
-		private bool CheckInheritance(DataBase inheritor, string baseName) {
+		private TDefinition CheckInheritance<TDefinition>(TDefinition inheritor, string baseName) where TDefinition : DataBase {
 			if (baseName != null) {
 				DataBase d;
 				if (_entities.TryGetValue(baseName, out d)) {
-					if (d.GetType() != inheritor.GetType()) {
+					if (!(d is TDefinition)) {
 						_errors.Add("The " + inheritor.DefinitionType + " `" + inheritor.Name + "' cannot inherit from the " + d.DefinitionType + " `" + d.Name + "'");
-						return false;
+						return null;
 					}
+					return (TDefinition)d;
 				}
 				else {
 					_errors.Add("The base type `" + baseName + "' for the " + inheritor.DefinitionType + " `" + inheritor.Name + "' does not exist");
-					return false;
+					return null;
 				}
 			}
-			return true;
+			return null;
 		}
 
 		private void BuildResolvedModel() {
@@ -242,7 +246,10 @@ namespace Generator {
 				if (@interface != null) {
 					if (@interface.DefinitionState == InterfaceData.DefinitionStateEnum.OnlyPartials)
 						_errors.Add("There was no non-partial definition of the interface `" + e.Name + "'");
-					if (!CheckInheritance(@interface, @interface.Base))
+					var b = CheckInheritance(@interface, @interface.Base);
+					if (b != null)
+						b.IsUsed = true;
+					else
 						@interface.Base = null;
 					if (@interface.DefinitionState != InterfaceData.DefinitionStateEnum.DeclaredOnly)
 						_resolved[e.Name] = ResolvedDefinition.Interface(e.Name, @interface.Base, @interface.Implements, @interface.Members.Select(Resolve), @interface.ExtendedAttributes.Select(Resolve));
@@ -251,13 +258,13 @@ namespace Generator {
 				if (dictionary != null) {
 					if (!dictionary.FoundDefinition)
 						_errors.Add("There was no non-partial definition of the dictionary `" + e.Name + "'");
-					if (!CheckInheritance(dictionary, dictionary.Base))
+					if (CheckInheritance(dictionary, dictionary.Base) == null)
 						dictionary.Base = null;
 					_resolved[e.Name] = ResolvedDefinition.Dictionary(e.Name, dictionary.Base, dictionary.Members.Select(Resolve), dictionary.ExtendedAttributes.Select(Resolve));
 				}
 				var cinterface = e as CallbackInterfaceData;
 				if (cinterface != null) {
-					if (!CheckInheritance(cinterface, cinterface.Base))
+					if (CheckInheritance(cinterface, cinterface.Base) == null)
 						cinterface.Base = null;
 					_resolved[e.Name] = ResolvedDefinition.CallbackInterface(e.Name, cinterface.Base, cinterface.Members.Select(Resolve), cinterface.ExtendedAttributes.Select(Resolve));
 				}
@@ -268,7 +275,7 @@ namespace Generator {
 				}
 				var ex = e as ExceptionData;
 				if (ex != null) {
-					if (!CheckInheritance(ex, ex.Base))
+					if (CheckInheritance(ex, ex.Base) == null)
 						ex.Base = null;
 					_resolved[e.Name] = ResolvedDefinition.Exception(e.Name, ex.Base, ex.Members.Select(Resolve), ex.ExtendedAttributes.Select(Resolve));
 				}
@@ -293,8 +300,7 @@ namespace Generator {
 		private InterfaceMember Resolve(InterfaceMember member) {
 			return member.DecomposeWithResult(
 				@const           => { var t = Resolve(@const.Type, @const.ExtendedAttributes); return InterfaceMember.Const(@const.Name, t.Item1, @const.Value, t.Item2.Select(Resolve)); },
-				namedOperation   => { var t = Resolve(namedOperation.ReturnType, namedOperation.ExtendedAttributes); return InterfaceMember.NamedOperation(namedOperation.Name, t.Item1, namedOperation.Arguments.Select(Resolve), namedOperation.Qualifiers, t.Item2.Select(Resolve)); },
-				unnamedOperation => { var t = Resolve(unnamedOperation.ReturnType, unnamedOperation.ExtendedAttributes); return InterfaceMember.UnnamedOperation(t.Item1, unnamedOperation.Arguments.Select(Resolve), unnamedOperation.Qualifiers, t.Item2.Select(Resolve)); },
+				operation        => { var t = Resolve(operation.ReturnType, operation.ExtendedAttributes); return InterfaceMember.Operation(operation.Name, t.Item1, operation.Arguments.Select(Resolve), operation.Qualifiers, t.Item2.Select(Resolve)); },
 				attribute        => { var t = Resolve(attribute.Type, attribute.ExtendedAttributes); return InterfaceMember.Attribute(attribute.Name, t.Item1, attribute.Qualifiers, t.Item2.Select(Resolve)); },
 				jsonifier        => InterfaceMember.Jsonifier(jsonifier.ExtendedAttributes.Select(Resolve))
 			);
@@ -330,23 +336,26 @@ namespace Generator {
 			);
 		}
 
-		private IEnumerable<WebIDLType> FlattenUnionMembers(IEnumerable<WebIDLType> unionMembers) {
+		private Tuple<List<WebIDLType>, bool> FlattenAndResolveUnionMembers(IEnumerable<WebIDLType> unionMembers) {
 			var result = new List<WebIDLType>();
+			bool hasNullable = false;
 			foreach (var t in unionMembers) {
-				var underlying = t.DecomposeWithResult(
-					builtin       => t,
-					@void         => t,
-					union         => t,
-					typeReference => t,
-					array         => t,
-					sequence      => t,
-					nullable      => nullable.UnderlyingType
+				var underlying = this.Resolve(t, null).Item1;
+
+				underlying = underlying.DecomposeWithResult(
+					builtin       => underlying,
+					@void         => underlying,
+					union         => underlying,
+					typeReference => underlying,
+					array         => underlying,
+					sequence      => underlying,
+					nullable      => { hasNullable = true; return nullable.UnderlyingType; }
 				);
 
 				underlying.Decompose(
 					builtin       => result.Add(underlying),
 					@void         => result.Add(underlying),
-					union         => result.AddRange(FlattenUnionMembers(union.Members)),
+					union         => { var nested = FlattenAndResolveUnionMembers(union.Members); hasNullable |= nested.Item2; result.AddRange(nested.Item1); },
 					typeReference => result.Add(underlying),
 					array         => result.Add(underlying),
 					sequence      => result.Add(underlying),
@@ -354,14 +363,20 @@ namespace Generator {
 				);
 			}
 
-			return result;
+			return Tuple.Create(result, hasNullable);
 		}
 
 		private Tuple<WebIDLType, IReadOnlyList<ExtendedAttribute>> Resolve(WebIDLType type, IEnumerable<ExtendedAttribute> extendedAttributes) {
 			return type.DecomposeWithResult(
 				builtin       => Tuple.Create(WebIDLType.Builtin(builtin.BuiltinType), extendedAttributes.AsReadOnlySafe()),
 				@void         => Tuple.Create(WebIDLType.Void(), extendedAttributes.AsReadOnlySafe()),
-				@union        => Tuple.Create(WebIDLType.Union(FlattenUnionMembers(@union.Members).Select(m => Resolve(m, new ExtendedAttribute[0]).Item1)), extendedAttributes.AsReadOnlySafe()),
+				@union        => {
+				                     var flat = FlattenAndResolveUnionMembers(@union.Members);
+				                     var t = WebIDLType.Union(flat.Item1);
+				                     if (flat.Item2)
+				                         t = WebIDLType.Nullable(t);
+				                     return Tuple.Create(t, extendedAttributes.AsReadOnlySafe());
+				                 },
 				typeReference => {
 				                     DataBase d;
 				                     if (!_entities.TryGetValue(typeReference.Target, out d)) {

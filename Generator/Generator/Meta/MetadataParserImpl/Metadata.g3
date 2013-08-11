@@ -1,0 +1,238 @@
+﻿grammar Metadata;
+
+options
+{
+	language = CSharp3;
+}
+
+@lexer::namespace { Generator.Meta.MetadataParserImpl }
+
+@lexer::header { #pragma warning disable 3021 }
+
+@parser::namespace { Generator.Meta.MetadataParserImpl }
+
+@parser::header {
+#pragma warning disable 3021
+using System;
+using System.Text.RegularExpressions;
+using Generator.ExtensionMethods;
+using Generator.CSharp;
+}
+
+@lexer::members {
+	private List<string> _errors = new List<string>();
+	private bool atStartOfLine = true;
+
+	public override void ReportError(RecognitionException ex) {
+		_errors.Add("Metadata (" + ex.Line + ", " + ex.CharPositionInLine + "): " + ex.Message);
+	}
+
+	public override IToken NextToken() {
+		var result = base.NextToken();
+		atStartOfLine = result.Type == NL;
+		return result;
+	}
+
+	public List<string> Errors { get { return _errors; } }
+}
+
+@parser::members {
+	private List<string> _errors = new List<string>();
+	private IList<string> _csharpTypeKeywords = new[] { "byte", "sbyte", "int", "uint", "short", "ushort", "long", "ulong", "float", "double", "char", "bool", "object", "string", "decimal" };
+	public override void ReportError(RecognitionException ex) {
+		_errors.Add("Metadata (" + ex.Line + ", " + ex.CharPositionInLine + "): " + ex.Message);
+	}
+	public List<string> Errors { get { return _errors; } }
+
+	private Tuple<string, string> Split(string name) {
+		int i = name.LastIndexOf('.');
+		return Tuple.Create(i >= 0 ? name.Substring(0, i) : "", i >= 0 ? name.Substring(i + 1) : name);
+	}
+}
+
+Comment : '#' ~'\n'* { $channel = Hidden; };
+Indent : { atStartOfLine }? Whitespace;
+InsignificantWhitespace : Whitespace { $channel = Hidden; };
+NL : '\n';
+Identifier : NonQuotedIdentifier | QuotedIdentifier;
+
+fragment Whitespace : ( '\t' | ' ' | '\r' | '\u000C' )+;
+fragment NonQuotedIdentifier : ('A'..'Z' | '_' | 'a'..'z') ('A'..'Z' | '_' | 'a'..'z' | '0'..'9')*;
+fragment QuotedIdentifier : '"' ~'"'* '"' { $text = $text.Substring(1, $text.Length - 2); };
+
+//////////////////////////////////////// Parser rules ////////////////////////////////////////
+
+public file returns[Tuple<List<TypeMetadata>, List<EnumFromConstants>, List<StaticInstance>> result]
+	@init {
+		var types = new List<TypeMetadata>();
+		var enums = new List<EnumFromConstants>();
+		var staticInstances = new List<StaticInstance>();
+	}
+	: (  t=typeMetadata { types.Add(t); }
+	   | e=enumFromConstantsSpecifier { enums.Add(e); }
+	   | s=staticInstanceSpecifier { staticInstances.Add(s); }
+	   | NL
+	  )*
+	EOF { $result = Tuple.Create(types, enums, staticInstances); }
+	;
+
+nogenerate : { input.LT(1).Text.Equals("nogenerate", StringComparison.OrdinalIgnoreCase) }? Identifier;
+noinherit : { input.LT(1).Text.Equals("noinherit", StringComparison.OrdinalIgnoreCase) }? Identifier;
+namespace : { input.LT(1).Text.Equals("namespace", StringComparison.OrdinalIgnoreCase) }? Identifier;
+tagname : { input.LT(1).Text.Equals("tagname", StringComparison.OrdinalIgnoreCase) }? Identifier;
+name : { input.LT(1).Text.Equals("name", StringComparison.OrdinalIgnoreCase) }? Identifier;
+scriptName : { input.LT(1).Text.Equals("scriptName", StringComparison.OrdinalIgnoreCase) }? Identifier;
+typeOverride : { input.LT(1).Text.Equals("typeOverride", StringComparison.OrdinalIgnoreCase) }? Identifier;
+enumFromConstants : { input.LT(1).Text.Equals("enumFromConstants", StringComparison.OrdinalIgnoreCase) }? Identifier;
+container : { input.LT(1).Text.Equals("container", StringComparison.OrdinalIgnoreCase) }? Identifier;
+constants : { input.LT(1).Text.Equals("constants", StringComparison.OrdinalIgnoreCase) }? Identifier;
+interface : { input.LT(1).Text.Equals("interface", StringComparison.OrdinalIgnoreCase) }? Identifier;
+mixin : { input.LT(1).Text.Equals("mixin", StringComparison.OrdinalIgnoreCase) }? Identifier;
+alias : { input.LT(1).Text.Equals("alias", StringComparison.OrdinalIgnoreCase) }? Identifier;
+rename : { input.LT(1).Text.Equals("rename", StringComparison.OrdinalIgnoreCase) }? Identifier;
+staticInstance : { input.LT(1).Text.Equals("staticInstance", StringComparison.OrdinalIgnoreCase) }? Identifier;
+instanceName : { input.LT(1).Text.Equals("instanceName", StringComparison.OrdinalIgnoreCase) }? Identifier;
+type : { input.LT(1).Text.Equals("type", StringComparison.OrdinalIgnoreCase) }? Identifier;
+noconstructors : { input.LT(1).Text.Equals("noconstructors", StringComparison.OrdinalIgnoreCase) }? Identifier;
+flags : { input.LT(1).Text.Equals("flags", StringComparison.OrdinalIgnoreCase) }? Identifier;
+remove : { input.LT(1).Text.Equals("remove", StringComparison.OrdinalIgnoreCase) }? Identifier;
+globalMethods : { input.LT(1).Text.Equals("globalMethods", StringComparison.OrdinalIgnoreCase) }? Identifier;
+
+csharpTypeKeyword returns [CSharp.TypeReference result]
+	: { _csharpTypeKeywords.Contains(input.LT(1).Text) }? {  $result = CSharp.TypeReference.Keyword(input.LT(1).Text); } Identifier
+	;
+
+typeMetadata returns [TypeMetadata result]
+	@init {
+		string typeName = null;
+		string ns = null;
+		bool generate = true;
+		bool inherit = true;
+		bool includeConstructors = true;
+		string csharpName = null;
+		string scriptName = null;
+		List<string> tagNames = null;
+		List<TypeOverride> typeOverrides = null;
+		TypeKind typeKind = TypeKind.Default;
+		CSharp.TypeReference aliasFor = null;
+		List<Tuple<string, string>> renames = null;
+		List<string> removes = null;
+	}
+	: i=Identifier { typeName = csharpName = scriptName = $i.text; } NL
+	  (Indent (   n=namespaceSpecifier { ns = n; } NL
+	            | nogenerate { generate = false; } NL
+	            | noinherit { inherit = false; } NL
+	            | noconstructors { includeConstructors = false; } NL
+	            | interface { typeKind = TypeKind.Interface; } NL
+	            | mixin { typeKind = TypeKind.Mixin; } NL
+	            | n=nameSpecifier { csharpName = n; } NL
+	            | n=scriptNameSpecifier { scriptName = n; } NL
+	            | t=tagnameSpecifier { tagNames = t; } NL
+	            | o=typeOverrideSpecifier { typeOverrides = typeOverrides ?? new List<TypeOverride>(); typeOverrides.Add(o); } NL
+	            | a=aliasSpecifier { aliasFor = a; generate = false; } NL
+	            | r=renameSpecifier { renames = renames ?? new List<Tuple<string, string>>(); renames.Add(r); } NL
+	            | v=removeSpecifier { removes = removes ?? new List<string>(); removes.Add(v); } NL
+	            | NL
+	          )
+	  )*
+	{ $result = new TypeMetadata(typeName, ns, csharpName, scriptName, tagNames.AsReadOnlySafe(), generate, inherit, typeKind, includeConstructors, typeOverrides.AsReadOnlySafe(), aliasFor, renames, removes); }
+	;
+
+nestedIdentifier returns [string result]
+	: i=Identifier { $result = $i.text; } ('.' i=Identifier { $result += "." + $i.text; })*
+	;
+
+namespaceSpecifier returns [string result]
+	: namespace '=' i=nestedIdentifier { $result = i; }
+	;
+
+tagnameSpecifier returns [List<string> result]
+	@init { $result = new List<string>(); }
+	: tagname '=' i=Identifier { $result.Add($i.text); } (',' i=Identifier { $result.Add($i.text); })*
+	;
+
+nameSpecifier returns [string result]
+	: name '=' i=Identifier { $result = $i.text; }
+	;
+
+scriptNameSpecifier returns [string result]
+	: scriptName '=' i=Identifier { $result = $i.text; }
+	;
+
+typeOverrideSpecifier returns [TypeOverride result]
+	: typeOverride i=Identifier '=' t=csharpType { $result = new TypeOverride($i.text, t); }
+	;
+
+aliasSpecifier returns [CSharp.TypeReference result]
+	: alias '=' t=csharpType { $result = t; }
+	;
+
+renameSpecifier returns [Tuple<string, string> result]
+	: rename a=Identifier '=' b=Identifier { $result = Tuple.Create($a.text, $b.text); }
+	;
+
+removeSpecifier returns [string result]
+	: remove a=Identifier { $result = $a.text; }
+	;
+
+csharpType returns [TypeReference result]
+	@init { List<TypeReference> typeArgs = null; }
+	:
+	(  n=nestedIdentifier ('<' { typeArgs = new List<TypeReference>(); } t=csharpType { typeArgs.Add(t); } (',' t=csharpType { typeArgs.Add(t); })* '>')? { var split = Split(n); $result = typeArgs == null ? TypeReference.NamedType(split.Item2, split.Item1) : TypeReference.GenericNamedType(split.Item2, split.Item1, typeArgs); }
+	 | t=csharpTypeKeyword { $result = t; }
+	)
+	('[' ']' { $result = TypeReference.Array($result); })?
+	('?' { $result = TypeReference.Nullable($result); })?
+	;
+
+enumFromConstantsSpecifier returns [EnumFromConstants result]
+	@init {
+		string typeName = null, container = null, constantsRegex = null;
+		bool isFlags = false;
+		var names = new List<Tuple<string, string>>();
+	}
+	: enumFromConstants i=nestedIdentifier { typeName = i; } NL
+	  (Indent (   c=containerSpecifier { container = c; } NL
+	            | c=constantsSpecifier { constantsRegex = c; } NL
+	            | n=enumFromConstantsNameSpecifier { names.Add(n); } NL
+	            | flags { isFlags = true; } NL
+	            | NL
+	          )
+	  )*
+	{ var split = Split(typeName); $result = new EnumFromConstants(split.Item2, split.Item1, container, new Regex(constantsRegex), names, isFlags); }
+	;
+
+containerSpecifier returns [string result]
+	: container '=' i=Identifier { $result = $i.text; }
+	;
+
+constantsSpecifier returns [string result]
+	: constants '=' i=Identifier { $result = $i.text; }
+	;
+
+enumFromConstantsNameSpecifier returns [Tuple<string, string> result]
+	: name i1=Identifier '=' i2=Identifier { $result = Tuple.Create($i1.text, $i2.text); }
+	;
+
+staticInstanceSpecifier returns [StaticInstance result]
+	@init {
+		string typeName = null, type = null, instanceName = null;
+		bool isGlobalMethods = false;
+	}
+	: staticInstance i=nestedIdentifier { typeName = i; } NL
+	  (Indent (   c=instanceNameSpecifier { instanceName = c; } NL
+	            | c=typeSpecifier { type = c; } NL
+	            | globalMethods { isGlobalMethods = true; } NL
+	            | NL
+	          )
+	  )*
+	{ var split = Split(typeName); $result = new StaticInstance(split.Item2, split.Item1, instanceName, type, isGlobalMethods); }
+	;
+
+instanceNameSpecifier returns [string result]
+	: instanceName '=' i=Identifier { $result = $i.text; }
+	;
+
+typeSpecifier returns [string result]
+	: type '=' i=Identifier { $result = $i.text; }
+	;

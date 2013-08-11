@@ -7,6 +7,8 @@ using Generator.ExtensionMethods;
 
 namespace Generator.AstNodes {
 	public class InterfaceMember {
+		private InterfaceMember() {}
+
 		public class ConstData {
 			public string Name { get; private set; }
 			public WebIDLType Type { get; private set; }
@@ -21,29 +23,15 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public class NamedOperationData {
+		public class OperationData {
 			public string Name { get; private set; }
 			public WebIDLType ReturnType { get; private set; }
 			public OperationQualifiers Qualifiers { get; private set; }
 			public IReadOnlyList<Argument> Arguments { get; private set; }
 			public IReadOnlyList<ExtendedAttribute> ExtendedAttributes { get; private set; }
 
-			public NamedOperationData(string name, WebIDLType returnType, OperationQualifiers qualifiers, IReadOnlyList<Argument> arguments, IReadOnlyList<ExtendedAttribute> extendedAttributes) {
+			public OperationData(string name, WebIDLType returnType, OperationQualifiers qualifiers, IReadOnlyList<Argument> arguments, IReadOnlyList<ExtendedAttribute> extendedAttributes) {
 				Name = name;
-				ReturnType = returnType;
-				Qualifiers = qualifiers;
-				Arguments = arguments;
-				ExtendedAttributes = extendedAttributes;
-			}
-		}
-
-		public class UnnamedOperationData {
-			public WebIDLType ReturnType { get; private set; }
-			public OperationQualifiers Qualifiers { get; private set; }
-			public IReadOnlyList<Argument> Arguments { get; private set; }
-			public IReadOnlyList<ExtendedAttribute> ExtendedAttributes { get; private set; }
-
-			public UnnamedOperationData(WebIDLType returnType, OperationQualifiers qualifiers, IReadOnlyList<Argument> arguments, IReadOnlyList<ExtendedAttribute> extendedAttributes) {
 				ReturnType = returnType;
 				Qualifiers = qualifiers;
 				Arguments = arguments;
@@ -74,8 +62,7 @@ namespace Generator.AstNodes {
 		}
 
 		private ConstData _const;
-		private NamedOperationData _namedOperation;
-		private UnnamedOperationData _unnamedOperation;
+		private OperationData _operation;
 		private AttributeData _attribute;
 		private JsonifierData _jsonifier;
 
@@ -83,12 +70,8 @@ namespace Generator.AstNodes {
 			return new InterfaceMember { _const = new ConstData(name, type, value, extendedAttributes.AsReadOnlySafe()) };
 		}
 
-		public static InterfaceMember NamedOperation(string name, WebIDLType returnType, IEnumerable<Argument> arguments, OperationQualifiers qualifiers, IEnumerable<ExtendedAttribute> extendedAttributes) {
-			return new InterfaceMember { _namedOperation = new NamedOperationData(name, returnType, qualifiers, arguments.AsReadOnlySafe(), extendedAttributes.AsReadOnlySafe()) };
-		}
-
-		public static InterfaceMember UnnamedOperation(WebIDLType returnType, IEnumerable<Argument> arguments, OperationQualifiers qualifiers, IEnumerable<ExtendedAttribute> extendedAttributes) {
-			return new InterfaceMember { _unnamedOperation = new UnnamedOperationData(returnType, qualifiers, arguments.AsReadOnlySafe(), extendedAttributes.AsReadOnlySafe()) };
+		public static InterfaceMember Operation(string name, WebIDLType returnType, IEnumerable<Argument> arguments, OperationQualifiers qualifiers, IEnumerable<ExtendedAttribute> extendedAttributes) {
+			return new InterfaceMember { _operation = new OperationData(name, returnType, qualifiers, arguments.AsReadOnlySafe(), extendedAttributes.AsReadOnlySafe()) };
 		}
 
 		public static InterfaceMember Attribute(string name, WebIDLType type, AttributeQualifiers qualifiers, IEnumerable<ExtendedAttribute> extendedAttributes) {
@@ -99,15 +82,12 @@ namespace Generator.AstNodes {
 			return new InterfaceMember { _jsonifier = new JsonifierData(extendedAttributes.AsReadOnlySafe()) };
 		}
 
-		public void Decompose(Action<ConstData> @const, Action<NamedOperationData> namedOperation, Action<UnnamedOperationData> unnamedOperation, Action<AttributeData> attribute, Action<JsonifierData> jsonifier) {
+		public void Decompose(Action<ConstData> @const, Action<OperationData> operation, Action<AttributeData> attribute, Action<JsonifierData> jsonifier) {
 			if (_const != null) {
 				if (@const != null) @const(_const);
 			}
-			else if (_namedOperation != null) {
-				if (namedOperation != null) namedOperation(_namedOperation);
-			}
-			else if (_unnamedOperation != null) {
-				if (unnamedOperation != null) unnamedOperation(_unnamedOperation);
+			else if (_operation != null) {
+				if (operation != null) operation(_operation);
 			}
 			else if (_attribute != null) {
 				if (attribute != null) attribute(_attribute);
@@ -120,24 +100,18 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public T DecomposeWithResult<T>(Func<ConstData, T> @const, Func<NamedOperationData, T> namedOperation, Func<UnnamedOperationData, T> unnamedOperation, Func<AttributeData, T> attribute, Func<JsonifierData, T> jsonifier) {
+		public T DecomposeWithResult<T>(Func<ConstData, T> @const, Func<OperationData, T> operation, Func<AttributeData, T> attribute, Func<JsonifierData, T> jsonifier) {
 			if (_const != null) {
 				if (@const != null)
 					return @const(_const);
 				else
 					throw new InvalidOperationException("Case 'Const' not handled");
 			}
-			else if (_namedOperation != null) {
-				if (namedOperation != null)
-					return namedOperation(_namedOperation);
+			else if (_operation != null) {
+				if (operation != null)
+					return operation(_operation);
 				else
-					throw new InvalidOperationException("Case 'NamedOperation' not handled");
-			}
-			else if (_unnamedOperation != null) {
-				if (unnamedOperation != null)
-					return unnamedOperation(_unnamedOperation);
-				else
-					throw new InvalidOperationException("Case 'UnnamedOperation' not handled");
+					throw new InvalidOperationException("Case 'Operation' not handled");
 			}
 			else if (_attribute != null) {
 				if (attribute != null)

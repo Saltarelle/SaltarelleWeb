@@ -7,6 +7,8 @@ using Generator.ExtensionMethods;
 
 namespace Generator.AstNodes {
 	public class ExceptionMember {
+		private ExceptionMember() {}
+
 		public class ConstData {
 			public string Name { get; private set; }
 			public WebIDLType Type { get; private set; }

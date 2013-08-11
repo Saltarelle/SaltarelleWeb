@@ -556,8 +556,27 @@ dictionary D {
 };
 ",
 @"dictionary D {
-	(long or short or Date or float or DOMString or long long or unsigned long long or Object) m1;
+	(long or short or Date or float or DOMString or long long or unsigned long long or Object)? m1;
 	(long or (double or float)[] or short) m2;
+};");
+		}
+
+		[Test]
+		public void UnionTypesWithAtLeastOneNullableMemberBecomesNullableUnion() {
+			AssertCorrect(@"
+typedef short? T1;
+dictionary D {
+	(long or T1 or Date) m1;
+	(long or T1 or Date?) m2;
+	(long or (double or (T1 or Date)) or float) m3;
+	(long or T1 or Date)? m4;
+};
+",
+@"dictionary D {
+	(long or short or Date)? m1;
+	(long or short or Date)? m2;
+	(long or double or short or Date or float)? m3;
+	(long or short or Date)? m4;
 };");
 		}
 
@@ -580,7 +599,7 @@ typedef [Attr4] long Type4;
 	[Attr7([Attr8, Attr3] long a), Attr2]
 	long m([Attr9, Attr3] long a, [Attr4] long b);
 	[Attr8([Attr9, Attr4] long a), Attr3]
-	long([Attr8, Attr4] long a);
+	long ([Attr8, Attr4] long a);
 	[Attr9([Attr5, Attr1] long a), Attr4]
 	attribute long attr;
 };
@@ -599,6 +618,8 @@ typedef [Attr4] long Type4;
 	[Attr7([Attr8] Type3 a)] Type2 m([Attr9] Type3 a, Type4 b);
 	[Attr8([Attr9] Type4 a)] Type3 ([Attr8] Type4 a);
 	[Attr9([Attr5] Type1 a)] attribute Type4 attr;
+	[Attr11([Attr6] Type2 a)] setter void item([Attr8] Type4 index, [Attr9] Type3 value);
+	[Attr10([Attr7] Type3 a)] getter Type3 item([Attr11] Type2 index);
 };",
 @"[Constructor([Attr5, Attr1] long t)] interface I1 {
 	[Attr6([Attr7, Attr2] long a), Attr2]
@@ -606,9 +627,13 @@ typedef [Attr4] long Type4;
 	[Attr7([Attr8, Attr3] long a), Attr2]
 	long m([Attr9, Attr3] long a, [Attr4] long b);
 	[Attr8([Attr9, Attr4] long a), Attr3]
-	long([Attr8, Attr4] long a);
+	long ([Attr8, Attr4] long a);
 	[Attr9([Attr5, Attr1] long a), Attr4]
 	attribute long attr;
+	[Attr11([Attr6, Attr2] long a)]
+	setter void item([Attr8, Attr4] long index, [Attr9, Attr3] long value);
+	[Attr10([Attr7, Attr3] long a), Attr3]
+	getter long item([Attr11, Attr2] long index);
 };
 ");
 		}
@@ -793,7 +818,7 @@ interface I1 {
 		}
 
 		[Test]
-		public void UnionTypeWorks() {
+		public void UnionTypeResolveWorks() {
 			AssertCorrect(@"
 typedef [Attr1] long Type1;
 typedef [Attr2] short Type2;

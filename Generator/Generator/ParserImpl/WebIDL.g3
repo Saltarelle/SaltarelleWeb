@@ -282,7 +282,7 @@ attributeOrOperation[IEnumerable<ExtendedAttribute> extendedAttributes] returns 
 stringifierAttributeOrOperation[IEnumerable<ExtendedAttribute> extendedAttributes] returns [InterfaceMember result]
 	: r=attribute[extendedAttributes, true] { $result = r; }
 	| r=operationRest[OperationQualifiers.Stringifier, extendedAttributes] { $result = r; }
-	| SEMIC { $result = InterfaceMember.UnnamedOperation(WebIDLType.DOMString(), new Argument[0], OperationQualifiers.Stringifier, extendedAttributes); }
+	| SEMIC { $result = InterfaceMember.Operation(null, WebIDLType.DOMString(), new Argument[0], OperationQualifiers.Stringifier, extendedAttributes); }
 	;
 
 attribute[IEnumerable<ExtendedAttribute> extendedAttributes, bool isStringifier] returns [InterfaceMember result]
@@ -294,7 +294,6 @@ operation[IEnumerable<ExtendedAttribute> extendedAttributes] returns [InterfaceM
 	;
 
 qualifiers returns [OperationQualifiers result]
-	@init { $result = OperationQualifiers.None; }
 	: (STATIC { $result |= OperationQualifiers.Static; })?
 	  (   GETTER       { $result |= OperationQualifiers.Getter; }
 	    | SETTER       { $result |= OperationQualifiers.Setter; }
@@ -305,7 +304,7 @@ qualifiers returns [OperationQualifiers result]
 	;
 
 operationRest[OperationQualifiers qualifiers, IEnumerable<ExtendedAttribute> extendedAttributes] returns [InterfaceMember result]
-	: t=returnType name=Identifier? LPAREN args=argumentList RPAREN SEMIC { $result = name != null ? InterfaceMember.NamedOperation($name.text, t, args, qualifiers, extendedAttributes) : InterfaceMember.UnnamedOperation(t, args, qualifiers, extendedAttributes); }
+	: t=returnType name=Identifier? LPAREN args=argumentList RPAREN SEMIC { $result = InterfaceMember.Operation($name.text, t, args, qualifiers, extendedAttributes); }
 	;
 
 argumentList returns [List<Argument> result]

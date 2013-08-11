@@ -7,6 +7,8 @@ using Generator.ExtensionMethods;
 
 namespace Generator.AstNodes {
 	public class ResolvedDefinition {
+		private ResolvedDefinition() {}
+
 		public class InterfaceData {
 			public string Name { get; private set; }
 			public string Base { get; private set; }

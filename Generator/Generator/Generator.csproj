@@ -59,17 +59,38 @@
     <Compile Include="AstNodes\Definitions.cs" />
     <Compile Include="AstNodes\ExtendedAttribute.cs" />
     <Compile Include="AstNodes\WebIDLType.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="CSharp\Attribute.cs" />
+    <Compile Include="CSharp\Accessibility.cs" />
+    <Compile Include="CSharp\ClassModifiers.cs" />
+    <Compile Include="CSharp\CodeFormatter.cs" />
+    <Compile Include="CSharp\EnumMember.cs" />
+    <Compile Include="CSharp\MemberModifiers.cs" />
+    <Compile Include="CSharp\Parameter.cs" />
+    <Compile Include="CSharp\TypeReference.cs" />
+    <Compile Include="CSharp\ClassMember.cs" />
+    <Compile Include="CSharp\TypeDefinition.cs" />
+    <Compile Include="ExtensionMethods\StringExtensions.cs" />
     <Compile Include="ExtensionMethods\EnumerableExtensions.cs" />
+    <Compile Include="Meta\EnumFromConstants.cs" />
+    <Compile Include="Meta\Metadata.cs" />
+    <Compile Include="Meta\MetadataParser.cs" />
+    <Compile Include="Meta\StaticInstance.cs" />
+    <Compile Include="Meta\TypeOverride.cs" />
     <Compile Include="Mono.Options\Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TopologicalSorter.cs" />
+    <Compile Include="Meta\TypeMetadata.cs" />
     <Compile Include="WebIDLFormatter.cs" />
     <Compile Include="WebIDLParser.cs" />
     <Compile Include="WebIDLResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Antlr3 Include="Meta\MetadataParserImpl\Metadata.g3">
+      <OutputFiles>Meta\MetadataParserImpl\MetadataLexer.cs;Meta\MetadataParserImpl\MetadataParser.cs</OutputFiles>
+    </Antlr3>
     <None Include="packages.config" />
     <Antlr3 Include="ParserImpl\WebIDL.g3">
       <OutputFiles>ParserImpl\WebIDLLexer.cs;ParserImpl\WebIDLParser.cs</OutputFiles>
@@ -84,6 +105,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Meta\MetadataParserImpl\MetadataLexer.cs">
+      <DependentUpon>Metadata.g3</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Meta\MetadataParserImpl\MetadataParser.cs">
+      <DependentUpon>Metadata.g3</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="CleanAntlrCode">
@@ -91,7 +122,7 @@
   </Target>
   <Target Name="GenerateAntlrCode" Inputs="@(Antlr3)" Outputs="%(Antlr3.OutputFiles)">
     <Delete Files="%(Antlr3.OutputFiles)" />
-    <Exec Command="@(Antlr3->'%22$(SolutionDir)packages-manual\antlr\Antlr3.exe%22 -message-format vs2005 %22%(Filename)%(Extension)%22')" WorkingDirectory="$(ProjectDir)ParserImpl" />
+    <Exec Command="%22$(SolutionDir)packages-manual\antlr\Antlr3.exe%22 -message-format vs2005 %22%(Antlr3.Identity)%22" WorkingDirectory="$(ProjectDir)" />
   </Target>
   <PropertyGroup>
     <CleanDependsOn>CleanAntlrCode;$(CleanDependsOn)</CleanDependsOn>

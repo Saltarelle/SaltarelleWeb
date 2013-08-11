@@ -7,6 +7,8 @@ using Generator.ExtensionMethods;
 
 namespace Generator.AstNodes {
 	public class Argument {
+		private Argument() {}
+
 		public class RequiredData {
 			public string Name { get; private set; }
 			public WebIDLType Type { get; private set; }
@@ -48,6 +50,33 @@ namespace Generator.AstNodes {
 		private RequiredData _required;
 		private OptionalData _optional;
 		private EllipsisData _ellipsis;
+
+		public string Name {
+			get {
+				if (_required != null) return _required.Name;
+				else if (_optional != null) return _optional.Name;
+				else if (_ellipsis != null) return _ellipsis.Name;
+				else throw new InvalidOperationException("Invalid state");
+			}
+		}
+
+		public IReadOnlyList<ExtendedAttribute> ExtendedAttributes {
+			get {
+				if (_required != null) return _required.ExtendedAttributes;
+				else if (_optional != null) return _optional.ExtendedAttributes;
+				else if (_ellipsis != null) return _ellipsis.ExtendedAttributes;
+				else throw new InvalidOperationException("Invalid state");
+			}
+		}
+
+		public WebIDLType Type {
+			get {
+				if (_required != null) return _required.Type;
+				else if (_optional != null) return _optional.Type;
+				else if (_ellipsis != null) return _ellipsis.Type;
+				else throw new InvalidOperationException("Invalid state");
+			}
+		}
 
 		public static Argument Required(string name, WebIDLType type, IEnumerable<ExtendedAttribute> extendedAttributes) {
 			return new Argument { _required = new RequiredData(name, type, extendedAttributes.AsReadOnlySafe()) };

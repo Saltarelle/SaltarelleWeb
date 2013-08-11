@@ -257,41 +257,6 @@ partial interface Navigator {
 };
 
 
-interface MozTelephony;
-// nsIDOMNavigatorTelephony
-partial interface Navigator {
-  [Throws, Func="Navigator::HasTelephonySupport"]
-  readonly attribute MozTelephony? mozTelephony;
-};
-
-// nsIMozNavigatorMobileConnection
-interface MozMobileConnection;
-partial interface Navigator {
-  [Throws, Func="Navigator::HasMobileConnectionSupport"]
-  readonly attribute MozMobileConnection mozMobileConnection;
-};
-
-// nsIMozNavigatorCellBroadcast
-interface MozCellBroadcast;
-partial interface Navigator {
-  [Throws, Func="Navigator::HasCellBroadcastSupport"]
-  readonly attribute MozCellBroadcast mozCellBroadcast;
-};
-
-// nsIMozNavigatorVoicemail
-interface MozVoicemail;
-partial interface Navigator {
-  [Throws, Func="Navigator::HasVoicemailSupport"]
-  readonly attribute MozVoicemail mozVoicemail;
-};
-
-// nsIMozNavigatorIccManager
-interface MozIccManager;
-partial interface Navigator {
-  [Throws, Func="Navigator::HasIccManagerSupport"]
-  readonly attribute MozIccManager? mozIccManager;
-};
-// MOZ_B2G_RIL
 
 
 // https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#navigator-interface-extension
@@ -302,13 +267,6 @@ partial interface Navigator {
 // MOZ_GAMEPAD
 
 
-// nsIDOMNavigatorBluetooth
-interface MozBluetoothManager;
-partial interface Navigator {
-  [Throws, Func="Navigator::HasBluetoothSupport"]
-  readonly attribute MozBluetoothManager mozBluetooth;
-};
-// MOZ_B2G_BT
 
 
 // nsIDOMMozNavigatorTime

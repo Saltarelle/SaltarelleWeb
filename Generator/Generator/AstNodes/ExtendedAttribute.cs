@@ -4,6 +4,8 @@ using Generator.ExtensionMethods;
 
 namespace Generator.AstNodes {
 	public class ExtendedAttribute {
+		private ExtendedAttribute() {}
+
 		public class NoArgsData {
 			public string AttributeName { get; private set; }
 
