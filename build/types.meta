@@ -2222,7 +2222,7 @@ TransitionEventInit
 	namespace = System.Html
 
 TreeColumns
-	namespace = X
+	nogenerate
 
 TreeWalker
 	namespace = System.Xml

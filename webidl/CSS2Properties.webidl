@@ -185,6 +185,7 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString textAlign;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextAlignLast;
   [Throws, TreatNullAs=EmptyString] attribute DOMString textDecoration;
+  [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextBlink;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextDecorationColor;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextDecorationLine;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextDecorationStyle;
