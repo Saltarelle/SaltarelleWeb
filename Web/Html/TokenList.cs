@@ -1,51 +1,44 @@
 // TokenList.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
+	[IgnoreNamespace]
+	[Imported]
+	public sealed class TokenList {
+		private TokenList() {
+		}
 
-    [IgnoreNamespace]
-    [Imported]
-    public sealed class TokenList {
+		public void Add(string token) {
+		}
 
-        private TokenList() {
-        }
-        
-        [IntrinsicProperty]
-        [ScriptName("length")]
-        public int Count {
-            get {
-                return 0;
-            }
-        }
+		public bool Contains(string token) {
+			return false;
+		}
 
-        [IntrinsicProperty]
-        public string this[int index] {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		[ScriptName("length")]
+		public int Count {
+			get { return 0; }
+		}
 
-        public bool Contains(string token) {
-            return false;
-        }
+		[IntrinsicProperty]
+		public string this[int index] {
+			get { return null; }
+		}
 
-        public void Add(string token) {
-        }
+		public void Remove(string token) {
+		}
 
-        public void Remove(string token) {
-        }
+		public override string ToString() {
+			return null;
+		}
 
-        public bool Toggle(string token) {
-            return false;
-        }
-
-        public override string ToString() {
-            return null;
-        }
-    }
+		public bool Toggle(string token) {
+			return false;
+		}
+	}
 }

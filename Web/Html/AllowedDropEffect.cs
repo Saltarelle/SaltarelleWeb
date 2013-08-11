@@ -1,32 +1,29 @@
-// DropEffects.cs
+// AllowedDropEffect.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
+	[IgnoreNamespace]
+	[Imported]
+	[NamedValues]
+	public enum AllowedDropEffect {
+		Copy = 0,
 
-    [IgnoreNamespace]
-    [Imported]
-    [NamedValues]
-    public enum AllowedDropEffect {
+		Link = 1,
 
-        Copy = 0,
+		Move = 2,
 
-        Link = 1,
+		CopyLink = 3,
 
-        Move = 2,
+		CopyMove = 4,
 
-        CopyLink = 3,
+		LinkMove = 5,
 
-        CopyMove = 4,
+		All = 6,
 
-        LinkMove = 5,
-
-        All = 6,
-
-        None = 7
-    }
+		None = 7
+	}
 }

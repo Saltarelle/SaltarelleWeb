@@ -1,40 +1,37 @@
 // ElementType.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
+	[IgnoreNamespace]
+	[Imported]
+	[NumericValues]
+	public enum ElementType {
+		Element = 1,
 
-    [IgnoreNamespace]
-    [Imported]
-    [NumericValues]
-    public enum ElementType {
+		Attribute = 2,
 
-        Element = 1,
+		Text = 3,
 
-        Attribute = 2,
+		CharacterData = 4,
 
-        Text = 3,
+		EntityReference = 5,
 
-        CharacterData = 4,
+		Entity = 6,
 
-        EntityReference = 5,
+		ProcessingInstruction = 7,
 
-        Entity = 6,
+		Comment = 8,
 
-        ProcessingInstruction = 7,
+		Document = 9,
 
-        Comment = 8,
+		DocumentType = 10,
 
-        Document = 9,
+		DocumentFragment = 11,
 
-        DocumentType = 10,
-
-        DocumentFragment = 11,
-
-        Notation = 12
-    }
+		Notation = 12
+	}
 }

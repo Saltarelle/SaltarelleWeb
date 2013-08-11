@@ -1,138 +1,111 @@
-// XMLHttpRequest.cs
+// XmlHttpRequest.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
 using System.Runtime.CompilerServices;
 using System.Xml;
 
 namespace System.Net {
+	[IgnoreNamespace]
+	[Imported]
+	[ScriptName("XMLHttpRequest")]
+	public sealed class XmlHttpRequest {
+		public void Abort() {
+		}
 
-    [IgnoreNamespace]
-    [Imported]
-    [ScriptName("XMLHttpRequest")]
-    public sealed class XmlHttpRequest {
+		public string GetAllResponseHeaders() {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        [ScriptName("onreadystatechange")]
-        public Action OnReadyStateChange {
-            get {
-                return null;
-            }
-            set {
-            }
-        }
+		public string GetResponseHeader(string name) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public ReadyState ReadyState {
-            get {
-                return ReadyState.Uninitialized;
-            }
-        }
+		[IntrinsicProperty]
+		[ScriptName("onreadystatechange")]
+		public Action OnReadyStateChange {
+			get { return null; }
+			set { }
+		}
 
-        [IntrinsicProperty]
-        [ScriptName("responseXML")]
-        public XmlDocument ResponseXml {
-            get {
-                return null;
-            }
-        }
+		public void Open(string method, string url) {
+		}
 
-        [IntrinsicProperty]
-        public string ResponseText {
-            get {
-                return null;
-            }
-        }
+		public void Open(HttpVerb verb, string url) {
+		}
 
-        [IntrinsicProperty]
-        public string ResponseType {
-            get {
-                return null;
-            }
-            set {
-            }
-        }
+		public void Open(string method, string url, bool @async) {
+		}
 
-        [IntrinsicProperty]
-        public object Response {
-            get {
-                return null;
-            }
-        }
+		public void Open(HttpVerb verb, string url, bool @async) {
+		}
 
-        [IntrinsicProperty]
-        public int Status {
-            get {
-                return 0;
-            }
-        }
+		public void Open(string method, string url, bool @async, string userName, string password) {
+		}
 
-        [IntrinsicProperty]
-        public string StatusText {
-            get {
-                return null;
-            }
-        }
+		public void Open(HttpVerb verb, string url, bool @async, string userName, string password) {
+		}
 
-        [IntrinsicProperty]
-        public uint Timeout {
-            get {
-                return 0;
-            }
-            set {
-            }
-        }
+		public void OverrideMimeType(string mimetype) {
+		}
 
-        [IntrinsicProperty]
-        public bool WithCredentials {
-            get {
-                return false;
-            }
-            set {
-            }
-        }
+		[IntrinsicProperty]
+		public ReadyState ReadyState {
+			get { return ReadyState.Uninitialized; }
+		}
 
-        public void Abort() {
-        }
+		[IntrinsicProperty]
+		public object Response {
+			get { return null; }
+		}
 
-        public string GetAllResponseHeaders() {
-            return null;
-        }
+		[IntrinsicProperty]
+		public string ResponseText {
+			get { return null; }
+		}
 
-        public string GetResponseHeader(string name) {
-            return null;
-        }
+		[IntrinsicProperty]
+		public string ResponseType {
+			get { return null; }
+			set { }
+		}
 
-        public void Open(string method, string url) {
-        }
+		[IntrinsicProperty]
+		[ScriptName("responseXML")]
+		public XmlDocument ResponseXml {
+			get { return null; }
+		}
 
-        public void Open(HttpVerb verb, string url) {
-        }
+		public void Send() {
+		}
 
-        public void Open(string method, string url, bool @async) {
-        }
+		public void Send(string body) {
+		}
 
-        public void Open(HttpVerb verb, string url, bool @async) {
-        }
+		public void SetRequestHeader(string name, string value) {
+		}
 
-        public void Open(string method, string url, bool @async, string userName, string password) {
-        }
+		[IntrinsicProperty]
+		public int Status {
+			get { return 0; }
+		}
 
-        public void Open(HttpVerb verb, string url, bool @async, string userName, string password) {
-        }
+		[IntrinsicProperty]
+		public string StatusText {
+			get { return null; }
+		}
 
-        public void OverrideMimeType(string mimetype) {
-        }
+		[IntrinsicProperty]
+		public uint Timeout {
+			get { return 0; }
+			set { }
+		}
 
-        public void Send() {
-        }
-
-        public void Send(string body) {
-        }
-
-        public void SetRequestHeader(string name, string value) {
-        }
-    }
+		[IntrinsicProperty]
+		public bool WithCredentials {
+			get { return false; }
+			set { }
+		}
+	}
 }

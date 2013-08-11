@@ -1,260 +1,225 @@
 // DocumentInstance.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
-using System.Runtime.CompilerServices;
 using System.Html.Editing;
+using System.Runtime.CompilerServices;
 
 namespace System.Html {
+	[IgnoreNamespace]
+	[Imported]
+	public sealed class DocumentInstance {
+		private DocumentInstance() {
+		}
 
-    [IgnoreNamespace]
-    [Imported]
-    public sealed class DocumentInstance {
+		[IntrinsicProperty]
+		public Element ActiveElement {
+			get { return null; }
+		}
 
-        private DocumentInstance() {
-        }
+		/// <summary>
+		/// Adds a listener for the specified event.
+		/// </summary>
+		/// <param name="eventName">The name of the event such as 'load'.</param>
+		/// <param name="listener">The listener to be invoked in response to the event.</param>
+		public void AddEventListener(string eventName, ElementEventListener listener) {
+		}
 
-        [IntrinsicProperty]
-        public Element ActiveElement {
-            get {
-                return null;
-            }
-        }
+		/// <summary>
+		/// Adds a listener for the specified event.
+		/// </summary>
+		/// <param name="eventName">The name of the event such as 'load'.</param>
+		/// <param name="listener">The listener to be invoked in response to the event.</param>
+		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
+		public void AddEventListener(string eventName, ElementEventListener listener, bool useCapture) {
+		}
 
-        [IntrinsicProperty]
-        public Element Body {
-            get {
-                return null;
-            }
-        }
+		public void AttachEvent(string eventName, ElementEventHandler handler) {
+		}
 
-        [IntrinsicProperty]
-        public string Cookie {
-            get {
-                return null;
-            }
-            set {
-            }
-        }
+		[IntrinsicProperty]
+		public Element Body {
+			get { return null; }
+		}
 
-        [IntrinsicProperty]
-        public string DesignMode {
-            get {
-                return null;
-            }
-            set {
-            }
-        }
+		public void Close() {
+		}
 
-        [IntrinsicProperty]
-        public string Doctype {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public string Cookie {
+			get { return null; }
+			set { }
+		}
 
-        [IntrinsicProperty]
-        public Element DocumentElement {
-            get {
-                return null;
-            }
-        }
+		public ElementAttribute CreateAttribute(string name) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public string Domain {
-            get {
-                return null;
-            }
-            set {
-            }
-        }
+		public DocumentFragment CreateDocumentFragment() {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public DocumentImplementation Implementation {
-            get {
-                return null;
-            }
-        }
+		public Element CreateElement(string tagName) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public WindowInstance ParentWindow {
-            get {
-                return null;
-            }
-        }
+		public MutableEvent CreateEvent(string eventType) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public string ReadyState {
-            get {
-                return null;
-            }
-        }
-        
-        [IntrinsicProperty]
-        public string Referrer {
-            get {
-                return null;
-            }
-        }
+		public Element CreateTextNode(string tagName) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public Selection Selection {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public string DesignMode {
+			get { return null; }
+			set { }
+		}
 
-        [IntrinsicProperty]
-        public string Title {
-            get {
-                return null;
-            }
-            set {
-            }
-        }
+		public void DetachEvent(string eventName, ElementEventHandler handler) {
+		}
 
-        [IntrinsicProperty]
-        public string URL {
-            get {
-                return null;
-            }
-        }
+		public bool DispatchEvent(MutableEvent eventObject) {
+			return false;
+		}
 
-        /// <summary>
-        /// Adds a listener for the specified event.
-        /// </summary>
-        /// <param name="eventName">The name of the event such as 'load'.</param>
-        /// <param name="listener">The listener to be invoked in response to the event.</param>
-        public void AddEventListener(string eventName, ElementEventListener listener) {
-        }
+		[IntrinsicProperty]
+		public string Doctype {
+			get { return null; }
+		}
 
-        /// <summary>
-        /// Adds a listener for the specified event.
-        /// </summary>
-        /// <param name="eventName">The name of the event such as 'load'.</param>
-        /// <param name="listener">The listener to be invoked in response to the event.</param>
-        /// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-        public void AddEventListener(string eventName, ElementEventListener listener, bool useCapture) {
-        }
+		[IntrinsicProperty]
+		public Element DocumentElement {
+			get { return null; }
+		}
 
-        public void AttachEvent(string eventName, ElementEventHandler handler) {
-        }
+		[IntrinsicProperty]
+		public string Domain {
+			get { return null; }
+			set { }
+		}
 
-        public void Close() {
-        }
+		public Element ElementFromPoint(int x, int y) {
+			return null;
+		}
 
-        public ElementAttribute CreateAttribute(string name) {
-            return null;
-        }
+		public bool ExecCommand(string command, bool displayUserInterface, object value) {
+			return false;
+		}
 
-        public DocumentFragment CreateDocumentFragment() {
-            return null;
-        }
+		public void Focus() {
+		}
 
-        public Element CreateElement(string tagName) {
-            return null;
-        }
+		public Element GetElementById(string id) {
+			return null;
+		}
 
-        public MutableEvent CreateEvent(string eventType) {
-            return null;
-        }
+		public ElementCollection GetElementsByClassName(string className) {
+			return null;
+		}
 
-        public Element CreateTextNode(string tagName) {
-            return null;
-        }
+		public ElementCollection GetElementsByName(string name) {
+			return null;
+		}
 
-        public void DetachEvent(string eventName, ElementEventHandler handler) {
-        }
+		public ElementCollection GetElementsByTagName(string tagName) {
+			return null;
+		}
 
-        public bool DispatchEvent(MutableEvent eventObject) {
-            return false;
-        }
+		public bool HasFocus() {
+			return false;
+		}
 
-        public Element ElementFromPoint(int x, int y) {
-            return null;
-        }
+		[IntrinsicProperty]
+		public DocumentImplementation Implementation {
+			get { return null; }
+		}
 
-        public bool ExecCommand(string command, bool displayUserInterface, object value) {
-            return false;
-        }
+		public void Open() {
+		}
 
-        public void Focus() {
-        }
+		[IntrinsicProperty]
+		public WindowInstance ParentWindow {
+			get { return null; }
+		}
 
-        public Element GetElementById(string id) {
-            return null;
-        }
+		public bool QueryCommandEnabled(string command) {
+			return false;
+		}
 
-        public ElementCollection GetElementsByClassName(string className) {
-            return null;
-        }
+		public bool QueryCommandIndeterm(string command) {
+			return false;
+		}
 
-        public ElementCollection GetElementsByName(string name) {
-            return null;
-        }
+		public bool QueryCommandState(string command) {
+			return false;
+		}
 
-        public ElementCollection GetElementsByTagName(string tagName) {
-            return null;
-        }
+		public bool QueryCommandSupported(string command) {
+			return false;
+		}
 
-        public bool HasFocus() {
-            return false;
-        }
+		public object QueryCommandValue(string command) {
+			return null;
+		}
 
-        public void Open() {
-        }
+		public Element QuerySelector(string selector) {
+			return null;
+		}
 
-        public bool QueryCommandEnabled(string command) {
-            return false;
-        }
+		public ElementCollection QuerySelectorAll(string selector) {
+			return null;
+		}
 
-        public bool QueryCommandIndeterm(string command) {
-            return false;
-        }
+		[IntrinsicProperty]
+		public string ReadyState {
+			get { return null; }
+		}
 
-        public bool QueryCommandState(string command) {
-            return false;
-        }
+		[IntrinsicProperty]
+		public string Referrer {
+			get { return null; }
+		}
 
-        public bool QueryCommandSupported(string command) {
-            return false;
-        }
+		/// <summary>
+		/// Removes a listener for the specified event.
+		/// </summary>
+		/// <param name="eventName">The name of the event such as 'load'.</param>
+		/// <param name="listener">The listener to be invoked in response to the event.</param>
+		public void RemoveEventListener(string eventName, ElementEventListener listener) {
+		}
 
-        public object QueryCommandValue(string command) {
-            return null;
-        }
+		/// <summary>
+		/// Removes a listener for the specified event.
+		/// </summary>
+		/// <param name="eventName">The name of the event such as 'load'.</param>
+		/// <param name="listener">The listener to be invoked in response to the event.</param>
+		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
+		public void RemoveEventListener(string eventName, ElementEventListener listener, bool useCapture) {
+		}
 
-        public Element QuerySelector(string selector) {
-            return null;
-        }
+		[IntrinsicProperty]
+		public Selection Selection {
+			get { return null; }
+		}
 
-        public ElementCollection QuerySelectorAll(string selector) {
-            return null;
-        }
+		[IntrinsicProperty]
+		public string Title {
+			get { return null; }
+			set { }
+		}
 
-        /// <summary>
-        /// Removes a listener for the specified event.
-        /// </summary>
-        /// <param name="eventName">The name of the event such as 'load'.</param>
-        /// <param name="listener">The listener to be invoked in response to the event.</param>
-        public void RemoveEventListener(string eventName, ElementEventListener listener) {
-        }
+		[IntrinsicProperty]
+		public string URL {
+			get { return null; }
+		}
 
-        /// <summary>
-        /// Removes a listener for the specified event.
-        /// </summary>
-        /// <param name="eventName">The name of the event such as 'load'.</param>
-        /// <param name="listener">The listener to be invoked in response to the event.</param>
-        /// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-        public void RemoveEventListener(string eventName, ElementEventListener listener, bool useCapture) {
-        }
+		public void Write(string text) {
+		}
 
-        public void Write(string text) {
-        }
-
-        public void Writeln(string text) {
-        }
-    }
+		public void Writeln(string text) {
+		}
+	}
 }

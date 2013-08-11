@@ -1,249 +1,200 @@
 // CanvasContext2D.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
 using System.Runtime.CompilerServices;
-using System.Html;
 
 namespace System.Html.Media.Graphics {
+	[IgnoreNamespace]
+	[Imported]
+	public sealed class CanvasContext2D : CanvasContext {
+		private CanvasContext2D() {
+		}
 
-    [IgnoreNamespace]
-    [Imported]
-    public sealed class CanvasContext2D : CanvasContext {
+		[ScriptName("globalAlpha")]
+		[IntrinsicProperty]
+		public double Alpha { get; set; }
 
-        private CanvasContext2D() {
-        }
+		public void Arc(double x, double y, double radius, double startAngle, double endAngle, bool anticlockwise) {
+		}
 
-        [ScriptName("globalAlpha")]
-        [IntrinsicProperty]
-        public double Alpha {
-            get;
-            set;
-        }
+		public void ArcTo(double x1, double y1, double x2, double y2, double radius) {
+		}
 
-        [ScriptName("globalCompositeOperation")]
-        [IntrinsicProperty]
-        public CompositeOperation CompositeOperation {
-            get;
-            set;
-        }
+		public void BeginPath() {
+		}
 
-        [IntrinsicProperty]
-        public object FillStyle {
-            get;
-            set;
-        }
+		public void BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y) {
+		}
 
-        [IntrinsicProperty]
-        public string Font {
-            get;
-            set;
-        }
+		public void ClearRect(double x, double y, double w, double h) {
+		}
 
-        [IntrinsicProperty]
-        public LineCap LineCap {
-            get;
-            set;
-        }
+		public void Clip() {
+		}
 
-        [IntrinsicProperty]
-        public LineJoin LineJoin {
-            get;
-            set;
-        }
+		public void ClosePath() {
+		}
 
-        [IntrinsicProperty]
-        public double LineWidth {
-            get;
-            set;
-        }
+		[ScriptName("globalCompositeOperation")]
+		[IntrinsicProperty]
+		public CompositeOperation CompositeOperation { get; set; }
 
-        [IntrinsicProperty]
-        public int MiterLimit {
-            get;
-            set;
-        }
+		public ImageData CreateImageData(double sw, double sh) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public double ShadowBlur {
-            get;
-            set;
-        }
+		public ImageData CreateImageData(ImageData imagedata) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public string ShadowColor {
-            get;
-            set;
-        }
+		public Gradient CreateLinearGradient(double x0, double y0, double x1, double y1) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public double ShadowOffsetX {
-            get;
-            set;
-        }
+		public Pattern CreatePattern(CanvasElement canvas, string repetition) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public double ShadowOffsetY {
-            get;
-            set;
-        }
+		public Pattern CreatePattern(ImageElement image, string repetition) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public object StrokeStyle {
-            get;
-            set;
-        }
+		public Gradient CreateRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1) {
+			return null;
+		}
 
-        [IntrinsicProperty]
-        public TextAlign TextAlign {
-            get;
-            set;
-        }
+		public void DrawImage(ImageElement image, double dx, double dy) {
+		}
 
-        [IntrinsicProperty]
-        public TextBaseline TextBaseline {
-            get;
-            set;
-        }
+		public void DrawImage(ImageElement image, double dx, double dy, double dw, double dh) {
+		}
 
-        public void Arc(double x, double y, double radius, double startAngle, double endAngle, bool anticlockwise) {
-        }
+		public void DrawImage(ImageElement image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) {
+		}
 
-        public void ArcTo(double x1, double y1, double x2, double y2, double radius) {
-        }
+		public void DrawImage(CanvasElement image, double dx, double dy) {
+		}
 
-        public void BeginPath() {
-        }
+		public void DrawImage(CanvasElement image, double dx, double dy, double dw, double dh) {
+		}
 
-        public void BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y) {
-        }
+		public void DrawImage(CanvasElement image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) {
+		}
 
-        public void ClearRect(double x, double y, double w, double h) {
-        }
+		public void Fill() {
+		}
 
-        public void Clip() {
-        }
+		public void FillRect(double x, double y, double w, double h) {
+		}
 
-        public void ClosePath() {
-        }
+		[IntrinsicProperty]
+		public object FillStyle { get; set; }
 
-        public Gradient CreateLinearGradient(double x0, double y0, double x1, double y1) {
-            return null;
-        }
+		public void FillText(string text, double x, double y) {
+		}
 
-        public Gradient CreateRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1) {
-            return null;
-        }
+		public void FillText(string text, double x, double y, double maxWidth) {
+		}
 
-        public ImageData CreateImageData(double sw, double sh) {
-            return null;
-        }
+		[IntrinsicProperty]
+		public string Font { get; set; }
 
-        public ImageData CreateImageData(ImageData imagedata) {
-            return null;
-        }
+		public ImageData GetImageData(double sx, double sy, double sw, double sh) {
+			return null;
+		}
 
-        public Pattern CreatePattern(CanvasElement canvas, string repetition) {
-            return null;
-        }
+		public bool IsPointInPath(double x, double y) {
+			return false;
+		}
 
-        public Pattern CreatePattern(ImageElement image, string repetition) {
-            return null;
-        }
+		[IntrinsicProperty]
+		public LineCap LineCap { get; set; }
 
-        public void DrawImage(ImageElement image, double dx, double dy) {
-        }
+		[IntrinsicProperty]
+		public LineJoin LineJoin { get; set; }
 
-        public void DrawImage(ImageElement image, double dx, double dy, double dw, double dh) {
-        }
+		public void LineTo(double x, double y) {
+		}
 
-        public void DrawImage(ImageElement image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) {
-        }
+		[IntrinsicProperty]
+		public double LineWidth { get; set; }
 
-        public void DrawImage(CanvasElement image, double dx, double dy) {
-        }
+		public TextMetrics MeasureText(string text) {
+			return null;
+		}
 
-        public void DrawImage(CanvasElement image, double dx, double dy, double dw, double dh) {
-        }
+		[IntrinsicProperty]
+		public int MiterLimit { get; set; }
 
-        public void DrawImage(CanvasElement image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) {
-        }
+		public void MoveTo(double x, double y) {
+		}
 
-        public void Fill() {
-        }
+		public void PutImageData(ImageData imagedata, double dx, double dy) {
+		}
 
-        public void FillRect(double x, double y, double w, double h) {
-        }
+		public void PutImageData(ImageData imagedata, double dx, double dy, double dirtyX, double dirtyY, double dirtyWidth, double dirtyHeight) {
+		}
 
-        public void FillText(string text, double x, double y) {
-        }
+		public void QuadraticCurveTo(double cpx, double cpy, double x, double y) {
+		}
 
-        public void FillText(string text, double x, double y, double maxWidth) {
-        }
+		public void Rect(double x, double y, double w, double h) {
+		}
 
-        public ImageData GetImageData(double sx, double sy, double sw, double sh) {
-            return null;
-        }
+		public void Restore() {
+		}
 
-        public bool IsPointInPath(double x, double y) {
-            return false;
-        }
+		public void Rotate(double angle) {
+		}
 
-        public void LineTo(double x, double y) {
-        }
+		public void Save() {
+		}
 
-        public TextMetrics MeasureText(string text) {
-            return null;
-        }
+		public void Scale(double x, double y) {
+		}
 
-        public void MoveTo(double x, double y) {
-        }
+		public void SetTransform(double m11, double m12, double m21, double m22, double dx, double dy) {
+		}
 
-        public void PutImageData(ImageData imagedata, double dx, double dy) {
-        }
+		[IntrinsicProperty]
+		public double ShadowBlur { get; set; }
 
-        public void PutImageData(ImageData imagedata, double dx, double dy, double dirtyX, double dirtyY, double dirtyWidth, double dirtyHeight) {
-        }
+		[IntrinsicProperty]
+		public string ShadowColor { get; set; }
 
-        public void QuadraticCurveTo(double cpx, double cpy, double x, double y) {
-        }
+		[IntrinsicProperty]
+		public double ShadowOffsetX { get; set; }
 
-        public void Rect(double x, double y, double w, double h) {
-        }
+		[IntrinsicProperty]
+		public double ShadowOffsetY { get; set; }
 
-        public void Restore() {
-        }
+		public void Stroke() {
+		}
 
-        public void Rotate(double angle) {
-        }
+		public void StrokeRect(double x, double y, double w, double h) {
+		}
 
-        public void Save() {
-        }
+		[IntrinsicProperty]
+		public object StrokeStyle { get; set; }
 
-        public void Scale(double x, double y) {
-        }
+		public void StrokeText(string text, double x, double y) {
+		}
 
-        public void SetTransform(double m11, double m12, double m21, double m22, double dx, double dy) {
-        }
+		public void StrokeText(string text, double x, double y, double maxWidth) {
+		}
 
-        public void Stroke() {
-        }
+		[IntrinsicProperty]
+		public TextAlign TextAlign { get; set; }
 
-        public void StrokeRect(double x, double y, double w, double h) {
-        }
+		[IntrinsicProperty]
+		public TextBaseline TextBaseline { get; set; }
 
-        public void StrokeText(string text, double x, double y) {
-        }
+		public void Transform(double m11, double m12, double m21, double m22, double dx, double dy) {
+		}
 
-        public void StrokeText(string text, double x, double y, double maxWidth) {
-        }
-
-        public void Transform(double m11, double m12, double m21, double m22, double dx, double dy) {
-        }
-
-        public void Translate(double x, double y) {
-        }
-    }
+		public void Translate(double x, double y) {
+		}
+	}
 }

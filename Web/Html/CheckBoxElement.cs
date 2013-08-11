@@ -1,46 +1,34 @@
 // CheckBoxElement.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
-
-    [IgnoreNamespace]
+	[IgnoreNamespace]
 	[ScriptName("Element")]
-    [Imported(ObeysTypeSystem = true)]
-    public class CheckBoxElement : InputElement {
+	[Imported(ObeysTypeSystem = true)]
+	public class CheckBoxElement : InputElement {
+		internal CheckBoxElement() {
+		}
 
-        internal CheckBoxElement() {
-        }
+		[IntrinsicProperty]
+		public bool Checked {
+			get { return false; }
+			set { }
+		}
 
-        [IntrinsicProperty]
-        public bool Checked {
-            get {
-                return false;
-            }
-            set {
-            }
-        }
+		[IntrinsicProperty]
+		public bool DefaultChecked {
+			get { return false; }
+			set { }
+		}
 
-        [IntrinsicProperty]
-        public bool DefaultChecked {
-            get {
-                return false;
-            }
-			set {
-			}
-        }
-
-        [IntrinsicProperty]
-        public bool Indeterminate {
-            get {
-                return false;
-            }
-			set {
-			}
-        }
-    }
+		[IntrinsicProperty]
+		public bool Indeterminate {
+			get { return false; }
+			set { }
+		}
+	}
 }

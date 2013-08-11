@@ -1,46 +1,39 @@
 // GeolocationService.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Services {
+	[IgnoreNamespace]
+	[Imported]
+	public sealed class GeolocationService {
+		private GeolocationService() {
+		}
 
-    public delegate void GeolocationSuccessCallback(Geolocation location);
+		public void ClearWatch(object watchCookie) {
+		}
 
-    public delegate void GeolocationErrorCallback(GeolocationError error);
+		public void GetCurrentPosition(GeolocationSuccessCallback successCallback) {
+		}
 
-    [IgnoreNamespace]
-    [Imported]
-    public sealed class GeolocationService {
+		public void GetCurrentPosition(GeolocationSuccessCallback successCallback, GeolocationErrorCallback errorCallback) {
+		}
 
-        private GeolocationService() {
-        }
+		public void GetCurrentPosition(GeolocationSuccessCallback successCallback, GeolocationErrorCallback errorCallback, GeolocationOptions options) {
+		}
 
-        public void ClearWatch(object watchCookie) {
-        }
+		public object WatchPosition(GeolocationSuccessCallback successCallback) {
+			return null;
+		}
 
-        public void GetCurrentPosition(GeolocationSuccessCallback successCallback) {
-        }
+		public object WatchPosition(GeolocationSuccessCallback successCallback, GeolocationErrorCallback errorCallback) {
+			return null;
+		}
 
-        public void GetCurrentPosition(GeolocationSuccessCallback successCallback, GeolocationErrorCallback errorCallback) {
-        }
-
-        public void GetCurrentPosition(GeolocationSuccessCallback successCallback, GeolocationErrorCallback errorCallback, GeolocationOptions options) {
-        }
-
-        public object WatchPosition(GeolocationSuccessCallback successCallback) {
-            return null;
-        }
-
-        public object WatchPosition(GeolocationSuccessCallback successCallback, GeolocationErrorCallback errorCallback) {
-            return null;
-        }
-
-        public object WatchPosition(GeolocationSuccessCallback successCallback, GeolocationErrorCallback errorCallback, GeolocationOptions options) {
-            return null;
-        }
-    }
+		public object WatchPosition(GeolocationSuccessCallback successCallback, GeolocationErrorCallback errorCallback, GeolocationOptions options) {
+			return null;
+		}
+	}
 }

@@ -49,8 +49,15 @@
     <Compile Include="Html\CheckBoxElement.cs" />
     <Compile Include="Html\CanvasElement.cs" />
     <Compile Include="Html\ClientRectList.cs" />
+    <Compile Include="Html\Data\SqlDatabaseCallback.cs" />
+    <Compile Include="Html\Data\SqlErrorCallback.cs" />
+    <Compile Include="Html\Data\SqlStatementCallback.cs" />
+    <Compile Include="Html\Data\SqlStatementErrorCallback.cs" />
+    <Compile Include="Html\Data\SqlTransactionCallback.cs" />
     <Compile Include="Html\MediaCrossOriginPolicy.cs" />
     <Compile Include="Html\MediaPreload.cs" />
+    <Compile Include="Html\Services\GeolocationErrorCallback.cs" />
+    <Compile Include="Html\Services\GeolocationSuccessCallback.cs" />
     <Compile Include="Html\VideoElement.cs" />
     <Compile Include="Html\MediaElement.cs" />
     <Compile Include="Html\ElementEventListener.cs" />

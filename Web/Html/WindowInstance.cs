@@ -1,210 +1,171 @@
 // WindowInstance.cs
 // Script#/Libraries/Web
 // This source code is subject to terms and conditions of the Apache License, Version 2.0.
-//
+// 
 
-using System;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
+	/// <summary>
+	/// The window object represents the current browser window, and is the top-level
+	/// scripting object.
+	/// </summary>
+	[IgnoreNamespace]
+	[Imported]
+	public sealed class WindowInstance {
+		private WindowInstance() {
+		}
 
-    /// <summary>
-    /// The window object represents the current browser window, and is the top-level
-    /// scripting object.
-    /// </summary>
-    [IgnoreNamespace]
-    [Imported]
-    public sealed class WindowInstance {
+		/// <summary>
+		/// Adds a listener for the specified event.
+		/// </summary>
+		/// <param name="eventName">The name of the event such as 'load'.</param>
+		/// <param name="listener">The listener to be invoked in response to the event.</param>
+		public void AddEventListener(string eventName, ElementEventListener listener) {
+		}
 
-        private WindowInstance() {
-        }
+		/// <summary>
+		/// Adds a listener for the specified event.
+		/// </summary>
+		/// <param name="eventName">The name of the event such as 'load'.</param>
+		/// <param name="listener">The listener to be invoked in response to the event.</param>
+		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
+		public void AddEventListener(string eventName, ElementEventListener listener, bool useCapture) {
+		}
 
-        [IntrinsicProperty]
-        public bool Closed {
-            get {
-                return false;
-            }
-        }
+		public void AttachEvent(string eventName, ElementEventHandler handler) {
+		}
 
-        [IntrinsicProperty]
-        public string DefaultStatus {
-            get { 
-                return null; 
-            }
-            set { 
-            }
-        }
+		public void Close() {
+		}
 
-        [IntrinsicProperty]
-        public DocumentInstance Document {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public bool Closed {
+			get { return false; }
+		}
 
-        [IntrinsicProperty]
-        public IFrameElement FrameElement {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public string DefaultStatus {
+			get { return null; }
+			set { }
+		}
 
-        [IntrinsicProperty]
-        public int InnerHeight {
-            get {
-                return 0;
-            }
-        }
+		public void DetachEvent(string eventName, ElementEventHandler handler) {
+		}
 
-        [IntrinsicProperty]
-        public int InnerWidth {
-            get {
-                return 0;
-            }
-        }
+		public bool DispatchEvent(MutableEvent eventObject) {
+			return false;
+		}
 
-        [IntrinsicProperty]
-        public Location Location {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public DocumentInstance Document {
+			get { return null; }
+		}
 
-        [IntrinsicProperty]
-        public WindowInstance Parent {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public IFrameElement FrameElement {
+			get { return null; }
+		}
 
-        [IntrinsicProperty]
-        public WindowInstance Opener {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public WindowInstance[] Frames {
+			get { return null; }
+		}
 
-        [IntrinsicProperty]
-        public static int OuterHeight {
-            get {
-                return 0;
-            }
-        }
+		[IntrinsicProperty]
+		public int InnerHeight {
+			get { return 0; }
+		}
 
-        [IntrinsicProperty]
-        public static int OuterWidth {
-            get {
-                return 0;
-            }
-        }
+		[IntrinsicProperty]
+		public int InnerWidth {
+			get { return 0; }
+		}
 
-        [IntrinsicProperty]
-        public int PageXOffset {
-            get {
-                return 0;
-            }
-        }
+		[IntrinsicProperty]
+		public Location Location {
+			get { return null; }
+		}
 
-        [IntrinsicProperty]
-        public int PageYOffset {
-            get {
-                return 0;
-            }
-        }
+		public void Navigate(string url) {
+		}
 
-        [IntrinsicProperty]
-        public WindowInstance Self {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public WindowInstance Opener {
+			get { return null; }
+		}
 
-        [IntrinsicProperty]
-        public string Status {
-            get { 
-                return null; 
-            }
-            set { 
-            }
-        }
+		[IntrinsicProperty]
+		public static int OuterHeight {
+			get { return 0; }
+		}
 
-        [IntrinsicProperty]
-        public WindowInstance Top {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public static int OuterWidth {
+			get { return 0; }
+		}
 
-        [IntrinsicProperty]
-        public WindowInstance[] Frames {
-            get {
-                return null;
-            }
-        }
+		[IntrinsicProperty]
+		public int PageXOffset {
+			get { return 0; }
+		}
 
-        /// <summary>
-        /// Adds a listener for the specified event.
-        /// </summary>
-        /// <param name="eventName">The name of the event such as 'load'.</param>
-        /// <param name="listener">The listener to be invoked in response to the event.</param>
-        public void AddEventListener(string eventName, ElementEventListener listener) {
-        }
+		[IntrinsicProperty]
+		public int PageYOffset {
+			get { return 0; }
+		}
 
-        /// <summary>
-        /// Adds a listener for the specified event.
-        /// </summary>
-        /// <param name="eventName">The name of the event such as 'load'.</param>
-        /// <param name="listener">The listener to be invoked in response to the event.</param>
-        /// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-        public void AddEventListener(string eventName, ElementEventListener listener, bool useCapture) {
-        }
+		[IntrinsicProperty]
+		public WindowInstance Parent {
+			get { return null; }
+		}
 
-        public void AttachEvent(string eventName, ElementEventHandler handler) {
-        }
+		public void PostMessage(string message, string targetOrigin) {
+		}
 
-        public void Close() {
-        }
+		public void Print() {
+		}
 
-        public void DetachEvent(string eventName, ElementEventHandler handler) {
-        }
+		/// <summary>
+		/// Removes a listener for the specified event.
+		/// </summary>
+		/// <param name="eventName">The name of the event such as 'load'.</param>
+		/// <param name="listener">The listener to be invoked in response to the event.</param>
+		public void RemoveEventListener(string eventName, ElementEventListener listener) {
+		}
 
-        public bool DispatchEvent(MutableEvent eventObject) {
-            return false;
-        }
+		/// <summary>
+		/// Removes a listener for the specified event.
+		/// </summary>
+		/// <param name="eventName">The name of the event such as 'load'.</param>
+		/// <param name="listener">The listener to be invoked in response to the event.</param>
+		/// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
+		public void RemoveEventListener(string eventName, ElementEventListener listener, bool useCapture) {
+		}
 
-        public void Navigate(string url) {
-        }
+		public void Scroll(int x, int y) {
+		}
 
-        public void Print() {
-        }
+		public void ScrollBy(int x, int y) {
+		}
 
-        /// <summary>
-        /// Removes a listener for the specified event.
-        /// </summary>
-        /// <param name="eventName">The name of the event such as 'load'.</param>
-        /// <param name="listener">The listener to be invoked in response to the event.</param>
-        public void RemoveEventListener(string eventName, ElementEventListener listener) {
-        }
+		public void ScrollTo(int x, int y) {
+		}
 
-        /// <summary>
-        /// Removes a listener for the specified event.
-        /// </summary>
-        /// <param name="eventName">The name of the event such as 'load'.</param>
-        /// <param name="listener">The listener to be invoked in response to the event.</param>
-        /// <param name="useCapture">Whether the listener wants to initiate capturing the event.</param>
-        public void RemoveEventListener(string eventName, ElementEventListener listener, bool useCapture) {
-        }
+		[IntrinsicProperty]
+		public WindowInstance Self {
+			get { return null; }
+		}
 
-        public void Scroll(int x, int y) {
-        }
+		[IntrinsicProperty]
+		public string Status {
+			get { return null; }
+			set { }
+		}
 
-        public void ScrollBy(int x, int y) {
-        }
-
-        public void ScrollTo(int x, int y) {
-        }
-
-        public void PostMessage(string message, string targetOrigin) {
-        }
-    }
+		[IntrinsicProperty]
+		public WindowInstance Top {
+			get { return null; }
+		}
+	}
 }
