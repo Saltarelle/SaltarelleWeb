@@ -6,6 +6,10 @@ using System.Text;
 using Generator.AstNodes;
 using Generator.ExtensionMethods;
 using Generator.Meta;
+using ICSharpCode.NRefactory.CSharp;
+using ICSharpCode.NRefactory.TypeSystem;
+using Attribute = ICSharpCode.NRefactory.CSharp.Attribute;
+using TypeKind = Generator.Meta.TypeKind;
 
 #warning TODO: Handle EventTarget<TSelf> somehow
 #warning TODO: Event string names
@@ -236,108 +240,145 @@ namespace Generator {
 		private readonly Dictionary<string, ResolvedDefinition> _types;
 		private readonly Metadata _metadata;
 		private readonly List<string> _errors = new List<string>();
-		private readonly List<CSharp.TypeDefinition> _result = new List<CSharp.TypeDefinition>();
+		private readonly List<NamespacedEntityDeclaration> _result = new List<NamespacedEntityDeclaration>();
 
 		private Converter(Dictionary<string, ResolvedDefinition> types, Metadata metadata) {
 			_types = types;
 			_metadata = metadata;
 		}
 
-		private static readonly CSharp.Attribute IntrinsicPropertyAttribute = CSharp.Attribute.Create("IntrinsicProperty", "System.Runtime.CompilerServices", new string[0], new Tuple<string, string>[0]);
+		private static Attribute IntrinsicPropertyAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.IntrinsicProperty") }; } }
 
-		private static readonly CSharp.Attribute EnumerateAsArrayAttribute = CSharp.Attribute.Create("EnumerateAsArray", "System.Runtime.CompilerServices", new string[0], new Tuple<string, string>[0]);
+		private static Attribute EnumerateAsArrayAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.EnumerateAsArray") }; } }
 
-		private static readonly CSharp.Attribute IgnoreNamespaceAttribute = CSharp.Attribute.Create("IgnoreNamespace", "System.Runtime.CompilerServices", new string[0], new Tuple<string, string>[0]);
+		private static Attribute IgnoreNamespaceAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.IgnoreNamespace") }; } }
 
-		private static readonly CSharp.Attribute NamedValuesAttribute = CSharp.Attribute.Create("NamedValues", "System.Runtime.CompilerServices", new string[0], new Tuple<string, string>[0]);
+		private static Attribute NamedValuesAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.NamedValues") }; } }
 
-		private static readonly CSharp.Attribute SerializableAttribute = CSharp.Attribute.Create("Serializable", "System.Runtime.CompilerServices", new string[0], new Tuple<string, string>[0]);
+		private static Attribute SerializableAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.Serializable") }; } }
 
-		private static readonly CSharp.Attribute GlobalMethodsAttribute = CSharp.Attribute.Create("GlobalMethods", "System.Runtime.CompilerServices", new string[0], new Tuple<string, string>[0]);
+		private static Attribute GlobalMethodsAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.GlobalMethods") }; } }
 
-		private static readonly CSharp.Attribute FlagsAttribute = CSharp.Attribute.Create("Flags", "System", new string[0], new Tuple<string, string>[0]);
+		private static Attribute FlagsAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.Flags") }; } }
 
-		private static CSharp.Attribute InlineCodeAttribute(string code) {
-			return CSharp.Attribute.Create("InlineCode", "System.Runtime.CompilerServices", new[] { "\"" + code + "\"" }, new Tuple<string, string>[0]);
+		private static Attribute ExpandParamsAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.ExpandParams") }; } }
+
+		private static Attribute InlineCodeAttribute(string code) {
+			return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.InlineCode"), Arguments = { new PrimitiveExpression("\"" + code + "\"", "\"" + code + "\"") } };
 		}
 
-		private CSharp.Attribute ScriptNameAttribute(string name) {
-			return CSharp.Attribute.Create("ScriptName", "System.Runtime.CompilerServices", new[] { "\"" + name + "\"" }, new Tuple<string, string>[0]);
+		private Attribute ScriptNameAttribute(string name) {
+			return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.ScriptName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
 		}
 
-		private IEnumerable<CSharp.Attribute> ScriptNameAttributeIfRequired(string csharpName, string name) {
-			if (name.MakeCSharpName().MakeCamelCase() != name)
+		private IEnumerable<Attribute> ScriptNameAttributeIfRequired(string csharpName, string name) {
+			if (csharpName.MakeCamelCase() != name)
 				yield return ScriptNameAttribute(name);
 		}
 
-		private IEnumerable<CSharp.Attribute> ExpandParamsIfRequired(IEnumerable<CSharp.Parameter> parameters) {
-			if (parameters.Any(p => p.IsParams))
-				return new[] { CSharp.Attribute.Create("ExpandParams", "System.Runtime.CompilerServices", new string[0], new Tuple<string, string>[0]) };
-			else
-				return new CSharp.Attribute[0];
+		private IEnumerable<Attribute> ExpandParamsIfRequired(IEnumerable<ParameterDeclaration> parameters) {
+			if (parameters.Any(p => p.ParameterModifier == ParameterModifier.Params))
+				yield return ExpandParamsAttribute;
 		}
 
-		private static CSharp.Attribute ImportedAttribute(bool obeysTypeSystem, string typeCheckCode = null) {
-			var namedArgs = new List<Tuple<string, string>>();
+		private static Attribute ImportedAttribute(bool obeysTypeSystem, string typeCheckCode = null) {
+			var result = new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.Imported") };
 			if (obeysTypeSystem)
-				namedArgs.Add(Tuple.Create("ObeysTypeSystem", "true"));
+				result.Arguments.Add(new NamedExpression("ObeysTypeSystem", new PrimitiveExpression(true, "true")));
 			if (typeCheckCode != null)
-				namedArgs.Add(Tuple.Create("TypeCheckCode", "\"" + typeCheckCode + "\""));
-			return CSharp.Attribute.Create("Imported", "System.Runtime.CompilerServices", new string[0], namedArgs);
+				result.Arguments.Add(new NamedExpression("TypeCheckCode", new PrimitiveExpression("\"" + typeCheckCode + "\"", "\"" + typeCheckCode + "\"")));
+			return result;
 		}
 
-		private static CSharp.Attribute IndexerNameAttribute(string name) {
-			return CSharp.Attribute.Create("IndexerName", "System.Runtime.CompilerServices", new[] { "\"" + name + "\"" }, new Tuple<string, string>[0]);
+		private static Attribute IndexerNameAttribute(string name) {
+			return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.IndexerName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
 		}
 
-		private static TValue GetOrDefault<TKey, TValue>(IReadOnlyDictionary<TKey, TValue> dict, TKey key, TValue def) {
-			TValue result;
+		private static string GetUnqualifiedTypeName(AstType type) {
+			#warning TODO: Fix
+			if (type is SimpleType) {
+				return ((SimpleType)type).Identifier.Substring(((SimpleType)type).Identifier.LastIndexOf(".", StringComparison.Ordinal) + 1);
+			}
+			else if (type is PrimitiveType) {
+				return ((PrimitiveType)type).Keyword;
+			}
+			else if (type is ComposedType) {
+				var ct = (ComposedType)type;
+				return GetUnqualifiedTypeName(ct.BaseType) + (ct.HasNullableSpecifier ? "?" : "") + (ct.ArraySpecifiers.Count > 0 ? "[]" : "");
+			}
+			else
+				throw new ArgumentException("type was of type " + type.GetType(), "type");
+		}
+
+		private static Tuple<int, string, string> MemberOrderer(EntityDeclaration member) {
+			if (member is ConstructorDeclaration)
+				return Tuple.Create(0, (string)null, string.Join(",", ((ConstructorDeclaration)member).Parameters.Select(p => GetUnqualifiedTypeName(p.Type))));
+			if (member is PropertyDeclaration)
+				return Tuple.Create(2, member.Name, "");
+			if (member is MethodDeclaration)
+				return Tuple.Create(2, member.Name, string.Join(",", ((MethodDeclaration)member).Parameters.Select(p => GetUnqualifiedTypeName(p.Type))));
+			if (member is FieldDeclaration)
+				return Tuple.Create(2, ((FieldDeclaration)member).Variables.First().Name, "");
+			if (member is IndexerDeclaration)
+				return Tuple.Create(1, "", string.Join(",", ((IndexerDeclaration)member).Parameters.Select(p => p.Type.ToString())));
+			throw new ArgumentException("member");
+		}
+
+		private static AstType GetOrDefaultAstType<TKey>(IReadOnlyDictionary<TKey, AstType> dict, TKey key, AstType def) {
+			AstType result;
+			if (!dict.TryGetValue(key, out result))
+				result = def;
+			return result.Clone();
+		}
+
+		private static string GetOrDefaultString<TKey>(IReadOnlyDictionary<TKey, string> dict, TKey key, string def) {
+			string result;
 			if (!dict.TryGetValue(key, out result))
 				result = def;
 			return result;
 		}
 
-		private static CSharp.TypeReference GetOrDefault(IReadOnlyDictionary<string, CSharp.TypeReference> dict, string name, InterfaceMember member, CSharp.TypeReference def) {
-			CSharp.TypeReference result;
+		private static AstType GetOrDefaultAstType(IReadOnlyDictionary<string, AstType> dict, string name, InterfaceMember member, AstType def) {
+			AstType result;
 			if (name != null && dict.TryGetValue(name, out result))
-				return result;
+				return result.Clone();
 			if (dict.TryGetValue(WebIDLFormatter.FormatSignature(member), out result))
-				return result;
-			return def;
+				return result.Clone();
+			return def.Clone();
 		}
 
-		private CSharp.TypeReference ConvertType(WebIDLType type) {
+		private AstType ConvertType(WebIDLType type) {
 			return type.DecomposeWithResult(
 				builtin => {
 					switch (builtin.BuiltinType) {
-						case BuiltinType.Any:                return CSharp.TypeReference.Keyword("object");
-						case BuiltinType.DOMString:          return CSharp.TypeReference.Keyword("string");
-						case BuiltinType.Object:             return CSharp.TypeReference.Keyword("object");
-						case BuiltinType.Date:               return CSharp.TypeReference.NamedType("DateTime", "System");
-						case BuiltinType.Boolean:            return CSharp.TypeReference.Keyword("bool");
-						case BuiltinType.Byte:               return CSharp.TypeReference.Keyword("sbyte");
-						case BuiltinType.Octet:              return CSharp.TypeReference.Keyword("byte");
-						case BuiltinType.Float:              return CSharp.TypeReference.Keyword("float");
-						case BuiltinType.UnrestrictedFloat:  return CSharp.TypeReference.Keyword("float");
-						case BuiltinType.Double:             return CSharp.TypeReference.Keyword("double");
-						case BuiltinType.UnrestrictedDouble: return CSharp.TypeReference.Keyword("double");
-						case BuiltinType.Short:              return CSharp.TypeReference.Keyword("short");
-						case BuiltinType.UnsignedShort:      return CSharp.TypeReference.Keyword("ushort");
-						case BuiltinType.Long:               return CSharp.TypeReference.Keyword("int");
-						case BuiltinType.UnsignedLong:       return CSharp.TypeReference.Keyword("uint");
-						case BuiltinType.LongLong:           return CSharp.TypeReference.Keyword("long");
-						case BuiltinType.UnsignedLongLong:   return CSharp.TypeReference.Keyword("ulong");
+						case BuiltinType.Any:                return new PrimitiveType("object");
+						case BuiltinType.DOMString:          return new PrimitiveType("string");
+						case BuiltinType.Object:             return new PrimitiveType("object");
+						case BuiltinType.Date:               return new SimpleType("System.DateTime");
+						case BuiltinType.Boolean:            return new PrimitiveType("bool");
+						case BuiltinType.Byte:               return new PrimitiveType("sbyte");
+						case BuiltinType.Octet:              return new PrimitiveType("byte");
+						case BuiltinType.Float:              return new PrimitiveType("float");
+						case BuiltinType.UnrestrictedFloat:  return new PrimitiveType("float");
+						case BuiltinType.Double:             return new PrimitiveType("double");
+						case BuiltinType.UnrestrictedDouble: return new PrimitiveType("double");
+						case BuiltinType.Short:              return new PrimitiveType("short");
+						case BuiltinType.UnsignedShort:      return new PrimitiveType("ushort");
+						case BuiltinType.Long:               return new PrimitiveType("int");
+						case BuiltinType.UnsignedLong:       return new PrimitiveType("uint");
+						case BuiltinType.LongLong:           return new PrimitiveType("long");
+						case BuiltinType.UnsignedLongLong:   return new PrimitiveType("ulong");
 						default: throw new ArgumentException("Invalid builtin type " + builtin.BuiltinType);
 					}
 				},
-				@void => CSharp.TypeReference.Keyword("void"),
-				@union => CSharp.TypeReference.GenericNamedType("TypeOption", "System", @union.Members.Select(ConvertType)),
+				@void => new PrimitiveType("void"), 
+				@union => new SimpleType("System.TypeOption", @union.Members.Select(ConvertType)),
 				typeReference => {
 					var meta = _metadata.Types[typeReference.Target];
-					return meta.AliasFor ?? CSharp.TypeReference.NamedType(meta.CSharpName, meta.Namespace);
+					return meta.AliasFor ?? new SimpleType((!string.IsNullOrEmpty(meta.Namespace) ? meta.Namespace + "." : "") + meta.CSharpName);
 				},
-				array => CSharp.TypeReference.Array(ConvertType(array.ElementType)),
-				sequence => CSharp.TypeReference.Array(ConvertType(sequence.ElementType)),
+				array => ConvertType(array.ElementType).MakeArrayType(),
+				sequence => ConvertType(sequence.ElementType).MakeArrayType(),
 				nullable => {
 					bool underlyingIsNullable = nullable.UnderlyingType.DecomposeWithResult(
 						builtin => {
@@ -370,50 +411,83 @@ namespace Generator {
 					);
 					var result = ConvertType(nullable.UnderlyingType);
 					if (!underlyingIsNullable)
-						result = CSharp.TypeReference.Nullable(result);
+						result = result.MakeNullableType();
 					return result;
 				}
 			);
 		}
 
-		private string ConvertValue(Value value) {
-			return value.DecomposeWithResult(
-				@int => @int.ToString(CultureInfo.InvariantCulture),
-				@float => @float.ToString(CultureInfo.InvariantCulture),
-				@string => "\"" + @string + "\"",
+		private Expression ConvertValue(Value value) {
+			return value.DecomposeWithResult<Expression>(
+				@int => new PrimitiveExpression(@int, @int.ToString(CultureInfo.InvariantCulture)),
+				@float => new PrimitiveExpression(@float, @float.ToString(CultureInfo.InvariantCulture)),
+				@string => new PrimitiveExpression("\"" + @string + "\"", "\"" + @string + "\""),
 				special => {
 					switch (special) {
-						case SpecialValue.True:             return "true";
-						case SpecialValue.False:            return "false";
-						case SpecialValue.Null:             return "null";
-						case SpecialValue.PositiveInfinity: return "double.PositiveInfinity";
-						case SpecialValue.NegativeInfinity: return "double.NegativeInfinity";
-						case SpecialValue.NaN:              return "double.NaN";
+						case SpecialValue.True:             return new PrimitiveExpression(true, "true");
+						case SpecialValue.False:            return new PrimitiveExpression(false, "false");
+						case SpecialValue.Null:             return new NullReferenceExpression();
+						case SpecialValue.PositiveInfinity: return new MemberReferenceExpression(new IdentifierExpression("double"), "PositiveInfinity");
+						case SpecialValue.NegativeInfinity: return new MemberReferenceExpression(new IdentifierExpression("double"), "NegativeInfinity");
+						case SpecialValue.NaN:              return new MemberReferenceExpression(new IdentifierExpression("double"), "NaN");
 						default: throw new ArgumentException("Invalid special value " + special);
 					}
 				}
 			);
 		}
 
-		private IList<IReadOnlyList<CSharp.Parameter>> GetParameterLists(IEnumerable<Argument> arguments, Dictionary<string, CSharp.TypeReference> typeOverrides, bool includePartialSignatures) {
-			var result = new List<IReadOnlyList<CSharp.Parameter>>();
-			var current = new List<CSharp.Parameter>();
+		private static BlockStatement GenerateBody(AstType returnType) {
+			Expression returnExpr;
+			var pt = returnType as PrimitiveType;
+			if (pt != null) {
+				if (pt.KnownTypeCode == KnownTypeCode.Void)
+					return new BlockStatement();
+
+				switch (pt.KnownTypeCode) {
+					case KnownTypeCode.String:
+					case KnownTypeCode.Object:
+						returnExpr = new NullReferenceExpression();
+						break;
+					case KnownTypeCode.Char:
+						returnExpr = new PrimitiveExpression('\0', "\\0");
+						break;
+					case KnownTypeCode.Boolean:
+						returnExpr = new PrimitiveExpression(false, "false");
+						break;
+					default:
+						returnExpr = new PrimitiveExpression(0, "0");
+						break;
+				}
+			}
+			else if (returnType is ComposedType) {
+				returnExpr = new NullReferenceExpression();
+			}
+			else {
+				returnExpr = new DefaultValueExpression(returnType.Clone());
+			}
+
+			return new BlockStatement { Statements =  { new ReturnStatement(returnExpr) } };
+		}
+
+		private IList<IReadOnlyList<ParameterDeclaration>> GetParameterLists(IEnumerable<Argument> arguments, Dictionary<string, AstType> typeOverrides, bool includePartialSignatures) {
+			var result = new List<IReadOnlyList<ParameterDeclaration>>();
+			var current = new List<ParameterDeclaration>();
 
 			foreach (var arg in arguments) {
 				string name = arg.Name.RemoveLeadingUnderscore();
-				var type = GetOrDefault(typeOverrides, name, ConvertType(arg.Type));
+				var type = GetOrDefaultAstType(typeOverrides, name, ConvertType(arg.Type));
 
 				arg.Decompose(
 					required => {
-						current.Add(CSharp.Parameter.Create(name, type));
+						current.Add(new ParameterDeclaration(type, name));
 					},
 					optional => {
 						if (includePartialSignatures)
-							result.Add(new List<CSharp.Parameter>(current));
-						current.Add(CSharp.Parameter.Create(name, type));
+							result.Add(new List<ParameterDeclaration>(current.Select(p => (ParameterDeclaration)p.Clone())));
+						current.Add(new ParameterDeclaration(type, name));
 					},
 					ellipsis => {
-						current.Add(CSharp.Parameter.Create(name, CSharp.TypeReference.Array(type), isParams: true));
+						current.Add(new ParameterDeclaration(type.MakeArrayType(), name, ParameterModifier.Params));
 					}
 				);
 			}
@@ -456,72 +530,88 @@ namespace Generator {
 		}
 
 		private class IndexedPropertyData {
-			public CSharp.TypeReference IndexParameterType;
+			public AstType IndexParameterType;
 			public List<string> IndexParameterNames = new List<string>();
-			public List<CSharp.TypeReference> PropertyTypes = new List<CSharp.TypeReference>();
+			public List<AstType> PropertyTypes = new List<AstType>();
 			public bool CanRead;
 			public bool CanWrite;
 		}
 
-		private bool IsIntegerType(CSharp.TypeReference type) {
-			return type.DecomposeWithResult(
-				keyword => {
-					switch (keyword.Keyword) {
-						case "sbyte":
-						case "byte":
-						case "short":
-						case "ushort":
-						case "int":
-						case "uint":
-						case "long":
-						case "ulong":
-							return true;
-						default:
-							return false;
-					}
-				},
-				namedType => false,
-				array     => false,
-				nullable  => IsIntegerType(nullable.UnderlyingType)
-			);
+		private bool IsIntegerType(AstType type) {
+			var pt = type as PrimitiveType;
+			if (pt != null) {
+				switch (pt.KnownTypeCode) {
+					case KnownTypeCode.SByte:
+					case KnownTypeCode.Byte:
+					case KnownTypeCode.Int16:
+					case KnownTypeCode.UInt16:
+					case KnownTypeCode.Int32:
+					case KnownTypeCode.UInt32:
+					case KnownTypeCode.Int64:
+					case KnownTypeCode.UInt64:
+						return true;
+				}
+			}
+			return false;
 		}
 
-		private bool HasIntegerLength(IEnumerable<CSharp.ClassMember> members) {
-			return members.Any(m => m.DecomposeWithResult(
-			                            constructor => false,
-			                            property    => property.Name == "Length" && property.CanRead && IsIntegerType(property.Type),
-			                            method      => false,
-			                            field       => false,
-			                            indexer     => false));
+		private bool HasIntegerLength(IEnumerable<EntityDeclaration> members) {
+			return members.Any(m => m.Name == "Length" && IsIntegerType(m.ReturnType) && ((m is PropertyDeclaration && !((PropertyDeclaration)m).Getter.IsNull) || m is FieldDeclaration));
 		}
 
-		private void AddConstructors(ParsedExtendedAttributes attributes, Dictionary<string, CSharp.TypeReference> typeOverrides, List<CSharp.ClassMember> members) {
+		private void AddAttributes(AstNodeCollection<AttributeSection> attributes, IEnumerable<Attribute> newAttributes) {
+			AttributeSection section = null;
+			foreach (var attr in newAttributes) {
+				if (attributes.Count == 0) {
+					section = new AttributeSection();
+					attributes.Add(section);
+				}
+				else if (section == null)
+					section = attributes.First();
+				section.Attributes.Add(attr);
+			}
+		}
+
+		private void AddAttribute(AstNodeCollection<AttributeSection> attributes, Attribute newAttribute) {
+			if (attributes.Count == 0)
+				attributes.Add(new AttributeSection());
+			attributes.First().Attributes.Add(newAttribute);
+		}
+
+		private void AddConstructors(ParsedExtendedAttributes attributes, Dictionary<string, AstType> typeOverrides, List<EntityDeclaration> members) {
 			bool hasParameterlessCtor = false;
 			foreach (var c in attributes.Constructors) {
 				foreach (var sig in GetParameterLists(c, typeOverrides, includePartialSignatures: true)) {
 					if (sig.Count == 0)
 						hasParameterlessCtor = true;
-					members.Add(CSharp.ClassMember.Constructor(CSharp.Accessibility.Public, sig, ExpandParamsIfRequired(sig)));
+					var ctor = new ConstructorDeclaration { Modifiers = Modifiers.Public, Body = new BlockStatement() };
+					ctor.Parameters.AddRange(sig);
+					AddAttributes(ctor.Attributes, ExpandParamsIfRequired(sig));
+					members.Add(ctor);
 				}
 			}
 			foreach (var c in attributes.NamedConstructors) {
 				foreach (var sig in GetParameterLists(c.Item2, typeOverrides, includePartialSignatures: true)) {
 					if (sig.Count == 0)
 						hasParameterlessCtor = true;
-					members.Add(CSharp.ClassMember.Constructor(CSharp.Accessibility.Public, sig, new[] { InlineCodeAttribute("new " + c.Item1 + MakeInlineCodeParameterList(sig)) }));
+					var ctor = new ConstructorDeclaration { Modifiers = Modifiers.Public, Body = new BlockStatement() };
+					ctor.Parameters.AddRange(sig);
+					AddAttribute(ctor.Attributes, InlineCodeAttribute("new " + c.Item1 + MakeInlineCodeParameterList(sig)));
+					members.Add(ctor);
 				}
 			}
-			if (!hasParameterlessCtor)
-				members.Add(CSharp.ClassMember.Constructor(CSharp.Accessibility.Internal, new CSharp.Parameter[0], new CSharp.Attribute[0]));
+			if (!hasParameterlessCtor) {
+				members.Add(new ConstructorDeclaration { Modifiers = Modifiers.Internal, Body = new BlockStatement() });
+			}
 		}
 
-		private string MakeInlineCodeParameterList(IReadOnlyList<CSharp.Parameter> parameters) {
+		private string MakeInlineCodeParameterList(IReadOnlyList<ParameterDeclaration> parameters) {
 			var result = new StringBuilder("(");
 			bool first = true;
 			foreach (var p in parameters) {
 				if (!first)
 					result.Append(", ");
-				result.Append("{" + (p.IsParams ? "*" : "") + p.Name + "}");
+				result.Append("{" + (p.ParameterModifier == ParameterModifier.Params ? "*" : "") + p.Name + "}");
 				first = false;
 			}
 			result.Append(")");
@@ -541,13 +631,14 @@ namespace Generator {
 			return ParsedExtendedAttributes.Parse(t.Item2, t.Item1, _errors);
 		}
 
-		private CSharp.TypeReference MakeTypeOptionIfRequired(IReadOnlyList<CSharp.TypeReference> options) {
-			return options.Count > 1 ? CSharp.TypeReference.GenericNamedType("TypeOption", "System", options) : options[0];
+		private AstType MakeTypeOptionIfRequired(IReadOnlyList<AstType> options) {
+			return options.Count > 1 ? new SimpleType("System.TypeOption", options) : options[0];
 		}
 
-		private void AddMembers(IEnumerable<InterfaceMember> source, Dictionary<string, CSharp.TypeReference> typeOverrides, string interfaceName, bool noInterfaceObject, IReadOnlyDictionary<string, string> renames, TypeKind typeKind, IReadOnlyList<string> removes, List<CSharp.ClassMember> members) {
+		private void AddMembers(IEnumerable<InterfaceMember> source, Dictionary<string, AstType> typeOverrides, string interfaceName, bool noInterfaceObject, IReadOnlyDictionary<string, string> renames, TypeKind typeKind, IReadOnlyList<string> removes, bool addAsInterfaceMembers, List<EntityDeclaration> members) {
+			Modifiers @public = addAsInterfaceMembers ? Modifiers.None : Modifiers.Public;
 			var indexedProperties = new Dictionary<string, IndexedPropertyData>();
-			var enumerateAsArrayCandidates = new List<CSharp.TypeReference>();
+			var enumerateAsArrayCandidates = new List<AstType>();
 
 			foreach (var sourceMember in source) {
 				if (removes.Contains(WebIDLFormatter.FormatSignature(sourceMember)))
@@ -559,11 +650,28 @@ namespace Generator {
 							var memberAttributes = ParsedExtendedAttributes.Parse(@const.ExtendedAttributes, interfaceName + "." + @const.Name, _errors);
 							string name = @const.Name.RemoveLeadingUnderscore();
 							if (ShouldBeIncluded(name, interfaceName, memberAttributes) && !removes.Contains(name)) {
-								string csharpName = GetOrDefault(renames, name, name.MakeCSharpName());
-								if (noInterfaceObject)
-									members.Add(CSharp.ClassMember.Property(CSharp.Accessibility.Public, csharpName, ConvertType(@const.Type), CSharp.MemberModifiers.None, canRead: true, canWrite: false, attributes: new[] { IntrinsicPropertyAttribute }.Concat(ScriptNameAttributeIfRequired(csharpName, name))));
-								else
-									members.Add(CSharp.ClassMember.Field(CSharp.Accessibility.Public, csharpName, ConvertType(@const.Type), CSharp.MemberModifiers.Const, ConvertValue(@const.Value), ScriptNameAttributeIfRequired(csharpName, name)));
+								string csharpName = GetOrDefaultString(renames, name, name.MakeCSharpName());
+								var returnType = ConvertType(@const.Type);
+								if (noInterfaceObject) {
+									var p = new PropertyDeclaration {
+										Modifiers = @public,
+										Name = csharpName,
+										ReturnType = returnType,
+										Getter = new Accessor() { Body = addAsInterfaceMembers ? null : GenerateBody(returnType) }
+									};
+									AddAttribute(p.Attributes, IntrinsicPropertyAttribute);
+									AddAttributes(p.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+									members.Add(p);
+								}
+								else {
+									var f = new FieldDeclaration {
+										Modifiers = @public | Modifiers.Const,
+										Variables = { new VariableInitializer { Name = csharpName, Initializer = ConvertValue(@const.Value) } },
+										ReturnType = returnType
+									};
+									AddAttributes(f.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+									members.Add(f);
+								}
 							}
 						}
 					},
@@ -575,16 +683,37 @@ namespace Generator {
 						string name = operation.Name.RemoveLeadingUnderscore();
 						if (ShouldBeIncluded(name, interfaceName, memberAttributes) && !removes.Contains(name)) {
 							if (name != null) {
-								var type = GetOrDefault(typeOverrides, name, sourceMember, ConvertType(operation.ReturnType));
-								string csharpName = GetOrDefault(renames, name, name.MakeCSharpName());
-								foreach (var sig in GetParameterLists(operation.Arguments, typeOverrides, includePartialSignatures: true))
-									members.Add(CSharp.ClassMember.Method(CSharp.Accessibility.Public, csharpName, type, (operation.Qualifiers & OperationQualifiers.Static) != 0 ? CSharp.MemberModifiers.Static : CSharp.MemberModifiers.None, sig, ScriptNameAttributeIfRequired(csharpName, name).Concat(ExpandParamsIfRequired(sig))));
+								var type = GetOrDefaultAstType(typeOverrides, name, sourceMember, ConvertType(operation.ReturnType));
+								string csharpName = GetOrDefaultString(renames, name, name.MakeCSharpName());
+								foreach (var sig in GetParameterLists(operation.Arguments, typeOverrides, includePartialSignatures: true)) {
+									var returnType = type.Clone();
+									var m = new MethodDeclaration {
+										Modifiers = @public | ((operation.Qualifiers & OperationQualifiers.Static) != 0 ? Modifiers.Static : 0),
+										Name = csharpName,
+										ReturnType = returnType,
+										Body = addAsInterfaceMembers ? null : GenerateBody(returnType)
+									};
+									AddAttributes(m.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+									AddAttributes(m.Attributes, ExpandParamsIfRequired(sig));
+									m.Parameters.AddRange(sig);
+									members.Add(m);
+								}
 							}
 							else {
 								var type = ConvertType(operation.ReturnType);
 								if ((operation.Qualifiers & OperationQualifiers.LegacyCaller) != 0) {
-									foreach (var sig in GetParameterLists(operation.Arguments, typeOverrides, includePartialSignatures: true))
-										members.Add(CSharp.ClassMember.Method(CSharp.Accessibility.Public, "Call", type, (operation.Qualifiers & OperationQualifiers.Static) != 0 ? CSharp.MemberModifiers.Static : CSharp.MemberModifiers.None, sig, new[] { InlineCodeAttribute("{this}" + MakeInlineCodeParameterList(sig)) }));
+									foreach (var sig in GetParameterLists(operation.Arguments, typeOverrides, includePartialSignatures: true)) {
+										var returnType = type.Clone();
+										var m = new MethodDeclaration {
+											Modifiers = @public | ((operation.Qualifiers & OperationQualifiers.Static) != 0 ? Modifiers.Static : 0),
+											Name = "Call",
+											ReturnType = returnType,
+											Body = addAsInterfaceMembers ? null : GenerateBody(returnType)
+										};
+										AddAttribute(m.Attributes, InlineCodeAttribute("{this}" + MakeInlineCodeParameterList(sig)));
+										m.Parameters.AddRange(sig);
+										members.Add(m);
+									}
 								}
 								else if ((operation.Qualifiers & (OperationQualifiers.Accessor | OperationQualifiers.Stringifier)) == 0) {
 									_errors.Add("Unnamed operation `" + interfaceName + ".()' is not supported");
@@ -598,16 +727,16 @@ namespace Generator {
 									return;
 								}
 								string indexName = operation.Arguments[0].Name.RemoveLeadingUnderscore();
-								var indexType = GetOrDefault(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
-								string key = CSharp.CodeFormatter.Format(indexType);
+								var indexType = GetOrDefaultAstType(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
+								string key = indexType.ToString(Program.FormattingOptions);
 								var argumentName = operation.Arguments[1].Name.RemoveLeadingUnderscore();
-								var argumentType = GetOrDefault(typeOverrides, argumentName, ConvertType(operation.Arguments[1].Type));
+								var argumentType = GetOrDefaultAstType(typeOverrides, argumentName, ConvertType(operation.Arguments[1].Type));
 
 								IndexedPropertyData data;
 								if (indexedProperties.TryGetValue(key, out data)) {
 									if (!data.IndexParameterNames.Contains(indexName))
 										data.IndexParameterNames.Add(indexName);
-									if (!data.PropertyTypes.Any(t => CSharp.CodeFormatter.Format(t) == CSharp.CodeFormatter.Format(argumentType)))
+									if (!data.PropertyTypes.Any(t => t.ToString(Program.FormattingOptions) == argumentType.ToString(Program.FormattingOptions)))
 										data.PropertyTypes.Add(argumentType);
 								}
 								else
@@ -621,22 +750,22 @@ namespace Generator {
 									return;
 								}
 								string indexName = operation.Arguments[0].Name.RemoveLeadingUnderscore();
-								var indexType = GetOrDefault(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
-								string key = CSharp.CodeFormatter.Format(indexType);
-								var returnType = GetOrDefault(typeOverrides, name, sourceMember, ConvertType(operation.ReturnType));
+								var indexType = GetOrDefaultAstType(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
+								string key = indexType.ToString(Program.FormattingOptions);
+								var returnType = GetOrDefaultAstType(typeOverrides, name, sourceMember, ConvertType(operation.ReturnType));
 
 								IndexedPropertyData data;
 								if (indexedProperties.TryGetValue(key, out data)) {
 									if (!data.IndexParameterNames.Contains(indexName))
 										data.IndexParameterNames.Add(indexName);
-									if (!data.PropertyTypes.Any(t => CSharp.CodeFormatter.Format(t) == CSharp.CodeFormatter.Format(returnType)))
+									if (!data.PropertyTypes.Any(t => t.ToString(Program.FormattingOptions) == returnType.ToString(Program.FormattingOptions)))
 										data.PropertyTypes.Add(returnType);
 								}
 								else
-									data = indexedProperties[key] = new IndexedPropertyData() { IndexParameterNames = { indexName }, IndexParameterType = indexType, PropertyTypes = { returnType } };
+									data = indexedProperties[key] = new IndexedPropertyData { IndexParameterNames = { indexName }, IndexParameterType = indexType, PropertyTypes = { returnType } };
 								data.CanRead = true;
 
-								if (IsIntegerType(indexType) && !enumerateAsArrayCandidates.Any(t => CSharp.CodeFormatter.Format(t) == CSharp.CodeFormatter.Format(returnType)))
+								if (IsIntegerType(indexType) && !enumerateAsArrayCandidates.Any(t => t.ToString(Program.FormattingOptions) == returnType.ToString(Program.FormattingOptions)))
 									enumerateAsArrayCandidates.Add(returnType);
 
 								accessorCount++;
@@ -649,8 +778,16 @@ namespace Generator {
 
 								if (name == null) {
 									string indexName = operation.Arguments[0].Name.RemoveLeadingUnderscore();
-									var indexType = GetOrDefault(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
-									members.Add(CSharp.ClassMember.Method(CSharp.Accessibility.Public, "Delete", CSharp.TypeReference.Keyword("void"), CSharp.MemberModifiers.None, new[] { CSharp.Parameter.Create(indexName, indexType) }, new[] { InlineCodeAttribute("delete {this}[{" + indexName + "}]") }));
+									var indexType = GetOrDefaultAstType(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
+									var m = new MethodDeclaration {
+										Modifiers = @public,
+										Name = "Delete",
+										ReturnType = new PrimitiveType("void"),
+										Parameters = { new ParameterDeclaration(indexType, indexName) },
+										Body = addAsInterfaceMembers ? null : new BlockStatement()
+									};
+									AddAttribute(m.Attributes, InlineCodeAttribute("delete {this}[{" + indexName + "}]"));
+									members.Add(m);
 								}
 
 								accessorCount++;
@@ -664,9 +801,19 @@ namespace Generator {
 						var memberAttributes = ParsedExtendedAttributes.Parse(attribute.ExtendedAttributes, interfaceName + "." + attribute.Name, _errors);
 						string name = attribute.Name.RemoveLeadingUnderscore();
 						if (ShouldBeIncluded(name, interfaceName, memberAttributes) && !removes.Contains(name)) {
-							string csharpName = GetOrDefault(renames, name, name.MakeCSharpName());
-							var attrType = GetOrDefault(typeOverrides, name, ConvertType(attribute.Type));
-							members.Add(CSharp.ClassMember.Property(CSharp.Accessibility.Public, csharpName, attrType, (attribute.Qualifiers & AttributeQualifiers.Static) != 0 ? CSharp.MemberModifiers.Static : CSharp.MemberModifiers.None, true, (attribute.Qualifiers & AttributeQualifiers.ReadOnly) == 0, ScriptNameAttributeIfRequired(csharpName, name).Concat(new[] { IntrinsicPropertyAttribute })));
+							string csharpName = GetOrDefaultString(renames, name, name.MakeCSharpName());
+							var attrType = GetOrDefaultAstType(typeOverrides, name, ConvertType(attribute.Type));
+							var p = new PropertyDeclaration {
+								Modifiers = @public | ((attribute.Qualifiers & AttributeQualifiers.Static) != 0 ? Modifiers.Static : 0),
+								Name = csharpName,
+								ReturnType = attrType,
+								Getter = new Accessor { Body = addAsInterfaceMembers ? null : GenerateBody(attrType) },
+								Setter = (attribute.Qualifiers & AttributeQualifiers.ReadOnly) != 0 ? Accessor.Null : new Accessor { Body = addAsInterfaceMembers ? null : new BlockStatement() },
+							};
+
+							AddAttribute(p.Attributes, IntrinsicPropertyAttribute);
+							AddAttributes(p.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+							members.Add(p);
 						}
 					},
 					jsonifier => {
@@ -677,30 +824,56 @@ namespace Generator {
 
 			foreach (var p in indexedProperties.Values) {
 				if (p.IndexParameterNames.Count > 1)
-					_errors.Add("Ambiguous parameter name in indexer `" + interfaceName + "[" + CSharp.CodeFormatter.Format(p.IndexParameterType) + "] (candidate names are " + string.Join(", ", p.IndexParameterNames.Select(n => "`" + n + "'")) + ")");
-				members.Add(CSharp.ClassMember.Indexer(CSharp.Accessibility.Public, MakeTypeOptionIfRequired(p.PropertyTypes), CSharp.MemberModifiers.None, new[] { CSharp.Parameter.Create(p.IndexParameterNames[0], p.IndexParameterType) }, canRead: p.CanRead, canWrite: p.CanWrite, attributes: new[] { IntrinsicPropertyAttribute, IndexerNameAttribute("__Item") }));
+					_errors.Add("Ambiguous parameter name in indexer `" + interfaceName + "[" + p.IndexParameterType.ToString(Program.FormattingOptions) + "] (candidate names are " + string.Join(", ", p.IndexParameterNames.Select(n => "`" + n + "'")) + ")");
+				var propertyType = MakeTypeOptionIfRequired(p.PropertyTypes);
+				var i = new IndexerDeclaration {
+					Modifiers = Modifiers.Public,
+					ReturnType = propertyType,
+					Parameters = { new ParameterDeclaration(p.IndexParameterType, p.IndexParameterNames[0]) },
+					Getter = p.CanRead ? new Accessor { Body = addAsInterfaceMembers ? null : GenerateBody(propertyType) } : null,
+					Setter = p.CanWrite ? new Accessor { Body = addAsInterfaceMembers ? null : new BlockStatement() } : null,
+				};
+				AddAttribute(i.Attributes, IndexerNameAttribute("__Item"));
+				AddAttribute(i.Attributes, IntrinsicPropertyAttribute);
+				members.Add(i);
 			}
 
 			if (enumerateAsArrayCandidates.Count > 0 && HasIntegerLength(members)) {
 				var arrayType = MakeTypeOptionIfRequired(enumerateAsArrayCandidates);
-				members.Add(CSharp.ClassMember.Method(CSharp.Accessibility.Public, "GetEnumerator", CSharp.TypeReference.GenericNamedType("IEnumerator", "System.Collections.Generic", new[] { arrayType }), CSharp.MemberModifiers.None, new CSharp.Parameter[0], new[] { EnumerateAsArrayAttribute, InlineCodeAttribute("new {$System.ArrayEnumerator}({this})") }));
+				var m = new MethodDeclaration {
+					Modifiers = Modifiers.Public,
+					Name = "GetEnumerator",
+					ReturnType = new SimpleType("System.Collections.IEnumerator", arrayType.Clone()),
+					Body = new BlockStatement { Statements = { new ReturnStatement(new NullReferenceExpression()) } }
+				};
+				AddAttribute(m.Attributes, EnumerateAsArrayAttribute);
+				AddAttribute(m.Attributes, InlineCodeAttribute("new {$System.ArrayEnumerator}({this})"));
+				members.Add(m);
 			}
 		}
 
-		private void AddMembers(IEnumerable<DictionaryMember> source, Dictionary<string, CSharp.TypeReference> typeOverrides, string dictionaryName, IReadOnlyDictionary<string, string> renames, IReadOnlyList<string> removes, List<CSharp.ClassMember> members) {
+		private void AddMembers(IEnumerable<DictionaryMember> source, Dictionary<string, AstType> typeOverrides, string dictionaryName, IReadOnlyDictionary<string, string> renames, IReadOnlyList<string> removes, List<EntityDeclaration> members) {
 			foreach (var sourceMember in source) {
 				var memberAttributes = ParsedExtendedAttributes.Parse(sourceMember.ExtendedAttributes, dictionaryName + "." + sourceMember.Name, _errors);
 				string name = sourceMember.Name.RemoveLeadingUnderscore();
 				if (ShouldBeIncluded(name, dictionaryName, memberAttributes) && !removes.Contains(name)) {
-					string csharpName = GetOrDefault(renames, name, name.MakeCSharpName());
-					var type = GetOrDefault(typeOverrides, name, ConvertType(sourceMember.Type));
-					members.Add(CSharp.ClassMember.Property(CSharp.Accessibility.Public, csharpName, type, CSharp.MemberModifiers.None, true, true, ScriptNameAttributeIfRequired(csharpName, name)));
+					string csharpName = GetOrDefaultString(renames, name, name.MakeCSharpName());
+					var type = GetOrDefaultAstType(typeOverrides, name, ConvertType(sourceMember.Type));
+					var p = new PropertyDeclaration {
+						Modifiers = Modifiers.Public,
+						Name = csharpName,
+						ReturnType = type,
+						Getter = new Accessor(),
+						Setter = new Accessor(),
+					};
+					AddAttributes(p.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+					members.Add(p);
 				}
 			}
 		}
 
-		private CSharp.TypeDefinition ConvertTypeDefinition(ResolvedDefinition type, bool returnNonGenerated) {
-			CSharp.TypeDefinition result = null;
+		private NamespacedEntityDeclaration ConvertTypeDefinition(ResolvedDefinition type, bool returnNonGenerated) {
+			NamespacedEntityDeclaration result = null;
 			type.Decompose(
 				@interface => {
 					var parsedAttributes = ParsedExtendedAttributes.Parse(@interface.ExtendedAttributes, @interface.Name, _errors);
@@ -711,13 +884,13 @@ namespace Generator {
 							return;
 						var typeOverrides = meta.TypeOverrides.ToDictionary(t => t.Identifier, t => t.NewType);
 
-						var members = new List<CSharp.ClassMember>();
+						var members = new List<EntityDeclaration>();
 						if (meta.IncludeConstructors && meta.TypeKind != TypeKind.Interface)
 							AddConstructors(parsedAttributes, typeOverrides, members);
-						AddMembers(@interface.Members, typeOverrides, @interface.Name, parsedAttributes.NoInterfaceObject, meta.Renames, meta.TypeKind, meta.Removes, members);
+						AddMembers(@interface.Members, typeOverrides, @interface.Name, parsedAttributes.NoInterfaceObject, meta.Renames, meta.TypeKind, meta.Removes, meta.TypeKind == TypeKind.Interface, members);
 
 						string scriptName;
-						var attributes = new List<CSharp.Attribute> { IgnoreNamespaceAttribute };
+						var attributes = new List<Attribute> { IgnoreNamespaceAttribute };
 						if (meta.TagNames.Count > 0) {
 							string typeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && " + (meta.TagNames.Count > 1 ? "(" : "") + string.Join(" || ", meta.TagNames.Select(t => "{this}.tagName === '" + t.ToUpperInvariant() + "'")) + (meta.TagNames.Count > 1 ? ")" : "");
 							attributes.Add(ImportedAttribute(false, typeCheckCode));
@@ -738,7 +911,7 @@ namespace Generator {
 										if (baseMeta.TypeKind == TypeKind.Default)
 											_errors.Add("The type `" + b + "' cannot be implemented by the type `" + @interface.Name + "' because the implemented type is not a C# interface");
 										_types[b].Decompose(
-											@interface2 => AddMembers(@interface2.Members, baseMeta.TypeOverrides.ToDictionary(o => o.Identifier, o => o.NewType), b, parsedAttributes.NoInterfaceObject, baseMeta.Renames, baseMeta.TypeKind, meta.Removes, members),
+											@interface2 => AddMembers(@interface2.Members, baseMeta.TypeOverrides.ToDictionary(o => o.Identifier, o => o.NewType), b, parsedAttributes.NoInterfaceObject, baseMeta.Renames, baseMeta.TypeKind, meta.Removes, false, members),
 											callbackInterface => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a callback interface, not an interface"); },
 											dictionary => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a dictionary, not an interface"); },
 											@callback => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a callback, not an interface"); },
@@ -750,7 +923,7 @@ namespace Generator {
 									if (baseMeta.TypeKind == TypeKind.Mixin)
 										return null;
 
-									return baseMeta.AliasFor ?? CSharp.TypeReference.NamedType(baseMeta.CSharpName, baseMeta.Namespace);
+									return baseMeta.AliasFor ?? new SimpleType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName);
 								}
 								else
 									return null;
@@ -762,7 +935,15 @@ namespace Generator {
 						if (parsedAttributes.Global)
 							attributes.Add(GlobalMethodsAttribute);
 
-						result = CSharp.TypeDefinition.Class(meta.TypeKind == TypeKind.Interface ? CSharp.ClassType.Interface : CSharp.ClassType.Class, CSharp.ClassModifiers.Partial | (parsedAttributes.Global ? CSharp.ClassModifiers.Static : 0), meta.CSharpName, meta.Namespace, baseTypes, members, attributes);
+						var resultType = new TypeDeclaration {
+							ClassType = meta.TypeKind == TypeKind.Interface ? ClassType.Interface : ClassType.Class,
+							Modifiers = Modifiers.Public | Modifiers.Partial | (parsedAttributes.Global ? Modifiers.Static : 0),
+							Name = meta.CSharpName,
+						};
+						resultType.BaseTypes.AddRange(baseTypes);
+						resultType.Members.AddRange(members.OrderBy(MemberOrderer));
+						AddAttributes(resultType.Attributes, attributes);
+						result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
 					}
 				},
 				callbackInterface => {
@@ -773,17 +954,25 @@ namespace Generator {
 							return;
 						var typeOverrides = meta.TypeOverrides.ToDictionary(t => t.Identifier, t => t.NewType);
 
-						var members = new List<CSharp.ClassMember>();
-						AddMembers(callbackInterface.Members, typeOverrides, callbackInterface.Name, true, meta.Renames, TypeKind.Interface, meta.Removes, members);
+						var members = new List<EntityDeclaration>();
+						AddMembers(callbackInterface.Members, typeOverrides, callbackInterface.Name, true, meta.Renames, TypeKind.Interface, meta.Removes, true, members);
 
-						var baseTypes = new CSharp.TypeReference[0];
+						var baseTypes = new AstType[0];
 						if (callbackInterface.Base != null) {
 							var baseMeta = _metadata.Types[callbackInterface.Base];
 							if (baseMeta.Inherit)
-								baseTypes = new[] { baseMeta.AliasFor ?? CSharp.TypeReference.NamedType(baseMeta.CSharpName, baseMeta.Namespace) };
+								baseTypes = new[] { baseMeta.AliasFor ?? new SimpleType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName) };
 						}
 
-						result = CSharp.TypeDefinition.Class(CSharp.ClassType.Interface, CSharp.ClassModifiers.Partial, meta.CSharpName, meta.Namespace, baseTypes, members, new[] { ImportedAttribute(false) });
+						var resultType = new TypeDeclaration {
+							ClassType = ClassType.Interface,
+							Modifiers = Modifiers.Public | Modifiers.Partial,
+							Name = meta.CSharpName,
+						};
+						resultType.BaseTypes.AddRange(baseTypes);
+						resultType.Members.AddRange(members.OrderBy(MemberOrderer));
+						AddAttribute(resultType.Attributes, ImportedAttribute(false));
+						result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
 					}
 				},
 				dictionary => {
@@ -794,17 +983,26 @@ namespace Generator {
 							return;
 						var typeOverrides = meta.TypeOverrides.ToDictionary(t => t.Identifier, t => t.NewType);
 
-						var members = new List<CSharp.ClassMember>();
+						var members = new List<EntityDeclaration>();
 						AddMembers(dictionary.Members, typeOverrides, dictionary.Name, meta.Renames, meta.Removes, members);
 
-						var baseTypes = new CSharp.TypeReference[0];
+						var baseTypes = new AstType[0];
 						if (dictionary.Base != null) {
 							var baseMeta = _metadata.Types[dictionary.Base];
 							if (baseMeta.Inherit)
-								baseTypes = new[] { baseMeta.AliasFor ?? CSharp.TypeReference.NamedType(baseMeta.CSharpName, baseMeta.Namespace) };
+								baseTypes = new[] { baseMeta.AliasFor ?? new SimpleType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName) };
 						}
 
-						result = CSharp.TypeDefinition.Class(CSharp.ClassType.Class, CSharp.ClassModifiers.Partial, meta.CSharpName, meta.Namespace, baseTypes, members, new[] { ImportedAttribute(false), SerializableAttribute });
+						var resultType = new TypeDeclaration {
+							ClassType = ClassType.Class,
+							Modifiers = Modifiers.Public | Modifiers.Partial,
+							Name = meta.CSharpName,
+						};
+						resultType.BaseTypes.AddRange(baseTypes);
+						resultType.Members.AddRange(members.OrderBy(MemberOrderer));
+						AddAttribute(resultType.Attributes, ImportedAttribute(false));
+						AddAttribute(resultType.Attributes, SerializableAttribute);
+						result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
 					}
 				},
 				callback => {
@@ -820,8 +1018,16 @@ namespace Generator {
 						ParsedExtendedAttributes.Parse(a.ExtendedAttributes, callback.Name + "(" + a.Name + ")", _errors);
 					}
 					var sig = GetParameterLists(callback.Arguments, typeOverrides, includePartialSignatures: false).SingleOrDefault();
-					if (sig != null)
-						result = CSharp.TypeDefinition.Delegate(meta.CSharpName, meta.Namespace, ConvertType(callback.ReturnType), sig, ExpandParamsIfRequired(sig));
+					if (sig != null) {
+						var d = new DelegateDeclaration {
+							Modifiers = Modifiers.Public,
+							ReturnType = ConvertType(callback.ReturnType),
+							Name = meta.CSharpName,
+						};
+						d.Parameters.AddRange(sig);
+						AddAttributes(d.Attributes, ExpandParamsIfRequired(sig));
+						result = new NamespacedEntityDeclaration(meta.Namespace, d);
+					}
 					else
 						_errors.Add("No signature could be generated for the callback `" + callback.Name + "'");
 				},
@@ -844,12 +1050,21 @@ namespace Generator {
 					var meta = _metadata.Types[@enum.Name];
 					if (!meta.Generate && !returnNonGenerated)
 						return;
-					result = CSharp.TypeDefinition.Enum(meta.CSharpName,
-					                                    meta.Namespace,
-					                                    @enum.Values
-					                                         .Where(v => ShouldBeIncluded(v, @enum.Name, null))
-					                                         .Select(v => { string csharpName = GetOrDefault(meta.Renames, v, v.MakeCSharpName()); return CSharp.EnumMember.Create(csharpName, null, ScriptNameAttributeIfRequired(csharpName, v)); }),
-					                                    new[] { ImportedAttribute(false), NamedValuesAttribute });
+					var t = new TypeDeclaration {
+						Modifiers = Modifiers.Public,
+						ClassType = ClassType.Enum,
+						Name = meta.CSharpName,
+					};
+					t.Members.AddRange(@enum.Values.Where(v => ShouldBeIncluded(v, @enum.Name, null))
+					                               .Select(v => {
+					                                                string csharpName = GetOrDefaultString(meta.Renames, v, v.MakeCSharpName());
+					                                                var e = new EnumMemberDeclaration { Name = csharpName };
+					                                                AddAttributes(e.Attributes, ScriptNameAttributeIfRequired(csharpName, v));
+					                                                return e;
+					                                            }));
+					AddAttribute(t.Attributes, ImportedAttribute(false));
+					AddAttribute(t.Attributes, NamedValuesAttribute);
+					result = new NamespacedEntityDeclaration(meta.Namespace, t);
 				},
 				declaredInterface => {
 					var meta = _metadata.Types[declaredInterface.Name];
@@ -883,7 +1098,7 @@ namespace Generator {
 								return;
 							}
 							string raw = match.Groups[1].Value;
-							string name = GetOrDefault(meta.Names, raw, raw.ConstantCaseToPascalCase());
+							string name = GetOrDefaultString(meta.Names, raw, raw.ConstantCaseToPascalCase());
 
 							@const.Value.Decompose(
 								@int    => constants.Add(Tuple.Create(name, @int)),
@@ -901,11 +1116,18 @@ namespace Generator {
 			if (constants.Count == 0 && !noErrorIfNoConstants)
 				_errors.Add("No constants found for the enum `" + qualifiedName + "'");
 
-			var attributes = new List<CSharp.Attribute> { ImportedAttribute(false) };
+			var attributes = new List<Attribute> { ImportedAttribute(false) };
 			if (meta.Flags)
 				attributes.Add(FlagsAttribute);
 
-			_result.Add(CSharp.TypeDefinition.Enum(meta.EnumName, meta.EnumNamespace, constants.Select(c => CSharp.EnumMember.Create(c.Item1, c.Item2, new CSharp.Attribute[0])), attributes));
+			var t = new TypeDeclaration {
+				ClassType = ClassType.Enum,
+				Modifiers = Modifiers.Public,
+				Name = meta.EnumName
+			};
+			AddAttributes(t.Attributes, attributes);
+			t.Members.AddRange(constants.Select(c => new EnumMemberDeclaration { Name = c.Item1, Initializer = new PrimitiveExpression(c.Item2, c.Item2.ToString(CultureInfo.InvariantCulture)) }));
+			_result.Add(new NamespacedEntityDeclaration(meta.EnumNamespace, t));
 		}
 
 		private void GenerateEnumsFromConstants() {
@@ -934,7 +1156,7 @@ namespace Generator {
 				bool continueLoop = false;
 				string currentName = meta.TypeName;
 
-				var members = new List<CSharp.ClassMember>();
+				var members = new List<EntityDeclaration>();
 
 				do {
 					ResolvedDefinition def;
@@ -946,31 +1168,27 @@ namespace Generator {
 					def.Decompose(
 						@interface => {
 							var interfaceMeta = _metadata.Types[@interface.Name];
-							var csType = _result.FirstOrDefault(d => d.Namespace == interfaceMeta.Namespace && d.Name == interfaceMeta.CSharpName);
-							if (csType == null) {
-								csType = ConvertTypeDefinition(_types[@interface.Name], returnNonGenerated: true);
+							var namespacedDeclaration = _result.FirstOrDefault(d => d.Namespace == interfaceMeta.Namespace && d.EntityDeclaration.Name == interfaceMeta.CSharpName);
+							EntityDeclaration csType;
+							if (namespacedDeclaration != null) {
+								csType = namespacedDeclaration.EntityDeclaration;
+							}
+							else {
+								csType = ConvertTypeDefinition(_types[@interface.Name], returnNonGenerated: true).EntityDeclaration;
 								if (csType == null) {
 									_errors.Add("The type (or base type) `" + currentName + "' for the static instance `" + qualifiedName + "' was not generated");
 									return;
 								}
 							}
-							csType.Decompose(
-								@class => {
-									members.AddRange(
-										@class.Members.Select(
-											m => m.DecomposeWithResult(
-												constructor => null,
-												property => CSharp.ClassMember.Property(property.Accessibility, property.Name, property.Type, property.Modifiers | CSharp.MemberModifiers.Static, property.CanRead, property.CanWrite, property.Attributes),
-												method   => CSharp.ClassMember.Method(method.Accessibility, method.Name, method.ReturnType, method.Modifiers | CSharp.MemberModifiers.Static, method.Parameters, method.Attributes),
-												field    => CSharp.ClassMember.Field(field.Accessibility, field.Name, field.Type, field.Modifiers | ((field.Modifiers & CSharp.MemberModifiers.Const) == 0 ? CSharp.MemberModifiers.Static : 0), field.ConstValue, field.Attributes),
-												indexer  => null
-											))
-											.Where(m => m != null)
-										);
-								},
-								@delegate => _errors.Add("The type `" + currentName + "' for the static instance `" + qualifiedName + "' was generated as a delegate"),
-								@enum     => _errors.Add("The type `" + currentName + "' for the static instance `" + qualifiedName + "' was generated as an enum")
-							);
+
+							var typeDeclaration = csType as TypeDeclaration;
+							if (typeDeclaration != null) {
+								members.AddRange(typeDeclaration.Members.Where(m => m is MethodDeclaration || m is PropertyDeclaration || m is FieldDeclaration)
+								                                        .Select(m => { var x = (EntityDeclaration)m.Clone(); if ((x.Modifiers & Modifiers.Const) == 0) x.Modifiers |= Modifiers.Static; return x; }));
+							}
+							else {
+								_errors.Add("The type `" + currentName + "' for the static instance `" + qualifiedName + "' was not generated as a class");
+							}
 
 							currentName = @interface.Base;
 							continueLoop = currentName != null;
@@ -984,13 +1202,18 @@ namespace Generator {
 					);
 				} while (continueLoop);
 
-				CSharp.Attribute[] attributes;
+				var c = new TypeDeclaration {
+					Modifiers = Modifiers.Public | Modifiers.Static | Modifiers.Partial,
+					ClassType = ClassType.Class,
+					Name = meta.ClassName,
+				};
+				c.Members.AddRange(members.OrderBy(MemberOrderer));
 				if (meta.GlobalMethods)
-					attributes = new[] { ImportedAttribute(false), GlobalMethodsAttribute };
+					AddAttributes(c.Attributes, new[] { ImportedAttribute(false), GlobalMethodsAttribute });
 				else
-					attributes = new[] { ImportedAttribute(false), IgnoreNamespaceAttribute, ScriptNameAttribute(meta.InstanceName) };
+					AddAttributes(c.Attributes, new[] { IgnoreNamespaceAttribute, ImportedAttribute(false), ScriptNameAttribute(meta.InstanceName) });
 
-				_result.Add(CSharp.TypeDefinition.Class(CSharp.ClassType.Class, CSharp.ClassModifiers.Static | CSharp.ClassModifiers.Partial, meta.ClassName, meta.ClassNamespace, new CSharp.TypeReference[0], members, attributes));
+				_result.Add(new NamespacedEntityDeclaration(meta.ClassNamespace, c));
 			}
 		}
 
@@ -999,7 +1222,7 @@ namespace Generator {
 			_errors.AddRange(_metadata.Types.Keys.Except(_types.Keys).Select(extra => string.Format("Metadata for non-existent type `{0}", extra)));
 		}
 
-		public static Tuple<IReadOnlyList<CSharp.TypeDefinition>, IReadOnlyList<string>> BuildCSharpModel(Dictionary<string, ResolvedDefinition> types, Metadata metadata) {
+		public static Tuple<IReadOnlyList<NamespacedEntityDeclaration>, IReadOnlyList<string>> BuildCSharpModel(Dictionary<string, ResolvedDefinition> types, Metadata metadata) {
 			var c = new Converter(types, metadata);
 			c.MatchMetadataAndTypes();
 			if (c._errors.Count == 0) {
@@ -1007,7 +1230,7 @@ namespace Generator {
 				c.GenerateEnumsFromConstants();
 				c.GenerateStaticInstances();
 			}
-			return Tuple.Create<IReadOnlyList<CSharp.TypeDefinition>, IReadOnlyList<string>>(c._result, c._errors);
+			return Tuple.Create<IReadOnlyList<NamespacedEntityDeclaration>, IReadOnlyList<string>>(c._result, c._errors);
 		}
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Generator.ExtensionMethods;
 using System.Linq;
+using ICSharpCode.NRefactory.CSharp;
 
 namespace Generator.Meta {
 	public enum TypeKind {
@@ -22,11 +23,11 @@ namespace Generator.Meta {
 		public TypeKind TypeKind { get; private set; }
 		public bool IncludeConstructors { get; private set; }
 		public IReadOnlyList<TypeOverride> TypeOverrides { get; private set; }
-		public CSharp.TypeReference AliasFor { get; private set; }
+		public AstType AliasFor { get; private set; }
 		public IReadOnlyDictionary<string, string> Renames { get; private set; }
 		public IReadOnlyList<string> Removes { get; private set; }
 
-		public TypeMetadata(string typeName, string @namespace, string csharpName, string scriptName, IReadOnlyList<string> tagNames, bool generate, bool inherit, TypeKind typeKind, bool includeConstructors, IReadOnlyList<TypeOverride> typeOverrides, CSharp.TypeReference aliasFor, IEnumerable<Tuple<string, string>> renames, IEnumerable<string> removes) {
+		public TypeMetadata(string typeName, string @namespace, string csharpName, string scriptName, IReadOnlyList<string> tagNames, bool generate, bool inherit, TypeKind typeKind, bool includeConstructors, IReadOnlyList<TypeOverride> typeOverrides, AstType aliasFor, IEnumerable<Tuple<string, string>> renames, IEnumerable<string> removes) {
 			TypeName = typeName;
 			Namespace = @namespace;
 			CSharpName = csharpName;

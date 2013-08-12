@@ -15,8 +15,8 @@ options
 #pragma warning disable 3021
 using System;
 using System.Text.RegularExpressions;
+using ICSharpCode.NRefactory.CSharp;
 using Generator.ExtensionMethods;
-using Generator.CSharp;
 }
 
 @lexer::members {
@@ -98,8 +98,8 @@ flags : { input.LT(1).Text.Equals("flags", StringComparison.OrdinalIgnoreCase) }
 remove : { input.LT(1).Text.Equals("remove", StringComparison.OrdinalIgnoreCase) }? Identifier;
 globalMethods : { input.LT(1).Text.Equals("globalMethods", StringComparison.OrdinalIgnoreCase) }? Identifier;
 
-csharpTypeKeyword returns [CSharp.TypeReference result]
-	: { _csharpTypeKeywords.Contains(input.LT(1).Text) }? {  $result = CSharp.TypeReference.Keyword(input.LT(1).Text); } Identifier
+csharpTypeKeyword returns [AstType result]
+	: { _csharpTypeKeywords.Contains(input.LT(1).Text) }? {  $result = new PrimitiveType(input.LT(1).Text); } Identifier
 	;
 
 typeMetadata returns [TypeMetadata result]
@@ -114,7 +114,7 @@ typeMetadata returns [TypeMetadata result]
 		List<string> tagNames = null;
 		List<TypeOverride> typeOverrides = null;
 		TypeKind typeKind = TypeKind.Default;
-		CSharp.TypeReference aliasFor = null;
+		AstType aliasFor = null;
 		List<Tuple<string, string>> renames = null;
 		List<string> removes = null;
 	}
@@ -163,7 +163,7 @@ typeOverrideSpecifier returns [TypeOverride result]
 	: typeOverride i=Identifier '=' t=csharpType { $result = new TypeOverride($i.text, t); }
 	;
 
-aliasSpecifier returns [CSharp.TypeReference result]
+aliasSpecifier returns [AstType result]
 	: alias '=' t=csharpType { $result = t; }
 	;
 
@@ -175,14 +175,14 @@ removeSpecifier returns [string result]
 	: remove a=Identifier { $result = $a.text; }
 	;
 
-csharpType returns [TypeReference result]
-	@init { List<TypeReference> typeArgs = null; }
+csharpType returns [AstType result]
+	@init { List<AstType> typeArgs = new List<AstType>(); }
 	:
-	(  n=nestedIdentifier ('<' { typeArgs = new List<TypeReference>(); } t=csharpType { typeArgs.Add(t); } (',' t=csharpType { typeArgs.Add(t); })* '>')? { var split = Split(n); $result = typeArgs == null ? TypeReference.NamedType(split.Item2, split.Item1) : TypeReference.GenericNamedType(split.Item2, split.Item1, typeArgs); }
+	(  n=nestedIdentifier ('<' t=csharpType { typeArgs.Add(t); } (',' t=csharpType { typeArgs.Add(t); })* '>')? { $result = new SimpleType(n, typeArgs); }
 	 | t=csharpTypeKeyword { $result = t; }
 	)
-	('[' ']' { $result = TypeReference.Array($result); })?
-	('?' { $result = TypeReference.Nullable($result); })?
+	('[' ']' { $result = $result.MakeArrayType(); })?
+	('?' { $result = $result.MakeNullableType(); })?
 	;
 
 enumFromConstantsSpecifier returns [EnumFromConstants result]
