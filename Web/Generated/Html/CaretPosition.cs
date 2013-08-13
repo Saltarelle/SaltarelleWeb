@@ -13,12 +13,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Offset {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode OffsetNode {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 	}
 }

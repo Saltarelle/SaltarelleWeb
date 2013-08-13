@@ -4,78 +4,78 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class MouseEventInit {
 		public bool AltKey {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool Bubbles {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public ushort Button {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public ushort Buttons {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool Cancelable {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public int ClientX {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public int ClientY {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool CtrlKey {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public int Detail {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool MetaKey {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public EventTarget RelatedTarget {
-			get { return default(EventTarget); }
-			set { }
+			get;
+			set;
 		}
 
 		public int ScreenX {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public int ScreenY {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool ShiftKey {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public WindowInstance View {
-			get { return default(WindowInstance); }
-			set { }
+			get;
+			set;
 		}
 	}
 }

@@ -8,20 +8,29 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Media {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Src {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

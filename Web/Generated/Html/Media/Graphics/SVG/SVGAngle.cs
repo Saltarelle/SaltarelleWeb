@@ -29,25 +29,36 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAngleUnitType UnitType {
-			get { return default(SVGAngleUnitType); }
+			get {
+				return default(SVGAngleUnitType);
+			}
 		}
 
 		[IntrinsicProperty]
 		public float Value {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ValueAsString {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public float ValueInSpecifiedUnits {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

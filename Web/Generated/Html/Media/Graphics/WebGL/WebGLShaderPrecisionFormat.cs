@@ -8,17 +8,23 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		[IntrinsicProperty]
 		public int Precision {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int RangeMax {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int RangeMin {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

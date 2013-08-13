@@ -5,6 +5,6 @@ namespace System.Html.Media.Graphics.SVG {
 	public enum SVGTextPathSpacing {
 		Unknown = 0,
 		Auto = 1,
-		Exact = 2,
+		Exact = 2
 	}
 }

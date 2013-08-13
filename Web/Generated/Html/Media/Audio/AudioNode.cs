@@ -8,20 +8,29 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public uint ChannelCount {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ChannelCountMode ChannelCountMode {
-			get { return default(ChannelCountMode); }
-			set { }
+			get {
+				return default(ChannelCountMode);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ChannelInterpretation ChannelInterpretation {
-			get { return default(ChannelInterpretation); }
-			set { }
+			get {
+				return default(ChannelInterpretation);
+			}
+			set {
+			}
 		}
 
 		public void Connect(AudioNode destination) {
@@ -41,7 +50,9 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public AudioContext Context {
-			get { return default(AudioContext); }
+			get {
+				return default(AudioContext);
+			}
 		}
 
 		public void Disconnect() {
@@ -52,12 +63,16 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public uint NumberOfInputs {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint NumberOfOutputs {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

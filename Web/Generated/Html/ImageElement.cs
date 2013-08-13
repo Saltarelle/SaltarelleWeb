@@ -17,111 +17,163 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Align {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Alt {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Border {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Complete {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string CrossOrigin {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint Height {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint Hspace {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool IsMap {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string LongDesc {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Lowsrc {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint NaturalHeight {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint NaturalWidth {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Src {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string UseMap {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint Width {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint Vspace {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public int X {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int Y {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

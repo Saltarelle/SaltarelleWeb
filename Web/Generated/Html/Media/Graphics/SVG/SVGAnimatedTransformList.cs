@@ -8,12 +8,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGTransformList AnimVal {
-			get { return default(SVGTransformList); }
+			get {
+				return default(SVGTransformList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGTransformList BaseVal {
-			get { return default(SVGTransformList); }
+			get {
+				return default(SVGTransformList);
+			}
 		}
 	}
 }

@@ -11,20 +11,29 @@ namespace System.Net.WebRTC {
 
 		[IntrinsicProperty]
 		public string Candidate {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string SdpMid {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ushort? SdpMLineIndex {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

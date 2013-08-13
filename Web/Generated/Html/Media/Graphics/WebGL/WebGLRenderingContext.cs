@@ -144,7 +144,9 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		[IntrinsicProperty]
 		public CanvasElement Canvas {
-			get { return default(CanvasElement); }
+			get {
+				return default(CanvasElement);
+			}
 		}
 
 		public const uint CCW = 2305;
@@ -347,12 +349,16 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		[IntrinsicProperty]
 		public int DrawingBufferHeight {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int DrawingBufferWidth {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[ScriptName("DST_ALPHA")]

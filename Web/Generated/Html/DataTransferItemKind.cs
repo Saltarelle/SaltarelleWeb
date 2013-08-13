@@ -4,6 +4,6 @@ namespace System.Html {
 	[Imported, NamedValues]
 	public enum DataTransferItemKind {
 		String,
-		File,
+		File
 	}
 }

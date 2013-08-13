@@ -130,7 +130,9 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public double CurrentTime {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void DecodeAudioData(ArrayBuffer audioData, DecodeSuccessCallback successCallback) {
@@ -141,17 +143,23 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public AudioDestinationNode Destination {
-			get { return default(AudioDestinationNode); }
+			get {
+				return default(AudioDestinationNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public AudioListener Listener {
-			get { return default(AudioListener); }
+			get {
+				return default(AudioListener);
+			}
 		}
 
 		[IntrinsicProperty]
 		public float SampleRate {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

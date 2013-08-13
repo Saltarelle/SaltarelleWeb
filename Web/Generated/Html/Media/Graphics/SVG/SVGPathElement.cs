@@ -8,7 +8,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGPathSegList AnimatedPathSegList {
-			get { return default(SVGPathSegList); }
+			get {
+				return default(SVGPathSegList);
+			}
 		}
 
 		public SVGPathSegArcAbs CreateSVGPathSegArcAbs(float x, float y, float r1, float r2, float angle, bool largeArcFlag, bool sweepFlag) {
@@ -101,12 +103,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber PathLength {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGPathSegList PathSegList {
-			get { return default(SVGPathSegList); }
+			get {
+				return default(SVGPathSegList);
+			}
 		}
 	}
 }

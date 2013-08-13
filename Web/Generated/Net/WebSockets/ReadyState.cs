@@ -6,6 +6,6 @@ namespace System.Net.WebSockets {
 		Connecting = 0,
 		Open = 1,
 		Closing = 2,
-		Closed = 3,
+		Closed = 3
 	}
 }

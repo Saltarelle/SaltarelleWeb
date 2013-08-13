@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 
 namespace System.Xml {
-	[Flags, Imported]
+	[Imported, Flags]
 	public enum NodeFilter {
 		ShowAll = -1,
 		ShowElement = 1,
@@ -15,6 +15,6 @@ namespace System.Xml {
 		ShowDocument = 256,
 		ShowDocumentType = 512,
 		ShowDocumentFragment = 1024,
-		ShowNotation = 2048,
+		ShowNotation = 2048
 	}
 }

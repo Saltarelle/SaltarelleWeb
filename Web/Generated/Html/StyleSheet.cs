@@ -9,38 +9,53 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Disabled {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Href {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public MediaList Media {
-			get { return default(MediaList); }
+			get {
+				return default(MediaList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode OwnerNode {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public StyleSheet ParentStyleSheet {
-			get { return default(StyleSheet); }
+			get {
+				return default(StyleSheet);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Title {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

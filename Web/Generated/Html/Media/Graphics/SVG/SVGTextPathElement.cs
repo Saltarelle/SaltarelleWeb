@@ -8,22 +8,30 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Href {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGTextPathMethod> Method {
-			get { return default(SVGAnimatedEnumeration<SVGTextPathMethod>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGTextPathMethod>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGTextPathSpacing> Spacing {
-			get { return default(SVGAnimatedEnumeration<SVGTextPathSpacing>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGTextPathSpacing>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength StartOffset {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[ScriptName("TEXTPATH_METHODTYPE_ALIGN")]

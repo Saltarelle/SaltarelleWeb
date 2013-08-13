@@ -8,14 +8,20 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Href {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Target {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

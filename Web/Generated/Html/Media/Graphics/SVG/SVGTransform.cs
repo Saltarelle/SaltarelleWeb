@@ -8,12 +8,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public float Angle {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGMatrix Matrix {
-			get { return default(SVGMatrix); }
+			get {
+				return default(SVGMatrix);
+			}
 		}
 
 		public void SetMatrix(SVGMatrix matrix) {
@@ -57,7 +61,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGTransformType Type {
-			get { return default(SVGTransformType); }
+			get {
+				return default(SVGTransformType);
+			}
 		}
 	}
 }

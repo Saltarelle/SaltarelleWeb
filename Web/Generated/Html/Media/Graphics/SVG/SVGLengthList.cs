@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Graphics.SVG {
@@ -9,7 +9,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public SVGLength this[uint index] {
-			get { return default(SVGLength); }
+			get {
+				return default(SVGLength);
+			}
 		}
 
 		public SVGLength AppendItem(SVGLength newItem) {
@@ -21,7 +23,7 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<SVGLength> GetEnumerator() {
-			return default(IEnumerator<SVGLength>);
+			return null;
 		}
 
 		public SVGLength GetItem(uint index) {
@@ -38,12 +40,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint NumberOfItems {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public SVGLength RemoveItem(uint index) {

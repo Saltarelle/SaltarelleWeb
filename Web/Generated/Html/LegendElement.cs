@@ -8,13 +8,18 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Align {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public FormElement Form {
-			get { return default(FormElement); }
+			get {
+				return default(FormElement);
+			}
 		}
 	}
 }

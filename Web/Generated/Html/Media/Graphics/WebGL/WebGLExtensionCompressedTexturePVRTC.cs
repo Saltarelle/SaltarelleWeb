@@ -8,22 +8,30 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		[IntrinsicProperty, ScriptName("COMPRESSED_RGB_PVRTC_2BPPV1")]
 		public uint COMPRESSED_RGB_PVRTC_2BPPV1 {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("COMPRESSED_RGB_PVRTC_4BPPV1")]
 		public uint COMPRESSED_RGB_PVRTC_4BPPV1 {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("COMPRESSED_RGBA_PVRTC_2BPPV1")]
 		public uint COMPRESSED_RGBA_PVRTC_2BPPV1 {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("COMPRESSED_RGBA_PVRTC_4BPPV1")]
 		public uint COMPRESSED_RGBA_PVRTC_4BPPV1 {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

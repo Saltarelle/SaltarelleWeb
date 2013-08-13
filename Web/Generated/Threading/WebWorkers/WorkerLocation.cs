@@ -8,42 +8,58 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty]
 		public string Hash {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Host {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Hostname {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Href {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Pathname {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Port {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Protocol {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Search {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

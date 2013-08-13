@@ -4,13 +4,13 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class StyleSheetApplicableStateChangeEventInit : EventInit {
 		public bool Applicable {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public CSSStyleSheet Stylesheet {
-			get { return default(CSSStyleSheet); }
-			set { }
+			get;
+			set;
 		}
 	}
 }

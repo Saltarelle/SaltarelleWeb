@@ -11,8 +11,11 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty, ScriptName("oncomplete")]
 		public HtmlEventHandler OnComplete {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public void StartRendering() {

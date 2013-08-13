@@ -23,30 +23,43 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public DOMStringList ObjectStoreNames {
-			get { return default(DOMStringList); }
+			get {
+				return default(DOMStringList);
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onabort")]
 		public HtmlEventHandler OnAbort {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onversionchange")]
 		public HtmlEventHandler OnVersionchange {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public Transaction Transaction(string storeName) {
@@ -67,7 +80,9 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public ulong Version {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

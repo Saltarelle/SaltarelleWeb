@@ -7,6 +7,6 @@ namespace System.Html.Media.Graphics.SVG {
 		Matrix = 1,
 		Saturate = 2,
 		Huerotate = 3,
-		Luminancetoalpha = 4,
+		Luminancetoalpha = 4
 	}
 }

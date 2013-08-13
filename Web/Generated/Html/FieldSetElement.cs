@@ -12,24 +12,34 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Disabled {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Elements {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public FormElement Form {
-			get { return default(FormElement); }
+			get {
+				return default(FormElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public void SetCustomValidity(string error) {
@@ -37,22 +47,30 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ValidationMessage {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ValidityState Validity {
-			get { return default(ValidityState); }
+			get {
+				return default(ValidityState);
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool WillValidate {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

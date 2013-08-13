@@ -12,6 +12,6 @@ namespace System.Html {
 		[ScriptName("application/xhtml+xml")]
 		ApplicationXhtmlXml,
 		[ScriptName("image/svg+xml")]
-		ImageSvgXml,
+		ImageSvgXml
 	}
 }

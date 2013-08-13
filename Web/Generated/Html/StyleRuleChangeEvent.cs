@@ -14,12 +14,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public CSSRule Rule {
-			get { return default(CSSRule); }
+			get {
+				return default(CSSRule);
+			}
 		}
 
 		[IntrinsicProperty]
 		public CSSStyleSheet Stylesheet {
-			get { return default(CSSStyleSheet); }
+			get {
+				return default(CSSStyleSheet);
+			}
 		}
 	}
 }

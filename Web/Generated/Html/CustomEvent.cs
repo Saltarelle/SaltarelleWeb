@@ -14,7 +14,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public object Detail {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

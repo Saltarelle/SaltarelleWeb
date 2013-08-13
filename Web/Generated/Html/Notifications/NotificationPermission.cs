@@ -5,6 +5,6 @@ namespace System.Html.Notifications {
 	public enum NotificationPermission {
 		Default,
 		Denied,
-		Granted,
+		Granted
 	}
 }

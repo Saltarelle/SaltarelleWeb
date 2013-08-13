@@ -8,14 +8,20 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public int Value {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

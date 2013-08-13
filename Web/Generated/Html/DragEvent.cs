@@ -8,7 +8,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public DataTransfer DataTransfer {
-			get { return default(DataTransfer); }
+			get {
+				return default(DataTransfer);
+			}
 		}
 	}
 }

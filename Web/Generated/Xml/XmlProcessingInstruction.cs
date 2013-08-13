@@ -8,7 +8,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public string Target {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

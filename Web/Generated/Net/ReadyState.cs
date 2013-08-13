@@ -7,6 +7,6 @@ namespace System.Net {
 		Opened = 1,
 		HeadersReceived = 2,
 		Loading = 3,
-		Done = 4,
+		Done = 4
 	}
 }

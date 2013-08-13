@@ -12,12 +12,16 @@ namespace System.Html.Editing {
 
 		[IntrinsicProperty]
 		public XmlNode AnchorNode {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint AnchorOffset {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void Collapse(XmlNode node, uint offset) {
@@ -37,12 +41,16 @@ namespace System.Html.Editing {
 
 		[IntrinsicProperty]
 		public XmlNode FocusNode {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint FocusOffset {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public Range GetRangeAt(uint index) {
@@ -51,12 +59,16 @@ namespace System.Html.Editing {
 
 		[IntrinsicProperty]
 		public bool IsCollapsed {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint RangeCount {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void RemoveAllRanges() {

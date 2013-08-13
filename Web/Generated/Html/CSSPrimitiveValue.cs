@@ -106,7 +106,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ushort PrimitiveType {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void SetFloatValue(ushort unitType, float floatValue) {

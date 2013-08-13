@@ -9,17 +9,23 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public Uint8ClampedArray Data {
-			get { return default(Uint8ClampedArray); }
+			get {
+				return default(Uint8ClampedArray);
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint Height {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint Width {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

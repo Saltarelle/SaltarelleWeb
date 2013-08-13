@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
@@ -9,17 +9,21 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public MimeType this[string name] {
-			get { return default(MimeType); }
+			get {
+				return default(MimeType);
+			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public MimeType this[uint index] {
-			get { return default(MimeType); }
+			get {
+				return default(MimeType);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<MimeType> GetEnumerator() {
-			return default(IEnumerator<MimeType>);
+			return null;
 		}
 
 		public MimeType Item(uint index) {
@@ -28,7 +32,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public MimeType NamedItem(string name) {

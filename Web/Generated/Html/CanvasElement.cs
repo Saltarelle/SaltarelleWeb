@@ -18,8 +18,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Height {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void ToBlob(Action<Blob> callback) {
@@ -45,8 +48,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Width {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

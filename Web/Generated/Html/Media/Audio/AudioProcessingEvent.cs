@@ -8,17 +8,23 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public AudioBuffer InputBuffer {
-			get { return default(AudioBuffer); }
+			get {
+				return default(AudioBuffer);
+			}
 		}
 
 		[IntrinsicProperty]
 		public AudioBuffer OutputBuffer {
-			get { return default(AudioBuffer); }
+			get {
+				return default(AudioBuffer);
+			}
 		}
 
 		[IntrinsicProperty]
 		public double PlaybackTime {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

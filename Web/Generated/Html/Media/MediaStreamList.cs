@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media {
@@ -9,17 +9,21 @@ namespace System.Html.Media {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public MediaStream this[uint index] {
-			get { return default(MediaStream); }
+			get {
+				return default(MediaStream);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<MediaStream> GetEnumerator() {
-			return default(IEnumerator<MediaStream>);
+			return null;
 		}
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

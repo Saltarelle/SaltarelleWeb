@@ -8,12 +8,16 @@ namespace System.Html.Speech {
 
 		[IntrinsicProperty]
 		public float Confidence {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Transcript {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

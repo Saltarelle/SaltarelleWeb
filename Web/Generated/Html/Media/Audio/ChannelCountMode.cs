@@ -6,6 +6,6 @@ namespace System.Html.Media.Audio {
 		Max,
 		[ScriptName("clamped-max")]
 		ClampedMax,
-		Explicit,
+		Explicit
 	}
 }

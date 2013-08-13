@@ -9,30 +9,43 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Align {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool AllowFullscreen {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public DocumentBase ContentDocument {
-			get { return default(DocumentBase); }
+			get {
+				return default(DocumentBase);
+			}
 		}
 
 		[IntrinsicProperty]
 		public WindowInstance ContentWindow {
-			get { return default(WindowInstance); }
+			get {
+				return default(WindowInstance);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string FrameBorder {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public DocumentBase GetSVGDocument() {
@@ -41,62 +54,92 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Height {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string LongDesc {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string MarginHeight {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string MarginWidth {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Sandbox {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Scrolling {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Src {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Srcdoc {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Width {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

@@ -8,7 +8,9 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public AudioParam Gain {
-			get { return default(AudioParam); }
+			get {
+				return default(AudioParam);
+			}
 		}
 	}
 }

@@ -8,38 +8,56 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public double High {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Low {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Max {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Min {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Optimum {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Value {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

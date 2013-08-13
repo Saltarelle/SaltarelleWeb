@@ -17,7 +17,9 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public bool AutoIncrement {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		public Request Clear() {
@@ -65,17 +67,23 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public DOMStringList IndexNames {
-			get { return default(DOMStringList); }
+			get {
+				return default(DOMStringList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public object KeyPath {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public Request OpenCursor() {
@@ -100,7 +108,9 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public Transaction Transaction {
-			get { return default(Transaction); }
+			get {
+				return default(Transaction);
+			}
 		}
 	}
 }

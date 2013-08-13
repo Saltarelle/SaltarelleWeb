@@ -6,6 +6,6 @@ namespace System.Html {
 		None,
 		Copy,
 		Link,
-		Move,
+		Move
 	}
 }

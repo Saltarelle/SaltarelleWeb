@@ -5,6 +5,6 @@ namespace System.Xml {
 	public enum NodeFilterReturn {
 		Accept = 1,
 		Reject = 2,
-		Skip = 3,
+		Skip = 3
 	}
 }

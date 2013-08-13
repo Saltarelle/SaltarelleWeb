@@ -27,7 +27,9 @@ namespace System.Text {
 
 		[IntrinsicProperty]
 		public string Encoding {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

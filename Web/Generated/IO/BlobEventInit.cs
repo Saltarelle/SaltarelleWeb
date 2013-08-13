@@ -5,8 +5,8 @@ namespace System.IO {
 	[Imported, Serializable]
 	public partial class BlobEventInit : EventInit {
 		public Blob Data {
-			get { return default(Blob); }
-			set { }
+			get;
+			set;
 		}
 	}
 }

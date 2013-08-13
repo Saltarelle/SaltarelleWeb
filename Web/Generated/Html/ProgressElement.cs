@@ -8,19 +8,27 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public double Max {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Position {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Value {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

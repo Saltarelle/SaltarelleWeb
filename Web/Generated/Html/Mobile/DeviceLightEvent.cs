@@ -14,7 +14,9 @@ namespace System.Html.Mobile {
 
 		[IntrinsicProperty]
 		public double Value {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

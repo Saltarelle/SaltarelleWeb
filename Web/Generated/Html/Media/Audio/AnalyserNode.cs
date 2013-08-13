@@ -9,13 +9,18 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public uint FftSize {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint FrequencyBinCount {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void GetByteFrequencyData(Uint8Array array) {
@@ -29,20 +34,29 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public double MaxDecibels {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double MinDecibels {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double SmoothingTimeConstant {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

@@ -8,13 +8,18 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public int BufferSize {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onaudioprocess")]
 		public HtmlEventHandler OnAudioprocess {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 	}
 }

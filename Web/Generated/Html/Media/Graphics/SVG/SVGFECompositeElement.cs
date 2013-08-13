@@ -8,47 +8,65 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString In1 {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString In2 {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber K1 {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber K2 {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber K3 {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber K4 {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGFECompositeOperator> Operator {
-			get { return default(SVGAnimatedEnumeration<SVGFECompositeOperator>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGFECompositeOperator>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Result {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[ScriptName("SVG_FECOMPOSITE_OPERATOR_ARITHMETIC")]
@@ -74,17 +92,23 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Width {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 	}
 }

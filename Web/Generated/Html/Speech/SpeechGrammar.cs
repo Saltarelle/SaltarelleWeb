@@ -8,14 +8,20 @@ namespace System.Html.Speech {
 
 		[IntrinsicProperty]
 		public string Src {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public float Weight {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

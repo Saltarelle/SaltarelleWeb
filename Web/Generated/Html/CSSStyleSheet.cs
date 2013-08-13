@@ -8,7 +8,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public CSSRule[] CssRules {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public void DeleteRule(uint index) {
@@ -20,7 +22,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public CSSRule OwnerRule {
-			get { return default(CSSRule); }
+			get {
+				return default(CSSRule);
+			}
 		}
 	}
 }

@@ -8,7 +8,9 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public AudioBuffer RenderedBuffer {
-			get { return default(AudioBuffer); }
+			get {
+				return default(AudioBuffer);
+			}
 		}
 	}
 }

@@ -8,18 +8,25 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public string Download {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Href {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Target {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 	}
 }

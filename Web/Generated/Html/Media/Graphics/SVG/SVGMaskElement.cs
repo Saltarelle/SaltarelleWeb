@@ -8,17 +8,23 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> MaskContentUnits {
-			get { return default(SVGAnimatedEnumeration<SVGUnitType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGUnitType>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> MaskUnits {
-			get { return default(SVGAnimatedEnumeration<SVGUnitType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGUnitType>);
+			}
 		}
 
 		[ScriptName("SVG_MASKTYPE_ALPHA")]
@@ -38,17 +44,23 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Width {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 	}
 }

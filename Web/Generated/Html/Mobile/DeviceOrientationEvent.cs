@@ -14,22 +14,30 @@ namespace System.Html.Mobile {
 
 		[IntrinsicProperty]
 		public bool Absolute {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Alpha {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Beta {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Gamma {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

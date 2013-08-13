@@ -14,7 +14,9 @@ namespace System.Html.Media {
 
 		[IntrinsicProperty]
 		public MediaStream Stream {
-			get { return default(MediaStream); }
+			get {
+				return default(MediaStream);
+			}
 		}
 	}
 }

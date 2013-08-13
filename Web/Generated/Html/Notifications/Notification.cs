@@ -17,31 +17,45 @@ namespace System.Html.Notifications {
 
 		[IntrinsicProperty, ScriptName("onclick")]
 		public HtmlEventHandler OnClick {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onclose")]
 		public HtmlEventHandler OnClose {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onshow")]
 		public HtmlEventHandler OnShow {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static NotificationPermission Permission {
-			get { return default(NotificationPermission); }
+			get {
+				return default(NotificationPermission);
+			}
 		}
 
 		public static void RequestPermission() {

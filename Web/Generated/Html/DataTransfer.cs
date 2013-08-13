@@ -16,19 +16,27 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public DropEffect DropEffect {
-			get { return default(DropEffect); }
-			set { }
+			get {
+				return default(DropEffect);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public AllowedDropEffect EffectAllowed {
-			get { return default(AllowedDropEffect); }
-			set { }
+			get {
+				return default(AllowedDropEffect);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public FileList Files {
-			get { return default(FileList); }
+			get {
+				return default(FileList);
+			}
 		}
 
 		public string GetData(string format) {
@@ -37,7 +45,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public DataTransferItemList Items {
-			get { return default(DataTransferItemList); }
+			get {
+				return default(DataTransferItemList);
+			}
 		}
 
 		public void SetData(string format, string data) {
@@ -48,7 +58,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string[] Types {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

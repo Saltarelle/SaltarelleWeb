@@ -8,13 +8,18 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public bool AnimVal {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool BaseVal {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 	}
 }

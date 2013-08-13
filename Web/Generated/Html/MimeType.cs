@@ -8,22 +8,30 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Description {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public Plugin EnabledPlugin {
-			get { return default(Plugin); }
+			get {
+				return default(Plugin);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Suffixes {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

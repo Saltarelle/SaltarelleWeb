@@ -4,18 +4,18 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class AnimationEventInit : EventInit {
 		public string AnimationName {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public float ElapsedTime {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public string PseudoElement {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

@@ -14,17 +14,23 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public float ElapsedTime {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string PropertyName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string PseudoElement {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

@@ -8,31 +8,45 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Align {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string BgColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Cells {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Ch {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ChOff {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public void DeleteCell(int index) {
@@ -48,18 +62,25 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public int RowIndex {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int SectionRowIndex {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string VAlign {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

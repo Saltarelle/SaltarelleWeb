@@ -14,7 +14,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public DataTransfer ClipboardData {
-			get { return default(DataTransfer); }
+			get {
+				return default(DataTransfer);
+			}
 		}
 	}
 }

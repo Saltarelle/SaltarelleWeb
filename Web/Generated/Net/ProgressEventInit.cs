@@ -5,18 +5,18 @@ namespace System.Net {
 	[Imported, Serializable]
 	public partial class ProgressEventInit : EventInit {
 		public bool LengthComputable {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public ulong Loaded {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public ulong Total {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media {
@@ -9,7 +9,9 @@ namespace System.Html.Media {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public TextTrackCue this[uint index] {
-			get { return default(TextTrackCue); }
+			get {
+				return default(TextTrackCue);
+			}
 		}
 
 		public TextTrackCue GetCueById(string id) {
@@ -18,12 +20,14 @@ namespace System.Html.Media {
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<TextTrackCue> GetEnumerator() {
-			return default(IEnumerator<TextTrackCue>);
+			return null;
 		}
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

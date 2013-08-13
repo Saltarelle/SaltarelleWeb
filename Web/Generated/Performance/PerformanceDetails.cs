@@ -8,7 +8,9 @@ namespace System.Performance {
 
 		[IntrinsicProperty]
 		public PerformanceNavigation Navigation {
-			get { return default(PerformanceNavigation); }
+			get {
+				return default(PerformanceNavigation);
+			}
 		}
 
 		public double Now() {
@@ -17,7 +19,9 @@ namespace System.Performance {
 
 		[IntrinsicProperty]
 		public PerformanceTiming Timing {
-			get { return default(PerformanceTiming); }
+			get {
+				return default(PerformanceTiming);
+			}
 		}
 	}
 }

@@ -14,7 +14,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public object State {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

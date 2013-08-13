@@ -8,8 +8,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Autofocus {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		public bool CheckValidity() {
@@ -18,61 +21,90 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Cols {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string DefaultValue {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Disabled {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public FormElement Form {
-			get { return default(FormElement); }
+			get {
+				return default(FormElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public int MaxLength {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Placeholder {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool ReadOnly {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Required {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint Rows {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void Select() {
@@ -80,20 +112,29 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string SelectionDirection {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint SelectionEnd {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint SelectionStart {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void SetCustomValidity(string error) {
@@ -107,39 +148,55 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint TextLength {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ValidationMessage {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ValidityState Validity {
-			get { return default(ValidityState); }
+			get {
+				return default(ValidityState);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Value {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool WillValidate {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Wrap {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

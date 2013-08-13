@@ -11,7 +11,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public INodeFilter Filter {
-			get { return default(INodeFilter); }
+			get {
+				return default(INodeFilter);
+			}
 		}
 
 		public XmlNode NextNode() {
@@ -20,7 +22,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public bool PointerBeforeReferenceNode {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		public XmlNode PreviousNode() {
@@ -29,17 +33,23 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public XmlNode ReferenceNode {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode Root {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public NodeFilter WhatToShow {
-			get { return default(NodeFilter); }
+			get {
+				return default(NodeFilter);
+			}
 		}
 	}
 }

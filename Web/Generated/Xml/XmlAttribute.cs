@@ -8,38 +8,53 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public string LocalName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string NamespaceURI {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement OwnerElement {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Prefix {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Specified {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Value {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

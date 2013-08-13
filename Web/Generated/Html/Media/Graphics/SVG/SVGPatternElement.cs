@@ -8,32 +8,44 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Href {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> PatternContentUnits {
-			get { return default(SVGAnimatedEnumeration<SVGUnitType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGUnitType>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedTransformList PatternTransform {
-			get { return default(SVGAnimatedTransformList); }
+			get {
+				return default(SVGAnimatedTransformList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> PatternUnits {
-			get { return default(SVGAnimatedEnumeration<SVGUnitType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGUnitType>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio {
-			get { return default(SVGAnimatedPreserveAspectRatio); }
+			get {
+				return default(SVGAnimatedPreserveAspectRatio);
+			}
 		}
 
 		[ScriptName("SVG_UNIT_TYPE_OBJECTBOUNDINGBOX")]
@@ -47,22 +59,30 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Width {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedRect ViewBox {
-			get { return default(SVGAnimatedRect); }
+			get {
+				return default(SVGAnimatedRect);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 	}
 }

@@ -8,22 +8,30 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X1 {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X2 {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y1 {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y2 {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 	}
 }

@@ -4,18 +4,18 @@ namespace System.Html.Speech {
 	[Imported, Serializable]
 	public partial class SpeechSynthesisEventInit : EventInit {
 		public uint CharIndex {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public float ElapsedTime {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public string Name {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

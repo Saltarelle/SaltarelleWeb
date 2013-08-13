@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Xml;
 
@@ -10,8 +10,11 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public TypeOption<XmlElement, OptionElement> this[uint index] {
-			get { return default(TypeOption<XmlElement, OptionElement>); }
-			set { }
+			get {
+				return default(TypeOption<XmlElement, OptionElement>);
+			}
+			set {
+			}
 		}
 
 		public void Add(TypeOption<OptionElement, OptGroupElement> element) {
@@ -22,8 +25,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Autofocus {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		public bool CheckValidity() {
@@ -32,18 +38,23 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Disabled {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public FormElement Form {
-			get { return default(FormElement); }
+			get {
+				return default(FormElement);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<XmlElement> GetEnumerator() {
-			return default(IEnumerator<XmlElement>);
+			return null;
 		}
 
 		public XmlElement Item(uint index) {
@@ -52,20 +63,29 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Multiple {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public OptionElement NamedItem(string name) {
@@ -74,7 +94,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public HtmlOptionsCollection Options {
-			get { return default(HtmlOptionsCollection); }
+			get {
+				return default(HtmlOptionsCollection);
+			}
 		}
 
 		public void Remove() {
@@ -85,14 +107,20 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Required {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public int SelectedIndex {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void SetCustomValidity(string error) {
@@ -100,34 +128,48 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Size {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ValidationMessage {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ValidityState Validity {
-			get { return default(ValidityState); }
+			get {
+				return default(ValidityState);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Value {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool WillValidate {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

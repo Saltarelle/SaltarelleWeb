@@ -5,6 +5,6 @@ namespace System.Html {
 	public enum WheelDeltaMode {
 		Pixel = 0,
 		Line = 1,
-		Page = 2,
+		Page = 2
 	}
 }

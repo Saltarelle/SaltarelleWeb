@@ -4,13 +4,13 @@ namespace System.Html.Speech {
 	[Imported, Serializable]
 	public partial class SpeechRecognitionErrorInit : EventInit {
 		public SpeechRecognitionErrorCode Error {
-			get { return default(SpeechRecognitionErrorCode); }
-			set { }
+			get;
+			set;
 		}
 
 		public string Message {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

@@ -5,6 +5,6 @@ namespace System.Net.WebRTC {
 	public enum RTCSdpType {
 		Offer,
 		Pranswer,
-		Answer,
+		Answer
 	}
 }

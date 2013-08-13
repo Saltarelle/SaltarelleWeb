@@ -4,8 +4,8 @@ namespace System.Html.Mobile {
 	[Imported, Serializable]
 	public partial class UserProximityEventInit : EventInit {
 		public bool Near {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

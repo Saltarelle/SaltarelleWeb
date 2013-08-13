@@ -8,6 +8,6 @@ namespace System.Xml {
 		Following = 4,
 		Contains = 8,
 		ContainedBy = 16,
-		ImplementationSpecific = 32,
+		ImplementationSpecific = 32
 	}
 }

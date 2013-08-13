@@ -8,12 +8,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGLengthList AnimVal {
-			get { return default(SVGLengthList); }
+			get {
+				return default(SVGLengthList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGLengthList BaseVal {
-			get { return default(SVGLengthList); }
+			get {
+				return default(SVGLengthList);
+			}
 		}
 	}
 }

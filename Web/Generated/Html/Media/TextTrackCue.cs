@@ -12,14 +12,20 @@ namespace System.Html.Media {
 
 		[IntrinsicProperty]
 		public TextTrackCueAlign Align {
-			get { return default(TextTrackCueAlign); }
-			set { }
+			get {
+				return default(TextTrackCueAlign);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double EndTime {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public XmlDocumentFragment GetCueAsHTML() {
@@ -28,67 +34,99 @@ namespace System.Html.Media {
 
 		[IntrinsicProperty]
 		public string Id {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onenter")]
 		public HtmlEventHandler OnEnter {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onexit")]
 		public HtmlEventHandler OnExit {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool PauseOnExit {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public int Position {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public int Size {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool SnapToLines {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double StartTime {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Text {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public TextTrack Track {
-			get { return default(TextTrack); }
+			get {
+				return default(TextTrack);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Vertical {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

@@ -8,42 +8,58 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength MarkerHeight {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGMarkerUnits> MarkerUnits {
-			get { return default(SVGAnimatedEnumeration<SVGMarkerUnits>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGMarkerUnits>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength MarkerWidth {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedAngle OrientAngle {
-			get { return default(SVGAnimatedAngle); }
+			get {
+				return default(SVGAnimatedAngle);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGMarkerOrient> OrientType {
-			get { return default(SVGAnimatedEnumeration<SVGMarkerOrient>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGMarkerOrient>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio {
-			get { return default(SVGAnimatedPreserveAspectRatio); }
+			get {
+				return default(SVGAnimatedPreserveAspectRatio);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength RefX {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength RefY {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		public void SetOrientToAngle(SVGAngle angle) {
@@ -72,7 +88,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedRect ViewBox {
-			get { return default(SVGAnimatedRect); }
+			get {
+				return default(SVGAnimatedRect);
+			}
 		}
 	}
 }

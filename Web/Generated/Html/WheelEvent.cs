@@ -14,22 +14,30 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public WheelDeltaMode DeltaMode {
-			get { return default(WheelDeltaMode); }
+			get {
+				return default(WheelDeltaMode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public double DeltaX {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double DeltaY {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double DeltaZ {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[ScriptName("DOM_DELTA_LINE")]

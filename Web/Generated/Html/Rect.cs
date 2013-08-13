@@ -8,22 +8,30 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public CSSPrimitiveValue Bottom {
-			get { return default(CSSPrimitiveValue); }
+			get {
+				return default(CSSPrimitiveValue);
+			}
 		}
 
 		[IntrinsicProperty]
 		public CSSPrimitiveValue Left {
-			get { return default(CSSPrimitiveValue); }
+			get {
+				return default(CSSPrimitiveValue);
+			}
 		}
 
 		[IntrinsicProperty]
 		public CSSPrimitiveValue Right {
-			get { return default(CSSPrimitiveValue); }
+			get {
+				return default(CSSPrimitiveValue);
+			}
 		}
 
 		[IntrinsicProperty]
 		public CSSPrimitiveValue Top {
-			get { return default(CSSPrimitiveValue); }
+			get {
+				return default(CSSPrimitiveValue);
+			}
 		}
 	}
 }

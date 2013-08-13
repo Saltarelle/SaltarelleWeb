@@ -8,37 +8,51 @@ namespace System.Html.Geolocation {
 
 		[IntrinsicProperty]
 		public double Accuracy {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double? Altitude {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double? AltitudeAccuracy {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double? Heading {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Latitude {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Longitude {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double? Speed {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

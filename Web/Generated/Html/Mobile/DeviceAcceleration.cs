@@ -8,17 +8,23 @@ namespace System.Html.Mobile {
 
 		[IntrinsicProperty]
 		public double? X {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double? Y {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double? Z {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

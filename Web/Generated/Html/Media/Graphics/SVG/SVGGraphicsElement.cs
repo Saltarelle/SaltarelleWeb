@@ -8,7 +8,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGElement FarthestViewportElement {
-			get { return default(SVGElement); }
+			get {
+				return default(SVGElement);
+			}
 		}
 
 		public SVGRect GetBBox() {
@@ -33,27 +35,37 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGElement NearestViewportElement {
-			get { return default(SVGElement); }
+			get {
+				return default(SVGElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGStringList RequiredExtensions {
-			get { return default(SVGStringList); }
+			get {
+				return default(SVGStringList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGStringList RequiredFeatures {
-			get { return default(SVGStringList); }
+			get {
+				return default(SVGStringList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGStringList SystemLanguage {
-			get { return default(SVGStringList); }
+			get {
+				return default(SVGStringList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedTransformList Transform {
-			get { return default(SVGAnimatedTransformList); }
+			get {
+				return default(SVGAnimatedTransformList);
+			}
 		}
 	}
 }

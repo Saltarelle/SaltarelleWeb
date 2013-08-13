@@ -4,18 +4,18 @@ namespace System.Html.Mobile {
 	[Imported, Serializable]
 	public partial class DeviceProximityEventInit : EventInit {
 		public double Max {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public double Min {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public double Value {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

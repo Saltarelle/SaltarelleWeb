@@ -14,32 +14,44 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool AltKey {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ushort Button {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ushort Buttons {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ClientX {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ClientY {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool CtrlKey {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		public bool GetModifierState(string keyArg) {
@@ -48,27 +60,37 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool MetaKey {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public EventTarget RelatedTarget {
-			get { return default(EventTarget); }
+			get {
+				return default(EventTarget);
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ScreenX {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ScreenY {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool ShiftKey {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

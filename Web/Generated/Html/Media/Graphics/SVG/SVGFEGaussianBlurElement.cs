@@ -8,7 +8,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedString In1 {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		public void SetStdDeviation(float stdDeviationX, float stdDeviationY) {
@@ -16,12 +18,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber StdDeviationX {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber StdDeviationY {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 	}
 }

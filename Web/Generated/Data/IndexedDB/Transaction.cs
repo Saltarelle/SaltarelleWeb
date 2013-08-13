@@ -12,17 +12,23 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public Database Db {
-			get { return default(Database); }
+			get {
+				return default(Database);
+			}
 		}
 
 		[IntrinsicProperty]
 		public DOMError Error {
-			get { return default(DOMError); }
+			get {
+				return default(DOMError);
+			}
 		}
 
 		[IntrinsicProperty]
 		public TransactionMode Mode {
-			get { return default(TransactionMode); }
+			get {
+				return default(TransactionMode);
+			}
 		}
 
 		public ObjectStore ObjectStore(string name) {
@@ -31,25 +37,36 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public DOMStringList ObjectStoreNames {
-			get { return default(DOMStringList); }
+			get {
+				return default(DOMStringList);
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onabort")]
 		public HtmlEventHandler OnAbort {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("oncomplete")]
 		public HtmlEventHandler OnComplete {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 	}
 }

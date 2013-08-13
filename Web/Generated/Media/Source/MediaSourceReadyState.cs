@@ -5,6 +5,6 @@ namespace System.Media.Source {
 	public enum MediaSourceReadyState {
 		Closed,
 		Open,
-		Ended,
+		Ended
 	}
 }

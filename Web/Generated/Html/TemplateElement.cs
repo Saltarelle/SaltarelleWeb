@@ -9,7 +9,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public XmlDocumentFragment Content {
-			get { return default(XmlDocumentFragment); }
+			get {
+				return default(XmlDocumentFragment);
+			}
 		}
 	}
 }

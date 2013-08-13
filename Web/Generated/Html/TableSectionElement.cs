@@ -8,20 +8,29 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Align {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Ch {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ChOff {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public void DeleteRow(int index) {
@@ -37,13 +46,18 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ElementCollection Rows {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string VAlign {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

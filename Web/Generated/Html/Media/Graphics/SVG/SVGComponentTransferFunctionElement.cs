@@ -8,27 +8,37 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Amplitude {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Exponent {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Intercept {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Offset {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Slope {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[ScriptName("SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE")]
@@ -51,12 +61,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumberList TableValues {
-			get { return default(SVGAnimatedNumberList); }
+			get {
+				return default(SVGAnimatedNumberList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGComponentTransferType> Type {
-			get { return default(SVGAnimatedEnumeration<SVGComponentTransferType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGComponentTransferType>);
+			}
 		}
 	}
 }

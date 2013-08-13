@@ -8,19 +8,27 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public string CrossOrigin {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Href {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

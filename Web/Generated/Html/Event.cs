@@ -20,7 +20,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Bubbles {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[ScriptName("BUBBLING_PHASE")]
@@ -28,7 +30,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Cancelable {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[ScriptName("CAPTURING_PHASE")]
@@ -39,22 +43,30 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public EventTarget CurrentTarget {
-			get { return default(EventTarget); }
+			get {
+				return default(EventTarget);
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool DefaultPrevented {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public EventPhase EventPhase {
-			get { return default(EventPhase); }
+			get {
+				return default(EventPhase);
+			}
 		}
 
 		[IntrinsicProperty]
 		public EventTarget ExplicitOriginalTarget {
-			get { return default(EventTarget); }
+			get {
+				return default(EventTarget);
+			}
 		}
 
 		public bool GetPreventDefault() {
@@ -63,7 +75,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool IsTrusted {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[ScriptName("META_MASK")]
@@ -73,7 +87,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public EventTarget OriginalTarget {
-			get { return default(EventTarget); }
+			get {
+				return default(EventTarget);
+			}
 		}
 
 		public void PreventDefault() {
@@ -90,17 +106,23 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public EventTarget Target {
-			get { return default(EventTarget); }
+			get {
+				return default(EventTarget);
+			}
 		}
 
 		[IntrinsicProperty]
 		public long TimeStamp {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

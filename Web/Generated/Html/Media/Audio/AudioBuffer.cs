@@ -9,7 +9,9 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public double Duration {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public Float32Array GetChannelData(uint channel) {
@@ -18,17 +20,23 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public int Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int NumberOfChannels {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public float SampleRate {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

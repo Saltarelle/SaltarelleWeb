@@ -8,13 +8,18 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ElementCollection Areas {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

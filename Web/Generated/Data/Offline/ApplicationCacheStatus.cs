@@ -8,6 +8,6 @@ namespace System.Data.Offline {
 		Checking = 2,
 		Downloading = 3,
 		Updateready = 4,
-		Obsolete = 5,
+		Obsolete = 5
 	}
 }

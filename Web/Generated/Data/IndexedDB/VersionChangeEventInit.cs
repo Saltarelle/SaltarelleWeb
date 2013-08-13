@@ -5,13 +5,13 @@ namespace System.Data.IndexedDB {
 	[Imported, Serializable]
 	public partial class VersionChangeEventInit : EventInit {
 		public ulong? NewVersion {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public ulong OldVersion {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

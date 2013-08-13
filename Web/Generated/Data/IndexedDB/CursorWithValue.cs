@@ -8,7 +8,9 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public object Value {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

@@ -15,13 +15,18 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public MessagePort Port {
-			get { return default(MessagePort); }
+			get {
+				return default(MessagePort);
+			}
 		}
 	}
 }

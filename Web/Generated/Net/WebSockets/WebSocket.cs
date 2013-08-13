@@ -20,13 +20,18 @@ namespace System.Net.WebSockets {
 
 		[IntrinsicProperty]
 		public BinaryType BinaryType {
-			get { return default(BinaryType); }
-			set { }
+			get {
+				return default(BinaryType);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint BufferedAmount {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void Close() {
@@ -46,43 +51,61 @@ namespace System.Net.WebSockets {
 
 		[IntrinsicProperty]
 		public string Extensions {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onclose")]
 		public HtmlEventHandler OnClose {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmessage")]
 		public HtmlEventHandler OnMessage {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onopen")]
 		public HtmlEventHandler OnOpen {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public const ushort OPEN = 1;
 
 		[IntrinsicProperty]
 		public string Protocol {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ReadyState ReadyState {
-			get { return default(ReadyState); }
+			get {
+				return default(ReadyState);
+			}
 		}
 
 		public void Send(ArrayBuffer data) {
@@ -99,7 +122,9 @@ namespace System.Net.WebSockets {
 
 		[IntrinsicProperty]
 		public string Url {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

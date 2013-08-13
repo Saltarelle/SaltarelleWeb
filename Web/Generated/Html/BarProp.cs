@@ -8,8 +8,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Visible {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 	}
 }

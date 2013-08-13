@@ -14,7 +14,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Persisted {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

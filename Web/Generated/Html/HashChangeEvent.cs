@@ -14,12 +14,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string NewURL {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string OldURL {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

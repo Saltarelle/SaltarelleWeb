@@ -8,37 +8,51 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber BaseFrequencyX {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber BaseFrequencyY {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedInteger NumOctaves {
-			get { return default(SVGAnimatedInteger); }
+			get {
+				return default(SVGAnimatedInteger);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Result {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Seed {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGFEStitchType> StitchTiles {
-			get { return default(SVGAnimatedEnumeration<SVGFEStitchType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGFEStitchType>);
+			}
 		}
 
 		[ScriptName("SVG_STITCHTYPE_NOSTITCH")]
@@ -61,22 +75,30 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGFETurbulenceType> Type {
-			get { return default(SVGAnimatedEnumeration<SVGFETurbulenceType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGFETurbulenceType>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Width {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 	}
 }

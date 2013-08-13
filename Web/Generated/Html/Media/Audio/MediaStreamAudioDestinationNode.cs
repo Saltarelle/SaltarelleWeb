@@ -8,7 +8,9 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public MediaStream Stream {
-			get { return default(MediaStream); }
+			get {
+				return default(MediaStream);
+			}
 		}
 	}
 }

@@ -24,22 +24,30 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public object KeyPath {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool MultiEntry {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ObjectStore ObjectStore {
-			get { return default(ObjectStore); }
+			get {
+				return default(ObjectStore);
+			}
 		}
 
 		public Request OpenCursor() {
@@ -68,12 +76,16 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public string StoreName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Unique {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

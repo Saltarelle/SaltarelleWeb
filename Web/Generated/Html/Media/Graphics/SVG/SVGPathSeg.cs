@@ -68,12 +68,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGPathSegType PathSegType {
-			get { return default(SVGPathSegType); }
+			get {
+				return default(SVGPathSegType);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string PathSegTypeAsLetter {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

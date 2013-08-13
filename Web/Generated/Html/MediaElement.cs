@@ -21,13 +21,18 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Autoplay {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public TimeRanges Buffered {
-			get { return default(TimeRanges); }
+			get {
+				return default(TimeRanges);
+			}
 		}
 
 		public MediaPlayability CanPlayType(string type) {
@@ -36,52 +41,75 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Controls {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public MediaCrossOriginPolicy CrossOrigin {
-			get { return default(MediaCrossOriginPolicy); }
-			set { }
+			get {
+				return default(MediaCrossOriginPolicy);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string CurrentSrc {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double CurrentTime {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool DefaultMuted {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double DefaultPlaybackRate {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Duration {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Ended {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public MediaError Error {
-			get { return default(MediaError); }
+			get {
+				return default(MediaError);
+			}
 		}
 
 		[ScriptName("HAVE_CURRENT_DATA")]
@@ -104,14 +132,20 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Loop {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Muted {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[ScriptName("NETWORK_EMPTY")]
@@ -128,7 +162,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public MediaElementNetworkState NetworkState {
-			get { return default(MediaElementNetworkState); }
+			get {
+				return default(MediaElementNetworkState);
+			}
 		}
 
 		public void Pause() {
@@ -136,7 +172,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Paused {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		public void Play() {
@@ -144,51 +182,73 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public double PlaybackRate {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public TimeRanges Played {
-			get { return default(TimeRanges); }
+			get {
+				return default(TimeRanges);
+			}
 		}
 
 		[IntrinsicProperty]
 		public MediaPreload Preload {
-			get { return default(MediaPreload); }
-			set { }
+			get {
+				return default(MediaPreload);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public MediaElementReadyState ReadyState {
-			get { return default(MediaElementReadyState); }
+			get {
+				return default(MediaElementReadyState);
+			}
 		}
 
 		[IntrinsicProperty]
 		public TimeRanges Seekable {
-			get { return default(TimeRanges); }
+			get {
+				return default(TimeRanges);
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Seeking {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Src {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public TextTrackList TextTracks {
-			get { return default(TextTrackList); }
+			get {
+				return default(TextTrackList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Volume {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

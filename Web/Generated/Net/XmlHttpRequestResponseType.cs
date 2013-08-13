@@ -9,6 +9,6 @@ namespace System.Net {
 		Blob,
 		Document,
 		Json,
-		Text,
+		Text
 	}
 }

@@ -15,48 +15,67 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool CancelBubble {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public int Detail {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool IsChar {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int LayerX {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int LayerY {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int PageX {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int PageY {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int RangeOffset {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode RangeParent {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[ScriptName("SCROLL_PAGE_DOWN")]
@@ -67,12 +86,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Which {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public WindowInstance View {
-			get { return default(WindowInstance); }
+			get {
+				return default(WindowInstance);
+			}
 		}
 	}
 }

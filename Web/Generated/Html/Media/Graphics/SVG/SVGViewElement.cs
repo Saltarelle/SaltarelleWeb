@@ -8,7 +8,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio {
-			get { return default(SVGAnimatedPreserveAspectRatio); }
+			get {
+				return default(SVGAnimatedPreserveAspectRatio);
+			}
 		}
 
 		[ScriptName("SVG_ZOOMANDPAN_DISABLE")]
@@ -22,18 +24,25 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedRect ViewBox {
-			get { return default(SVGAnimatedRect); }
+			get {
+				return default(SVGAnimatedRect);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGStringList ViewTarget {
-			get { return default(SVGStringList); }
+			get {
+				return default(SVGStringList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGZoomAndPanType ZoomAndPan {
-			get { return default(SVGZoomAndPanType); }
-			set { }
+			get {
+				return default(SVGZoomAndPanType);
+			}
+			set {
+			}
 		}
 	}
 }

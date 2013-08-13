@@ -12,7 +12,9 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public float DefaultValue {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void ExponentialRampToValueAtTime(float value, double endTime) {
@@ -35,8 +37,11 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public float Value {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

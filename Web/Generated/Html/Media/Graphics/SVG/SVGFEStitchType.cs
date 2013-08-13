@@ -5,6 +5,6 @@ namespace System.Html.Media.Graphics.SVG {
 	public enum SVGFEStitchType {
 		Unknown = 0,
 		Stitch = 1,
-		Nostitch = 2,
+		Nostitch = 2
 	}
 }

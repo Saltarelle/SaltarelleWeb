@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Speech {
@@ -9,12 +9,14 @@ namespace System.Html.Speech {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public SpeechRecognitionResult this[uint index] {
-			get { return default(SpeechRecognitionResult); }
+			get {
+				return default(SpeechRecognitionResult);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<SpeechRecognitionResult> GetEnumerator() {
-			return default(IEnumerator<SpeechRecognitionResult>);
+			return null;
 		}
 
 		public SpeechRecognitionResult Item(uint index) {
@@ -23,7 +25,9 @@ namespace System.Html.Speech {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

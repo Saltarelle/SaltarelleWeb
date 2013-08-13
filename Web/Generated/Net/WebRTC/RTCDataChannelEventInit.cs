@@ -5,8 +5,8 @@ namespace System.Net.WebRTC {
 	[Imported, Serializable]
 	public partial class RTCDataChannelEventInit : EventInit {
 		public RTCDataChannel Channel {
-			get { return default(RTCDataChannel); }
-			set { }
+			get;
+			set;
 		}
 	}
 }

@@ -14,17 +14,23 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ushort Code {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Reason {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool WasClean {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

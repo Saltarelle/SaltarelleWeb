@@ -6,6 +6,6 @@ namespace System.Html.Media {
 		Aborted = 1,
 		Network = 2,
 		Decode = 3,
-		SrcNotSupported = 4,
+		SrcNotSupported = 4
 	}
 }

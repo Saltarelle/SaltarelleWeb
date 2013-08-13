@@ -5,6 +5,6 @@ namespace System.Html.Media {
 	public enum TextTrackMode {
 		Disabled,
 		Hidden,
-		Showing,
+		Showing
 	}
 }

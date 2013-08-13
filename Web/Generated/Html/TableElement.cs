@@ -8,38 +8,56 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Align {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string BgColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Border {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public TableCaptionElement Caption {
-			get { return default(TableCaptionElement); }
-			set { }
+			get {
+				return default(TableCaptionElement);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string CellPadding {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string CellSpacing {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public Element CreateCaption() {
@@ -72,8 +90,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Frame {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public Element InsertRow() {
@@ -86,42 +107,61 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ElementCollection Rows {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Rules {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Summary {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection TBodies {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public TableSectionElement TFoot {
-			get { return default(TableSectionElement); }
-			set { }
+			get {
+				return default(TableSectionElement);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public TableSectionElement THead {
-			get { return default(TableSectionElement); }
-			set { }
+			get {
+				return default(TableSectionElement);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Width {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

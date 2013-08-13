@@ -8,12 +8,15 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public object this[string name] {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public OptionElement this[uint index] {
-			set { }
+			set {
+			}
 		}
 
 		public void Add(TypeOption<OptionElement, OptGroupElement> element) {
@@ -24,8 +27,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public object NamedItem(string name) {
@@ -37,8 +43,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public int SelectedIndex {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

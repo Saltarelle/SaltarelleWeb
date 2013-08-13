@@ -6,6 +6,6 @@ namespace System.Html.Editing {
 		StartToStart = 0,
 		StartToEnd = 1,
 		EndToEnd = 2,
-		EndToStart = 3,
+		EndToStart = 3
 	}
 }

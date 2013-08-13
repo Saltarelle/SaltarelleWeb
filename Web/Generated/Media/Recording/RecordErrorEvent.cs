@@ -15,7 +15,9 @@ namespace System.Media.Recording {
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

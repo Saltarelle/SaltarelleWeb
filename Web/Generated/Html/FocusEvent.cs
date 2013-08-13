@@ -14,7 +14,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public EventTarget RelatedTarget {
-			get { return default(EventTarget); }
+			get {
+				return default(EventTarget);
+			}
 		}
 	}
 }

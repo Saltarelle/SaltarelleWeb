@@ -9,22 +9,31 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Default {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		public const ushort ERROR = 3;
 
 		[IntrinsicProperty]
 		public TextTrackKind Kind {
-			get { return default(TextTrackKind); }
-			set { }
+			get {
+				return default(TextTrackKind);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Label {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public const ushort LOADED = 2;
@@ -35,24 +44,34 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ushort ReadyState {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Src {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Srclang {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public TextTrack Track {
-			get { return default(TextTrack); }
+			get {
+				return default(TextTrack);
+			}
 		}
 	}
 }

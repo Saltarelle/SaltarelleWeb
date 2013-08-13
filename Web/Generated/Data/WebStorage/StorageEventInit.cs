@@ -5,28 +5,28 @@ namespace System.Data.WebStorage {
 	[Imported, Serializable]
 	public partial class StorageEventInit : EventInit {
 		public string Key {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public string NewValue {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public string OldValue {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public Storage StorageArea {
-			get { return default(Storage); }
-			set { }
+			get;
+			set;
 		}
 
 		public string Url {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

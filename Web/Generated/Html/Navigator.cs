@@ -7,42 +7,58 @@ namespace System.Html {
 	public static partial class Navigator {
 		[IntrinsicProperty]
 		public static string AppCodeName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string AppName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string AppVersion {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static BatteryManager Battery {
-			get { return default(BatteryManager); }
+			get {
+				return default(BatteryManager);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string BuildID {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static bool CookieEnabled {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string DoNotTrack {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static GeolocationService Geolocation {
-			get { return default(GeolocationService); }
+			get {
+				return default(GeolocationService);
+			}
 		}
 
 		public static bool JavaEnabled() {
@@ -51,42 +67,58 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string Language {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static MimeTypeArray MimeTypes {
-			get { return default(MimeTypeArray); }
+			get {
+				return default(MimeTypeArray);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static bool OnLine {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Oscpu {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Platform {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static PluginArray Plugins {
-			get { return default(PluginArray); }
+			get {
+				return default(PluginArray);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Product {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string ProductSub {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public static void RegisterContentHandler(string mimeType, string url, string title) {
@@ -101,17 +133,23 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string UserAgent {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Vendor {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string VendorSub {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public static void Vibrate(uint duration) {

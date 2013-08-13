@@ -4,13 +4,13 @@ namespace System.Data.IndexedDB {
 	[Imported, Serializable]
 	public partial class IndexParameters {
 		public bool MultiEntry {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool Unique {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

@@ -8,8 +8,11 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public double DopplerFactor {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void SetOrientation(double x, double y, double z, double xUp, double yUp, double zUp) {
@@ -23,8 +26,11 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public double SpeedOfSound {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

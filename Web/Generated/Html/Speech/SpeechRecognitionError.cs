@@ -14,12 +14,16 @@ namespace System.Html.Speech {
 
 		[IntrinsicProperty]
 		public SpeechRecognitionErrorCode Error {
-			get { return default(SpeechRecognitionErrorCode); }
+			get {
+				return default(SpeechRecognitionErrorCode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Message {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

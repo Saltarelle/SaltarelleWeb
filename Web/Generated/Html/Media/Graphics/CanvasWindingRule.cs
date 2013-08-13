@@ -4,6 +4,6 @@ namespace System.Html.Media.Graphics {
 	[Imported, NamedValues]
 	public enum CanvasWindingRule {
 		Nonzero,
-		Evenodd,
+		Evenodd
 	}
 }

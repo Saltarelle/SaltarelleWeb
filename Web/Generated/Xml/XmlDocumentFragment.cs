@@ -9,22 +9,30 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public uint ChildElementCount {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Children {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement FirstElementChild {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement LastElementChild {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		public XmlElement QuerySelector(string selectors) {

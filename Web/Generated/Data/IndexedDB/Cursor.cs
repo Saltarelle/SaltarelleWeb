@@ -21,22 +21,30 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public CursorDirection Direction {
-			get { return default(CursorDirection); }
+			get {
+				return default(CursorDirection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public object Key {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public object PrimaryKey {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public TypeOption<ObjectStore, Index> Source {
-			get { return default(TypeOption<ObjectStore, Index>); }
+			get {
+				return default(TypeOption<ObjectStore, Index>);
+			}
 		}
 
 		public Request Update(object value) {

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.IO;
 using System.Runtime.CompilerServices;
 
@@ -10,7 +10,9 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public DataTransferItem this[uint index] {
-			get { return default(DataTransferItem); }
+			get {
+				return default(DataTransferItem);
+			}
 		}
 
 		public DataTransferItem Add(File data) {
@@ -26,12 +28,14 @@ namespace System.Html {
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<DataTransferItem> GetEnumerator() {
-			return default(IEnumerator<DataTransferItem>);
+			return null;
 		}
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void Remove(uint index) {

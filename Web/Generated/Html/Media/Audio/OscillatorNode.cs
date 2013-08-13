@@ -8,18 +8,25 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public AudioParam Detune {
-			get { return default(AudioParam); }
+			get {
+				return default(AudioParam);
+			}
 		}
 
 		[IntrinsicProperty]
 		public AudioParam Frequency {
-			get { return default(AudioParam); }
+			get {
+				return default(AudioParam);
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onended")]
 		public HtmlEventHandler OnEnded {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public void SetPeriodicWave(PeriodicWave periodicWave) {
@@ -33,8 +40,11 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public OscillatorType Type {
-			get { return default(OscillatorType); }
-			set { }
+			get {
+				return default(OscillatorType);
+			}
+			set {
+			}
 		}
 	}
 }

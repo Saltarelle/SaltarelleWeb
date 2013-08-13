@@ -16,45 +16,65 @@ namespace System.IO {
 
 		[IntrinsicProperty]
 		public DOMError Error {
-			get { return default(DOMError); }
+			get {
+				return default(DOMError);
+			}
 		}
 
 		public const ushort LOADING = 1;
 
 		[IntrinsicProperty, ScriptName("onabort")]
 		public HtmlEventHandler OnAbort {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onload")]
 		public HtmlEventHandler OnLoad {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onloadend")]
 		public HtmlEventHandler OnLoadend {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onloadstart")]
 		public HtmlEventHandler OnLoadstart {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onprogress")]
 		public HtmlEventHandler OnProgress {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public void ReadAsArrayBuffer(Blob blob) {
@@ -74,12 +94,16 @@ namespace System.IO {
 
 		[IntrinsicProperty]
 		public ushort ReadyState {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public object Result {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

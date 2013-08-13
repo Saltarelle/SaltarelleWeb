@@ -14,17 +14,23 @@ namespace System.Html.Speech {
 
 		[IntrinsicProperty]
 		public uint CharIndex {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public float ElapsedTime {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

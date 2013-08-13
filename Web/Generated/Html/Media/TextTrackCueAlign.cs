@@ -7,6 +7,6 @@ namespace System.Html.Media {
 		Middle,
 		End,
 		Left,
-		Right,
+		Right
 	}
 }

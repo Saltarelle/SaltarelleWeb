@@ -5,6 +5,6 @@ namespace System.Net.WebRTC {
 	public enum RTCIceGatheringState {
 		New,
 		Gathering,
-		Complete,
+		Complete
 	}
 }

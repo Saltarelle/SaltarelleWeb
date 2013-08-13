@@ -15,27 +15,37 @@ namespace System.Data.WebStorage {
 
 		[IntrinsicProperty]
 		public string Key {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string NewValue {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string OldValue {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public Storage StorageArea {
-			get { return default(Storage); }
+			get {
+				return default(Storage);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Url {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

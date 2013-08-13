@@ -9,39 +9,55 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public DOMError Error {
-			get { return default(DOMError); }
+			get {
+				return default(DOMError);
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onsuccess")]
 		public HtmlEventHandler OnSuccess {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public RequestReadyState ReadyState {
-			get { return default(RequestReadyState); }
+			get {
+				return default(RequestReadyState);
+			}
 		}
 
 		[IntrinsicProperty]
 		public object Result {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public TypeOption<ObjectStore, Index, Cursor> Source {
-			get { return default(TypeOption<ObjectStore, Index, Cursor>); }
+			get {
+				return default(TypeOption<ObjectStore, Index, Cursor>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public Transaction Transaction {
-			get { return default(Transaction); }
+			get {
+				return default(Transaction);
+			}
 		}
 	}
 }

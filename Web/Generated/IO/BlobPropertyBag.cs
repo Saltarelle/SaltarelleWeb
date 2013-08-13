@@ -4,13 +4,13 @@ namespace System.IO {
 	[Imported, Serializable]
 	public partial class BlobPropertyBag {
 		public EndingTypes Endings {
-			get { return default(EndingTypes); }
-			set { }
+			get;
+			set;
 		}
 
 		public string Type {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

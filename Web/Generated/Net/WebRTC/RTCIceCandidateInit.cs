@@ -4,18 +4,18 @@ namespace System.Net.WebRTC {
 	[Imported, Serializable]
 	public partial class RTCIceCandidateInit {
 		public string Candidate {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public string SdpMid {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public ushort SdpMLineIndex {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

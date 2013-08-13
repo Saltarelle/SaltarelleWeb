@@ -6,6 +6,6 @@ namespace System.Html.Media.Graphics.SVG {
 		Unknown = 0,
 		Duplicate = 1,
 		Wrap = 2,
-		None = 3,
+		None = 3
 	}
 }

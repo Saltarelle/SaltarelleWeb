@@ -4,8 +4,8 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class FocusEventInit : UIEventInit {
 		public EventTarget RelatedTarget {
-			get { return default(EventTarget); }
-			set { }
+			get;
+			set;
 		}
 	}
 }

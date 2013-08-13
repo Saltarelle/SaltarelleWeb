@@ -7,6 +7,6 @@ namespace System.Html.Media.Graphics.SVG {
 		R = 1,
 		G = 2,
 		B = 3,
-		A = 4,
+		A = 4
 	}
 }

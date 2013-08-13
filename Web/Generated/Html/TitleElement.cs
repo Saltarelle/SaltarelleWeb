@@ -8,8 +8,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Text {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

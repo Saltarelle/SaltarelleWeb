@@ -15,12 +15,16 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public ulong? NewVersion {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ulong OldVersion {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

@@ -12,8 +12,11 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty, ScriptName("onmessage")]
 		public HtmlEventHandler OnMessage {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public void PostMessage(object message) {

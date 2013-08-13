@@ -8,12 +8,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Data {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Locale {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

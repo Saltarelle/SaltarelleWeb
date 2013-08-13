@@ -8,26 +8,38 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public AudioBuffer Buffer {
-			get { return default(AudioBuffer); }
-			set { }
+			get {
+				return default(AudioBuffer);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Loop {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double LoopEnd {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double LoopStart {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void NoteGrainOn(double when, double grainOffset, double grainDuration) {
@@ -41,13 +53,18 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty, ScriptName("onended")]
 		public HtmlEventHandler OnEnded {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public AudioParam PlaybackRate {
-			get { return default(AudioParam); }
+			get {
+				return default(AudioParam);
+			}
 		}
 
 		public void Start() {

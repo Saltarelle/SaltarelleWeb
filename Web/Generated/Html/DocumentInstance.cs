@@ -10,40 +10,57 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public object this[string name] {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string AlinkColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public object All {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Anchors {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Applets {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string BgColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public Element Body {
-			get { return default(Element); }
-			set { }
+			get {
+				return default(Element);
+			}
+			set {
+			}
 		}
 
 		public void CaptureEvents(int eventFlags) {
@@ -57,25 +74,36 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Cookie {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string DesignMode {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Domain {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Embeds {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		public bool ExecCommand(string commandId) {
@@ -92,13 +120,18 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string FgColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Forms {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		public XmlNodeList GetElementsByName(string elementName) {
@@ -119,23 +152,32 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public HeadElement Head {
-			get { return default(HeadElement); }
+			get {
+				return default(HeadElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Images {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string LinkColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Links {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		public DocumentBase Open() {
@@ -160,7 +202,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ElementCollection Plugins {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		public bool QueryCommandEnabled(string commandId) {
@@ -188,13 +232,18 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ElementCollection Scripts {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string VlinkColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[ExpandParams]

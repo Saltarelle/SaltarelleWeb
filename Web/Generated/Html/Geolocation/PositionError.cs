@@ -8,27 +8,37 @@ namespace System.Html.Geolocation {
 
 		[IntrinsicProperty]
 		public ushort Code {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Message {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("PERMISSION_DENIED")]
 		public ushort PERMISSION_DENIED {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("POSITION_UNAVAILABLE")]
 		public ushort POSITION_UNAVAILABLE {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ushort TIMEOUT {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

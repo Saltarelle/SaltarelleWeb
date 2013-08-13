@@ -11,8 +11,11 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public string Data {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public void DeleteData(uint offset, uint count) {
@@ -23,17 +26,23 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement NextElementSibling {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement PreviousElementSibling {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		public void Remove() {

@@ -16,7 +16,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public string BaseURI {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[ScriptName("CDATA_SECTION_NODE")]
@@ -24,7 +26,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public XmlNodeList ChildNodes {
-			get { return default(XmlNodeList); }
+			get {
+				return default(XmlNodeList);
+			}
 		}
 
 		public XmlNode CloneNode() {
@@ -84,7 +88,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public XmlNode FirstChild {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		public object GetUserData(string key) {
@@ -113,12 +119,16 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public XmlNode LastChild {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string LocalName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public string LookupNamespaceURI(string prefix) {
@@ -131,28 +141,39 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public string NamespaceURI {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode NextSibling {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string NodeName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNodeType NodeType {
-			get { return default(XmlNodeType); }
+			get {
+				return default(XmlNodeType);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string NodeValue {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public void Normalize() {
@@ -163,27 +184,37 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public DocumentBase OwnerDocument {
-			get { return default(DocumentBase); }
+			get {
+				return default(DocumentBase);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement ParentElement {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode ParentNode {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Prefix {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode PreviousSibling {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[ScriptName("PROCESSING_INSTRUCTION_NODE")]
@@ -202,8 +233,11 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public string TextContent {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

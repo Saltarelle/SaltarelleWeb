@@ -10,14 +10,20 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public Float32Array Curve {
-			get { return default(Float32Array); }
-			set { }
+			get {
+				return default(Float32Array);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public OverSampleType Oversample {
-			get { return default(OverSampleType); }
-			set { }
+			get {
+				return default(OverSampleType);
+			}
+			set {
+			}
 		}
 	}
 }

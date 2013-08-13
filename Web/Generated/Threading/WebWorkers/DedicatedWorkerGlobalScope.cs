@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Threading.WebWorkers {
-	[GlobalMethods, Imported]
+	[Imported, GlobalMethods]
 	public static partial class DedicatedWorkerGlobalScope {
 		public static void AddEventListener(string type, IEventListener listener) {
 		}
@@ -40,36 +40,52 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty]
 		public static WorkerLocation Location {
-			get { return default(WorkerLocation); }
+			get {
+				return default(WorkerLocation);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static WorkerNavigator Navigator {
-			get { return default(WorkerNavigator); }
+			get {
+				return default(WorkerNavigator);
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public static ErrorEventHandler OnError {
-			get { return default(ErrorEventHandler); }
-			set { }
+			get {
+				return default(ErrorEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmessage")]
 		public static HtmlEventHandler OnMessage {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onoffline")]
 		public static HtmlEventHandler OnOffline {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ononline")]
 		public static HtmlEventHandler OnOnline {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public static void PostMessage(object message) {
@@ -86,7 +102,9 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty]
 		public static WorkerGlobalScope Self {
-			get { return default(WorkerGlobalScope); }
+			get {
+				return default(WorkerGlobalScope);
+			}
 		}
 
 		public static int SetInterval(Function func) {

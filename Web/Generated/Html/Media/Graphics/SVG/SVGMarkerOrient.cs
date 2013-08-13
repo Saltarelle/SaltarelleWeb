@@ -5,6 +5,6 @@ namespace System.Html.Media.Graphics.SVG {
 	public enum SVGMarkerOrient {
 		Unknown = 0,
 		Auto = 1,
-		Angle = 2,
+		Angle = 2
 	}
 }

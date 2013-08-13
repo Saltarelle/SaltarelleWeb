@@ -9,6 +9,6 @@ namespace System.Html {
 		Media = 4,
 		FontFace = 5,
 		Page = 6,
-		Namespace = 10,
+		Namespace = 10
 	}
 }

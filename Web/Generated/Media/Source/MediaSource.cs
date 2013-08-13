@@ -10,7 +10,9 @@ namespace System.Media.Source {
 
 		[IntrinsicProperty]
 		public SourceBufferList ActiveSourceBuffers {
-			get { return default(SourceBufferList); }
+			get {
+				return default(SourceBufferList);
+			}
 		}
 
 		public SourceBuffer AddSourceBuffer(string type) {
@@ -19,8 +21,11 @@ namespace System.Media.Source {
 
 		[IntrinsicProperty]
 		public double Duration {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void EndOfStream() {
@@ -35,7 +40,9 @@ namespace System.Media.Source {
 
 		[IntrinsicProperty]
 		public MediaSourceReadyState ReadyState {
-			get { return default(MediaSourceReadyState); }
+			get {
+				return default(MediaSourceReadyState);
+			}
 		}
 
 		public void RemoveSourceBuffer(SourceBuffer sourceBuffer) {
@@ -43,7 +50,9 @@ namespace System.Media.Source {
 
 		[IntrinsicProperty]
 		public SourceBufferList SourceBuffers {
-			get { return default(SourceBufferList); }
+			get {
+				return default(SourceBufferList);
+			}
 		}
 	}
 }

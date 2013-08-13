@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Xml;
 
@@ -10,30 +10,43 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public Element this[string name] {
-			get { return default(Element); }
+			get {
+				return default(Element);
+			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public XmlElement this[uint index] {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string AcceptCharset {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Action {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Autocomplete {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public bool CheckValidity() {
@@ -42,47 +55,66 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ElementCollection Elements {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Encoding {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Enctype {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<XmlElement> GetEnumerator() {
-			return default(IEnumerator<XmlElement>);
+			return null;
 		}
 
 		[IntrinsicProperty]
 		public int Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Method {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool NoValidate {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		public void Reset() {
@@ -93,8 +125,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Target {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

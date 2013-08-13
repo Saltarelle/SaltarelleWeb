@@ -8,8 +8,11 @@ namespace System.Data.WebStorage {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public string this[string key] {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public void Clear() {
@@ -25,7 +28,9 @@ namespace System.Data.WebStorage {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void RemoveItem(string key) {

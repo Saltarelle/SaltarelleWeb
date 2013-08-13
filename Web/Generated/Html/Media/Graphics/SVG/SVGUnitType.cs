@@ -5,6 +5,6 @@ namespace System.Html.Media.Graphics.SVG {
 	public enum SVGUnitType {
 		Unknown = 0,
 		Userspaceonuse = 1,
-		Objectboundingbox = 2,
+		Objectboundingbox = 2
 	}
 }

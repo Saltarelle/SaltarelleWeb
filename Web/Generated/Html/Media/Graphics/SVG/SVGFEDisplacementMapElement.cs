@@ -8,27 +8,37 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString In1 {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString In2 {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Result {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Scale {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[ScriptName("SVG_CHANNEL_A")]
@@ -48,27 +58,37 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Width {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector> XChannelSelector {
-			get { return default(SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector> YChannelSelector {
-			get { return default(SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector>);
+			}
 		}
 	}
 }

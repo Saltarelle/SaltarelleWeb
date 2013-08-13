@@ -8,22 +8,30 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public float NewScale {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGPoint NewTranslate {
-			get { return default(SVGPoint); }
+			get {
+				return default(SVGPoint);
+			}
 		}
 
 		[IntrinsicProperty]
 		public float PreviousScale {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGPoint PreviousTranslate {
-			get { return default(SVGPoint); }
+			get {
+				return default(SVGPoint);
+			}
 		}
 	}
 }

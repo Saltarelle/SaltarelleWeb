@@ -8,32 +8,44 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedInteger FilterResX {
-			get { return default(SVGAnimatedInteger); }
+			get {
+				return default(SVGAnimatedInteger);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedInteger FilterResY {
-			get { return default(SVGAnimatedInteger); }
+			get {
+				return default(SVGAnimatedInteger);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> FilterUnits {
-			get { return default(SVGAnimatedEnumeration<SVGUnitType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGUnitType>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Href {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> PrimitiveUnits {
-			get { return default(SVGAnimatedEnumeration<SVGUnitType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGUnitType>);
+			}
 		}
 
 		public void SetFilterRes(uint filterResX, uint filterResY) {
@@ -50,17 +62,23 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Width {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 	}
 }

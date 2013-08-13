@@ -9,47 +9,65 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public XmlNodeList AddedNodes {
-			get { return default(XmlNodeList); }
+			get {
+				return default(XmlNodeList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string AttributeName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string AttributeNamespace {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode NextSibling {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string OldValue {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode PreviousSibling {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNodeList RemovedNodes {
-			get { return default(XmlNodeList); }
+			get {
+				return default(XmlNodeList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode Target {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

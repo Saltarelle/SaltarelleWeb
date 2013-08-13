@@ -13,6 +13,6 @@ namespace System.Html.Media.Graphics.SVG {
 		Mm = 7,
 		In = 8,
 		Pt = 9,
-		Pc = 10,
+		Pc = 10
 	}
 }

@@ -13,31 +13,45 @@ namespace System.Media.Recording {
 
 		[IntrinsicProperty]
 		public string MimeType {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondataavailable")]
 		public HtmlEventHandler OnDataavailable {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onstop")]
 		public HtmlEventHandler OnStop {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onwarning")]
 		public HtmlEventHandler OnWarning {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public void Pause() {
@@ -57,7 +71,9 @@ namespace System.Media.Recording {
 
 		[IntrinsicProperty]
 		public RecordingState State {
-			get { return default(RecordingState); }
+			get {
+				return default(RecordingState);
+			}
 		}
 
 		public void Stop() {
@@ -65,7 +81,9 @@ namespace System.Media.Recording {
 
 		[IntrinsicProperty]
 		public MediaStream Stream {
-			get { return default(MediaStream); }
+			get {
+				return default(MediaStream);
+			}
 		}
 	}
 }

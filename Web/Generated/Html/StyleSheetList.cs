@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
@@ -9,12 +9,14 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public StyleSheet this[uint index] {
-			get { return default(StyleSheet); }
+			get {
+				return default(StyleSheet);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<StyleSheet> GetEnumerator() {
-			return default(IEnumerator<StyleSheet>);
+			return null;
 		}
 
 		public StyleSheet Item(uint index) {
@@ -23,7 +25,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

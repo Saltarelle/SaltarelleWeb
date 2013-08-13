@@ -4,8 +4,8 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class CustomEventInit : EventInit {
 		public object Detail {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

@@ -8,17 +8,23 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool AltKey {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint CharCode {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool CtrlKey {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[ScriptName("DOM_KEY_LOCATION_JOYSTICK")]
@@ -603,27 +609,37 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Key {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint KeyCode {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint Location {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool MetaKey {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool ShiftKey {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

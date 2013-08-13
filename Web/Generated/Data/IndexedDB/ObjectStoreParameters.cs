@@ -4,13 +4,13 @@ namespace System.Data.IndexedDB {
 	[Imported, Serializable]
 	public partial class ObjectStoreParameters {
 		public bool AutoIncrement {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public object KeyPath {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

@@ -8,22 +8,30 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedTransformList GradientTransform {
-			get { return default(SVGAnimatedTransformList); }
+			get {
+				return default(SVGAnimatedTransformList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> GradientUnits {
-			get { return default(SVGAnimatedEnumeration<SVGUnitType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGUnitType>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Href {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGSpreadMethod> SpreadMethod {
-			get { return default(SVGAnimatedEnumeration<SVGSpreadMethod>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGSpreadMethod>);
+			}
 		}
 
 		[ScriptName("SVG_SPREADMETHOD_PAD")]

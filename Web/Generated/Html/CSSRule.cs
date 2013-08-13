@@ -11,8 +11,11 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string CssText {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[ScriptName("FONT_FACE_RULE")]
@@ -32,12 +35,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public CSSRule ParentRule {
-			get { return default(CSSRule); }
+			get {
+				return default(CSSRule);
+			}
 		}
 
 		[IntrinsicProperty]
 		public CSSStyleSheet ParentStyleSheet {
-			get { return default(CSSStyleSheet); }
+			get {
+				return default(CSSStyleSheet);
+			}
 		}
 
 		[ScriptName("STYLE_RULE")]
@@ -45,7 +52,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public CSSRuleType Type {
-			get { return default(CSSRuleType); }
+			get {
+				return default(CSSRuleType);
+			}
 		}
 	}
 }

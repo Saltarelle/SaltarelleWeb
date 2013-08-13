@@ -8,8 +8,11 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public float Value {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

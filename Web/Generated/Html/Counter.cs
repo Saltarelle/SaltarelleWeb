@@ -8,17 +8,23 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Identifier {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ListStyle {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Separator {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

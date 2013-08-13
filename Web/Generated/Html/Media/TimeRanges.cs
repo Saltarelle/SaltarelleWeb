@@ -12,7 +12,9 @@ namespace System.Html.Media {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public double Start(uint index) {

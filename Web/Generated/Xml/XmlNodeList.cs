@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Xml {
@@ -9,12 +9,14 @@ namespace System.Xml {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public XmlNode this[uint index] {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<XmlNode> GetEnumerator() {
-			return default(IEnumerator<XmlNode>);
+			return null;
 		}
 
 		public XmlNode Item(uint index) {
@@ -23,7 +25,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

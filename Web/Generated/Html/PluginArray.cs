@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
@@ -9,17 +9,21 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public Plugin this[string name] {
-			get { return default(Plugin); }
+			get {
+				return default(Plugin);
+			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public Plugin this[uint index] {
-			get { return default(Plugin); }
+			get {
+				return default(Plugin);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<Plugin> GetEnumerator() {
-			return default(IEnumerator<Plugin>);
+			return null;
 		}
 
 		public Plugin Item(uint index) {
@@ -28,7 +32,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public Plugin NamedItem(string name) {

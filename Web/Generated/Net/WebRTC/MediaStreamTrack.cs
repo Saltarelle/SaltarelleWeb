@@ -8,23 +8,32 @@ namespace System.Net.WebRTC {
 
 		[IntrinsicProperty]
 		public bool Enabled {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Id {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Kind {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Label {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

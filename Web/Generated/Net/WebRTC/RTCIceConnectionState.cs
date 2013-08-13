@@ -9,6 +9,6 @@ namespace System.Net.WebRTC {
 		Completed,
 		Failed,
 		Disconnected,
-		Closed,
+		Closed
 	}
 }

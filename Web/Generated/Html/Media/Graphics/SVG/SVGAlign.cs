@@ -13,6 +13,6 @@ namespace System.Html.Media.Graphics.SVG {
 		Xmaxymid = 7,
 		Xminymax = 8,
 		Xmidymax = 9,
-		Xmaxymax = 10,
+		Xmaxymax = 10
 	}
 }

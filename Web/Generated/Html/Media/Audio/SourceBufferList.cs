@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Audio {
@@ -9,17 +9,21 @@ namespace System.Html.Media.Audio {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public SourceBuffer this[uint index] {
-			get { return default(SourceBuffer); }
+			get {
+				return default(SourceBuffer);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<SourceBuffer> GetEnumerator() {
-			return default(IEnumerator<SourceBuffer>);
+			return null;
 		}
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

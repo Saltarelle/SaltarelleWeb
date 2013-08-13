@@ -45,13 +45,18 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public float CurrentScale {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGPoint CurrentTranslate {
-			get { return default(SVGPoint); }
+			get {
+				return default(SVGPoint);
+			}
 		}
 
 		public void DeselectAll() {
@@ -70,7 +75,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		public void PauseAnimations() {
@@ -78,27 +85,37 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public float PixelUnitToMillimeterX {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public float PixelUnitToMillimeterY {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio {
-			get { return default(SVGAnimatedPreserveAspectRatio); }
+			get {
+				return default(SVGAnimatedPreserveAspectRatio);
+			}
 		}
 
 		[IntrinsicProperty]
 		public float ScreenPixelToMillimeterX {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public float ScreenPixelToMillimeterY {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void SetCurrentTime(float seconds) {
@@ -128,33 +145,46 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public bool UseCurrentView {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Width {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedRect ViewBox {
-			get { return default(SVGAnimatedRect); }
+			get {
+				return default(SVGAnimatedRect);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGZoomAndPanType ZoomAndPan {
-			get { return default(SVGZoomAndPanType); }
-			set { }
+			get {
+				return default(SVGZoomAndPanType);
+			}
+			set {
+			}
 		}
 	}
 }

@@ -1,4 +1,3 @@
-﻿
-namespace System.Html.Media.Audio {
+﻿namespace System.Html.Media.Audio {
 	public delegate void OfflineRenderSuccessCallback(AudioBuffer renderedData);
 }

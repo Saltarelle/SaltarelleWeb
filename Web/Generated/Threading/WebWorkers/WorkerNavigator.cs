@@ -8,22 +8,30 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty]
 		public string AppName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string AppVersion {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Platform {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string UserAgent {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

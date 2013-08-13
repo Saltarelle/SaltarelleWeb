@@ -8,12 +8,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGPointList AnimatedPoints {
-			get { return default(SVGPointList); }
+			get {
+				return default(SVGPointList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGPointList Points {
-			get { return default(SVGPointList); }
+			get {
+				return default(SVGPointList);
+			}
 		}
 	}
 }

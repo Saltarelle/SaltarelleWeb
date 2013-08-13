@@ -40,7 +40,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGLengthAdjust> LengthAdjust {
-			get { return default(SVGAnimatedEnumeration<SVGLengthAdjust>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGLengthAdjust>);
+			}
 		}
 
 		[ScriptName("LENGTHADJUST_SPACING")]
@@ -57,7 +59,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength TextLength {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 	}
 }

@@ -8,7 +8,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Command {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

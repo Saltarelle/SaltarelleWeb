@@ -16,6 +16,6 @@ namespace System.Html.Speech {
 		[ScriptName("bad-grammar")]
 		BadGrammar,
 		[ScriptName("language-not-supported")]
-		LanguageNotSupported,
+		LanguageNotSupported
 	}
 }

@@ -7,6 +7,6 @@ namespace System.Html.Media.Graphics.WebGL {
 		[ScriptName("2x")]
 		_2x,
 		[ScriptName("4x")]
-		_4x,
+		_4x
 	}
 }

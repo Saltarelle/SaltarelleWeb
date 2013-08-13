@@ -9,27 +9,37 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string InternalSubset {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement NextElementSibling {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement PreviousElementSibling {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string PublicId {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public void Remove() {
@@ -37,7 +47,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string SystemId {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

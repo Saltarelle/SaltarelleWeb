@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Xml;
 
@@ -10,17 +10,21 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public XmlAttribute this[string name] {
-			get { return default(XmlAttribute); }
+			get {
+				return default(XmlAttribute);
+			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public XmlAttribute this[uint index] {
-			get { return default(XmlAttribute); }
+			get {
+				return default(XmlAttribute);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<XmlAttribute> GetEnumerator() {
-			return default(IEnumerator<XmlAttribute>);
+			return null;
 		}
 
 		public XmlAttribute GetNamedItem(string name) {
@@ -37,7 +41,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public XmlAttribute RemoveNamedItem(string name) {

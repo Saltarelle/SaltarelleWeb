@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media {
@@ -9,12 +9,14 @@ namespace System.Html.Media {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public TextTrack this[uint index] {
-			get { return default(TextTrack); }
+			get {
+				return default(TextTrack);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<TextTrack> GetEnumerator() {
-			return default(IEnumerator<TextTrack>);
+			return null;
 		}
 
 		public TextTrack GetTrackById(string id) {
@@ -23,19 +25,27 @@ namespace System.Html.Media {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onaddtrack")]
 		public HtmlEventHandler OnAddtrack {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onremovetrack")]
 		public HtmlEventHandler OnRemovetrack {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 	}
 }

@@ -4,18 +4,18 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class TransitionEventInit : EventInit {
 		public float ElapsedTime {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public string PropertyName {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public string PseudoElement {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

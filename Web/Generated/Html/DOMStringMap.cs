@@ -8,8 +8,11 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public string this[string name] {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[InlineCode("delete {this}[{name}]")]

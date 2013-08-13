@@ -9,12 +9,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public string Domain {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGElement RootElement {
-			get { return default(SVGElement); }
+			get {
+				return default(SVGElement);
+			}
 		}
 	}
 }

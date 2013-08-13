@@ -47,25 +47,36 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGLengthType UnitType {
-			get { return default(SVGLengthType); }
+			get {
+				return default(SVGLengthType);
+			}
 		}
 
 		[IntrinsicProperty]
 		public float Value {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ValueAsString {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public float ValueInSpecifiedUnits {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 	}
 }

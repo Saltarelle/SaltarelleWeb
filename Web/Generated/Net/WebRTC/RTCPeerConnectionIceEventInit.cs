@@ -5,8 +5,8 @@ namespace System.Net.WebRTC {
 	[Imported, Serializable]
 	public partial class RTCPeerConnectionIceEventInit : EventInit {
 		public RTCIceCandidate Candidate {
-			get { return default(RTCIceCandidate); }
-			set { }
+			get;
+			set;
 		}
 	}
 }

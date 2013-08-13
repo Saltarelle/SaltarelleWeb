@@ -12,27 +12,37 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio {
-			get { return default(SVGAnimatedPreserveAspectRatio); }
+			get {
+				return default(SVGAnimatedPreserveAspectRatio);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGStringList RequiredExtensions {
-			get { return default(SVGStringList); }
+			get {
+				return default(SVGStringList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGStringList RequiredFeatures {
-			get { return default(SVGStringList); }
+			get {
+				return default(SVGStringList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGStringList SystemLanguage {
-			get { return default(SVGStringList); }
+			get {
+				return default(SVGStringList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedRect ViewBox {
-			get { return default(SVGAnimatedRect); }
+			get {
+				return default(SVGAnimatedRect);
+			}
 		}
 	}
 }

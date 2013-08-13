@@ -8,22 +8,30 @@ namespace System.Html.Mobile {
 
 		[IntrinsicProperty]
 		public DeviceAcceleration Acceleration {
-			get { return default(DeviceAcceleration); }
+			get {
+				return default(DeviceAcceleration);
+			}
 		}
 
 		[IntrinsicProperty]
 		public DeviceAcceleration AccelerationIncludingGravity {
-			get { return default(DeviceAcceleration); }
+			get {
+				return default(DeviceAcceleration);
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Interval {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public DeviceRotationRate RotationRate {
-			get { return default(DeviceRotationRate); }
+			get {
+				return default(DeviceRotationRate);
+			}
 		}
 	}
 }

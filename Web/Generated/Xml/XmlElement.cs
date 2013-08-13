@@ -9,47 +9,65 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public AttributeCollection Attributes {
-			get { return default(AttributeCollection); }
+			get {
+				return default(AttributeCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint ChildElementCount {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ElementCollection Children {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public TokenList ClassList {
-			get { return default(TokenList); }
+			get {
+				return default(TokenList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ClientHeight {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ClientLeft {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ClientTop {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ClientWidth {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement FirstElementChild {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		public string GetAttribute(string name) {
@@ -98,14 +116,20 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public string Id {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string InnerHTML {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public void InsertAdjacentHTML(string position, string text) {
@@ -113,41 +137,59 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public XmlElement LastElementChild {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement NextElementSibling {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmouseenter")]
 		public HtmlEventHandler OnMouseenter {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmouseleave")]
 		public HtmlEventHandler OnMouseleave {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onwheel")]
 		public HtmlEventHandler OnWheel {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string OuterHTML {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlElement PreviousElementSibling {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		public XmlElement QuerySelector(string selectors) {
@@ -176,7 +218,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public int ScrollHeight {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void ScrollIntoView() {
@@ -187,29 +231,41 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public int ScrollLeft {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ScrollLeftMax {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ScrollTop {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ScrollTopMax {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public int ScrollWidth {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void SetAttribute(string name, string value) {
@@ -234,7 +290,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public string TagName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

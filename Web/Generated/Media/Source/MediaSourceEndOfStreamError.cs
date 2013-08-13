@@ -4,6 +4,6 @@ namespace System.Media.Source {
 	[Imported, NamedValues]
 	public enum MediaSourceEndOfStreamError {
 		Network,
-		Decode,
+		Decode
 	}
 }

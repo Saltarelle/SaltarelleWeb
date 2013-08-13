@@ -8,27 +8,37 @@ namespace System.Html.Speech {
 
 		[IntrinsicProperty]
 		public bool Default {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Lang {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool LocalService {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string VoiceURI {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

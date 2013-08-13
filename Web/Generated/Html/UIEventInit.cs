@@ -4,13 +4,13 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class UIEventInit : EventInit {
 		public int Detail {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public WindowInstance View {
-			get { return default(WindowInstance); }
-			set { }
+			get;
+			set;
 		}
 	}
 }

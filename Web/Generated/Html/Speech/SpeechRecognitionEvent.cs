@@ -15,22 +15,30 @@ namespace System.Html.Speech {
 
 		[IntrinsicProperty]
 		public DocumentBase Emma {
-			get { return default(DocumentBase); }
+			get {
+				return default(DocumentBase);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Interpretation {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint ResultIndex {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public object Results {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

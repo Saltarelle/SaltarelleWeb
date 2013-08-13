@@ -5,6 +5,6 @@ namespace System.Html.Media.Graphics.SVG {
 	public enum SVGMarkerUnits {
 		Unknown = 0,
 		Userspaceonuse = 1,
-		Strokewidth = 2,
+		Strokewidth = 2
 	}
 }

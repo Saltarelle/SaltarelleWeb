@@ -4,8 +4,8 @@ namespace System.Net.ServerEvents {
 	[Imported, Serializable]
 	public partial class EventSourceInit {
 		public bool WithCredentials {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

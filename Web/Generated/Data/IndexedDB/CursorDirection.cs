@@ -6,6 +6,6 @@ namespace System.Data.IndexedDB {
 		Next,
 		Nextunique,
 		Prev,
-		Prevunique,
+		Prevunique
 	}
 }

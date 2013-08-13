@@ -14,12 +14,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Message {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

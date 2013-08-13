@@ -27,8 +27,11 @@ namespace System.Net {
 
 		[IntrinsicProperty, ScriptName("onreadystatechange")]
 		public HtmlEventHandler OnReadyStateChange {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public void Open(string method, string url) {
@@ -50,28 +53,39 @@ namespace System.Net {
 
 		[IntrinsicProperty]
 		public ReadyState ReadyState {
-			get { return default(ReadyState); }
+			get {
+				return default(ReadyState);
+			}
 		}
 
 		[IntrinsicProperty]
 		public object Response {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ResponseText {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlHttpRequestResponseType ResponseType {
-			get { return default(XmlHttpRequestResponseType); }
-			set { }
+			get {
+				return default(XmlHttpRequestResponseType);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public DocumentBase ResponseXML {
-			get { return default(DocumentBase); }
+			get {
+				return default(DocumentBase);
+			}
 		}
 
 		public void Send() {
@@ -103,31 +117,43 @@ namespace System.Net {
 
 		[IntrinsicProperty]
 		public ushort Status {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string StatusText {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint Timeout {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public const ushort UNSENT = 0;
 
 		[IntrinsicProperty]
 		public XmlHttpRequestUpload Upload {
-			get { return default(XmlHttpRequestUpload); }
+			get {
+				return default(XmlHttpRequestUpload);
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool WithCredentials {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 	}
 }

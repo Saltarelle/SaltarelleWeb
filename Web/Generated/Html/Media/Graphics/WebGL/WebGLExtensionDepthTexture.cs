@@ -8,7 +8,9 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		[IntrinsicProperty, ScriptName("UNSIGNED_INT_24_8_WEBGL")]
 		public uint UNSIGNED_INT_24_8_WEBGL {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

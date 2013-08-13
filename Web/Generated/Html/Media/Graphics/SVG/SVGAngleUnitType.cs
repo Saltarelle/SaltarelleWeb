@@ -7,6 +7,6 @@ namespace System.Html.Media.Graphics.SVG {
 		Unspecified = 1,
 		Deg = 2,
 		Rad = 3,
-		Grad = 4,
+		Grad = 4
 	}
 }

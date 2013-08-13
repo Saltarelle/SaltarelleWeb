@@ -10,7 +10,9 @@ namespace System.Html.Media {
 
 		[IntrinsicProperty]
 		public double CurrentTime {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public AudioStreamTrack[] GetAudioTracks() {

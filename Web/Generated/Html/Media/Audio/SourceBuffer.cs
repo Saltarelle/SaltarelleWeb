@@ -18,25 +18,36 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public double AppendWindowEnd {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double AppendWindowStart {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public TimeRanges Buffered {
-			get { return default(TimeRanges); }
+			get {
+				return default(TimeRanges);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SourceBufferAppendMode Mode {
-			get { return default(SourceBufferAppendMode); }
-			set { }
+			get {
+				return default(SourceBufferAppendMode);
+			}
+			set {
+			}
 		}
 
 		public void Remove(double start, double end) {
@@ -44,13 +55,18 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public double TimestampOffset {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Updating {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

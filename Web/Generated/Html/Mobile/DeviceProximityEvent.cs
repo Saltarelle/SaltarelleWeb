@@ -14,17 +14,23 @@ namespace System.Html.Mobile {
 
 		[IntrinsicProperty]
 		public double Max {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Min {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double Value {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

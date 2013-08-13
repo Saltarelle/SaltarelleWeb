@@ -11,12 +11,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool Matches {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Media {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public void RemoveListener(MediaQueryListListener listener) {

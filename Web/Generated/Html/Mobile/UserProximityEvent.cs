@@ -14,7 +14,9 @@ namespace System.Html.Mobile {
 
 		[IntrinsicProperty]
 		public bool Near {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

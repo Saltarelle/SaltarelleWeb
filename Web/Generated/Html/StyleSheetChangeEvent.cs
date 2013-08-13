@@ -14,12 +14,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool DocumentSheet {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public CSSStyleSheet Stylesheet {
-			get { return default(CSSStyleSheet); }
+			get {
+				return default(CSSStyleSheet);
+			}
 		}
 	}
 }

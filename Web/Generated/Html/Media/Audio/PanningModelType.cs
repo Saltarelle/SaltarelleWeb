@@ -8,6 +8,6 @@ namespace System.Html.Media.Audio {
 		[ScriptName("1")]
 		_1,
 		Equalpower,
-		HRTF,
+		HRTF
 	}
 }

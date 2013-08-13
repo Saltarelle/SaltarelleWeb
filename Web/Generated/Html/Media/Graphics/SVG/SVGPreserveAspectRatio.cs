@@ -8,14 +8,20 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAlign Align {
-			get { return default(SVGAlign); }
-			set { }
+			get {
+				return default(SVGAlign);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGMeetOrSlice MeetOrSlice {
-			get { return default(SVGMeetOrSlice); }
-			set { }
+			get {
+				return default(SVGMeetOrSlice);
+			}
+			set {
+			}
 		}
 
 		[ScriptName("SVG_MEETORSLICE_MEET")]

@@ -8,13 +8,18 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public bool Headphones {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onheadphoneschange")]
 		public HtmlEventHandler OnHeadphoneschange {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 	}
 }

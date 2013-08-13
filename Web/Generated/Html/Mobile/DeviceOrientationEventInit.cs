@@ -4,23 +4,23 @@ namespace System.Html.Mobile {
 	[Imported, Serializable]
 	public partial class DeviceOrientationEventInit : EventInit {
 		public bool Absolute {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public double Alpha {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public double Beta {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public double Gamma {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

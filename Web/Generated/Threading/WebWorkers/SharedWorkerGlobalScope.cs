@@ -3,7 +3,7 @@ using System.Html;
 using System.Runtime.CompilerServices;
 
 namespace System.Threading.WebWorkers {
-	[GlobalMethods, Imported]
+	[Imported, GlobalMethods]
 	public static partial class SharedWorkerGlobalScope {
 		public static void AddEventListener(string type, IEventListener listener) {
 		}
@@ -16,7 +16,9 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty]
 		public static ApplicationCache ApplicationCache {
-			get { return default(ApplicationCache); }
+			get {
+				return default(ApplicationCache);
+			}
 		}
 
 		public static string Atob(string stringToEncode) {
@@ -46,41 +48,59 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty]
 		public static WorkerLocation Location {
-			get { return default(WorkerLocation); }
+			get {
+				return default(WorkerLocation);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static WorkerNavigator Navigator {
-			get { return default(WorkerNavigator); }
+			get {
+				return default(WorkerNavigator);
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onconnect")]
 		public static HtmlEventHandler OnConnect {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public static ErrorEventHandler OnError {
-			get { return default(ErrorEventHandler); }
-			set { }
+			get {
+				return default(ErrorEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onoffline")]
 		public static HtmlEventHandler OnOffline {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ononline")]
 		public static HtmlEventHandler OnOnline {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public static void RemoveEventListener(string type, IEventListener listener) {
@@ -91,7 +111,9 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty]
 		public static WorkerGlobalScope Self {
-			get { return default(WorkerGlobalScope); }
+			get {
+				return default(WorkerGlobalScope);
+			}
 		}
 
 		public static int SetInterval(Function func) {

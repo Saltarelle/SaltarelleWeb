@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
@@ -9,7 +9,9 @@ namespace System.Html {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public string this[uint index] {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public void AppendMedium(string medium) {
@@ -20,7 +22,7 @@ namespace System.Html {
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<string> GetEnumerator() {
-			return default(IEnumerator<string>);
+			return null;
 		}
 
 		public string Item(uint index) {
@@ -29,13 +31,18 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string MediaText {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 	}
 }

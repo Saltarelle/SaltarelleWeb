@@ -8,62 +8,86 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Bias {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Divisor {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGFEConvolveMatrixEdgeMode> EdgeMode {
-			get { return default(SVGAnimatedEnumeration<SVGFEConvolveMatrixEdgeMode>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGFEConvolveMatrixEdgeMode>);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString In1 {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumberList KernelMatrix {
-			get { return default(SVGAnimatedNumberList); }
+			get {
+				return default(SVGAnimatedNumberList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber KernelUnitLengthX {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumber KernelUnitLengthY {
-			get { return default(SVGAnimatedNumber); }
+			get {
+				return default(SVGAnimatedNumber);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedInteger OrderX {
-			get { return default(SVGAnimatedInteger); }
+			get {
+				return default(SVGAnimatedInteger);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedInteger OrderY {
-			get { return default(SVGAnimatedInteger); }
+			get {
+				return default(SVGAnimatedInteger);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedBoolean PreserveAlpha {
-			get { return default(SVGAnimatedBoolean); }
+			get {
+				return default(SVGAnimatedBoolean);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedString Result {
-			get { return default(SVGAnimatedString); }
+			get {
+				return default(SVGAnimatedString);
+			}
 		}
 
 		[ScriptName("SVG_EDGEMODE_DUPLICATE")]
@@ -80,27 +104,37 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedInteger TargetX {
-			get { return default(SVGAnimatedInteger); }
+			get {
+				return default(SVGAnimatedInteger);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedInteger TargetY {
-			get { return default(SVGAnimatedInteger); }
+			get {
+				return default(SVGAnimatedInteger);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Width {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength X {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLength Y {
-			get { return default(SVGAnimatedLength); }
+			get {
+				return default(SVGAnimatedLength);
+			}
 		}
 	}
 }

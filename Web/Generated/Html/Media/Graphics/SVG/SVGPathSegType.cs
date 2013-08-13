@@ -22,6 +22,6 @@ namespace System.Html.Media.Graphics.SVG {
 		CurvetoCubicSmoothAbs = 16,
 		CurvetoCubicSmoothRel = 17,
 		CurvetoQuadraticSmoothAbs = 18,
-		CurvetoQuadraticSmoothRel = 19,
+		CurvetoQuadraticSmoothRel = 19
 	}
 }

@@ -8,7 +8,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ElementCollection Options {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 	}
 }

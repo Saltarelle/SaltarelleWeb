@@ -5,6 +5,6 @@ namespace System.Html.Media.Graphics.SVG {
 	public enum SVGFETurbulenceType {
 		Unknown = 0,
 		Fractalnoise = 1,
-		Turbulence = 2,
+		Turbulence = 2
 	}
 }

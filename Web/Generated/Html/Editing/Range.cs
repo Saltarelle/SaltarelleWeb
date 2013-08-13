@@ -23,12 +23,16 @@ namespace System.Html.Editing {
 
 		[IntrinsicProperty]
 		public bool Collapsed {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode CommonAncestorContainer {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		public short CompareBoundaryPoints(RangeComparison how, Range sourceRange) {
@@ -57,12 +61,16 @@ namespace System.Html.Editing {
 
 		[IntrinsicProperty]
 		public XmlNode EndContainer {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint EndOffset {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public XmlDocumentFragment ExtractContents() {
@@ -120,12 +128,16 @@ namespace System.Html.Editing {
 
 		[IntrinsicProperty]
 		public XmlNode StartContainer {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint StartOffset {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void SurroundContents(XmlNode newParent) {

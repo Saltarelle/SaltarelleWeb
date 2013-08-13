@@ -18,7 +18,9 @@ namespace System.IO {
 
 		[IntrinsicProperty]
 		public ulong Size {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public Blob Slice() {
@@ -39,7 +41,9 @@ namespace System.IO {
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

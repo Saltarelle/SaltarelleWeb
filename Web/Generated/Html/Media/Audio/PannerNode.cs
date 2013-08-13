@@ -8,26 +8,38 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public double ConeInnerAngle {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double ConeOuterAngle {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double ConeOuterGain {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public DistanceModelType DistanceModel {
-			get { return default(DistanceModelType); }
-			set { }
+			get {
+				return default(DistanceModelType);
+			}
+			set {
+			}
 		}
 
 		public const ushort EQUALPOWER = 0;
@@ -45,26 +57,38 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public double MaxDistance {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public PanningModelType PanningModel {
-			get { return default(PanningModelType); }
-			set { }
+			get {
+				return default(PanningModelType);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double RefDistance {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double RolloffFactor {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void SetOrientation(double x, double y, double z) {

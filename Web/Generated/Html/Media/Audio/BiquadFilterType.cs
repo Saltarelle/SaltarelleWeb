@@ -26,6 +26,6 @@ namespace System.Html.Media.Audio {
 		Highshelf,
 		Peaking,
 		Notch,
-		Allpass,
+		Allpass
 	}
 }

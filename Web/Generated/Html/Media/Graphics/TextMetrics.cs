@@ -8,7 +8,9 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public double Width {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

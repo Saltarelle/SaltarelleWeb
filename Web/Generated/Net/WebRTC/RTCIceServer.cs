@@ -4,18 +4,18 @@ namespace System.Net.WebRTC {
 	[Imported, Serializable]
 	public partial class RTCIceServer {
 		public string Credential {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public string Url {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public string Username {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

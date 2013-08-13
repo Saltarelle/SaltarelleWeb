@@ -4,8 +4,8 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class PopStateEventInit : EventInit {
 		public object State {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

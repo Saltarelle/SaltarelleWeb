@@ -8,13 +8,18 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public XmlNode CurrentNode {
-			get { return default(XmlNode); }
-			set { }
+			get {
+				return default(XmlNode);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public INodeFilter Filter {
-			get { return default(INodeFilter); }
+			get {
+				return default(INodeFilter);
+			}
 		}
 
 		public XmlNode FirstChild() {
@@ -47,12 +52,16 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public XmlNode Root {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public NodeFilter WhatToShow {
-			get { return default(NodeFilter); }
+			get {
+				return default(NodeFilter);
+			}
 		}
 	}
 }

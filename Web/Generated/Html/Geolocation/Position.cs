@@ -8,12 +8,16 @@ namespace System.Html.Geolocation {
 
 		[IntrinsicProperty]
 		public Coordinates Coords {
-			get { return default(Coordinates); }
+			get {
+				return default(Coordinates);
+			}
 		}
 
 		[IntrinsicProperty]
 		public long Timestamp {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

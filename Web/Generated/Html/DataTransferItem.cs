@@ -16,12 +16,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public DataTransferItemKind Kind {
-			get { return default(DataTransferItemKind); }
+			get {
+				return default(DataTransferItemKind);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Type {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

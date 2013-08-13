@@ -15,7 +15,9 @@ namespace System.Net.WebRTC {
 
 		[IntrinsicProperty]
 		public RTCIceCandidate Candidate {
-			get { return default(RTCIceCandidate); }
+			get {
+				return default(RTCIceCandidate);
+			}
 		}
 	}
 }

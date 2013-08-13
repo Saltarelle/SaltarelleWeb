@@ -1,4 +1,3 @@
-﻿
-namespace System.Html.Notifications {
+﻿namespace System.Html.Notifications {
 	public delegate void NotificationPermissionCallback(NotificationPermission permission);
 }

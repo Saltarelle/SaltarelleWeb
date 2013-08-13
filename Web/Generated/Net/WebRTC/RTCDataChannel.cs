@@ -11,13 +11,18 @@ namespace System.Net.WebRTC {
 
 		[IntrinsicProperty]
 		public RTCDataChannelType BinaryType {
-			get { return default(RTCDataChannelType); }
-			set { }
+			get {
+				return default(RTCDataChannelType);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint BufferedAmount {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void Close() {
@@ -25,56 +30,80 @@ namespace System.Net.WebRTC {
 
 		[IntrinsicProperty]
 		public ushort Id {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Label {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onclose")]
 		public HtmlEventHandler OnClose {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmessage")]
 		public HtmlEventHandler OnMessage {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onopen")]
 		public HtmlEventHandler OnOpen {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Ordered {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Protocol {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public RTCDataChannelState ReadyState {
-			get { return default(RTCDataChannelState); }
+			get {
+				return default(RTCDataChannelState);
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Reliable {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		public void Send(ArrayBuffer data) {
@@ -91,7 +120,9 @@ namespace System.Net.WebRTC {
 
 		[IntrinsicProperty]
 		public ushort Stream {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

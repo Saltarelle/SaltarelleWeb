@@ -4,13 +4,13 @@ namespace System.Net.WebRTC {
 	[Imported, Serializable]
 	public partial class RTCSessionDescriptionInit {
 		public string Sdp {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public RTCSdpType? Type {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

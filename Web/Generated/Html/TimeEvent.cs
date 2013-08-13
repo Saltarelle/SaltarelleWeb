@@ -8,12 +8,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public int Detail {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public WindowInstance View {
-			get { return default(WindowInstance); }
+			get {
+				return default(WindowInstance);
+			}
 		}
 	}
 }

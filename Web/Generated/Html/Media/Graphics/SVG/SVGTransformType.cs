@@ -9,6 +9,6 @@ namespace System.Html.Media.Graphics.SVG {
 		Scale = 3,
 		Rotate = 4,
 		Skewx = 5,
-		Skewy = 6,
+		Skewy = 6
 	}
 }

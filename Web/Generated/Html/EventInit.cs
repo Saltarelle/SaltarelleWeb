@@ -4,13 +4,13 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class EventInit {
 		public bool Bubbles {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool Cancelable {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

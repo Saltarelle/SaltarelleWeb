@@ -20,13 +20,18 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string CssText {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public ushort CssValueType {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

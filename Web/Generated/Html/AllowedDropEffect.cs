@@ -11,6 +11,6 @@ namespace System.Html {
 		LinkMove,
 		Move,
 		All,
-		Uninitialized,
+		Uninitialized
 	}
 }

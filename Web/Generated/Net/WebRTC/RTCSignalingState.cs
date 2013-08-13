@@ -12,6 +12,6 @@ namespace System.Net.WebRTC {
 		HaveLocalPranswer,
 		[ScriptName("have-remote-pranswer")]
 		HaveRemotePranswer,
-		Closed,
+		Closed
 	}
 }

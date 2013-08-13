@@ -8,12 +8,16 @@ namespace System.IO {
 
 		[IntrinsicProperty]
 		public DateTime LastModifiedDate {
-			get { return default(DateTime); }
+			get {
+				return default(DateTime);
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Name {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

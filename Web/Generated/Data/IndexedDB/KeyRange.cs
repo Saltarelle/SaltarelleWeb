@@ -20,7 +20,9 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public object Lower {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public static KeyRange LowerBound(object lower) {
@@ -33,7 +35,9 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public bool LowerOpen {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[ScriptName("only")]
@@ -43,7 +47,9 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public object Upper {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public static KeyRange UpperBound(object upper) {
@@ -56,7 +62,9 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty]
 		public bool UpperOpen {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

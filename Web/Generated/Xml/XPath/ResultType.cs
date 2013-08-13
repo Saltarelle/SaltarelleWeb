@@ -12,6 +12,6 @@ namespace System.Xml.XPath {
 		UnorderedNodeSnapshot = 6,
 		OrderedNodeSnapshot = 7,
 		AnyUnorderedNode = 8,
-		FirstOrderedNode = 9,
+		FirstOrderedNode = 9
 	}
 }

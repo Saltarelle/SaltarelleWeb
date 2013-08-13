@@ -30,35 +30,50 @@ namespace System.Threading.WebWorkers {
 
 		[IntrinsicProperty]
 		public WorkerLocation Location {
-			get { return default(WorkerLocation); }
+			get {
+				return default(WorkerLocation);
+			}
 		}
 
 		[IntrinsicProperty]
 		public WorkerNavigator Navigator {
-			get { return default(WorkerNavigator); }
+			get {
+				return default(WorkerNavigator);
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public ErrorEventHandler OnError {
-			get { return default(ErrorEventHandler); }
-			set { }
+			get {
+				return default(ErrorEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onoffline")]
 		public HtmlEventHandler OnOffline {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ononline")]
 		public HtmlEventHandler OnOnline {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public WorkerGlobalScope Self {
-			get { return default(WorkerGlobalScope); }
+			get {
+				return default(WorkerGlobalScope);
+			}
 		}
 
 		public int SetInterval(Function func) {

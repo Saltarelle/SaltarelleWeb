@@ -7,6 +7,6 @@ namespace System.Html.Media.Audio {
 		Square,
 		Sawtooth,
 		Triangle,
-		Custom,
+		Custom
 	}
 }

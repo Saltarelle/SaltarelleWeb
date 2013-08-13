@@ -9,7 +9,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public StyleSheet Sheet {
-			get { return default(StyleSheet); }
+			get {
+				return default(StyleSheet);
+			}
 		}
 	}
 }

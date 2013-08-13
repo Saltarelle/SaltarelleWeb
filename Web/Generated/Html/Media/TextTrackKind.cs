@@ -7,6 +7,6 @@ namespace System.Html.Media {
 		Captions,
 		Descriptions,
 		Chapters,
-		Metadata,
+		Metadata
 	}
 }

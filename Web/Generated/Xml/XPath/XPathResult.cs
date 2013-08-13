@@ -17,7 +17,9 @@ namespace System.Xml.XPath {
 
 		[IntrinsicProperty]
 		public bool BooleanValue {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[ScriptName("FIRST_ORDERED_NODE_TYPE")]
@@ -25,7 +27,9 @@ namespace System.Xml.XPath {
 
 		[IntrinsicProperty]
 		public bool InvalidIteratorState {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		public XmlNode IterateNext() {
@@ -37,7 +41,9 @@ namespace System.Xml.XPath {
 
 		[IntrinsicProperty]
 		public double NumberValue {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[ScriptName("ORDERED_NODE_ITERATOR_TYPE")]
@@ -48,12 +54,16 @@ namespace System.Xml.XPath {
 
 		[IntrinsicProperty]
 		public ResultType ResultType {
-			get { return default(ResultType); }
+			get {
+				return default(ResultType);
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode SingleNodeValue {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		public XmlNode SnapshotItem(uint index) {
@@ -62,7 +72,9 @@ namespace System.Xml.XPath {
 
 		[IntrinsicProperty]
 		public uint SnapshotLength {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[ScriptName("STRING_TYPE")]
@@ -70,7 +82,9 @@ namespace System.Xml.XPath {
 
 		[IntrinsicProperty]
 		public string StringValue {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[ScriptName("UNORDERED_NODE_ITERATOR_TYPE")]

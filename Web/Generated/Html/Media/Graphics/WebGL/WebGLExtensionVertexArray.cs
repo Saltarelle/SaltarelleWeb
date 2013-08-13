@@ -22,7 +22,9 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		[IntrinsicProperty, ScriptName("VERTEX_ARRAY_BINDING_OES")]
 		public uint VERTEX_ARRAY_BINDING_OES {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

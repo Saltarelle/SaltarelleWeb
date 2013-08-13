@@ -8,7 +8,9 @@ namespace System.Html.Media {
 
 		[IntrinsicProperty]
 		public MediaErrorCode Code {
-			get { return default(MediaErrorCode); }
+			get {
+				return default(MediaErrorCode);
+			}
 		}
 
 		[ScriptName("MEDIA_ERR_ABORTED")]

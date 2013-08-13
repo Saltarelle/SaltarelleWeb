@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace System.IO {
@@ -9,12 +9,14 @@ namespace System.IO {
 
 		[IndexerName("__Item"), IntrinsicProperty]
 		public File this[uint index] {
-			get { return default(File); }
+			get {
+				return default(File);
+			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<File> GetEnumerator() {
-			return default(IEnumerator<File>);
+			return null;
 		}
 
 		public File Item(uint index) {
@@ -23,7 +25,9 @@ namespace System.IO {
 
 		[IntrinsicProperty]
 		public uint Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

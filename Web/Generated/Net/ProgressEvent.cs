@@ -15,17 +15,23 @@ namespace System.Net {
 
 		[IntrinsicProperty]
 		public bool LengthComputable {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ulong Loaded {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ulong Total {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

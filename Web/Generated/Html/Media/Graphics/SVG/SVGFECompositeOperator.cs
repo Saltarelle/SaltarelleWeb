@@ -9,6 +9,6 @@ namespace System.Html.Media.Graphics.SVG {
 		Out = 3,
 		Atop = 4,
 		Xor = 5,
-		Arithmetic = 6,
+		Arithmetic = 6
 	}
 }

@@ -8,8 +8,11 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public bool Async {
-			get { return false; }
-			set { }
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		public bool Load(string url) {

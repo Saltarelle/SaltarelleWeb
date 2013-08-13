@@ -8,12 +8,16 @@ namespace System.Performance {
 
 		[IntrinsicProperty]
 		public ushort RedirectCount {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public ushort Type {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[ScriptName("TYPE_BACK_FORWARD")]

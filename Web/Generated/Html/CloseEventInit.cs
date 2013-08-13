@@ -4,18 +4,18 @@ namespace System.Html {
 	[Imported, Serializable]
 	public partial class CloseEventInit : EventInit {
 		public ushort Code {
-			get { return 0; }
-			set { }
+			get;
+			set;
 		}
 
 		public string Reason {
-			get { return null; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool WasClean {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

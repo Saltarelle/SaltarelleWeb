@@ -5,6 +5,6 @@ namespace System.Media.Recording {
 	public enum RecordingState {
 		Inactive,
 		Recording,
-		Paused,
+		Paused
 	}
 }

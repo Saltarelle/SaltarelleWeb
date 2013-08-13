@@ -9,7 +9,9 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public Float32Array FrameBuffer {
-			get { return default(Float32Array); }
+			get {
+				return default(Float32Array);
+			}
 		}
 
 		public void InitAudioAvailableEvent(string type, bool canBubble, bool cancelable, float[] frameBuffer, uint frameBufferLength, float time, bool allowAudioData) {
@@ -17,7 +19,9 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public float Time {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

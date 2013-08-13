@@ -8,6 +8,6 @@ namespace System.Html.Media.Graphics.SVG {
 		Table = 2,
 		Discrete = 3,
 		Linear = 4,
-		Gamma = 5,
+		Gamma = 5
 	}
 }

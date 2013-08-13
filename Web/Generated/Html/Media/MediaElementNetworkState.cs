@@ -6,6 +6,6 @@ namespace System.Html.Media {
 		Empty = 0,
 		Idle = 1,
 		Loading = 2,
-		NoSource = 3,
+		NoSource = 3
 	}
 }

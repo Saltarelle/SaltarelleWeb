@@ -9,14 +9,20 @@ namespace System.Data.IndexedDB {
 
 		[IntrinsicProperty, ScriptName("onblocked")]
 		public HtmlEventHandler OnBlocked {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onupgradeneeded")]
 		public HtmlEventHandler OnUpgradeneeded {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 	}
 }

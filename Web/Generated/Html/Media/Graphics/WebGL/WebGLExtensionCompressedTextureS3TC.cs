@@ -8,22 +8,30 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		[IntrinsicProperty, ScriptName("COMPRESSED_RGB_S3TC_DXT1_EXT")]
 		public uint COMPRESSED_RGB_S3TC_DXT1_EXT {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("COMPRESSED_RGBA_S3TC_DXT1_EXT")]
 		public uint COMPRESSED_RGBA_S3TC_DXT1_EXT {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("COMPRESSED_RGBA_S3TC_DXT3_EXT")]
 		public uint COMPRESSED_RGBA_S3TC_DXT3_EXT {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("COMPRESSED_RGBA_S3TC_DXT5_EXT")]
 		public uint COMPRESSED_RGBA_S3TC_DXT5_EXT {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

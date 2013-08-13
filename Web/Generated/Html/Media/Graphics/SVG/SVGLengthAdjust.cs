@@ -5,6 +5,6 @@ namespace System.Html.Media.Graphics.SVG {
 	public enum SVGLengthAdjust {
 		Unknown = 0,
 		Spacing = 1,
-		Spacingandglyphs = 2,
+		Spacingandglyphs = 2
 	}
 }

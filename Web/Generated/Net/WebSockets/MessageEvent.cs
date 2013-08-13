@@ -9,22 +9,30 @@ namespace System.Net.WebSockets {
 
 		[IntrinsicProperty]
 		public object Data {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string LastEventId {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string Origin {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public WindowInstance Source {
-			get { return default(WindowInstance); }
+			get {
+				return default(WindowInstance);
+			}
 		}
 	}
 }

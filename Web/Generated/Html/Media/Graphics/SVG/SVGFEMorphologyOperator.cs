@@ -5,6 +5,6 @@ namespace System.Html.Media.Graphics.SVG {
 	public enum SVGFEMorphologyOperator {
 		Unknown = 0,
 		Erode = 1,
-		Dilate = 2,
+		Dilate = 2
 	}
 }

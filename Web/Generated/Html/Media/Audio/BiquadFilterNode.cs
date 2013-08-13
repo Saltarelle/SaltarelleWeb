@@ -13,17 +13,23 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty]
 		public AudioParam Detune {
-			get { return default(AudioParam); }
+			get {
+				return default(AudioParam);
+			}
 		}
 
 		[IntrinsicProperty]
 		public AudioParam Frequency {
-			get { return default(AudioParam); }
+			get {
+				return default(AudioParam);
+			}
 		}
 
 		[IntrinsicProperty]
 		public AudioParam Gain {
-			get { return default(AudioParam); }
+			get {
+				return default(AudioParam);
+			}
 		}
 
 		public void GetFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse) {
@@ -43,13 +49,18 @@ namespace System.Html.Media.Audio {
 
 		[IntrinsicProperty, ScriptName("Q")]
 		public AudioParam Q {
-			get { return default(AudioParam); }
+			get {
+				return default(AudioParam);
+			}
 		}
 
 		[IntrinsicProperty]
 		public BiquadFilterType Type {
-			get { return default(BiquadFilterType); }
-			set { }
+			get {
+				return default(BiquadFilterType);
+			}
+			set {
+			}
 		}
 	}
 }

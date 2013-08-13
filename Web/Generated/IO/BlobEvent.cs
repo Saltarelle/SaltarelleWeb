@@ -15,7 +15,9 @@ namespace System.IO {
 
 		[IntrinsicProperty]
 		public Blob Data {
-			get { return default(Blob); }
+			get {
+				return default(Blob);
+			}
 		}
 	}
 }

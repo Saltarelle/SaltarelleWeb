@@ -8,7 +8,9 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		[IntrinsicProperty, ScriptName("FRAGMENT_SHADER_DERIVATIVE_HINT_OES")]
 		public uint FRAGMENT_SHADER_DERIVATIVE_HINT_OES {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

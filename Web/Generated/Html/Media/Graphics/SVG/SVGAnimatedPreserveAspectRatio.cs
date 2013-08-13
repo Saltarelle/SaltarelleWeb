@@ -8,12 +8,16 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGPreserveAspectRatio AnimVal {
-			get { return default(SVGPreserveAspectRatio); }
+			get {
+				return default(SVGPreserveAspectRatio);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGPreserveAspectRatio BaseVal {
-			get { return default(SVGPreserveAspectRatio); }
+			get {
+				return default(SVGPreserveAspectRatio);
+			}
 		}
 	}
 }

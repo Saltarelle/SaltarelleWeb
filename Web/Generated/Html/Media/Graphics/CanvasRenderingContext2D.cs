@@ -23,7 +23,9 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public CanvasElement Canvas {
-			get { return default(CanvasElement); }
+			get {
+				return default(CanvasElement);
+			}
 		}
 
 		public void ClearRect(double x, double y, double w, double h) {
@@ -78,8 +80,11 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public TypeOption<string, CanvasGradient, CanvasPattern> FillStyle {
-			get { return default(TypeOption<string, CanvasGradient, CanvasPattern>); }
-			set { }
+			get {
+				return default(TypeOption<string, CanvasGradient, CanvasPattern>);
+			}
+			set {
+			}
 		}
 
 		public void FillText(string text, double x, double y) {
@@ -90,8 +95,11 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public string Font {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public ImageData GetImageData(double sx, double sy, double sw, double sh) {
@@ -100,14 +108,20 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public double GlobalAlpha {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public CompositeOperation GlobalCompositeOperation {
-			get { return default(CompositeOperation); }
-			set { }
+			get {
+				return default(CompositeOperation);
+			}
+			set {
+			}
 		}
 
 		public bool IsPointInPath(double x, double y) {
@@ -124,14 +138,20 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public LineCap LineCap {
-			get { return default(LineCap); }
-			set { }
+			get {
+				return default(LineCap);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public LineJoin LineJoin {
-			get { return default(LineJoin); }
-			set { }
+			get {
+				return default(LineJoin);
+			}
+			set {
+			}
 		}
 
 		public void LineTo(double x, double y) {
@@ -139,8 +159,11 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public double LineWidth {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public TextMetrics MeasureText(string text) {
@@ -149,8 +172,11 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public double MiterLimit {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void MoveTo(double x, double y) {
@@ -185,26 +211,38 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public double ShadowBlur {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public string ShadowColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double ShadowOffsetX {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public double ShadowOffsetY {
-			get { return 0; }
-			set { }
+			get {
+				return 0;
+			}
+			set {
+			}
 		}
 
 		public void Stroke() {
@@ -215,8 +253,11 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public TypeOption<string, CanvasGradient, CanvasPattern> StrokeStyle {
-			get { return default(TypeOption<string, CanvasGradient, CanvasPattern>); }
-			set { }
+			get {
+				return default(TypeOption<string, CanvasGradient, CanvasPattern>);
+			}
+			set {
+			}
 		}
 
 		public void StrokeText(string text, double x, double y) {
@@ -227,14 +268,20 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public TextAlign TextAlign {
-			get { return default(TextAlign); }
-			set { }
+			get {
+				return default(TextAlign);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public TextBaseline TextBaseline {
-			get { return default(TextBaseline); }
-			set { }
+			get {
+				return default(TextBaseline);
+			}
+			set {
+			}
 		}
 
 		public void Transform(double a, double b, double c, double d, double e, double f) {

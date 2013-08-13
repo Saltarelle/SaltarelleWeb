@@ -8,7 +8,9 @@ namespace System.Html {
 	public static partial class Document {
 		[IntrinsicProperty]
 		public static XmlElement ActiveElement {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		public static void AddEventListener(string type, IEventListener listener) {
@@ -26,18 +28,25 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string AlinkColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static object All {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static ElementCollection Anchors {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		public static XmlNode AppendChild(XmlNode node) {
@@ -46,7 +55,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static ElementCollection Applets {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[ScriptName("ATTRIBUTE_NODE")]
@@ -54,19 +65,27 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string BaseURI {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string BgColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static Element Body {
-			get { return default(Element); }
-			set { }
+			get {
+				return default(Element);
+			}
+			set {
+			}
 		}
 
 		public static void CaptureEvents(int eventFlags) {
@@ -81,22 +100,30 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string CharacterSet {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static uint ChildElementCount {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static XmlNodeList ChildNodes {
-			get { return default(XmlNodeList); }
+			get {
+				return default(XmlNodeList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static ElementCollection Children {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		public static void Clear() {
@@ -122,7 +149,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string CompatMode {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public static bool Contains(XmlNode other) {
@@ -131,13 +160,18 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string ContentType {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Cookie {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public static XmlAttribute CreateAttribute(string name) {
@@ -287,24 +321,34 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static XmlElement CurrentScript {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static WindowInstance DefaultView {
-			get { return default(WindowInstance); }
+			get {
+				return default(WindowInstance);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string DesignMode {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Dir {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public static bool DispatchEvent(Event @event) {
@@ -313,7 +357,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static DocumentType Doctype {
-			get { return default(DocumentType); }
+			get {
+				return default(DocumentType);
+			}
 		}
 
 		[ScriptName("DOCUMENT_FRAGMENT_NODE")]
@@ -345,18 +391,25 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static XmlElement DocumentElement {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string DocumentURI {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Domain {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[ScriptName("ELEMENT_NODE")]
@@ -368,7 +421,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static ElementCollection Embeds {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		public static void EnableStyleSheetsForSet(string name) {
@@ -398,23 +453,32 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string FgColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static XmlNode FirstChild {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static XmlElement FirstElementChild {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static ElementCollection Forms {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		public static XmlElement GetAnonymousElementByAttribute(XmlElement elt, string attrName, string attrValue) {
@@ -479,22 +543,30 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static HeadElement Head {
-			get { return default(HeadElement); }
+			get {
+				return default(HeadElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static bool Hidden {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static ElementCollection Images {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static DOMImplementation Implementation {
-			get { return default(DOMImplementation); }
+			get {
+				return default(DOMImplementation);
+			}
 		}
 
 		public static XmlNode ImportNode(XmlNode node) {
@@ -507,7 +579,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string InputEncoding {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public static XmlNode InsertBefore(XmlNode node, XmlNode child) {
@@ -524,33 +598,46 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static XmlNode LastChild {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static XmlElement LastElementChild {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string LastModified {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string LastStyleSheetSet {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string LinkColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static ElementCollection Links {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		public static void LoadBindingDocument(string documentURL) {
@@ -558,12 +645,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string LocalName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static Location Location {
-			get { return default(Location); }
+			get {
+				return default(Location);
+			}
 		}
 
 		public static string LookupNamespaceURI(string prefix) {
@@ -576,28 +667,39 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string NamespaceURI {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static XmlNode NextSibling {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string NodeName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static XmlNodeType NodeType {
-			get { return default(XmlNodeType); }
+			get {
+				return default(XmlNodeType);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string NodeValue {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		public static void Normalize() {
@@ -608,398 +710,596 @@ namespace System.Html {
 
 		[IntrinsicProperty, ScriptName("onabort")]
 		public static HtmlEventHandler OnAbort {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onafterscriptexecute")]
 		public static HtmlEventHandler OnAfterscriptexecute {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onbeforescriptexecute")]
 		public static HtmlEventHandler OnBeforescriptexecute {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onblur")]
 		public static HtmlEventHandler OnBlur {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("oncanplay")]
 		public static HtmlEventHandler OnCanplay {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("oncanplaythrough")]
 		public static HtmlEventHandler OnCanplaythrough {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onchange")]
 		public static HtmlEventHandler OnChange {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onclick")]
 		public static HtmlEventHandler OnClick {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("oncontextmenu")]
 		public static HtmlEventHandler OnContextmenu {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("oncopy")]
 		public static HtmlEventHandler OnCopy {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("oncut")]
 		public static HtmlEventHandler OnCut {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondblclick")]
 		public static HtmlEventHandler OnDblclick {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondrag")]
 		public static HtmlEventHandler OnDrag {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondragend")]
 		public static HtmlEventHandler OnDragend {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondragenter")]
 		public static HtmlEventHandler OnDragenter {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondragleave")]
 		public static HtmlEventHandler OnDragleave {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondragover")]
 		public static HtmlEventHandler OnDragover {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondragstart")]
 		public static HtmlEventHandler OnDragstart {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondrop")]
 		public static HtmlEventHandler OnDrop {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ondurationchange")]
 		public static HtmlEventHandler OnDurationchange {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onemptied")]
 		public static HtmlEventHandler OnEmptied {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onended")]
 		public static HtmlEventHandler OnEnded {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
 		public static HtmlEventHandler OnError {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onfocus")]
 		public static HtmlEventHandler OnFocus {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("oninput")]
 		public static HtmlEventHandler OnInput {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("oninvalid")]
 		public static HtmlEventHandler OnInvalid {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onkeydown")]
 		public static HtmlEventHandler OnKeydown {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onkeypress")]
 		public static HtmlEventHandler OnKeypress {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onkeyup")]
 		public static HtmlEventHandler OnKeyup {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onload")]
 		public static HtmlEventHandler OnLoad {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onloadeddata")]
 		public static HtmlEventHandler OnLoadeddata {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onloadedmetadata")]
 		public static HtmlEventHandler OnLoadedmetadata {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onloadstart")]
 		public static HtmlEventHandler OnLoadstart {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmousedown")]
 		public static HtmlEventHandler OnMousedown {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmouseenter")]
 		public static HtmlEventHandler OnMouseenter {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmouseleave")]
 		public static HtmlEventHandler OnMouseleave {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmousemove")]
 		public static HtmlEventHandler OnMousemove {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmouseout")]
 		public static HtmlEventHandler OnMouseout {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmouseover")]
 		public static HtmlEventHandler OnMouseover {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onmouseup")]
 		public static HtmlEventHandler OnMouseup {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onpaste")]
 		public static HtmlEventHandler OnPaste {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onpause")]
 		public static HtmlEventHandler OnPause {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onplay")]
 		public static HtmlEventHandler OnPlay {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onplaying")]
 		public static HtmlEventHandler OnPlaying {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onprogress")]
 		public static HtmlEventHandler OnProgress {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onratechange")]
 		public static HtmlEventHandler OnRatechange {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onreadystatechange")]
 		public static HtmlEventHandler OnReadystatechange {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onreset")]
 		public static HtmlEventHandler OnReset {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onscroll")]
 		public static HtmlEventHandler OnScroll {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onseeked")]
 		public static HtmlEventHandler OnSeeked {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onseeking")]
 		public static HtmlEventHandler OnSeeking {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onselect")]
 		public static HtmlEventHandler OnSelect {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onshow")]
 		public static HtmlEventHandler OnShow {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onstalled")]
 		public static HtmlEventHandler OnStalled {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onsubmit")]
 		public static HtmlEventHandler OnSubmit {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onsuspend")]
 		public static HtmlEventHandler OnSuspend {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ontimeupdate")]
 		public static HtmlEventHandler OnTimeupdate {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ontouchcancel")]
 		public static HtmlEventHandler OnTouchcancel {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ontouchend")]
 		public static HtmlEventHandler OnTouchend {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ontouchenter")]
 		public static HtmlEventHandler OnTouchenter {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ontouchleave")]
 		public static HtmlEventHandler OnTouchleave {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ontouchmove")]
 		public static HtmlEventHandler OnTouchmove {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("ontouchstart")]
 		public static HtmlEventHandler OnTouchstart {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onwaiting")]
 		public static HtmlEventHandler OnWaiting {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onwheel")]
 		public static HtmlEventHandler OnWheel {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onvolumechange")]
 		public static HtmlEventHandler OnVolumechange {
-			get { return default(HtmlEventHandler); }
-			set { }
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
 		}
 
 		public static DocumentBase Open() {
@@ -1024,37 +1324,51 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static DocumentBase OwnerDocument {
-			get { return default(DocumentBase); }
+			get {
+				return default(DocumentBase);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static XmlElement ParentElement {
-			get { return default(XmlElement); }
+			get {
+				return default(XmlElement);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static XmlNode ParentNode {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static ElementCollection Plugins {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string PreferredStyleSheetSet {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Prefix {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static XmlNode PreviousSibling {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		[ScriptName("PROCESSING_INSTRUCTION_NODE")]
@@ -1090,12 +1404,16 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string ReadyState {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Referrer {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public static void ReleaseCapture() {
@@ -1120,23 +1438,32 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static ElementCollection Scripts {
-			get { return default(ElementCollection); }
+			get {
+				return default(ElementCollection);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string SelectedStyleSheetSet {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static StyleSheetList StyleSheets {
-			get { return default(StyleSheetList); }
+			get {
+				return default(StyleSheetList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static DOMStringList StyleSheetSets {
-			get { return default(DOMStringList); }
+			get {
+				return default(DOMStringList);
+			}
 		}
 
 		[ScriptName("TEXT_NODE")]
@@ -1144,30 +1471,43 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static string TextContent {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string Title {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string URL {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public static VisibilityState VisibilityState {
-			get { return default(VisibilityState); }
+			get {
+				return default(VisibilityState);
+			}
 		}
 
 		[IntrinsicProperty]
 		public static string VlinkColor {
-			get { return null; }
-			set { }
+			get {
+				return null;
+			}
+			set {
+			}
 		}
 
 		[ExpandParams]

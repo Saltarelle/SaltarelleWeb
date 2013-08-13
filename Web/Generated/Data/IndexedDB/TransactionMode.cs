@@ -5,6 +5,6 @@ namespace System.Data.IndexedDB {
 	public enum TransactionMode {
 		Readonly,
 		Readwrite,
-		Versionchange,
+		Versionchange
 	}
 }

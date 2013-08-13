@@ -4,8 +4,8 @@ namespace System.Text {
 	[Imported, Serializable]
 	public partial class TextEncodeOptions {
 		public bool Stream {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

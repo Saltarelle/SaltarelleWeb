@@ -4,33 +4,33 @@ namespace System.Html.Media.Graphics.WebGL {
 	[Imported, Serializable]
 	public partial class WebGLContextAttributes {
 		public bool Alpha {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool Antialias {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool Depth {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool PremultipliedAlpha {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool PreserveDrawingBuffer {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 
 		public bool Stencil {
-			get { return false; }
-			set { }
+			get;
+			set;
 		}
 	}
 }

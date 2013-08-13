@@ -8,27 +8,37 @@ namespace System.Html.Media.Graphics {
 
 		[IntrinsicProperty]
 		public uint CorruptedVideoFrames {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double CreationTime {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint DroppedVideoFrames {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public double TotalFrameDelay {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public uint TotalVideoFrames {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 	}
 }

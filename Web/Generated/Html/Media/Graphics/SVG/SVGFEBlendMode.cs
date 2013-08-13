@@ -8,6 +8,6 @@ namespace System.Html.Media.Graphics.SVG {
 		Multiply = 2,
 		Screen = 3,
 		Darken = 4,
-		Lighten = 5,
+		Lighten = 5
 	}
 }

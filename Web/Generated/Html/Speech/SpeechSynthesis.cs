@@ -18,12 +18,16 @@ namespace System.Html.Speech {
 
 		[IntrinsicProperty]
 		public bool Paused {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		[IntrinsicProperty]
 		public bool Pending {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 
 		public void Resume() {
@@ -34,7 +38,9 @@ namespace System.Html.Speech {
 
 		[IntrinsicProperty]
 		public bool Speaking {
-			get { return false; }
+			get {
+				return false;
+			}
 		}
 	}
 }

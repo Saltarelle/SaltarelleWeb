@@ -5,6 +5,6 @@ namespace System.Html.Notifications {
 	public enum NotificationDirection {
 		Auto,
 		Ltr,
-		Rtl,
+		Rtl
 	}
 }

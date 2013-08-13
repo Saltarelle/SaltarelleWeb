@@ -11,6 +11,6 @@ namespace System.Html.Media.Audio {
 		_2,
 		Linear,
 		Inverse,
-		Exponential,
+		Exponential
 	}
 }

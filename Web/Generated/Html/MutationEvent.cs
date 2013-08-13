@@ -11,29 +11,39 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public ushort AttrChange {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string AttrName {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		public const ushort MODIFICATION = 1;
 
 		[IntrinsicProperty]
 		public string NewValue {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public string PrevValue {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
 		public XmlNode RelatedNode {
-			get { return default(XmlNode); }
+			get {
+				return default(XmlNode);
+			}
 		}
 
 		public const ushort REMOVAL = 3;

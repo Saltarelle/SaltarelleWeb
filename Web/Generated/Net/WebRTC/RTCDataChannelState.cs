@@ -6,6 +6,6 @@ namespace System.Net.WebRTC {
 		Connecting,
 		Open,
 		Closing,
-		Closed,
+		Closed
 	}
 }

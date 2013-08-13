@@ -15,7 +15,9 @@ namespace System.Xml {
 
 		[IntrinsicProperty]
 		public string WholeText {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

@@ -8,7 +8,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> ClipPathUnits {
-			get { return default(SVGAnimatedEnumeration<SVGUnitType>); }
+			get {
+				return default(SVGAnimatedEnumeration<SVGUnitType>);
+			}
 		}
 
 		[ScriptName("SVG_UNIT_TYPE_OBJECTBOUNDINGBOX")]
@@ -22,7 +24,9 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedTransformList Transform {
-			get { return default(SVGAnimatedTransformList); }
+			get {
+				return default(SVGAnimatedTransformList);
+			}
 		}
 	}
 }

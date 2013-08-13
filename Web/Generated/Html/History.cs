@@ -17,7 +17,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public int Length {
-			get { return 0; }
+			get {
+				return 0;
+			}
 		}
 
 		public void PushState(object data, string title) {
@@ -34,7 +36,9 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public object State {
-			get { return null; }
+			get {
+				return null;
+			}
 		}
 	}
 }

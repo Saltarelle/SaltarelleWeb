@@ -8,27 +8,37 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[IntrinsicProperty]
 		public SVGAnimatedLengthList Dx {
-			get { return default(SVGAnimatedLengthList); }
+			get {
+				return default(SVGAnimatedLengthList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLengthList Dy {
-			get { return default(SVGAnimatedLengthList); }
+			get {
+				return default(SVGAnimatedLengthList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedNumberList Rotate {
-			get { return default(SVGAnimatedNumberList); }
+			get {
+				return default(SVGAnimatedNumberList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLengthList X {
-			get { return default(SVGAnimatedLengthList); }
+			get {
+				return default(SVGAnimatedLengthList);
+			}
 		}
 
 		[IntrinsicProperty]
 		public SVGAnimatedLengthList Y {
-			get { return default(SVGAnimatedLengthList); }
+			get {
+				return default(SVGAnimatedLengthList);
+			}
 		}
 	}
 }
