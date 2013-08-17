@@ -247,28 +247,28 @@ namespace Generator {
 			_metadata = metadata;
 		}
 
-		private static Attribute IntrinsicPropertyAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.IntrinsicProperty") }; } }
+		private static Attribute IntrinsicPropertyAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.IntrinsicProperty") }; } }
 
-		private static Attribute EnumerateAsArrayAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.EnumerateAsArray") }; } }
+		private static Attribute EnumerateAsArrayAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.EnumerateAsArray") }; } }
 
-		private static Attribute IgnoreNamespaceAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.IgnoreNamespace") }; } }
+		private static Attribute IgnoreNamespaceAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.IgnoreNamespace") }; } }
 
-		private static Attribute NamedValuesAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.NamedValues") }; } }
+		private static Attribute NamedValuesAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.NamedValues") }; } }
 
-		private static Attribute SerializableAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.Serializable") }; } }
+		private static Attribute SerializableAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.Serializable") }; } }
 
-		private static Attribute GlobalMethodsAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.GlobalMethods") }; } }
+		private static Attribute GlobalMethodsAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.GlobalMethods") }; } }
 
-		private static Attribute FlagsAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.Flags") }; } }
+		private static Attribute FlagsAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.Flags") }; } }
 
-		private static Attribute ExpandParamsAttribute { get { return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.ExpandParams") }; } }
+		private static Attribute ExpandParamsAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.ExpandParams") }; } }
 
 		private static Attribute InlineCodeAttribute(string code) {
-			return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.InlineCode"), Arguments = { new PrimitiveExpression("\"" + code + "\"", "\"" + code + "\"") } };
+			return new Attribute { Type = MakeType("System.Runtime.CompilerServices.InlineCode"), Arguments = { new PrimitiveExpression("\"" + code + "\"", "\"" + code + "\"") } };
 		}
 
 		private Attribute ScriptNameAttribute(string name) {
-			return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.ScriptName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
+			return new Attribute { Type = MakeType("System.Runtime.CompilerServices.ScriptName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
 		}
 
 		private IEnumerable<Attribute> ScriptNameAttributeIfRequired(string csharpName, string name) {
@@ -282,7 +282,7 @@ namespace Generator {
 		}
 
 		private static Attribute ImportedAttribute(bool obeysTypeSystem, string typeCheckCode = null) {
-			var result = new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.Imported") };
+			var result = new Attribute { Type = MakeType("System.Runtime.CompilerServices.Imported") };
 			if (obeysTypeSystem)
 				result.Arguments.Add(new NamedExpression("ObeysTypeSystem", new PrimitiveExpression(true, "true")));
 			if (typeCheckCode != null)
@@ -291,13 +291,12 @@ namespace Generator {
 		}
 
 		private static Attribute IndexerNameAttribute(string name) {
-			return new Attribute { Type = new SimpleType("System.Runtime.CompilerServices.IndexerName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
+			return new Attribute { Type = MakeType("System.Runtime.CompilerServices.IndexerName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
 		}
 
 		private static string GetUnqualifiedTypeName(AstType type) {
-			#warning TODO: Fix
 			if (type is SimpleType) {
-				return ((SimpleType)type).Identifier.Substring(((SimpleType)type).Identifier.LastIndexOf(".", StringComparison.Ordinal) + 1);
+				return ((SimpleType)type).Identifier;
 			}
 			else if (type is PrimitiveType) {
 				return ((PrimitiveType)type).Keyword;
@@ -305,6 +304,9 @@ namespace Generator {
 			else if (type is ComposedType) {
 				var ct = (ComposedType)type;
 				return GetUnqualifiedTypeName(ct.BaseType) + (ct.HasNullableSpecifier ? "?" : "") + (ct.ArraySpecifiers.Count > 0 ? "[]" : "");
+			}
+			else if (type is MemberType) {
+				return ((MemberType)type).MemberName;
 			}
 			else
 				throw new ArgumentException("type was of type " + type.GetType(), "type");
@@ -347,6 +349,14 @@ namespace Generator {
 			return def.Clone();
 		}
 
+		private static AstType MakeType(string fullName, IEnumerable<AstType> typeArguments = null) {
+			var parts = fullName.Split('.');
+			AstType result = new SimpleType(parts[0], (parts.Length == 1 ? typeArguments : null) ?? new AstType[0]);
+			for (int i = 1; i < parts.Length; i++)
+				result = new MemberType(result, parts[i], (i == parts.Length - 1 ? typeArguments : null) ?? new AstType[0]);
+			return result;
+		}
+
 		private AstType ConvertType(WebIDLType type) {
 			return type.DecomposeWithResult(
 				builtin => {
@@ -354,7 +364,7 @@ namespace Generator {
 						case BuiltinType.Any:                return new PrimitiveType("object");
 						case BuiltinType.DOMString:          return new PrimitiveType("string");
 						case BuiltinType.Object:             return new PrimitiveType("object");
-						case BuiltinType.Date:               return new SimpleType("System.DateTime");
+						case BuiltinType.Date:               return MakeType("System.DateTime");
 						case BuiltinType.Boolean:            return new PrimitiveType("bool");
 						case BuiltinType.Byte:               return new PrimitiveType("sbyte");
 						case BuiltinType.Octet:              return new PrimitiveType("byte");
@@ -372,10 +382,10 @@ namespace Generator {
 					}
 				},
 				@void => new PrimitiveType("void"), 
-				@union => new SimpleType("System.TypeOption", @union.Members.Select(ConvertType)),
+				@union => MakeType("System.TypeOption", @union.Members.Select(ConvertType)),
 				typeReference => {
 					var meta = _metadata.Types[typeReference.Target];
-					return meta.AliasFor ?? new SimpleType((!string.IsNullOrEmpty(meta.Namespace) ? meta.Namespace + "." : "") + meta.CSharpName);
+					return meta.AliasFor ?? MakeType((!string.IsNullOrEmpty(meta.Namespace) ? meta.Namespace + "." : "") + meta.CSharpName);
 				},
 				array => ConvertType(array.ElementType).MakeArrayType(),
 				sequence => ConvertType(sequence.ElementType).MakeArrayType(),
@@ -632,7 +642,7 @@ namespace Generator {
 		}
 
 		private AstType MakeTypeOptionIfRequired(IReadOnlyList<AstType> options) {
-			return options.Count > 1 ? new SimpleType("System.TypeOption", options) : options[0];
+			return options.Count > 1 ? MakeType("System.TypeOption", options) : options[0];
 		}
 
 		private void AddMembers(IEnumerable<InterfaceMember> source, Dictionary<string, AstType> typeOverrides, string interfaceName, bool noInterfaceObject, IReadOnlyDictionary<string, string> renames, TypeKind typeKind, IReadOnlyList<string> removes, bool addAsInterfaceMembers, List<EntityDeclaration> members) {
@@ -728,7 +738,7 @@ namespace Generator {
 								}
 								string indexName = operation.Arguments[0].Name.RemoveLeadingUnderscore();
 								var indexType = GetOrDefaultAstType(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
-								string key = indexType.ToString(Program.FormattingOptions);
+								string key = indexType.ToString(Formatter.FormattingOptions);
 								var argumentName = operation.Arguments[1].Name.RemoveLeadingUnderscore();
 								var argumentType = GetOrDefaultAstType(typeOverrides, argumentName, ConvertType(operation.Arguments[1].Type));
 
@@ -736,7 +746,7 @@ namespace Generator {
 								if (indexedProperties.TryGetValue(key, out data)) {
 									if (!data.IndexParameterNames.Contains(indexName))
 										data.IndexParameterNames.Add(indexName);
-									if (!data.PropertyTypes.Any(t => t.ToString(Program.FormattingOptions) == argumentType.ToString(Program.FormattingOptions)))
+									if (!data.PropertyTypes.Any(t => t.ToString(Formatter.FormattingOptions) == argumentType.ToString(Formatter.FormattingOptions)))
 										data.PropertyTypes.Add(argumentType);
 								}
 								else
@@ -751,21 +761,21 @@ namespace Generator {
 								}
 								string indexName = operation.Arguments[0].Name.RemoveLeadingUnderscore();
 								var indexType = GetOrDefaultAstType(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
-								string key = indexType.ToString(Program.FormattingOptions);
+								string key = indexType.ToString(Formatter.FormattingOptions);
 								var returnType = GetOrDefaultAstType(typeOverrides, name, sourceMember, ConvertType(operation.ReturnType));
 
 								IndexedPropertyData data;
 								if (indexedProperties.TryGetValue(key, out data)) {
 									if (!data.IndexParameterNames.Contains(indexName))
 										data.IndexParameterNames.Add(indexName);
-									if (!data.PropertyTypes.Any(t => t.ToString(Program.FormattingOptions) == returnType.ToString(Program.FormattingOptions)))
+									if (!data.PropertyTypes.Any(t => t.ToString(Formatter.FormattingOptions) == returnType.ToString(Formatter.FormattingOptions)))
 										data.PropertyTypes.Add(returnType);
 								}
 								else
 									data = indexedProperties[key] = new IndexedPropertyData { IndexParameterNames = { indexName }, IndexParameterType = indexType, PropertyTypes = { returnType } };
 								data.CanRead = true;
 
-								if (IsIntegerType(indexType) && !enumerateAsArrayCandidates.Any(t => t.ToString(Program.FormattingOptions) == returnType.ToString(Program.FormattingOptions)))
+								if (IsIntegerType(indexType) && !enumerateAsArrayCandidates.Any(t => t.ToString(Formatter.FormattingOptions) == returnType.ToString(Formatter.FormattingOptions)))
 									enumerateAsArrayCandidates.Add(returnType);
 
 								accessorCount++;
@@ -824,7 +834,7 @@ namespace Generator {
 
 			foreach (var p in indexedProperties.Values) {
 				if (p.IndexParameterNames.Count > 1)
-					_errors.Add("Ambiguous parameter name in indexer `" + interfaceName + "[" + p.IndexParameterType.ToString(Program.FormattingOptions) + "] (candidate names are " + string.Join(", ", p.IndexParameterNames.Select(n => "`" + n + "'")) + ")");
+					_errors.Add("Ambiguous parameter name in indexer `" + interfaceName + "[" + p.IndexParameterType.ToString(Formatter.FormattingOptions) + "] (candidate names are " + string.Join(", ", p.IndexParameterNames.Select(n => "`" + n + "'")) + ")");
 				var propertyType = MakeTypeOptionIfRequired(p.PropertyTypes);
 				var i = new IndexerDeclaration {
 					Modifiers = Modifiers.Public,
@@ -843,7 +853,7 @@ namespace Generator {
 				var m = new MethodDeclaration {
 					Modifiers = Modifiers.Public,
 					Name = "GetEnumerator",
-					ReturnType = new SimpleType("System.Collections.IEnumerator", arrayType.Clone()),
+					ReturnType = MakeType("System.Collections.IEnumerator", new[] { arrayType.Clone() }),
 					Body = new BlockStatement { Statements = { new ReturnStatement(new NullReferenceExpression()) } }
 				};
 				AddAttribute(m.Attributes, EnumerateAsArrayAttribute);
@@ -923,7 +933,7 @@ namespace Generator {
 									if (baseMeta.TypeKind == TypeKind.Mixin)
 										return null;
 
-									return baseMeta.AliasFor ?? new SimpleType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName);
+									return baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName);
 								}
 								else
 									return null;
@@ -961,7 +971,7 @@ namespace Generator {
 						if (callbackInterface.Base != null) {
 							var baseMeta = _metadata.Types[callbackInterface.Base];
 							if (baseMeta.Inherit)
-								baseTypes = new[] { baseMeta.AliasFor ?? new SimpleType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName) };
+								baseTypes = new[] { baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName) };
 						}
 
 						var resultType = new TypeDeclaration {
@@ -990,7 +1000,7 @@ namespace Generator {
 						if (dictionary.Base != null) {
 							var baseMeta = _metadata.Types[dictionary.Base];
 							if (baseMeta.Inherit)
-								baseTypes = new[] { baseMeta.AliasFor ?? new SimpleType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName) };
+								baseTypes = new[] { baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName) };
 						}
 
 						var resultType = new TypeDeclaration {

@@ -9,29 +9,11 @@ using System.Threading.Tasks;
 using Antlr.Runtime;
 using Generator.AstNodes;
 using Generator.Meta;
-using ICSharpCode.NRefactory.CSharp;
+using ICSharpCode.NRefactory.Utils;
 using Mono.Options;
 
 namespace Generator {
 	static class Program {
-		public static readonly CSharpFormattingOptions FormattingOptions = CreateFormattingOptions();
-
-		private static CSharpFormattingOptions CreateFormattingOptions() {
-			var result = FormattingOptionsFactory.CreateKRStyle();
-			result.NamespaceBraceStyle = BraceStyle.EndOfLine;
-			result.ClassBraceStyle = BraceStyle.EndOfLine;
-			result.EnumBraceStyle = BraceStyle.EndOfLine;
-			result.InterfaceBraceStyle = BraceStyle.EndOfLine;
-			result.ConstructorBraceStyle = BraceStyle.EndOfLine;
-			result.MethodBraceStyle = BraceStyle.EndOfLine;
-			result.PropertyBraceStyle = BraceStyle.EndOfLine;
-			result.BlankLinesBetweenMembers = 1;
-			result.AllowPropertyGetBlockInline = true;
-			result.AllowPropertySetBlockInline = true;
-			result.BlankLinesAfterUsings = 1;
-			return result;
-		}
-
 		public class Arguments {
 			public string OutputDirectory { get; set; }
 			public List<string> Sources { get; private set; }
@@ -188,70 +170,6 @@ namespace Generator {
 			return Tuple.Create<IReadOnlyList<Definitions>, IReadOnlyList<string>>(allParts, errors.ToList());
 		}
 
-		private class ImportVisitor : DepthFirstAstVisitor<AstNode> {
-			private readonly HashSet<string> _namespaces = new HashSet<string>();
-
-			protected override AstNode VisitChildren(AstNode node) {
-				List<AstNode> newChildren = null;
-				
-				int i = 0;
-				foreach (var child in node.Children) {
-					var newChild = child.AcceptVisitor(this);
-					if (newChild != null) {
-						newChildren = newChildren ?? Enumerable.Repeat((AstNode)null, i).ToList();
-						newChildren.Add(newChild);
-					}
-					else if (newChildren != null) {
-						newChildren.Add(null);
-					}
-					i++;
-				}
-
-				if (newChildren == null)
-					return null;
-
-				var result = node.Clone();
-
-				i = 0;
-				foreach (var children in result.Children) {
-					if (newChildren[i] != null)
-						children.ReplaceWith(newChildren[i]);
-					i++;
-				}
-
-				return result;
-			}
-
-			public override AstNode VisitSimpleType(SimpleType simpleType) {
-				var newTypeArgs = simpleType.TypeArguments.Select(ta => (SimpleType)ta.AcceptVisitor(this) ?? ta.Clone());
-				int dot = simpleType.Identifier.LastIndexOf(".", StringComparison.Ordinal);
-				if (dot == -1)
-					return new SimpleType(simpleType.Identifier, newTypeArgs);
-
-				_namespaces.Add(simpleType.Identifier.Substring(0, dot));
-				return new SimpleType(simpleType.Identifier.Substring(dot + 1), newTypeArgs);
-			}
-
-
-			public static Tuple<AstNode, IReadOnlyList<string>> Process(AstNode n) {
-				var v = new ImportVisitor();
-				n = n.AcceptVisitor(v) ?? n;
-				return Tuple.Create<AstNode, IReadOnlyList<string>>(n, v._namespaces.ToList());
-			}
-		}
-
-		private static string Format(NamespacedEntityDeclaration item) {
-			var imported = ImportVisitor.Process(item.EntityDeclaration);
-
-			var st = new SyntaxTree();
-			st.Members.AddRange(imported.Item2.Where(ns => ns != item.Namespace && !item.Namespace.StartsWith(ns + ".")).OrderBy(ns => ns).Select(ns => new UsingDeclaration(ns)));
-			var a = new NamespaceDeclaration { Members = { imported.Item1 } };
-			a.NamespaceName = new SimpleType(item.Namespace);
-			st.Members.Add(a);
-
-			return st.ToString(FormattingOptions);
-		}
-
 		private static bool Process(Arguments args) {
 			var parseResult = Parse(args.Sources);
 
@@ -282,7 +200,7 @@ namespace Generator {
 				return false;
 			}
 
-			var generated = model.Item1.Select(t => Tuple.Create(t.Namespace, t.EntityDeclaration.Name, Format(t))).ToList();
+			var generated = model.Item1.Select(t => Tuple.Create(t.Namespace, t.EntityDeclaration.Name, Formatter.Format(t))).ToList();
 
 			var errors = new ConcurrentStack<string>();
 			Parallel.ForEach(generated, c => {

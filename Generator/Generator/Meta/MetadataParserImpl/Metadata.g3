@@ -175,10 +175,17 @@ removeSpecifier returns [string result]
 	: remove a=Identifier { $result = $a.text; }
 	;
 
-csharpType returns [AstType result]
-	@init { List<AstType> typeArgs = new List<AstType>(); }
+genericArguments returns [IList<AstType> result]
+	@init { $result = new List<AstType>(); }
 	:
-	(  n=nestedIdentifier ('<' t=csharpType { typeArgs.Add(t); } (',' t=csharpType { typeArgs.Add(t); })* '>')? { $result = new SimpleType(n, typeArgs); }
+	(
+		'<' t=csharpType { $result.Add(t); } (',' t=csharpType { $result.Add(t); })* '>'
+	)
+	;
+
+csharpType returns [AstType result]
+	:
+	(  n=Identifier { $result = new SimpleType($n.text); } ('.' n=Identifier { $result = new MemberType($result, $n.text); })* (a=genericArguments { (result is SimpleType ? ((SimpleType)result).TypeArguments : ((MemberType)result).TypeArguments).AddRange(a); })?
 	 | t=csharpTypeKeyword { $result = t; }
 	)
 	('[' ']' { $result = $result.MakeArrayType(); })?

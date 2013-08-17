@@ -62,6 +62,7 @@
     <Compile Include="Converter.cs" />
     <Compile Include="ExtensionMethods\StringExtensions.cs" />
     <Compile Include="ExtensionMethods\EnumerableExtensions.cs" />
+    <Compile Include="Formatter.cs" />
     <Compile Include="Meta\EnumFromConstants.cs" />
     <Compile Include="Meta\Metadata.cs" />
     <Compile Include="Meta\MetadataParser.cs" />
