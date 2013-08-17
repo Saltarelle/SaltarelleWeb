@@ -6,6 +6,12 @@ namespace System.Html {
 		internal FieldSetElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FieldSetElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FieldSetElement> listener, bool capture) {
+		}
+
 		public bool CheckValidity() {
 			return false;
 		}
@@ -40,6 +46,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FieldSetElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FieldSetElement> listener, bool capture) {
 		}
 
 		public void SetCustomValidity(string error) {

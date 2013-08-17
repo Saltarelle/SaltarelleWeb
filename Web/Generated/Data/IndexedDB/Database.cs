@@ -7,6 +7,12 @@ namespace System.Data.IndexedDB {
 		internal Database() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture) {
+		}
+
 		public void Close() {
 		}
 
@@ -60,6 +66,12 @@ namespace System.Data.IndexedDB {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture) {
 		}
 
 		public Transaction Transaction(string storeName) {

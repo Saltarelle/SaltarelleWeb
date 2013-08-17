@@ -6,6 +6,12 @@ namespace System.Html {
 		internal StyleElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Disabled {
 			get {
@@ -22,6 +28,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

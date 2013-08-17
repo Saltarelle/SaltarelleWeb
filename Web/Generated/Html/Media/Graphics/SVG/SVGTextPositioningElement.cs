@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGTextPositioningElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLengthList Dx {
 			get {
@@ -18,6 +24,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedLengthList);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

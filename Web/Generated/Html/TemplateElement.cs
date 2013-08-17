@@ -7,11 +7,23 @@ namespace System.Html {
 		internal TemplateElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TemplateElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TemplateElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public XmlDocumentFragment Content {
 			get {
 				return default(XmlDocumentFragment);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TemplateElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TemplateElement> listener, bool capture) {
 		}
 	}
 }

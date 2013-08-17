@@ -16,6 +16,12 @@ namespace System.Html {
 			}
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -255,6 +261,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

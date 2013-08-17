@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGComponentTransferFunctionElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Amplitude {
 			get {
@@ -32,6 +38,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedNumber);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

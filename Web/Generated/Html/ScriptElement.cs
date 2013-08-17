@@ -6,6 +6,12 @@ namespace System.Html {
 		internal ScriptElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Async {
 			get {
@@ -58,6 +64,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

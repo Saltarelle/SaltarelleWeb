@@ -6,6 +6,12 @@ namespace System.Html {
 		internal TableColElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -31,6 +37,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

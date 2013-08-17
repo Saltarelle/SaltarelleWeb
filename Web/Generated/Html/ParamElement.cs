@@ -6,6 +6,12 @@ namespace System.Html {
 		internal ParamElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Name {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

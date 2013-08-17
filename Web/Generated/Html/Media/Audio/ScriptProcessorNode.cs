@@ -6,6 +6,12 @@ namespace System.Html.Media.Audio {
 		internal ScriptProcessorNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public int BufferSize {
 			get {
@@ -20,6 +26,12 @@ namespace System.Html.Media.Audio {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener, bool capture) {
 		}
 	}
 }

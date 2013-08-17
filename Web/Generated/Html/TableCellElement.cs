@@ -15,6 +15,12 @@ namespace System.Html {
 			}
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -101,6 +107,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

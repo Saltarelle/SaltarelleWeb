@@ -15,6 +15,12 @@ namespace System.Html {
 		public ImageElement(uint width, uint height) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -124,6 +130,12 @@ namespace System.Html {
 			get {
 				return 0;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

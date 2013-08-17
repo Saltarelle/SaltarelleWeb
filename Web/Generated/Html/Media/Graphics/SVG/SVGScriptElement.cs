@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGScriptElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGScriptElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGScriptElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string CrossOrigin {
 			get {
@@ -20,6 +26,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedString);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGScriptElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGScriptElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -1,9 +1,16 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Html;
+using System.Runtime.CompilerServices;
 
 namespace System.Xml {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("CharacterData")]
 	public partial class XmlCharacterData : XmlNode {
 		internal XmlCharacterData() {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture) {
 		}
 
 		public void AppendData(string data) {
@@ -46,6 +53,12 @@ namespace System.Xml {
 		}
 
 		public void Remove() {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture) {
 		}
 
 		public void ReplaceData(uint offset, uint count, string data) {

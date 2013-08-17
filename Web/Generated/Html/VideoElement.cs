@@ -7,6 +7,12 @@ namespace System.Html {
 		internal VideoElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener, bool capture) {
+		}
+
 		public VideoPlaybackQuality GetVideoPlaybackQuality() {
 			return default(VideoPlaybackQuality);
 		}
@@ -27,6 +33,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

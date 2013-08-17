@@ -10,6 +10,12 @@ namespace System.Html.Media {
 		public TextTrackCue(double startTime, double endTime, string text) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackCue> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackCue> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public TextTrackCueAlign Align {
 			get {
@@ -75,6 +81,12 @@ namespace System.Html.Media {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackCue> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackCue> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -6,6 +6,18 @@ namespace System.Html {
 		internal TitleElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TitleElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TitleElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TitleElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TitleElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Text {
 			get {

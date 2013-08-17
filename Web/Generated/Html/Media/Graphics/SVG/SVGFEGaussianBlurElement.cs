@@ -6,11 +6,23 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEGaussianBlurElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedString In1 {
 			get {
 				return default(SVGAnimatedString);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener, bool capture) {
 		}
 
 		public void SetStdDeviation(float stdDeviationX, float stdDeviationY) {

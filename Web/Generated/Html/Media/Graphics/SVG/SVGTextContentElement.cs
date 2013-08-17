@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGTextContentElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener, bool capture) {
+		}
+
 		public int GetCharNumAtPosition(SVGPoint point) {
 			return 0;
 		}
@@ -53,6 +59,12 @@ namespace System.Html.Media.Graphics.SVG {
 
 		[ScriptName("LENGTHADJUST_UNKNOWN")]
 		public const ushort LENGTHADJUST_UNKNOWN = 0;
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener, bool capture) {
+		}
 
 		public void SelectSubString(uint charnum, uint nchars) {
 		}

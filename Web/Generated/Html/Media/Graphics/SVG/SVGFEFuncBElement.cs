@@ -5,5 +5,17 @@ namespace System.Html.Media.Graphics.SVG {
 	public partial class SVGFEFuncBElement : SVGComponentTransferFunctionElement {
 		internal SVGFEFuncBElement() {
 		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncBElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncBElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncBElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncBElement> listener, bool capture) {
+		}
 	}
 }

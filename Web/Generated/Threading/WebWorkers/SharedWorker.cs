@@ -13,6 +13,12 @@ namespace System.Threading.WebWorkers {
 		public SharedWorker(string scriptURL, string name) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener, bool capture) {
+		}
+
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
 			get {
@@ -27,6 +33,12 @@ namespace System.Threading.WebWorkers {
 			get {
 				return default(MessagePort);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener, bool capture) {
 		}
 	}
 }

@@ -6,6 +6,12 @@ namespace System.Html {
 		internal TableCaptionElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener, bool capture) {
 		}
 	}
 }

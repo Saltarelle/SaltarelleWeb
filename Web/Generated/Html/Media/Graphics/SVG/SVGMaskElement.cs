@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGMaskElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
 			get {
@@ -25,6 +31,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedEnumeration<SVGUnitType>);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener, bool capture) {
 		}
 
 		[ScriptName("SVG_MASKTYPE_ALPHA")]

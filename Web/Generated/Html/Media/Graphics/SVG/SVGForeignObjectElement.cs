@@ -6,11 +6,23 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGForeignObjectElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
 			get {
 				return default(SVGAnimatedLength);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

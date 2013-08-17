@@ -6,6 +6,12 @@ namespace System.Html {
 		internal AppletElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -85,6 +91,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

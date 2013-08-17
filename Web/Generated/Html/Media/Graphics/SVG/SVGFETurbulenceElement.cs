@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFETurbulenceElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedNumber BaseFrequencyX {
 			get {
@@ -32,6 +38,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedInteger);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

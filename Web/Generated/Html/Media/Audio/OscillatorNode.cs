@@ -6,6 +6,12 @@ namespace System.Html.Media.Audio {
 		internal OscillatorNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public AudioParam Detune {
 			get {
@@ -27,6 +33,12 @@ namespace System.Html.Media.Audio {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
 		}
 
 		public void SetPeriodicWave(PeriodicWave periodicWave) {

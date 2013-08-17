@@ -13,6 +13,12 @@ namespace System.Html {
 		internal WindowInstance() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
+		}
+
 		public void Alert(string message) {
 		}
 
@@ -952,6 +958,12 @@ namespace System.Html {
 
 		public string Prompt(string text, string value) {
 			return null;
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
 		}
 
 		public void ResizeBy(int xDelta, int yDelta) {

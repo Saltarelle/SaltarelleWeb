@@ -7,6 +7,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedString ClassName {
 			get {
@@ -568,6 +574,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGSVGElement);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

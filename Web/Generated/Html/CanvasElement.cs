@@ -8,6 +8,12 @@ namespace System.Html {
 		internal CanvasElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener, bool capture) {
+		}
+
 		public CanvasRenderingContext GetContext(string contextId) {
 			return default(CanvasRenderingContext);
 		}
@@ -23,6 +29,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener, bool capture) {
 		}
 
 		public void ToBlob(Action<Blob> callback) {

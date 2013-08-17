@@ -7,6 +7,12 @@ namespace System.Net {
 		internal XmlHttpRequestEventTarget() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture) {
+		}
+
 		[IntrinsicProperty, ScriptName("onabort")]
 		public HtmlEventHandler OnAbort {
 			get {
@@ -68,6 +74,12 @@ namespace System.Net {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture) {
 		}
 	}
 }

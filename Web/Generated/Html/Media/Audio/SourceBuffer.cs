@@ -10,6 +10,12 @@ namespace System.Html.Media.Audio {
 		public void Abort() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener, bool capture) {
+		}
+
 		public void AppendBuffer(ArrayBuffer data) {
 		}
 
@@ -51,6 +57,12 @@ namespace System.Html.Media.Audio {
 		}
 
 		public void Remove(double start, double end) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

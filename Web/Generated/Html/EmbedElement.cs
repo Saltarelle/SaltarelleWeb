@@ -7,6 +7,12 @@ namespace System.Html {
 		internal EmbedElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -41,6 +47,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

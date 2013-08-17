@@ -6,11 +6,23 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGStopElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGStopElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGStopElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedNumber Offset {
 			get {
 				return default(SVGAnimatedNumber);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStopElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStopElement> listener, bool capture) {
 		}
 	}
 }

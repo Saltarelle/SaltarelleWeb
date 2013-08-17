@@ -9,6 +9,12 @@ namespace System.Html.Speech {
 		public void Abort() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Continuous {
 			get {
@@ -151,6 +157,12 @@ namespace System.Html.Speech {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

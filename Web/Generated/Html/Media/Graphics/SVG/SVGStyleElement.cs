@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGStyleElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Media {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

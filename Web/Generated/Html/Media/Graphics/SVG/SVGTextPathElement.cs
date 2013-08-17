@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGTextPathElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedString Href {
 			get {
@@ -18,6 +24,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedEnumeration<SVGTextPathMethod>);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

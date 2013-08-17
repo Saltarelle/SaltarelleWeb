@@ -6,6 +6,18 @@ namespace System.Html.Media.Audio {
 		internal MediaStreamAudioDestinationNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaStreamAudioDestinationNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaStreamAudioDestinationNode> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaStreamAudioDestinationNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaStreamAudioDestinationNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public MediaStream Stream {
 			get {

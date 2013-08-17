@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEDiffuseLightingElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedNumber DiffuseConstant {
 			get {
@@ -39,6 +45,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedNumber);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

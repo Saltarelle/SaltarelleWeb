@@ -6,6 +6,12 @@ namespace System.Html {
 		internal MenuElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Compact {
 			get {
@@ -22,6 +28,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

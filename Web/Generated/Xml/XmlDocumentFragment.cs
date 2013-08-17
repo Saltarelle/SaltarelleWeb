@@ -7,6 +7,12 @@ namespace System.Xml {
 		public XmlDocumentFragment() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public uint ChildElementCount {
 			get {
@@ -41,6 +47,12 @@ namespace System.Xml {
 
 		public XmlNodeList QuerySelectorAll(string selectors) {
 			return default(XmlNodeList);
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture) {
 		}
 	}
 }

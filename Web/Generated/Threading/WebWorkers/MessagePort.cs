@@ -7,6 +7,12 @@ namespace System.Threading.WebWorkers {
 		internal MessagePort() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture) {
+		}
+
 		public void Close() {
 		}
 
@@ -23,6 +29,12 @@ namespace System.Threading.WebWorkers {
 		}
 
 		public void PostMessage(object message, ITransferable[] transfer) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture) {
 		}
 
 		public void Start() {

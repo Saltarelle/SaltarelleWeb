@@ -6,6 +6,12 @@ namespace System.Html {
 		internal Screen() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public int AvailHeight {
 			get {
@@ -60,6 +66,12 @@ namespace System.Html {
 			get {
 				return 0;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

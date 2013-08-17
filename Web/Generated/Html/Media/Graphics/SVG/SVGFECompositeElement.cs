@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFECompositeElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
 			get {
@@ -60,6 +66,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedEnumeration<SVGFECompositeOperator>);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

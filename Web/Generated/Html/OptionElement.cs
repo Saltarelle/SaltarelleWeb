@@ -23,6 +23,12 @@ namespace System.Html {
 		public OptionElement(string text, string value, bool defaultSelected, bool selected) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool DefaultSelected {
 			get {
@@ -62,6 +68,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

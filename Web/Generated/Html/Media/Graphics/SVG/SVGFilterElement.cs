@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFilterElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedInteger FilterResX {
 			get {
@@ -46,6 +52,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedEnumeration<SVGUnitType>);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener, bool capture) {
 		}
 
 		public void SetFilterRes(uint filterResX, uint filterResY) {

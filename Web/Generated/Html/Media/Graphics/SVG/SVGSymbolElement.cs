@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGSymbolElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture) {
+		}
+
 		public bool HasExtension(string extension) {
 			return false;
 		}
@@ -15,6 +21,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedPreserveAspectRatio);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

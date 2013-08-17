@@ -7,11 +7,23 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGDocument() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGDocument> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGDocument> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Domain {
 			get {
 				return null;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGDocument> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGDocument> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

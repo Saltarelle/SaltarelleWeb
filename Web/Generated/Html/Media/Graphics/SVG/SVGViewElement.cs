@@ -6,11 +6,23 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGViewElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio {
 			get {
 				return default(SVGAnimatedPreserveAspectRatio);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture) {
 		}
 
 		[ScriptName("SVG_ZOOMANDPAN_DISABLE")]

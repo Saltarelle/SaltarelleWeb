@@ -13,6 +13,12 @@ namespace System.Net.ServerEvents {
 		public EventSource(string url, EventSourceInit eventSourceInitDict) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener, bool capture) {
+		}
+
 		public void Close() {
 		}
 
@@ -54,6 +60,12 @@ namespace System.Net.ServerEvents {
 			get {
 				return 0;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

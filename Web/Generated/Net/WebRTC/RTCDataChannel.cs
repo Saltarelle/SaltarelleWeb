@@ -9,6 +9,12 @@ namespace System.Net.WebRTC {
 		internal RTCDataChannel() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public RTCDataChannelType BinaryType {
 			get {
@@ -104,6 +110,12 @@ namespace System.Net.WebRTC {
 			get {
 				return false;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture) {
 		}
 
 		public void Send(ArrayBuffer data) {

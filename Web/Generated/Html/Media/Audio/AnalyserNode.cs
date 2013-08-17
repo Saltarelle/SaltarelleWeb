@@ -7,6 +7,12 @@ namespace System.Html.Media.Audio {
 		internal AnalyserNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public uint FftSize {
 			get {
@@ -48,6 +54,12 @@ namespace System.Html.Media.Audio {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

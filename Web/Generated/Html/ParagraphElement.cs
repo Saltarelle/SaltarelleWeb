@@ -6,6 +6,12 @@ namespace System.Html {
 		internal ParagraphElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture) {
 		}
 	}
 }

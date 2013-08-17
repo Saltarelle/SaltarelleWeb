@@ -6,6 +6,12 @@ namespace System.Html {
 		internal FrameSetElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Cols {
 			get {
@@ -121,6 +127,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

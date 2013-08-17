@@ -6,6 +6,12 @@ namespace System.Html {
 		internal MeterElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public double High {
 			get {
@@ -49,6 +55,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

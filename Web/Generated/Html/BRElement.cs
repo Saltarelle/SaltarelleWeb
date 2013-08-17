@@ -6,6 +6,12 @@ namespace System.Html {
 		internal BRElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Clear {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener, bool capture) {
 		}
 	}
 }

@@ -6,6 +6,18 @@ namespace System.Html {
 		internal LIElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Type {
 			get {

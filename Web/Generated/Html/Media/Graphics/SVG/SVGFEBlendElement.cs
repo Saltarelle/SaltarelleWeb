@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEBlendElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
 			get {
@@ -32,6 +38,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedEnumeration<SVGFEBlendMode>);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

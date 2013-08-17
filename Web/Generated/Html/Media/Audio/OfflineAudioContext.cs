@@ -9,6 +9,12 @@ namespace System.Html.Media.Audio {
 		public OfflineAudioContext(uint numberOfChannels, uint length, float sampleRate) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener, bool capture) {
+		}
+
 		[IntrinsicProperty, ScriptName("oncomplete")]
 		public HtmlEventHandler OnComplete {
 			get {
@@ -16,6 +22,12 @@ namespace System.Html.Media.Audio {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener, bool capture) {
 		}
 
 		public void StartRendering() {

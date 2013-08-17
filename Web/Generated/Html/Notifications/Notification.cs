@@ -12,6 +12,12 @@ namespace System.Html.Notifications {
 		public Notification(string title, NotificationOptions options) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture) {
+		}
+
 		public void Close() {
 		}
 
@@ -56,6 +62,12 @@ namespace System.Html.Notifications {
 			get {
 				return default(NotificationPermission);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture) {
 		}
 
 		public static void RequestPermission() {

@@ -6,6 +6,12 @@ namespace System.Html {
 		internal BaseElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Href {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

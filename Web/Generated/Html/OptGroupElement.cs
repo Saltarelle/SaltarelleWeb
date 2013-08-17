@@ -6,6 +6,12 @@ namespace System.Html {
 		internal OptGroupElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Disabled {
 			get {
@@ -22,6 +28,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture) {
 		}
 	}
 }

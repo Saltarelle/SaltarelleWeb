@@ -9,6 +9,12 @@ namespace System.Html.Speech {
 		public SpeechSynthesisUtterance(string text) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Lang {
 			get {
@@ -97,6 +103,12 @@ namespace System.Html.Speech {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

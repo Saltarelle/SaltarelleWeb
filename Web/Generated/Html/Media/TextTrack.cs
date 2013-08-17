@@ -16,6 +16,12 @@ namespace System.Html.Media {
 		public void AddCue(TextTrackCue cue) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public TextTrackCueList Cues {
 			get {
@@ -77,6 +83,12 @@ namespace System.Html.Media {
 		}
 
 		public void RemoveCue(TextTrackCue cue) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture) {
 		}
 	}
 }

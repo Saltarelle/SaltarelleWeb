@@ -6,6 +6,12 @@ namespace System.Html {
 		internal FontElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Color {
 			get {
@@ -22,6 +28,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

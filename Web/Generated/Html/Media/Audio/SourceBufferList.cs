@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media.Audio {
@@ -14,6 +14,12 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener, bool capture) {
+		}
+
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
 		public IEnumerator<SourceBuffer> GetEnumerator() {
 			return null;
@@ -24,6 +30,12 @@ namespace System.Html.Media.Audio {
 			get {
 				return 0;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener, bool capture) {
 		}
 	}
 }

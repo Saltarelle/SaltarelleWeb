@@ -15,6 +15,12 @@ namespace System.Html {
 			}
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string AlinkColor {
 			get {
@@ -228,6 +234,12 @@ namespace System.Html {
 		}
 
 		public void ReleaseEvents(int eventFlags) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

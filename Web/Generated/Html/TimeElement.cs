@@ -6,6 +6,12 @@ namespace System.Html {
 		internal TimeElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TimeElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TimeElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string DateTime {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TimeElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TimeElement> listener, bool capture) {
 		}
 	}
 }

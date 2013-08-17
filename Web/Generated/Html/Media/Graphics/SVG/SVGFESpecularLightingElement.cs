@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFESpecularLightingElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
 			get {
@@ -32,6 +38,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedNumber);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -6,6 +6,12 @@ namespace System.Html {
 		internal HeadingElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<HeadingElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<HeadingElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HeadingElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HeadingElement> listener, bool capture) {
 		}
 	}
 }

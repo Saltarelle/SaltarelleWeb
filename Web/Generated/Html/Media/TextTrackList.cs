@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace System.Html.Media {
@@ -12,6 +12,12 @@ namespace System.Html.Media {
 			get {
 				return default(TextTrack);
 			}
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture) {
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
@@ -46,6 +52,12 @@ namespace System.Html.Media {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture) {
 		}
 	}
 }

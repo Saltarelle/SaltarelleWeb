@@ -7,6 +7,12 @@ namespace System.Data.IndexedDB {
 		internal OpenDBRequest() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener, bool capture) {
+		}
+
 		[IntrinsicProperty, ScriptName("onblocked")]
 		public HtmlEventHandler OnBlocked {
 			get {
@@ -23,6 +29,12 @@ namespace System.Data.IndexedDB {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener, bool capture) {
 		}
 	}
 }

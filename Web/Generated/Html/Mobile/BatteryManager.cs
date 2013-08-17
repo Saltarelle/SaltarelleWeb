@@ -6,6 +6,12 @@ namespace System.Html.Mobile {
 		internal BatteryManager() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Charging {
 			get {
@@ -68,6 +74,12 @@ namespace System.Html.Mobile {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture) {
 		}
 	}
 }

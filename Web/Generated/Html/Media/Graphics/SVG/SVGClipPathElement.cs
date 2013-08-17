@@ -6,11 +6,23 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGClipPathElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> ClipPathUnits {
 			get {
 				return default(SVGAnimatedEnumeration<SVGUnitType>);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener, bool capture) {
 		}
 
 		[ScriptName("SVG_UNIT_TYPE_OBJECTBOUNDINGBOX")]

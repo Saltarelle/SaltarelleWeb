@@ -6,6 +6,18 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGLinearGradientElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLength X1 {
 			get {

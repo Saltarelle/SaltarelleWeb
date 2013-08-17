@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGAnimationElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture) {
+		}
+
 		public void BeginElement() {
 		}
 
@@ -32,6 +38,12 @@ namespace System.Html.Media.Graphics.SVG {
 
 		public bool HasExtension(string extension) {
 			return false;
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

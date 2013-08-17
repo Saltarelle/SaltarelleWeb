@@ -6,6 +6,12 @@ namespace System.Html {
 		internal AreaElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Alt {
 			get {
@@ -112,6 +118,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

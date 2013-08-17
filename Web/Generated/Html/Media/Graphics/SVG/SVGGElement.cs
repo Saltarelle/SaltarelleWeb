@@ -5,5 +5,17 @@ namespace System.Html.Media.Graphics.SVG {
 	public partial class SVGGElement : SVGGraphicsElement {
 		internal SVGGElement() {
 		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGElement> listener, bool capture) {
+		}
 	}
 }

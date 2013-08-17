@@ -6,6 +6,12 @@ namespace System.Html {
 		internal QuoteElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<QuoteElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<QuoteElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Cite {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<QuoteElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<QuoteElement> listener, bool capture) {
 		}
 	}
 }

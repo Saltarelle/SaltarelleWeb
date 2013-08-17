@@ -6,6 +6,12 @@ namespace System.Html {
 		internal MapElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public ElementCollection Areas {
 			get {
@@ -20,6 +26,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture) {
 		}
 	}
 }

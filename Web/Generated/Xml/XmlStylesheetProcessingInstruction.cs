@@ -7,6 +7,18 @@ namespace System.Xml {
 		internal XmlStylesheetProcessingInstruction() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlStylesheetProcessingInstruction> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlStylesheetProcessingInstruction> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlStylesheetProcessingInstruction> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlStylesheetProcessingInstruction> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public StyleSheet Sheet {
 			get {

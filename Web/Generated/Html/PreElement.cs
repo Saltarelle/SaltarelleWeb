@@ -6,6 +6,18 @@ namespace System.Html {
 		internal PreElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<PreElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<PreElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PreElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PreElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public int Width {
 			get {

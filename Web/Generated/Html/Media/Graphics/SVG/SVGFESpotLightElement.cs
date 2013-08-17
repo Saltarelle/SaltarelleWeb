@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFESpotLightElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedNumber LimitingConeAngle {
 			get {
@@ -32,6 +38,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedNumber);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGMarkerElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLength MarkerHeight {
 			get {
@@ -60,6 +66,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedLength);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture) {
 		}
 
 		public void SetOrientToAngle(SVGAngle angle) {

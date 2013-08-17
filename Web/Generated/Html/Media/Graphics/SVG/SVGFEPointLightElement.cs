@@ -6,6 +6,18 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEPointLightElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedNumber X {
 			get {

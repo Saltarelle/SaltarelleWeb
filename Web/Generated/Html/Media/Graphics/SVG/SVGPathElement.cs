@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGPathElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGPathSegList AnimatedPathSegList {
 			get {
@@ -113,6 +119,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGPathSegList);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener, bool capture) {
 		}
 	}
 }

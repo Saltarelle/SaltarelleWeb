@@ -6,6 +6,12 @@ namespace System.Html.Media.Audio {
 		internal PannerNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public double ConeInnerAngle {
 			get {
@@ -80,6 +86,12 @@ namespace System.Html.Media.Audio {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

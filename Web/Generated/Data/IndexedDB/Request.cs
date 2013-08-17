@@ -7,6 +7,12 @@ namespace System.Data.IndexedDB {
 		internal Request() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public DOMError Error {
 			get {
@@ -37,6 +43,12 @@ namespace System.Data.IndexedDB {
 			get {
 				return default(RequestReadyState);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

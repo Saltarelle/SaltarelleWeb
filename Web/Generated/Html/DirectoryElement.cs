@@ -6,6 +6,12 @@ namespace System.Html {
 		internal DirectoryElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Compact {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener, bool capture) {
 		}
 	}
 }

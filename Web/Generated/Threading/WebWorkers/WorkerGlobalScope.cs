@@ -7,6 +7,12 @@ namespace System.Threading.WebWorkers {
 		internal WorkerGlobalScope() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
+		}
+
 		public string Atob(string stringToEncode) {
 			return null;
 		}
@@ -67,6 +73,12 @@ namespace System.Threading.WebWorkers {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

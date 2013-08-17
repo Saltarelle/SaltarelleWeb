@@ -5,5 +5,17 @@ namespace System.Html.Media.Audio {
 	public partial class MediaElementAudioSourceNode : AudioNode {
 		internal MediaElementAudioSourceNode() {
 		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElementAudioSourceNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElementAudioSourceNode> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElementAudioSourceNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElementAudioSourceNode> listener, bool capture) {
+		}
 	}
 }

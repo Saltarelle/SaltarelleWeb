@@ -6,6 +6,12 @@ namespace System.Html {
 		internal OutputElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture) {
+		}
+
 		public bool CheckValidity() {
 			return false;
 		}
@@ -40,6 +46,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture) {
 		}
 
 		public void SetCustomValidity(string error) {

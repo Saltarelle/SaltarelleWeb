@@ -7,6 +7,12 @@ namespace System.Xml {
 		internal XmlElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public AttributeCollection Attributes {
 			get {
@@ -214,6 +220,12 @@ namespace System.Xml {
 		}
 
 		public void RemoveAttributeNS(string @namespace, string localName) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

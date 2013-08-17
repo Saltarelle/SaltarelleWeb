@@ -6,6 +6,18 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGLineElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLength X1 {
 			get {

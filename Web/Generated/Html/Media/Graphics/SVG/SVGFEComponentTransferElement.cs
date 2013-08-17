@@ -6,11 +6,23 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEComponentTransferElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedString In1 {
 			get {
 				return default(SVGAnimatedString);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture) {
 		}
 	}
 }

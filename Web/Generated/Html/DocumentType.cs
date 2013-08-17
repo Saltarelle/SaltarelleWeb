@@ -7,6 +7,12 @@ namespace System.Html {
 		internal DocumentType() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string InternalSubset {
 			get {
@@ -43,6 +49,12 @@ namespace System.Html {
 		}
 
 		public void Remove() {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

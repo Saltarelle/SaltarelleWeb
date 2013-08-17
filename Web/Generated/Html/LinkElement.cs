@@ -6,6 +6,12 @@ namespace System.Html {
 		internal LinkElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Charset {
 			get {
@@ -67,6 +73,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

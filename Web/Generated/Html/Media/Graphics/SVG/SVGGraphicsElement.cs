@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGGraphicsElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGElement FarthestViewportElement {
 			get {
@@ -38,6 +44,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGElement);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

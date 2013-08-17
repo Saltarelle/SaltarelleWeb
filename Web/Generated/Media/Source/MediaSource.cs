@@ -15,6 +15,12 @@ namespace System.Media.Source {
 			}
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture) {
+		}
+
 		public SourceBuffer AddSourceBuffer(string type) {
 			return default(SourceBuffer);
 		}
@@ -43,6 +49,12 @@ namespace System.Media.Source {
 			get {
 				return default(MediaSourceReadyState);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture) {
 		}
 
 		public void RemoveSourceBuffer(SourceBuffer sourceBuffer) {

@@ -10,6 +10,12 @@ namespace System.Threading.WebWorkers {
 		public Worker(string scriptURL) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener, bool capture) {
+		}
+
 		[IntrinsicProperty, ScriptName("onerror")]
 		public HtmlEventHandler OnError {
 			get {
@@ -32,6 +38,12 @@ namespace System.Threading.WebWorkers {
 		}
 
 		public void PostMessage(object message, ITransferable[] transfer) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener, bool capture) {
 		}
 
 		public void Terminate() {

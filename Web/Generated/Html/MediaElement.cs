@@ -7,6 +7,12 @@ namespace System.Html {
 		internal MediaElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture) {
+		}
+
 		public TextTrack AddTextTrack(TextTrackKind kind) {
 			return default(TextTrack);
 		}
@@ -210,6 +216,12 @@ namespace System.Html {
 			get {
 				return default(MediaElementReadyState);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -7,6 +7,12 @@ namespace System.Html {
 		internal FrameElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public DocumentBase ContentDocument {
 			get {
@@ -73,6 +79,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

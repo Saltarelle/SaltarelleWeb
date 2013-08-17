@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGAltGlyphElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Format {
 			get {
@@ -29,6 +35,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedString);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture) {
 		}
 	}
 }

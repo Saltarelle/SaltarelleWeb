@@ -6,6 +6,12 @@ namespace System.Html {
 		internal LegendElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -20,6 +26,12 @@ namespace System.Html {
 			get {
 				return default(FormElement);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener, bool capture) {
 		}
 	}
 }

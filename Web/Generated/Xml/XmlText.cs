@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Html;
+using System.Runtime.CompilerServices;
 
 namespace System.Xml {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("Text")]
@@ -7,6 +8,18 @@ namespace System.Xml {
 		}
 
 		public XmlText(string data) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener, bool capture) {
 		}
 
 		public XmlText SplitText(uint offset) {

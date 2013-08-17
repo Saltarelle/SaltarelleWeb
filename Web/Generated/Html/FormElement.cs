@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Xml;
 
@@ -38,6 +38,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -115,6 +121,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture) {
 		}
 
 		public void Reset() {

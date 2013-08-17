@@ -6,6 +6,12 @@ namespace System.Html {
 		internal MetaElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Content {
 			get {
@@ -31,6 +37,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

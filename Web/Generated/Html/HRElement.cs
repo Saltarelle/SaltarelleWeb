@@ -6,6 +6,12 @@ namespace System.Html {
 		internal HRElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -31,6 +37,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

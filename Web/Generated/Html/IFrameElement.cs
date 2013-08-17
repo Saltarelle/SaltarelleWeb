@@ -7,6 +7,12 @@ namespace System.Html {
 		internal IFrameElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -95,6 +101,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

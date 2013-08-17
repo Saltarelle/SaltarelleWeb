@@ -13,6 +13,24 @@ namespace System.Html {
 			}
 		}
 
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		}
+
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		}
+
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		}
+
 		public static void AddEventListener(string type, IEventListener listener) {
 		}
 
@@ -1424,6 +1442,24 @@ namespace System.Html {
 
 		public static XmlNode RemoveChild(XmlNode child) {
 			return default(XmlNode);
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
 		}
 
 		public static void RemoveEventListener(string type, IEventListener listener) {

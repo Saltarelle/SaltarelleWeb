@@ -6,6 +6,12 @@ namespace System.Html {
 		internal ButtonElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Autofocus {
 			get {
@@ -87,6 +93,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture) {
 		}
 
 		public void SetCustomValidity(string error) {

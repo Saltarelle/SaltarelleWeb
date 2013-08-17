@@ -5,5 +5,17 @@ namespace System.Html {
 	public partial class HeadElement : Element {
 		internal HeadElement() {
 		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener, bool capture) {
+		}
 	}
 }

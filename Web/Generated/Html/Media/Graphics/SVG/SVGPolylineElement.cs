@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGPolylineElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGPointList AnimatedPoints {
 			get {
@@ -18,6 +24,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGPointList);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener, bool capture) {
 		}
 	}
 }

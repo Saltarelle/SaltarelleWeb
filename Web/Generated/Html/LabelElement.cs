@@ -6,6 +6,12 @@ namespace System.Html {
 		internal LabelElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public Element Control {
 			get {
@@ -27,6 +33,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture) {
 		}
 	}
 }

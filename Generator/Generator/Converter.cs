@@ -11,7 +11,6 @@ using ICSharpCode.NRefactory.TypeSystem;
 using Attribute = ICSharpCode.NRefactory.CSharp.Attribute;
 using TypeKind = Generator.Meta.TypeKind;
 
-#warning TODO: Handle EventTarget<TSelf> somehow
 #warning TODO: Event string names
 
 namespace Generator {
@@ -853,7 +852,7 @@ namespace Generator {
 				var m = new MethodDeclaration {
 					Modifiers = Modifiers.Public,
 					Name = "GetEnumerator",
-					ReturnType = MakeType("System.Collections.IEnumerator", new[] { arrayType.Clone() }),
+					ReturnType = MakeType("System.Collections.Generic.IEnumerator", new[] { arrayType.Clone() }),
 					Body = new BlockStatement { Statements = { new ReturnStatement(new NullReferenceExpression()) } }
 				};
 				AddAttribute(m.Attributes, EnumerateAsArrayAttribute);
@@ -882,13 +881,43 @@ namespace Generator {
 			}
 		}
 
-		private NamespacedEntityDeclaration ConvertTypeDefinition(ResolvedDefinition type, bool returnNonGenerated) {
+		private IEnumerable<string> GetMembersToAddFromBaseTypes(IEnumerable<string> bases) {
+			var result = new List<string>();
+			foreach (var b in bases.Where(b => b != null)) {
+				var baseMeta = _metadata.Types[b];
+				foreach (var a in baseMeta.AddInDerivedTypes)
+					result.Add(a);
+				var baseBases = _types[b].DecomposeWithResult(
+					@interface => new[] { @interface.Base }.Concat(@interface.Implements),
+					callbackInterface => new[] { callbackInterface.Base },
+					dictionary => new[] { dictionary.Base },
+					callback => null,
+					exception => new[] { exception.Base },
+					@enum => null,
+					declaredInterface => null
+				);
+				if (baseBases != null)
+					result.AddRange(GetMembersToAddFromBaseTypes(baseBases));
+			}
+			return result.Distinct();
+		}
+
+		private void AddMembersFromBaseTypes(string currentTypeName, IEnumerable<string> toAdd, IList<EntityDeclaration> members) {
+			foreach (var s in toAdd) {
+				var ast = new CSharpParser().ParseTypeMembers(s.Replace("$type$", currentTypeName)).Single();
+				if (ast is MethodDeclaration) {
+					((MethodDeclaration)ast).Body = GenerateBody(((MethodDeclaration)ast).ReturnType);
+				}
+				members.Add(ast);
+			}
+		}
+
+		private NamespacedEntityDeclaration ConvertTypeDefinition(ResolvedDefinition type, bool returnNonGenerated, bool addInsertedMembersFromBaseTypes) {
 			NamespacedEntityDeclaration result = null;
 			type.Decompose(
 				@interface => {
 					var parsedAttributes = ParsedExtendedAttributes.Parse(@interface.ExtendedAttributes, @interface.Name, _errors);
 					if (!parsedAttributes.ChromeOnly) {
-						// Attributes to handle: Constructors, NamedConstructors, NoInterfaceObject
 						var meta = _metadata.Types[@interface.Name];
 						if (!meta.Generate && !returnNonGenerated)
 							return;
@@ -944,6 +973,8 @@ namespace Generator {
 							attributes.Add(ScriptNameAttribute(scriptName));
 						if (parsedAttributes.Global)
 							attributes.Add(GlobalMethodsAttribute);
+						if (addInsertedMembersFromBaseTypes)
+							AddMembersFromBaseTypes(meta.Namespace + "." + meta.CSharpName, GetMembersToAddFromBaseTypes(new[] { @interface.Base }.Concat(@interface.Implements)), members);
 
 						var resultType = new TypeDeclaration {
 							ClassType = meta.TypeKind == TypeKind.Interface ? ClassType.Interface : ClassType.Class,
@@ -973,6 +1004,8 @@ namespace Generator {
 							if (baseMeta.Inherit)
 								baseTypes = new[] { baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName) };
 						}
+						if (addInsertedMembersFromBaseTypes)
+							AddMembersFromBaseTypes(meta.Namespace + "." + meta.CSharpName, GetMembersToAddFromBaseTypes(new[] { callbackInterface.Base }), members);
 
 						var resultType = new TypeDeclaration {
 							ClassType = ClassType.Interface,
@@ -1002,6 +1035,8 @@ namespace Generator {
 							if (baseMeta.Inherit)
 								baseTypes = new[] { baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName) };
 						}
+						if (addInsertedMembersFromBaseTypes)
+							AddMembersFromBaseTypes(meta.Namespace + "." + meta.CSharpName, GetMembersToAddFromBaseTypes(new[] { dictionary.Base }), members);
 
 						var resultType = new TypeDeclaration {
 							ClassType = ClassType.Class,
@@ -1087,7 +1122,7 @@ namespace Generator {
 
 		private void BuildCSharpModel() {
 			foreach (var type in _types.Values) {
-				var t = ConvertTypeDefinition(type, returnNonGenerated: false);
+				var t = ConvertTypeDefinition(type, returnNonGenerated: false, addInsertedMembersFromBaseTypes: true);
 				if (t != null)
 					_result.Add(t);
 			}
@@ -1184,7 +1219,7 @@ namespace Generator {
 								csType = namespacedDeclaration.EntityDeclaration;
 							}
 							else {
-								csType = ConvertTypeDefinition(_types[@interface.Name], returnNonGenerated: true).EntityDeclaration;
+								csType = ConvertTypeDefinition(_types[@interface.Name], returnNonGenerated: true, addInsertedMembersFromBaseTypes: false).EntityDeclaration;
 								if (csType == null) {
 									_errors.Add("The type (or base type) `" + currentName + "' for the static instance `" + qualifiedName + "' was not generated");
 									return;

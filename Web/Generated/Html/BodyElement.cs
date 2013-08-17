@@ -6,6 +6,12 @@ namespace System.Html {
 		internal BodyElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string ALink {
 			get {
@@ -148,6 +154,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -5,5 +5,17 @@ namespace System.Html {
 	public partial class UnknownElement : Element {
 		internal UnknownElement() {
 		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<UnknownElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<UnknownElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<UnknownElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<UnknownElement> listener, bool capture) {
+		}
 	}
 }

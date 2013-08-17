@@ -10,5 +10,17 @@ namespace System.Html {
 		[InlineCode("new Audio({src})")]
 		public AudioElement(string src) {
 		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener, bool capture) {
+		}
 	}
 }

@@ -6,6 +6,12 @@ namespace System.Html.Media.Audio {
 		internal AudioBufferSourceNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public AudioBuffer Buffer {
 			get {
@@ -65,6 +71,12 @@ namespace System.Html.Media.Audio {
 			get {
 				return default(AudioParam);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture) {
 		}
 
 		public void Start() {

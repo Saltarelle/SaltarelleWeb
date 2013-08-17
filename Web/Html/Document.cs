@@ -14,13 +14,5 @@ namespace System.Html {
 
 		public static void RemoveEventListener(string type, HtmlEventHandler listener) {}
 		public static void RemoveEventListener(string type, HtmlEventHandler listener, bool capture) {}
-
-
-		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {}
-		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {}
-		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture, bool? wantsUntrusted) {}
-
-		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {}
-		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {}
 	}
 }

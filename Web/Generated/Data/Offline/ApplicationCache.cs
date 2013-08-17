@@ -10,6 +10,12 @@ namespace System.Data.Offline {
 		public void Abort() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture) {
+		}
+
 		public const ushort CHECKING = 2;
 
 		public const ushort DOWNLOADING = 3;
@@ -88,6 +94,12 @@ namespace System.Data.Offline {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

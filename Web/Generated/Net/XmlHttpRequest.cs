@@ -10,6 +10,12 @@ namespace System.Net {
 		public void Abort() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture) {
+		}
+
 		public const ushort DONE = 4;
 
 		public string GetAllResponseHeaders() {
@@ -56,6 +62,12 @@ namespace System.Net {
 			get {
 				return default(ReadyState);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

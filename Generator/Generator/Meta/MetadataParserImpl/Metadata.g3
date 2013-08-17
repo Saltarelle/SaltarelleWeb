@@ -97,6 +97,7 @@ noconstructors : { input.LT(1).Text.Equals("noconstructors", StringComparison.Or
 flags : { input.LT(1).Text.Equals("flags", StringComparison.OrdinalIgnoreCase) }? Identifier;
 remove : { input.LT(1).Text.Equals("remove", StringComparison.OrdinalIgnoreCase) }? Identifier;
 globalMethods : { input.LT(1).Text.Equals("globalMethods", StringComparison.OrdinalIgnoreCase) }? Identifier;
+addInDerivedTypes : { input.LT(1).Text.Equals("addInDerivedTypes", StringComparison.OrdinalIgnoreCase) }? Identifier;
 
 csharpTypeKeyword returns [AstType result]
 	: { _csharpTypeKeywords.Contains(input.LT(1).Text) }? {  $result = new PrimitiveType(input.LT(1).Text); } Identifier
@@ -117,6 +118,7 @@ typeMetadata returns [TypeMetadata result]
 		AstType aliasFor = null;
 		List<Tuple<string, string>> renames = null;
 		List<string> removes = null;
+		List<string> addInDerivedTypes = null;
 	}
 	: i=Identifier { typeName = csharpName = scriptName = $i.text; } NL
 	  (Indent (   n=namespaceSpecifier { ns = n; } NL
@@ -132,10 +134,11 @@ typeMetadata returns [TypeMetadata result]
 	            | a=aliasSpecifier { aliasFor = a; generate = false; } NL
 	            | r=renameSpecifier { renames = renames ?? new List<Tuple<string, string>>(); renames.Add(r); } NL
 	            | v=removeSpecifier { removes = removes ?? new List<string>(); removes.Add(v); } NL
+	            | v=addInDerivedTypesSpecifier { addInDerivedTypes = addInDerivedTypes ?? new List<string>(); addInDerivedTypes.Add(v); } NL
 	            | NL
 	          )
 	  )*
-	{ $result = new TypeMetadata(typeName, ns, csharpName, scriptName, tagNames.AsReadOnlySafe(), generate, inherit, typeKind, includeConstructors, typeOverrides.AsReadOnlySafe(), aliasFor, renames, removes); }
+	{ $result = new TypeMetadata(typeName, ns, csharpName, scriptName, tagNames.AsReadOnlySafe(), generate, inherit, typeKind, includeConstructors, typeOverrides.AsReadOnlySafe(), aliasFor, renames, removes, addInDerivedTypes); }
 	;
 
 nestedIdentifier returns [string result]
@@ -173,6 +176,10 @@ renameSpecifier returns [Tuple<string, string> result]
 
 removeSpecifier returns [string result]
 	: remove a=Identifier { $result = $a.text; }
+	;
+
+addInDerivedTypesSpecifier returns [string result]
+	: addInDerivedTypes i=Identifier { $result = $i.text; }
 	;
 
 genericArguments returns [IList<AstType> result]

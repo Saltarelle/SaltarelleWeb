@@ -1,9 +1,16 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Html;
+using System.Runtime.CompilerServices;
 
 namespace System.Xml {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("Attr")]
 	public partial class XmlAttribute : XmlNode {
 		internal XmlAttribute() {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -39,6 +46,12 @@ namespace System.Xml {
 			get {
 				return null;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Xml;
 
@@ -21,6 +21,12 @@ namespace System.Html {
 		}
 
 		public void Add(TypeOption<OptionElement, OptGroupElement> element, TypeOption<Element, int> before) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -103,6 +109,12 @@ namespace System.Html {
 		}
 
 		public void Remove(int index) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

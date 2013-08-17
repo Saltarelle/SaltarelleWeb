@@ -6,6 +6,12 @@ namespace System.Html {
 		internal SourceElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Media {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

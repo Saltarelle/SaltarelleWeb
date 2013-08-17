@@ -11,6 +11,12 @@ namespace System.Media.Recording {
 		public MediaRecorder(MediaStream stream) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string MimeType {
 			get {
@@ -55,6 +61,12 @@ namespace System.Media.Recording {
 		}
 
 		public void Pause() {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture) {
 		}
 
 		public void RequestData() {

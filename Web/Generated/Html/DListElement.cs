@@ -6,6 +6,12 @@ namespace System.Html {
 		internal DListElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Compact {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener, bool capture) {
 		}
 	}
 }

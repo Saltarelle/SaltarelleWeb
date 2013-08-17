@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGPatternElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedLength Height {
 			get {
@@ -46,6 +52,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedPreserveAspectRatio);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture) {
 		}
 
 		[ScriptName("SVG_UNIT_TYPE_OBJECTBOUNDINGBOX")]

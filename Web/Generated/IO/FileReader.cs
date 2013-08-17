@@ -10,6 +10,12 @@ namespace System.IO {
 		public void Abort() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture) {
+		}
+
 		public const ushort DONE = 2;
 
 		public const ushort EMPTY = 0;
@@ -97,6 +103,12 @@ namespace System.IO {
 			get {
 				return 0;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

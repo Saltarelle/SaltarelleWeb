@@ -6,6 +6,12 @@ namespace System.Html {
 		internal ModElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ModElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ModElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Cite {
 			get {
@@ -22,6 +28,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ModElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ModElement> listener, bool capture) {
 		}
 	}
 }

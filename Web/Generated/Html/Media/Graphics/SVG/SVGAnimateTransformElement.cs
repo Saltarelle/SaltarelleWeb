@@ -5,5 +5,17 @@ namespace System.Html.Media.Graphics.SVG {
 	public partial class SVGAnimateTransformElement : SVGAnimationElement {
 		internal SVGAnimateTransformElement() {
 		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateTransformElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateTransformElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateTransformElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateTransformElement> listener, bool capture) {
+		}
 	}
 }

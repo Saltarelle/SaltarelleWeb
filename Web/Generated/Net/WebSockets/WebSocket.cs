@@ -18,6 +18,12 @@ namespace System.Net.WebSockets {
 		public WebSocket(string url, string[] protocols) {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public BinaryType BinaryType {
 			get {
@@ -106,6 +112,12 @@ namespace System.Net.WebSockets {
 			get {
 				return default(ReadyState);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture) {
 		}
 
 		public void Send(ArrayBuffer data) {

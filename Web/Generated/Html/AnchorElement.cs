@@ -6,6 +6,12 @@ namespace System.Html {
 		internal AnchorElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Charset {
 			get {
@@ -130,6 +136,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

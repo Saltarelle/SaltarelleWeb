@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGGradientElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public SVGAnimatedTransformList GradientTransform {
 			get {
@@ -25,6 +31,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedString);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

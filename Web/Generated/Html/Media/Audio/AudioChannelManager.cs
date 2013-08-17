@@ -6,6 +6,12 @@ namespace System.Html.Media.Audio {
 		internal AudioChannelManager() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Headphones {
 			get {
@@ -20,6 +26,12 @@ namespace System.Html.Media.Audio {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture) {
 		}
 	}
 }

@@ -7,6 +7,12 @@ namespace System.Xml {
 		internal XmlNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		}
+
 		public XmlNode AppendChild(XmlNode node) {
 			return default(XmlNode);
 		}
@@ -222,6 +228,12 @@ namespace System.Xml {
 
 		public XmlNode RemoveChild(XmlNode child) {
 			return default(XmlNode);
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
 		}
 
 		public XmlNode ReplaceChild(XmlNode node, XmlNode child) {

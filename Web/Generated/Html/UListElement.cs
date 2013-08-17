@@ -6,6 +6,12 @@ namespace System.Html {
 		internal UListElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Compact {
 			get {
@@ -13,6 +19,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

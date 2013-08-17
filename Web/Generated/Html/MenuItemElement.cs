@@ -6,6 +6,12 @@ namespace System.Html {
 		internal MenuItemElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Checked {
 			get {
@@ -58,6 +64,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

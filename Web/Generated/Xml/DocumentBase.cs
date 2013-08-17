@@ -16,6 +16,12 @@ namespace System.Xml {
 			}
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		}
+
 		public XmlNode AdoptNode(XmlNode node) {
 			return default(XmlNode);
 		}
@@ -982,6 +988,12 @@ namespace System.Xml {
 		}
 
 		public void ReleaseCapture() {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

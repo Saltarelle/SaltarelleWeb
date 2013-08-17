@@ -7,6 +7,12 @@ namespace System.Html.Media.Audio {
 		internal BiquadFilterNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture) {
+		}
+
 		public const ushort ALLPASS = 7;
 
 		public const ushort BANDPASS = 2;
@@ -52,6 +58,12 @@ namespace System.Html.Media.Audio {
 			get {
 				return default(AudioParam);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

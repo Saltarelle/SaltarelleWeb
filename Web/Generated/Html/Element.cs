@@ -23,6 +23,12 @@ namespace System.Html {
 			}
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Element> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Element> listener, bool capture) {
+		}
+
 		public void Blur() {
 		}
 
@@ -728,6 +734,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Element> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Element> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

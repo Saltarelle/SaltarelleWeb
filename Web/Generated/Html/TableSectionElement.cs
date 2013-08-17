@@ -6,6 +6,12 @@ namespace System.Html {
 		internal TableSectionElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableSectionElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableSectionElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -42,6 +48,12 @@ namespace System.Html {
 
 		public Element InsertRow(int index) {
 			return default(Element);
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableSectionElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableSectionElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

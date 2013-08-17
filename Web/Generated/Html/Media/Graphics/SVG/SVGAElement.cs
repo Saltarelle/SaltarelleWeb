@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGAElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Download {
 			get {
@@ -20,6 +26,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedString);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

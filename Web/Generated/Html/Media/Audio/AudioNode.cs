@@ -6,6 +6,12 @@ namespace System.Html.Media.Audio {
 		internal AudioNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public uint ChannelCount {
 			get {
@@ -73,6 +79,12 @@ namespace System.Html.Media.Audio {
 			get {
 				return 0;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture) {
 		}
 	}
 }

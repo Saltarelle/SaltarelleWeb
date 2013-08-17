@@ -6,6 +6,18 @@ namespace System.Html {
 		internal DataElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DataElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DataElement> listener, bool capture) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DataElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DataElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Value {
 			get {

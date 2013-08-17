@@ -7,6 +7,12 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGSVGElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture) {
+		}
+
 		public bool AnimationsPaused() {
 			return false;
 		}
@@ -102,6 +108,12 @@ namespace System.Html.Media.Graphics.SVG {
 			get {
 				return default(SVGAnimatedPreserveAspectRatio);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -4,6 +4,12 @@ using System.Runtime.CompilerServices;
 namespace System.Threading.WebWorkers {
 	[Imported, GlobalMethods]
 	public static partial class DedicatedWorkerGlobalScope {
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
+		}
+
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
+		}
+
 		public static void AddEventListener(string type, IEventListener listener) {
 		}
 
@@ -92,6 +98,12 @@ namespace System.Threading.WebWorkers {
 		}
 
 		public static void PostMessage(object message, ITransferable[] transfer) {
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
 		}
 
 		public static void RemoveEventListener(string type, IEventListener listener) {

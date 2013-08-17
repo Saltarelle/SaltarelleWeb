@@ -6,6 +6,12 @@ namespace System.Html {
 		internal TextAreaElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Autofocus {
 			get {
@@ -87,6 +93,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

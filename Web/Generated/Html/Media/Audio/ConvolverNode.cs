@@ -6,6 +6,12 @@ namespace System.Html.Media.Audio {
 		internal ConvolverNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public AudioBuffer Buffer {
 			get {
@@ -22,6 +28,12 @@ namespace System.Html.Media.Audio {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture) {
 		}
 	}
 }

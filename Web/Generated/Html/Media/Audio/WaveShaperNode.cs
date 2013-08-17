@@ -8,6 +8,12 @@ namespace System.Html.Media.Audio {
 		internal WaveShaperNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public Float32Array Curve {
 			get {
@@ -24,6 +30,12 @@ namespace System.Html.Media.Audio {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture) {
 		}
 	}
 }

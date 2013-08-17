@@ -7,6 +7,12 @@ namespace System.Html {
 		internal ObjectElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public string Align {
 			get {
@@ -138,6 +144,12 @@ namespace System.Html {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture) {
 		}
 
 		public void SetCustomValidity(string error) {

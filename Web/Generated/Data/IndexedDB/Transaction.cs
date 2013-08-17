@@ -10,6 +10,12 @@ namespace System.Data.IndexedDB {
 		public void Abort() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public Database Db {
 			get {
@@ -67,6 +73,12 @@ namespace System.Data.IndexedDB {
 			}
 			set {
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture) {
 		}
 	}
 }

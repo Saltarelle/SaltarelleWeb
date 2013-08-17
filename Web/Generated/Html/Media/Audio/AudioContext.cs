@@ -4,6 +4,12 @@ using System.Runtime.CompilerServices;
 namespace System.Html.Media.Audio {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
 	public partial class AudioContext : EventTarget {
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener, bool capture) {
+		}
+
 		public AnalyserNode CreateAnalyser() {
 			return default(AnalyserNode);
 		}
@@ -153,6 +159,12 @@ namespace System.Html.Media.Audio {
 			get {
 				return default(AudioListener);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

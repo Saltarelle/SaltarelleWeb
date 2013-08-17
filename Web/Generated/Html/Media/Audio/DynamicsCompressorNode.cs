@@ -6,6 +6,12 @@ namespace System.Html.Media.Audio {
 		internal DynamicsCompressorNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public AudioParam Attack {
 			get {
@@ -39,6 +45,12 @@ namespace System.Html.Media.Audio {
 			get {
 				return default(AudioParam);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

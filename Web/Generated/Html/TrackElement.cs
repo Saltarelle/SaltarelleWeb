@@ -7,6 +7,12 @@ namespace System.Html {
 		internal TrackElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public bool Default {
 			get {
@@ -47,6 +53,12 @@ namespace System.Html {
 			get {
 				return 0;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

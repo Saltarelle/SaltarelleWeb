@@ -6,6 +6,12 @@ namespace System.Html {
 		internal ProgressElement() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public double Max {
 			get {
@@ -20,6 +26,12 @@ namespace System.Html {
 			get {
 				return 0;
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

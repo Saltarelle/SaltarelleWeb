@@ -10,6 +10,12 @@ using System.Xml;
 namespace System.Html {
 	[IgnoreNamespace, Imported, ScriptName("window")]
 	public static partial class Window {
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
+		}
+
+		static void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
+		}
+
 		public static void AddEventListener(string type, IEventListener listener) {
 		}
 
@@ -962,6 +968,12 @@ namespace System.Html {
 
 		public static string Prompt(string text, string value) {
 			return null;
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
+		}
+
+		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
 		}
 
 		public static void RemoveEventListener(string type, IEventListener listener) {

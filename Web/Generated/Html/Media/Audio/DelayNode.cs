@@ -6,11 +6,23 @@ namespace System.Html.Media.Audio {
 		internal DelayNode() {
 		}
 
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener) {
+		}
+
+		void AddEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener, bool capture) {
+		}
+
 		[IntrinsicProperty]
 		public AudioParam DelayTime {
 			get {
 				return default(AudioParam);
 			}
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener) {
+		}
+
+		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener, bool capture) {
 		}
 	}
 }
