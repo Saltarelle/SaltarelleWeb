@@ -172,6 +172,9 @@ namespace System.Html.Media.Graphics.WebGL {
 		[ScriptName("QUERY_RESULT_AVAILABLE")]
 		public const uint QUERY_RESULT_AVAILABLE = 34919;
 
+		[ScriptName("RASTERIZER_DISCARD")]
+		public const uint RASTERIZER_DISCARD = 35977;
+
 		[ScriptName("VERTEX_ARRAY_BINDING")]
 		public const uint VERTEX_ARRAY_BINDING = 34229;
 

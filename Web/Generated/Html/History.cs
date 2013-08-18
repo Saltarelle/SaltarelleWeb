@@ -12,11 +12,14 @@ namespace System.Html {
 		public void Forward() {
 		}
 
-		public void Go(int integerDelta) {
+		public void Go() {
+		}
+
+		public void Go(int delta) {
 		}
 
 		[IntrinsicProperty]
-		public int Length {
+		public uint Length {
 			get {
 				return 0;
 			}

@@ -215,17 +215,6 @@ callback interface MediaQueryListListener {
 	void handleChange(MediaQueryList mql);
 };
 
-interface History {
-	readonly attribute long length;
-	readonly attribute any state;
-
-	void back();
-	void forward();
-	void go(long integerDelta);
-	void pushState(any data, DOMString title, optional DOMString url);
-	void replaceState(any data, DOMString title, optional DOMString url);
-};
-
 interface WindowProxy : EventTarget {
 	readonly attribute OfflineResourceList applicationCache;
 	readonly attribute boolean closed;

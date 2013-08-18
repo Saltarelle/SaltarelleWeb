@@ -1488,6 +1488,9 @@ PerformanceTiming
 PeriodicWave
 	namespace = System.Html.Media.Audio
 
+PhoneNumberService
+	nogenerate
+
 Plugin
 	namespace = System.Html
 
@@ -2365,6 +2368,9 @@ WebGLExtensionDrawBuffers
 	namespace = System.Html.Media.Graphics.WebGL
 
 WebGLExtensionElementIndexUint
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionInstancedArrays
 	namespace = System.Html.Media.Graphics.WebGL
 
 WebGLExtensionLoseContext
