@@ -6,10 +6,34 @@ namespace System.Html.Media.Audio {
 		internal AudioDestinationNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener) {
+		public void AddEventListener(AudioDestinationNodeEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener, bool capture) {
+		public void AddEventListener(AudioDestinationNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioDestinationNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(AudioDestinationNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioDestinationNodeEvents type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener) {
+		}
+
+		public void AddEventListener(AudioDestinationNodeEvents type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioDestinationNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(AudioDestinationNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -19,10 +43,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener) {
+		public void RemoveEventListener(AudioDestinationNodeEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener, bool capture) {
+		public void RemoveEventListener(AudioDestinationNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioDestinationNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(AudioDestinationNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioDestinationNodeEvents type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener) {
+		}
+
+		public void RemoveEventListener(AudioDestinationNodeEvents type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioDestinationNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(AudioDestinationNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener, bool capture) {
 		}
 	}
 }

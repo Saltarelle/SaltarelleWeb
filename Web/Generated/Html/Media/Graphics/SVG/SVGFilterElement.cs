@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFilterElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFilterElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFilterElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFilterElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFilterElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFilterElementEvents type, HtmlEventHandlerWithTarget<SVGFilterElement> listener) {
+		}
+
+		public void AddEventListener(SVGFilterElementEvents type, HtmlEventHandlerWithTarget<SVGFilterElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFilterElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFilterElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -54,10 +78,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFilterElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFilterElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFilterElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFilterElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFilterElementEvents type, HtmlEventHandlerWithTarget<SVGFilterElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFilterElementEvents type, HtmlEventHandlerWithTarget<SVGFilterElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFilterElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFilterElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		public void SetFilterRes(uint filterResX, uint filterResY) {

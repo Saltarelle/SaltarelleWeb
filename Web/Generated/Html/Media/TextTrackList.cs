@@ -14,10 +14,34 @@ namespace System.Html.Media {
 			}
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture) {
+		}
+
+		public void AddEventListener(TextTrackListEvents type, Action listener) {
+		}
+
+		public void AddEventListener(TextTrackListEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(TextTrackListEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(TextTrackListEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener) {
+		}
+
+		public void AddEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture) {
+		}
+
+		public void AddEventListener(TextTrackListEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(TextTrackListEvents type, IEventListener listener, bool capture) {
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
@@ -54,10 +78,34 @@ namespace System.Html.Media {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextTrackListEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(TextTrackListEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextTrackListEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(TextTrackListEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener) {
+		}
+
+		public void RemoveEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextTrackListEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(TextTrackListEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

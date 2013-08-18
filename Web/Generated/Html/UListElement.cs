@@ -6,10 +6,34 @@ namespace System.Html {
 		internal UListElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(UListElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(UListElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(UListElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(UListElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(UListElementEvents type, HtmlEventHandlerWithTarget<UListElement> listener) {
+		}
+
+		public void AddEventListener(UListElementEvents type, HtmlEventHandlerWithTarget<UListElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(UListElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(UListElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -21,10 +45,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(UListElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(UListElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(UListElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(UListElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(UListElementEvents type, HtmlEventHandlerWithTarget<UListElement> listener) {
+		}
+
+		public void RemoveEventListener(UListElementEvents type, HtmlEventHandlerWithTarget<UListElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(UListElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(UListElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -7,10 +7,34 @@ namespace System.Xml {
 		internal XmlNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlNodeEvents type, Action listener) {
+		}
+
+		public void AddEventListener(XmlNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		public void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(XmlNodeEvents type, IEventListener listener, bool capture) {
 		}
 
 		public XmlNode AppendChild(XmlNode node) {
@@ -230,10 +254,34 @@ namespace System.Xml {
 			return default(XmlNode);
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlNodeEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(XmlNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		public void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(XmlNodeEvents type, IEventListener listener, bool capture) {
 		}
 
 		public XmlNode ReplaceChild(XmlNode node, XmlNode child) {

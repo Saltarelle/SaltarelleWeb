@@ -6,10 +6,34 @@ namespace System.Html {
 		internal MenuItemElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener) {
+		public void AddEventListener(MenuItemElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture) {
+		public void AddEventListener(MenuItemElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(MenuItemElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(MenuItemElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener) {
+		}
+
+		public void AddEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(MenuItemElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(MenuItemElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -66,10 +90,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener) {
+		public void RemoveEventListener(MenuItemElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture) {
+		public void RemoveEventListener(MenuItemElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener) {
+		}
+
+		public void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MenuItemElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(MenuItemElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

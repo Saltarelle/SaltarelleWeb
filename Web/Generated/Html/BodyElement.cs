@@ -6,10 +6,34 @@ namespace System.Html {
 		internal BodyElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener) {
+		public void AddEventListener(BodyElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture) {
+		public void AddEventListener(BodyElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(BodyElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(BodyElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(BodyElementEvents type, HtmlEventHandlerWithTarget<BodyElement> listener) {
+		}
+
+		public void AddEventListener(BodyElementEvents type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(BodyElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(BodyElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -156,10 +180,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener) {
+		public void RemoveEventListener(BodyElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture) {
+		public void RemoveEventListener(BodyElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BodyElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(BodyElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BodyElementEvents type, HtmlEventHandlerWithTarget<BodyElement> listener) {
+		}
+
+		public void RemoveEventListener(BodyElementEvents type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BodyElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(BodyElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

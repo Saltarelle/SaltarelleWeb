@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGClipPathElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGClipPathElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGClipPathElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGClipPathElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGClipPathElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGClipPathElementEvents type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener) {
+		}
+
+		public void AddEventListener(SVGClipPathElementEvents type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGClipPathElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGClipPathElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -19,10 +43,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGClipPathElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGClipPathElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGClipPathElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGClipPathElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGClipPathElementEvents type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGClipPathElementEvents type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGClipPathElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGClipPathElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[ScriptName("SVG_UNIT_TYPE_OBJECTBOUNDINGBOX")]

@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGForeignObjectElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGForeignObjectElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGForeignObjectElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener) {
+		}
+
+		public void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGForeignObjectElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGForeignObjectElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -19,10 +43,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGForeignObjectElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGForeignObjectElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGForeignObjectElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGForeignObjectElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -15,10 +15,34 @@ namespace System.Html {
 		public ImageElement(uint width, uint height) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener) {
+		public void AddEventListener(ImageElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture) {
+		public void AddEventListener(ImageElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ImageElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ImageElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener) {
+		}
+
+		public void AddEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(ImageElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ImageElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -132,10 +156,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener) {
+		public void RemoveEventListener(ImageElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture) {
+		public void RemoveEventListener(ImageElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ImageElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ImageElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener) {
+		}
+
+		public void RemoveEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ImageElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ImageElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

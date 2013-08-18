@@ -16,10 +16,34 @@ namespace System.Html.Media {
 		public void AddCue(TextTrackCue cue) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture) {
+		}
+
+		public void AddEventListener(TextTrackEvents type, Action listener) {
+		}
+
+		public void AddEventListener(TextTrackEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(TextTrackEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(TextTrackEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener) {
+		}
+
+		public void AddEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture) {
+		}
+
+		public void AddEventListener(TextTrackEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(TextTrackEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -85,10 +109,34 @@ namespace System.Html.Media {
 		public void RemoveCue(TextTrackCue cue) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextTrackEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(TextTrackEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextTrackEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(TextTrackEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener) {
+		}
+
+		public void RemoveEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextTrackEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(TextTrackEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

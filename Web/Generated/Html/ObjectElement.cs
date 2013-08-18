@@ -7,10 +7,34 @@ namespace System.Html {
 		internal ObjectElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener) {
+		public void AddEventListener(ObjectElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture) {
+		public void AddEventListener(ObjectElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ObjectElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ObjectElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener) {
+		}
+
+		public void AddEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(ObjectElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ObjectElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -146,10 +170,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener) {
+		public void RemoveEventListener(ObjectElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture) {
+		public void RemoveEventListener(ObjectElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ObjectElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ObjectElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener) {
+		}
+
+		public void RemoveEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ObjectElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ObjectElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture) {
 		}
 
 		public void SetCustomValidity(string error) {

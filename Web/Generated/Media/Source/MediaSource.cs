@@ -15,10 +15,34 @@ namespace System.Media.Source {
 			}
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener) {
+		public void AddEventListener(MediaSourceEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture) {
+		public void AddEventListener(MediaSourceEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(MediaSourceEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(MediaSourceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener) {
+		}
+
+		public void AddEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture) {
+		}
+
+		public void AddEventListener(MediaSourceEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(MediaSourceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture) {
 		}
 
 		public SourceBuffer AddSourceBuffer(string type) {
@@ -51,10 +75,34 @@ namespace System.Media.Source {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener) {
+		public void RemoveEventListener(MediaSourceEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture) {
+		public void RemoveEventListener(MediaSourceEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MediaSourceEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(MediaSourceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener) {
+		}
+
+		public void RemoveEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MediaSourceEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(MediaSourceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture) {
 		}
 
 		public void RemoveSourceBuffer(SourceBuffer sourceBuffer) {

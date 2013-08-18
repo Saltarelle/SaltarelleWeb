@@ -6,10 +6,34 @@ namespace System.Html {
 		internal MapElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener) {
+		public void AddEventListener(MapElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture) {
+		public void AddEventListener(MapElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(MapElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(MapElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener) {
+		}
+
+		public void AddEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(MapElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(MapElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -28,10 +52,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener) {
+		public void RemoveEventListener(MapElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture) {
+		public void RemoveEventListener(MapElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MapElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(MapElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener) {
+		}
+
+		public void RemoveEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MapElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(MapElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture) {
 		}
 	}
 }

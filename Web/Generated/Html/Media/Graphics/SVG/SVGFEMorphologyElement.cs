@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEMorphologyElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMorphologyElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEMorphologyElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMorphologyElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEMorphologyElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -47,10 +71,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMorphologyElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMorphologyElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMorphologyElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMorphologyElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

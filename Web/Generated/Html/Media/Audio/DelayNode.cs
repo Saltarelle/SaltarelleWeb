@@ -6,10 +6,34 @@ namespace System.Html.Media.Audio {
 		internal DelayNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener) {
+		public void AddEventListener(DelayNodeEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener, bool capture) {
+		public void AddEventListener(DelayNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(DelayNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(DelayNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(DelayNodeEvents type, HtmlEventHandlerWithTarget<DelayNode> listener) {
+		}
+
+		public void AddEventListener(DelayNodeEvents type, HtmlEventHandlerWithTarget<DelayNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(DelayNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(DelayNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -19,10 +43,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener) {
+		public void RemoveEventListener(DelayNodeEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener, bool capture) {
+		public void RemoveEventListener(DelayNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DelayNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(DelayNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DelayNodeEvents type, HtmlEventHandlerWithTarget<DelayNode> listener) {
+		}
+
+		public void RemoveEventListener(DelayNodeEvents type, HtmlEventHandlerWithTarget<DelayNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DelayNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(DelayNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener, bool capture) {
 		}
 	}
 }

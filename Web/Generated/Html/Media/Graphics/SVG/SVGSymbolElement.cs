@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGSymbolElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGSymbolElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGSymbolElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener) {
+		}
+
+		public void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGSymbolElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGSymbolElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		public bool HasExtension(string extension) {
@@ -23,10 +47,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGSymbolElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGSymbolElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGSymbolElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGSymbolElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

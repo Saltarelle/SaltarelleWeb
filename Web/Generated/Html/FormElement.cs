@@ -40,10 +40,34 @@ namespace System.Html {
 			}
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener) {
+		public void AddEventListener(FormElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture) {
+		public void AddEventListener(FormElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(FormElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(FormElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener) {
+		}
+
+		public void AddEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(FormElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(FormElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -123,10 +147,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener) {
+		public void RemoveEventListener(FormElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture) {
+		public void RemoveEventListener(FormElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FormElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(FormElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener) {
+		}
+
+		public void RemoveEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FormElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(FormElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture) {
 		}
 
 		public void Reset() {

@@ -6,10 +6,34 @@ namespace System.Html {
 		internal BaseElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener) {
+		public void AddEventListener(BaseElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture) {
+		public void AddEventListener(BaseElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(BaseElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(BaseElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(BaseElementEvents type, HtmlEventHandlerWithTarget<BaseElement> listener) {
+		}
+
+		public void AddEventListener(BaseElementEvents type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(BaseElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(BaseElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -21,10 +45,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener) {
+		public void RemoveEventListener(BaseElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture) {
+		public void RemoveEventListener(BaseElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BaseElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(BaseElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BaseElementEvents type, HtmlEventHandlerWithTarget<BaseElement> listener) {
+		}
+
+		public void RemoveEventListener(BaseElementEvents type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BaseElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(BaseElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

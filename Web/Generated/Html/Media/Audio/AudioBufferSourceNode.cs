@@ -6,10 +6,34 @@ namespace System.Html.Media.Audio {
 		internal AudioBufferSourceNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener) {
+		public void AddEventListener(AudioBufferSourceNodeEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture) {
+		public void AddEventListener(AudioBufferSourceNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener) {
+		}
+
+		public void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioBufferSourceNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(AudioBufferSourceNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -73,10 +97,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener) {
+		public void RemoveEventListener(AudioBufferSourceNodeEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture) {
+		public void RemoveEventListener(AudioBufferSourceNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener) {
+		}
+
+		public void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioBufferSourceNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(AudioBufferSourceNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture) {
 		}
 
 		public void Start() {

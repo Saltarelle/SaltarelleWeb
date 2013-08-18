@@ -10,16 +10,64 @@ namespace System.Xml {
 		public XmlText(string data) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener) {
+		public void AddEventListener(XmlTextEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener, bool capture) {
+		public void AddEventListener(XmlTextEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlTextEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(XmlTextEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlTextEvents type, HtmlEventHandlerWithTarget<XmlText> listener) {
+		}
+
+		public void AddEventListener(XmlTextEvents type, HtmlEventHandlerWithTarget<XmlText> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlTextEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(XmlTextEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlTextEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(XmlTextEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlTextEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(XmlTextEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlTextEvents type, HtmlEventHandlerWithTarget<XmlText> listener) {
+		}
+
+		public void RemoveEventListener(XmlTextEvents type, HtmlEventHandlerWithTarget<XmlText> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlTextEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(XmlTextEvents type, IEventListener listener, bool capture) {
 		}
 
 		public XmlText SplitText(uint offset) {

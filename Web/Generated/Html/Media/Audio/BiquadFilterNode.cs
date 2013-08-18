@@ -7,10 +7,34 @@ namespace System.Html.Media.Audio {
 		internal BiquadFilterNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener) {
+		public void AddEventListener(BiquadFilterNodeEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture) {
+		public void AddEventListener(BiquadFilterNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener) {
+		}
+
+		public void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(BiquadFilterNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(BiquadFilterNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture) {
 		}
 
 		public const ushort ALLPASS = 7;
@@ -60,10 +84,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener) {
+		public void RemoveEventListener(BiquadFilterNodeEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture) {
+		public void RemoveEventListener(BiquadFilterNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener) {
+		}
+
+		public void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BiquadFilterNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(BiquadFilterNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -13,22 +13,70 @@ namespace System.Html {
 			}
 		}
 
-		static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		public static void AddEventListener(DocumentBaseEvents type, Action listener) {
 		}
 
-		static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		public static void AddEventListener(DocumentBaseEvents type, Action listener, bool capture) {
 		}
 
-		static void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		public static void AddEventListener(DocumentBaseEvents type, HtmlEventHandler listener) {
 		}
 
-		static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		public static void AddEventListener(DocumentBaseEvents type, HtmlEventHandler listener, bool capture) {
 		}
 
-		static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		public static void AddEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
 		}
 
-		static void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		public static void AddEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		}
+
+		public static void AddEventListener(DocumentBaseEvents type, IEventListener listener) {
+		}
+
+		public static void AddEventListener(DocumentBaseEvents type, IEventListener listener, bool capture) {
+		}
+
+		public static void AddEventListener(DocumentInstanceEvents type, Action listener) {
+		}
+
+		public static void AddEventListener(DocumentInstanceEvents type, Action listener, bool capture) {
+		}
+
+		public static void AddEventListener(DocumentInstanceEvents type, HtmlEventHandler listener) {
+		}
+
+		public static void AddEventListener(DocumentInstanceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public static void AddEventListener(DocumentInstanceEvents type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		public static void AddEventListener(DocumentInstanceEvents type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		}
+
+		public static void AddEventListener(DocumentInstanceEvents type, IEventListener listener) {
+		}
+
+		public static void AddEventListener(DocumentInstanceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		}
+
+		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		}
+
+		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
 		}
 
 		public static void AddEventListener(string type, IEventListener listener) {
@@ -38,6 +86,30 @@ namespace System.Html {
 		}
 
 		public static void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted) {
+		}
+
+		public static void AddEventListener(XmlNodeEvents type, Action listener) {
+		}
+
+		public static void AddEventListener(XmlNodeEvents type, Action listener, bool capture) {
+		}
+
+		public static void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public static void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public static void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		public static void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		}
+
+		public static void AddEventListener(XmlNodeEvents type, IEventListener listener) {
+		}
+
+		public static void AddEventListener(XmlNodeEvents type, IEventListener listener, bool capture) {
 		}
 
 		public static XmlNode AdoptNode(XmlNode node) {
@@ -1444,28 +1516,100 @@ namespace System.Html {
 			return default(XmlNode);
 		}
 
-		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		public static void RemoveEventListener(DocumentBaseEvents type, Action listener) {
 		}
 
-		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		public static void RemoveEventListener(DocumentBaseEvents type, Action listener, bool capture) {
 		}
 
-		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		public static void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandler listener) {
 		}
 
-		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		public static void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandler listener, bool capture) {
 		}
 
-		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		public static void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
 		}
 
-		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		public static void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(DocumentBaseEvents type, IEventListener listener) {
+		}
+
+		public static void RemoveEventListener(DocumentBaseEvents type, IEventListener listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(DocumentInstanceEvents type, Action listener) {
+		}
+
+		public static void RemoveEventListener(DocumentInstanceEvents type, Action listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(DocumentInstanceEvents type, HtmlEventHandler listener) {
+		}
+
+		public static void RemoveEventListener(DocumentInstanceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(DocumentInstanceEvents type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		public static void RemoveEventListener(DocumentInstanceEvents type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(DocumentInstanceEvents type, IEventListener listener) {
+		}
+
+		public static void RemoveEventListener(DocumentInstanceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
 		}
 
 		public static void RemoveEventListener(string type, IEventListener listener) {
 		}
 
 		public static void RemoveEventListener(string type, IEventListener listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(XmlNodeEvents type, Action listener) {
+		}
+
+		public static void RemoveEventListener(XmlNodeEvents type, Action listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public static void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener) {
+		}
+
+		public static void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(XmlNodeEvents type, IEventListener listener) {
+		}
+
+		public static void RemoveEventListener(XmlNodeEvents type, IEventListener listener, bool capture) {
 		}
 
 		public static XmlNode ReplaceChild(XmlNode node, XmlNode child) {

@@ -6,10 +6,34 @@ namespace System.Html {
 		internal MetaElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener) {
+		public void AddEventListener(MetaElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture) {
+		public void AddEventListener(MetaElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(MetaElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(MetaElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener) {
+		}
+
+		public void AddEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(MetaElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(MetaElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -39,10 +63,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener) {
+		public void RemoveEventListener(MetaElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture) {
+		public void RemoveEventListener(MetaElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MetaElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(MetaElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener) {
+		}
+
+		public void RemoveEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MetaElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(MetaElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -6,10 +6,34 @@ namespace System.Html {
 		internal FrameSetElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener) {
+		public void AddEventListener(FrameSetElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture) {
+		public void AddEventListener(FrameSetElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(FrameSetElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(FrameSetElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener) {
+		}
+
+		public void AddEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(FrameSetElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(FrameSetElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -129,10 +153,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener) {
+		public void RemoveEventListener(FrameSetElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture) {
+		public void RemoveEventListener(FrameSetElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener) {
+		}
+
+		public void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FrameSetElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(FrameSetElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

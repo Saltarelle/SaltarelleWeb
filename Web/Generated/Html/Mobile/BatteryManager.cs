@@ -6,10 +6,34 @@ namespace System.Html.Mobile {
 		internal BatteryManager() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener) {
+		public void AddEventListener(BatteryManagerEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture) {
+		public void AddEventListener(BatteryManagerEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(BatteryManagerEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(BatteryManagerEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener) {
+		}
+
+		public void AddEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture) {
+		}
+
+		public void AddEventListener(BatteryManagerEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(BatteryManagerEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -76,10 +100,34 @@ namespace System.Html.Mobile {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener) {
+		public void RemoveEventListener(BatteryManagerEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture) {
+		public void RemoveEventListener(BatteryManagerEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener) {
+		}
+
+		public void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BatteryManagerEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(BatteryManagerEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture) {
 		}
 	}
 }

@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEMergeElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMergeElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEMergeElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMergeElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEMergeElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMergeElementEvents type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEMergeElementEvents type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMergeElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEMergeElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -19,10 +43,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeElementEvents type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeElementEvents type, HtmlEventHandlerWithTarget<SVGFEMergeElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

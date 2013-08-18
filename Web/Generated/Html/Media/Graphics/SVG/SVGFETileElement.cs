@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFETileElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETileElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETileElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETileElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETileElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFETileElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFETileElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFETileElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFETileElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFETileElementEvents type, HtmlEventHandlerWithTarget<SVGFETileElement> listener) {
+		}
+
+		public void AddEventListener(SVGFETileElementEvents type, HtmlEventHandlerWithTarget<SVGFETileElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFETileElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFETileElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -26,10 +50,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETileElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETileElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETileElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETileElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFETileElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFETileElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFETileElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFETileElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFETileElementEvents type, HtmlEventHandlerWithTarget<SVGFETileElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFETileElementEvents type, HtmlEventHandlerWithTarget<SVGFETileElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFETileElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFETileElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

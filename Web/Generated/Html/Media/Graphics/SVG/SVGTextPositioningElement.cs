@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGTextPositioningElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextPositioningElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGTextPositioningElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextPositioningElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGTextPositioningElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextPositioningElementEvents type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener) {
+		}
+
+		public void AddEventListener(SVGTextPositioningElementEvents type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextPositioningElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGTextPositioningElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -26,10 +50,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextPositioningElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGTextPositioningElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextPositioningElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGTextPositioningElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextPositioningElementEvents type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGTextPositioningElementEvents type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextPositioningElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGTextPositioningElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

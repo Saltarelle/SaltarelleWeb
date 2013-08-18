@@ -6,10 +6,34 @@ namespace System.Html {
 		internal ButtonElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener) {
+		public void AddEventListener(ButtonElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture) {
+		public void AddEventListener(ButtonElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ButtonElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ButtonElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener) {
+		}
+
+		public void AddEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(ButtonElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ButtonElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -95,10 +119,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener) {
+		public void RemoveEventListener(ButtonElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture) {
+		public void RemoveEventListener(ButtonElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ButtonElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ButtonElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener) {
+		}
+
+		public void RemoveEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ButtonElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ButtonElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture) {
 		}
 
 		public void SetCustomValidity(string error) {

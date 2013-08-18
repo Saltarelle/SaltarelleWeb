@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFETurbulenceElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFETurbulenceElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFETurbulenceElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener) {
+		}
+
+		public void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFETurbulenceElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFETurbulenceElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -40,10 +64,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFETurbulenceElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFETurbulenceElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFETurbulenceElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFETurbulenceElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

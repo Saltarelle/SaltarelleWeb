@@ -8,12 +8,10 @@ using Generator.ExtensionMethods;
 namespace Generator.Meta {
 	public class Metadata {
 		public Dictionary<string, TypeMetadata> Types { get; private set; }
-		public IReadOnlyList<EnumFromConstants> EnumsFromConstants { get; private set; }
 		public IReadOnlyList<StaticInstance> StaticInstances { get; private set; }
 
-		public Metadata(IEnumerable<TypeMetadata> types, IEnumerable<EnumFromConstants> enumsFromConstants, IEnumerable<StaticInstance> staticInstances) {
+		public Metadata(IEnumerable<TypeMetadata> types, IEnumerable<StaticInstance> staticInstances) {
 			Types = types.ToDictionary(t => t.TypeName);
-			EnumsFromConstants = enumsFromConstants.AsReadOnlySafe();
 			StaticInstances = staticInstances.AsReadOnlySafe();
 		}
 	}

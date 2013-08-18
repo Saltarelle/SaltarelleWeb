@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEBlendElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEBlendElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEBlendElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEBlendElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEBlendElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -40,10 +64,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEBlendElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEBlendElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEBlendElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEBlendElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

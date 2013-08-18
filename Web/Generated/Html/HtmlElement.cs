@@ -6,16 +6,64 @@ namespace System.Html {
 		internal HtmlElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<HtmlElement> listener) {
+		public void AddEventListener(HtmlElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<HtmlElement> listener, bool capture) {
+		public void AddEventListener(HtmlElementEvents type, Action listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HtmlElement> listener) {
+		public void AddEventListener(HtmlElementEvents type, HtmlEventHandler listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HtmlElement> listener, bool capture) {
+		public void AddEventListener(HtmlElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(HtmlElementEvents type, HtmlEventHandlerWithTarget<HtmlElement> listener) {
+		}
+
+		public void AddEventListener(HtmlElementEvents type, HtmlEventHandlerWithTarget<HtmlElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(HtmlElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(HtmlElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<HtmlElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<HtmlElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(HtmlElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(HtmlElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(HtmlElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(HtmlElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(HtmlElementEvents type, HtmlEventHandlerWithTarget<HtmlElement> listener) {
+		}
+
+		public void RemoveEventListener(HtmlElementEvents type, HtmlEventHandlerWithTarget<HtmlElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(HtmlElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(HtmlElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HtmlElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HtmlElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

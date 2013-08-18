@@ -6,10 +6,34 @@ namespace System.Html {
 		internal OptGroupElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener) {
+		public void AddEventListener(OptGroupElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture) {
+		public void AddEventListener(OptGroupElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(OptGroupElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(OptGroupElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener) {
+		}
+
+		public void AddEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(OptGroupElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(OptGroupElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -30,10 +54,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener) {
+		public void RemoveEventListener(OptGroupElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture) {
+		public void RemoveEventListener(OptGroupElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener) {
+		}
+
+		public void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OptGroupElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(OptGroupElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture) {
 		}
 	}
 }

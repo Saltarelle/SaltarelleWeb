@@ -6,10 +6,34 @@ namespace System.Html {
 		internal BRElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener) {
+		public void AddEventListener(BRElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener, bool capture) {
+		public void AddEventListener(BRElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(BRElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(BRElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(BRElementEvents type, HtmlEventHandlerWithTarget<BRElement> listener) {
+		}
+
+		public void AddEventListener(BRElementEvents type, HtmlEventHandlerWithTarget<BRElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(BRElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(BRElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -21,10 +45,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener) {
+		public void RemoveEventListener(BRElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener, bool capture) {
+		public void RemoveEventListener(BRElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BRElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(BRElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BRElementEvents type, HtmlEventHandlerWithTarget<BRElement> listener) {
+		}
+
+		public void RemoveEventListener(BRElementEvents type, HtmlEventHandlerWithTarget<BRElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(BRElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(BRElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener, bool capture) {
 		}
 	}
 }

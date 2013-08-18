@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEConvolveMatrixElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -89,10 +113,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

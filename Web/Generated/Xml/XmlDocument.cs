@@ -7,10 +7,34 @@ namespace System.Xml {
 		internal XmlDocument() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlDocumentEvents type, Action listener) {
+		}
+
+		public void AddEventListener(XmlDocumentEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlDocumentEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(XmlDocumentEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener) {
+		}
+
+		public void AddEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlDocumentEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(XmlDocumentEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -26,10 +50,34 @@ namespace System.Xml {
 			return false;
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlDocumentEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(XmlDocumentEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener) {
+		}
+
+		public void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlDocumentEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(XmlDocumentEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

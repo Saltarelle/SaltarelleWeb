@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEDisplacementMapElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEDisplacementMapElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEDisplacementMapElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEDisplacementMapElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEDisplacementMapElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEDisplacementMapElementEvents type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEDisplacementMapElementEvents type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEDisplacementMapElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEDisplacementMapElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -33,10 +57,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEDisplacementMapElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEDisplacementMapElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEDisplacementMapElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEDisplacementMapElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEDisplacementMapElementEvents type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEDisplacementMapElementEvents type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEDisplacementMapElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEDisplacementMapElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

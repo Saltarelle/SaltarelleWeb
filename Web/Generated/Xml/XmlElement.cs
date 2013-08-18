@@ -7,10 +7,34 @@ namespace System.Xml {
 		internal XmlElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(XmlElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(XmlElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener) {
+		}
+
+		public void AddEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(XmlElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -222,10 +246,34 @@ namespace System.Xml {
 		public void RemoveAttributeNS(string @namespace, string localName) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(XmlElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(XmlElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener) {
+		}
+
+		public void RemoveEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(XmlElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

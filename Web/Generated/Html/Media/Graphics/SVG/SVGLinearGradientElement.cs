@@ -6,16 +6,64 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGLinearGradientElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener) {
+		public void AddEventListener(SVGLinearGradientElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener, bool capture) {
+		public void AddEventListener(SVGLinearGradientElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGLinearGradientElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGLinearGradientElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGLinearGradientElementEvents type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener) {
+		}
+
+		public void AddEventListener(SVGLinearGradientElementEvents type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGLinearGradientElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGLinearGradientElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGLinearGradientElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGLinearGradientElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGLinearGradientElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGLinearGradientElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGLinearGradientElementEvents type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGLinearGradientElementEvents type, HtmlEventHandlerWithTarget<SVGLinearGradientElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGLinearGradientElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGLinearGradientElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -9,10 +9,34 @@ namespace System.Html.Speech {
 		public SpeechSynthesisUtterance(string text) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener) {
+		public void AddEventListener(SpeechSynthesisUtteranceEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture) {
+		public void AddEventListener(SpeechSynthesisUtteranceEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener) {
+		}
+
+		public void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture) {
+		}
+
+		public void AddEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -105,10 +129,34 @@ namespace System.Html.Speech {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener) {
+		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture) {
+		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener) {
+		}
+
+		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

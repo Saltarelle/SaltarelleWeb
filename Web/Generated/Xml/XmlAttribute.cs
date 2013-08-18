@@ -7,10 +7,34 @@ namespace System.Xml {
 		internal XmlAttribute() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlAttributeEvents type, Action listener) {
+		}
+
+		public void AddEventListener(XmlAttributeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlAttributeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(XmlAttributeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener) {
+		}
+
+		public void AddEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlAttributeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(XmlAttributeEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -48,10 +72,34 @@ namespace System.Xml {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlAttributeEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(XmlAttributeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener) {
+		}
+
+		public void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlAttributeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(XmlAttributeEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

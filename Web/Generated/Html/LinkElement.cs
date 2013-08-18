@@ -6,10 +6,34 @@ namespace System.Html {
 		internal LinkElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener) {
+		public void AddEventListener(LinkElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture) {
+		public void AddEventListener(LinkElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(LinkElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(LinkElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener) {
+		}
+
+		public void AddEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(LinkElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(LinkElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -75,10 +99,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener) {
+		public void RemoveEventListener(LinkElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture) {
+		public void RemoveEventListener(LinkElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LinkElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(LinkElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener) {
+		}
+
+		public void RemoveEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LinkElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(LinkElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

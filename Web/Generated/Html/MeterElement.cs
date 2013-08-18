@@ -6,10 +6,34 @@ namespace System.Html {
 		internal MeterElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener) {
+		public void AddEventListener(MeterElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture) {
+		public void AddEventListener(MeterElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(MeterElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(MeterElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener) {
+		}
+
+		public void AddEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(MeterElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(MeterElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -57,10 +81,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener) {
+		public void RemoveEventListener(MeterElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture) {
+		public void RemoveEventListener(MeterElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MeterElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(MeterElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener) {
+		}
+
+		public void RemoveEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MeterElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(MeterElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

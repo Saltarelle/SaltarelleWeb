@@ -12,10 +12,34 @@ namespace System.Html.Notifications {
 		public Notification(string title, NotificationOptions options) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener) {
+		public void AddEventListener(NotificationEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture) {
+		public void AddEventListener(NotificationEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(NotificationEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(NotificationEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener) {
+		}
+
+		public void AddEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener, bool capture) {
+		}
+
+		public void AddEventListener(NotificationEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(NotificationEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture) {
 		}
 
 		public void Close() {
@@ -64,10 +88,34 @@ namespace System.Html.Notifications {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener) {
+		public void RemoveEventListener(NotificationEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture) {
+		public void RemoveEventListener(NotificationEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(NotificationEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(NotificationEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener) {
+		}
+
+		public void RemoveEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(NotificationEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(NotificationEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture) {
 		}
 
 		public static void RequestPermission() {

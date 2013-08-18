@@ -7,10 +7,34 @@ namespace System.Html.Media.Audio {
 		internal AnalyserNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener) {
+		public void AddEventListener(AnalyserNodeEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture) {
+		public void AddEventListener(AnalyserNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(AnalyserNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(AnalyserNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener) {
+		}
+
+		public void AddEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(AnalyserNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(AnalyserNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -56,10 +80,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener) {
+		public void RemoveEventListener(AnalyserNodeEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture) {
+		public void RemoveEventListener(AnalyserNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener) {
+		}
+
+		public void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AnalyserNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(AnalyserNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

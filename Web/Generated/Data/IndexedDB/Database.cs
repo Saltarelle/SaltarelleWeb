@@ -7,10 +7,34 @@ namespace System.Data.IndexedDB {
 		internal Database() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener) {
+		public void AddEventListener(DatabaseEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture) {
+		public void AddEventListener(DatabaseEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(DatabaseEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(DatabaseEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener) {
+		}
+
+		public void AddEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener, bool capture) {
+		}
+
+		public void AddEventListener(DatabaseEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(DatabaseEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture) {
 		}
 
 		public void Close() {
@@ -68,10 +92,34 @@ namespace System.Data.IndexedDB {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener) {
+		public void RemoveEventListener(DatabaseEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture) {
+		public void RemoveEventListener(DatabaseEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DatabaseEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(DatabaseEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener) {
+		}
+
+		public void RemoveEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DatabaseEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(DatabaseEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture) {
 		}
 
 		public Transaction Transaction(string storeName) {

@@ -11,10 +11,34 @@ namespace System.Media.Recording {
 		public MediaRecorder(MediaStream stream) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener) {
+		public void AddEventListener(MediaRecorderEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture) {
+		public void AddEventListener(MediaRecorderEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(MediaRecorderEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(MediaRecorderEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener) {
+		}
+
+		public void AddEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture) {
+		}
+
+		public void AddEventListener(MediaRecorderEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(MediaRecorderEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -63,10 +87,34 @@ namespace System.Media.Recording {
 		public void Pause() {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener) {
+		public void RemoveEventListener(MediaRecorderEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture) {
+		public void RemoveEventListener(MediaRecorderEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener) {
+		}
+
+		public void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MediaRecorderEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(MediaRecorderEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture) {
 		}
 
 		public void RequestData() {

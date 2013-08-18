@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEGaussianBlurElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEGaussianBlurElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEGaussianBlurElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEGaussianBlurElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEGaussianBlurElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEGaussianBlurElementEvents type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEGaussianBlurElementEvents type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEGaussianBlurElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEGaussianBlurElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -19,10 +43,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEGaussianBlurElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEGaussianBlurElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEGaussianBlurElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEGaussianBlurElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEGaussianBlurElementEvents type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEGaussianBlurElementEvents type, HtmlEventHandlerWithTarget<SVGFEGaussianBlurElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEGaussianBlurElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEGaussianBlurElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		public void SetStdDeviation(float stdDeviationX, float stdDeviationY) {

@@ -10,10 +10,10 @@ using System.Xml;
 namespace System.Html {
 	[IgnoreNamespace, Imported, ScriptName("window")]
 	public static partial class Window {
-		static void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
+		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
 		}
 
-		static void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
+		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
 		}
 
 		public static void AddEventListener(string type, IEventListener listener) {
@@ -23,6 +23,30 @@ namespace System.Html {
 		}
 
 		public static void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted) {
+		}
+
+		public static void AddEventListener(WindowInstanceEvents type, Action listener) {
+		}
+
+		public static void AddEventListener(WindowInstanceEvents type, Action listener, bool capture) {
+		}
+
+		public static void AddEventListener(WindowInstanceEvents type, HtmlEventHandler listener) {
+		}
+
+		public static void AddEventListener(WindowInstanceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public static void AddEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
+		}
+
+		public static void AddEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
+		}
+
+		public static void AddEventListener(WindowInstanceEvents type, IEventListener listener) {
+		}
+
+		public static void AddEventListener(WindowInstanceEvents type, IEventListener listener, bool capture) {
 		}
 
 		public static void Alert(string message) {
@@ -970,16 +994,40 @@ namespace System.Html {
 			return null;
 		}
 
-		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
+		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
 		}
 
-		static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
+		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
 		}
 
 		public static void RemoveEventListener(string type, IEventListener listener) {
 		}
 
 		public static void RemoveEventListener(string type, IEventListener listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(WindowInstanceEvents type, Action listener) {
+		}
+
+		public static void RemoveEventListener(WindowInstanceEvents type, Action listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandler listener) {
+		}
+
+		public static void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
+		}
+
+		public static void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture) {
+		}
+
+		public static void RemoveEventListener(WindowInstanceEvents type, IEventListener listener) {
+		}
+
+		public static void RemoveEventListener(WindowInstanceEvents type, IEventListener listener, bool capture) {
 		}
 
 		public static void ResizeBy(int xDelta, int yDelta) {

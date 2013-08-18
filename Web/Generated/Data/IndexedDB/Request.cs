@@ -7,10 +7,34 @@ namespace System.Data.IndexedDB {
 		internal Request() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener) {
+		public void AddEventListener(RequestEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture) {
+		public void AddEventListener(RequestEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(RequestEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(RequestEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener) {
+		}
+
+		public void AddEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener, bool capture) {
+		}
+
+		public void AddEventListener(RequestEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(RequestEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -45,10 +69,34 @@ namespace System.Data.IndexedDB {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener) {
+		public void RemoveEventListener(RequestEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture) {
+		public void RemoveEventListener(RequestEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(RequestEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(RequestEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener) {
+		}
+
+		public void RemoveEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(RequestEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(RequestEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

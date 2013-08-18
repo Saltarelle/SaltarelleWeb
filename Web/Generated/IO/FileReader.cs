@@ -10,10 +10,34 @@ namespace System.IO {
 		public void Abort() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener) {
+		public void AddEventListener(FileReaderEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture) {
+		public void AddEventListener(FileReaderEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(FileReaderEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(FileReaderEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener) {
+		}
+
+		public void AddEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture) {
+		}
+
+		public void AddEventListener(FileReaderEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(FileReaderEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture) {
 		}
 
 		public const ushort DONE = 2;
@@ -105,10 +129,34 @@ namespace System.IO {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener) {
+		public void RemoveEventListener(FileReaderEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture) {
+		public void RemoveEventListener(FileReaderEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FileReaderEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(FileReaderEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener) {
+		}
+
+		public void RemoveEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FileReaderEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(FileReaderEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

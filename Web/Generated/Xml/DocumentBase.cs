@@ -16,10 +16,34 @@ namespace System.Xml {
 			}
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		public void AddEventListener(DocumentBaseEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		public void AddEventListener(DocumentBaseEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(DocumentBaseEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(DocumentBaseEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		public void AddEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		}
+
+		public void AddEventListener(DocumentBaseEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(DocumentBaseEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
 		}
 
 		public XmlNode AdoptNode(XmlNode node) {
@@ -990,10 +1014,34 @@ namespace System.Xml {
 		public void ReleaseCapture() {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		public void RemoveEventListener(DocumentBaseEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		public void RemoveEventListener(DocumentBaseEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		public void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DocumentBaseEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(DocumentBaseEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

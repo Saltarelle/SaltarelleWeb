@@ -7,10 +7,34 @@ namespace System.Html {
 		internal IFrameElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener) {
+		public void AddEventListener(IFrameElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture) {
+		public void AddEventListener(IFrameElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(IFrameElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(IFrameElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener) {
+		}
+
+		public void AddEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(IFrameElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(IFrameElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -103,10 +127,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener) {
+		public void RemoveEventListener(IFrameElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture) {
+		public void RemoveEventListener(IFrameElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(IFrameElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(IFrameElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener) {
+		}
+
+		public void RemoveEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(IFrameElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(IFrameElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

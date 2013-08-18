@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGPolylineElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPolylineElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGPolylineElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPolylineElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGPolylineElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPolylineElementEvents type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener) {
+		}
+
+		public void AddEventListener(SVGPolylineElementEvents type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPolylineElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGPolylineElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -26,10 +50,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPolylineElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGPolylineElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPolylineElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGPolylineElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPolylineElementEvents type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGPolylineElementEvents type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPolylineElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGPolylineElementEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

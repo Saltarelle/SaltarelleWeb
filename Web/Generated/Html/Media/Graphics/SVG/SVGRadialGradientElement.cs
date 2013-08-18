@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGRadialGradientElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGRadialGradientElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGRadialGradientElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener) {
+		}
+
+		public void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGRadialGradientElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGRadialGradientElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -47,10 +71,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGRadialGradientElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGRadialGradientElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGRadialGradientElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGRadialGradientElementEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

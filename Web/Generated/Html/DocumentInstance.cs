@@ -15,10 +15,34 @@ namespace System.Html {
 			}
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		public void AddEventListener(DocumentInstanceEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		public void AddEventListener(DocumentInstanceEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(DocumentInstanceEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(DocumentInstanceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(DocumentInstanceEvents type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		public void AddEventListener(DocumentInstanceEvents type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		}
+
+		public void AddEventListener(DocumentInstanceEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(DocumentInstanceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -236,10 +260,34 @@ namespace System.Html {
 		public void ReleaseEvents(int eventFlags) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		public void RemoveEventListener(DocumentInstanceEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		public void RemoveEventListener(DocumentInstanceEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DocumentInstanceEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(DocumentInstanceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DocumentInstanceEvents type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		public void RemoveEventListener(DocumentInstanceEvents type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DocumentInstanceEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(DocumentInstanceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

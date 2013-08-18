@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGAnimationElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAnimationElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGAnimationElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener) {
+		}
+
+		public void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAnimationElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGAnimationElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		public void BeginElement() {
@@ -40,10 +64,34 @@ namespace System.Html.Media.Graphics.SVG {
 			return false;
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAnimationElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGAnimationElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAnimationElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGAnimationElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

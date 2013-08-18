@@ -6,10 +6,34 @@ namespace System.Html.Media.Audio {
 		internal DynamicsCompressorNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener) {
+		public void AddEventListener(DynamicsCompressorNodeEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture) {
+		public void AddEventListener(DynamicsCompressorNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener) {
+		}
+
+		public void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(DynamicsCompressorNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(DynamicsCompressorNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -47,10 +71,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener) {
+		public void RemoveEventListener(DynamicsCompressorNodeEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture) {
+		public void RemoveEventListener(DynamicsCompressorNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener) {
+		}
+
+		public void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DynamicsCompressorNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(DynamicsCompressorNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

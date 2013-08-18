@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEColorMatrixElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEColorMatrixElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEColorMatrixElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -26,10 +50,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

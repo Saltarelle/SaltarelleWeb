@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGPathElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPathElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGPathElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPathElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGPathElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPathElementEvents type, HtmlEventHandlerWithTarget<SVGPathElement> listener) {
+		}
+
+		public void AddEventListener(SVGPathElementEvents type, HtmlEventHandlerWithTarget<SVGPathElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPathElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGPathElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -121,10 +145,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPathElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGPathElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPathElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGPathElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPathElementEvents type, HtmlEventHandlerWithTarget<SVGPathElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGPathElementEvents type, HtmlEventHandlerWithTarget<SVGPathElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPathElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGPathElementEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

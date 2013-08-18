@@ -6,10 +6,34 @@ namespace System.Html {
 		internal DataListElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DataListElement> listener) {
+		public void AddEventListener(DataListElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DataListElement> listener, bool capture) {
+		public void AddEventListener(DataListElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(DataListElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(DataListElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(DataListElementEvents type, HtmlEventHandlerWithTarget<DataListElement> listener) {
+		}
+
+		public void AddEventListener(DataListElementEvents type, HtmlEventHandlerWithTarget<DataListElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(DataListElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(DataListElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DataListElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DataListElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -19,10 +43,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DataListElement> listener) {
+		public void RemoveEventListener(DataListElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DataListElement> listener, bool capture) {
+		public void RemoveEventListener(DataListElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DataListElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(DataListElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DataListElementEvents type, HtmlEventHandlerWithTarget<DataListElement> listener) {
+		}
+
+		public void RemoveEventListener(DataListElementEvents type, HtmlEventHandlerWithTarget<DataListElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DataListElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(DataListElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DataListElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DataListElement> listener, bool capture) {
 		}
 	}
 }

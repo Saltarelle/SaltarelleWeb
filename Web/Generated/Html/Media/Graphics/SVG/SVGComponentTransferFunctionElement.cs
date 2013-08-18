@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGComponentTransferFunctionElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener) {
+		}
+
+		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -40,10 +64,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

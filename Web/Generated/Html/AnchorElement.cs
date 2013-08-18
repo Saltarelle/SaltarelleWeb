@@ -6,10 +6,34 @@ namespace System.Html {
 		internal AnchorElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener) {
+		public void AddEventListener(AnchorElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture) {
+		public void AddEventListener(AnchorElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(AnchorElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(AnchorElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(AnchorElementEvents type, HtmlEventHandlerWithTarget<AnchorElement> listener) {
+		}
+
+		public void AddEventListener(AnchorElementEvents type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(AnchorElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(AnchorElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -138,10 +162,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener) {
+		public void RemoveEventListener(AnchorElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture) {
+		public void RemoveEventListener(AnchorElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AnchorElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(AnchorElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AnchorElementEvents type, HtmlEventHandlerWithTarget<AnchorElement> listener) {
+		}
+
+		public void RemoveEventListener(AnchorElementEvents type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AnchorElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(AnchorElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

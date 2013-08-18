@@ -7,10 +7,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGElementEvents type, HtmlEventHandlerWithTarget<SVGElement> listener) {
+		}
+
+		public void AddEventListener(SVGElementEvents type, HtmlEventHandlerWithTarget<SVGElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -576,10 +600,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGElementEvents type, HtmlEventHandlerWithTarget<SVGElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGElementEvents type, HtmlEventHandlerWithTarget<SVGElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

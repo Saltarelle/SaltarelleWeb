@@ -6,10 +6,34 @@ namespace System.Html {
 		internal ScriptElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener) {
+		public void AddEventListener(ScriptElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture) {
+		public void AddEventListener(ScriptElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ScriptElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ScriptElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener) {
+		}
+
+		public void AddEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(ScriptElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ScriptElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -66,10 +90,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener) {
+		public void RemoveEventListener(ScriptElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture) {
+		public void RemoveEventListener(ScriptElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ScriptElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ScriptElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener) {
+		}
+
+		public void RemoveEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ScriptElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ScriptElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

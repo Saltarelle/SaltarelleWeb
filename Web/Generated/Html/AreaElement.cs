@@ -6,10 +6,34 @@ namespace System.Html {
 		internal AreaElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener) {
+		public void AddEventListener(AreaElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture) {
+		public void AddEventListener(AreaElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(AreaElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(AreaElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener) {
+		}
+
+		public void AddEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(AreaElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(AreaElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -120,10 +144,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener) {
+		public void RemoveEventListener(AreaElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture) {
+		public void RemoveEventListener(AreaElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AreaElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(AreaElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener) {
+		}
+
+		public void RemoveEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AreaElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(AreaElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

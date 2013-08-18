@@ -14,10 +14,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener) {
+		public void AddEventListener(SourceBufferListEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener, bool capture) {
+		public void AddEventListener(SourceBufferListEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SourceBufferListEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SourceBufferListEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SourceBufferListEvents type, HtmlEventHandlerWithTarget<SourceBufferList> listener) {
+		}
+
+		public void AddEventListener(SourceBufferListEvents type, HtmlEventHandlerWithTarget<SourceBufferList> listener, bool capture) {
+		}
+
+		public void AddEventListener(SourceBufferListEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SourceBufferListEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener, bool capture) {
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
@@ -32,10 +56,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener) {
+		public void RemoveEventListener(SourceBufferListEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener, bool capture) {
+		public void RemoveEventListener(SourceBufferListEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SourceBufferListEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SourceBufferListEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SourceBufferListEvents type, HtmlEventHandlerWithTarget<SourceBufferList> listener) {
+		}
+
+		public void RemoveEventListener(SourceBufferListEvents type, HtmlEventHandlerWithTarget<SourceBufferList> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SourceBufferListEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SourceBufferListEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener, bool capture) {
 		}
 	}
 }

@@ -6,16 +6,64 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGAnimateMotionElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener) {
+		public void AddEventListener(SVGAnimateMotionElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener, bool capture) {
+		public void AddEventListener(SVGAnimateMotionElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAnimateMotionElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGAnimateMotionElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAnimateMotionElementEvents type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener) {
+		}
+
+		public void AddEventListener(SVGAnimateMotionElementEvents type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAnimateMotionElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGAnimateMotionElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAnimateMotionElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGAnimateMotionElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAnimateMotionElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGAnimateMotionElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAnimateMotionElementEvents type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGAnimateMotionElementEvents type, HtmlEventHandlerWithTarget<SVGAnimateMotionElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAnimateMotionElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGAnimateMotionElementEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

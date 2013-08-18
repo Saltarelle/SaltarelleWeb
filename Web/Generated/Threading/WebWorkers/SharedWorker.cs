@@ -13,10 +13,34 @@ namespace System.Threading.WebWorkers {
 		public SharedWorker(string scriptURL, string name) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener) {
+		public void AddEventListener(SharedWorkerEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener, bool capture) {
+		public void AddEventListener(SharedWorkerEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SharedWorkerEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SharedWorkerEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SharedWorkerEvents type, HtmlEventHandlerWithTarget<SharedWorker> listener) {
+		}
+
+		public void AddEventListener(SharedWorkerEvents type, HtmlEventHandlerWithTarget<SharedWorker> listener, bool capture) {
+		}
+
+		public void AddEventListener(SharedWorkerEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SharedWorkerEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener, bool capture) {
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
@@ -35,10 +59,34 @@ namespace System.Threading.WebWorkers {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener) {
+		public void RemoveEventListener(SharedWorkerEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener, bool capture) {
+		public void RemoveEventListener(SharedWorkerEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SharedWorkerEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SharedWorkerEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SharedWorkerEvents type, HtmlEventHandlerWithTarget<SharedWorker> listener) {
+		}
+
+		public void RemoveEventListener(SharedWorkerEvents type, HtmlEventHandlerWithTarget<SharedWorker> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SharedWorkerEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SharedWorkerEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener, bool capture) {
 		}
 	}
 }

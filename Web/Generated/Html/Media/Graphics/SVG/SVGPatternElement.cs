@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGPatternElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPatternElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGPatternElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPatternElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGPatternElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener) {
+		}
+
+		public void AddEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGPatternElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGPatternElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -54,10 +78,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPatternElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGPatternElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGPatternElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGPatternElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[ScriptName("SVG_UNIT_TYPE_OBJECTBOUNDINGBOX")]

@@ -6,16 +6,64 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEFuncAElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener) {
+		public void AddEventListener(SVGFEFuncAElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener, bool capture) {
+		public void AddEventListener(SVGFEFuncAElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEFuncAElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEFuncAElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEFuncAElementEvents type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEFuncAElementEvents type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEFuncAElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEFuncAElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEFuncAElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEFuncAElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEFuncAElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEFuncAElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEFuncAElementEvents type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEFuncAElementEvents type, HtmlEventHandlerWithTarget<SVGFEFuncAElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEFuncAElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEFuncAElementEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

@@ -10,10 +10,34 @@ namespace System.Html.Media.Audio {
 		public void Abort() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener) {
+		public void AddEventListener(SourceBufferEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener, bool capture) {
+		public void AddEventListener(SourceBufferEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SourceBufferEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SourceBufferEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SourceBufferEvents type, HtmlEventHandlerWithTarget<SourceBuffer> listener) {
+		}
+
+		public void AddEventListener(SourceBufferEvents type, HtmlEventHandlerWithTarget<SourceBuffer> listener, bool capture) {
+		}
+
+		public void AddEventListener(SourceBufferEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SourceBufferEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener, bool capture) {
 		}
 
 		public void AppendBuffer(ArrayBuffer data) {
@@ -59,10 +83,34 @@ namespace System.Html.Media.Audio {
 		public void Remove(double start, double end) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener) {
+		public void RemoveEventListener(SourceBufferEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener, bool capture) {
+		public void RemoveEventListener(SourceBufferEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SourceBufferEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SourceBufferEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SourceBufferEvents type, HtmlEventHandlerWithTarget<SourceBuffer> listener) {
+		}
+
+		public void RemoveEventListener(SourceBufferEvents type, HtmlEventHandlerWithTarget<SourceBuffer> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SourceBufferEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SourceBufferEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

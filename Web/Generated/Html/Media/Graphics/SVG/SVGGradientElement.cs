@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGGradientElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGGradientElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGGradientElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGGradientElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGGradientElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener) {
+		}
+
+		public void AddEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGGradientElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGGradientElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -33,10 +57,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGGradientElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGGradientElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGGradientElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGGradientElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

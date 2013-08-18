@@ -24,6 +24,7 @@ AnyCallback
 ApplicationCache
 	namespace = System.Data.Offline
 	typeOverride status = System.Data.Offline.ApplicationCacheStatus
+	generateEnum ApplicationCacheStatus constants "(.+)"
 
 ArchiveReader
 	nogenerate
@@ -234,6 +235,7 @@ CSSPrimitiveValue
 CSSRule
 	namespace = System.Html
 	typeOverride type = System.Html.CSSRuleType
+	generateEnum CSSRuleType constants "(.+)_RULE"
 
 CSSRuleList
 	alias = System.Html.CSSRule[]
@@ -469,6 +471,28 @@ EventTarget
 	addInDerivedTypes "void AddEventListener(string type, System.Html.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
 	addInDerivedTypes "void RemoveEventListener(string type, System.Html.HtmlEventHandlerWithTarget<$type$> listener)"
 	addInDerivedTypes "void RemoveEventListener(string type, System.Html.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
+
+	addInDerivedTypes "void AddEventListener($type$Events type, IEventListener listener)"
+	addInDerivedTypes "void AddEventListener($type$Events type, IEventListener listener, bool capture)"
+	addInDerivedTypes "void RemoveEventListener($type$Events  type, IEventListener listener)"
+	addInDerivedTypes "void RemoveEventListener($type$Events type, IEventListener listener, bool capture)"
+
+	addInDerivedTypes "void AddEventListener($type$Events type, Action listener)"
+	addInDerivedTypes "void AddEventListener($type$Events type, Action listener, bool capture)"
+	addInDerivedTypes "void RemoveEventListener($type$Events type, Action listener)"
+	addInDerivedTypes "void RemoveEventListener($type$Events type, Action listener, bool capture)"
+
+	addInDerivedTypes "void AddEventListener($type$Events type, HtmlEventHandler listener)"
+	addInDerivedTypes "void AddEventListener($type$Events type, HtmlEventHandler listener, bool capture)"
+	addInDerivedTypes "void RemoveEventListener($type$Events type, HtmlEventHandler listener)"
+	addInDerivedTypes "void RemoveEventListener($type$Events type, HtmlEventHandler listener, bool capture)"
+
+	addInDerivedTypes "void AddEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener)"
+	addInDerivedTypes "void AddEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
+	addInDerivedTypes "void RemoveEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener)"
+	addInDerivedTypes "void RemoveEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
+
+	generateEnum derivedTypes $type$Events attributes "on(.+)"
 
 File
 	namespace = System.IO
@@ -751,6 +775,8 @@ HTMLMediaElement
 	typeOverride canPlayType = System.Html.Media.MediaPlayability
 	typeOverride preload = System.Html.Media.MediaPreload
 	typeOverride crossOrigin = System.Html.Media.MediaCrossOriginPolicy
+	generateEnum System.Html.Media.MediaElementNetworkState constants "NETWORK_(.+)"
+	generateEnum System.Html.Media.MediaElementReadyState constants "((?=HAVE_).+)"
 
 HTMLMenuElement
 	namespace = System.Html
@@ -1068,6 +1094,7 @@ MediaElementAudioSourceNode
 MediaError
 	namespace = System.Html.Media
 	typeOverride code = System.Html.Media.MediaErrorCode
+	generateEnum MediaErrorCode constants "MEDIA_ERR_(.+)"
 
 MediaList
 	namespace = System.Html
@@ -1333,6 +1360,8 @@ Node
 	typeOverride nodeType = System.Xml.XmlNodeType
 	typeOverride compareDocumentPosition = System.Xml.DocumentPosition
 	remove setUserData
+	generateEnum XmlNodeType constants "(.+)_NODE" rename CDATA_SECTION = CDATA
+	generateEnum DocumentPosition constants "DOCUMENT_POSITION_(.+)"
 
 NodeEventHandlers
 	mixin
@@ -1341,6 +1370,8 @@ NodeFilter
 	namespace = System.Xml
 	name = INodeFilter
 	typeOverride acceptNode = System.Xml.NodeFilterReturn
+	generateEnum NodeFilterReturn constants "FILTER_(.+)"
+	generateEnum NodeFilter constants "((?=SHOW_).+)" flags
 
 NodeIterator
 	namespace = System.Xml
@@ -1529,6 +1560,7 @@ RandomSource
 Range
 	namespace = System.Html.Editing
 	typeOverride how = System.Html.Editing.RangeComparison
+	generateEnum RangeComparison constants "(.+)"
 
 RecordErrorEvent
 	namespace = System.Media.Recording
@@ -1748,6 +1780,7 @@ SVGAltGlyphElement
 SVGAngle
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride unitType = System.Html.Media.Graphics.SVG.SVGAngleUnitType
+	generateEnum SVGAngleUnitType constants "SVG_ANGLETYPE_(.+)"
 
 SVGAnimatedAngle
 	namespace = System.Html.Media.Graphics.SVG
@@ -1814,6 +1847,7 @@ SVGClipPathElement
 SVGComponentTransferFunctionElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride type = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGComponentTransferType>
+	generateEnum SVGComponentTransferType constants "SVG_FECOMPONENTTRANSFER_TYPE_(.+)"
 
 SVGDefsElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -1833,10 +1867,12 @@ SVGEllipseElement
 SVGFEBlendElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride mode = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEBlendMode>
+	generateEnum SVGFEBlendMode constants "SVG_FEBLEND_MODE_(.+)"
 
 SVGFEColorMatrixElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride type = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEColorMatrixType>
+	generateEnum SVGFEColorMatrixType constants "SVG_FECOLORMATRIX_TYPE_(.+)"
 
 SVGFEComponentTransferElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -1844,10 +1880,12 @@ SVGFEComponentTransferElement
 SVGFECompositeElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride operator = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFECompositeOperator>
+	generateEnum SVGFECompositeOperator constants "SVG_FECOMPOSITE_OPERATOR_(.+)"
 
 SVGFEConvolveMatrixElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride edgeMode = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEConvolveMatrixEdgeMode>
+	generateEnum SVGFEConvolveMatrixEdgeMode constants "SVG_EDGEMODE_(.+)"
 
 SVGFEDiffuseLightingElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -1856,6 +1894,7 @@ SVGFEDisplacementMapElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride xChannelSelector = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector>
 	typeOverride yChannelSelector = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector>
+	generateEnum SVGFEDisplacementMapChannelSelector constants "SVG_CHANNEL_(.+)"
 
 SVGFEDistantLightElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -1890,6 +1929,7 @@ SVGFEMergeNodeElement
 SVGFEMorphologyElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride operator = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEMorphologyOperator>
+	generateEnum SVGFEMorphologyOperator constants "SVG_MORPHOLOGY_OPERATOR_(.+)"
 
 SVGFEOffsetElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -1910,6 +1950,8 @@ SVGFETurbulenceElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride stitchTiles = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEStitchType>
 	typeOverride type = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFETurbulenceType>
+	generateEnum SVGFEStitchType constants "SVG_STITCHTYPE_(.+)"
+	generateEnum SVGFETurbulenceType constants "SVG_TURBULENCE_TYPE_(.+)"
 
 SVGFilterElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -1932,6 +1974,7 @@ SVGGradientElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride spreadMethod = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGSpreadMethod>
 	typeOverride gradientUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+	generateEnum SVGSpreadMethod constants "SVG_SPREADMETHOD_(.+)"
 
 SVGGraphicsElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -1942,6 +1985,7 @@ SVGImageElement
 SVGLength
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride unitType = System.Html.Media.Graphics.SVG.SVGLengthType
+	generateEnum SVGLengthType constants "SVG_LENGTHTYPE_(.+)"
 
 SVGLengthList
 	namespace = System.Html.Media.Graphics.SVG
@@ -1956,6 +2000,8 @@ SVGMarkerElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride markerUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGMarkerUnits>
 	typeOverride orientType = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGMarkerOrient>
+	generateEnum SVGMarkerUnits constants "SVG_MARKERUNITS_(.+)"
+	generateEnum SVGMarkerOrient constants "SVG_MARKER_ORIENT_(.+)"
 
 SVGMaskElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -1983,6 +2029,7 @@ SVGPathElement
 SVGPathSeg
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride pathSegType = System.Html.Media.Graphics.SVG.SVGPathSegType
+	generateEnum SVGPathSegType constants "PATHSEG_(.+)"
 
 SVGPathSegArcAbs
 	namespace = System.Html.Media.Graphics.SVG
@@ -2065,6 +2112,8 @@ SVGPreserveAspectRatio
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride align = System.Html.Media.Graphics.SVG.SVGAlign
 	typeOverride meetOrSlice = System.Html.Media.Graphics.SVG.SVGMeetOrSlice
+	generateEnum SVGAlign constants "SVG_PRESERVEASPECTRATIO_(.+)"
+	generateEnum SVGMeetOrSlice constants "SVG_MEETORSLICE_(.+)"
 
 SVGRadialGradientElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -2105,6 +2154,7 @@ SVGTests
 SVGTextContentElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride lengthAdjust = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGLengthAdjust>
+	generateEnum SVGLengthAdjust constants "LENGTHADJUST_(.+)"
 
 SVGTextElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -2113,6 +2163,8 @@ SVGTextPathElement
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride method = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGTextPathMethod>
 	typeOverride spacing = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGTextPathSpacing>
+	generateEnum SVGTextPathMethod constants "TEXTPATH_METHODTYPE_(.+)"
+	generateEnum SVGTextPathSpacing constants "TEXTPATH_SPACINGTYPE_(.+)"
 
 SVGTextPositioningElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -2123,6 +2175,7 @@ SVGTitleElement
 SVGTransform
 	namespace = System.Html.Media.Graphics.SVG
 	typeOverride type = System.Html.Media.Graphics.SVG.SVGTransformType
+	generateEnum SVGTransformType constants "SVG_TRANSFORM_(.+)"
 
 SVGTransformList
 	namespace = System.Html.Media.Graphics.SVG
@@ -2133,6 +2186,7 @@ SVGTSpanElement
 SVGUnitTypes
 	namespace = System.Html.Media.Graphics.SVG
 	mixin
+	generateEnum SVGUnitType constants "SVG_UNIT_TYPE_(.+)"
 
 SVGURIReference
 	mixin
@@ -2146,6 +2200,7 @@ SVGViewElement
 SVGZoomAndPan
 	mixin
 	typeOverride zoomAndPan = System.Html.Media.Graphics.SVG.SVGZoomAndPanType
+	generateEnum System.Html.Media.Graphics.SVG.SVGZoomAndPanType constants "SVG_ZOOMANDPAN_(.+)"
 
 SVGZoomEvent
 	namespace = System.Html.Media.Graphics.SVG
@@ -2363,6 +2418,7 @@ WebGLVertexArray
 WebSocket
 	namespace = System.Net.WebSockets
 	typeOverride readyState = System.Net.WebSockets.ReadyState
+	generateEnum ReadyState constants "(.+)"
 
 WebSocketDict
 	namespace = System.Net.WebSockets
@@ -2370,6 +2426,7 @@ WebSocketDict
 WheelEvent
 	namespace = System.Html
 	typeOverride deltaMode = System.Html.WheelDeltaMode
+	generateEnum WheelDeltaMode constants "DOM_DELTA_(.+)"
 
 WheelEventInit
 	namespace = System.Html
@@ -2444,6 +2501,7 @@ XMLHttpRequest
 	rename onreadystatechange = OnReadyStateChange
 	remove "void send(InputStream data)"
 	noconstructors
+	generateEnum ReadyState constants "(.+)"
 
 XMLHttpRequestEventTarget
 	namespace = System.Net
@@ -2481,6 +2539,7 @@ XPathNSResolver
 XPathResult
 	namespace = System.Xml.XPath
 	typeOverride resultType = System.Xml.XPath.ResultType
+	generateEnum ResultType constants "(.+)_TYPE"
 
 XULCommandDispatcher
 	nogenerate
@@ -2494,155 +2553,6 @@ XULDocument
 XULElement
 	nogenerate
 
-enumFromConstants System.Html.Media.Graphics.SVG.SVGAngleUnitType
-	container = SVGAngle
-	constants = "SVG_ANGLETYPE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGComponentTransferType
-	container = SVGComponentTransferFunctionElement
-	constants = "SVG_FECOMPONENTTRANSFER_TYPE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGFEBlendMode
-	container = SVGFEBlendElement
-	constants = "SVG_FEBLEND_MODE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGFEColorMatrixType
-	container = SVGFEColorMatrixElement
-	constants = "SVG_FECOLORMATRIX_TYPE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGFECompositeOperator
-	container = SVGFECompositeElement
-	constants = "SVG_FECOMPOSITE_OPERATOR_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGFEConvolveMatrixEdgeMode
-	container = SVGFEConvolveMatrixElement
-	constants = "SVG_EDGEMODE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector
-	container = SVGFEDisplacementMapElement
-	constants = "SVG_CHANNEL_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGFEMorphologyOperator
-	container = SVGFEMorphologyElement
-	constants = "SVG_MORPHOLOGY_OPERATOR_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGFEStitchType
-	container = SVGFETurbulenceElement
-	constants = "SVG_STITCHTYPE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGFETurbulenceType
-	container = SVGFETurbulenceElement
-	constants = "SVG_TURBULENCE_TYPE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGSpreadMethod
-	container = SVGGradientElement
-	constants = "SVG_SPREADMETHOD_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGMarkerUnits
-	container = SVGMarkerElement
-	constants = "SVG_MARKERUNITS_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGMarkerOrient
-	container = SVGMarkerElement
-	constants = "SVG_MARKER_ORIENT_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGPathSegType
-	container = SVGPathSeg
-	constants = "PATHSEG_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGAlign
-	container = SVGPreserveAspectRatio
-	constants = "SVG_PRESERVEASPECTRATIO_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGMeetOrSlice
-	container = SVGPreserveAspectRatio
-	constants = "SVG_MEETORSLICE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGLengthAdjust
-	container = SVGTextContentElement
-	constants = "LENGTHADJUST_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGLengthType
-	container = SVGLength
-	constants = "SVG_LENGTHTYPE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGTextPathMethod
-	container = SVGTextPathElement
-	constants = "TEXTPATH_METHODTYPE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGTextPathSpacing
-	container = SVGTextPathElement
-	constants = "TEXTPATH_SPACINGTYPE_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGTransformType
-	container = SVGTransform
-	constants = "SVG_TRANSFORM_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGZoomAndPanType
-	container = SVGZoomAndPan
-	constants = "SVG_ZOOMANDPAN_(.+)"
-
-enumFromConstants System.Html.Media.Graphics.SVG.SVGUnitType
-	container = SVGUnitTypes
-	constants = "SVG_UNIT_TYPE_(.+)"
-
-enumFromConstants System.Net.WebSockets.ReadyState
-	container = WebSocket
-	constants = "(.+)"
-
-enumFromConstants System.Net.ReadyState
-	container = XMLHttpRequest
-	constants = "(.+)"
-
-enumFromConstants System.Xml.XmlNodeType
-	container = Node
-	constants = "(.+)_NODE"
-	name CDATA_SECTION = CDATA
-
-enumFromConstants System.Xml.DocumentPosition
-	container = Node
-	constants = "DOCUMENT_POSITION_(.+)"
-
-enumFromConstants System.Html.Editing.RangeComparison
-	container = Range
-	constants = "(.+)"
-
-enumFromConstants System.Html.Media.MediaElementNetworkState
-	container = HTMLMediaElement
-	constants = "NETWORK_(.+)"
-
-enumFromConstants System.Html.Media.MediaElementReadyState
-	container = HTMLMediaElement
-	constants = "((?=HAVE_).+)"
-
-enumFromConstants System.Data.Offline.ApplicationCacheStatus
-	container = ApplicationCache
-	constants = "(.+)"
-
-enumFromConstants System.Html.Media.MediaErrorCode
-	container = MediaError
-	constants = "MEDIA_ERR_(.+)"
-
-enumFromConstants System.Xml.NodeFilterReturn
-	container = NodeFilter
-	constants = "FILTER_(.+)"
-
-enumFromConstants System.Xml.NodeFilter
-	container = NodeFilter
-	constants = "((?=SHOW_).+)"
-	flags
-
-enumFromConstants System.Xml.XPath.ResultType
-	container = XPathResult
-	constants = "(.+)_TYPE"
-
-enumFromConstants System.Html.WheelDeltaMode
-	container = WheelEvent
-	constants = "DOM_DELTA_(.+)"
-
-enumFromConstants System.Html.CSSRuleType
-	container = CSSRule
-	constants = "(.+)_RULE"
 
 staticInstance System.Html.Document
 	instanceName = document

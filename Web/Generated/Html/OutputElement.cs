@@ -6,10 +6,34 @@ namespace System.Html {
 		internal OutputElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener) {
+		public void AddEventListener(OutputElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture) {
+		public void AddEventListener(OutputElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(OutputElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(OutputElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener) {
+		}
+
+		public void AddEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(OutputElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(OutputElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture) {
 		}
 
 		public bool CheckValidity() {
@@ -48,10 +72,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener) {
+		public void RemoveEventListener(OutputElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture) {
+		public void RemoveEventListener(OutputElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OutputElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(OutputElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener) {
+		}
+
+		public void RemoveEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OutputElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(OutputElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture) {
 		}
 
 		public void SetCustomValidity(string error) {

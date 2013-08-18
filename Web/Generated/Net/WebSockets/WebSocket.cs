@@ -18,10 +18,34 @@ namespace System.Net.WebSockets {
 		public WebSocket(string url, string[] protocols) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture) {
+		}
+
+		public void AddEventListener(WebSocketEvents type, Action listener) {
+		}
+
+		public void AddEventListener(WebSocketEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(WebSocketEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(WebSocketEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener) {
+		}
+
+		public void AddEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture) {
+		}
+
+		public void AddEventListener(WebSocketEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(WebSocketEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -114,10 +138,34 @@ namespace System.Net.WebSockets {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(WebSocketEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(WebSocketEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(WebSocketEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(WebSocketEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener) {
+		}
+
+		public void RemoveEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(WebSocketEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(WebSocketEvents type, IEventListener listener, bool capture) {
 		}
 
 		public void Send(ArrayBuffer data) {

@@ -6,10 +6,34 @@ namespace System.Html {
 		internal LegendElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener) {
+		public void AddEventListener(LegendElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener, bool capture) {
+		public void AddEventListener(LegendElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(LegendElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(LegendElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(LegendElementEvents type, HtmlEventHandlerWithTarget<LegendElement> listener) {
+		}
+
+		public void AddEventListener(LegendElementEvents type, HtmlEventHandlerWithTarget<LegendElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(LegendElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(LegendElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -28,10 +52,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener) {
+		public void RemoveEventListener(LegendElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener, bool capture) {
+		public void RemoveEventListener(LegendElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LegendElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(LegendElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LegendElementEvents type, HtmlEventHandlerWithTarget<LegendElement> listener) {
+		}
+
+		public void RemoveEventListener(LegendElementEvents type, HtmlEventHandlerWithTarget<LegendElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LegendElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(LegendElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener, bool capture) {
 		}
 	}
 }

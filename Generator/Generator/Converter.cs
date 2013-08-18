@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using Generator.AstNodes;
 using Generator.ExtensionMethods;
 using Generator.Meta;
@@ -10,8 +12,6 @@ using ICSharpCode.NRefactory.CSharp;
 using ICSharpCode.NRefactory.TypeSystem;
 using Attribute = ICSharpCode.NRefactory.CSharp.Attribute;
 using TypeKind = Generator.Meta.TypeKind;
-
-#warning TODO: Event string names
 
 namespace Generator {
 	public class Converter {
@@ -905,6 +905,7 @@ namespace Generator {
 		private void AddMembersFromBaseTypes(string currentTypeName, IEnumerable<string> toAdd, IList<EntityDeclaration> members) {
 			foreach (var s in toAdd) {
 				var ast = new CSharpParser().ParseTypeMembers(s.Replace("$type$", currentTypeName)).Single();
+				ast.Modifiers |= Modifiers.Public;;
 				if (ast is MethodDeclaration) {
 					((MethodDeclaration)ast).Body = GenerateBody(((MethodDeclaration)ast).ReturnType);
 				}
@@ -1128,70 +1129,124 @@ namespace Generator {
 			}
 		}
 
-		private void GenerateEnumFromConstants(EnumFromConstants meta, IEnumerable<InterfaceMember> members) {
-			string qualifiedName = meta.EnumNamespace + "." + meta.EnumName;
-			var constants = new List<Tuple<string, int>>();
-			bool noErrorIfNoConstants = false;
+		private void GenerateEnum(string enumNamespace, string enumName, GeneratedEnumSourceType type, Regex membersRegex, IReadOnlyDictionary<string, string> names, bool flags, IEnumerable<InterfaceMember> members) {
+			string enumQualifiedName = enumNamespace + "." + enumName;
+			var enumMembers = new List<EnumMemberDeclaration>();
 			foreach (var m in members) {
 				m.Decompose(
 					@const => {
-						var match = meta.ConstantsRegex.Match(@const.Name);
+						if (type != GeneratedEnumSourceType.Constants)
+							return;
+
+						var match = membersRegex.Match(@const.Name);
 						if (match.Success) {
 							if (match.Groups.Count != 2) {
-								_errors.Add("The regular expression used to generate the enum `" + qualifiedName + "' is not an integer does not have one capture group");
-								noErrorIfNoConstants = true;
+								_errors.Add("The regular expression used to generate the enum `" + enumQualifiedName + "' does not have one capture group");
 								return;
 							}
 							string raw = match.Groups[1].Value;
-							string name = GetOrDefaultString(meta.Names, raw, raw.ConstantCaseToPascalCase());
+							string name = GetOrDefaultString(names, raw, raw.ConstantCaseToPascalCase());
 
 							@const.Value.Decompose(
-								@int    => constants.Add(Tuple.Create(name, @int)),
-								@double => _errors.Add("The constant `" + @const.Name + "', required by the enum `" + qualifiedName + "' is not an integer"),
-								@string => _errors.Add("The constant `" + @const.Name + "', required by the enum `" + qualifiedName + "' is not an integer"),
-								special => _errors.Add("The constant `" + @const.Name + "', required by the enum `" + qualifiedName + "' is not an integer")
+								@int    => enumMembers.Add(new EnumMemberDeclaration { Name = name, Initializer = new PrimitiveExpression(@int, @int.ToString(CultureInfo.InvariantCulture)) }),
+								@double => _errors.Add("The constant `" + @const.Name + "', required by the enum `" + enumQualifiedName + "' is not an integer"),
+								@string => _errors.Add("The constant `" + @const.Name + "', required by the enum `" + enumQualifiedName + "' is not an integer"),
+								special => _errors.Add("The constant `" + @const.Name + "', required by the enum `" + enumQualifiedName + "' is not an integer")
 							);
 						}
 					},
-					operation: null,
-					attribute: null,
-					jsonifier: null
+					operation => {},
+					attribute => {
+						if (type != GeneratedEnumSourceType.Attributes)
+							return;
+
+						var match = membersRegex.Match(attribute.Name);
+						if (match.Success) {
+							if (match.Groups.Count != 2) {
+								_errors.Add("The regular expression used to generate the enum `" + enumQualifiedName + "' does not have one capture group");
+								return;
+							}
+							string raw = match.Groups[1].Value;
+							string name = GetOrDefaultString(names, raw, raw.MakeCSharpName());
+
+							var enm = new EnumMemberDeclaration { Name = name };
+							AddAttributes(enm.Attributes, ScriptNameAttributeIfRequired(name, attribute.Name));
+							enumMembers.Add(enm);
+						}
+					},
+					jsonifier => {}
 				);
 			}
-			if (constants.Count == 0 && !noErrorIfNoConstants)
-				_errors.Add("No constants found for the enum `" + qualifiedName + "'");
 
 			var attributes = new List<Attribute> { ImportedAttribute(false) };
-			if (meta.Flags)
+			if (flags)
 				attributes.Add(FlagsAttribute);
+			if (type == GeneratedEnumSourceType.Attributes)
+				attributes.Add(NamedValuesAttribute);
 
 			var t = new TypeDeclaration {
 				ClassType = ClassType.Enum,
 				Modifiers = Modifiers.Public,
-				Name = meta.EnumName
+				Name = enumName
 			};
 			AddAttributes(t.Attributes, attributes);
-			t.Members.AddRange(constants.Select(c => new EnumMemberDeclaration { Name = c.Item1, Initializer = new PrimitiveExpression(c.Item2, c.Item2.ToString(CultureInfo.InvariantCulture)) }));
-			_result.Add(new NamespacedEntityDeclaration(meta.EnumNamespace, t));
+			t.Members.AddRange(enumMembers);
+			_result.Add(new NamespacedEntityDeclaration(enumNamespace, t));
 		}
 
-		private void GenerateEnumsFromConstants() {
-			foreach (var meta in _metadata.EnumsFromConstants) {
-				string qualifiedName = meta.EnumNamespace + "." + meta.EnumName;
-				ResolvedDefinition def;
-				if (!_types.TryGetValue(meta.Container, out def)) {
-					_errors.Add("Could not find the container `" + meta.Container + "' for the constants to generate the enum `" + qualifiedName + "'");
-					continue;
+		private void GenerateEnums(string typeNamespace, string typeName, string currentType, bool isDerived, IReadOnlyList<InterfaceMember> members) {
+			var meta = _metadata.Types[currentType];
+			foreach (var ge in meta.GeneratedEnums) {
+				if (ge.GenerateInDerivedTypes == isDerived) {
+					string enumNamespace = !string.IsNullOrEmpty(ge.EnumNamespace) ? ge.EnumNamespace : typeNamespace;
+					string enumName = ge.EnumName.Replace("$type$", typeName);
+
+					if (members != null) {
+						GenerateEnum(enumNamespace, enumName, ge.SourceType, ge.MembersRegex, ge.Names, ge.Flags, members);
+					}
+					else {
+						_errors.Add("Cannot generate an enum from the non-interface type `" + typeName + "'");
+					}
 				}
-				def.Decompose(
-					@interface        => GenerateEnumFromConstants(meta, @interface.Members),
-					callbackInterface => GenerateEnumFromConstants(meta, callbackInterface.Members),
-					dictionary        => _errors.Add("The container `" + meta.Container + "' for the constants to generate the enum `" + qualifiedName + "' is not an interface"),
-					callback          => _errors.Add("The container `" + meta.Container + "' for the constants to generate the enum `" + qualifiedName + "' is not an interface"),
-					exception         => _errors.Add("The container `" + meta.Container + "' for the constants to generate the enum `" + qualifiedName + "' is not an interface"),
-					@enum             => _errors.Add("The container `" + meta.Container + "' for the constants to generate the enum `" + qualifiedName + "' is not an interface"),
-					declaredInterface => _errors.Add("The container `" + meta.Container + "' for the constants to generate the enum `" + qualifiedName + "' does not have a definition")
-				);
+			}
+
+			var bases = _types[currentType].DecomposeWithResult(
+				@interface        => @interface.Base != null ? new[] { @interface.Base }.Concat(@interface.Implements) : @interface.Implements,
+				callbackInterface => callbackInterface.Base != null ? new[] { callbackInterface.Base } : new string[0],
+				dictionary        => new string[0],
+				callback          => new string[0],
+				exception         => new string[0],
+				@enum             => new string[0],
+				declaredInterface => new string[0]
+			);
+
+			if (isDerived || meta.Generate) {	// We do not want to generate enums inherited by types that are not themselves generated
+				foreach (var b in bases) {
+					GenerateEnums(typeNamespace, typeName, b, true, members);
+				}
+			}
+		}
+
+		private void GenerateEnums() {
+			foreach (var type in _types) {
+				var meta = _metadata.Types[type.Key];
+
+				var toProcess = new List<string> { type.Key };
+				var members = new List<InterfaceMember>();
+				while (toProcess.Count > 0) {
+					var t = toProcess[toProcess.Count -1];
+					toProcess.RemoveAt(toProcess.Count - 1);
+					_types[t].Decompose(
+						@interface        => { members.AddRange(@interface.Members); if (@interface.Base != null) toProcess.Add(@interface.Base); toProcess.AddRange(@interface.Implements); },
+						callbackInterface => { members.AddRange(callbackInterface.Members); if (callbackInterface.Base != null) toProcess.Add(callbackInterface.Base); },
+						dictionary        => {},
+						callback          => {},
+						exception         => {},
+						@enum             => {},
+						declaredInterface => {}
+					);
+				}
+				GenerateEnums(meta.Namespace, meta.CSharpName, type.Key, false, members);
 			}
 		}
 
@@ -1272,7 +1327,7 @@ namespace Generator {
 			c.MatchMetadataAndTypes();
 			if (c._errors.Count == 0) {
 				c.BuildCSharpModel();
-				c.GenerateEnumsFromConstants();
+				c.GenerateEnums();
 				c.GenerateStaticInstances();
 			}
 			return Tuple.Create<IReadOnlyList<NamespacedEntityDeclaration>, IReadOnlyList<string>>(c._result, c._errors);

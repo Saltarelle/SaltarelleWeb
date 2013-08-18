@@ -10,10 +10,34 @@ namespace System.Data.IndexedDB {
 		public void Abort() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture) {
+		}
+
+		public void AddEventListener(TransactionEvents type, Action listener) {
+		}
+
+		public void AddEventListener(TransactionEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(TransactionEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(TransactionEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener) {
+		}
+
+		public void AddEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture) {
+		}
+
+		public void AddEventListener(TransactionEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(TransactionEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -75,10 +99,34 @@ namespace System.Data.IndexedDB {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TransactionEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(TransactionEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TransactionEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(TransactionEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener) {
+		}
+
+		public void RemoveEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TransactionEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(TransactionEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

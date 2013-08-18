@@ -23,10 +23,34 @@ namespace System.Html {
 			}
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Element> listener) {
+		public void AddEventListener(ElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Element> listener, bool capture) {
+		public void AddEventListener(ElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ElementEvents type, HtmlEventHandlerWithTarget<Element> listener) {
+		}
+
+		public void AddEventListener(ElementEvents type, HtmlEventHandlerWithTarget<Element> listener, bool capture) {
+		}
+
+		public void AddEventListener(ElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Element> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Element> listener, bool capture) {
 		}
 
 		public void Blur() {
@@ -736,10 +760,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Element> listener) {
+		public void RemoveEventListener(ElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Element> listener, bool capture) {
+		public void RemoveEventListener(ElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ElementEvents type, HtmlEventHandlerWithTarget<Element> listener) {
+		}
+
+		public void RemoveEventListener(ElementEvents type, HtmlEventHandlerWithTarget<Element> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Element> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Element> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -7,10 +7,34 @@ namespace System.Threading.WebWorkers {
 		internal WorkerGlobalScope() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
+		}
+
+		public void AddEventListener(WorkerGlobalScopeEvents type, Action listener) {
+		}
+
+		public void AddEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
+		}
+
+		public void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
+		}
+
+		public void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture) {
 		}
 
 		public string Atob(string stringToEncode) {
@@ -75,10 +99,34 @@ namespace System.Threading.WebWorkers {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener) {
+		}
+
+		public void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

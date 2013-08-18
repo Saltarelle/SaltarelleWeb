@@ -4,10 +4,34 @@ using System.Runtime.CompilerServices;
 namespace System.Html.Media.Audio {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
 	public partial class AudioContext : EventTarget {
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener) {
+		public void AddEventListener(AudioContextEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener, bool capture) {
+		public void AddEventListener(AudioContextEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioContextEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(AudioContextEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioContextEvents type, HtmlEventHandlerWithTarget<AudioContext> listener) {
+		}
+
+		public void AddEventListener(AudioContextEvents type, HtmlEventHandlerWithTarget<AudioContext> listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioContextEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(AudioContextEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener, bool capture) {
 		}
 
 		public AnalyserNode CreateAnalyser() {
@@ -161,10 +185,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener) {
+		public void RemoveEventListener(AudioContextEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener, bool capture) {
+		public void RemoveEventListener(AudioContextEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioContextEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(AudioContextEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioContextEvents type, HtmlEventHandlerWithTarget<AudioContext> listener) {
+		}
+
+		public void RemoveEventListener(AudioContextEvents type, HtmlEventHandlerWithTarget<AudioContext> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioContextEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(AudioContextEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

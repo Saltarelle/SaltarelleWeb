@@ -6,10 +6,34 @@ namespace System.Html {
 		internal ProgressElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener) {
+		public void AddEventListener(ProgressElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture) {
+		public void AddEventListener(ProgressElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ProgressElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ProgressElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ProgressElementEvents type, HtmlEventHandlerWithTarget<ProgressElement> listener) {
+		}
+
+		public void AddEventListener(ProgressElementEvents type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(ProgressElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ProgressElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -28,10 +52,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener) {
+		public void RemoveEventListener(ProgressElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture) {
+		public void RemoveEventListener(ProgressElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ProgressElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ProgressElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ProgressElementEvents type, HtmlEventHandlerWithTarget<ProgressElement> listener) {
+		}
+
+		public void RemoveEventListener(ProgressElementEvents type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ProgressElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ProgressElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

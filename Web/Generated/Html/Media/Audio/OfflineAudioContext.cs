@@ -9,10 +9,34 @@ namespace System.Html.Media.Audio {
 		public OfflineAudioContext(uint numberOfChannels, uint length, float sampleRate) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener) {
+		public void AddEventListener(OfflineAudioContextEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener, bool capture) {
+		public void AddEventListener(OfflineAudioContextEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(OfflineAudioContextEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(OfflineAudioContextEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(OfflineAudioContextEvents type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener) {
+		}
+
+		public void AddEventListener(OfflineAudioContextEvents type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener, bool capture) {
+		}
+
+		public void AddEventListener(OfflineAudioContextEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(OfflineAudioContextEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener, bool capture) {
 		}
 
 		[IntrinsicProperty, ScriptName("oncomplete")]
@@ -24,10 +48,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener) {
+		public void RemoveEventListener(OfflineAudioContextEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener, bool capture) {
+		public void RemoveEventListener(OfflineAudioContextEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OfflineAudioContextEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(OfflineAudioContextEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OfflineAudioContextEvents type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener) {
+		}
+
+		public void RemoveEventListener(OfflineAudioContextEvents type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OfflineAudioContextEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(OfflineAudioContextEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener, bool capture) {
 		}
 
 		public void StartRendering() {

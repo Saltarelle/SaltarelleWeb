@@ -164,7 +164,7 @@ namespace Generator.AstNodes {
 			}
 		}
 
-		public T DecomposeWithResult<T>(Func<InterfaceData, T> @interface, Func<InterfaceData, T> callbackInterface, Func<DictionaryData, T> dictionary, Func<CallbackData, T> callback, Func<ExceptionData, T> exception, Func<EnumData, T> @enum, Func<DeclaredInterfaceData, T> declaredInterface) {
+		public T DecomposeWithResult<T>(Func<InterfaceData, T> @interface, Func<CallbackInterfaceData, T> callbackInterface, Func<DictionaryData, T> dictionary, Func<CallbackData, T> callback, Func<ExceptionData, T> exception, Func<EnumData, T> @enum, Func<DeclaredInterfaceData, T> declaredInterface) {
 			if (_interface != null) {
 				if (@interface != null)
 					return @interface(_interface);
@@ -173,7 +173,7 @@ namespace Generator.AstNodes {
 			}
 			else if (_callbackInterface != null) {
 				if (callbackInterface != null)
-					return callbackInterface(_interface);
+					return callbackInterface(_callbackInterface);
 				else
 					throw new InvalidOperationException("Case 'CallbackInterface' not handled");
 			}

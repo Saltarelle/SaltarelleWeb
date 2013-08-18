@@ -6,10 +6,34 @@ namespace System.Html.Media.Audio {
 		internal ScriptProcessorNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener) {
+		public void AddEventListener(ScriptProcessorNodeEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener, bool capture) {
+		public void AddEventListener(ScriptProcessorNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ScriptProcessorNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ScriptProcessorNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ScriptProcessorNodeEvents type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener) {
+		}
+
+		public void AddEventListener(ScriptProcessorNodeEvents type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(ScriptProcessorNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ScriptProcessorNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -28,10 +52,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener) {
+		public void RemoveEventListener(ScriptProcessorNodeEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener, bool capture) {
+		public void RemoveEventListener(ScriptProcessorNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ScriptProcessorNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ScriptProcessorNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ScriptProcessorNodeEvents type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener) {
+		}
+
+		public void RemoveEventListener(ScriptProcessorNodeEvents type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ScriptProcessorNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ScriptProcessorNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener, bool capture) {
 		}
 	}
 }

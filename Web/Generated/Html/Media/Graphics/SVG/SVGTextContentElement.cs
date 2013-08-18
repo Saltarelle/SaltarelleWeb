@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGTextContentElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextContentElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGTextContentElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextContentElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGTextContentElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextContentElementEvents type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener) {
+		}
+
+		public void AddEventListener(SVGTextContentElementEvents type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextContentElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGTextContentElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		public int GetCharNumAtPosition(SVGPoint point) {
@@ -60,10 +84,34 @@ namespace System.Html.Media.Graphics.SVG {
 		[ScriptName("LENGTHADJUST_UNKNOWN")]
 		public const ushort LENGTHADJUST_UNKNOWN = 0;
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextContentElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGTextContentElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextContentElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGTextContentElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextContentElementEvents type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGTextContentElementEvents type, HtmlEventHandlerWithTarget<SVGTextContentElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextContentElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGTextContentElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		public void SelectSubString(uint charnum, uint nchars) {

@@ -7,10 +7,34 @@ namespace System.Html {
 		internal VideoElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(VideoElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(VideoElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(VideoElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(VideoElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(VideoElementEvents type, HtmlEventHandlerWithTarget<VideoElement> listener) {
+		}
+
+		public void AddEventListener(VideoElementEvents type, HtmlEventHandlerWithTarget<VideoElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(VideoElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(VideoElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		public VideoPlaybackQuality GetVideoPlaybackQuality() {
@@ -35,10 +59,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(VideoElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(VideoElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(VideoElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(VideoElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(VideoElementEvents type, HtmlEventHandlerWithTarget<VideoElement> listener) {
+		}
+
+		public void RemoveEventListener(VideoElementEvents type, HtmlEventHandlerWithTarget<VideoElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(VideoElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(VideoElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

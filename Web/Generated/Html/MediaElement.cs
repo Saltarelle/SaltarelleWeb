@@ -7,10 +7,34 @@ namespace System.Html {
 		internal MediaElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener) {
+		public void AddEventListener(MediaElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture) {
+		public void AddEventListener(MediaElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(MediaElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(MediaElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener) {
+		}
+
+		public void AddEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(MediaElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(MediaElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture) {
 		}
 
 		public TextTrack AddTextTrack(TextTrackKind kind) {
@@ -218,10 +242,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener) {
+		public void RemoveEventListener(MediaElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture) {
+		public void RemoveEventListener(MediaElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MediaElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(MediaElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener) {
+		}
+
+		public void RemoveEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MediaElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(MediaElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGAltGlyphElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAltGlyphElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGAltGlyphElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener) {
+		}
+
+		public void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGAltGlyphElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGAltGlyphElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -37,10 +61,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAltGlyphElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGAltGlyphElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGAltGlyphElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGAltGlyphElementEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

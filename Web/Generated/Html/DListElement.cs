@@ -6,10 +6,34 @@ namespace System.Html {
 		internal DListElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener) {
+		public void AddEventListener(DListElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener, bool capture) {
+		public void AddEventListener(DListElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(DListElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(DListElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(DListElementEvents type, HtmlEventHandlerWithTarget<DListElement> listener) {
+		}
+
+		public void AddEventListener(DListElementEvents type, HtmlEventHandlerWithTarget<DListElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(DListElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(DListElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -21,10 +45,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener) {
+		public void RemoveEventListener(DListElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener, bool capture) {
+		public void RemoveEventListener(DListElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DListElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(DListElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DListElementEvents type, HtmlEventHandlerWithTarget<DListElement> listener) {
+		}
+
+		public void RemoveEventListener(DListElementEvents type, HtmlEventHandlerWithTarget<DListElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DListElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(DListElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DListElement> listener, bool capture) {
 		}
 	}
 }

@@ -7,10 +7,34 @@ namespace System.Data.IndexedDB {
 		internal OpenDBRequest() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener) {
+		public void AddEventListener(OpenDBRequestEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener, bool capture) {
+		public void AddEventListener(OpenDBRequestEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(OpenDBRequestEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(OpenDBRequestEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(OpenDBRequestEvents type, HtmlEventHandlerWithTarget<OpenDBRequest> listener) {
+		}
+
+		public void AddEventListener(OpenDBRequestEvents type, HtmlEventHandlerWithTarget<OpenDBRequest> listener, bool capture) {
+		}
+
+		public void AddEventListener(OpenDBRequestEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(OpenDBRequestEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener, bool capture) {
 		}
 
 		[IntrinsicProperty, ScriptName("onblocked")]
@@ -31,10 +55,34 @@ namespace System.Data.IndexedDB {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener) {
+		public void RemoveEventListener(OpenDBRequestEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener, bool capture) {
+		public void RemoveEventListener(OpenDBRequestEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OpenDBRequestEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(OpenDBRequestEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OpenDBRequestEvents type, HtmlEventHandlerWithTarget<OpenDBRequest> listener) {
+		}
+
+		public void RemoveEventListener(OpenDBRequestEvents type, HtmlEventHandlerWithTarget<OpenDBRequest> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OpenDBRequestEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(OpenDBRequestEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener, bool capture) {
 		}
 	}
 }

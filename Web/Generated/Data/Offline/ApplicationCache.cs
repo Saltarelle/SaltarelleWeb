@@ -10,10 +10,34 @@ namespace System.Data.Offline {
 		public void Abort() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener) {
+		public void AddEventListener(ApplicationCacheEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture) {
+		public void AddEventListener(ApplicationCacheEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ApplicationCacheEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ApplicationCacheEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener) {
+		}
+
+		public void AddEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture) {
+		}
+
+		public void AddEventListener(ApplicationCacheEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ApplicationCacheEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture) {
 		}
 
 		public const ushort CHECKING = 2;
@@ -96,10 +120,34 @@ namespace System.Data.Offline {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener) {
+		public void RemoveEventListener(ApplicationCacheEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture) {
+		public void RemoveEventListener(ApplicationCacheEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener) {
+		}
+
+		public void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ApplicationCacheEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ApplicationCacheEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

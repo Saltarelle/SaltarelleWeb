@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFESpotLightElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFESpotLightElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFESpotLightElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener) {
+		}
+
+		public void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFESpotLightElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFESpotLightElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -40,10 +64,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFESpotLightElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFESpotLightElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFESpotLightElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFESpotLightElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

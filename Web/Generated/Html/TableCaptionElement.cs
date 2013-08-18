@@ -6,10 +6,34 @@ namespace System.Html {
 		internal TableCaptionElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(TableCaptionElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(TableCaptionElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(TableCaptionElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(TableCaptionElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(TableCaptionElementEvents type, HtmlEventHandlerWithTarget<TableCaptionElement> listener) {
+		}
+
+		public void AddEventListener(TableCaptionElementEvents type, HtmlEventHandlerWithTarget<TableCaptionElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(TableCaptionElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(TableCaptionElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -21,10 +45,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TableCaptionElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(TableCaptionElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TableCaptionElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(TableCaptionElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TableCaptionElementEvents type, HtmlEventHandlerWithTarget<TableCaptionElement> listener) {
+		}
+
+		public void RemoveEventListener(TableCaptionElementEvents type, HtmlEventHandlerWithTarget<TableCaptionElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TableCaptionElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(TableCaptionElementEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

@@ -7,10 +7,34 @@ namespace System.Threading.WebWorkers {
 		internal MessagePort() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener) {
+		public void AddEventListener(MessagePortEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture) {
+		public void AddEventListener(MessagePortEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(MessagePortEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(MessagePortEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener) {
+		}
+
+		public void AddEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture) {
+		}
+
+		public void AddEventListener(MessagePortEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(MessagePortEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture) {
 		}
 
 		public void Close() {
@@ -31,10 +55,34 @@ namespace System.Threading.WebWorkers {
 		public void PostMessage(object message, ITransferable[] transfer) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener) {
+		public void RemoveEventListener(MessagePortEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture) {
+		public void RemoveEventListener(MessagePortEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MessagePortEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(MessagePortEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener) {
+		}
+
+		public void RemoveEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(MessagePortEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(MessagePortEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture) {
 		}
 
 		public void Start() {

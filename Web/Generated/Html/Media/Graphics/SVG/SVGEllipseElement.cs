@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGEllipseElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGEllipseElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGEllipseElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener) {
+		}
+
+		public void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGEllipseElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGEllipseElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -26,10 +50,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGEllipseElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGEllipseElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGEllipseElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGEllipseElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

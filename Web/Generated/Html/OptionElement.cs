@@ -23,10 +23,34 @@ namespace System.Html {
 		public OptionElement(string text, string value, bool defaultSelected, bool selected) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener) {
+		public void AddEventListener(OptionElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture) {
+		public void AddEventListener(OptionElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(OptionElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(OptionElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener) {
+		}
+
+		public void AddEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(OptionElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(OptionElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -70,10 +94,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener) {
+		public void RemoveEventListener(OptionElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture) {
+		public void RemoveEventListener(OptionElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OptionElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(OptionElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener) {
+		}
+
+		public void RemoveEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OptionElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(OptionElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -7,10 +7,34 @@ namespace System.Html {
 		internal EmbedElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener) {
+		public void AddEventListener(EmbedElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture) {
+		public void AddEventListener(EmbedElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(EmbedElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(EmbedElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener) {
+		}
+
+		public void AddEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(EmbedElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(EmbedElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -49,10 +73,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener) {
+		public void RemoveEventListener(EmbedElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture) {
+		public void RemoveEventListener(EmbedElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(EmbedElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(EmbedElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener) {
+		}
+
+		public void RemoveEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(EmbedElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(EmbedElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

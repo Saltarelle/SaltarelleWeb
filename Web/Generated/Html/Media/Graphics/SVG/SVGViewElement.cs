@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGViewElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGViewElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGViewElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGViewElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGViewElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener) {
+		}
+
+		public void AddEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGViewElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGViewElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -19,10 +43,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGViewElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGViewElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGViewElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGViewElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[ScriptName("SVG_ZOOMANDPAN_DISABLE")]

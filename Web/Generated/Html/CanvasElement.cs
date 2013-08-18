@@ -8,10 +8,34 @@ namespace System.Html {
 		internal CanvasElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener) {
+		public void AddEventListener(CanvasElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener, bool capture) {
+		public void AddEventListener(CanvasElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(CanvasElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(CanvasElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(CanvasElementEvents type, HtmlEventHandlerWithTarget<CanvasElement> listener) {
+		}
+
+		public void AddEventListener(CanvasElementEvents type, HtmlEventHandlerWithTarget<CanvasElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(CanvasElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(CanvasElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener, bool capture) {
 		}
 
 		public CanvasRenderingContext GetContext(string contextId) {
@@ -31,10 +55,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener) {
+		public void RemoveEventListener(CanvasElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener, bool capture) {
+		public void RemoveEventListener(CanvasElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(CanvasElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(CanvasElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(CanvasElementEvents type, HtmlEventHandlerWithTarget<CanvasElement> listener) {
+		}
+
+		public void RemoveEventListener(CanvasElementEvents type, HtmlEventHandlerWithTarget<CanvasElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(CanvasElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(CanvasElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<CanvasElement> listener, bool capture) {
 		}
 
 		public void ToBlob(Action<Blob> callback) {

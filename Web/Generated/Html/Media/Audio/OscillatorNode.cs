@@ -6,10 +6,34 @@ namespace System.Html.Media.Audio {
 		internal OscillatorNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener) {
+		public void AddEventListener(OscillatorNodeEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
+		public void AddEventListener(OscillatorNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(OscillatorNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(OscillatorNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener) {
+		}
+
+		public void AddEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(OscillatorNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(OscillatorNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -35,10 +59,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener) {
+		public void RemoveEventListener(OscillatorNodeEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
+		public void RemoveEventListener(OscillatorNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener) {
+		}
+
+		public void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(OscillatorNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(OscillatorNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
 		}
 
 		public void SetPeriodicWave(PeriodicWave periodicWave) {

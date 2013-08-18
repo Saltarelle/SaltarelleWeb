@@ -6,10 +6,34 @@ namespace System.Html {
 		internal LabelElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener) {
+		public void AddEventListener(LabelElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture) {
+		public void AddEventListener(LabelElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(LabelElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(LabelElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener) {
+		}
+
+		public void AddEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(LabelElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(LabelElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -35,10 +59,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener) {
+		public void RemoveEventListener(LabelElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture) {
+		public void RemoveEventListener(LabelElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LabelElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(LabelElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener) {
+		}
+
+		public void RemoveEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LabelElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(LabelElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture) {
 		}
 	}
 }

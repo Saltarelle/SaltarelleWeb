@@ -23,10 +23,34 @@ namespace System.Html {
 		public void Add(TypeOption<OptionElement, OptGroupElement> element, TypeOption<Element, int> before) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener) {
+		public void AddEventListener(SelectElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture) {
+		public void AddEventListener(SelectElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SelectElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SelectElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener) {
+		}
+
+		public void AddEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SelectElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SelectElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -111,10 +135,34 @@ namespace System.Html {
 		public void Remove(int index) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener) {
+		public void RemoveEventListener(SelectElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture) {
+		public void RemoveEventListener(SelectElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SelectElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SelectElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener) {
+		}
+
+		public void RemoveEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SelectElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SelectElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

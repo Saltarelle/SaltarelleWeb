@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEOffsetElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEOffsetElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEOffsetElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEOffsetElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEOffsetElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEOffsetElementEvents type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEOffsetElementEvents type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEOffsetElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEOffsetElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -40,10 +64,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEOffsetElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEOffsetElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEOffsetElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEOffsetElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEOffsetElementEvents type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEOffsetElementEvents type, HtmlEventHandlerWithTarget<SVGFEOffsetElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEOffsetElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEOffsetElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

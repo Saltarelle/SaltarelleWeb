@@ -11,16 +11,64 @@ namespace System.Html {
 		public AudioElement(string src) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener) {
+		public void AddEventListener(AudioElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener, bool capture) {
+		public void AddEventListener(AudioElementEvents type, Action listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener) {
+		public void AddEventListener(AudioElementEvents type, HtmlEventHandler listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener, bool capture) {
+		public void AddEventListener(AudioElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioElementEvents type, HtmlEventHandlerWithTarget<AudioElement> listener) {
+		}
+
+		public void AddEventListener(AudioElementEvents type, HtmlEventHandlerWithTarget<AudioElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(AudioElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(AudioElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(AudioElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(AudioElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioElementEvents type, HtmlEventHandlerWithTarget<AudioElement> listener) {
+		}
+
+		public void RemoveEventListener(AudioElementEvents type, HtmlEventHandlerWithTarget<AudioElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AudioElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(AudioElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioElement> listener, bool capture) {
 		}
 	}
 }

@@ -6,10 +6,34 @@ namespace System.Html {
 		internal StyleElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(StyleElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(StyleElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(StyleElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(StyleElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(StyleElementEvents type, HtmlEventHandlerWithTarget<StyleElement> listener) {
+		}
+
+		public void AddEventListener(StyleElementEvents type, HtmlEventHandlerWithTarget<StyleElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(StyleElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(StyleElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -30,10 +54,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(StyleElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(StyleElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(StyleElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(StyleElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(StyleElementEvents type, HtmlEventHandlerWithTarget<StyleElement> listener) {
+		}
+
+		public void RemoveEventListener(StyleElementEvents type, HtmlEventHandlerWithTarget<StyleElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(StyleElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(StyleElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

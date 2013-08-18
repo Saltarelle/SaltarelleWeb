@@ -16,10 +16,34 @@ namespace System.Html {
 			}
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener) {
+		public void AddEventListener(InputElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture) {
+		public void AddEventListener(InputElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(InputElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(InputElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener) {
+		}
+
+		public void AddEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(InputElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(InputElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -263,10 +287,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener) {
+		public void RemoveEventListener(InputElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture) {
+		public void RemoveEventListener(InputElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(InputElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(InputElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener) {
+		}
+
+		public void RemoveEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(InputElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(InputElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

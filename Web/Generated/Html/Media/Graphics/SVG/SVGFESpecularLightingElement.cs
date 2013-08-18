@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFESpecularLightingElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFESpecularLightingElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFESpecularLightingElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener) {
+		}
+
+		public void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -40,10 +64,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -6,10 +6,34 @@ namespace System.Html.Media.Audio {
 		internal PannerNode() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener) {
+		public void AddEventListener(PannerNodeEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture) {
+		public void AddEventListener(PannerNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(PannerNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(PannerNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener) {
+		}
+
+		public void AddEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture) {
+		}
+
+		public void AddEventListener(PannerNodeEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(PannerNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -88,10 +112,34 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener) {
+		public void RemoveEventListener(PannerNodeEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture) {
+		public void RemoveEventListener(PannerNodeEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(PannerNodeEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(PannerNodeEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener) {
+		}
+
+		public void RemoveEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(PannerNodeEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(PannerNodeEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

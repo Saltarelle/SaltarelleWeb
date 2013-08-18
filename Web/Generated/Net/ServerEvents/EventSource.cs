@@ -13,10 +13,34 @@ namespace System.Net.ServerEvents {
 		public EventSource(string url, EventSourceInit eventSourceInitDict) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener) {
+		public void AddEventListener(EventSourceEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener, bool capture) {
+		public void AddEventListener(EventSourceEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(EventSourceEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(EventSourceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(EventSourceEvents type, HtmlEventHandlerWithTarget<EventSource> listener) {
+		}
+
+		public void AddEventListener(EventSourceEvents type, HtmlEventHandlerWithTarget<EventSource> listener, bool capture) {
+		}
+
+		public void AddEventListener(EventSourceEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(EventSourceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener, bool capture) {
 		}
 
 		public void Close() {
@@ -62,10 +86,34 @@ namespace System.Net.ServerEvents {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener) {
+		public void RemoveEventListener(EventSourceEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener, bool capture) {
+		public void RemoveEventListener(EventSourceEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(EventSourceEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(EventSourceEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(EventSourceEvents type, HtmlEventHandlerWithTarget<EventSource> listener) {
+		}
+
+		public void RemoveEventListener(EventSourceEvents type, HtmlEventHandlerWithTarget<EventSource> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(EventSourceEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(EventSourceEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

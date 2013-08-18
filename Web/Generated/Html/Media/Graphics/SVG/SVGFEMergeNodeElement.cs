@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEMergeNodeElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMergeNodeElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEMergeNodeElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMergeNodeElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEMergeNodeElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMergeNodeElementEvents type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEMergeNodeElementEvents type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEMergeNodeElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEMergeNodeElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -19,10 +43,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeNodeElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeNodeElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeNodeElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeNodeElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeNodeElementEvents type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeNodeElementEvents type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeNodeElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEMergeNodeElementEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFEDiffuseLightingElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener) {
+		}
+
+		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -47,10 +71,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

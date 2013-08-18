@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGMaskElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGMaskElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGMaskElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGMaskElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGMaskElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGMaskElementEvents type, HtmlEventHandlerWithTarget<SVGMaskElement> listener) {
+		}
+
+		public void AddEventListener(SVGMaskElementEvents type, HtmlEventHandlerWithTarget<SVGMaskElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGMaskElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGMaskElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -33,10 +57,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGMaskElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGMaskElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGMaskElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGMaskElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGMaskElementEvents type, HtmlEventHandlerWithTarget<SVGMaskElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGMaskElementEvents type, HtmlEventHandlerWithTarget<SVGMaskElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGMaskElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGMaskElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[ScriptName("SVG_MASKTYPE_ALPHA")]

@@ -6,10 +6,34 @@ namespace System.Html {
 		internal ParagraphElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener) {
+		public void AddEventListener(ParagraphElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture) {
+		public void AddEventListener(ParagraphElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ParagraphElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ParagraphElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener) {
+		}
+
+		public void AddEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(ParagraphElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ParagraphElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -21,10 +45,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener) {
+		public void RemoveEventListener(ParagraphElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture) {
+		public void RemoveEventListener(ParagraphElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener) {
+		}
+
+		public void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ParagraphElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ParagraphElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture) {
 		}
 	}
 }

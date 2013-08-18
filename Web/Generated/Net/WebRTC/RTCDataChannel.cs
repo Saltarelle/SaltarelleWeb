@@ -9,10 +9,34 @@ namespace System.Net.WebRTC {
 		internal RTCDataChannel() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener) {
+		public void AddEventListener(RTCDataChannelEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture) {
+		public void AddEventListener(RTCDataChannelEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(RTCDataChannelEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(RTCDataChannelEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener) {
+		}
+
+		public void AddEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture) {
+		}
+
+		public void AddEventListener(RTCDataChannelEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(RTCDataChannelEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -112,10 +136,34 @@ namespace System.Net.WebRTC {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener) {
+		public void RemoveEventListener(RTCDataChannelEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture) {
+		public void RemoveEventListener(RTCDataChannelEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener) {
+		}
+
+		public void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(RTCDataChannelEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(RTCDataChannelEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture) {
 		}
 
 		public void Send(ArrayBuffer data) {

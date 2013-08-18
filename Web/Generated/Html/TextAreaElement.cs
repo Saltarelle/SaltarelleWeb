@@ -6,10 +6,34 @@ namespace System.Html {
 		internal TextAreaElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(TextAreaElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(TextAreaElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(TextAreaElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(TextAreaElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener) {
+		}
+
+		public void AddEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(TextAreaElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(TextAreaElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -95,10 +119,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextAreaElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(TextAreaElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener) {
+		}
+
+		public void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TextAreaElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(TextAreaElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

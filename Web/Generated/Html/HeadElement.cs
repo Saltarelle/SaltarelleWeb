@@ -6,16 +6,64 @@ namespace System.Html {
 		internal HeadElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener) {
+		public void AddEventListener(HeadElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener, bool capture) {
+		public void AddEventListener(HeadElementEvents type, Action listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener) {
+		public void AddEventListener(HeadElementEvents type, HtmlEventHandler listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener, bool capture) {
+		public void AddEventListener(HeadElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(HeadElementEvents type, HtmlEventHandlerWithTarget<HeadElement> listener) {
+		}
+
+		public void AddEventListener(HeadElementEvents type, HtmlEventHandlerWithTarget<HeadElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(HeadElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(HeadElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(HeadElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(HeadElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(HeadElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(HeadElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(HeadElementEvents type, HtmlEventHandlerWithTarget<HeadElement> listener) {
+		}
+
+		public void RemoveEventListener(HeadElementEvents type, HtmlEventHandlerWithTarget<HeadElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(HeadElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(HeadElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HeadElement> listener, bool capture) {
 		}
 	}
 }

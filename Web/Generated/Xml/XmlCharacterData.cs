@@ -7,10 +7,34 @@ namespace System.Xml {
 		internal XmlCharacterData() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlCharacterDataEvents type, Action listener) {
+		}
+
+		public void AddEventListener(XmlCharacterDataEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener) {
+		}
+
+		public void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlCharacterDataEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(XmlCharacterDataEvents type, IEventListener listener, bool capture) {
 		}
 
 		public void AppendData(string data) {
@@ -55,10 +79,34 @@ namespace System.Xml {
 		public void Remove() {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlCharacterDataEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(XmlCharacterDataEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener) {
+		}
+
+		public void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlCharacterDataEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(XmlCharacterDataEvents type, IEventListener listener, bool capture) {
 		}
 
 		public void ReplaceData(uint offset, uint count, string data) {

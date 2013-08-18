@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGFECompositeElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFECompositeElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGFECompositeElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener) {
+		}
+
+		public void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGFECompositeElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGFECompositeElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -68,10 +92,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFECompositeElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGFECompositeElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGFECompositeElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGFECompositeElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

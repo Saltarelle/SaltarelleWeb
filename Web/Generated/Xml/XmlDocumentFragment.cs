@@ -7,10 +7,34 @@ namespace System.Xml {
 		public XmlDocumentFragment() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlDocumentFragmentEvents type, Action listener) {
+		}
+
+		public void AddEventListener(XmlDocumentFragmentEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener) {
+		}
+
+		public void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture) {
+		}
+
+		public void AddEventListener(XmlDocumentFragmentEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(XmlDocumentFragmentEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -49,10 +73,34 @@ namespace System.Xml {
 			return default(XmlNodeList);
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlDocumentFragmentEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(XmlDocumentFragmentEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener) {
+		}
+
+		public void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(XmlDocumentFragmentEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(XmlDocumentFragmentEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

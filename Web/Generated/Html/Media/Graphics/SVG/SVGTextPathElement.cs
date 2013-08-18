@@ -6,10 +6,34 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGTextPathElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextPathElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(SVGTextPathElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener) {
+		}
+
+		public void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextPathElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGTextPathElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -26,10 +50,34 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextPathElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGTextPathElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextPathElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGTextPathElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

@@ -6,10 +6,34 @@ namespace System.Html {
 		internal FontElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener) {
+		public void AddEventListener(FontElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture) {
+		public void AddEventListener(FontElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(FontElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(FontElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(FontElementEvents type, HtmlEventHandlerWithTarget<FontElement> listener) {
+		}
+
+		public void AddEventListener(FontElementEvents type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(FontElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(FontElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -30,10 +54,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener) {
+		public void RemoveEventListener(FontElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture) {
+		public void RemoveEventListener(FontElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FontElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(FontElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FontElementEvents type, HtmlEventHandlerWithTarget<FontElement> listener) {
+		}
+
+		public void RemoveEventListener(FontElementEvents type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(FontElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(FontElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

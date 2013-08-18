@@ -6,10 +6,34 @@ namespace System.Html {
 		internal DirectoryElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener) {
+		public void AddEventListener(DirectoryElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener, bool capture) {
+		public void AddEventListener(DirectoryElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(DirectoryElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(DirectoryElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(DirectoryElementEvents type, HtmlEventHandlerWithTarget<DirectoryElement> listener) {
+		}
+
+		public void AddEventListener(DirectoryElementEvents type, HtmlEventHandlerWithTarget<DirectoryElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(DirectoryElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(DirectoryElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -21,10 +45,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener) {
+		public void RemoveEventListener(DirectoryElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener, bool capture) {
+		public void RemoveEventListener(DirectoryElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DirectoryElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(DirectoryElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DirectoryElementEvents type, HtmlEventHandlerWithTarget<DirectoryElement> listener) {
+		}
+
+		public void RemoveEventListener(DirectoryElementEvents type, HtmlEventHandlerWithTarget<DirectoryElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(DirectoryElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(DirectoryElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener, bool capture) {
 		}
 	}
 }

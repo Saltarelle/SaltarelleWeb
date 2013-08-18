@@ -6,10 +6,34 @@ namespace System.Html {
 		internal TableColElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(TableColElementEvents type, Action listener) {
+		}
+
+		public void AddEventListener(TableColElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(TableColElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(TableColElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(TableColElementEvents type, HtmlEventHandlerWithTarget<TableColElement> listener) {
+		}
+
+		public void AddEventListener(TableColElementEvents type, HtmlEventHandlerWithTarget<TableColElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(TableColElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(TableColElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -39,10 +63,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener, bool capture) {
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableColElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TableColElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(TableColElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TableColElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(TableColElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TableColElementEvents type, HtmlEventHandlerWithTarget<TableColElement> listener) {
+		}
+
+		public void RemoveEventListener(TableColElementEvents type, HtmlEventHandlerWithTarget<TableColElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(TableColElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(TableColElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

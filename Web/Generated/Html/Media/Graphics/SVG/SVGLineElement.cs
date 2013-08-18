@@ -6,16 +6,64 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGLineElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener) {
+		public void AddEventListener(SVGLineElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener, bool capture) {
+		public void AddEventListener(SVGLineElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGLineElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGLineElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGLineElementEvents type, HtmlEventHandlerWithTarget<SVGLineElement> listener) {
+		}
+
+		public void AddEventListener(SVGLineElementEvents type, HtmlEventHandlerWithTarget<SVGLineElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGLineElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGLineElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGLineElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGLineElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGLineElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGLineElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGLineElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGLineElementEvents type, HtmlEventHandlerWithTarget<SVGLineElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGLineElementEvents type, HtmlEventHandlerWithTarget<SVGLineElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGLineElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGLineElementEvents type, IEventListener listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

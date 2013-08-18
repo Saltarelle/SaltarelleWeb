@@ -6,10 +6,34 @@ namespace System.Html {
 		internal Screen() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener) {
+		public void AddEventListener(ScreenEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture) {
+		public void AddEventListener(ScreenEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(ScreenEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(ScreenEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener) {
+		}
+
+		public void AddEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener, bool capture) {
+		}
+
+		public void AddEventListener(ScreenEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(ScreenEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -68,10 +92,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener) {
+		public void RemoveEventListener(ScreenEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture) {
+		public void RemoveEventListener(ScreenEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ScreenEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(ScreenEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener) {
+		}
+
+		public void RemoveEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(ScreenEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(ScreenEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

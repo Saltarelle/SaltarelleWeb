@@ -6,10 +6,34 @@ namespace System.Html {
 		internal AppletElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener) {
+		public void AddEventListener(AppletElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener, bool capture) {
+		public void AddEventListener(AppletElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(AppletElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(AppletElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(AppletElementEvents type, HtmlEventHandlerWithTarget<AppletElement> listener) {
+		}
+
+		public void AddEventListener(AppletElementEvents type, HtmlEventHandlerWithTarget<AppletElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(AppletElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(AppletElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -93,10 +117,34 @@ namespace System.Html {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener) {
+		public void RemoveEventListener(AppletElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener, bool capture) {
+		public void RemoveEventListener(AppletElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AppletElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(AppletElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AppletElementEvents type, HtmlEventHandlerWithTarget<AppletElement> listener) {
+		}
+
+		public void RemoveEventListener(AppletElementEvents type, HtmlEventHandlerWithTarget<AppletElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(AppletElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(AppletElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AppletElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

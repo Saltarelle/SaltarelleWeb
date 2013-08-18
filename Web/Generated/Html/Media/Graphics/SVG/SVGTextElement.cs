@@ -6,16 +6,64 @@ namespace System.Html.Media.Graphics.SVG {
 		internal SVGTextElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextElement> listener) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextElement> listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextElement> listener, bool capture) {
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextElement> listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextElement> listener) {
+		public void AddEventListener(SVGTextElementEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextElement> listener, bool capture) {
+		public void AddEventListener(SVGTextElementEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SVGTextElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextElementEvents type, HtmlEventHandlerWithTarget<SVGTextElement> listener) {
+		}
+
+		public void AddEventListener(SVGTextElementEvents type, HtmlEventHandlerWithTarget<SVGTextElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(SVGTextElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SVGTextElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(SVGTextElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SVGTextElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextElementEvents type, HtmlEventHandlerWithTarget<SVGTextElement> listener) {
+		}
+
+		public void RemoveEventListener(SVGTextElementEvents type, HtmlEventHandlerWithTarget<SVGTextElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SVGTextElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SVGTextElementEvents type, IEventListener listener, bool capture) {
 		}
 	}
 }

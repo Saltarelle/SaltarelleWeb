@@ -21,7 +21,7 @@ namespace Generator.Meta {
 					errors.Add("Must specify namespace for the type `" + item.TypeName + "'");
 			}
 
-			return Tuple.Create(errors.Count == 0 ? new Metadata(parsed.Item1, parsed.Item2, parsed.Item3) : null, errors);
+			return Tuple.Create(errors.Count == 0 ? new Metadata(parsed.Item1, parsed.Item2) : null, errors);
 		}
 	}
 }

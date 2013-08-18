@@ -57,23 +57,21 @@ NL : '\n';
 Identifier : NonQuotedIdentifier | QuotedIdentifier;
 
 fragment Whitespace : ( '\t' | ' ' | '\r' | '\u000C' )+;
-fragment NonQuotedIdentifier : ('A'..'Z' | '_' | 'a'..'z') ('A'..'Z' | '_' | 'a'..'z' | '0'..'9')*;
+fragment NonQuotedIdentifier : ('A'..'Z' | '_' | 'a'..'z' | '$') ('A'..'Z' | '_' | 'a'..'z' | '$' | '0'..'9')*;
 fragment QuotedIdentifier : '"' ~'"'* '"' { $text = $text.Substring(1, $text.Length - 2); };
 
 //////////////////////////////////////// Parser rules ////////////////////////////////////////
 
-public file returns[Tuple<List<TypeMetadata>, List<EnumFromConstants>, List<StaticInstance>> result]
+public file returns[Tuple<List<TypeMetadata>, List<StaticInstance>> result]
 	@init {
 		var types = new List<TypeMetadata>();
-		var enums = new List<EnumFromConstants>();
 		var staticInstances = new List<StaticInstance>();
 	}
 	: (  t=typeMetadata { types.Add(t); }
-	   | e=enumFromConstantsSpecifier { enums.Add(e); }
 	   | s=staticInstanceSpecifier { staticInstances.Add(s); }
 	   | NL
 	  )*
-	EOF { $result = Tuple.Create(types, enums, staticInstances); }
+	EOF { $result = Tuple.Create(types, staticInstances); }
 	;
 
 nogenerate : { input.LT(1).Text.Equals("nogenerate", StringComparison.OrdinalIgnoreCase) }? Identifier;
@@ -83,9 +81,9 @@ tagname : { input.LT(1).Text.Equals("tagname", StringComparison.OrdinalIgnoreCas
 name : { input.LT(1).Text.Equals("name", StringComparison.OrdinalIgnoreCase) }? Identifier;
 scriptName : { input.LT(1).Text.Equals("scriptName", StringComparison.OrdinalIgnoreCase) }? Identifier;
 typeOverride : { input.LT(1).Text.Equals("typeOverride", StringComparison.OrdinalIgnoreCase) }? Identifier;
-enumFromConstants : { input.LT(1).Text.Equals("enumFromConstants", StringComparison.OrdinalIgnoreCase) }? Identifier;
-container : { input.LT(1).Text.Equals("container", StringComparison.OrdinalIgnoreCase) }? Identifier;
+generateEnum : { input.LT(1).Text.Equals("generateEnum", StringComparison.OrdinalIgnoreCase) }? Identifier;
 constants : { input.LT(1).Text.Equals("constants", StringComparison.OrdinalIgnoreCase) }? Identifier;
+attributes : { input.LT(1).Text.Equals("attributes", StringComparison.OrdinalIgnoreCase) }? Identifier;
 interface : { input.LT(1).Text.Equals("interface", StringComparison.OrdinalIgnoreCase) }? Identifier;
 mixin : { input.LT(1).Text.Equals("mixin", StringComparison.OrdinalIgnoreCase) }? Identifier;
 alias : { input.LT(1).Text.Equals("alias", StringComparison.OrdinalIgnoreCase) }? Identifier;
@@ -98,6 +96,7 @@ flags : { input.LT(1).Text.Equals("flags", StringComparison.OrdinalIgnoreCase) }
 remove : { input.LT(1).Text.Equals("remove", StringComparison.OrdinalIgnoreCase) }? Identifier;
 globalMethods : { input.LT(1).Text.Equals("globalMethods", StringComparison.OrdinalIgnoreCase) }? Identifier;
 addInDerivedTypes : { input.LT(1).Text.Equals("addInDerivedTypes", StringComparison.OrdinalIgnoreCase) }? Identifier;
+derivedTypes : { input.LT(1).Text.Equals("derivedTypes", StringComparison.OrdinalIgnoreCase) }? Identifier;
 
 csharpTypeKeyword returns [AstType result]
 	: { _csharpTypeKeywords.Contains(input.LT(1).Text) }? {  $result = new PrimitiveType(input.LT(1).Text); } Identifier
@@ -119,6 +118,7 @@ typeMetadata returns [TypeMetadata result]
 		List<Tuple<string, string>> renames = null;
 		List<string> removes = null;
 		List<string> addInDerivedTypes = null;
+		List<GeneratedEnum> generatedEnums = null;
 	}
 	: i=Identifier { typeName = csharpName = scriptName = $i.text; } NL
 	  (Indent (   n=namespaceSpecifier { ns = n; } NL
@@ -135,10 +135,11 @@ typeMetadata returns [TypeMetadata result]
 	            | r=renameSpecifier { renames = renames ?? new List<Tuple<string, string>>(); renames.Add(r); } NL
 	            | v=removeSpecifier { removes = removes ?? new List<string>(); removes.Add(v); } NL
 	            | v=addInDerivedTypesSpecifier { addInDerivedTypes = addInDerivedTypes ?? new List<string>(); addInDerivedTypes.Add(v); } NL
+	            | e=generateEnumSpecifier { generatedEnums = generatedEnums ?? new List<GeneratedEnum>(); generatedEnums.Add(e); } NL
 	            | NL
 	          )
 	  )*
-	{ $result = new TypeMetadata(typeName, ns, csharpName, scriptName, tagNames.AsReadOnlySafe(), generate, inherit, typeKind, includeConstructors, typeOverrides.AsReadOnlySafe(), aliasFor, renames, removes, addInDerivedTypes); }
+	{ $result = new TypeMetadata(typeName, ns, csharpName, scriptName, tagNames.AsReadOnlySafe(), generate, inherit, typeKind, includeConstructors, typeOverrides.AsReadOnlySafe(), aliasFor, renames, removes, addInDerivedTypes, generatedEnums); }
 	;
 
 nestedIdentifier returns [string result]
@@ -199,33 +200,20 @@ csharpType returns [AstType result]
 	('?' { $result = $result.MakeNullableType(); })?
 	;
 
-enumFromConstantsSpecifier returns [EnumFromConstants result]
+generateEnumSpecifier returns [GeneratedEnum result]
 	@init {
-		string typeName = null, container = null, constantsRegex = null;
-		bool isFlags = false;
+		var type = GeneratedEnumSourceType.Constants;
+		bool isFlags = false, generateInDerivedTypes = false;
 		var names = new List<Tuple<string, string>>();
 	}
-	: enumFromConstants i=nestedIdentifier { typeName = i; } NL
-	  (Indent (   c=containerSpecifier { container = c; } NL
-	            | c=constantsSpecifier { constantsRegex = c; } NL
-	            | n=enumFromConstantsNameSpecifier { names.Add(n); } NL
-	            | flags { isFlags = true; } NL
-	            | NL
-	          )
-	  )*
-	{ var split = Split(typeName); $result = new EnumFromConstants(split.Item2, split.Item1, container, new Regex(constantsRegex), names, isFlags); }
-	;
-
-containerSpecifier returns [string result]
-	: container '=' i=Identifier { $result = $i.text; }
-	;
-
-constantsSpecifier returns [string result]
-	: constants '=' i=Identifier { $result = $i.text; }
-	;
-
-enumFromConstantsNameSpecifier returns [Tuple<string, string> result]
-	: name i1=Identifier '=' i2=Identifier { $result = Tuple.Create($i1.text, $i2.text); }
+	: generateEnum
+	  (derivedTypes { generateInDerivedTypes = true; })?
+	  i=nestedIdentifier
+	  (constants { type = GeneratedEnumSourceType.Constants; } | attributes { type = GeneratedEnumSourceType.Attributes; })
+	  mr=Identifier
+	  (flags { isFlags = true; })?
+	  (n=renameSpecifier { names.Add(n); } (',' n=renameSpecifier { names.Add(n); })* )?
+	{ var split = Split(i); $result = new GeneratedEnum(split.Item2, split.Item1, type, new Regex("^" + $mr.text + "$"), names, isFlags, generateInDerivedTypes); }
 	;
 
 staticInstanceSpecifier returns [StaticInstance result]

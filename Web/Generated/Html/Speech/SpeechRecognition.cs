@@ -9,10 +9,34 @@ namespace System.Html.Speech {
 		public void Abort() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener) {
+		public void AddEventListener(SpeechRecognitionEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture) {
+		public void AddEventListener(SpeechRecognitionEvents type, Action listener, bool capture) {
+		}
+
+		public void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener) {
+		}
+
+		public void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener) {
+		}
+
+		public void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture) {
+		}
+
+		public void AddEventListener(SpeechRecognitionEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(SpeechRecognitionEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
@@ -159,10 +183,34 @@ namespace System.Html.Speech {
 			}
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener) {
+		public void RemoveEventListener(SpeechRecognitionEvents type, Action listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture) {
+		public void RemoveEventListener(SpeechRecognitionEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener) {
+		}
+
+		public void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(SpeechRecognitionEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(SpeechRecognitionEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]

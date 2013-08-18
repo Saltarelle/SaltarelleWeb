@@ -27,8 +27,9 @@ namespace Generator.Meta {
 		public IReadOnlyDictionary<string, string> Renames { get; private set; }
 		public IReadOnlyList<string> Removes { get; private set; }
 		public IReadOnlyList<string> AddInDerivedTypes { get; private set; }
+		public IReadOnlyList<GeneratedEnum> GeneratedEnums { get; private set; }
 
-		public TypeMetadata(string typeName, string @namespace, string csharpName, string scriptName, IReadOnlyList<string> tagNames, bool generate, bool inherit, TypeKind typeKind, bool includeConstructors, IReadOnlyList<TypeOverride> typeOverrides, AstType aliasFor, IEnumerable<Tuple<string, string>> renames, IEnumerable<string> removes, IReadOnlyList<string> addInDerivedTypes) {
+		public TypeMetadata(string typeName, string @namespace, string csharpName, string scriptName, IReadOnlyList<string> tagNames, bool generate, bool inherit, TypeKind typeKind, bool includeConstructors, IReadOnlyList<TypeOverride> typeOverrides, AstType aliasFor, IEnumerable<Tuple<string, string>> renames, IEnumerable<string> removes, IReadOnlyList<string> addInDerivedTypes, IReadOnlyList<GeneratedEnum> generatedEnums) {
 			TypeName = typeName;
 			Namespace = @namespace;
 			CSharpName = csharpName;
@@ -43,6 +44,7 @@ namespace Generator.Meta {
 			Renames = new ReadOnlyDictionary<string, string>((renames ?? new Tuple<string, string>[0]).ToDictionary(x => x.Item1, x => x.Item2));
 			Removes = removes.AsReadOnlySafe();
 			AddInDerivedTypes = addInDerivedTypes.AsReadOnlySafe();
+			GeneratedEnums = generatedEnums.AsReadOnlySafe();
 		}
 	}
 }

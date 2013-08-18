@@ -6,16 +6,64 @@ namespace System.Html {
 		internal LIElement() {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener) {
+		public void AddEventListener(LIElementEvents type, Action listener) {
 		}
 
-		void AddEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener, bool capture) {
+		public void AddEventListener(LIElementEvents type, Action listener, bool capture) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener) {
+		public void AddEventListener(LIElementEvents type, HtmlEventHandler listener) {
 		}
 
-		void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener, bool capture) {
+		public void AddEventListener(LIElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void AddEventListener(LIElementEvents type, HtmlEventHandlerWithTarget<LIElement> listener) {
+		}
+
+		public void AddEventListener(LIElementEvents type, HtmlEventHandlerWithTarget<LIElement> listener, bool capture) {
+		}
+
+		public void AddEventListener(LIElementEvents type, IEventListener listener) {
+		}
+
+		public void AddEventListener(LIElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener) {
+		}
+
+		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LIElementEvents type, Action listener) {
+		}
+
+		public void RemoveEventListener(LIElementEvents type, Action listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LIElementEvents type, HtmlEventHandler listener) {
+		}
+
+		public void RemoveEventListener(LIElementEvents type, HtmlEventHandler listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LIElementEvents type, HtmlEventHandlerWithTarget<LIElement> listener) {
+		}
+
+		public void RemoveEventListener(LIElementEvents type, HtmlEventHandlerWithTarget<LIElement> listener, bool capture) {
+		}
+
+		public void RemoveEventListener(LIElementEvents type, IEventListener listener) {
+		}
+
+		public void RemoveEventListener(LIElementEvents type, IEventListener listener, bool capture) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener) {
+		}
+
+		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener, bool capture) {
 		}
 
 		[IntrinsicProperty]
