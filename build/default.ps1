@@ -136,40 +136,74 @@ Task Generate-VersionInfo -Depends Determine-Version {
 	Generate-VersionFile -Path "$baseDir\Web\Properties\Version.cs" -Version $script:Version
 }
 
-function Get-Sources($makefile, $symbols) {
-	$content = [System.IO.File]::ReadAllText($makefile) -replace "`r`n", "`n" -replace "\\`n",""
-	$lines = $content.Split("`n") | % { $_.Trim() } | % { if ($_.IndexOf("#") -gt -1) { return $_.Substring(0, $_.IndexOf("#")) } else { return $_ } }
+function Parse-Line($line) {
+	if ($_.IndexOf("#") -gt -1) {
+		$line = $_.Substring(0, $_.IndexOf("#"))
+	}
 
-	$sources = @{}
-	$take = New-Object System.Collections.ArrayList
-	$take.Add($true) | Out-Null
-	$lines | % {
-		if ($_.StartsWith("ifdef") -or $_.StartsWith("ifndef")) {
-			$symbol = $_.Substring(6) -replace "\s",""
-			$b = $symbols -contains $symbol
-			if ($_.StartsWith("ifndef")) { $b = -not $b }
-			$take.Add($b -and $take[$take.Count - 1]) | Out-Null
-		}
-		elseif ($_.StartsWith("endif")) {
-			$take.RemoveAt($take.Count - 1)
-		}
-		else {
-			if ($take[$take.Count - 1]) {
-				$match = Select-String -Pattern "^\s*([a-z_]+)\s*([+:]?=)(.*)$" -InputObject $_
-				if ($match -ne $null) {
-					$arr = $match.Matches[0].Groups[3].Value -split "\s" | ? { ($_ -ne "") -and ($_ -ne '$(NULL)') }
-					if ($match.Matches[0].Groups[2].Value -eq "+=") {
-						$sources[$match.Matches[0].Groups[1].Value] += $arr
+	$spaces = 0
+	while (($spaces -lt $line.Length) -and ($line[$spaces] -eq " ")) {
+		$spaces++
+	}
+
+	return @{ Indent = $spaces / 4; Text = $line.Substring($spaces) }
+}
+
+function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$currentLine) {
+	while (($currentLine.value -lt $lines.Length) -and ($lines[$currentLine.value].Indent -eq $currentIndent)) {
+		$line = $lines[$currentLine.value]
+		if ($line.Text -match "^(\S+)\s(\+?=)\s(.+)$") {
+			if ($Matches[1] -ne "MODULE") {
+				if ($matches[3] -ne "[") {
+					throw "Expected '[' on line $($line.Text)"
+				}
+				$target = $Matches[1]
+				$type = $Matches[2]
+				
+				$list = @()
+				$currentLine.value++
+				while (($currentLine.value -lt $lines.Length) -and ($lines[$currentLine.value].Indent -eq ($currentIndent + 1))) {
+					$line = $lines[$currentLine.value]
+					if (-not ($line.Text -match "^'([^']+)',?$")) {
+						throw "Expected 'identifier' on line $($line.Text)"
+					}
+					$list += $Matches[1]
+					$currentLine.value++
+				}
+				if (($currentLine.value -ge $lines.Length) -or ($lines[$currentLine.value].Indent -ne $currentIndent) -or ($lines[$currentLine.value].Text -ne "]")) {
+					throw "Expected ']' on line $($currentLines[$currentLine.value].Text)"
+				}
+
+				if ($take) {
+					if ($type -eq "+=") {
+						$sources[$target] += $list
 					}
 					else {
-						$sources[$match.Matches[0].Groups[1].Value] = $arr
+						$sources[$target] = $list
 					}
 				}
 			}
+			$currentLine.value++
+		}
+		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]:$") {
+			$newTake = $take -and $symbols -contains $Matches[1]
+			$currentLine.value++
+			Process $lines ($currentIndent + 1) $symbols $newTake $sources $currentLine
+		}
+		else {
+			throw "Unknown line $($line.Text)"
 		}
 	}
+}
 
-	$sources
+function Get-Sources($makefile, $symbols) {
+	$sources = @{}
+	$content = [System.IO.File]::ReadAllText($makefile) -replace "`r`n", "`n" -replace "\\`n",""
+	$lines = $content.Split("`n") | % { Parse-Line($_) } | ? { $_.Text -ne "" }
+	Process $lines 0 $symbols $true $sources ([ref]0)
+	$sources["webidl_files"] += $sources["generated_events_webidl_files"]
+	$sources.Remove("generated_events_webidl_files")
+	return $sources
 }
 
 function Generate-CSS2Properties($root, $workDir, $targetFile) {
@@ -216,10 +250,10 @@ Task Download-WebIDL {
 	md $webidlDir >$null
 	md $genDir >$null
 
-	(New-Object System.Net.WebClient).DownloadFile($webidlRoot + "WebIDL.mk?raw=1", "$webidlDir\WebIDL.mk")
+	(New-Object System.Net.WebClient).DownloadFile($webidlRoot + "moz.build?raw=1", "$webidlDir\moz.build")
 	$symbols = $webIDLSymbols -split ","
 
-	$sources = Get-Sources "$webidlDir\WebIDL.mk" $symbols
+	$sources = Get-Sources "$webidlDir\moz.build" $symbols
 
 	$total = $sources["webidl_files"].Count + $sources["preprocessed_webidl_files"].Count
 	$current = 0
@@ -249,7 +283,7 @@ Task Download-WebIDL {
 	}
 
 	#generation
-	$total = $sources["preprocessed_webidl_files"].Count
+	$total = $sources["generated_webidl_files"].Count
 	$current = 0
 	$sources["generated_webidl_files"] | % {
 		$current++
@@ -266,7 +300,7 @@ Task Download-WebIDL {
 Task Generate-Source {
 	$webidlDir = "$baseDir\webidl"
 	$symbols = $webIDLSymbols -split ","
-	$sources = Get-Sources "$webidlDir\WebIDL.mk" $symbols
+	$sources = Get-Sources "$webidlDir\moz.build" $symbols
 	$sourceList = @("$buildtoolsDir\custom.webidl") + $sources["webidl_files"] + $sources["generated_webidl_files"] + $sources["preprocessed_webidl_files"]
 
 	try {
