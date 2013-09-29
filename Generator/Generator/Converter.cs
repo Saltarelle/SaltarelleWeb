@@ -23,6 +23,7 @@ namespace Generator {
 				Missing,
 			}
 
+			public bool ArrayClass { get; private set; }
 			public bool PrefControlled { get; private set; }
 			public bool NoInterfaceObject { get; private set; }
 			public bool ChromeOnly { get; private set; }
@@ -49,6 +50,7 @@ namespace Generator {
 			public bool EnforceRange { get; private set; }
 			public bool Clamp { get; private set; }
 			public bool Global { get; private set; }
+			public bool SameObject { get; private set; }
 			public TreatUndefinedAsOptions TreatUndefinedAs { get; private set; }
 			public IReadOnlyList<IReadOnlyList<Argument>> Constructors { get; private set; }
 			public IReadOnlyList<Tuple<string, IReadOnlyList<Argument>>> NamedConstructors { get; private set; }
@@ -74,6 +76,9 @@ namespace Generator {
 					attr.Decompose(
 						noArgs => {
 							switch (noArgs.AttributeName) {
+								case "ArrayClass":
+									result.ArrayClass = true;
+									break;
 								case "PrefControlled":
 									result.PrefControlled = true;
 									break;
@@ -133,6 +138,9 @@ namespace Generator {
 									break;
 								case "Global":
 									result.Global = true;
+									break;
+								case "SameObject":
+									result.SameObject = true;
 									break;
 								default:
 									errors.Add(string.Format("Unknown ExtendedAttributeNoArgs `{0}' on `{1}'", noArgs.AttributeName, scopeName));
@@ -947,7 +955,7 @@ namespace Generator {
 								if (!baseMeta.Inherit)
 									return null;
 								if (!ParseExtendedAttributes(_types[b]).ChromeOnly) {
-									if (b != @interface.Base || baseMeta.TypeKind == TypeKind.Mixin) {
+									if ((b != @interface.Base || baseMeta.TypeKind == TypeKind.Mixin) && baseMeta.TypeKind != TypeKind.Skip) {
 										if (baseMeta.TypeKind == TypeKind.Default)
 											_errors.Add("The type `" + b + "' cannot be implemented by the type `" + @interface.Name + "' because the implemented type is not a C# interface");
 										_types[b].Decompose(
@@ -960,7 +968,7 @@ namespace Generator {
 											declaredInterface => _errors.Add("The type `" + b + "' cannot be implemented by the type `" + @interface.Name + "' because the implemented type is not defined")
 										);
 									}
-									if (baseMeta.TypeKind == TypeKind.Mixin)
+									if (baseMeta.TypeKind == TypeKind.Mixin || baseMeta.TypeKind == TypeKind.Skip)
 										return null;
 
 									return baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName);

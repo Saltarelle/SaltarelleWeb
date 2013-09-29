@@ -86,6 +86,7 @@ constants : { input.LT(1).Text.Equals("constants", StringComparison.OrdinalIgnor
 attributes : { input.LT(1).Text.Equals("attributes", StringComparison.OrdinalIgnoreCase) }? Identifier;
 interface : { input.LT(1).Text.Equals("interface", StringComparison.OrdinalIgnoreCase) }? Identifier;
 mixin : { input.LT(1).Text.Equals("mixin", StringComparison.OrdinalIgnoreCase) }? Identifier;
+skip : { input.LT(1).Text.Equals("skip", StringComparison.OrdinalIgnoreCase) }? Identifier;
 alias : { input.LT(1).Text.Equals("alias", StringComparison.OrdinalIgnoreCase) }? Identifier;
 rename : { input.LT(1).Text.Equals("rename", StringComparison.OrdinalIgnoreCase) }? Identifier;
 staticInstance : { input.LT(1).Text.Equals("staticInstance", StringComparison.OrdinalIgnoreCase) }? Identifier;
@@ -127,6 +128,7 @@ typeMetadata returns [TypeMetadata result]
 	            | noconstructors { includeConstructors = false; } NL
 	            | interface { typeKind = TypeKind.Interface; } NL
 	            | mixin { typeKind = TypeKind.Mixin; } NL
+	            | skip { typeKind = TypeKind.Skip; } NL
 	            | n=nameSpecifier { csharpName = n; } NL
 	            | n=scriptNameSpecifier { scriptName = n; } NL
 	            | t=tagnameSpecifier { tagNames = t; } NL

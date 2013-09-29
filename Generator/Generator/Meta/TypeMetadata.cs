@@ -10,6 +10,7 @@ namespace Generator.Meta {
 		Default,
 		Interface,
 		Mixin,
+		Skip
 	}
 
 	public class TypeMetadata {
@@ -35,7 +36,7 @@ namespace Generator.Meta {
 			CSharpName = csharpName;
 			ScriptName = scriptName;
 			TagNames = tagNames.AsReadOnlySafe();
-			Generate = generate && typeKind != TypeKind.Mixin;
+			Generate = generate && typeKind != TypeKind.Mixin && typeKind != TypeKind.Skip;
 			Inherit = inherit;
 			TypeKind = typeKind;
 			IncludeConstructors = includeConstructors;
