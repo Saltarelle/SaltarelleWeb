@@ -134,15 +134,6 @@ interface Transferable { };
 ArrayBuffer implements Transferable;
 MessagePort implements Transferable;
 
-interface MessagePort : EventTarget {
-	void postMessage(any message, optional sequence<Transferable> transfer);
-	void start();
-	void close();
-
-	// event handlers
-	attribute EventHandler onmessage;
-};
-
 interface WorkerGlobalScope : EventTarget {
 	readonly attribute WorkerGlobalScope self;
 	readonly attribute WorkerLocation location;
@@ -533,34 +524,4 @@ interface DeviceRotationRate {
 	readonly attribute double? alpha;
 	readonly attribute double? beta;
 	readonly attribute double? gamma;
-};
-
-
-////////////////////////////////////////////////////////////////////////////////////////////
-// Web audio
-// https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html
-////////////////////////////////////////////////////////////////////////////////////////////
-
-enum OscillatorType {
-  "sine",
-  "square",
-  "sawtooth",
-  "triangle",
-  "custom"
-};
-
-interface OscillatorNode : AudioNode {
-    attribute OscillatorType type;
-
-    readonly attribute AudioParam frequency; // in Hertz
-    readonly attribute AudioParam detune; // in Cents
-
-    void start(double when);
-    void stop(double when);
-    void setPeriodicWave(PeriodicWave periodicWave);
-
-    attribute EventHandler onended;
-};
-
-interface WaveTable {
 };

@@ -35,15 +35,15 @@ interface IDBDatabase : EventTarget {
 
     void           close ();
 
-    [SetterThrows]
                 attribute EventHandler       onabort;
-    [SetterThrows]
                 attribute EventHandler       onerror;
-    [SetterThrows]
                 attribute EventHandler       onversionchange;
 };
 
 partial interface IDBDatabase {
+    [Pref="dom.indexedDB.experimental"]
+    readonly    attribute StorageType        storage;
+
     [Throws]
     IDBRequest mozCreateFileHandle (DOMString name, optional DOMString type);
 };

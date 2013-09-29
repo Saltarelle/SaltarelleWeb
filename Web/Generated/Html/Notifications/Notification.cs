@@ -42,7 +42,35 @@ namespace System.Html.Notifications {
 		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture) {
 		}
 
+		[IntrinsicProperty]
+		public string Body {
+			get {
+				return null;
+			}
+		}
+
 		public void Close() {
+		}
+
+		[IntrinsicProperty]
+		public NotificationDirection Dir {
+			get {
+				return default(NotificationDirection);
+			}
+		}
+
+		[IntrinsicProperty]
+		public string Icon {
+			get {
+				return null;
+			}
+		}
+
+		[IntrinsicProperty]
+		public string Lang {
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty, ScriptName("onclick")]
@@ -122,6 +150,20 @@ namespace System.Html.Notifications {
 		}
 
 		public static void RequestPermission(NotificationPermissionCallback permissionCallback) {
+		}
+
+		[IntrinsicProperty]
+		public string Tag {
+			get {
+				return null;
+			}
+		}
+
+		[IntrinsicProperty]
+		public string Title {
+			get {
+				return null;
+			}
 		}
 	}
 }

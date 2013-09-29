@@ -49,9 +49,9 @@ namespace System.Html {
 		public const ushort ERROR = 3;
 
 		[IntrinsicProperty]
-		public TextTrackKind Kind {
+		public string Kind {
 			get {
-				return default(TextTrackKind);
+				return null;
 			}
 			set {
 			}

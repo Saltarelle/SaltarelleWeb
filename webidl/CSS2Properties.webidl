@@ -128,6 +128,7 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString fontWeight;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozForceBrokenImageIcon;
   [Throws, TreatNullAs=EmptyString] attribute DOMString height;
+  [Throws, TreatNullAs=EmptyString, Pref="layout.css.image-orientation.enabled"] attribute DOMString imageOrientation;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozImageRegion;
   [Throws, TreatNullAs=EmptyString] attribute DOMString imeMode;
   [Throws, TreatNullAs=EmptyString] attribute DOMString left;
@@ -175,7 +176,6 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString pageBreakInside;
   [Throws, TreatNullAs=EmptyString, Pref="svg.paint-order.enabled"] attribute DOMString paintOrder;
   [Throws, TreatNullAs=EmptyString] attribute DOMString pointerEvents;
-  [Throws, TreatNullAs=EmptyString, Pref="layout.css.vertical-text.enabled"] attribute DOMString writingMode;
   [Throws, TreatNullAs=EmptyString] attribute DOMString position;
   [Throws, TreatNullAs=EmptyString] attribute DOMString quotes;
   [Throws, TreatNullAs=EmptyString] attribute DOMString resize;
@@ -185,10 +185,12 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString textAlign;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextAlignLast;
   [Throws, TreatNullAs=EmptyString] attribute DOMString textDecoration;
+  [Throws, TreatNullAs=EmptyString, Pref="layout.css.vertical-text.enabled"] attribute DOMString textCombineHorizontal;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextDecorationColor;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextDecorationLine;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextDecorationStyle;
   [Throws, TreatNullAs=EmptyString] attribute DOMString textIndent;
+  [Throws, TreatNullAs=EmptyString, Pref="layout.css.vertical-text.enabled"] attribute DOMString textOrientation;
   [Throws, TreatNullAs=EmptyString] attribute DOMString textOverflow;
   [Throws, TreatNullAs=EmptyString] attribute DOMString textShadow;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTextSizeAdjust;
@@ -220,6 +222,7 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString wordSpacing;
   [Throws, TreatNullAs=EmptyString] attribute DOMString wordWrap;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozHyphens;
+  [Throws, TreatNullAs=EmptyString, Pref="layout.css.vertical-text.enabled"] attribute DOMString writingMode;
   [Throws, TreatNullAs=EmptyString] attribute DOMString zIndex;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozBoxAlign;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozBoxDirection;

@@ -1,7 +1,7 @@
 ﻿using System.Html;
 using System.Runtime.CompilerServices;
 
-namespace System.Threading.WebWorkers {
+namespace System.Net.Messaging {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
 	public partial class MessagePort : EventTarget, ITransferable {
 		internal MessagePort() {

@@ -183,6 +183,13 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty]
+		public ElementCollection SelectedOptions {
+			get {
+				return default(ElementCollection);
+			}
+		}
+
 		public void SetCustomValidity(string error) {
 		}
 

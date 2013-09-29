@@ -7,6 +7,10 @@ namespace System.Html {
 		internal DOMImplementation() {
 		}
 
+		public DocumentBase CreateDocument(string @namespace, string qualifiedName) {
+			return default(DocumentBase);
+		}
+
 		public DocumentBase CreateDocument(string @namespace, string qualifiedName, DocumentType doctype) {
 			return default(DocumentBase);
 		}

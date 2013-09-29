@@ -968,6 +968,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string ImageOrientation {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string ImageRendering {
 			get {
 				return null;
@@ -1644,6 +1653,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string TextCombineHorizontal {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string TextDecoration {
 			get {
 				return null;
@@ -1654,6 +1672,15 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string TextIndent {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string TextOrientation {
 			get {
 				return null;
 			}

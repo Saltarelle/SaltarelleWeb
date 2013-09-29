@@ -7,6 +7,18 @@ namespace System.Html.Media.Audio {
 		internal AudioBuffer() {
 		}
 
+		public void CopyFromChannel(Float32Array destination, int channelNumber) {
+		}
+
+		public void CopyFromChannel(Float32Array destination, int channelNumber, uint startInChannel) {
+		}
+
+		public void CopyToChannel(Float32Array source, int channelNumber) {
+		}
+
+		public void CopyToChannel(Float32Array source, int channelNumber, uint startInChannel) {
+		}
+
 		[IntrinsicProperty]
 		public double Duration {
 			get {

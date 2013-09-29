@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace System.Threading.WebWorkers {
+namespace System.Net.Messaging {
 	[Imported, NamedValues]
 	public enum MessagePortEvents {
 		[ScriptName("onmessage")]

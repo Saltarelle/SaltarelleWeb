@@ -109,6 +109,22 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string Origin {
+			get {
+				return null;
+			}
+		}
+
+		[IntrinsicProperty]
+		public string Password {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Pathname {
 			get {
 				return null;
@@ -194,6 +210,15 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Target {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string Username {
 			get {
 				return null;
 			}

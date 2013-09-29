@@ -15,6 +15,12 @@ namespace System.Html.Media.Graphics.WebGL {
 		public void BeginQuery(uint target, WebGLQuery queryObject) {
 		}
 
+		public void BindBufferBase(uint target, uint index, WebGLBuffer buffer) {
+		}
+
+		public void BindBufferRange(uint target, uint index, WebGLBuffer buffer, long offset, long size) {
+		}
+
 		public void BindVertexArray(WebGLVertexArray arrayObject) {
 		}
 
@@ -140,6 +146,13 @@ namespace System.Html.Media.Graphics.WebGL {
 		public void EndQuery(uint target) {
 		}
 
+		[ScriptName("FRAGMENT_SHADER_DERIVATIVE_HINT")]
+		public const uint FRAGMENT_SHADER_DERIVATIVE_HINT = 35723;
+
+		public object GetParameterIndexed(uint pname, uint index) {
+			return null;
+		}
+
 		public WebGLQuery GetQuery(uint target, uint pname) {
 			return default(WebGLQuery);
 		}
@@ -164,6 +177,9 @@ namespace System.Html.Media.Graphics.WebGL {
 		[ScriptName("MAX_DRAW_BUFFERS")]
 		public const uint MAX_DRAW_BUFFERS = 34852;
 
+		[ScriptName("MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS")]
+		public const uint MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS = 35979;
+
 		public const uint MIN = 32775;
 
 		[ScriptName("QUERY_RESULT")]
@@ -174,6 +190,24 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		[ScriptName("RASTERIZER_DISCARD")]
 		public const uint RASTERIZER_DISCARD = 35977;
+
+		[ScriptName("TRANSFORM_FEEDBACK_BUFFER")]
+		public const uint TRANSFORM_FEEDBACK_BUFFER = 35982;
+
+		[ScriptName("TRANSFORM_FEEDBACK_BUFFER_BINDING")]
+		public const uint TRANSFORM_FEEDBACK_BUFFER_BINDING = 35983;
+
+		[ScriptName("TRANSFORM_FEEDBACK_BUFFER_SIZE")]
+		public const uint TRANSFORM_FEEDBACK_BUFFER_SIZE = 35973;
+
+		[ScriptName("TRANSFORM_FEEDBACK_BUFFER_START")]
+		public const uint TRANSFORM_FEEDBACK_BUFFER_START = 35972;
+
+		[ScriptName("TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN")]
+		public const uint TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN = 35976;
+
+		[ScriptName("UNSIGNED_INT_24_8")]
+		public const uint UNSIGNED_INT_24_8 = 34042;
 
 		[ScriptName("VERTEX_ARRAY_BINDING")]
 		public const uint VERTEX_ARRAY_BINDING = 34229;

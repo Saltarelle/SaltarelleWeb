@@ -35,7 +35,7 @@ interface Element : Node {
   [Constant]
   readonly attribute DOMTokenList? classList;
 
-  [Constant]
+  [SameObject]
   readonly attribute MozNamedAttrMap attributes;
   DOMString? getAttribute(DOMString name);
   DOMString? getAttributeNS(DOMString? namespace, DOMString localName);
@@ -71,11 +71,10 @@ interface Element : Node {
 
   // Mozilla specific stuff
 
-  [SetterThrows,LenientThis]
+  [LenientThis]
            attribute EventHandler onmouseenter;
-  [SetterThrows,LenientThis]
+  [LenientThis]
            attribute EventHandler onmouseleave;
-  [SetterThrows]
            attribute EventHandler onwheel;
 
   // Selectors API

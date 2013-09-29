@@ -2,10 +2,10 @@
 
 namespace System.Html.Media {
 	[Imported, NamedValues]
-	public enum TextTrackCueEvents {
-		[ScriptName("onenter")]
-		Enter,
-		[ScriptName("onexit")]
-		Exit
+	public enum DirectionSetting {
+		[ScriptName("")]
+		None,
+		Rl,
+		Lr
 	}
 }

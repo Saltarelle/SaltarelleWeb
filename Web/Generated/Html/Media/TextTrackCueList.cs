@@ -8,18 +8,18 @@ namespace System.Html.Media {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public TextTrackCue this[uint index] {
+		public VTTCue this[uint index] {
 			get {
-				return default(TextTrackCue);
+				return default(VTTCue);
 			}
 		}
 
-		public TextTrackCue GetCueById(string id) {
-			return default(TextTrackCue);
+		public VTTCue GetCueById(string id) {
+			return default(VTTCue);
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<TextTrackCue> GetEnumerator() {
+		public IEnumerator<VTTCue> GetEnumerator() {
 			return null;
 		}
 

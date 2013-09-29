@@ -14,7 +14,15 @@ namespace System.Data.IndexedDB {
 			return default(OpenDBRequest);
 		}
 
+		public OpenDBRequest DeleteDatabase(string name, OpenDBOptions options) {
+			return default(OpenDBRequest);
+		}
+
 		public OpenDBRequest Open(string name) {
+			return default(OpenDBRequest);
+		}
+
+		public OpenDBRequest Open(string name, OpenDBOptions options) {
 			return default(OpenDBRequest);
 		}
 

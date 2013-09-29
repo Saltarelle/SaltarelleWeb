@@ -81,5 +81,14 @@ namespace System.Html.Media.Audio {
 
 		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture) {
 		}
+
+		[IntrinsicProperty]
+		public string VolumeControlChannel {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
 	}
 }

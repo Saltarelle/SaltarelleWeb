@@ -260,6 +260,9 @@ namespace System.Html {
 			}
 		}
 
+		public void OpenDirectoryPicker() {
+		}
+
 		[IntrinsicProperty]
 		public string Pattern {
 			get {

@@ -61,6 +61,30 @@ namespace System.Data.IndexedDB {
 			return default(Request);
 		}
 
+		public Request GetAll() {
+			return default(Request);
+		}
+
+		public Request GetAll(object key) {
+			return default(Request);
+		}
+
+		public Request GetAll(object key, uint limit) {
+			return default(Request);
+		}
+
+		public Request GetAllKeys() {
+			return default(Request);
+		}
+
+		public Request GetAllKeys(object key) {
+			return default(Request);
+		}
+
+		public Request GetAllKeys(object key, uint limit) {
+			return default(Request);
+		}
+
 		public Index Index(string name) {
 			return default(Index);
 		}

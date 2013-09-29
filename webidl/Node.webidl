@@ -42,7 +42,7 @@ interface Node : EventTarget {
   [Pure]
   readonly attribute Element? parentElement;
   boolean hasChildNodes();
-  [Constant]
+  [SameObject]
   readonly attribute NodeList childNodes;
   [Pure]
   readonly attribute Node? firstChild;
@@ -104,4 +104,6 @@ interface Node : EventTarget {
   readonly attribute Principal nodePrincipal;
   [ChromeOnly]
   readonly attribute URI? baseURIObject;
+  [ChromeOnly]
+  sequence<MutationObserver> getBoundMutationObservers();
 };

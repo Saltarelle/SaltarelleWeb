@@ -1,10 +1,16 @@
 ﻿using System.Html;
 using System.Runtime.CompilerServices;
 
-namespace System.Net.WebSockets {
+namespace System.Net.Messaging {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
 	public partial class MessageEvent : Event {
 		internal MessageEvent() {
+		}
+
+		public MessageEvent(string type) {
+		}
+
+		public MessageEvent(string type, MessageEventInit eventInitDict) {
 		}
 
 		[IntrinsicProperty]
@@ -29,9 +35,16 @@ namespace System.Net.WebSockets {
 		}
 
 		[IntrinsicProperty]
-		public WindowInstance Source {
+		public MessagePortList Ports {
 			get {
-				return default(WindowInstance);
+				return default(MessagePortList);
+			}
+		}
+
+		[IntrinsicProperty]
+		public TypeOption<WindowInstance, MessagePort> Source {
+			get {
+				return default(TypeOption<WindowInstance, MessagePort>);
 			}
 		}
 	}

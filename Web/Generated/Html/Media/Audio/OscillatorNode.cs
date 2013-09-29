@@ -36,6 +36,8 @@ namespace System.Html.Media.Audio {
 		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
 		}
 
+		public const ushort CUSTOM = 4;
+
 		[IntrinsicProperty]
 		public AudioParam Detune {
 			get {
@@ -48,6 +50,12 @@ namespace System.Html.Media.Audio {
 			get {
 				return default(AudioParam);
 			}
+		}
+
+		public void NoteOff(double when) {
+		}
+
+		public void NoteOn(double when) {
 		}
 
 		[IntrinsicProperty, ScriptName("onended")]
@@ -89,14 +97,22 @@ namespace System.Html.Media.Audio {
 		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture) {
 		}
 
+		public const ushort SAWTOOTH = 2;
+
 		public void SetPeriodicWave(PeriodicWave periodicWave) {
 		}
+
+		public const ushort SINE = 0;
+
+		public const ushort SQUARE = 1;
 
 		public void Start(double when) {
 		}
 
 		public void Stop(double when) {
 		}
+
+		public const ushort TRIANGLE = 3;
 
 		[IntrinsicProperty]
 		public OscillatorType Type {

@@ -19,17 +19,31 @@ interface Notification : EventTarget {
   [Throws]
   static void requestPermission(optional NotificationPermissionCallback permissionCallback);
 
-  [SetterThrows]
   attribute EventHandler onclick;
 
-  [SetterThrows]
   attribute EventHandler onshow;
 
-  [SetterThrows]
   attribute EventHandler onerror;
 
-  [SetterThrows]
   attribute EventHandler onclose;
+
+  [Constant]
+  readonly attribute DOMString title;
+
+  [Constant]
+  readonly attribute NotificationDirection dir;
+
+  [Constant]
+  readonly attribute DOMString? lang;
+
+  [Constant]
+  readonly attribute DOMString? body;
+
+  [Constant]
+  readonly attribute DOMString? tag;
+
+  [Constant]
+  readonly attribute DOMString? icon;
 
   void close();
 };

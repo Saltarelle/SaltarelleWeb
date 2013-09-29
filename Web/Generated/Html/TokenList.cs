@@ -14,7 +14,8 @@ namespace System.Html {
 			}
 		}
 
-		public void Add(string token) {
+		[ExpandParams]
+		public void Add(params string[] tokens) {
 		}
 
 		public bool Contains(string token) {
@@ -37,7 +38,8 @@ namespace System.Html {
 			}
 		}
 
-		public void Remove(string token) {
+		[ExpandParams]
+		public void Remove(params string[] tokens) {
 		}
 
 		public bool Toggle(string token) {

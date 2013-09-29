@@ -122,6 +122,13 @@ namespace System.Data.IndexedDB {
 		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture) {
 		}
 
+		[IntrinsicProperty]
+		public StorageType Storage {
+			get {
+				return default(StorageType);
+			}
+		}
+
 		public Transaction Transaction(string storeName) {
 			return default(Transaction);
 		}

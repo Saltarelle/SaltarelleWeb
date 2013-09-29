@@ -1,4 +1,5 @@
 ﻿using System.Html;
+using System.Net.Messaging;
 using System.Runtime.CompilerServices;
 
 namespace System.Threading.WebWorkers {

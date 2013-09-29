@@ -19,7 +19,6 @@
  */
 
 
-interface MozPowerManager;
 interface MozWakeLock;
 
 // http://www.whatwg.org/specs/web-apps/current-work/#the-navigator-object
@@ -269,6 +268,8 @@ partial interface Navigator {
 
 
 
+
+
 // nsIDOMMozNavigatorTime
 partial interface Navigator {
   [Throws, Func="Navigator::HasTimeSupport"]
@@ -285,22 +286,22 @@ partial interface Navigator {
 // MOZ_AUDIO_CHANNEL_MANAGER
 
 
-// nsIDOMNavigatorUserMedia
-callback MozDOMGetUserMediaSuccessCallback = void (nsISupports? value);
-callback MozDOMGetUserMediaErrorCallback = void (DOMString error);
-interface MozMediaStreamOptions;
+callback NavigatorUserMediaSuccessCallback = void (MediaStream stream);
+callback NavigatorUserMediaErrorCallback = void (DOMString error);
+
 partial interface Navigator {
   [Throws, Func="Navigator::HasUserMediaSupport"]
-  void mozGetUserMedia(MozMediaStreamOptions? params,
-                       MozDOMGetUserMediaSuccessCallback? onsuccess,
-                       MozDOMGetUserMediaErrorCallback? onerror);
+  void mozGetUserMedia(MediaStreamConstraints constraints,
+                       NavigatorUserMediaSuccessCallback successCallback,
+                       NavigatorUserMediaErrorCallback errorCallback);
 };
 
 // nsINavigatorUserMedia
 callback MozGetUserMediaDevicesSuccessCallback = void (nsIVariant? devices);
 partial interface Navigator {
   [Throws, ChromeOnly]
-  void mozGetUserMediaDevices(MozGetUserMediaDevicesSuccessCallback? onsuccess,
-                              MozDOMGetUserMediaErrorCallback? onerror);
+  void mozGetUserMediaDevices(MediaStreamConstraintsInternal constraints,
+                              MozGetUserMediaDevicesSuccessCallback onsuccess,
+                              NavigatorUserMediaErrorCallback onerror);
 };
 // MOZ_MEDIA_NAVIGATOR

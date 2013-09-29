@@ -130,6 +130,10 @@ namespace System.Html.Media.Audio {
 			return default(MediaStreamAudioSourceNode);
 		}
 
+		public OscillatorNode CreateOscillator() {
+			return default(OscillatorNode);
+		}
+
 		public PannerNode CreatePanner() {
 			return default(PannerNode);
 		}
