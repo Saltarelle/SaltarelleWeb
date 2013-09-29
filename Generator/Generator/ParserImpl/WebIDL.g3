@@ -248,7 +248,7 @@ enum[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition resu
 
 enumValueList returns [List<string> result]
 	@init { $result = new List<string>(); }
-	: v=String { $result.Add($v.text); } (COMMA v=String { $result.Add($v.text); })*
+	: v=String { $result.Add($v.text); } (COMMA v=String { $result.Add($v.text); })* COMMA?
 	;
 
 callbackRest[IEnumerable<ExtendedAttribute> extendedAttributes] returns [Definition result]
