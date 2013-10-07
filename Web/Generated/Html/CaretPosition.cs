@@ -7,8 +7,8 @@ namespace System.Html {
 		internal CaretPosition() {
 		}
 
-		public ClientRect GetClientRect() {
-			return default(ClientRect);
+		public DOMRect GetClientRect() {
+			return default(DOMRect);
 		}
 
 		[IntrinsicProperty]

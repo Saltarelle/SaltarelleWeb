@@ -116,12 +116,12 @@ namespace System.Xml {
 			return null;
 		}
 
-		public ClientRect GetBoundingClientRect() {
-			return default(ClientRect);
+		public DOMRect GetBoundingClientRect() {
+			return default(DOMRect);
 		}
 
-		public ClientRectList GetClientRects() {
-			return default(ClientRectList);
+		public DOMRectList GetClientRects() {
+			return default(DOMRectList);
 		}
 
 		public ElementCollection GetElementsByClassName(string classNames) {

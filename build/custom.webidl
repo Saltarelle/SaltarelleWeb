@@ -58,17 +58,6 @@ interface Blob {
 // IndexedDB
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-interface IDBKeyRange {
-	readonly    attribute any     lower;
-	readonly    attribute any     upper;
-	readonly    attribute boolean lowerOpen;
-	readonly    attribute boolean upperOpen;
-	static IDBKeyRange only (any value);
-	static IDBKeyRange lowerBound (any lower, optional boolean open);
-	static IDBKeyRange upperBound (any upper, optional boolean open);
-	static IDBKeyRange bound (any lower, any upper, optional boolean lowerOpen, optional boolean upperOpen);
-};
-
 [NoInterfaceObject]
 interface IDBEnvironment {
 	readonly    attribute IDBFactory indexedDB;
@@ -133,6 +122,7 @@ interface Transferable { };
 
 ArrayBuffer implements Transferable;
 MessagePort implements Transferable;
+WorkerMessagePort implements Transferable;
 
 interface WorkerGlobalScope : EventTarget {
 	readonly attribute WorkerGlobalScope self;
@@ -157,11 +147,6 @@ interface WorkerGlobalScope : EventTarget {
 	attribute EventHandler onconnect;
 };
 
-[NoInterfaceObject]
-interface AbstractWorker {
-	attribute EventHandler onerror;
-};
-
 [Constructor(DOMString scriptURL)]
 interface Worker : EventTarget {
 	void terminate();
@@ -170,12 +155,6 @@ interface Worker : EventTarget {
 	attribute EventHandler onmessage;
 };
 Worker implements AbstractWorker;
-
-[Constructor(DOMString scriptURL, optional DOMString name)]
-interface SharedWorker : EventTarget {
-	readonly attribute MessagePort port;
-};
-SharedWorker implements AbstractWorker;
 
 [NoInterfaceObject]
 partial interface WorkerGlobalScope {

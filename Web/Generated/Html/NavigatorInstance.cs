@@ -155,10 +155,12 @@ namespace System.Html {
 			}
 		}
 
-		public void Vibrate(uint duration) {
+		public bool Vibrate(uint duration) {
+			return false;
 		}
 
-		public void Vibrate(uint[] pattern) {
+		public bool Vibrate(uint[] pattern) {
+			return false;
 		}
 	}
 }

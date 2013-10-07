@@ -223,12 +223,6 @@ CharacterData
 ChildNode
 	mixin
 
-ClientRect
-	namespace = System.Html
-
-ClientRectList
-	namespace = System.Html
-
 ClipboardEvent
 	namespace = System.Html
 
@@ -317,6 +311,27 @@ DataChannel
 	name = RTCDataChannel
 
 DataContainerEvent
+	nogenerate
+
+DataStore
+	nogenerate
+
+DataStoreChanges
+	nogenerate
+
+DataStoreCursor
+	nogenerate
+
+DataStoreChangeEvent
+	nogenerate
+
+DataStoreChangeEventInit
+	nogenerate
+
+DataStoreOperation
+	nogenerate
+
+DataStoreTask
 	nogenerate
 
 DataTransfer
@@ -432,6 +447,12 @@ DOMMMIError
 DOMParser
 	namespace = System.Html
 	noconstructors
+
+DOMRect
+	namespace = System.Html
+
+DOMRectList
+	namespace = System.Html
 
 DOMRequest
 	nogenerate
@@ -554,6 +575,14 @@ EventTarget
 
 	generateEnum derivedTypes $type$Events attributes "on(.+)"
 
+ErrorEvent
+	namespace = System.Html
+	nogenerate
+
+ErrorEventInit
+	namespace = System.Html
+	nogenerate
+
 Exception
 	namespace = System
 	name = Error
@@ -640,6 +669,9 @@ Geolocation
 	name = GeolocationService
 
 GetCameraCallback
+	nogenerate
+
+GetNotificationOptions
 	nogenerate
 
 GetUserMediaRequest
@@ -765,6 +797,10 @@ HTMLFormElement
 	tagname = form
 	name = FormElement
 	typeOverride "getter nsISupports (DOMString name)" = System.Html.Element
+
+HTMLFormControlsCollection
+	namespace = System.Html
+	name = FormControlsCollection
 
 HTMLFrameElement
 	namespace = System.Html
@@ -1465,6 +1501,9 @@ NavigatorBattery
 NavigatorContentUtils
 	mixin
 
+NavigatorDataStore
+	skip
+
 NavigatorGeolocation
 	mixin
 
@@ -1516,6 +1555,7 @@ NodeList
 
 Notification
 	namespace = System.Html.Notifications
+	remove "get"
 
 NotificationDirection
 	namespace = System.Html.Notifications
@@ -1782,7 +1822,7 @@ Selection
 	namespace = System.Html.Editing
 
 SelectionMode
-	nogenerate
+	namespace = System.Html
 
 SettingChange
 	nogenerate
@@ -2420,6 +2460,12 @@ TouchEventHandlers
 TouchList
 	namespace = System.Html
 
+TrackEvent
+	nogenerate
+
+TrackEventInit
+	nogenerate
+
 Transferable
 	namespace = System.Html
 	name = ITransferable
@@ -2655,6 +2701,11 @@ WorkerGlobalScope
 
 WorkerLocation
 	namespace = System.Threading.WebWorkers
+
+WorkerMessagePort
+	namespace = System.Net.Messaging
+	name = MessagePort
+	nogenerate
 
 WorkerNavigator
 	namespace = System.Threading.WebWorkers

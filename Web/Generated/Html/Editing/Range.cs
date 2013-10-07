@@ -77,12 +77,12 @@ namespace System.Html.Editing {
 			return default(XmlDocumentFragment);
 		}
 
-		public ClientRect GetBoundingClientRect() {
-			return default(ClientRect);
+		public DOMRect GetBoundingClientRect() {
+			return default(DOMRect);
 		}
 
-		public ClientRectList GetClientRects() {
-			return default(ClientRectList);
+		public DOMRectList GetClientRects() {
+			return default(DOMRectList);
 		}
 
 		public void InsertNode(XmlNode node) {

@@ -122,6 +122,18 @@ namespace System.Data.IndexedDB {
 			return default(Request);
 		}
 
+		public Request OpenKeyCursor() {
+			return default(Request);
+		}
+
+		public Request OpenKeyCursor(object range) {
+			return default(Request);
+		}
+
+		public Request OpenKeyCursor(object range, CursorDirection direction) {
+			return default(Request);
+		}
+
 		public Request Put(object value) {
 			return default(Request);
 		}

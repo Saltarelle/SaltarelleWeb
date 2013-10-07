@@ -8,6 +8,7 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozOutlineRadiusBottomright;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozOutlineRadiusBottomleft;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozTabSize;
+  [Throws, TreatNullAs=EmptyString, Pref="layout.css.all-shorthand.enabled"] attribute DOMString all;
   [Throws, TreatNullAs=EmptyString] attribute DOMString animation;
   [Throws, TreatNullAs=EmptyString] attribute DOMString animationDelay;
   [Throws, TreatNullAs=EmptyString] attribute DOMString animationDirection;

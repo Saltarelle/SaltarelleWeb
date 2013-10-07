@@ -200,6 +200,15 @@ namespace System.Html {
 		public void SetCustomValidity(string error) {
 		}
 
+		public void SetRangeText(string replacement) {
+		}
+
+		public void SetRangeText(string replacement, uint start, uint end) {
+		}
+
+		public void SetRangeText(string replacement, uint start, uint end, SelectionMode selectionMode) {
+		}
+
 		public void SetSelectionRange(uint start, uint end) {
 		}
 

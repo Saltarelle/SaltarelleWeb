@@ -2,8 +2,8 @@
 
 namespace System.Html {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
-	public partial class ClientRect {
-		internal ClientRect() {
+	public partial class DOMRect {
+		internal DOMRect() {
 		}
 
 		[IntrinsicProperty]

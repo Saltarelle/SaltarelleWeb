@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace System.Html {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
-	public partial class ClientRectList {
-		internal ClientRectList() {
+	public partial class DOMRectList {
+		internal DOMRectList() {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public ClientRect this[uint index] {
+		public DOMRect this[uint index] {
 			get {
-				return default(ClientRect);
+				return default(DOMRect);
 			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<ClientRect> GetEnumerator() {
+		public IEnumerator<DOMRect> GetEnumerator() {
 			return null;
 		}
 
-		public ClientRect Item(uint index) {
-			return default(ClientRect);
+		public DOMRect Item(uint index) {
+			return default(DOMRect);
 		}
 
 		[IntrinsicProperty]

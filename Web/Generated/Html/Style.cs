@@ -33,6 +33,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string All {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Animation {
 			get {
 				return null;

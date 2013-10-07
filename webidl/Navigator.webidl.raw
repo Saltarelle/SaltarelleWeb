@@ -108,16 +108,20 @@ interface NavigatorBattery {
 };
 Navigator implements NavigatorBattery;
 
+// https://wiki.mozilla.org/WebAPI/DataStore
+[NoInterfaceObject]
+interface NavigatorDataStore {
+    [Throws, Creator, Pref="dom.datastore.enabled"]
+    Promise getDataStores(DOMString name);
+};
+Navigator implements NavigatorDataStore;
+
 // http://www.w3.org/TR/vibration/#vibration-interface
 partial interface Navigator {
     // We don't support sequences in unions yet
     //boolean vibrate ((unsigned long or sequence<unsigned long>) pattern);
-    // XXXbz also, per spec we should be returning a boolean, and we just don't.
-    // See bug 884935.
-    [Throws]
-    void vibrate(unsigned long duration);
-    [Throws]
-    void vibrate(sequence<unsigned long> pattern);
+    boolean vibrate(unsigned long duration);
+    boolean vibrate(sequence<unsigned long> pattern);
 };
 
 // Mozilla-specific extensions

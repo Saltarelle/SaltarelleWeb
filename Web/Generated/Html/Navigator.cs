@@ -152,10 +152,12 @@ namespace System.Html {
 			}
 		}
 
-		public static void Vibrate(uint duration) {
+		public static bool Vibrate(uint duration) {
+			return false;
 		}
 
-		public static void Vibrate(uint[] pattern) {
+		public static bool Vibrate(uint[] pattern) {
+			return false;
 		}
 	}
 }
