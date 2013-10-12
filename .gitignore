@@ -6,3 +6,15 @@ Web/Properties/Version.cs
 *.ncrunchsolution.user
 *.ncrunchproject
 _ReSharper.Web
+Generator/Generator.sln.DotSettings.user
+Generator/Generator.Tests/Generator.Tests.csproj.user
+Generator/Generator.v11.suo
+Generator/Generator/ParserImpl/WebIDL.tokens
+Generator/Generator/ParserImpl/WebIDLLexer.cs
+Generator/Generator/ParserImpl/WebIDLParser.cs
+Generator/Generator/Generator.csproj.user
+Generator/Generator/Meta/MetadataParserImpl/Metadata.tokens
+Generator/Generator/Meta/MetadataParserImpl/Metadata__.g
+Generator/Generator/Meta/MetadataParserImpl/MetadataLexer.cs
+Generator/Generator/Meta/MetadataParserImpl/MetadataParser.cs
+Generator/Generator/ParserImpl/WebIDL__.g
