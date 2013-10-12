@@ -1,3 +1,4 @@
+3.0.0
 MASSIVE CHANGE: Auto-generate most of this binding assembly from the WebIDL used by Mozilla. Expect having to change things (although the backwards compatibility should be reasonably good)
 
 2.3.0
