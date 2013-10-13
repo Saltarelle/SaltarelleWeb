@@ -127,7 +127,7 @@ Task Determine-Version {
 Function Generate-VersionFile($Path, $Version) {
 	$Version = Get-DotNetVersion -RawVersion $Version
 @"
-[assembly: System.Reflection.AssemblyVersion("$($Version.Major).0.0.0")]
+[assembly: System.Reflection.AssemblyVersion("2.0.0.0")]
 [assembly: System.Reflection.AssemblyFileVersion("$Version")]
 "@ | Out-File $Path -Encoding "UTF8"
 }
