@@ -3,60 +3,16 @@
 namespace System.Html {
 	[Imported, NamedValues]
 	public enum BodyElementEvents {
+		[ScriptName("onabort")]
+		Abort,
 		[ScriptName("onafterprint")]
 		Afterprint,
 		[ScriptName("onbeforeprint")]
 		Beforeprint,
 		[ScriptName("onbeforeunload")]
 		Beforeunload,
-		[ScriptName("onhashchange")]
-		Hashchange,
-		[ScriptName("onmessage")]
-		Message,
-		[ScriptName("onoffline")]
-		Offline,
-		[ScriptName("ononline")]
-		OnLine,
-		[ScriptName("onpagehide")]
-		Pagehide,
-		[ScriptName("onpageshow")]
-		Pageshow,
-		[ScriptName("onpopstate")]
-		Popstate,
-		[ScriptName("onresize")]
-		Resize,
-		[ScriptName("onunload")]
-		Unload,
-		[ScriptName("oncopy")]
-		Copy,
-		[ScriptName("oncut")]
-		Cut,
-		[ScriptName("onpaste")]
-		Paste,
-		[ScriptName("ontouchstart")]
-		Touchstart,
-		[ScriptName("ontouchend")]
-		Touchend,
-		[ScriptName("ontouchmove")]
-		Touchmove,
-		[ScriptName("ontouchenter")]
-		Touchenter,
-		[ScriptName("ontouchleave")]
-		Touchleave,
-		[ScriptName("ontouchcancel")]
-		Touchcancel,
 		[ScriptName("onblur")]
 		Blur,
-		[ScriptName("onerror")]
-		Error,
-		[ScriptName("onfocus")]
-		Focus,
-		[ScriptName("onload")]
-		Load,
-		[ScriptName("onscroll")]
-		Scroll,
-		[ScriptName("onabort")]
-		Abort,
 		[ScriptName("oncanplay")]
 		Canplay,
 		[ScriptName("oncanplaythrough")]
@@ -67,6 +23,10 @@ namespace System.Html {
 		Click,
 		[ScriptName("oncontextmenu")]
 		Contextmenu,
+		[ScriptName("oncopy")]
+		Copy,
+		[ScriptName("oncut")]
+		Cut,
 		[ScriptName("ondblclick")]
 		Dblclick,
 		[ScriptName("ondrag")]
@@ -89,6 +49,12 @@ namespace System.Html {
 		Emptied,
 		[ScriptName("onended")]
 		Ended,
+		[ScriptName("onerror")]
+		Error,
+		[ScriptName("onfocus")]
+		Focus,
+		[ScriptName("onhashchange")]
+		Hashchange,
 		[ScriptName("oninput")]
 		Input,
 		[ScriptName("oninvalid")]
@@ -99,14 +65,22 @@ namespace System.Html {
 		Keypress,
 		[ScriptName("onkeyup")]
 		Keyup,
+		[ScriptName("onload")]
+		Load,
 		[ScriptName("onloadeddata")]
 		Loadeddata,
 		[ScriptName("onloadedmetadata")]
 		Loadedmetadata,
 		[ScriptName("onloadstart")]
 		Loadstart,
+		[ScriptName("onmessage")]
+		Message,
 		[ScriptName("onmousedown")]
 		Mousedown,
+		[ScriptName("onmouseenter")]
+		Mouseenter,
+		[ScriptName("onmouseleave")]
+		Mouseleave,
 		[ScriptName("onmousemove")]
 		Mousemove,
 		[ScriptName("onmouseout")]
@@ -115,18 +89,42 @@ namespace System.Html {
 		Mouseover,
 		[ScriptName("onmouseup")]
 		Mouseup,
+		[ScriptName("onmozfullscreenchange")]
+		Mozfullscreenchange,
+		[ScriptName("onmozfullscreenerror")]
+		Mozfullscreenerror,
+		[ScriptName("onmozpointerlockchange")]
+		Mozpointerlockchange,
+		[ScriptName("onmozpointerlockerror")]
+		Mozpointerlockerror,
+		[ScriptName("onoffline")]
+		Offline,
+		[ScriptName("ononline")]
+		OnLine,
+		[ScriptName("onpagehide")]
+		Pagehide,
+		[ScriptName("onpageshow")]
+		Pageshow,
+		[ScriptName("onpaste")]
+		Paste,
 		[ScriptName("onpause")]
 		Pause,
 		[ScriptName("onplay")]
 		Play,
 		[ScriptName("onplaying")]
 		Playing,
+		[ScriptName("onpopstate")]
+		Popstate,
 		[ScriptName("onprogress")]
 		Progress,
 		[ScriptName("onratechange")]
 		Ratechange,
 		[ScriptName("onreset")]
 		Reset,
+		[ScriptName("onresize")]
+		Resize,
+		[ScriptName("onscroll")]
+		Scroll,
 		[ScriptName("onseeked")]
 		Seeked,
 		[ScriptName("onseeking")]
@@ -143,23 +141,25 @@ namespace System.Html {
 		Suspend,
 		[ScriptName("ontimeupdate")]
 		Timeupdate,
-		[ScriptName("onvolumechange")]
-		Volumechange,
+		[ScriptName("ontouchcancel")]
+		Touchcancel,
+		[ScriptName("ontouchend")]
+		Touchend,
+		[ScriptName("ontouchenter")]
+		Touchenter,
+		[ScriptName("ontouchleave")]
+		Touchleave,
+		[ScriptName("ontouchmove")]
+		Touchmove,
+		[ScriptName("ontouchstart")]
+		Touchstart,
+		[ScriptName("onunload")]
+		Unload,
 		[ScriptName("onwaiting")]
 		Waiting,
-		[ScriptName("onmozfullscreenchange")]
-		Mozfullscreenchange,
-		[ScriptName("onmozfullscreenerror")]
-		Mozfullscreenerror,
-		[ScriptName("onmozpointerlockchange")]
-		Mozpointerlockchange,
-		[ScriptName("onmozpointerlockerror")]
-		Mozpointerlockerror,
-		[ScriptName("onmouseenter")]
-		Mouseenter,
-		[ScriptName("onmouseleave")]
-		Mouseleave,
 		[ScriptName("onwheel")]
-		Wheel
+		Wheel,
+		[ScriptName("onvolumechange")]
+		Volumechange
 	}
 }

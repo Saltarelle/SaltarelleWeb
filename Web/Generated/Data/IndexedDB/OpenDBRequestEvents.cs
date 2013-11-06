@@ -5,11 +5,11 @@ namespace System.Data.IndexedDB {
 	public enum OpenDBRequestEvents {
 		[ScriptName("onblocked")]
 		Blocked,
-		[ScriptName("onupgradeneeded")]
-		Upgradeneeded,
+		[ScriptName("onerror")]
+		Error,
 		[ScriptName("onsuccess")]
 		Success,
-		[ScriptName("onerror")]
-		Error
+		[ScriptName("onupgradeneeded")]
+		Upgradeneeded
 	}
 }

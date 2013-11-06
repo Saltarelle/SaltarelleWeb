@@ -3,36 +3,10 @@
 namespace System.Html {
 	[Imported, NamedValues]
 	public enum MenuItemElementEvents {
-		[ScriptName("oncopy")]
-		Copy,
-		[ScriptName("oncut")]
-		Cut,
-		[ScriptName("onpaste")]
-		Paste,
-		[ScriptName("ontouchstart")]
-		Touchstart,
-		[ScriptName("ontouchend")]
-		Touchend,
-		[ScriptName("ontouchmove")]
-		Touchmove,
-		[ScriptName("ontouchenter")]
-		Touchenter,
-		[ScriptName("ontouchleave")]
-		Touchleave,
-		[ScriptName("ontouchcancel")]
-		Touchcancel,
-		[ScriptName("onblur")]
-		Blur,
-		[ScriptName("onerror")]
-		Error,
-		[ScriptName("onfocus")]
-		Focus,
-		[ScriptName("onload")]
-		Load,
-		[ScriptName("onscroll")]
-		Scroll,
 		[ScriptName("onabort")]
 		Abort,
+		[ScriptName("onblur")]
+		Blur,
 		[ScriptName("oncanplay")]
 		Canplay,
 		[ScriptName("oncanplaythrough")]
@@ -43,6 +17,10 @@ namespace System.Html {
 		Click,
 		[ScriptName("oncontextmenu")]
 		Contextmenu,
+		[ScriptName("oncopy")]
+		Copy,
+		[ScriptName("oncut")]
+		Cut,
 		[ScriptName("ondblclick")]
 		Dblclick,
 		[ScriptName("ondrag")]
@@ -65,6 +43,10 @@ namespace System.Html {
 		Emptied,
 		[ScriptName("onended")]
 		Ended,
+		[ScriptName("onerror")]
+		Error,
+		[ScriptName("onfocus")]
+		Focus,
 		[ScriptName("oninput")]
 		Input,
 		[ScriptName("oninvalid")]
@@ -75,6 +57,8 @@ namespace System.Html {
 		Keypress,
 		[ScriptName("onkeyup")]
 		Keyup,
+		[ScriptName("onload")]
+		Load,
 		[ScriptName("onloadeddata")]
 		Loadeddata,
 		[ScriptName("onloadedmetadata")]
@@ -83,6 +67,10 @@ namespace System.Html {
 		Loadstart,
 		[ScriptName("onmousedown")]
 		Mousedown,
+		[ScriptName("onmouseenter")]
+		Mouseenter,
+		[ScriptName("onmouseleave")]
+		Mouseleave,
 		[ScriptName("onmousemove")]
 		Mousemove,
 		[ScriptName("onmouseout")]
@@ -91,6 +79,16 @@ namespace System.Html {
 		Mouseover,
 		[ScriptName("onmouseup")]
 		Mouseup,
+		[ScriptName("onmozfullscreenchange")]
+		Mozfullscreenchange,
+		[ScriptName("onmozfullscreenerror")]
+		Mozfullscreenerror,
+		[ScriptName("onmozpointerlockchange")]
+		Mozpointerlockchange,
+		[ScriptName("onmozpointerlockerror")]
+		Mozpointerlockerror,
+		[ScriptName("onpaste")]
+		Paste,
 		[ScriptName("onpause")]
 		Pause,
 		[ScriptName("onplay")]
@@ -103,6 +101,8 @@ namespace System.Html {
 		Ratechange,
 		[ScriptName("onreset")]
 		Reset,
+		[ScriptName("onscroll")]
+		Scroll,
 		[ScriptName("onseeked")]
 		Seeked,
 		[ScriptName("onseeking")]
@@ -119,23 +119,23 @@ namespace System.Html {
 		Suspend,
 		[ScriptName("ontimeupdate")]
 		Timeupdate,
-		[ScriptName("onvolumechange")]
-		Volumechange,
+		[ScriptName("ontouchcancel")]
+		Touchcancel,
+		[ScriptName("ontouchend")]
+		Touchend,
+		[ScriptName("ontouchenter")]
+		Touchenter,
+		[ScriptName("ontouchleave")]
+		Touchleave,
+		[ScriptName("ontouchmove")]
+		Touchmove,
+		[ScriptName("ontouchstart")]
+		Touchstart,
 		[ScriptName("onwaiting")]
 		Waiting,
-		[ScriptName("onmozfullscreenchange")]
-		Mozfullscreenchange,
-		[ScriptName("onmozfullscreenerror")]
-		Mozfullscreenerror,
-		[ScriptName("onmozpointerlockchange")]
-		Mozpointerlockchange,
-		[ScriptName("onmozpointerlockerror")]
-		Mozpointerlockerror,
-		[ScriptName("onmouseenter")]
-		Mouseenter,
-		[ScriptName("onmouseleave")]
-		Mouseleave,
 		[ScriptName("onwheel")]
-		Wheel
+		Wheel,
+		[ScriptName("onvolumechange")]
+		Volumechange
 	}
 }

@@ -1198,7 +1198,7 @@ namespace Generator {
 				Name = enumName
 			};
 			AddAttributes(t.Attributes, attributes);
-			t.Members.AddRange(enumMembers);
+			t.Members.AddRange(enumMembers.OrderBy(m => m.Name));
 			_result.Add(new NamespacedEntityDeclaration(enumNamespace, t));
 		}
 

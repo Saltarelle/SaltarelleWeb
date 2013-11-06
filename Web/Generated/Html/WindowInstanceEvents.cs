@@ -3,18 +3,16 @@
 namespace System.Html {
 	[Imported, NamedValues]
 	public enum WindowInstanceEvents {
-		[ScriptName("ondevicelight")]
-		Devicelight,
-		[ScriptName("ondevicemotion")]
-		Devicemotion,
-		[ScriptName("ondeviceorientation")]
-		Deviceorientation,
-		[ScriptName("ondeviceproximity")]
-		Deviceproximity,
-		[ScriptName("onuserproximity")]
-		Userproximity,
 		[ScriptName("onabort")]
 		Abort,
+		[ScriptName("onafterprint")]
+		Afterprint,
+		[ScriptName("onbeforeprint")]
+		Beforeprint,
+		[ScriptName("onbeforeunload")]
+		Beforeunload,
+		[ScriptName("onblur")]
+		Blur,
 		[ScriptName("oncanplay")]
 		Canplay,
 		[ScriptName("oncanplaythrough")]
@@ -27,6 +25,14 @@ namespace System.Html {
 		Contextmenu,
 		[ScriptName("ondblclick")]
 		Dblclick,
+		[ScriptName("ondevicelight")]
+		Devicelight,
+		[ScriptName("ondevicemotion")]
+		Devicemotion,
+		[ScriptName("ondeviceorientation")]
+		Deviceorientation,
+		[ScriptName("ondeviceproximity")]
+		Deviceproximity,
 		[ScriptName("ondrag")]
 		Drag,
 		[ScriptName("ondragend")]
@@ -47,6 +53,12 @@ namespace System.Html {
 		Emptied,
 		[ScriptName("onended")]
 		Ended,
+		[ScriptName("onerror")]
+		Error,
+		[ScriptName("onfocus")]
+		Focus,
+		[ScriptName("onhashchange")]
+		Hashchange,
 		[ScriptName("oninput")]
 		Input,
 		[ScriptName("oninvalid")]
@@ -57,12 +69,16 @@ namespace System.Html {
 		Keypress,
 		[ScriptName("onkeyup")]
 		Keyup,
+		[ScriptName("onload")]
+		Load,
 		[ScriptName("onloadeddata")]
 		Loadeddata,
 		[ScriptName("onloadedmetadata")]
 		Loadedmetadata,
 		[ScriptName("onloadstart")]
 		Loadstart,
+		[ScriptName("onmessage")]
+		Message,
 		[ScriptName("onmousedown")]
 		Mousedown,
 		[ScriptName("onmousemove")]
@@ -73,18 +89,40 @@ namespace System.Html {
 		Mouseover,
 		[ScriptName("onmouseup")]
 		Mouseup,
+		[ScriptName("onmozfullscreenchange")]
+		Mozfullscreenchange,
+		[ScriptName("onmozfullscreenerror")]
+		Mozfullscreenerror,
+		[ScriptName("onmozpointerlockchange")]
+		Mozpointerlockchange,
+		[ScriptName("onmozpointerlockerror")]
+		Mozpointerlockerror,
+		[ScriptName("onoffline")]
+		Offline,
+		[ScriptName("ononline")]
+		OnLine,
+		[ScriptName("onpagehide")]
+		Pagehide,
+		[ScriptName("onpageshow")]
+		Pageshow,
 		[ScriptName("onpause")]
 		Pause,
 		[ScriptName("onplay")]
 		Play,
 		[ScriptName("onplaying")]
 		Playing,
+		[ScriptName("onpopstate")]
+		Popstate,
 		[ScriptName("onprogress")]
 		Progress,
 		[ScriptName("onratechange")]
 		Ratechange,
 		[ScriptName("onreset")]
 		Reset,
+		[ScriptName("onresize")]
+		Resize,
+		[ScriptName("onscroll")]
+		Scroll,
 		[ScriptName("onseeked")]
 		Seeked,
 		[ScriptName("onseeking")]
@@ -101,51 +139,13 @@ namespace System.Html {
 		Suspend,
 		[ScriptName("ontimeupdate")]
 		Timeupdate,
-		[ScriptName("onvolumechange")]
-		Volumechange,
-		[ScriptName("onwaiting")]
-		Waiting,
-		[ScriptName("onmozfullscreenchange")]
-		Mozfullscreenchange,
-		[ScriptName("onmozfullscreenerror")]
-		Mozfullscreenerror,
-		[ScriptName("onmozpointerlockchange")]
-		Mozpointerlockchange,
-		[ScriptName("onmozpointerlockerror")]
-		Mozpointerlockerror,
-		[ScriptName("onafterprint")]
-		Afterprint,
-		[ScriptName("onbeforeprint")]
-		Beforeprint,
-		[ScriptName("onbeforeunload")]
-		Beforeunload,
-		[ScriptName("onhashchange")]
-		Hashchange,
-		[ScriptName("onmessage")]
-		Message,
-		[ScriptName("onoffline")]
-		Offline,
-		[ScriptName("ononline")]
-		OnLine,
-		[ScriptName("onpagehide")]
-		Pagehide,
-		[ScriptName("onpageshow")]
-		Pageshow,
-		[ScriptName("onpopstate")]
-		Popstate,
-		[ScriptName("onresize")]
-		Resize,
 		[ScriptName("onunload")]
 		Unload,
-		[ScriptName("onblur")]
-		Blur,
-		[ScriptName("onerror")]
-		Error,
-		[ScriptName("onfocus")]
-		Focus,
-		[ScriptName("onload")]
-		Load,
-		[ScriptName("onscroll")]
-		Scroll
+		[ScriptName("onuserproximity")]
+		Userproximity,
+		[ScriptName("onwaiting")]
+		Waiting,
+		[ScriptName("onvolumechange")]
+		Volumechange
 	}
 }

@@ -3,10 +3,10 @@
 namespace System.Net {
 	[Imported]
 	public enum ReadyState {
-		Unsent = 0,
-		Opened = 1,
+		Done = 4,
 		HeadersReceived = 2,
 		Loading = 3,
-		Done = 4
+		Opened = 1,
+		Unsent = 0
 	}
 }

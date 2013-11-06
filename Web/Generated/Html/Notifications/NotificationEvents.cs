@@ -5,11 +5,11 @@ namespace System.Html.Notifications {
 	public enum NotificationEvents {
 		[ScriptName("onclick")]
 		Click,
-		[ScriptName("onshow")]
-		Show,
+		[ScriptName("onclose")]
+		Close,
 		[ScriptName("onerror")]
 		Error,
-		[ScriptName("onclose")]
-		Close
+		[ScriptName("onshow")]
+		Show
 	}
 }

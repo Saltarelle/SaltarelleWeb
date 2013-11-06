@@ -3,17 +3,17 @@
 namespace System.IO {
 	[Imported, NamedValues]
 	public enum FileReaderEvents {
-		[ScriptName("onloadstart")]
-		Loadstart,
-		[ScriptName("onprogress")]
-		Progress,
-		[ScriptName("onload")]
-		Load,
 		[ScriptName("onabort")]
 		Abort,
 		[ScriptName("onerror")]
 		Error,
+		[ScriptName("onload")]
+		Load,
 		[ScriptName("onloadend")]
-		Loadend
+		Loadend,
+		[ScriptName("onloadstart")]
+		Loadstart,
+		[ScriptName("onprogress")]
+		Progress
 	}
 }

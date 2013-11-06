@@ -3,19 +3,19 @@
 namespace System.Html.Speech {
 	[Imported, NamedValues]
 	public enum SpeechSynthesisUtteranceEvents {
-		[ScriptName("onstart")]
-		Start,
+		[ScriptName("onboundary")]
+		Boundary,
 		[ScriptName("onend")]
 		End,
 		[ScriptName("onerror")]
 		Error,
+		[ScriptName("onmark")]
+		Mark,
 		[ScriptName("onpause")]
 		Pause,
 		[ScriptName("onresume")]
 		Resume,
-		[ScriptName("onmark")]
-		Mark,
-		[ScriptName("onboundary")]
-		Boundary
+		[ScriptName("onstart")]
+		Start
 	}
 }

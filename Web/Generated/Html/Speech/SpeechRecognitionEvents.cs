@@ -3,27 +3,27 @@
 namespace System.Html.Speech {
 	[Imported, NamedValues]
 	public enum SpeechRecognitionEvents {
-		[ScriptName("onaudiostart")]
-		Audiostart,
-		[ScriptName("onsoundstart")]
-		Soundstart,
-		[ScriptName("onspeechstart")]
-		Speechstart,
-		[ScriptName("onspeechend")]
-		Speechend,
-		[ScriptName("onsoundend")]
-		Soundend,
 		[ScriptName("onaudioend")]
 		Audioend,
-		[ScriptName("onresult")]
-		Result,
-		[ScriptName("onnomatch")]
-		Nomatch,
+		[ScriptName("onaudiostart")]
+		Audiostart,
+		[ScriptName("onend")]
+		End,
 		[ScriptName("onerror")]
 		Error,
+		[ScriptName("onnomatch")]
+		Nomatch,
+		[ScriptName("onresult")]
+		Result,
+		[ScriptName("onsoundend")]
+		Soundend,
+		[ScriptName("onsoundstart")]
+		Soundstart,
+		[ScriptName("onspeechend")]
+		Speechend,
+		[ScriptName("onspeechstart")]
+		Speechstart,
 		[ScriptName("onstart")]
-		Start,
-		[ScriptName("onend")]
-		End
+		Start
 	}
 }

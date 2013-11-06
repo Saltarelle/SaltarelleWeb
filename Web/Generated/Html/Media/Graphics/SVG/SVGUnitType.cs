@@ -3,8 +3,8 @@
 namespace System.Html.Media.Graphics.SVG {
 	[Imported]
 	public enum SVGUnitType {
+		Objectboundingbox = 2,
 		Unknown = 0,
-		Userspaceonuse = 1,
-		Objectboundingbox = 2
+		Userspaceonuse = 1
 	}
 }

@@ -3,8 +3,8 @@
 namespace System.Html.Media.Graphics.SVG {
 	[Imported]
 	public enum SVGFEStitchType {
-		Unknown = 0,
+		Nostitch = 2,
 		Stitch = 1,
-		Nostitch = 2
+		Unknown = 0
 	}
 }

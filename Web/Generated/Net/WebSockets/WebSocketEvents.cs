@@ -3,13 +3,13 @@
 namespace System.Net.WebSockets {
 	[Imported, NamedValues]
 	public enum WebSocketEvents {
-		[ScriptName("onopen")]
-		Open,
-		[ScriptName("onerror")]
-		Error,
 		[ScriptName("onclose")]
 		Close,
+		[ScriptName("onerror")]
+		Error,
 		[ScriptName("onmessage")]
-		Message
+		Message,
+		[ScriptName("onopen")]
+		Open
 	}
 }

@@ -3,11 +3,11 @@
 namespace System.Html.Media.Graphics.SVG {
 	[Imported]
 	public enum SVGComponentTransferType {
-		Unknown = 0,
-		Identity = 1,
-		Table = 2,
 		Discrete = 3,
+		Gamma = 5,
+		Identity = 1,
 		Linear = 4,
-		Gamma = 5
+		Table = 2,
+		Unknown = 0
 	}
 }

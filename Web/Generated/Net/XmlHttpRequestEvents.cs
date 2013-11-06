@@ -3,21 +3,21 @@
 namespace System.Net {
 	[Imported, NamedValues]
 	public enum XmlHttpRequestEvents {
-		[ScriptName("onreadystatechange")]
-		Readystatechange,
-		[ScriptName("onloadstart")]
-		Loadstart,
-		[ScriptName("onprogress")]
-		Progress,
 		[ScriptName("onabort")]
 		Abort,
 		[ScriptName("onerror")]
 		Error,
 		[ScriptName("onload")]
 		Load,
-		[ScriptName("ontimeout")]
-		Timeout,
 		[ScriptName("onloadend")]
-		Loadend
+		Loadend,
+		[ScriptName("onloadstart")]
+		Loadstart,
+		[ScriptName("onprogress")]
+		Progress,
+		[ScriptName("onreadystatechange")]
+		Readystatechange,
+		[ScriptName("ontimeout")]
+		Timeout
 	}
 }

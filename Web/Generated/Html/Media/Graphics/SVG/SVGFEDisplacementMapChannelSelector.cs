@@ -3,10 +3,10 @@
 namespace System.Html.Media.Graphics.SVG {
 	[Imported]
 	public enum SVGFEDisplacementMapChannelSelector {
-		Unknown = 0,
-		R = 1,
-		G = 2,
+		A = 4,
 		B = 3,
-		A = 4
+		G = 2,
+		R = 1,
+		Unknown = 0
 	}
 }

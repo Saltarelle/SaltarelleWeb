@@ -3,11 +3,11 @@
 namespace System.Net.ServerEvents {
 	[Imported, NamedValues]
 	public enum EventSourceEvents {
-		[ScriptName("onopen")]
-		Open,
+		[ScriptName("onerror")]
+		Error,
 		[ScriptName("onmessage")]
 		Message,
-		[ScriptName("onerror")]
-		Error
+		[ScriptName("onopen")]
+		Open
 	}
 }
