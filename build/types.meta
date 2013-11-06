@@ -1494,6 +1494,7 @@ mozRTCIceCandidate
 mozRTCPeerConnection
 	namespace = System.Net.WebRTC
 	name = RTCPeerConnection
+	noconstructors
 
 mozRTCSessionDescription
 	namespace = System.Net.WebRTC

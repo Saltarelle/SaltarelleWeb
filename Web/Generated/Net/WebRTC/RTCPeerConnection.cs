@@ -5,15 +5,6 @@ using System.Runtime.CompilerServices;
 namespace System.Net.WebRTC {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("mozRTCPeerConnection")]
 	public partial class RTCPeerConnection : EventTarget {
-		public RTCPeerConnection() {
-		}
-
-		public RTCPeerConnection(RTCConfiguration configuration) {
-		}
-
-		public RTCPeerConnection(RTCConfiguration configuration, object constraints) {
-		}
-
 		public void AddEventListener(RTCPeerConnectionEvents type, Action listener) {
 		}
 
