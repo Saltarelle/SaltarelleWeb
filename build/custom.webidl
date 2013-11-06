@@ -7,8 +7,6 @@ interface ByteString;
 interface Uint8ClampedArray;
 interface Int32Array;
 
-interface WorkerUtils;
-
 interface StyleSheetList {
 	readonly attribute unsigned long length;
 	getter StyleSheet item(unsigned long index);
@@ -42,12 +40,6 @@ interface Blob {
 	           optional DOMString contentType);
 	void close(); 
 };
-
-////////////////////////////////////////////////////////////////////////////////////////////
-// IndexedDB
-////////////////////////////////////////////////////////////////////////////////////////////
-
-WorkerUtils implements IDBEnvironment;
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 // ApplicationCache
