@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace System.Html {
 	public partial class Window {
 		public static void AddEventListener(string type, Action listener) {}
@@ -14,5 +16,11 @@ namespace System.Html {
 
 		public static void RemoveEventListener(string type, HtmlEventHandler listener) {}
 		public static void RemoveEventListener(string type, HtmlEventHandler listener, bool capture) {}
+
+		[IntrinsicProperty]
+		public static object DialogArguments { get { return null; } }
+
+		[IntrinsicProperty]
+		public static object ReturnValue { get; set; }
 	}
 }

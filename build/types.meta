@@ -21,6 +21,12 @@ AnyCallback
 	name = Delegate
 	nogenerate
 
+AppInfo
+	nogenerate
+
+AppNotificationServiceOptions
+	nogenerate
+
 ApplicationCache
 	namespace = System.Data.Offline
 	typeOverride status = System.Data.Offline.ApplicationCacheStatus
@@ -52,6 +58,9 @@ Attr
 
 AudioBuffer
 	namespace = System.Html.Media.Audio
+
+AudioChannel
+	nogenerate
 
 AudioBufferSourceNode
 	namespace = System.Html.Media.Audio
@@ -93,9 +102,6 @@ BatteryManager
 BeforeUnloadEvent
 	namespace = System.Html
 
-BeforeUnloadEventHandlerNonNull
-	namespace = System.Html
-
 BinaryType
 	namespace = System.Net.WebSockets
 
@@ -124,6 +130,12 @@ CallEvent
 	nogenerate
 
 CallEventInit
+	nogenerate
+
+CallGroupErrorEvent
+	nogenerate
+
+CallGroupErrorEventInit
 	nogenerate
 
 CallsList
@@ -223,6 +235,9 @@ CharacterData
 ChildNode
 	mixin
 
+ChromeWorker
+	nogenerate
+
 ClipboardEvent
 	namespace = System.Html
 
@@ -252,6 +267,36 @@ CompositionEvent
 	namespace = System.Html
 
 ConnStatusDict
+	nogenerate
+
+ContactAddress
+	nogenerate
+
+ContactAddressInit
+	nogenerate
+
+ContactField
+	nogenerate
+
+ContactFieldInit
+	nogenerate
+
+ContactTelField
+	nogenerate
+
+ContactTelFieldInit
+	nogenerate
+
+ContactProperties
+	nogenerate
+
+ContactFindSortOptions
+	nogenerate
+
+ContactFindOptions
+	nogenerate
+
+ContactManager
 	nogenerate
 
 ConvolverNode
@@ -632,7 +677,7 @@ FormData
 	namespace = System.Net
 
 FrameRequestCallback
-	nogenerate
+	namespace = System.Html
 
 Function
 	nogenerate
@@ -644,6 +689,9 @@ GainNode
 	namespace = System.Html.Media.Audio
 
 Gamepad
+	nogenerate
+
+GamepadButton
 	nogenerate
 
 GamepadAxisMoveEvent
@@ -1270,6 +1318,15 @@ MediaTrackConstraintsInternal
 MenuBuilder
 	nogenerate
 
+MediaConstraints
+	namespace = System.Net.WebRTC
+
+MediaConstraintsInternal
+	nogenerate
+
+MediaConstraintSet
+	namespace = System.Net.WebRTC
+
 MessageChannel
 	namespace = System.Net.Messaging
 
@@ -1281,7 +1338,6 @@ MessageEventInit
 
 MessagePort
 	namespace = System.Net.Messaging
-	typeOverride transfer = System.Html.ITransferable[]
 
 MessagePortList
 	namespace = System.Net.Messaging
@@ -1296,6 +1352,9 @@ MmsAttachment
 	nogenerate
 
 MmsParameters
+	nogenerate
+
+MmsSendParameters
 	nogenerate
 
 MouseEvent
@@ -1329,6 +1388,9 @@ MozChannel
 MozConnection
 	nogenerate
 
+mozContact
+	nogenerate
+
 MozContactChangeEvent
 	nogenerate
 
@@ -1343,6 +1405,10 @@ MozFrameLoader
 	noinherit
 
 MozFrameLoaderOwner
+	nogenerate
+	noinherit
+
+MozFrameRequestCallback
 	nogenerate
 	noinherit
 
@@ -1426,10 +1492,12 @@ mozRTCIceCandidate
 	scriptName = Object
 
 mozRTCPeerConnection
-	nogenerate
+	namespace = System.Net.WebRTC
+	name = RTCPeerConnection
 
 mozRTCSessionDescription
-	nogenerate
+	namespace = System.Net.WebRTC
+	name = RTCSessionDescription
 
 MozSettingsEvent
 	nogenerate
@@ -1444,6 +1512,12 @@ MozSmsEventInit
 	nogenerate
 
 MozSmsMessage
+	nogenerate
+
+MozStkCommandEvent
+	nogenerate
+
+MozStkCommandEventInit
 	nogenerate
 
 MozTimeManager
@@ -1535,9 +1609,6 @@ Node
 	generateEnum XmlNodeType constants "(.+)_NODE" rename CDATA_SECTION = CDATA
 	generateEnum DocumentPosition constants "DOCUMENT_POSITION_(.+)"
 
-NodeEventHandlers
-	mixin
-
 NodeFilter
 	namespace = System.Xml
 	name = INodeFilter
@@ -1578,6 +1649,10 @@ NotifyPaintEvent
 nsIControllers
 	nogenerate
 
+nsIDOMCrypto
+	namespace = System.Security.Cryptography
+	name = Crypto
+
 nsIEditor
 	nogenerate
 
@@ -1610,6 +1685,16 @@ OfflineResourceList
 	namespace = System.Data.Offline
 	name = ApplicationCache
 	nogenerate
+
+OnBeforeUnloadEventHandlerNonNull
+	namespace = System.Html
+	name = BeforeUnloadEventHandler
+
+OnErrorEventHandlerForNodes
+	mixin
+
+OnErrorEventHandlerForWindow
+	mixin
 
 OnErrorEventHandlerNonNull
 	namespace = System.Html
@@ -1651,6 +1736,27 @@ PanningModelType
 ParentNode
 	mixin
 
+PCImplReadyState
+	nogenerate
+
+PCImplSignalingState
+	nogenerate
+
+PCImplSipccState
+	nogenerate
+
+PCImplIceState
+	nogenerate
+
+PCObserverStateType
+	nogenerate
+
+PeerConnectionImpl
+	nogenerate
+
+PeerConnectionObserver
+	nogenerate
+
 Performance
 	namespace = System.Performance
 	name = PerformanceDetails
@@ -1665,6 +1771,9 @@ PeriodicWave
 	namespace = System.Html.Media.Audio
 
 PhoneNumberService
+	nogenerate
+
+Pkcs11
 	nogenerate
 
 Plugin
@@ -1753,6 +1862,9 @@ Rect
 RGBColor
 	namespace = System.Html
 
+RTCCodecStats
+	namespace = System.Net.WebRTC
+
 RTCConfiguration
 	namespace = System.Net.WebRTC
 
@@ -1779,6 +1891,27 @@ RTCDataChannelType
 RTCIceCandidateInit
 	namespace = System.Net.WebRTC
 
+RTCIceCandidatePairStats
+	namespace = System.Net.WebRTC
+
+RTCIceCandidateStats
+	namespace = System.Net.WebRTC
+
+RTCStatsIceCandidatePairState
+	namespace = System.Net.WebRTC
+
+RTCStatsReport
+	namespace = System.Net.WebRTC
+
+RTCStatsReportCallback
+	namespace = System.Net.WebRTC
+
+RTCStatsReportInternal
+	namespace = System.Net.WebRTC
+
+RTCIceComponentStats
+	namespace = System.Net.WebRTC
+
 RTCIceConnectionState
 	namespace = System.Net.WebRTC
 
@@ -1786,6 +1919,18 @@ RTCIceGatheringState
 	namespace = System.Net.WebRTC
 
 RTCIceServer
+	namespace = System.Net.WebRTC
+
+RTCInboundRTPStreamStats
+	namespace = System.Net.WebRTC
+
+RTCMediaStreamTrackStats
+	namespace = System.Net.WebRTC
+
+RTCMediaStreamStats
+	namespace = System.Net.WebRTC
+
+RTCOutboundRTPStreamStats
 	namespace = System.Net.WebRTC
 
 RTCPeerConnectionErrorCallback
@@ -1801,12 +1946,30 @@ RTCSdpType
 	namespace = System.Net.WebRTC
 
 RTCSessionDescriptionCallback
-	nogenerate
+	namespace = System.Net.WebRTC
 
 RTCSessionDescriptionInit
 	namespace = System.Net.WebRTC
 
 RTCSignalingState
+	namespace = System.Net.WebRTC
+
+RTCRTPStreamStats
+	namespace = System.Net.WebRTC
+
+RTCStats
+	namespace = System.Net.WebRTC
+
+RTCStatsCallback
+	namespace = System.Net.WebRTC
+
+RTCStatsIceCandidateType
+	namespace = System.Net.WebRTC
+
+RTCStatsType
+	namespace = System.Net.WebRTC
+
+RTCTransportStats
 	namespace = System.Net.WebRTC
 
 Screen
@@ -1817,6 +1980,12 @@ ScriptProcessorNode
 
 ScrollAreaEvent
 	nogenerate
+
+ScrollBehavior
+	namespace = System.Html
+
+ScrollOptions
+	namespace = System.Html
 
 Selection
 	namespace = System.Html.Editing
@@ -1849,6 +2018,9 @@ SmartCardEvent
 	nogenerate
 
 SmartCardEventInit
+	nogenerate
+
+SmsSendParameters
 	nogenerate
 
 SocketsDict
@@ -1906,6 +2078,9 @@ SpeechSynthesisEvent
 
 SpeechSynthesisEventInit
 	namespace = System.Html.Speech
+
+SpeechSynthesisGetter
+	skip
 
 SpeechSynthesisUtterance
 	namespace = System.Html.Speech
@@ -2466,11 +2641,6 @@ TrackEvent
 TrackEventInit
 	nogenerate
 
-Transferable
-	namespace = System.Html
-	name = ITransferable
-	interface
-
 TransitionEvent
 	namespace = System.Html
 
@@ -2579,6 +2749,9 @@ WebGLExtensionInstancedArrays
 WebGLExtensionLoseContext
 	namespace = System.Html.Media.Graphics.WebGL
 
+WebGLExtensionSRGB
+	nogenerate
+
 WebGLExtensionStandardDerivatives
 	namespace = System.Html.Media.Graphics.WebGL
 
@@ -2655,10 +2828,11 @@ VideoStreamTrack
 Window
 	namespace = System.Html
 	name = WindowInstance
-	nogenerate
-
-WindowDeviceEvents
-	mixin
+	scriptName = Window
+	typeOverride frames = System.Xml.XmlElement[]
+	rename window = Instance
+	remove controllers
+	remove pkcs11
 
 WindowEventHandlers
 	mixin
@@ -2682,8 +2856,7 @@ WindowTimers
 WindowProxy
 	namespace = System.Html
 	name = WindowInstance
-	scriptName = Window
-	rename window = Instance
+	nogenerate
 
 VisibilityState
 	namespace = System.Html
@@ -2701,11 +2874,6 @@ WorkerGlobalScope
 
 WorkerLocation
 	namespace = System.Threading.WebWorkers
-
-WorkerMessagePort
-	namespace = System.Net.Messaging
-	name = MessagePort
-	nogenerate
 
 WorkerNavigator
 	namespace = System.Threading.WebWorkers
@@ -2780,7 +2948,7 @@ staticInstance System.Html.Document
 
 staticInstance System.Html.Window
 	instanceName = window
-	type = WindowProxy
+	type = Window
 
 staticInstance System.Html.Navigator
 	instanceName = navigator

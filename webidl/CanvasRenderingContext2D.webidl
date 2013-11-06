@@ -12,7 +12,6 @@
  */
 
 interface HitRegionOptions;
-interface Window;
 
 enum CanvasWindingRule { "nonzero", "evenodd" };
 
@@ -48,11 +47,11 @@ interface CanvasRenderingContext2D {
   // colors and styles (see also the CanvasDrawingStyles interface)
            attribute (DOMString or CanvasGradient or CanvasPattern) strokeStyle; // (default black)
            attribute (DOMString or CanvasGradient or CanvasPattern) fillStyle; // (default black)
-  [Creator]
+  [NewObject]
   CanvasGradient createLinearGradient(double x0, double y0, double x1, double y1);
-  [Creator, Throws]
+  [NewObject, Throws]
   CanvasGradient createRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1);
-  [Creator, Throws]
+  [NewObject, Throws]
   CanvasPattern createPattern((HTMLImageElement or HTMLCanvasElement or HTMLVideoElement) image, [TreatNullAs=EmptyString] DOMString repetition);
 
   // shadows
@@ -74,20 +73,20 @@ interface CanvasRenderingContext2D {
 
   // path API (see also CanvasPathMethods)
   void beginPath();
-  void fill([TreatUndefinedAs=Missing] optional CanvasWindingRule winding = "nonzero");
+  void fill(optional CanvasWindingRule winding = "nonzero");
 // NOT IMPLEMENTED  void fill(Path path);
   void stroke();
 // NOT IMPLEMENTED  void stroke(Path path);
-// NOT IMPLEMENTED  void drawSystemFocusRing(Element element);
-// NOT IMPLEMENTED  void drawSystemFocusRing(Path path, Element element);
-// NOT IMPLEMENTED  boolean drawCustomFocusRing(Element element);
-// NOT IMPLEMENTED  boolean drawCustomFocusRing(Path path, Element element);
+  [Pref="canvas.focusring.enabled"] void drawSystemFocusRing(Element element);
+// NOT IMPLEMENTED  void drawSystemFocusRing(Path path, HTMLElement element);
+  [Pref="canvas.focusring.enabled"] boolean drawCustomFocusRing(Element element);
+// NOT IMPLEMENTED  boolean drawCustomFocusRing(Path path, HTMLElement element);
 // NOT IMPLEMENTED  void scrollPathIntoView();
 // NOT IMPLEMENTED  void scrollPathIntoView(Path path);
-  void clip([TreatUndefinedAs=Missing] optional CanvasWindingRule winding = "nonzero");
+  void clip(optional CanvasWindingRule winding = "nonzero");
 // NOT IMPLEMENTED  void clip(Path path);
 // NOT IMPLEMENTED  void resetClip();
-  boolean isPointInPath(unrestricted double x, unrestricted double y, [TreatUndefinedAs=Missing] optional CanvasWindingRule winding = "nonzero");
+  boolean isPointInPath(unrestricted double x, unrestricted double y, optional CanvasWindingRule winding = "nonzero");
 // NOT IMPLEMENTED  boolean isPointInPath(Path path, unrestricted double x, unrestricted double y);
   boolean isPointInStroke(double x, double y);
 
@@ -96,7 +95,7 @@ interface CanvasRenderingContext2D {
   void fillText(DOMString text, double x, double y, optional double maxWidth);
   [Throws, LenientFloat]
   void strokeText(DOMString text, double x, double y, optional double maxWidth);
-  [Creator, Throws]
+  [NewObject, Throws]
   TextMetrics measureText(DOMString text);
 
   // drawing images
@@ -112,11 +111,11 @@ interface CanvasRenderingContext2D {
 // NOT IMPLEMENTED  void addHitRegion(HitRegionOptions options);
 
   // pixel manipulation
-  [Creator, Throws]
+  [NewObject, Throws]
   ImageData createImageData(double sw, double sh);
-  [Creator, Throws]
+  [NewObject, Throws]
   ImageData createImageData(ImageData imagedata);
-  [Creator, Throws]
+  [NewObject, Throws]
   ImageData getImageData(double sx, double sy, double sw, double sh);
   [Throws]
   void putImageData(ImageData imagedata, double dx, double dy);
@@ -229,9 +228,9 @@ interface CanvasDrawingStyles {
            attribute double miterLimit; // (default 10)
 
   // dashed lines
-// NOT IMPLEMENTED    [LenientFloat] void setLineDash(sequence<double> segments); // default empty
-// NOT IMPLEMENTED    sequence<double> getLineDash();
-// NOT IMPLEMENTED             [LenientFloat] attribute double lineDashOffset;
+    [LenientFloat] void setLineDash(sequence<double> segments); // default empty
+    sequence<double> getLineDash();
+    [LenientFloat] attribute double lineDashOffset;
 
   // text
            [SetterThrows]

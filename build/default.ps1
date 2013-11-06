@@ -190,6 +190,11 @@ function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$curren
 			$currentLine.value++
 			Process $lines ($currentIndent + 1) $symbols $newTake $sources $currentLine
 		}
+		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]\s==\s'[^']+':$") {
+			$newTake = $false
+			$currentLine.value++
+			Process $lines ($currentIndent + 1) $symbols $newTake $sources $currentLine
+		}
 		else {
 			throw "Unknown line $($line.Text)"
 		}

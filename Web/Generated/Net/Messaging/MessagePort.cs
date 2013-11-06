@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace System.Net.Messaging {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
-	public partial class MessagePort : EventTarget, ITransferable {
+	public partial class MessagePort : EventTarget {
 		internal MessagePort() {
 		}
 
@@ -52,7 +52,7 @@ namespace System.Net.Messaging {
 		public void PostMessage(object message) {
 		}
 
-		public void PostMessage(object message, ITransferable[] transfer) {
+		public void PostMessage(object message, object[] transferable) {
 		}
 
 		public void RemoveEventListener(MessagePortEvents type, Action listener) {

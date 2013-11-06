@@ -61,7 +61,7 @@ namespace System.Threading.WebWorkers {
 		public void PostMessage(object message) {
 		}
 
-		public void PostMessage(object message, ITransferable[] transfer) {
+		public void PostMessage(object message, object[] transfer) {
 		}
 
 		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener) {

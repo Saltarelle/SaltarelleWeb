@@ -3,26 +3,26 @@
 namespace System.Html {
 	[IgnoreNamespace, Imported]
 	public partial interface IWindowTimers {
-		void ClearInterval(int intervalId);
+		void ClearInterval(int handle);
 
-		void ClearTimeout(int timeoutId);
+		void ClearTimeout(int handle);
 
-		int SetInterval(Function func);
-
-		[ExpandParams]
-		int SetInterval(Function func, int delay, params object[] args);
-
-		int SetInterval(string code);
-
-		int SetInterval(string code, int delay);
-
-		int SetTimeout(Function func);
+		int SetInterval(Function handler);
 
 		[ExpandParams]
-		int SetTimeout(Function func, int delay, params object[] args);
+		int SetInterval(Function handler, int timeout, params object[] arguments);
 
-		int SetTimeout(string code);
+		int SetInterval(string handler);
 
-		int SetTimeout(string code, int delay);
+		int SetInterval(string handler, int timeout);
+
+		int SetTimeout(Function handler);
+
+		[ExpandParams]
+		int SetTimeout(Function handler, int timeout, params object[] arguments);
+
+		int SetTimeout(string handler);
+
+		int SetTimeout(string handler, int timeout);
 	}
 }

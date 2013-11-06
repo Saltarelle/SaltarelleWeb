@@ -81,6 +81,10 @@ namespace System.Html {
 		Message,
 		[ScriptName("onmousedown")]
 		Mousedown,
+		[ScriptName("onmouseenter")]
+		Mouseenter,
+		[ScriptName("onmouseleave")]
+		Mouseleave,
 		[ScriptName("onmousemove")]
 		Mousemove,
 		[ScriptName("onmouseout")]
@@ -139,6 +143,18 @@ namespace System.Html {
 		Suspend,
 		[ScriptName("ontimeupdate")]
 		Timeupdate,
+		[ScriptName("ontouchcancel")]
+		Touchcancel,
+		[ScriptName("ontouchend")]
+		Touchend,
+		[ScriptName("ontouchenter")]
+		Touchenter,
+		[ScriptName("ontouchleave")]
+		Touchleave,
+		[ScriptName("ontouchmove")]
+		Touchmove,
+		[ScriptName("ontouchstart")]
+		Touchstart,
 		[ScriptName("onunload")]
 		Unload,
 		[ScriptName("onuserproximity")]

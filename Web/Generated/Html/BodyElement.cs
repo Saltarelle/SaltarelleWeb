@@ -91,9 +91,9 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty, ScriptName("onbeforeunload")]
-		public BeforeUnloadEventHandlerNonNull OnBeforeunload {
+		public BeforeUnloadEventHandler OnBeforeunload {
 			get {
-				return default(BeforeUnloadEventHandlerNonNull);
+				return default(BeforeUnloadEventHandler);
 			}
 			set {
 			}

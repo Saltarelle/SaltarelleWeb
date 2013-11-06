@@ -71,10 +71,6 @@ interface Element : Node {
 
   // Mozilla specific stuff
 
-  [LenientThis]
-           attribute EventHandler onmouseenter;
-  [LenientThis]
-           attribute EventHandler onmouseleave;
            attribute EventHandler onwheel;
 
   // Selectors API
@@ -145,7 +141,8 @@ partial interface Element {
   DOMRect getBoundingClientRect();
 
   // scrolling
-  void scrollIntoView(optional boolean top = true);
+  void scrollIntoView();
+  void scrollIntoView(boolean top);
   // None of the CSSOM attributes are [Pure], because they flush
            attribute long scrollTop;   // scroll on setting
            attribute long scrollLeft;  // scroll on setting
@@ -175,9 +172,9 @@ partial interface Element {
 
 // http://domparsing.spec.whatwg.org/#extensions-to-the-element-interface
 partial interface Element {
-  [Throws,TreatNullAs=EmptyString]
+  [Pure,SetterThrows,TreatNullAs=EmptyString]
   attribute DOMString innerHTML;
-  [Throws,TreatNullAs=EmptyString]
+  [Pure,SetterThrows,TreatNullAs=EmptyString]
   attribute DOMString outerHTML;
   [Throws]
   void insertAdjacentHTML(DOMString position, DOMString text);

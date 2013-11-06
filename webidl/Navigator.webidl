@@ -113,7 +113,7 @@ Navigator implements NavigatorBattery;
 // https://wiki.mozilla.org/WebAPI/DataStore
 [NoInterfaceObject]
 interface NavigatorDataStore {
-    [Throws, Creator, Pref="dom.datastore.enabled"]
+    [Throws, NewObject, Pref="dom.datastore.enabled"]
     Promise getDataStores(DOMString name);
 };
 Navigator implements NavigatorDataStore;
@@ -260,6 +260,11 @@ partial interface Navigator {
 };
 
 
+
+partial interface Navigator {
+  [Throws, Func="Navigator::HasTelephonySupport"]
+  readonly attribute Telephony? mozTelephony;
+};
 
 
 // https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#navigator-interface-extension

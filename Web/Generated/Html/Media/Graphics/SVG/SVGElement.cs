@@ -341,6 +341,24 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onmouseenter")]
+		public HtmlEventHandler OnMouseenter {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseleave")]
+		public HtmlEventHandler OnMouseleave {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onmousemove")]
 		public HtmlEventHandler OnMousemove {
 			get {

@@ -111,7 +111,7 @@ Navigator implements NavigatorBattery;
 // https://wiki.mozilla.org/WebAPI/DataStore
 [NoInterfaceObject]
 interface NavigatorDataStore {
-    [Throws, Creator, Pref="dom.datastore.enabled"]
+    [Throws, NewObject, Pref="dom.datastore.enabled"]
     Promise getDataStores(DOMString name);
 };
 Navigator implements NavigatorDataStore;
@@ -255,11 +255,6 @@ partial interface Navigator {
 };
 
 #ifdef MOZ_B2G_RIL
-partial interface Navigator {
-  [Throws, Func="Navigator::HasTelephonySupport"]
-  readonly attribute Telephony? mozTelephony;
-};
-
 // nsIMozNavigatorMobileConnection
 interface MozMobileConnection;
 partial interface Navigator {
@@ -284,6 +279,11 @@ partial interface Navigator {
   readonly attribute MozIccManager? mozIccManager;
 };
 #endif // MOZ_B2G_RIL
+
+partial interface Navigator {
+  [Throws, Func="Navigator::HasTelephonySupport"]
+  readonly attribute Telephony? mozTelephony;
+};
 
 #ifdef MOZ_GAMEPAD
 // https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#navigator-interface-extension

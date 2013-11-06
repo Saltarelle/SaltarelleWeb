@@ -14,6 +14,8 @@ interface StyleSheetList {
 	getter StyleSheet item(unsigned long index);
 };
 
+interface nsIDOMCrypto {};
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 // Storage
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,19 +28,6 @@ interface Storage {
 	deleter void removeItem(DOMString key);
 	void clear();
 };
-
-[NoInterfaceObject]
-interface WindowSessionStorage {
-  readonly attribute Storage sessionStorage;
-};
-WindowProxy implements WindowSessionStorage;
-
-[NoInterfaceObject]
-interface WindowLocalStorage {
-  readonly attribute Storage localStorage;
-};
-WindowProxy implements WindowLocalStorage;
-
 
 // No idea why this is commented out in the sources
 [Constructor, Constructor((ArrayBuffer or ArrayBufferView or Blob or DOMString)[] blobParts, optional BlobPropertyBag options)] 
@@ -58,12 +47,6 @@ interface Blob {
 // IndexedDB
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-[NoInterfaceObject]
-interface IDBEnvironment {
-	readonly    attribute IDBFactory indexedDB;
-};
-
-WindowProxy implements IDBEnvironment;
 WorkerUtils implements IDBEnvironment;
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,83 +79,11 @@ interface ApplicationCache : EventTarget {
 	attribute EventHandler onobsolete;
 };
 
-////////////////////////////////////////////////////////////////////////////////////////////
-// WebWorkers
-// http://www.w3.org/TR/workers/
-////////////////////////////////////////////////////////////////////////////////////////////
-
-[NoInterfaceObject]
-interface WindowTimers {
-	long setTimeout(Function func, optional long delay, any... args);
-	long setTimeout(DOMString code, optional long delay);
-	void clearTimeout(long timeoutId);
-	long setInterval(Function func, optional long delay, any... args);
-	long setInterval(DOMString code, optional long delay);
-	void clearInterval(long intervalId);
-};
-
-[NoInterfaceObject]
-interface WindowBase64 {
-	DOMString atob(DOMString stringToEncode);
-	DOMString btoa(DOMString encodedString);
-};
-
-[NoInterfaceObject]
-interface Transferable { };
-
-ArrayBuffer implements Transferable;
-MessagePort implements Transferable;
-WorkerMessagePort implements Transferable;
-
-interface WorkerGlobalScope : EventTarget {
-	readonly attribute WorkerGlobalScope self;
-	readonly attribute WorkerLocation location;
-
-	void close();
-	attribute OnErrorEventHandler onerror;
-	attribute EventHandler onoffline;
-	attribute EventHandler ononline;
-};
-
-[Global]
-/*sealed*/ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
-	void postMessage(any message, optional sequence<Transferable> transfer);
-	attribute EventHandler onmessage;
-};
-
-[Global]
-/*sealed*/ interface SharedWorkerGlobalScope : WorkerGlobalScope {
-	readonly attribute DOMString name;
-	readonly attribute ApplicationCache applicationCache;
-	attribute EventHandler onconnect;
-};
-
-[Constructor(DOMString scriptURL)]
-interface Worker : EventTarget {
-	void terminate();
-
-	void postMessage(any message, optional sequence<Transferable> transfer);
-	attribute EventHandler onmessage;
-};
-Worker implements AbstractWorker;
-
-[NoInterfaceObject]
-partial interface WorkerGlobalScope {
-	void importScripts(DOMString... urls);
-	readonly attribute WorkerNavigator navigator;
-};
-WorkerGlobalScope implements WindowTimers;
-WorkerGlobalScope implements WindowBase64;
-
 interface DOMStringList {
   readonly attribute unsigned long length;
   getter DOMString? item(unsigned long index);
   boolean contains(DOMString string);
 };
-
-////////////////////////////////////////////////////////////////////////////////////////////
-// WindowProxy
-////////////////////////////////////////////////////////////////////////////////////////////
 
 interface MediaQueryList {
 	readonly attribute boolean matches;
@@ -184,98 +95,6 @@ interface MediaQueryList {
 callback interface MediaQueryListListener {
 	void handleChange(MediaQueryList mql);
 };
-
-interface WindowProxy : EventTarget {
-	readonly attribute OfflineResourceList applicationCache;
-	readonly attribute boolean closed;
-	readonly attribute Crypto crypto;
-	readonly attribute any dialogArguments;
-	readonly attribute HTMLDocument document;
-	readonly attribute HTMLElement frameElement;
-	readonly attribute HTMLElement[] frames;
-	         attribute boolean fullScreen;
-	readonly attribute History history;
-	readonly attribute long innerHeight;
-	readonly attribute long innerWidth;
-	readonly attribute long length;
-	readonly attribute Location location;
-	readonly attribute BarProp locationbar;
-	readonly attribute BarProp menubar;
-	         attribute DOMString name;
-	readonly attribute Navigator navigator;
-	readonly attribute WindowProxy opener;
-	readonly attribute long outerHeight;
-	readonly attribute long outerWidth;
-	readonly attribute long pageXOffset;
-	readonly attribute long pageYOffset;
-	readonly attribute WindowProxy parent;
-	readonly attribute Performance performance;
-	readonly attribute BarProp personalbar;
-	attribute any returnValue;
-	readonly attribute Screen screen;
-	readonly attribute long screenX;
-	readonly attribute long screenY;
-	readonly attribute BarProp scrollbars;
-	readonly attribute long scrollMaxX;
-	readonly attribute long scrollMaxY;
-	readonly attribute long scrollX;
-	readonly attribute long scrollY;
-	readonly attribute WindowProxy self;
-	         attribute DOMString status;
-	readonly attribute BarProp statusbar;
-	readonly attribute BarProp toolbar;
-	readonly attribute WindowProxy top;
-	readonly attribute WindowProxy window;
-
-	void alert(DOMString message);
-	void back();
-	void blur();
-	void close();
-	boolean confirm(DOMString message);
-	DOMString escape(DOMString regular);
-	boolean find(DOMString aString, optional boolean aCaseSensitive, optional boolean aBackwards, optional boolean aWrapAround, optional boolean aWholeWord, optional boolean aSearchInFrames, optional boolean aShowDialog);
-	void focus();
-	CSSStyleDeclaration getComputedStyle(Element element, optional DOMString pseudoElt);
-	Selection getSelection();
-	MediaQueryList matchMedia(DOMString mediaQueryString);
-	void moveBy(long deltaX, long deltaY);
-	void moveTo(long x, long y);
-	WindowProxy open(DOMString strUrl, optional DOMString strWindowName, optional DOMString strWindowFeatures);
-	WindowProxy openDialog(DOMString url, optional DOMString name, optional DOMString features, any... args);
-	void postMessage(any message, optional DOMString targetOrigin);
-	void print();
-	DOMString prompt(DOMString text, optional DOMString value);
-	void resizeBy(long xDelta, long yDelta);
-	void resizeTo(long iWidth, long iHeight);
-	void scroll(long x, long y);
-	void scrollBy(long xDelta, long yDelta);
-	void scrollTo(long x, long y);
-	any showModalDialog(DOMString uri, optional any arguments, optional DOMString options);
-	void stop();
-	DOMString unescape(DOMString escaped);
-};
-
-[NoInterfaceObject]
-interface WindowDeviceEvents {
-	[SetterThrows]
-	attribute EventHandler ondevicelight;
-	[SetterThrows]
-	attribute EventHandler ondevicemotion;
-	[SetterThrows]
-	attribute EventHandler ondeviceorientation;
-	[SetterThrows]
-	attribute EventHandler ondeviceproximity;
-	[SetterThrows]
-	attribute EventHandler onuserproximity;
-};
-
-WindowProxy implements NodeEventHandlers;
-WindowProxy implements WindowEventHandlers;
-WindowProxy implements GlobalEventHandlers;
-WindowProxy implements WindowDeviceEvents;
-
-WindowProxy implements WindowTimers;
-WindowProxy implements WindowBase64;
 
 [NoInterfaceObject]
 interface LineEndings {

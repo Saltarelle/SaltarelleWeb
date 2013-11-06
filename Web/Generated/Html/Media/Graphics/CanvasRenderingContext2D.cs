@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Xml;
 
 namespace System.Html.Media.Graphics {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
@@ -60,6 +61,10 @@ namespace System.Html.Media.Graphics {
 			return default(CanvasGradient);
 		}
 
+		public bool DrawCustomFocusRing(XmlElement element) {
+			return false;
+		}
+
 		public void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double dx, double dy) {
 		}
 
@@ -67,6 +72,9 @@ namespace System.Html.Media.Graphics {
 		}
 
 		public void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) {
+		}
+
+		public void DrawSystemFocusRing(XmlElement element) {
 		}
 
 		public void Fill() {
@@ -106,6 +114,10 @@ namespace System.Html.Media.Graphics {
 			return default(ImageData);
 		}
 
+		public double[] GetLineDash() {
+			return null;
+		}
+
 		[IntrinsicProperty]
 		public double GlobalAlpha {
 			get {
@@ -140,6 +152,15 @@ namespace System.Html.Media.Graphics {
 		public LineCap LineCap {
 			get {
 				return default(LineCap);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public double LineDashOffset {
+			get {
+				return 0;
 			}
 			set {
 			}
@@ -204,6 +225,9 @@ namespace System.Html.Media.Graphics {
 		}
 
 		public void Scale(double x, double y) {
+		}
+
+		public void SetLineDash(double[] segments) {
 		}
 
 		public void SetTransform(double a, double b, double c, double d, double e, double f) {

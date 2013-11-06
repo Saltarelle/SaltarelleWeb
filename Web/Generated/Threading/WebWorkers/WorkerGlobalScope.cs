@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Threading.WebWorkers {
-	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("EventTarget")]
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
 	public partial class WorkerGlobalScope : EventTarget, IWindowTimers, IWindowBase64 {
 		internal WorkerGlobalScope() {
 		}
@@ -37,21 +37,27 @@ namespace System.Threading.WebWorkers {
 		public void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture) {
 		}
 
-		public string Atob(string stringToEncode) {
+		public string Atob(string atob) {
 			return null;
 		}
 
-		public string Btoa(string encodedString) {
+		public string Btoa(string btoa) {
 			return null;
 		}
 
-		public void ClearInterval(int intervalId) {
+		public void ClearInterval(int handle) {
 		}
 
-		public void ClearTimeout(int timeoutId) {
+		public void ClearTimeout(int handle) {
 		}
 
 		public void Close() {
+		}
+
+		public void Dump() {
+		}
+
+		public void Dump(string str) {
 		}
 
 		[ExpandParams]
@@ -72,28 +78,19 @@ namespace System.Threading.WebWorkers {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onclose")]
+		public HtmlEventHandler OnClose {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onerror")]
 		public ErrorEventHandler OnError {
 			get {
 				return default(ErrorEventHandler);
-			}
-			set {
-			}
-		}
-
-		[IntrinsicProperty, ScriptName("onoffline")]
-		public HtmlEventHandler OnOffline {
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
-		}
-
-		[IntrinsicProperty, ScriptName("ononline")]
-		public HtmlEventHandler OnOnline {
-			get {
-				return default(HtmlEventHandler);
 			}
 			set {
 			}
@@ -136,37 +133,37 @@ namespace System.Threading.WebWorkers {
 			}
 		}
 
-		public int SetInterval(Function func) {
+		public int SetInterval(Function handler) {
 			return 0;
 		}
 
 		[ExpandParams]
-		public int SetInterval(Function func, int delay, params object[] args) {
+		public int SetInterval(Function handler, int timeout, params object[] arguments) {
 			return 0;
 		}
 
-		public int SetInterval(string code) {
+		public int SetInterval(string handler) {
 			return 0;
 		}
 
-		public int SetInterval(string code, int delay) {
+		public int SetInterval(string handler, int timeout) {
 			return 0;
 		}
 
-		public int SetTimeout(Function func) {
+		public int SetTimeout(Function handler) {
 			return 0;
 		}
 
 		[ExpandParams]
-		public int SetTimeout(Function func, int delay, params object[] args) {
+		public int SetTimeout(Function handler, int timeout, params object[] arguments) {
 			return 0;
 		}
 
-		public int SetTimeout(string code) {
+		public int SetTimeout(string handler) {
 			return 0;
 		}
 
-		public int SetTimeout(string code, int delay) {
+		public int SetTimeout(string handler, int timeout) {
 			return 0;
 		}
 

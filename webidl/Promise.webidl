@@ -22,15 +22,15 @@ interface Promise {
   // the proto of a promise object or someone screws up and manages to create a
   // Promise object in this scope without having resolved the interface object
   // first.
-  [Creator, Throws, Func="mozilla::dom::Promise::EnabledForScope"]
+  [NewObject, Throws, Func="mozilla::dom::Promise::EnabledForScope"]
   static Promise resolve(any value); // same as any(value)
-  [Creator, Throws, Func="mozilla::dom::Promise::EnabledForScope"]
+  [NewObject, Throws, Func="mozilla::dom::Promise::EnabledForScope"]
   static Promise reject(any value);
 
-  [Creator]
-  Promise then([TreatUndefinedAs=Missing] optional AnyCallback fulfillCallback,
-               [TreatUndefinedAs=Missing] optional AnyCallback rejectCallback);
+  [NewObject]
+  Promise then(optional AnyCallback fulfillCallback,
+               optional AnyCallback rejectCallback);
 
-  [Creator]
-  Promise catch([TreatUndefinedAs=Missing] optional AnyCallback rejectCallback);
+  [NewObject]
+  Promise catch(optional AnyCallback rejectCallback);
 };

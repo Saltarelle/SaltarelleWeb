@@ -49,6 +49,9 @@ namespace System.Html {
 		public static void AddEventListener(WindowInstanceEvents type, IEventListener listener, bool capture) {
 		}
 
+		public static void Alert() {
+		}
+
 		public static void Alert(string message) {
 		}
 
@@ -59,7 +62,7 @@ namespace System.Html {
 			}
 		}
 
-		public static string Atob(string stringToEncode) {
+		public static string Atob(string atob) {
 			return null;
 		}
 
@@ -69,14 +72,20 @@ namespace System.Html {
 		public static void Blur() {
 		}
 
-		public static string Btoa(string encodedString) {
+		public static string Btoa(string btoa) {
 			return null;
 		}
 
-		public static void ClearInterval(int intervalId) {
+		public static void CancelAnimationFrame(int handle) {
 		}
 
-		public static void ClearTimeout(int timeoutId) {
+		public static void CaptureEvents(int dummy) {
+		}
+
+		public static void ClearInterval(int handle) {
+		}
+
+		public static void ClearTimeout(int handle) {
 		}
 
 		public static void Close() {
@@ -89,8 +98,19 @@ namespace System.Html {
 			}
 		}
 
+		public static bool Confirm() {
+			return false;
+		}
+
 		public static bool Confirm(string message) {
 			return false;
+		}
+
+		[IntrinsicProperty]
+		public static object Content {
+			get {
+				return null;
+			}
 		}
 
 		[IntrinsicProperty]
@@ -101,9 +121,9 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static object DialogArguments {
+		public static float DevicePixelRatio {
 			get {
-				return null;
+				return 0;
 			}
 		}
 
@@ -112,56 +132,62 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static DocumentInstance Document {
+		public static DocumentBase Document {
 			get {
-				return default(DocumentInstance);
+				return default(DocumentBase);
 			}
 		}
 
-		public static string Escape(string regular) {
-			return null;
+		public static void Dump(string str) {
 		}
 
-		public static bool Find(string aString) {
+		public static bool Find() {
 			return false;
 		}
 
-		public static bool Find(string aString, bool aCaseSensitive) {
+		public static bool Find(string str) {
 			return false;
 		}
 
-		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards) {
+		public static bool Find(string str, bool caseSensitive) {
 			return false;
 		}
 
-		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards, bool aWrapAround) {
+		public static bool Find(string str, bool caseSensitive, bool backwards) {
 			return false;
 		}
 
-		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards, bool aWrapAround, bool aWholeWord) {
+		public static bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround) {
 			return false;
 		}
 
-		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards, bool aWrapAround, bool aWholeWord, bool aSearchInFrames) {
+		public static bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround, bool wholeWord) {
 			return false;
 		}
 
-		public static bool Find(string aString, bool aCaseSensitive, bool aBackwards, bool aWrapAround, bool aWholeWord, bool aSearchInFrames, bool aShowDialog) {
+		public static bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround, bool wholeWord, bool searchInFrames) {
+			return false;
+		}
+
+		public static bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround, bool wholeWord, bool searchInFrames, bool showDialog) {
 			return false;
 		}
 
 		public static void Focus() {
 		}
 
+		public static void Forward() {
+		}
+
 		[IntrinsicProperty]
-		public static Element FrameElement {
+		public static XmlElement FrameElement {
 			get {
-				return default(Element);
+				return default(XmlElement);
 			}
 		}
 
 		[IntrinsicProperty]
-		public static Element[] Frames {
+		public static XmlElement[] Frames {
 			get {
 				return null;
 			}
@@ -176,11 +202,19 @@ namespace System.Html {
 			}
 		}
 
-		public static Style GetComputedStyle(XmlElement element) {
+		public static Style GetComputedStyle(XmlElement elt) {
 			return default(Style);
 		}
 
-		public static Style GetComputedStyle(XmlElement element, string pseudoElt) {
+		public static Style GetComputedStyle(XmlElement elt, string pseudoElt) {
+			return default(Style);
+		}
+
+		public static Style GetDefaultComputedStyle(XmlElement elt) {
+			return default(Style);
+		}
+
+		public static Style GetDefaultComputedStyle(XmlElement elt, string pseudoElt) {
 			return default(Style);
 		}
 
@@ -195,6 +229,9 @@ namespace System.Html {
 			}
 		}
 
+		public static void Home() {
+		}
+
 		[IntrinsicProperty]
 		public static Factory IndexedDB {
 			get {
@@ -207,12 +244,16 @@ namespace System.Html {
 			get {
 				return 0;
 			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static int InnerWidth {
 			get {
 				return 0;
+			}
+			set {
 			}
 		}
 
@@ -224,7 +265,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static int Length {
+		public static uint Length {
 			get {
 				return 0;
 			}
@@ -251,7 +292,7 @@ namespace System.Html {
 			}
 		}
 
-		public static MediaQueryList MatchMedia(string mediaQueryString) {
+		public static MediaQueryList MatchMedia(string query) {
 			return default(MediaQueryList);
 		}
 
@@ -262,7 +303,7 @@ namespace System.Html {
 			}
 		}
 
-		public static void MoveBy(int deltaX, int deltaY) {
+		public static void MoveBy(int x, int y) {
 		}
 
 		public static void MoveTo(int x, int y) {
@@ -312,9 +353,9 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty, ScriptName("onbeforeunload")]
-		public static BeforeUnloadEventHandlerNonNull OnBeforeunload {
+		public static BeforeUnloadEventHandler OnBeforeunload {
 			get {
-				return default(BeforeUnloadEventHandlerNonNull);
+				return default(BeforeUnloadEventHandler);
 			}
 			set {
 			}
@@ -510,9 +551,9 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty, ScriptName("onerror")]
-		public static HtmlEventHandler OnError {
+		public static ErrorEventHandler OnError {
 			get {
-				return default(HtmlEventHandler);
+				return default(ErrorEventHandler);
 			}
 			set {
 			}
@@ -628,6 +669,24 @@ namespace System.Html {
 
 		[IntrinsicProperty, ScriptName("onmousedown")]
 		public static HtmlEventHandler OnMousedown {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseenter")]
+		public static HtmlEventHandler OnMouseenter {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseleave")]
+		public static HtmlEventHandler OnMouseleave {
 			get {
 				return default(HtmlEventHandler);
 			}
@@ -860,6 +919,60 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("ontouchcancel")]
+		public static HtmlEventHandler OnTouchcancel {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchend")]
+		public static HtmlEventHandler OnTouchend {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchenter")]
+		public static HtmlEventHandler OnTouchenter {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchleave")]
+		public static HtmlEventHandler OnTouchleave {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchmove")]
+		public static HtmlEventHandler OnTouchmove {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("ontouchstart")]
+		public static HtmlEventHandler OnTouchstart {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onunload")]
 		public static HtmlEventHandler OnUnload {
 			get {
@@ -896,28 +1009,19 @@ namespace System.Html {
 			}
 		}
 
-		public static WindowInstance Open(string strUrl) {
+		public static WindowInstance Open() {
 			return default(WindowInstance);
 		}
 
-		public static WindowInstance Open(string strUrl, string strWindowName) {
+		public static WindowInstance Open(string url) {
 			return default(WindowInstance);
 		}
 
-		public static WindowInstance Open(string strUrl, string strWindowName, string strWindowFeatures) {
+		public static WindowInstance Open(string url, string target) {
 			return default(WindowInstance);
 		}
 
-		public static WindowInstance OpenDialog(string url) {
-			return default(WindowInstance);
-		}
-
-		public static WindowInstance OpenDialog(string url, string name) {
-			return default(WindowInstance);
-		}
-
-		[ExpandParams]
-		public static WindowInstance OpenDialog(string url, string name, string features, params object[] args) {
+		public static WindowInstance Open(string url, string target, string features) {
 			return default(WindowInstance);
 		}
 
@@ -926,6 +1030,8 @@ namespace System.Html {
 			get {
 				return default(WindowInstance);
 			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
@@ -933,12 +1039,16 @@ namespace System.Html {
 			get {
 				return 0;
 			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static int OuterWidth {
 			get {
 				return 0;
+			}
+			set {
 			}
 		}
 
@@ -977,21 +1087,28 @@ namespace System.Html {
 			}
 		}
 
-		public static void PostMessage(object message) {
+		public static void PostMessage(object message, string targetOrigin) {
 		}
 
-		public static void PostMessage(object message, string targetOrigin) {
+		public static void PostMessage(object message, string targetOrigin, object[] transfer) {
 		}
 
 		public static void Print() {
 		}
 
-		public static string Prompt(string text) {
+		public static string Prompt() {
 			return null;
 		}
 
-		public static string Prompt(string text, string value) {
+		public static string Prompt(string message) {
 			return null;
+		}
+
+		public static string Prompt(string message, string @default) {
+			return null;
+		}
+
+		public static void ReleaseEvents(int dummy) {
 		}
 
 		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
@@ -1030,19 +1147,14 @@ namespace System.Html {
 		public static void RemoveEventListener(WindowInstanceEvents type, IEventListener listener, bool capture) {
 		}
 
-		public static void ResizeBy(int xDelta, int yDelta) {
+		public static int RequestAnimationFrame(FrameRequestCallback callback) {
+			return 0;
 		}
 
-		public static void ResizeTo(int iWidth, int iHeight) {
+		public static void ResizeBy(int x, int y) {
 		}
 
-		[IntrinsicProperty]
-		public static object ReturnValue {
-			get {
-				return null;
-			}
-			set {
-			}
+		public static void ResizeTo(int x, int y) {
 		}
 
 		[IntrinsicProperty]
@@ -1057,12 +1169,16 @@ namespace System.Html {
 			get {
 				return 0;
 			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]
 		public static int ScreenY {
 			get {
 				return 0;
+			}
+			set {
 			}
 		}
 
@@ -1076,7 +1192,13 @@ namespace System.Html {
 			}
 		}
 
-		public static void ScrollBy(int xDelta, int yDelta) {
+		public static void ScrollBy(int x, int y) {
+		}
+
+		public static void ScrollByLines(int numLines) {
+		}
+
+		public static void ScrollByPages(int numPages) {
 		}
 
 		[IntrinsicProperty]
@@ -1124,50 +1246,56 @@ namespace System.Html {
 			}
 		}
 
-		public static int SetInterval(Function func) {
+		public static int SetInterval(Function handler) {
 			return 0;
 		}
 
 		[ExpandParams]
-		public static int SetInterval(Function func, int delay, params object[] args) {
+		public static int SetInterval(Function handler, int timeout, params object[] arguments) {
 			return 0;
 		}
 
-		public static int SetInterval(string code) {
+		public static int SetInterval(string handler) {
 			return 0;
 		}
 
-		public static int SetInterval(string code, int delay) {
+		public static int SetInterval(string handler, int timeout) {
 			return 0;
 		}
 
-		public static int SetTimeout(Function func) {
+		public static void SetResizable(bool resizable) {
+		}
+
+		public static int SetTimeout(Function handler) {
 			return 0;
 		}
 
 		[ExpandParams]
-		public static int SetTimeout(Function func, int delay, params object[] args) {
+		public static int SetTimeout(Function handler, int timeout, params object[] arguments) {
 			return 0;
 		}
 
-		public static int SetTimeout(string code) {
+		public static int SetTimeout(string handler) {
 			return 0;
 		}
 
-		public static int SetTimeout(string code, int delay) {
+		public static int SetTimeout(string handler, int timeout) {
 			return 0;
 		}
 
-		public static object ShowModalDialog(string uri) {
+		public static object ShowModalDialog(string url) {
 			return null;
 		}
 
-		public static object ShowModalDialog(string uri, object arguments) {
+		public static object ShowModalDialog(string url, object argument) {
 			return null;
 		}
 
-		public static object ShowModalDialog(string uri, object arguments, string options) {
+		public static object ShowModalDialog(string url, object argument, string options) {
 			return null;
+		}
+
+		public static void SizeToContent() {
 		}
 
 		[IntrinsicProperty]
@@ -1189,6 +1317,10 @@ namespace System.Html {
 		public static void Stop() {
 		}
 
+		public static string ToNativeLineEndings(string @string) {
+			return null;
+		}
+
 		[IntrinsicProperty]
 		public static BarProp Toolbar {
 			get {
@@ -1203,8 +1335,7 @@ namespace System.Html {
 			}
 		}
 
-		public static string Unescape(string escaped) {
-			return null;
+		public static void UpdateCommands(string action) {
 		}
 	}
 }

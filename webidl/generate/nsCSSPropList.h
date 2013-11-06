@@ -89,8 +89,12 @@
 
 // Callers may also define CSS_PROP_LIST_ONLY_COMPONENTS_OF_ALL_SHORTHAND
 // to exclude properties that are not considered to be components of the 'all'
-// shorthand property.  Currently this is just 'direction', 'unicode-bidi' and
-// a few internal properties.
+// shorthand property.  Currently this excludes 'direction' and 'unicode-bidi',
+// as required by the CSS Cascading and Inheritance specification, and any
+// internal properties that cannot be changed by using CSS syntax.  For example,
+// the internal '-moz-system-font' property is not excluded, as it is set by the
+// 'font' shorthand, while '-x-lang' is excluded as there is no way to set this
+// internal property from a style sheet.
 
 // A caller who wants all the properties can define the |CSS_PROP|
 // macro.
@@ -348,7 +352,6 @@ CSS_PROP_TEXT(
     nullptr,
     offsetof(nsStyleText, mTabSize),
     eStyleAnimType_None)
-#ifndef CSS_PROP_LIST_ONLY_COMPONENTS_OF_ALL_SHORTHAND
 #ifndef CSS_PROP_LIST_EXCLUDE_INTERNAL
 CSS_PROP_FONT(
     -x-system-font,
@@ -363,7 +366,6 @@ CSS_PROP_FONT(
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
 #endif // !defined(CSS_PROP_LIST_EXCLUDE_INTERNAL)
-#endif // !defined(CSS_PROP_LIST_ONLY_COMPONENTS_OF_ALL_SHORTHAND)
 CSS_PROP_SHORTHAND(
     all,
     all,
@@ -2766,7 +2768,8 @@ CSS_PROP_TEXT(
     text-align,
     text_align,
     TextAlign,
-    CSS_PROPERTY_PARSE_VALUE | CSS_PROPERTY_APPLIES_TO_PLACEHOLDER,
+    CSS_PROPERTY_PARSE_VALUE | CSS_PROPERTY_VALUE_PARSER_FUNCTION |
+      CSS_PROPERTY_APPLIES_TO_PLACEHOLDER,
     "",
     // When we support aligning on a string, we can parse text-align
     // as a string....
@@ -2778,7 +2781,7 @@ CSS_PROP_TEXT(
     -moz-text-align-last,
     text_align_last,
     CSS_PROP_DOMPROP_PREFIXED(TextAlignLast),
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE | CSS_PROPERTY_VALUE_PARSER_FUNCTION,
     "",
     VARIANT_HK,
     kTextAlignLastKTable,

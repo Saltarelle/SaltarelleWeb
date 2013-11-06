@@ -222,6 +222,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public bool TypeMustMatch {
+			get {
+				return false;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string UseMap {
 			get {
 				return null;

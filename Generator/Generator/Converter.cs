@@ -51,6 +51,8 @@ namespace Generator {
 			public bool Clamp { get; private set; }
 			public bool Global { get; private set; }
 			public bool SameObject { get; private set; }
+			public bool NewObject { get; private set; }
+			public bool Replaceable { get; private set; }
 			public TreatUndefinedAsOptions TreatUndefinedAs { get; private set; }
 			public IReadOnlyList<IReadOnlyList<Argument>> Constructors { get; private set; }
 			public IReadOnlyList<Tuple<string, IReadOnlyList<Argument>>> NamedConstructors { get; private set; }
@@ -141,6 +143,12 @@ namespace Generator {
 									break;
 								case "SameObject":
 									result.SameObject = true;
+									break;
+								case "NewObject":
+									result.NewObject = true;
+									break;
+								case "Replaceable":
+									result.Replaceable = true;
 									break;
 								default:
 									errors.Add(string.Format("Unknown ExtendedAttributeNoArgs `{0}' on `{1}'", noArgs.AttributeName, scopeName));
@@ -980,14 +988,12 @@ namespace Generator {
 
 						if (meta.TypeKind == TypeKind.Default && meta.CSharpName != scriptName)
 							attributes.Add(ScriptNameAttribute(scriptName));
-						if (parsedAttributes.Global)
-							attributes.Add(GlobalMethodsAttribute);
 						if (addInsertedMembersFromBaseTypes)
 							AddMembersFromBaseTypes(meta.Namespace + "." + meta.CSharpName, GetMembersToAddFromBaseTypes(new[] { @interface.Base }.Concat(@interface.Implements)), members);
 
 						var resultType = new TypeDeclaration {
 							ClassType = meta.TypeKind == TypeKind.Interface ? ClassType.Interface : ClassType.Class,
-							Modifiers = Modifiers.Public | Modifiers.Partial | (parsedAttributes.Global ? Modifiers.Static : 0),
+							Modifiers = Modifiers.Public | Modifiers.Partial,
 							Name = meta.CSharpName,
 						};
 						resultType.BaseTypes.AddRange(baseTypes);
