@@ -636,6 +636,13 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public bool Repeat {
+			get {
+				return false;
+			}
+		}
+
+		[IntrinsicProperty]
 		public bool ShiftKey {
 			get {
 				return false;

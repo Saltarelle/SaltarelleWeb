@@ -37,6 +37,13 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
+		public SVGAnimatedLength Height {
+			get {
+				return default(SVGAnimatedLength);
+			}
+		}
+
+		[IntrinsicProperty]
 		public SVGAnimatedString In1 {
 			get {
 				return default(SVGAnimatedString);
@@ -73,6 +80,13 @@ namespace System.Html.Media.Graphics.SVG {
 		public void RemoveEventListener(SVGFEGaussianBlurElementEvents type, IEventListener listener, bool capture) {
 		}
 
+		[IntrinsicProperty]
+		public SVGAnimatedString Result {
+			get {
+				return default(SVGAnimatedString);
+			}
+		}
+
 		public void SetStdDeviation(float stdDeviationX, float stdDeviationY) {
 		}
 
@@ -87,6 +101,27 @@ namespace System.Html.Media.Graphics.SVG {
 		public SVGAnimatedNumber StdDeviationY {
 			get {
 				return default(SVGAnimatedNumber);
+			}
+		}
+
+		[IntrinsicProperty]
+		public SVGAnimatedLength Width {
+			get {
+				return default(SVGAnimatedLength);
+			}
+		}
+
+		[IntrinsicProperty]
+		public SVGAnimatedLength X {
+			get {
+				return default(SVGAnimatedLength);
+			}
+		}
+
+		[IntrinsicProperty]
+		public SVGAnimatedLength Y {
+			get {
+				return default(SVGAnimatedLength);
 			}
 		}
 	}

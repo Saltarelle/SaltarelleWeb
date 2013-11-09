@@ -24,6 +24,7 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString backgroundColor;
   [Throws, TreatNullAs=EmptyString] attribute DOMString backgroundImage;
   [Throws, TreatNullAs=EmptyString] attribute DOMString MozBackgroundInlinePolicy;
+  [Throws, TreatNullAs=EmptyString, Pref="layout.css.background-blend-mode.enabled"] attribute DOMString backgroundBlendMode;
   [Throws, TreatNullAs=EmptyString] attribute DOMString backgroundOrigin;
   [Throws, TreatNullAs=EmptyString] attribute DOMString backgroundPosition;
   [Throws, TreatNullAs=EmptyString] attribute DOMString backgroundRepeat;

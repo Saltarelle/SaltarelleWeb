@@ -150,6 +150,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string BackgroundBlendMode {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string BackgroundClip {
 			get {
 				return null;
