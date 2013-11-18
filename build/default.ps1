@@ -146,7 +146,7 @@ function Parse-Line($line) {
 		$spaces++
 	}
 
-	return @{ Indent = $spaces / 4; Text = $line.Substring($spaces) }
+	return @{ Indent = $spaces; Text = $line.Substring($spaces) }
 }
 
 function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$currentLine) {
@@ -162,7 +162,7 @@ function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$curren
 				
 				$list = @()
 				$currentLine.value++
-				while (($currentLine.value -lt $lines.Length) -and ($lines[$currentLine.value].Indent -eq ($currentIndent + 1))) {
+				while (($currentLine.value -lt $lines.Length) -and ($lines[$currentLine.value].Indent -gt $currentIndent)) {
 					$line = $lines[$currentLine.value]
 					if (-not ($line.Text -match "^'([^']+)',?$")) {
 						throw "Expected 'identifier' on line $($line.Text)"
@@ -171,7 +171,7 @@ function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$curren
 					$currentLine.value++
 				}
 				if (($currentLine.value -ge $lines.Length) -or ($lines[$currentLine.value].Indent -ne $currentIndent) -or ($lines[$currentLine.value].Text -ne "]")) {
-					throw "Expected ']' on line $($currentLines[$currentLine.value].Text)"
+					throw "Expected ']' on line $($lines[$currentLine.value].Text)"
 				}
 
 				if ($take) {
@@ -188,12 +188,16 @@ function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$curren
 		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]:$") {
 			$newTake = $take -and $symbols -contains $Matches[1]
 			$currentLine.value++
-			Process $lines ($currentIndent + 1) $symbols $newTake $sources $currentLine
+            if ($currentLine.Value -lt $lines.Count) {
+    			Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+            }
 		}
 		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]\s==\s'[^']+':$") {
 			$newTake = $false
 			$currentLine.value++
-			Process $lines ($currentIndent + 1) $symbols $newTake $sources $currentLine
+            if ($currentLine.Value -lt $lines.Count) {
+    			Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+            }
 		}
 		else {
 			throw "Unknown line $($line.Text)"
@@ -205,7 +209,11 @@ function Get-Sources($makefile, $symbols) {
 	$sources = @{}
 	$content = [System.IO.File]::ReadAllText($makefile) -replace "`r`n", "`n" -replace "\\`n",""
 	$lines = $content.Split("`n") | % { Parse-Line($_) } | ? { $_.Text -ne "" }
-	Process $lines 0 $symbols $true $sources ([ref]0)
+    $currentLine = [ref]0
+	Process $lines 0 $symbols $true $sources $currentLine
+    if ($currentLine.Value -ne $lines.Length) {
+        throw "Quit processing after line $($lines[$currentLine.Value].Text)"
+    }
 	$sources["webidl_files"] += $sources["generated_events_webidl_files"]
 	$sources.Remove("generated_events_webidl_files")
 	return $sources
