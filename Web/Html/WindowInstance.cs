@@ -1,11 +1,15 @@
+using System.Xml;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
 	public partial class WindowInstance {
 		[IntrinsicProperty]
-		public static object DialogArguments { get { return null; } }
+		public object DialogArguments { get { return null; } }
 
 		[IntrinsicProperty]
-		public static object ReturnValue { get; set; }
+		public object ReturnValue { get; set; }
+
+		[IntrinsicProperty]
+		public DocumentBase Document { get { return default(DocumentBase); } }
 	}
 }

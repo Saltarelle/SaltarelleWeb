@@ -7,13 +7,6 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public object this[string name] {
-			get {
-				return null;
-			}
-		}
-
-		[IndexerName("__Item"), IntrinsicProperty]
 		public OptionElement this[uint index] {
 			set {
 			}
@@ -32,10 +25,6 @@ namespace System.Html {
 			}
 			set {
 			}
-		}
-
-		public object NamedItem(string name) {
-			return null;
 		}
 
 		public void Remove(int index) {

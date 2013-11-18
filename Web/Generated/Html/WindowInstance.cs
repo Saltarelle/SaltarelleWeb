@@ -121,13 +121,6 @@ namespace System.Html {
 			}
 		}
 
-		[IntrinsicProperty]
-		public DocumentBase Document {
-			get {
-				return default(DocumentBase);
-			}
-		}
-
 		public void Dump(string str) {
 		}
 

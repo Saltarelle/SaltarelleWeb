@@ -14,10 +14,10 @@ namespace System.Html {
 			}
 		}
 
-		public void AppendMedium(string medium) {
+		public void AppendMedium(string newMedium) {
 		}
 
-		public void DeleteMedium(string medium) {
+		public void DeleteMedium(string oldMedium) {
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]

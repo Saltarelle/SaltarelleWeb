@@ -248,14 +248,6 @@ interface CSSRule {
   readonly attribute CSSStyleSheet? parentStyleSheet;
 };
 
-interface MediaList {
-	[TreatNullAs=EmptyString] stringifier attribute DOMString mediaText;
-	readonly attribute unsigned long length;
-	getter DOMString item(unsigned long index);
-	void appendMedium(DOMString medium);
-	void deleteMedium(DOMString medium);
-};
-
 // http://zvon.org/xxl/DOM2reference/Output/Style/interface_Counter.html
 
 interface Counter {

@@ -1,3 +1,4 @@
+using System.Xml;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
@@ -22,5 +23,8 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public static object ReturnValue { get; set; }
+
+		[IntrinsicProperty]
+		public static DocumentBase Document { get { return null; } }
 	}
 }

@@ -361,9 +361,6 @@ DataContainerEvent
 DataStore
 	nogenerate
 
-DataStoreChanges
-	nogenerate
-
 DataStoreCursor
 	nogenerate
 
@@ -1624,6 +1621,9 @@ NodeIterator
 NodeList
 	namespace = System.Xml
 	name = XmlNodeList
+
+NonDocumentTypeChildNode
+	mixin
 
 Notification
 	namespace = System.Html.Notifications

@@ -52,20 +52,6 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public XmlElement NextElementSibling {
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty]
-		public XmlElement PreviousElementSibling {
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty]
 		public string PublicId {
 			get {
 				return null;

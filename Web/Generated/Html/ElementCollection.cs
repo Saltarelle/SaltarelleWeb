@@ -9,9 +9,9 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public object this[string name] {
+		public XmlElement this[string name] {
 			get {
-				return null;
+				return default(XmlElement);
 			}
 		}
 
@@ -38,8 +38,8 @@ namespace System.Html {
 			}
 		}
 
-		public object NamedItem(string name) {
-			return null;
+		public XmlElement NamedItem(string name) {
+			return default(XmlElement);
 		}
 	}
 }
