@@ -58,6 +58,10 @@ namespace System.Xml {
 			}
 		}
 
+		public XmlElement GetElementById(string elementId) {
+			return default(XmlElement);
+		}
+
 		[IntrinsicProperty]
 		public XmlElement LastElementChild {
 			get {

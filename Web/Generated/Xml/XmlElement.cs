@@ -93,6 +93,10 @@ namespace System.Xml {
 			}
 		}
 
+		public ShadowRoot CreateShadowRoot() {
+			return default(ShadowRoot);
+		}
+
 		[IntrinsicProperty]
 		public XmlElement FirstElementChild {
 			get {
@@ -328,6 +332,13 @@ namespace System.Xml {
 		}
 
 		public void SetCapture(bool retargetToElement) {
+		}
+
+		[IntrinsicProperty]
+		public ShadowRoot ShadowRoot {
+			get {
+				return default(ShadowRoot);
+			}
 		}
 
 		[IntrinsicProperty]

@@ -24,7 +24,7 @@ namespace System.Net.Messaging {
 			set;
 		}
 
-		public object Source {
+		public TypeOption<WindowInstance, MessagePort> Source {
 			get;
 			set;
 		}

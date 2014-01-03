@@ -13,18 +13,22 @@ Navigator implements NavigatorStorageUtils;
 
 [NoInterfaceObject]
 interface NavigatorID {
+
+  [Constant]
+  readonly attribute DOMString appCodeName;
+  [Constant]
   readonly attribute DOMString appName;
-  [Throws]
+  [Constant]
   readonly attribute DOMString appVersion;
-  [Throws]
+  [Constant]
   readonly attribute DOMString platform;
-  [Throws]
+  [Constant]
   readonly attribute DOMString userAgent;
-
-
-
-
+  [Constant]
   readonly attribute DOMString product;
+
+
+  boolean taintEnabled();
 };
 
 [NoInterfaceObject]
@@ -92,7 +96,7 @@ Navigator implements NavigatorBattery;
 
 [NoInterfaceObject]
 interface NavigatorDataStore {
-    [Throws, NewObject, Pref="dom.datastore.enabled"]
+    [Throws, NewObject, Func="Navigator::HasDataStoreSupport"]
     Promise getDataStores(DOMString name);
 };
 Navigator implements NavigatorDataStore;
@@ -117,9 +121,6 @@ callback interface MozIdleObserver {
 
 
 partial interface Navigator {
-
-  [Throws]
-  readonly attribute DOMString appCodeName;
   [Throws]
   readonly attribute DOMString oscpu;
 
@@ -138,8 +139,6 @@ partial interface Navigator {
 
   [Throws]
   boolean javaEnabled();
-
-  boolean taintEnabled();
   [Throws, Func="Navigator::HasIdleSupport"]
   void addIdleObserver(MozIdleObserver aIdleObserver);
   [Throws, Func="Navigator::HasIdleSupport"]

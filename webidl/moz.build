@@ -4,8 +4,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-MODULE = 'dom'
-
 GENERATED_WEBIDL_FILES = [
     'CSS2Properties.webidl',
 ]
@@ -88,6 +86,7 @@ WEBIDL_FILES = [
     'DOMStringMap.webidl',
     'DOMTokenList.webidl',
     'DOMTransaction.webidl',
+    'Downloads.webidl',
     'DragEvent.webidl',
     'DummyBinding.webidl',
     'DynamicsCompressorNode.webidl',
@@ -121,6 +120,7 @@ WEBIDL_FILES = [
     'HTMLButtonElement.webidl',
     'HTMLCanvasElement.webidl',
     'HTMLCollection.webidl',
+    'HTMLContentElement.webidl',
     'HTMLDataElement.webidl',
     'HTMLDataListElement.webidl',
     'HTMLDirectoryElement.webidl',
@@ -167,6 +167,7 @@ WEBIDL_FILES = [
     'HTMLQuoteElement.webidl',
     'HTMLScriptElement.webidl',
     'HTMLSelectElement.webidl',
+    'HTMLShadowElement.webidl',
     'HTMLSourceElement.webidl',
     'HTMLSpanElement.webidl',
     'HTMLStyleElement.webidl',
@@ -211,6 +212,7 @@ WEBIDL_FILES = [
     'MediaElementAudioSourceNode.webidl',
     'MediaError.webidl',
     'MediaList.webidl',
+    'MediaQueryList.webidl',
     'MediaRecorder.webidl',
     'MediaSource.webidl',
     'MediaStream.webidl',
@@ -256,6 +258,7 @@ WEBIDL_FILES = [
     'PhoneNumberService.webidl',
     'Plugin.webidl',
     'PluginArray.webidl',
+    'PointerEvent.webidl',
     'Position.webidl',
     'PositionError.webidl',
     'ProcessingInstruction.webidl',
@@ -272,7 +275,9 @@ WEBIDL_FILES = [
     'Screen.webidl',
     'ScriptProcessorNode.webidl',
     'ScrollAreaEvent.webidl',
+    'Selection.webidl',
     'SettingsManager.webidl',
+    'ShadowRoot.webidl',
     'SharedWorker.webidl',
     'SharedWorkerGlobalScope.webidl',
     'SimpleGestureEvent.webidl',
@@ -405,6 +410,7 @@ WEBIDL_FILES = [
     'UIEvent.webidl',
     'UndoManager.webidl',
     'URL.webidl',
+    'URLSearchParams.webidl',
     'URLUtils.webidl',
     'URLUtilsReadOnly.webidl',
     'ValidityState.webidl',
@@ -515,6 +521,7 @@ if CONFIG['MOZ_B2G_RIL']:
         'MozCellBroadcast.webidl',
         'MozCellBroadcastEvent.webidl',
         'MozEmergencyCbModeEvent.webidl',
+        'MozIcc.webidl',
         'MozMobileConnectionArray.webidl',
         'MozOtaStatusEvent.webidl',
         'MozVoicemail.webidl',
@@ -532,6 +539,7 @@ if CONFIG['MOZ_NFC']:
 
 if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk':
     WEBIDL_FILES += [
+        'MozSpeakerManager.webidl',
         'MozWifiConnectionInfoEvent.webidl',
         'MozWifiStatusChangeEvent.webidl',
     ]
@@ -547,25 +555,15 @@ if CONFIG['MOZ_B2G_FM']:
         'FMRadio.webidl',
     ]
 
-if CONFIG['ENABLE_TESTS']:
-    TEST_WEBIDL_FILES += [
-        'TestDictionary.webidl',
-        'TestJSImplInheritanceGen.webidl',
-        'TestTypedef.webidl',
-    ]
-    PREPROCESSED_TEST_WEBIDL_FILES += [
-        'TestCodeGen.webidl',
-        'TestExampleGen.webidl',
-        'TestJSImplGen.webidl',
-    ]
-
 GENERATED_EVENTS_WEBIDL_FILES = [
     'BlobEvent.webidl',
     'CallGroupErrorEvent.webidl',
     'DataStoreChangeEvent.webidl',
     'DeviceLightEvent.webidl',
     'DeviceProximityEvent.webidl',
+    'DownloadEvent.webidl',
     'ErrorEvent.webidl',
+    'IccChangeEvent.webidl',
     'MediaStreamEvent.webidl',
     'MozContactChangeEvent.webidl',
     'MozInterAppMessageEvent.webidl',

@@ -69,6 +69,15 @@ namespace System.Html.Media {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onchange")]
+		public HtmlEventHandler OnChange {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onremovetrack")]
 		public HtmlEventHandler OnRemovetrack {
 			get {

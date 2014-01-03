@@ -77,17 +77,6 @@ interface DOMStringList {
   boolean contains(DOMString string);
 };
 
-interface MediaQueryList {
-	readonly attribute boolean matches;
-	readonly attribute DOMString media;
-	void addListener(MediaQueryListListener listener);
-	void removeListener(MediaQueryListListener listener);
-};
-
-callback interface MediaQueryListListener {
-	void handleChange(MediaQueryList mql);
-};
-
 [NoInterfaceObject]
 interface LineEndings {
 	DOMString toNativeLineEndings(DOMString string);
@@ -149,37 +138,6 @@ callback FunctionStringCallback = void (DOMString data);
 enum DropEffect { "none", "copy", "link", "move" };
 enum AllowedDropEffect { "none", "copy", "copyLink", "copyMove", "link", "linkMove", "move", "all", "uninitialized" };
 enum DataTransferItemKind { "string", "file" };
-
-
-////////////////////////////////////////////////////////////////////////////////////////////
-// Editing
-// https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#concept-selection
-////////////////////////////////////////////////////////////////////////////////////////////
-
-interface Selection {
-  readonly attribute Node? anchorNode;
-  readonly attribute unsigned long anchorOffset;
-  readonly attribute Node? focusNode;
-  readonly attribute unsigned long focusOffset;
-
-  readonly attribute boolean isCollapsed;
-  void               collapse(Node node, unsigned long offset);
-  void               collapseToStart();
-  void               collapseToEnd();
-
-  void               extend(Node node, unsigned long offset);
-
-  void               selectAllChildren(Node node);
-  void               deleteFromDocument();
-
-  readonly attribute unsigned long rangeCount;
-  Range              getRangeAt(unsigned long index);
-  void               addRange(Range range);
-  void               removeRange(Range range);
-  void               removeAllRanges();
-
-  stringifier;
-};
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 // XPath
@@ -287,23 +245,4 @@ interface SVGLength {
 
   void newValueSpecifiedUnits(unsigned short unitType, float valueInSpecifiedUnits);
   void convertToSpecifiedUnits(unsigned short unitType);
-};
-
-////////////////////////////////////////////////////////////////////////////////////////////
-// Device events
-// http://www.w3.org/TR/orientation-event/
-////////////////////////////////////////////////////////////////////////////////////////////
-
-[NoInterfaceObject]
-interface DeviceAcceleration {
-	readonly attribute double? x;
-	readonly attribute double? y;
-	readonly attribute double? z;
-};
-
-[NoInterfaceObject]
-interface DeviceRotationRate {
-	readonly attribute double? alpha;
-	readonly attribute double? beta;
-	readonly attribute double? gamma;
 };

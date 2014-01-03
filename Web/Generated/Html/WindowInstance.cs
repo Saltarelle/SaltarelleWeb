@@ -776,6 +776,69 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onpointerdown")]
+		public HtmlEventHandler OnPointerdown {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerenter")]
+		public HtmlEventHandler OnPointerenter {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerleave")]
+		public HtmlEventHandler OnPointerleave {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointermove")]
+		public HtmlEventHandler OnPointermove {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerout")]
+		public HtmlEventHandler OnPointerout {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerover")]
+		public HtmlEventHandler OnPointerover {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerup")]
+		public HtmlEventHandler OnPointerup {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onpopstate")]
 		public HtmlEventHandler OnPopstate {
 			get {

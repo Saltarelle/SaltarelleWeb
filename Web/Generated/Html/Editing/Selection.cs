@@ -33,6 +33,10 @@ namespace System.Html.Editing {
 		public void CollapseToStart() {
 		}
 
+		public bool ContainsNode(XmlNode node, bool partlyContained) {
+			return false;
+		}
+
 		public void DeleteFromDocument() {
 		}
 
@@ -62,6 +66,9 @@ namespace System.Html.Editing {
 			get {
 				return false;
 			}
+		}
+
+		public void Modify(string alter, string direction, string granularity) {
 		}
 
 		[IntrinsicProperty]

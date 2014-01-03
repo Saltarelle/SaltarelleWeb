@@ -19,6 +19,7 @@ interface StyleSheetList;
 interface WindowProxy;
 interface nsISupports;
 interface URI;
+interface nsIDocShell;
 
 enum VisibilityState { "hidden", "visible" };
 
@@ -27,17 +28,28 @@ enum VisibilityState { "hidden", "visible" };
 interface Document : Node {
   [Throws]
   readonly attribute DOMImplementation implementation;
+  [Pure]
   readonly attribute DOMString URL;
+  [Pure]
   readonly attribute DOMString documentURI;
+  [Pure]
   readonly attribute DOMString compatMode;
+  [Pure]
   readonly attribute DOMString characterSet;
+  [Pure]
   readonly attribute DOMString contentType;
 
+  [Pure]
   readonly attribute DocumentType? doctype;
+  [Pure]
   readonly attribute Element? documentElement;
+  [Pure]
   HTMLCollection getElementsByTagName(DOMString localName);
+  [Pure]
   HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
+  [Pure]
   HTMLCollection getElementsByClassName(DOMString classNames);
+  [Pure]
   Element? getElementById(DOMString elementId);
 
   [NewObject, Throws]
@@ -54,9 +66,7 @@ interface Document : Node {
   ProcessingInstruction createProcessingInstruction(DOMString target, DOMString data);
 
   [Throws]
-  Node importNode(Node node, boolean deep);
-  [Throws]
-  Node importNode(Node node);
+  Node importNode(Node node, optional boolean deep = false);
   [Throws]
   Node adoptNode(Node node);
 
@@ -85,6 +95,7 @@ interface Document : Node {
   Attr createAttribute(DOMString name);
   [NewObject, Throws]
   Attr createAttributeNS(DOMString? namespace, DOMString name);
+  [Pure]
   readonly attribute DOMString? inputEncoding;
 };
 
@@ -99,8 +110,9 @@ partial interface Document {
 
   // DOM tree accessors
   //(Not proxy yet)getter object (DOMString name);
-           [SetterThrows]
+  [SetterThrows, Pure]
            attribute DOMString title;
+  [Pure]
            attribute DOMString dir;
   //(HTML only)         attribute HTMLElement? body;
   //(HTML only)readonly attribute HTMLHeadElement? head;
@@ -122,6 +134,7 @@ partial interface Document {
   //(HTML only)void writeln(DOMString... text);
 
   // user interaction
+  [Pure]
   readonly attribute WindowProxy? defaultView;
   readonly attribute Element? activeElement;
   [Throws]
@@ -157,6 +170,7 @@ partial interface Document {
    *
    * @see <https://developer.mozilla.org/en/DOM/document.currentScript>
    */
+  [Pure]
   readonly attribute Element? currentScript;
   /**
    * Release the current mouse capture if it is on an element within this
@@ -264,9 +278,9 @@ partial interface Document {
 
 // http://dev.w3.org/2006/webapi/selectors-api2/#interface-definitions
 partial interface Document {
-  [Throws]
+  [Throws, Pure]
   Element?  querySelector(DOMString selectors);
-  [Throws]
+  [Throws, Pure]
   NodeList  querySelectorAll(DOMString selectors);
 
   //(Not implemented)Element?  find(DOMString selectors, optional (Element or sequence<Node>)? refNodes);
@@ -325,6 +339,8 @@ partial interface Document {
   void obsoleteSheet(URI sheetURI);
   [ChromeOnly, Throws]
   void obsoleteSheet(DOMString sheetURI);
+
+  [ChromeOnly] readonly attribute nsIDocShell? docShell;
 };
 
 // Extension to give chrome JS the ability to determine when a document was

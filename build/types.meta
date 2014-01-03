@@ -4,6 +4,9 @@
 ActivityOptions
 	nogenerate
 
+AlignSetting
+	namespace = System.Html.Media
+
 AllowedDropEffect
 	namespace = System.Html
 
@@ -272,19 +275,10 @@ ConnStatusDict
 ContactAddress
 	nogenerate
 
-ContactAddressInit
-	nogenerate
-
 ContactField
 	nogenerate
 
-ContactFieldInit
-	nogenerate
-
 ContactTelField
-	nogenerate
-
-ContactTelFieldInit
 	nogenerate
 
 ContactProperties
@@ -299,6 +293,9 @@ ContactFindOptions
 ContactManager
 	nogenerate
 
+ContextAttributes2D
+	namespace = System.Html.Media.Graphics
+	
 ConvolverNode
 	namespace = System.Html.Media.Audio
 
@@ -409,6 +406,9 @@ DesktopNotificationCenter
 DeviceAcceleration
 	namespace = System.Html.Mobile
 
+DeviceAccelerationInit
+	namespace = System.Html.Mobile
+
 DeviceLightEvent
 	namespace = System.Html.Mobile
 
@@ -416,6 +416,9 @@ DeviceLightEventInit
 	namespace = System.Html.Mobile
 
 DeviceMotionEvent
+	namespace = System.Html.Mobile
+
+DeviceMotionEventInit
 	namespace = System.Html.Mobile
 
 DeviceOrientationEvent
@@ -431,6 +434,9 @@ DeviceProximityEventInit
 	namespace = System.Html.Mobile
 
 DeviceRotationRate
+	namespace = System.Html.Mobile
+
+DeviceRotationRateInit
 	namespace = System.Html.Mobile
 
 DeviceStorage
@@ -454,6 +460,9 @@ DistanceModelType
 DNSCacheDict
 	nogenerate
 
+DnsCacheEntry
+	nogenerate
+
 DNSLookupDict
 	nogenerate
 
@@ -472,6 +481,12 @@ DocumentType
 	namespace = System.Html
 
 DOMCursor
+	nogenerate
+
+DOMDownload
+	nogenerate
+
+DOMDownloadManager
 	nogenerate
 
 DOMError
@@ -531,6 +546,12 @@ DOMTransactionEventInit
 	nogenerate
 
 DOMWindowResizeEventDetail
+	nogenerate
+
+DownloadEvent
+	nogenerate
+
+DownloadEventInit
 	nogenerate
 
 DragEvent
@@ -788,6 +809,10 @@ HTMLCollection
 	namespace = System.Html
 	name = ElementCollection
 
+HTMLContentElement
+	namespace = System.Html
+	name = ContentElement
+
 HTMLDataElement
 	namespace = System.Html
 	tagname = data
@@ -1024,6 +1049,10 @@ HTMLSelectElement
 	tagname = select
 	name = SelectElement
 
+HTMLShadowElement
+	namespace = System.Html
+	name = ShadowElement
+	
 HTMLSourceElement
 	namespace = System.Html
 	tagname = source
@@ -1111,7 +1140,16 @@ HTMLVideoElement
 HttpConnDict
 	nogenerate
 
-HttpConnInfoDict
+HttpConnectionElement
+	nogenerate
+
+HttpConnInfo
+	nogenerate
+
+IccChangeEvent
+	nogenerate
+
+IccChangeEventInit
 	nogenerate
 
 IDBCursor
@@ -1650,6 +1688,9 @@ NotifyPaintEvent
 nsIControllers
 	nogenerate
 
+nsIDocShell
+	nogenerate
+
 nsIDOMCrypto
 	namespace = System.Security.Cryptography
 	name = Crypto
@@ -1658,6 +1699,9 @@ nsIEditor
 	nogenerate
 
 nsIInputStreamCallback
+	nogenerate
+
+nsISelectionListener
 	nogenerate
 
 nsIStreamListener
@@ -1737,6 +1781,12 @@ PanningModelType
 ParentNode
 	mixin
 
+PCImplIceConnectionState
+	nogenerate
+
+PCImplIceGatheringState
+	nogenerate
+
 PCImplReadyState
 	nogenerate
 
@@ -1744,9 +1794,6 @@ PCImplSignalingState
 	nogenerate
 
 PCImplSipccState
-	nogenerate
-
-PCImplIceState
 	nogenerate
 
 PCObserverStateType
@@ -1781,6 +1828,12 @@ Plugin
 	namespace = System.Html
 
 PluginArray
+	namespace = System.Html
+
+PointerEvent
+	namespace = System.Html
+
+PointerEventInit
 	namespace = System.Html
 
 PopStateEvent
@@ -1924,6 +1977,9 @@ RTCIceServer
 
 RTCInboundRTPStreamStats
 	namespace = System.Net.WebRTC
+	
+RTCLogCallback
+	nogenerate
 
 RTCMediaStreamTrackStats
 	namespace = System.Net.WebRTC
@@ -2006,6 +2062,9 @@ SettingsLock
 SettingsManager
 	nogenerate
 
+ShadowRoot
+	namespace = System.Html
+
 SharedWorker
 	namespace = System.Threading.WebWorkers
 
@@ -2022,6 +2081,9 @@ SmartCardEventInit
 	nogenerate
 
 SmsSendParameters
+	nogenerate
+
+SocketElement
 	nogenerate
 
 SocketsDict
@@ -2603,9 +2665,6 @@ TextMetrics
 TextTrack
 	namespace = System.Html.Media
 
-TextTrackCueAlign
-	namespace = System.Html.Media
-
 TextTrackCueList
 	namespace = System.Html.Media
 
@@ -2676,6 +2735,9 @@ URI
 	nogenerate
 
 URL
+	namespace = System.Html
+
+URLSearchParams
 	namespace = System.Html
 
 URLUtils
@@ -2798,10 +2860,16 @@ WebGLUniformLocation
 WebGLVertexArray
 	namespace = System.Html.Media.Graphics.WebGL
 
+WebrtcGlobalInformation
+	nogenerate
+	
 WebSocket
 	namespace = System.Net.WebSockets
 	typeOverride readyState = System.Net.WebSockets.ReadyState
 	generateEnum ReadyState constants "(.+)"
+
+WebSocketElement
+	namespace = System.Net.WebSockets
 
 WebSocketDict
 	namespace = System.Net.WebSockets

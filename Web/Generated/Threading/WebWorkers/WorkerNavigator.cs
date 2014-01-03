@@ -7,6 +7,13 @@ namespace System.Threading.WebWorkers {
 		}
 
 		[IntrinsicProperty]
+		public string AppCodeName {
+			get {
+				return null;
+			}
+		}
+
+		[IntrinsicProperty]
 		public string AppName {
 			get {
 				return null;
@@ -25,6 +32,17 @@ namespace System.Threading.WebWorkers {
 			get {
 				return null;
 			}
+		}
+
+		[IntrinsicProperty]
+		public string Product {
+			get {
+				return null;
+			}
+		}
+
+		public bool TaintEnabled() {
+			return false;
 		}
 
 		[IntrinsicProperty]

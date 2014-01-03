@@ -2,7 +2,7 @@
 
 namespace System.Html.Media {
 	[Imported, NamedValues]
-	public enum TextTrackCueAlign {
+	public enum AlignSetting {
 		Start,
 		Middle,
 		End,

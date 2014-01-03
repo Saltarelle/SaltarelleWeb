@@ -41,9 +41,9 @@ namespace System.Html.Media {
 		}
 
 		[IntrinsicProperty]
-		public TextTrackCueAlign Align {
+		public AlignSetting Align {
 			get {
-				return default(TextTrackCueAlign);
+				return default(AlignSetting);
 			}
 			set {
 			}

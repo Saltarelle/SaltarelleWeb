@@ -5,6 +5,8 @@ namespace System.Html.Media {
 	public enum TextTrackListEvents {
 		[ScriptName("onaddtrack")]
 		Addtrack,
+		[ScriptName("onchange")]
+		Change,
 		[ScriptName("onremovetrack")]
 		Removetrack
 	}

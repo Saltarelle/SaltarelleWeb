@@ -113,6 +113,20 @@ namespace System.Html {
 		Play,
 		[ScriptName("onplaying")]
 		Playing,
+		[ScriptName("onpointerdown")]
+		Pointerdown,
+		[ScriptName("onpointerenter")]
+		Pointerenter,
+		[ScriptName("onpointerleave")]
+		Pointerleave,
+		[ScriptName("onpointermove")]
+		Pointermove,
+		[ScriptName("onpointerout")]
+		Pointerout,
+		[ScriptName("onpointerover")]
+		Pointerover,
+		[ScriptName("onpointerup")]
+		Pointerup,
 		[ScriptName("onpopstate")]
 		Popstate,
 		[ScriptName("onprogress")]

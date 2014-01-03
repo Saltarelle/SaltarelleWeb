@@ -98,13 +98,16 @@ interface CSS2Properties : CSSStyleDeclaration {
   [Throws, TreatNullAs=EmptyString] attribute DOMString direction;
   [Throws, TreatNullAs=EmptyString] attribute DOMString display;
   [Throws, TreatNullAs=EmptyString] attribute DOMString emptyCells;
+  [Throws, TreatNullAs=EmptyString] attribute DOMString alignContent;
   [Throws, TreatNullAs=EmptyString] attribute DOMString alignItems;
   [Throws, TreatNullAs=EmptyString] attribute DOMString alignSelf;
   [Throws, TreatNullAs=EmptyString] attribute DOMString flex;
   [Throws, TreatNullAs=EmptyString] attribute DOMString flexBasis;
   [Throws, TreatNullAs=EmptyString] attribute DOMString flexDirection;
+  [Throws, TreatNullAs=EmptyString] attribute DOMString flexFlow;
   [Throws, TreatNullAs=EmptyString] attribute DOMString flexGrow;
   [Throws, TreatNullAs=EmptyString] attribute DOMString flexShrink;
+  [Throws, TreatNullAs=EmptyString] attribute DOMString flexWrap;
   [Throws, TreatNullAs=EmptyString] attribute DOMString order;
   [Throws, TreatNullAs=EmptyString] attribute DOMString justifyContent;
   [Throws, TreatNullAs=EmptyString] attribute DOMString cssFloat;

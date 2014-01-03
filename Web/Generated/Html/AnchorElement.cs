@@ -227,6 +227,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public URLSearchParams SearchParams {
+			get {
+				return default(URLSearchParams);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Shape {
 			get {
 				return null;

@@ -53,6 +53,10 @@ namespace Generator {
 			public bool SameObject { get; private set; }
 			public bool NewObject { get; private set; }
 			public bool Replaceable { get; private set; }
+			public bool StoreInSlot { get; private set; }
+			public bool CrossOriginReadable { get; private set; }
+			public bool CrossOriginWritable { get; private set; }
+			public bool CrossOriginCallable { get; private set; }
 			public TreatUndefinedAsOptions TreatUndefinedAs { get; private set; }
 			public IReadOnlyList<IReadOnlyList<Argument>> Constructors { get; private set; }
 			public IReadOnlyList<Tuple<string, IReadOnlyList<Argument>>> NamedConstructors { get; private set; }
@@ -149,6 +153,18 @@ namespace Generator {
 									break;
 								case "Replaceable":
 									result.Replaceable = true;
+									break;
+								case "StoreInSlot":
+									result.StoreInSlot = true;
+									break;
+								case "CrossOriginReadable":
+									result.CrossOriginReadable = true;
+									break;
+								case "CrossOriginWritable":
+									result.CrossOriginWritable = true;
+									break;
+								case "CrossOriginCallable":
+									result.CrossOriginCallable = true;
 									break;
 								default:
 									errors.Add(string.Format("Unknown ExtendedAttributeNoArgs `{0}' on `{1}'", noArgs.AttributeName, scopeName));

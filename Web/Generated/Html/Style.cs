@@ -15,6 +15,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string AlignContent {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string AlignItems {
 			get {
 				return null;
@@ -762,6 +771,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string FlexFlow {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string FlexGrow {
 			get {
 				return null;
@@ -772,6 +790,15 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string FlexShrink {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string FlexWrap {
 			get {
 				return null;
 			}

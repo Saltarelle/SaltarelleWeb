@@ -43,6 +43,11 @@ namespace System.Net.WebRTC {
 			set;
 		}
 
+		public string Pcid {
+			get;
+			set;
+		}
+
 		public RTCRTPStreamStats[] RtpStreamStats {
 			get;
 			set;

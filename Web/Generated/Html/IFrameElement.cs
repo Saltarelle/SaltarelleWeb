@@ -158,11 +158,9 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public string Sandbox {
+		public DOMSettableTokenList Sandbox {
 			get {
-				return null;
-			}
-			set {
+				return default(DOMSettableTokenList);
 			}
 		}
 
