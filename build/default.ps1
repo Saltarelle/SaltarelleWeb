@@ -292,7 +292,7 @@ Task Download-WebIDL {
 		$current++
 		Write-Host "Preprocessing $_ ($current of $total)"
 		$defines = ($symbols | % { "-D $_" }) -join " "
-		$content = iex "$buildtoolsDir\mcpp.exe -e utf8 $defines -P -C -o `"$webidlDir\$_`" `"$webidlDir\$_.raw`""
+		$content = iex "$buildtoolsDir\mcpp.exe -e utf8 $defines -P -o `"$webidlDir\$_`" `"$webidlDir\$_.raw`""
 	}
 
 	#generation
