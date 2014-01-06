@@ -51,6 +51,7 @@
     <Compile Include="Data\Sql\SqlTransactionCallback.cs" />
     <Compile Include="Html\CanvasElement.cs" />
     <Compile Include="Html\IWindowTimers.cs" />
+    <Compile Include="Html\Location.cs" />
     <Compile Include="Html\WindowInstance.cs" />
     <Compile Include="Html\DOMParser.cs" />
     <Compile Include="Html\EventPhase.cs" />
