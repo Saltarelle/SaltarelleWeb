@@ -2920,6 +2920,8 @@ WindowBase64
 WindowTimers
 	namespace = System.Html
 	name = IWindowTimers
+	remove setTimeout
+	remove setInterval
 	interface
 
 WindowProxy

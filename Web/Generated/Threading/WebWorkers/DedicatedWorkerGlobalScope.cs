@@ -164,40 +164,6 @@ namespace System.Threading.WebWorkers {
 			}
 		}
 
-		public static int SetInterval(Function handler) {
-			return 0;
-		}
-
-		[ExpandParams]
-		public static int SetInterval(Function handler, int timeout, params object[] arguments) {
-			return 0;
-		}
-
-		public static int SetInterval(string handler) {
-			return 0;
-		}
-
-		public static int SetInterval(string handler, int timeout) {
-			return 0;
-		}
-
-		public static int SetTimeout(Function handler) {
-			return 0;
-		}
-
-		[ExpandParams]
-		public static int SetTimeout(Function handler, int timeout, params object[] arguments) {
-			return 0;
-		}
-
-		public static int SetTimeout(string handler) {
-			return 0;
-		}
-
-		public static int SetTimeout(string handler, int timeout) {
-			return 0;
-		}
-
 		public static string ToNativeLineEndings(string @string) {
 			return null;
 		}

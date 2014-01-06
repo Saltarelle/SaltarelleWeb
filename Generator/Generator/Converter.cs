@@ -983,7 +983,7 @@ namespace Generator {
 										if (baseMeta.TypeKind == TypeKind.Default)
 											_errors.Add("The type `" + b + "' cannot be implemented by the type `" + @interface.Name + "' because the implemented type is not a C# interface");
 										_types[b].Decompose(
-											@interface2 => AddMembers(@interface2.Members, baseMeta.TypeOverrides.ToDictionary(o => o.Identifier, o => o.NewType), b, parsedAttributes.NoInterfaceObject, baseMeta.Renames, baseMeta.TypeKind, meta.Removes, false, members),
+											@interface2 => AddMembers(@interface2.Members, baseMeta.TypeOverrides.ToDictionary(o => o.Identifier, o => o.NewType), b, parsedAttributes.NoInterfaceObject, baseMeta.Renames, baseMeta.TypeKind, baseMeta.Removes, false, members),
 											callbackInterface => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a callback interface, not an interface"); },
 											dictionary => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a dictionary, not an interface"); },
 											@callback => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a callback, not an interface"); },

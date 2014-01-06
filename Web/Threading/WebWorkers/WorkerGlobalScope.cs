@@ -1,17 +1,8 @@
-using System.Xml;
+﻿using System.Html;
 using System.Runtime.CompilerServices;
 
-namespace System.Html {
-	public partial class WindowInstance {
-		[IntrinsicProperty]
-		public object DialogArguments { get { return null; } }
-
-		[IntrinsicProperty]
-		public object ReturnValue { get; set; }
-
-		[IntrinsicProperty]
-		public DocumentBase Document { get { return default(DocumentBase); } }
-
+namespace System.Threading.WebWorkers {
+	public partial class WorkerGlobalScope {
 		public int SetTimeout(Action handler) { return 0; }
 		public int SetTimeout(Action handler, int timeout) { return 0; }
 		[IncludeGenericArguments(false)]

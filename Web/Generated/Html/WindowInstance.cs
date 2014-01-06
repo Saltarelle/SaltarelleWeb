@@ -1286,41 +1286,7 @@ namespace System.Html {
 			}
 		}
 
-		public int SetInterval(Function handler) {
-			return 0;
-		}
-
-		[ExpandParams]
-		public int SetInterval(Function handler, int timeout, params object[] arguments) {
-			return 0;
-		}
-
-		public int SetInterval(string handler) {
-			return 0;
-		}
-
-		public int SetInterval(string handler, int timeout) {
-			return 0;
-		}
-
 		public void SetResizable(bool resizable) {
-		}
-
-		public int SetTimeout(Function handler) {
-			return 0;
-		}
-
-		[ExpandParams]
-		public int SetTimeout(Function handler, int timeout, params object[] arguments) {
-			return 0;
-		}
-
-		public int SetTimeout(string handler) {
-			return 0;
-		}
-
-		public int SetTimeout(string handler, int timeout) {
-			return 0;
 		}
 
 		public object ShowModalDialog(string url) {

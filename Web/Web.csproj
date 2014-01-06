@@ -50,6 +50,7 @@
     <Compile Include="Data\Sql\SqlStatementErrorCallback.cs" />
     <Compile Include="Data\Sql\SqlTransactionCallback.cs" />
     <Compile Include="Html\CanvasElement.cs" />
+    <Compile Include="Html\IWindowTimers.cs" />
     <Compile Include="Html\WindowInstance.cs" />
     <Compile Include="Html\DOMParser.cs" />
     <Compile Include="Html\EventPhase.cs" />
@@ -94,6 +95,9 @@
       <SubType>Designer</SubType>
     </None>
     <Compile Include="Net\HttpVerb.cs" />
+    <Compile Include="Threading\WebWorkers\DedicatedWorkerGlobalScope.cs" />
+    <Compile Include="Threading\WebWorkers\SharedWorkerGlobalScope.cs" />
+    <Compile Include="Threading\WebWorkers\WorkerGlobalScope.cs" />
     <Compile Include="Xml\XmlDocument.cs" />
     <Compile Include="Xml\XmlDocumentParser.cs" />
     <Compile Include="Xml\XmlNode.cs" />
