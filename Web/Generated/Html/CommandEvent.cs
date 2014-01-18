@@ -12,5 +12,8 @@ namespace System.Html {
 				return null;
 			}
 		}
+
+		public void InitCommandEvent(string type, bool canBubble, bool cancelable, string command) {
+		}
 	}
 }

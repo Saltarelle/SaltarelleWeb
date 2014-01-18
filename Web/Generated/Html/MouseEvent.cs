@@ -58,6 +58,9 @@ namespace System.Html {
 			return false;
 		}
 
+		public void InitMouseEvent(string typeArg, bool canBubbleArg, bool cancelableArg, WindowInstance viewArg, int detailArg, int screenXArg, int screenYArg, int clientXArg, int clientYArg, bool ctrlKeyArg, bool altKeyArg, bool shiftKeyArg, bool metaKeyArg, ushort buttonArg, EventTarget relatedTargetArg) {
+		}
+
 		[IntrinsicProperty]
 		public bool MetaKey {
 			get {

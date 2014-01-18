@@ -29,6 +29,9 @@ namespace System.Html {
 			}
 		}
 
+		public void InitUIEvent(string aType, bool aCanBubble, bool aCancelable, WindowInstance aView, int aDetail) {
+		}
+
 		[IntrinsicProperty]
 		public bool IsChar {
 			get {

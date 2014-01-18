@@ -12,6 +12,9 @@ namespace System.Html {
 		public PopStateEvent(string type, PopStateEventInit eventInitDict) {
 		}
 
+		public void InitPopStateEvent(string type, bool canBubble, bool cancelable, object state) {
+		}
+
 		[IntrinsicProperty]
 		public object State {
 			get {

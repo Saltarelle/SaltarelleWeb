@@ -26,6 +26,9 @@ namespace System.Html.Mobile {
 			}
 		}
 
+		public void InitDeviceMotionEvent(string type, bool canBubble, bool cancelable, DeviceAccelerationInit acceleration, DeviceAccelerationInit accelerationIncludingGravity, DeviceRotationRateInit rotationRate, double? interval) {
+		}
+
 		[IntrinsicProperty]
 		public double? Interval {
 			get {

@@ -12,6 +12,9 @@ namespace System.Html {
 		public HashChangeEvent(string type, HashChangeEventInit eventInitDict) {
 		}
 
+		public void InitHashChangeEvent(string type, bool canBubble, bool cancelable, string oldURL, string newURL) {
+		}
+
 		[IntrinsicProperty]
 		public string NewURL {
 			get {

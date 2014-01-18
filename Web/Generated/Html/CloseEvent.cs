@@ -19,6 +19,9 @@ namespace System.Html {
 			}
 		}
 
+		public void InitCloseEvent(string type, bool canBubble, bool cancelable, bool wasClean, ushort code, string reason) {
+		}
+
 		[IntrinsicProperty]
 		public string Reason {
 			get {

@@ -13,6 +13,9 @@ namespace System.Html {
 			}
 		}
 
+		public void InitTimeEvent(string aType, WindowInstance aView, int aDetail) {
+		}
+
 		[IntrinsicProperty]
 		public WindowInstance View {
 			get {

@@ -27,6 +27,9 @@ namespace System.Html {
 			}
 		}
 
+		public void InitTouchEvent(string type, bool canBubble, bool cancelable, WindowInstance view, int detail, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey, TouchList touches, TouchList targetTouches, TouchList changedTouches) {
+		}
+
 		[IntrinsicProperty]
 		public bool MetaKey {
 			get {

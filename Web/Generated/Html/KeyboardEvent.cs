@@ -607,6 +607,9 @@ namespace System.Html {
 			return false;
 		}
 
+		public void InitKeyEvent(string type, bool canBubble, bool cancelable, WindowInstance view, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey, uint keyCode, uint charCode) {
+		}
+
 		[IntrinsicProperty]
 		public string Key {
 			get {

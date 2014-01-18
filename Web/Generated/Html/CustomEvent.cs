@@ -18,5 +18,8 @@ namespace System.Html {
 				return null;
 			}
 		}
+
+		public void InitCustomEvent(string type, bool canBubble, bool cancelable, object detail) {
+		}
 	}
 }

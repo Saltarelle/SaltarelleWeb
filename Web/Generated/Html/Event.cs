@@ -73,6 +73,9 @@ namespace System.Html {
 			return false;
 		}
 
+		public void InitEvent(string type, bool bubbles, bool cancelable) {
+		}
+
 		[IntrinsicProperty]
 		public bool IsTrusted {
 			get {

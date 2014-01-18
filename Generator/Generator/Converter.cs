@@ -562,8 +562,6 @@ namespace Generator {
 			if (name != null) {
 				if (name.StartsWith("Moz", StringComparison.OrdinalIgnoreCase) || name.StartsWith("onMoz", StringComparison.OrdinalIgnoreCase))
 					return false;
-				if (typeName != null && typeName.EndsWith("Event") && name == "init" + typeName)
-					return false;	// Mozilla-specific deprecated UIEvent.initUIEvent
 			}
 			if (memberAttributes != null && memberAttributes.ChromeOnly)
 				return false;
