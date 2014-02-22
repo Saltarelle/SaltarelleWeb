@@ -154,24 +154,31 @@ function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$curren
 		$line = $lines[$currentLine.value]
 		if ($line.Text -match "^(\S+)\s(\+?=)\s(.+)$") {
 			if ($Matches[1] -ne "MODULE") {
-				if ($matches[3] -ne "[") {
-					throw "Expected '[' on line $($line.Text)"
-				}
 				$target = $Matches[1]
 				$type = $Matches[2]
+				$last = $matches[3]
 				
-				$list = @()
-				$currentLine.value++
-				while (($currentLine.value -lt $lines.Length) -and ($lines[$currentLine.value].Indent -gt $currentIndent)) {
-					$line = $lines[$currentLine.value]
-					if (-not ($line.Text -match "^'([^']+)',?$")) {
-						throw "Expected 'identifier' on line $($line.Text)"
-					}
-					$list += $Matches[1]
-					$currentLine.value++
+				if ($last -match "^\[\s*'([^']+)'\s*]\s*$") {
+					$list = @($Matches[1])
 				}
-				if (($currentLine.value -ge $lines.Length) -or ($lines[$currentLine.value].Indent -ne $currentIndent) -or ($lines[$currentLine.value].Text -ne "]")) {
-					throw "Expected ']' on line $($lines[$currentLine.value].Text)"
+				else {
+					if ($last -ne "[") {
+						throw "Expected '[' on line $($line.Text)"
+					}
+
+					$list = @()
+					$currentLine.value++
+					while (($currentLine.value -lt $lines.Length) -and ($lines[$currentLine.value].Indent -gt $currentIndent)) {
+						$line = $lines[$currentLine.value]
+						if (-not ($line.Text -match "^'([^']+)',?$")) {
+							throw "Expected 'identifier' on line $($line.Text)"
+						}
+						$list += $Matches[1]
+						$currentLine.value++
+					}
+					if (($currentLine.value -ge $lines.Length) -or ($lines[$currentLine.value].Indent -ne $currentIndent) -or ($lines[$currentLine.value].Text -ne "]")) {
+						throw "Expected ']' on line $($lines[$currentLine.value].Text)"
+					}
 				}
 
 				if ($take) {
@@ -187,6 +194,13 @@ function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$curren
 		}
 		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]:$") {
 			$newTake = $take -and $symbols -contains $Matches[1]
+			$currentLine.value++
+            if ($currentLine.Value -lt $lines.Count) {
+    			Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+            }
+		}
+		elseif ($line.Text -match "^if not CONFIG\['([^']+)'\]:$") {
+			$newTake = $take -and -not ($symbols -contains $Matches[1])
 			$currentLine.value++
             if ($currentLine.Value -lt $lines.Count) {
     			Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
