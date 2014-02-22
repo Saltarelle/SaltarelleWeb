@@ -101,6 +101,7 @@
     <Compile Include="Threading\WebWorkers\DedicatedWorkerGlobalScope.cs" />
     <Compile Include="Threading\WebWorkers\SharedWorkerGlobalScope.cs" />
     <Compile Include="Threading\WebWorkers\WorkerGlobalScope.cs" />
+    <Compile Include="Xml\XmlElementCollection.cs" />
     <Compile Include="Xml\XmlProcessingInstruction.cs" />
     <Compile Include="Xml\XmlComment.cs" />
     <Compile Include="Xml\XmlText.cs" />

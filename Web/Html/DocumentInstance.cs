@@ -19,6 +19,13 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public ElementCollection Children {
+			get {
+				return default(ElementCollection);
+			}
+		}
+
+		[IntrinsicProperty]
 		public Element CurrentScript {
 			get {
 				return null;
@@ -57,6 +64,18 @@ namespace System.Html {
 
 		public Element GetElementById(string elementId) {
 			return null;
+		}
+
+		public ElementCollection GetElementsByClassName(string classNames) {
+			return default(ElementCollection);
+		}
+
+		public ElementCollection GetElementsByTagName(string localName) {
+			return default(ElementCollection);
+		}
+
+		public ElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
+			return default(ElementCollection);
 		}
 
 		[IntrinsicProperty]

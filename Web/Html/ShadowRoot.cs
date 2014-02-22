@@ -3,6 +3,13 @@ using System.Runtime.CompilerServices;
 namespace System.Html {
 	public partial class ShadowRoot {
 		[IntrinsicProperty]
+		public ElementCollection Children {
+			get {
+				return default(ElementCollection);
+			}
+		}
+
+		[IntrinsicProperty]
 		public Element FirstElementChild {
 			get {
 				return default(Element);

@@ -483,6 +483,9 @@ Document
 	typeOverride getElementById = System.Xml.XmlElement
 	typeOverride querySelector = System.Xml.XmlElement
 	typeOverride elt = System.Xml.XmlElement
+	typeOverride getElementsByClassName = System.Xml.XmlElementCollection
+	typeOverride getElementsByTagName = System.Xml.XmlElementCollection
+	typeOverride getElementsByTagNameNS = System.Xml.XmlElementCollection
 	remove register
 	remove undoManager
 
@@ -593,6 +596,9 @@ Element
 	typeOverride firstElementChild = System.Xml.XmlElement
 	typeOverride lastElementChild = System.Xml.XmlElement
 	typeOverride querySelector = System.Xml.XmlElement
+	typeOverride getElementsByClassName = System.Xml.XmlElementCollection
+	typeOverride getElementsByTagName = System.Xml.XmlElementCollection
+	typeOverride getElementsByTagNameNS = System.Xml.XmlElementCollection
 	alias = System.Html.Element
 
 ElementRegistrationOptions
@@ -1806,6 +1812,7 @@ PanningModelType
 ParentNode
 	typeOverride firstElementChild = System.Xml.XmlElement
 	typeOverride lastElementChild = System.Xml.XmlElement
+	typeOverride children = System.Xml.XmlElementCollection
 	mixin
 
 PCImplIceConnectionState
@@ -3046,6 +3053,7 @@ staticInstance System.Html.Document
 	instanceName = document
 	type = HTMLDocument
 	remove ActiveElement
+	remove Children
 	remove CreateElement
 	remove CreateElementNS
 	remove CurrentScript
@@ -3055,6 +3063,9 @@ staticInstance System.Html.Document
 	remove GetAnonymousElementByAttribute
 	remove GetBindingParent
 	remove GetElementById
+	remove GetElementsByClassName
+	remove GetElementsByTagName
+	remove GetElementsByTagNameNS
 	remove LastElementChild
 	remove ParentElement
 	remove QuerySelector

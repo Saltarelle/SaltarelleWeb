@@ -202,13 +202,6 @@ namespace System.Html {
 			}
 		}
 
-		[IntrinsicProperty]
-		public static ElementCollection Children {
-			get {
-				return default(ElementCollection);
-			}
-		}
-
 		public static void Clear() {
 		}
 
@@ -535,20 +528,8 @@ namespace System.Html {
 			return default(XmlNodeList);
 		}
 
-		public static ElementCollection GetElementsByClassName(string classNames) {
-			return default(ElementCollection);
-		}
-
 		public static XmlNodeList GetElementsByName(string elementName) {
 			return default(XmlNodeList);
-		}
-
-		public static ElementCollection GetElementsByTagName(string localName) {
-			return default(ElementCollection);
-		}
-
-		public static ElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
-			return default(ElementCollection);
 		}
 
 		public static XmlNodeList GetItems() {

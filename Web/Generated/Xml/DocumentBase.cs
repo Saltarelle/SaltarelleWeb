@@ -69,9 +69,9 @@ namespace System.Xml {
 		}
 
 		[IntrinsicProperty]
-		public ElementCollection Children {
+		public XmlElementCollection Children {
 			get {
-				return default(ElementCollection);
+				return default(XmlElementCollection);
 			}
 		}
 
@@ -312,16 +312,16 @@ namespace System.Xml {
 			return default(XmlElement);
 		}
 
-		public ElementCollection GetElementsByClassName(string classNames) {
-			return default(ElementCollection);
+		public XmlElementCollection GetElementsByClassName(string classNames) {
+			return default(XmlElementCollection);
 		}
 
-		public ElementCollection GetElementsByTagName(string localName) {
-			return default(ElementCollection);
+		public XmlElementCollection GetElementsByTagName(string localName) {
+			return default(XmlElementCollection);
 		}
 
-		public ElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
-			return default(ElementCollection);
+		public XmlElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
+			return default(XmlElementCollection);
 		}
 
 		public bool HasFocus() {

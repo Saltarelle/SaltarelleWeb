@@ -25,6 +25,13 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty]
+		public static ElementCollection Children {
+			get {
+				return default(ElementCollection);
+			}
+		}
+
 		public static Element CreateElement(string localName) {
 			return default(Element);
 		}
@@ -70,6 +77,18 @@ namespace System.Html {
 			return default(Element);
 		}
 
+		public static ElementCollection GetElementsByClassName(string classNames) {
+			return default(ElementCollection);
+		}
+
+		public static ElementCollection GetElementsByTagName(string localName) {
+			return default(ElementCollection);
+		}
+
+		public static ElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
+			return default(ElementCollection);
+		}
+		
 		[IntrinsicProperty]
 		public static Element LastElementChild {
 			get {

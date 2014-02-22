@@ -11,10 +11,29 @@ namespace System.Html {
 		public string ID { get; set; }
 
 		[IntrinsicProperty]
+		public ElementCollection Children {
+			get {
+				return default(ElementCollection);
+			}
+		}
+
+		[IntrinsicProperty]
 		public Element FirstElementChild {
 			get {
 				return default(Element);
 			}
+		}
+
+		public ElementCollection GetElementsByClassName(string classNames) {
+			return default(ElementCollection);
+		}
+
+		public ElementCollection GetElementsByTagName(string localName) {
+			return default(ElementCollection);
+		}
+
+		public ElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
+			return default(ElementCollection);
 		}
 
 		[IntrinsicProperty]

@@ -45,9 +45,9 @@ namespace System.Xml {
 		}
 
 		[IntrinsicProperty]
-		public ElementCollection Children {
+		public XmlElementCollection Children {
 			get {
-				return default(ElementCollection);
+				return default(XmlElementCollection);
 			}
 		}
 
