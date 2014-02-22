@@ -524,20 +524,16 @@ namespace System.Html {
 			}
 		}
 
-		public static XmlNodeList GetAnonymousNodes(XmlElement elt) {
-			return default(XmlNodeList);
+		public static ElementNodeList GetElementsByName(string elementName) {
+			return default(ElementNodeList);
 		}
 
-		public static XmlNodeList GetElementsByName(string elementName) {
-			return default(XmlNodeList);
+		public static ElementNodeList GetItems() {
+			return default(ElementNodeList);
 		}
 
-		public static XmlNodeList GetItems() {
-			return default(XmlNodeList);
-		}
-
-		public static XmlNodeList GetItems(string typeNames) {
-			return default(XmlNodeList);
+		public static ElementNodeList GetItems(string typeNames) {
+			return default(ElementNodeList);
 		}
 
 		public static Selection GetSelection() {
@@ -650,9 +646,6 @@ namespace System.Html {
 			get {
 				return default(ElementCollection);
 			}
-		}
-
-		public static void LoadBindingDocument(string documentURL) {
 		}
 
 		[IntrinsicProperty]
@@ -1460,10 +1453,6 @@ namespace System.Html {
 
 		public static string QueryCommandValue(string commandId) {
 			return null;
-		}
-
-		public static XmlNodeList QuerySelectorAll(string selectors) {
-			return default(XmlNodeList);
 		}
 
 		[IntrinsicProperty]

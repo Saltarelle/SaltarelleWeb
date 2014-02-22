@@ -471,6 +471,10 @@ DNSLookupDict
 Document
 	namespace = System.Xml
 	name = DocumentBase
+	remove getAnonymousElementByAttribute
+	remove getAnonymousNodes
+	remove getBindingParent
+	remove loadBindingDocument
 	typeOverride whatToShow = System.Xml.NodeFilter
 	typeOverride activeElement = System.Xml.XmlElement
 	typeOverride createElement = System.Xml.XmlElement
@@ -478,8 +482,6 @@ Document
 	typeOverride currentScript = System.Xml.XmlElement
 	typeOverride documentElement = System.Xml.XmlElement
 	typeOverride elementFromPoint = System.Xml.XmlElement
-	typeOverride getAnonymousElementByAttribute = System.Xml.XmlElement
-	typeOverride getBindingParent = System.Xml.XmlElement
 	typeOverride getElementById = System.Xml.XmlElement
 	typeOverride querySelector = System.Xml.XmlElement
 	typeOverride elt = System.Xml.XmlElement
@@ -867,6 +869,9 @@ HTMLDListElement
 
 HTMLDocument
 	namespace = System.Html
+	typeOverride getElementsByName = System.Html.ElementNodeList
+	typeOverride querySelectorAll = System.Html.ElementNodeList
+	typeOverride getItems = System.Html.ElementNodeList
 	name = DocumentInstance
 
 HTMLElement
@@ -899,6 +904,7 @@ HTMLFormElement
 HTMLFormControlsCollection
 	namespace = System.Html
 	name = FormControlsCollection
+	typeOverride namedItem = System.TypeOption<System.Html.ElementNodeList, System.Html.Element>
 
 HTMLFrameElement
 	namespace = System.Html
@@ -3060,6 +3066,7 @@ staticInstance System.Html.Document
 	remove DocumentElement
 	remove ElementFromPoint
 	remove FirstElementChild
+	remove GetAnonymousNodes
 	remove GetAnonymousElementByAttribute
 	remove GetBindingParent
 	remove GetElementById
@@ -3069,6 +3076,7 @@ staticInstance System.Html.Document
 	remove LastElementChild
 	remove ParentElement
 	remove QuerySelector
+	remove QuerySelectorAll
 
 staticInstance System.Html.Window
 	instanceName = window

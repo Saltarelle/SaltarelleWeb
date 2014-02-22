@@ -50,18 +50,6 @@ namespace System.Html {
 			}
 		}
 
-		public Element GetAnonymousElementByAttribute(XmlElement elt, string attrName, string attrValue) {
-			return null;
-		}
-
-		public Element GetAnonymousNodes(XmlElement elt) {
-			return null;
-		}
-
-		public Element GetBindingParent(XmlNode node) {
-			return null;
-		}
-
 		public Element GetElementById(string elementId) {
 			return null;
 		}
@@ -87,6 +75,10 @@ namespace System.Html {
 
 		public Element QuerySelector(string selectors) {
 			return null;
+		}
+
+		public ElementNodeList QuerySelectorAll(string selectors) {
+			return default(ElementNodeList);
 		}
 	}
 }

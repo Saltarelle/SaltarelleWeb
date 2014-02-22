@@ -296,18 +296,6 @@ namespace System.Xml {
 			}
 		}
 
-		public XmlElement GetAnonymousElementByAttribute(XmlElement elt, string attrName, string attrValue) {
-			return default(XmlElement);
-		}
-
-		public XmlNodeList GetAnonymousNodes(XmlElement elt) {
-			return default(XmlNodeList);
-		}
-
-		public XmlElement GetBindingParent(XmlNode node) {
-			return default(XmlElement);
-		}
-
 		public XmlElement GetElementById(string elementId) {
 			return default(XmlElement);
 		}
@@ -376,9 +364,6 @@ namespace System.Xml {
 			get {
 				return null;
 			}
-		}
-
-		public void LoadBindingDocument(string documentURL) {
 		}
 
 		[IntrinsicProperty]

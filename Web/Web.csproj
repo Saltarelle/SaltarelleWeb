@@ -88,6 +88,7 @@
     <Compile Include="Data\Sql\SqlDatabase.cs" />
     <Compile Include="Html\Media\MediaPlayability.cs" />
     <Compile Include="Html\Media\MediaPreload.cs" />
+    <Compile Include="Html\ElementNodeList.cs" />
     <Compile Include="Net\WebRTC\RTCPeerConnection.cs" />
     <Compile Include="Net\XmlHttpRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

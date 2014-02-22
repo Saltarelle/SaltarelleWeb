@@ -67,5 +67,9 @@ namespace System.Html {
 		public Element QuerySelector(string selectors) {
 			return default(Element);
 		}
+
+		public ElementNodeList QuerySelectorAll(string selectors) {
+			return default(ElementNodeList);
+		}
 	}
 }

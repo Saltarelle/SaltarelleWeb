@@ -65,14 +65,6 @@ namespace System.Html {
 			}
 		}
 
-		public static Element GetAnonymousElementByAttribute(Element elt, string attrName, string attrValue) {
-			return default(Element);
-		}
-
-		public static Element GetBindingParent(XmlNode node) {
-			return default(Element);
-		}
-
 		public static Element GetElementById(string elementId) {
 			return default(Element);
 		}
@@ -105,6 +97,10 @@ namespace System.Html {
 		
 		public static Element QuerySelector(string selectors) {
 			return default(Element);
+		}
+
+		public static ElementNodeList QuerySelectorAll(string selectors) {
+			return default(ElementNodeList);
 		}
 	}
 }
