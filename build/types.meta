@@ -636,7 +636,7 @@ EventTarget
 	addInDerivedTypes "void RemoveEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener)"
 	addInDerivedTypes "void RemoveEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
 
-	generateEnum derivedTypes $type$Events attributes "on(.+)"
+	generateEnum derivedTypes $type$Events attributes "on(.+)" valueRegex "on(.+)"
 
 ErrorEvent
 	namespace = System.Html

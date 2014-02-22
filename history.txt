@@ -1,3 +1,4 @@
+Fixed the event enums to not include the "on" prefix in the name (erik-kallen/SaltarelleCompiler#280)
 Re-added XXEvent.initXXEvent methods (#10)
 
 3.0.1

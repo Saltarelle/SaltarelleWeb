@@ -3,7 +3,6 @@
 namespace System.Html.Media.Audio {
 	[Imported, NamedValues]
 	public enum OfflineAudioContextEvents {
-		[ScriptName("oncomplete")]
 		Complete
 	}
 }

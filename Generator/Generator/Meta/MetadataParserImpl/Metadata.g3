@@ -84,6 +84,7 @@ typeOverride : { input.LT(1).Text.Equals("typeOverride", StringComparison.Ordina
 generateEnum : { input.LT(1).Text.Equals("generateEnum", StringComparison.OrdinalIgnoreCase) }? Identifier;
 constants : { input.LT(1).Text.Equals("constants", StringComparison.OrdinalIgnoreCase) }? Identifier;
 attributes : { input.LT(1).Text.Equals("attributes", StringComparison.OrdinalIgnoreCase) }? Identifier;
+valueRegex : { input.LT(1).Text.Equals("valueRegex") }? Identifier;
 interface : { input.LT(1).Text.Equals("interface", StringComparison.OrdinalIgnoreCase) }? Identifier;
 mixin : { input.LT(1).Text.Equals("mixin", StringComparison.OrdinalIgnoreCase) }? Identifier;
 skip : { input.LT(1).Text.Equals("skip", StringComparison.OrdinalIgnoreCase) }? Identifier;
@@ -206,6 +207,7 @@ generateEnumSpecifier returns [GeneratedEnum result]
 	@init {
 		var type = GeneratedEnumSourceType.Constants;
 		bool isFlags = false, generateInDerivedTypes = false;
+		string valueRe = null;
 		var names = new List<Tuple<string, string>>();
 	}
 	: generateEnum
@@ -213,9 +215,10 @@ generateEnumSpecifier returns [GeneratedEnum result]
 	  i=nestedIdentifier
 	  (constants { type = GeneratedEnumSourceType.Constants; } | attributes { type = GeneratedEnumSourceType.Attributes; })
 	  mr=Identifier
+	  (valueRegex vre=Identifier { valueRe = $vre.text; })?
 	  (flags { isFlags = true; })?
 	  (n=renameSpecifier { names.Add(n); } (',' n=renameSpecifier { names.Add(n); })* )?
-	{ var split = Split(i); $result = new GeneratedEnum(split.Item2, split.Item1, type, new Regex("^" + $mr.text + "$"), names, isFlags, generateInDerivedTypes); }
+	{ var split = Split(i); $result = new GeneratedEnum(split.Item2, split.Item1, type, new Regex("^" + $mr.text + "$"), names, isFlags, generateInDerivedTypes, valueRe != null ? new Regex("^" + valueRe + "$") : new Regex("^(.+)$")); }
 	;
 
 staticInstanceSpecifier returns [StaticInstance result]

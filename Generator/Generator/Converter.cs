@@ -1157,7 +1157,7 @@ namespace Generator {
 			}
 		}
 
-		private void GenerateEnum(string enumNamespace, string enumName, GeneratedEnumSourceType type, Regex membersRegex, IReadOnlyDictionary<string, string> names, bool flags, IEnumerable<InterfaceMember> members) {
+		private void GenerateEnum(string enumNamespace, string enumName, GeneratedEnumSourceType type, Regex membersRegex, IReadOnlyDictionary<string, string> names, bool flags, IEnumerable<InterfaceMember> members, Regex valueRegex) {
 			string enumQualifiedName = enumNamespace + "." + enumName;
 			var enumMembers = new List<EnumMemberDeclaration>();
 			foreach (var m in members) {
@@ -1197,8 +1197,18 @@ namespace Generator {
 							string raw = match.Groups[1].Value;
 							string name = GetOrDefaultString(names, raw, raw.MakeCSharpName());
 
+							var value = valueRegex.Match(attribute.Name);
+							if (!match.Success) {
+								_errors.Add("The regular expression used for the values of the enum `" + enumQualifiedName + "' does not match the value " + attribute.Name);
+								return;
+							}
+							if (match.Groups.Count != 2) {
+								_errors.Add("The regular expression used for the values of the enum `" + enumQualifiedName + "' does not have one capture group");
+								return;
+							}
+
 							var enm = new EnumMemberDeclaration { Name = name };
-							AddAttributes(enm.Attributes, ScriptNameAttributeIfRequired(name, attribute.Name));
+							AddAttributes(enm.Attributes, ScriptNameAttributeIfRequired(name, value.Groups[1].Value));
 							enumMembers.Add(enm);
 						}
 					},
@@ -1230,7 +1240,7 @@ namespace Generator {
 					string enumName = ge.EnumName.Replace("$type$", typeName);
 
 					if (members != null) {
-						GenerateEnum(enumNamespace, enumName, ge.SourceType, ge.MembersRegex, ge.Names, ge.Flags, members);
+						GenerateEnum(enumNamespace, enumName, ge.SourceType, ge.MembersRegex, ge.Names, ge.Flags, members, ge.ValueRegex);
 					}
 					else {
 						_errors.Add("Cannot generate an enum from the non-interface type `" + typeName + "'");

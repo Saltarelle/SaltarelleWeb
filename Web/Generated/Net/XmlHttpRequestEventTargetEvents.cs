@@ -3,19 +3,12 @@
 namespace System.Net {
 	[Imported, NamedValues]
 	public enum XmlHttpRequestEventTargetEvents {
-		[ScriptName("onabort")]
 		Abort,
-		[ScriptName("onerror")]
 		Error,
-		[ScriptName("onload")]
 		Load,
-		[ScriptName("onloadend")]
 		Loadend,
-		[ScriptName("onloadstart")]
 		Loadstart,
-		[ScriptName("onprogress")]
 		Progress,
-		[ScriptName("ontimeout")]
 		Timeout
 	}
 }
