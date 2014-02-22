@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using System.Runtime.CompilerServices;
-using System.Xml;
 
 namespace System.Html {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
@@ -53,7 +52,7 @@ namespace System.Html {
 		public void SetData(string format, string data) {
 		}
 
-		public void SetDragImage(XmlElement image, int x, int y) {
+		public void SetDragImage(Element image, int x, int y) {
 		}
 
 		[IntrinsicProperty]

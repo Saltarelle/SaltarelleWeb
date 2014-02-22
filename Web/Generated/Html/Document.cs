@@ -6,13 +6,6 @@ using System.Xml.XPath;
 namespace System.Html {
 	[IgnoreNamespace, Imported, ScriptName("document")]
 	public static partial class Document {
-		[IntrinsicProperty]
-		public static XmlElement ActiveElement {
-			get {
-				return default(XmlElement);
-			}
-		}
-
 		public static void AddEventListener(DocumentBaseEvents type, Action listener) {
 		}
 
@@ -284,14 +277,6 @@ namespace System.Html {
 			return default(XmlDocumentFragment);
 		}
 
-		public static XmlElement CreateElement(string localName) {
-			return default(XmlElement);
-		}
-
-		public static XmlElement CreateElementNS(string @namespace, string qualifiedName) {
-			return default(XmlElement);
-		}
-
 		public static Event CreateEvent(string @interface) {
 			return default(Event);
 		}
@@ -410,13 +395,6 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static XmlElement CurrentScript {
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty]
 		public static WindowInstance DefaultView {
 			get {
 				return default(WindowInstance);
@@ -480,13 +458,6 @@ namespace System.Html {
 		public const ushort DOCUMENT_TYPE_NODE = 10;
 
 		[IntrinsicProperty]
-		public static XmlElement DocumentElement {
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty]
 		public static string DocumentURI {
 			get {
 				return null;
@@ -504,10 +475,6 @@ namespace System.Html {
 
 		[ScriptName("ELEMENT_NODE")]
 		public const ushort ELEMENT_NODE = 1;
-
-		public static XmlElement ElementFromPoint(float x, float y) {
-			return default(XmlElement);
-		}
 
 		[IntrinsicProperty]
 		public static ElementCollection Embeds {
@@ -558,33 +525,14 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static XmlElement FirstElementChild {
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty]
 		public static ElementCollection Forms {
 			get {
 				return default(ElementCollection);
 			}
 		}
 
-		public static XmlElement GetAnonymousElementByAttribute(XmlElement elt, string attrName, string attrValue) {
-			return default(XmlElement);
-		}
-
 		public static XmlNodeList GetAnonymousNodes(XmlElement elt) {
 			return default(XmlNodeList);
-		}
-
-		public static XmlElement GetBindingParent(XmlNode node) {
-			return default(XmlElement);
-		}
-
-		public static XmlElement GetElementById(string elementId) {
-			return default(XmlElement);
 		}
 
 		public static ElementCollection GetElementsByClassName(string classNames) {
@@ -690,13 +638,6 @@ namespace System.Html {
 		public static XmlNode LastChild {
 			get {
 				return default(XmlNode);
-			}
-		}
-
-		[IntrinsicProperty]
-		public static XmlElement LastElementChild {
-			get {
-				return default(XmlElement);
 			}
 		}
 
@@ -1483,13 +1424,6 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static XmlElement ParentElement {
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty]
 		public static XmlNode ParentNode {
 			get {
 				return default(XmlNode);
@@ -1545,10 +1479,6 @@ namespace System.Html {
 
 		public static string QueryCommandValue(string commandId) {
 			return null;
-		}
-
-		public static XmlElement QuerySelector(string selectors) {
-			return default(XmlElement);
 		}
 
 		public static XmlNodeList QuerySelectorAll(string selectors) {

@@ -1,5 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Xml;
 
 namespace System.Html.Media.Graphics.SVG {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
@@ -99,8 +98,8 @@ namespace System.Html.Media.Graphics.SVG {
 			return 0;
 		}
 
-		public XmlElement GetElementById(string elementId) {
-			return default(XmlElement);
+		public Element GetElementById(string elementId) {
+			return default(Element);
 		}
 
 		[IntrinsicProperty]

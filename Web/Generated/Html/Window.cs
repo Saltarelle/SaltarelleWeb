@@ -173,9 +173,9 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static XmlElement FrameElement {
+		public static Element FrameElement {
 			get {
-				return default(XmlElement);
+				return default(Element);
 			}
 		}
 
@@ -195,19 +195,19 @@ namespace System.Html {
 			}
 		}
 
-		public static Style GetComputedStyle(XmlElement elt) {
+		public static Style GetComputedStyle(Element elt) {
 			return default(Style);
 		}
 
-		public static Style GetComputedStyle(XmlElement elt, string pseudoElt) {
+		public static Style GetComputedStyle(Element elt, string pseudoElt) {
 			return default(Style);
 		}
 
-		public static Style GetDefaultComputedStyle(XmlElement elt) {
+		public static Style GetDefaultComputedStyle(Element elt) {
 			return default(Style);
 		}
 
-		public static Style GetDefaultComputedStyle(XmlElement elt, string pseudoElt) {
+		public static Style GetDefaultComputedStyle(Element elt, string pseudoElt) {
 			return default(Style);
 		}
 

@@ -46,8 +46,8 @@ namespace System.Html {
 			}
 		}
 
-		public XmlElement GetElementById(string elementId) {
-			return default(XmlElement);
+		public Element GetElementById(string elementId) {
+			return default(Element);
 		}
 
 		public ElementCollection GetElementsByClassName(string classNames) {

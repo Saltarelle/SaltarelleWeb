@@ -134,7 +134,7 @@ typeMetadata returns [TypeMetadata result]
 	            | n=scriptNameSpecifier { scriptName = n; } NL
 	            | t=tagnameSpecifier { tagNames = t; } NL
 	            | o=typeOverrideSpecifier { typeOverrides = typeOverrides ?? new List<TypeOverride>(); typeOverrides.Add(o); } NL
-	            | a=aliasSpecifier { aliasFor = a; generate = false; } NL
+	            | a=aliasSpecifier { aliasFor = a; } NL
 	            | r=renameSpecifier { renames = renames ?? new List<Tuple<string, string>>(); renames.Add(r); } NL
 	            | v=removeSpecifier { removes = removes ?? new List<string>(); removes.Add(v); } NL
 	            | v=addInDerivedTypesSpecifier { addInDerivedTypes = addInDerivedTypes ?? new List<string>(); addInDerivedTypes.Add(v); } NL
@@ -224,16 +224,18 @@ generateEnumSpecifier returns [GeneratedEnum result]
 staticInstanceSpecifier returns [StaticInstance result]
 	@init {
 		string typeName = null, type = null, instanceName = null;
+		List<string> removes = null;
 		bool isGlobalMethods = false;
 	}
 	: staticInstance i=nestedIdentifier { typeName = i; } NL
 	  (Indent (   c=instanceNameSpecifier { instanceName = c; } NL
 	            | c=typeSpecifier { type = c; } NL
 	            | globalMethods { isGlobalMethods = true; } NL
+	            | v=removeSpecifier { removes = removes ?? new List<string>(); removes.Add(v); } NL
 	            | NL
 	          )
 	  )*
-	{ var split = Split(typeName); $result = new StaticInstance(split.Item2, split.Item1, instanceName, type, isGlobalMethods); }
+	{ var split = Split(typeName); $result = new StaticInstance(split.Item2, split.Item1, instanceName, type, isGlobalMethods, removes); }
 	;
 
 instanceNameSpecifier returns [string result]

@@ -50,6 +50,8 @@
     <Compile Include="Data\Sql\SqlStatementErrorCallback.cs" />
     <Compile Include="Data\Sql\SqlTransactionCallback.cs" />
     <Compile Include="Html\CanvasElement.cs" />
+    <Compile Include="Html\DocumentInstance.cs" />
+    <Compile Include="Html\ShadowRoot.cs" />
     <Compile Include="Html\IWindowTimers.cs" />
     <Compile Include="Html\Location.cs" />
     <Compile Include="Html\WindowInstance.cs" />

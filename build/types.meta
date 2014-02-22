@@ -57,6 +57,7 @@ AsyncScrollEventDetail
 
 Attr
 	namespace = System.Xml
+	typeOverride ownerElement = System.Xml.XmlElement
 	name = XmlAttribute
 
 AudioBuffer
@@ -128,6 +129,7 @@ BlobPropertyBag
 
 ByteString
 	alias = string
+	nogenerate
 
 CallEvent
 	nogenerate
@@ -470,12 +472,25 @@ Document
 	namespace = System.Xml
 	name = DocumentBase
 	typeOverride whatToShow = System.Xml.NodeFilter
+	typeOverride activeElement = System.Xml.XmlElement
+	typeOverride createElement = System.Xml.XmlElement
+	typeOverride createElementNS = System.Xml.XmlElement
+	typeOverride currentScript = System.Xml.XmlElement
+	typeOverride documentElement = System.Xml.XmlElement
+	typeOverride elementFromPoint = System.Xml.XmlElement
+	typeOverride getAnonymousElementByAttribute = System.Xml.XmlElement
+	typeOverride getBindingParent = System.Xml.XmlElement
+	typeOverride getElementById = System.Xml.XmlElement
+	typeOverride querySelector = System.Xml.XmlElement
+	typeOverride elt = System.Xml.XmlElement
 	remove register
 	remove undoManager
 
 DocumentFragment
 	namespace = System.Xml
 	name = XmlDocumentFragment
+	typeOverride getElementById = System.Xml.XmlElement
+	typeOverride querySelector = System.Xml.XmlElement
 
 DocumentType
 	namespace = System.Html
@@ -528,6 +543,7 @@ DOMStringMap
 
 DOMTimeStamp
 	alias = long
+	nogenerate
 
 DOMTokenList
 	namespace = System.Html
@@ -574,6 +590,10 @@ Element
 	name = XmlElement
 	remove undoManager
 	remove undoScope
+	typeOverride firstElementChild = System.Xml.XmlElement
+	typeOverride lastElementChild = System.Xml.XmlElement
+	typeOverride querySelector = System.Xml.XmlElement
+	alias = System.Html.Element
 
 ElementRegistrationOptions
 	nogenerate
@@ -702,6 +722,7 @@ Function
 
 FunctionStringCallback
 	alias = Action<string>
+	nogenerate
 
 GainNode
 	namespace = System.Html.Media.Audio
@@ -846,6 +867,7 @@ HTMLElement
 	namespace = System.Html
 	name = Element
 	remove properties
+	typeOverride base = System.Xml.XmlElement
 
 HTMLEmbedElement
 	namespace = System.Html
@@ -1641,6 +1663,7 @@ Node
 	name = XmlNode
 	typeOverride nodeType = System.Xml.XmlNodeType
 	typeOverride compareDocumentPosition = System.Xml.DocumentPosition
+	typeOverride parentElement = System.Xml.XmlElement
 	remove setUserData
 	generateEnum XmlNodeType constants "(.+)_NODE" rename CDATA_SECTION = CDATA
 	generateEnum DocumentPosition constants "DOCUMENT_POSITION_(.+)"
@@ -1661,6 +1684,8 @@ NodeList
 	name = XmlNodeList
 
 NonDocumentTypeChildNode
+	typeOverride nextElementSibling = System.Xml.XmlElement
+	typeOverride previousElementSibling = System.Xml.XmlElement
 	mixin
 
 Notification
@@ -1779,6 +1804,8 @@ PanningModelType
 	namespace = System.Html.Media.Audio
 
 ParentNode
+	typeOverride firstElementChild = System.Xml.XmlElement
+	typeOverride lastElementChild = System.Xml.XmlElement
 	mixin
 
 PCImplIceConnectionState
@@ -2283,6 +2310,7 @@ SVGDocument
 
 SVGElement
 	namespace = System.Html.Media.Graphics.SVG
+	typeOverride base = System.Xml.XmlElement
 
 SVGEllipseElement
 	namespace = System.Html.Media.Graphics.SVG
@@ -2630,6 +2658,7 @@ SVGZoomEvent
 
 systemMessageCallback
 	alias = System.Action<object>
+	nogenerate
 
 Telephony
 	nogenerate
@@ -3016,6 +3045,19 @@ XULElement
 staticInstance System.Html.Document
 	instanceName = document
 	type = HTMLDocument
+	remove ActiveElement
+	remove CreateElement
+	remove CreateElementNS
+	remove CurrentScript
+	remove DocumentElement
+	remove ElementFromPoint
+	remove FirstElementChild
+	remove GetAnonymousElementByAttribute
+	remove GetBindingParent
+	remove GetElementById
+	remove LastElementChild
+	remove ParentElement
+	remove QuerySelector
 
 staticInstance System.Html.Window
 	instanceName = window

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using System.Xml;
 
 namespace System.Html {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("HTMLCollection")]
@@ -9,26 +8,26 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public XmlElement this[string name] {
+		public Element this[string name] {
 			get {
-				return default(XmlElement);
+				return default(Element);
 			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public XmlElement this[uint index] {
+		public Element this[uint index] {
 			get {
-				return default(XmlElement);
+				return default(Element);
 			}
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<XmlElement> GetEnumerator() {
+		public IEnumerator<Element> GetEnumerator() {
 			return null;
 		}
 
-		public XmlElement Item(uint index) {
-			return default(XmlElement);
+		public Element Item(uint index) {
+			return default(Element);
 		}
 
 		[IntrinsicProperty]
@@ -38,8 +37,8 @@ namespace System.Html {
 			}
 		}
 
-		public XmlElement NamedItem(string name) {
-			return default(XmlElement);
+		public Element NamedItem(string name) {
+			return default(Element);
 		}
 	}
 }

@@ -8,14 +8,14 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public TypeOption<XmlNodeList, XmlElement> this[string name] {
+		public TypeOption<XmlNodeList, Element> this[string name] {
 			get {
-				return default(TypeOption<XmlNodeList, XmlElement>);
+				return default(TypeOption<XmlNodeList, Element>);
 			}
 		}
 
-		public TypeOption<XmlNodeList, XmlElement> NamedItem(string name) {
-			return default(TypeOption<XmlNodeList, XmlElement>);
+		public TypeOption<XmlNodeList, Element> NamedItem(string name) {
+			return default(TypeOption<XmlNodeList, Element>);
 		}
 	}
 }

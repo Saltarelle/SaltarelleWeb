@@ -200,9 +200,9 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public XmlElement OffsetParent {
+		public Element OffsetParent {
 			get {
-				return default(XmlElement);
+				return default(Element);
 			}
 		}
 

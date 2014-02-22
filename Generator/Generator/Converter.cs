@@ -381,6 +381,7 @@ namespace Generator {
 		}
 
 		private static AstType MakeType(string fullName, IEnumerable<AstType> typeArguments = null) {
+			typeArguments = typeArguments != null ? typeArguments.Select(a => a.Clone()) : null;
 			var parts = fullName.Split('.');
 			AstType result = new SimpleType(parts[0], (parts.Length == 1 ? typeArguments : null) ?? new AstType[0]);
 			for (int i = 1; i < parts.Length; i++)
@@ -935,7 +936,7 @@ namespace Generator {
 		private void AddMembersFromBaseTypes(string currentTypeName, IEnumerable<string> toAdd, IList<EntityDeclaration> members) {
 			foreach (var s in toAdd) {
 				var ast = new CSharpParser().ParseTypeMembers(s.Replace("$type$", currentTypeName)).Single();
-				ast.Modifiers |= Modifiers.Public;;
+				ast.Modifiers |= Modifiers.Public;
 				if (ast is MethodDeclaration) {
 					((MethodDeclaration)ast).Body = GenerateBody(((MethodDeclaration)ast).ReturnType);
 				}
@@ -992,8 +993,11 @@ namespace Generator {
 									}
 									if (baseMeta.TypeKind == TypeKind.Mixin || baseMeta.TypeKind == TypeKind.Skip)
 										return null;
+									AstType alias = baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName);
+									if (b == @interface.Base)
+										alias = GetOrDefaultAstType(typeOverrides, "base", alias);
 
-									return baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName);
+									return alias;
 								}
 								else
 									return null;
@@ -1010,7 +1014,7 @@ namespace Generator {
 							Modifiers = Modifiers.Public | Modifiers.Partial,
 							Name = meta.CSharpName,
 						};
-						resultType.BaseTypes.AddRange(baseTypes);
+						resultType.BaseTypes.AddRange(baseTypes.Select(t => t.Clone()));
 						resultType.Members.AddRange(members.OrderBy(MemberOrderer));
 						AddAttributes(resultType.Attributes, attributes);
 						result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
@@ -1345,6 +1349,7 @@ namespace Generator {
 					ClassType = ClassType.Class,
 					Name = meta.ClassName,
 				};
+				members.RemoveAll(m => meta.Removes.Contains(m.Name));
 				c.Members.AddRange(members.OrderBy(MemberOrderer));
 				if (meta.GlobalMethods)
 					AddAttributes(c.Attributes, new[] { ImportedAttribute(false), GlobalMethodsAttribute });

@@ -1,5 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Xml;
 
 namespace System.Html.Media.Graphics {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
@@ -61,7 +60,7 @@ namespace System.Html.Media.Graphics {
 			return default(CanvasGradient);
 		}
 
-		public bool DrawCustomFocusRing(XmlElement element) {
+		public bool DrawCustomFocusRing(Element element) {
 			return false;
 		}
 
@@ -74,7 +73,7 @@ namespace System.Html.Media.Graphics {
 		public void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) {
 		}
 
-		public void DrawSystemFocusRing(XmlElement element) {
+		public void DrawSystemFocusRing(Element element) {
 		}
 
 		public void Fill() {
