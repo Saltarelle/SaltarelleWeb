@@ -59,15 +59,6 @@ namespace System.Html.Media {
 		}
 
 		[IntrinsicProperty]
-		public double Width {
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[IntrinsicProperty]
 		public double ViewportAnchorX {
 			get {
 				return 0;
@@ -78,6 +69,15 @@ namespace System.Html.Media {
 
 		[IntrinsicProperty]
 		public double ViewportAnchorY {
+			get {
+				return 0;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public double Width {
 			get {
 				return 0;
 			}

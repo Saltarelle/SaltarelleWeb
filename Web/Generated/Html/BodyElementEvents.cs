@@ -169,11 +169,11 @@ namespace System.Html {
 		Touchstart,
 		[ScriptName("onunload")]
 		Unload,
+		[ScriptName("onvolumechange")]
+		Volumechange,
 		[ScriptName("onwaiting")]
 		Waiting,
 		[ScriptName("onwheel")]
-		Wheel,
-		[ScriptName("onvolumechange")]
-		Volumechange
+		Wheel
 	}
 }

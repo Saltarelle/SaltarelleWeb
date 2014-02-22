@@ -1428,6 +1428,15 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onvolumechange")]
+		public static HtmlEventHandler OnVolumechange {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onwaiting")]
 		public static HtmlEventHandler OnWaiting {
 			get {
@@ -1439,15 +1448,6 @@ namespace System.Html {
 
 		[IntrinsicProperty, ScriptName("onwheel")]
 		public static HtmlEventHandler OnWheel {
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
-		}
-
-		[IntrinsicProperty, ScriptName("onvolumechange")]
-		public static HtmlEventHandler OnVolumechange {
 			get {
 				return default(HtmlEventHandler);
 			}

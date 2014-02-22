@@ -148,18 +148,18 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public string Width {
+		public uint Vspace {
 			get {
-				return null;
+				return 0;
 			}
 			set {
 			}
 		}
 
 		[IntrinsicProperty]
-		public uint Vspace {
+		public string Width {
 			get {
-				return 0;
+				return null;
 			}
 			set {
 			}

@@ -173,9 +173,9 @@ namespace System.Html {
 		Unload,
 		[ScriptName("onuserproximity")]
 		Userproximity,
-		[ScriptName("onwaiting")]
-		Waiting,
 		[ScriptName("onvolumechange")]
-		Volumechange
+		Volumechange,
+		[ScriptName("onwaiting")]
+		Waiting
 	}
 }

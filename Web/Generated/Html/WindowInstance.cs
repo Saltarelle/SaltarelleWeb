@@ -1037,8 +1037,8 @@ namespace System.Html {
 			}
 		}
 
-		[IntrinsicProperty, ScriptName("onwaiting")]
-		public HtmlEventHandler OnWaiting {
+		[IntrinsicProperty, ScriptName("onvolumechange")]
+		public HtmlEventHandler OnVolumechange {
 			get {
 				return default(HtmlEventHandler);
 			}
@@ -1046,8 +1046,8 @@ namespace System.Html {
 			}
 		}
 
-		[IntrinsicProperty, ScriptName("onvolumechange")]
-		public HtmlEventHandler OnVolumechange {
+		[IntrinsicProperty, ScriptName("onwaiting")]
+		public HtmlEventHandler OnWaiting {
 			get {
 				return default(HtmlEventHandler);
 			}

@@ -510,6 +510,15 @@ namespace System.Html {
 		[ScriptName("DOM_VK_V")]
 		public const uint DOM_VK_V = 86;
 
+		[ScriptName("DOM_VK_VOLUME_DOWN")]
+		public const uint DOM_VK_VOLUME_DOWN = 182;
+
+		[ScriptName("DOM_VK_VOLUME_MUTE")]
+		public const uint DOM_VK_VOLUME_MUTE = 181;
+
+		[ScriptName("DOM_VK_VOLUME_UP")]
+		public const uint DOM_VK_VOLUME_UP = 183;
+
 		[ScriptName("DOM_VK_W")]
 		public const uint DOM_VK_W = 87;
 
@@ -581,15 +590,6 @@ namespace System.Html {
 
 		[ScriptName("DOM_VK_WIN_OEM_WSCTRL")]
 		public const uint DOM_VK_WIN_OEM_WSCTRL = 238;
-
-		[ScriptName("DOM_VK_VOLUME_DOWN")]
-		public const uint DOM_VK_VOLUME_DOWN = 182;
-
-		[ScriptName("DOM_VK_VOLUME_MUTE")]
-		public const uint DOM_VK_VOLUME_MUTE = 181;
-
-		[ScriptName("DOM_VK_VOLUME_UP")]
-		public const uint DOM_VK_VOLUME_UP = 183;
 
 		[ScriptName("DOM_VK_X")]
 		public const uint DOM_VK_X = 88;

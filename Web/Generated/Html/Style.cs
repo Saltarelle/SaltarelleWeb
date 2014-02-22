@@ -1878,6 +1878,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string Visibility {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string WhiteSpace {
 			get {
 				return null;
@@ -1897,15 +1906,6 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Width {
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[IntrinsicProperty]
-		public string Visibility {
 			get {
 				return null;
 			}

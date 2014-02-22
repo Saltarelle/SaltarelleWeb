@@ -145,11 +145,11 @@ namespace System.Html {
 		Touchmove,
 		[ScriptName("ontouchstart")]
 		Touchstart,
+		[ScriptName("onvolumechange")]
+		Volumechange,
 		[ScriptName("onwaiting")]
 		Waiting,
 		[ScriptName("onwheel")]
-		Wheel,
-		[ScriptName("onvolumechange")]
-		Volumechange
+		Wheel
 	}
 }

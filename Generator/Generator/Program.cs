@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Antlr.Runtime;
 using Generator.AstNodes;
@@ -57,6 +59,8 @@ namespace Generator {
 		}
 
 		static int Main(string[] args) {
+			Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
 			try {
 				var actualArgs = new List<string>();
 				foreach (var arg in args) {

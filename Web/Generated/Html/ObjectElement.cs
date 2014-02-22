@@ -254,6 +254,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public uint Vspace {
+			get {
+				return 0;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Width {
 			get {
 				return null;
@@ -266,15 +275,6 @@ namespace System.Html {
 		public bool WillValidate {
 			get {
 				return false;
-			}
-		}
-
-		[IntrinsicProperty]
-		public uint Vspace {
-			get {
-				return 0;
-			}
-			set {
 			}
 		}
 	}

@@ -205,7 +205,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Width {
+		public uint Vspace {
 			get {
 				return 0;
 			}
@@ -214,7 +214,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Vspace {
+		public uint Width {
 			get {
 				return 0;
 			}
