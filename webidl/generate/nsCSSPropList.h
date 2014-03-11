@@ -39,11 +39,11 @@
   whether the use is for internal use such as eCSSProperty_* or
   nsRuleData::ValueFor* or external use such as exposing DOM properties.
 
+  -. 'flags', a bitfield containing CSS_PROPERTY_* flags.
+
   -. 'pref' is the name of a pref that controls whether the property
   is enabled.  The property is enabled if 'pref' is an empty string,
   or if the boolean property whose name is 'pref' is set to true.
-
-  -. 'flags', a bitfield containing CSS_PROPERTY_* flags.
 
   -. 'parsevariant', to be passed to ParseVariant in the parser.
 
@@ -784,7 +784,7 @@ CSS_PROP_BORDER(
         CSS_PROPERTY_APPLIES_TO_FIRST_LETTER |
         CSS_PROPERTY_START_IMAGE_LOADS,
     "",
-    VARIANT_HUO,
+    VARIANT_IMAGE | VARIANT_INHERIT,
     nullptr,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
@@ -1380,15 +1380,15 @@ CSS_PROP_BORDER(
     offsetof(nsStyleBorder, mBoxShadow),
     eStyleAnimType_Shadow)
 CSS_PROP_POSITION(
-    -moz-box-sizing,
+    box-sizing,
     box_sizing,
-    CSS_PROP_DOMPROP_PREFIXED(BoxSizing),
+    BoxSizing,
     CSS_PROPERTY_PARSE_VALUE,
     "",
     VARIANT_HK,
     kBoxSizingKTable,
     CSS_PROP_NO_OFFSET,
-    eStyleAnimType_None) // XXX bug 3935
+    eStyleAnimType_None)
 CSS_PROP_TABLEBORDER(
     caption-side,
     caption_side,
@@ -1534,6 +1534,18 @@ CSS_PROP_CONTENT(
     kContentKTable,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
+#ifndef CSS_PROP_LIST_EXCLUDE_INTERNAL
+CSS_PROP_TEXT(
+    -moz-control-character-visibility,
+    _moz_control_character_visibility,
+    CSS_PROP_DOMPROP_PREFIXED(ControlCharacterVisibility),
+    CSS_PROPERTY_PARSE_VALUE,
+    "",
+    VARIANT_HK,
+    kControlCharacterVisibilityKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+#endif
 CSS_PROP_CONTENT(
     counter-increment,
     counter_increment,
@@ -2377,7 +2389,8 @@ CSS_PROP_DISPLAY(
     mix-blend-mode,
     mix_blend_mode,
     MixBlendMode,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "layout.css.mix-blend-mode.enabled",
     VARIANT_HK,
     kBlendModeKTable,
@@ -2467,6 +2480,18 @@ CSS_PROP_SHORTHAND(
     Overflow,
     CSS_PROPERTY_PARSE_FUNCTION,
     "")
+CSS_PROP_DISPLAY(
+    overflow-clip-box,
+    overflow_clip_box,
+    OverflowClipBox,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_ALWAYS_ENABLED_IN_UA_SHEETS |
+        CSS_PROPERTY_APPLIES_TO_PLACEHOLDER,
+    "layout.css.overflow-clip-box.enabled",
+    VARIANT_HK,
+    kOverflowClipBoxKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
 CSS_PROP_DISPLAY(
     overflow-x,
     overflow_x,
@@ -2747,7 +2772,9 @@ CSS_PROP_DISPLAY(
     position,
     position,
     Position,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        // For position: sticky
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_HK,
     kPositionKTable,
@@ -2962,7 +2989,8 @@ CSS_PROP_DISPLAY(
     transform,
     Transform,
     CSS_PROPERTY_PARSE_FUNCTION |
-        CSS_PROPERTY_GETCS_NEEDS_LAYOUT_FLUSH,
+        CSS_PROPERTY_GETCS_NEEDS_LAYOUT_FLUSH |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     0,
     nullptr,
@@ -2996,7 +3024,8 @@ CSS_PROP_DISPLAY(
     perspective,
     perspective,
     Perspective,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_NONE | VARIANT_INHERIT | VARIANT_LENGTH | VARIANT_POSITIVE_DIMENSION,
     nullptr,
@@ -3006,7 +3035,8 @@ CSS_PROP_DISPLAY(
     transform-style,
     transform_style,
     TransformStyle,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_HK,
     kTransformStyleKTable,
@@ -3035,6 +3065,17 @@ CSS_PROP_POSITION(
     nullptr,
     offsetof(nsStylePosition, mOffset),
     eStyleAnimType_Sides_Top)
+ CSS_PROP_DISPLAY(
+    touch-action,
+    touch_action,
+    TouchAction,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_VALUE_PARSER_FUNCTION,
+    "layout.css.touch_action.enabled",
+    VARIANT_HK,
+    kTouchActionKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
 CSS_PROP_SHORTHAND(
     transition,
     transition,
@@ -3266,7 +3307,8 @@ CSS_PROP_POSITION(
     z-index,
     z_index,
     ZIndex,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_AHI,
     nullptr,
@@ -3356,9 +3398,10 @@ CSS_PROP_FONT(
     // property when mUnsafeRulesEnabled is set.
     CSS_PROPERTY_PARSE_VALUE,
     "",
-    // script-level can take Integer or Number values, but only Integer
+    // script-level can take Auto, Integer and Number values, but only Auto
+    // ("increment if parent is not in displaystyle") and Integer
     // ("relative") values can be specified in a style sheet.
-    VARIANT_HI,
+    VARIANT_AHI,
     nullptr,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
@@ -3394,6 +3437,18 @@ CSS_PROP_FONT(
     kMathVariantKTable,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
+CSS_PROP_FONT(
+    -moz-math-display,
+    math_display,
+    MathDisplay,
+    // NOTE: CSSParserImpl::ParseSingleValueProperty only accepts this
+    // property when mUnsafeRulesEnabled is set.
+    CSS_PROPERTY_PARSE_VALUE,
+    "",
+    VARIANT_HK,
+    kMathDisplayKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
 #endif // !defined(CSS_PROP_LIST_EXCLUDE_INTERNAL)
 #endif // !defined(CSS_PROP_LIST_ONLY_COMPONENTS_OF_ALL_SHORTHAND)
 
@@ -3401,7 +3456,8 @@ CSS_PROP_SVGRESET(
     clip-path,
     clip_path,
     ClipPath,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_HUO,
     nullptr,
@@ -3481,7 +3537,8 @@ CSS_PROP_SVGRESET(
     filter,
     filter,
     Filter,
-    CSS_PROPERTY_PARSE_FUNCTION,
+    CSS_PROPERTY_PARSE_FUNCTION |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     0,
     nullptr,
@@ -3567,7 +3624,8 @@ CSS_PROP_SVGRESET(
     mask,
     mask,
     Mask,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_HUO,
     nullptr,
@@ -3727,6 +3785,19 @@ CSS_PROP_SVGRESET(
     kVectorEffectKTable,
     offsetof(nsStyleSVGReset, mVectorEffect),
     eStyleAnimType_EnumU8)
+
+CSS_PROP_DISPLAY(
+    will-change,
+    will_change,
+    WillChange,
+    CSS_PROPERTY_PARSE_FUNCTION |
+        CSS_PROPERTY_VALUE_LIST_USES_COMMAS |
+        CSS_PROPERTY_ALWAYS_ENABLED_IN_CHROME_OR_CERTIFIED_APP,
+    "layout.css.will-change.enabled",
+    0,
+    nullptr,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
 
 // The shorthands below are essentially aliases, but they require different
 // parsing rules, and are therefore implemented as shorthands.

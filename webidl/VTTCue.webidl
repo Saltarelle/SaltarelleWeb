@@ -35,10 +35,13 @@ interface VTTCue : EventTarget {
   attribute DOMString regionId;
   attribute DirectionSetting vertical;
   attribute boolean snapToLines;
-  // XXXhumph: https://www.w3.org/Bugs/Public/show_bug.cgi?id=20651
-  // attribute (long or AutoKeyword) line;
+  attribute (long or AutoKeyword) line;
+  [SetterThrows]
+  attribute AlignSetting lineAlign;
   [SetterThrows]
   attribute long position;
+  [SetterThrows]
+  attribute AlignSetting positionAlign;
   [SetterThrows]
   attribute long size;
   attribute AlignSetting align;
@@ -48,4 +51,12 @@ interface VTTCue : EventTarget {
   attribute EventHandler onenter;
 
   attribute EventHandler onexit;
+};
+
+// Mozilla extensions.
+partial interface VTTCue {
+  [ChromeOnly]
+  attribute HTMLDivElement? displayState;
+  [ChromeOnly]
+  readonly attribute boolean hasBeenReset;
 };

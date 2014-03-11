@@ -11,13 +11,12 @@
  * http://www.w3.org/TR/vibration/#vibration-interface
  * http://www.w3.org/2012/sysapps/runtime/#extension-to-the-navigator-interface-1
  * https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#navigator-interface-extension
+ * http://www.w3.org/TR/beacon/#sec-beacon-method
  *
  * © Copyright 2004-2011 Apple Computer, Inc., Mozilla Foundation, and
  * Opera Software ASA. You are granted a license to use, reproduce
  * and create derivative works of this document.
  */
-
-interface MozWakeLock;
 
 // http://www.whatwg.org/specs/web-apps/current-work/#the-navigator-object
 [HeaderFile="Navigator.h", NeedNewResolve]
@@ -128,6 +127,12 @@ partial interface Navigator {
     boolean vibrate(sequence<unsigned long> pattern);
 };
 
+// http://www.w3.org/TR/pointerevents/#extensions-to-the-navigator-interface
+partial interface Navigator {
+    [Pref="dom.w3c_pointer_events.enabled"]
+    readonly attribute long maxTouchPoints;
+};
+
 // Mozilla-specific extensions
 
 callback interface MozIdleObserver {
@@ -193,13 +198,13 @@ partial interface Navigator {
    * One topic can be locked multiple times; it is considered released only when
    * all locks on the topic have been released.
    *
-   * The returned nsIDOMMozWakeLock object is a token of the lock.  You can
+   * The returned MozWakeLock object is a token of the lock.  You can
    * unlock the lock via the object's |unlock| method.  The lock is released
    * automatically when its associated window is unloaded.
    *
    * @param aTopic resource name
    */
-  [Throws, Func="Navigator::HasWakeLockSupport"]
+  [Throws, Pref="dom.wakelock.enabled", Func="Navigator::HasWakeLockSupport"]
   MozWakeLock requestWakeLock(DOMString aTopic);
 };
 
@@ -231,7 +236,6 @@ partial interface Navigator {
 };
 
 // nsIDOMMozNavigatorNetwork
-interface MozConnection;
 partial interface Navigator {
   [Pref="dom.network.enabled"]
   readonly attribute MozConnection? mozConnection;
@@ -337,6 +341,16 @@ partial interface Navigator {
   [Throws, ChromeOnly]
   void mozGetUserMediaDevices(MediaStreamConstraintsInternal constraints,
                               MozGetUserMediaDevicesSuccessCallback onsuccess,
-                              NavigatorUserMediaErrorCallback onerror);
+                              NavigatorUserMediaErrorCallback onerror,
+                              // The originating innerWindowID is needed to
+                              // avoid calling the callbacks if the window has
+                              // navigated away. It is optional only as legacy.
+                              optional unsigned long long innerWindowID = 0);
 };
 #endif // MOZ_MEDIA_NAVIGATOR
+
+partial interface Navigator {
+  [Throws, Pref="beacon.enabled"]
+  boolean sendBeacon(DOMString url,
+                     optional (ArrayBufferView or Blob or DOMString or FormData)? data = null);
+};

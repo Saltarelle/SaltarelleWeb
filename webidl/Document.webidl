@@ -45,7 +45,7 @@ interface Document : Node {
   readonly attribute Element? documentElement;
   [Pure]
   HTMLCollection getElementsByTagName(DOMString localName);
-  [Pure]
+  [Pure, Throws]
   HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
   [Pure]
   HTMLCollection getElementsByClassName(DOMString classNames);
@@ -240,7 +240,15 @@ partial interface Document {
 //http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html#dfn-document-register
 partial interface Document {
     [Throws, Pref="dom.webcomponents.enabled"]
-    object register(DOMString name, optional ElementRegistrationOptions options);
+    object registerElement(DOMString name, optional ElementRegistrationOptions options);
+};
+
+//http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html#dfn-document-register
+partial interface Document {
+    [NewObject, Throws]
+    Element createElement(DOMString localName, DOMString typeExtension);
+    [NewObject, Throws]
+    Element createElementNS(DOMString? namespace, DOMString qualifiedName, DOMString typeExtension);
 };
 
 // http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/PageVisibility/Overview.html#sec-document-interface
@@ -341,6 +349,8 @@ partial interface Document {
   void obsoleteSheet(DOMString sheetURI);
 
   [ChromeOnly] readonly attribute nsIDocShell? docShell;
+
+  [ChromeOnly] readonly attribute DOMString contentLanguage;
 };
 
 // Extension to give chrome JS the ability to determine when a document was

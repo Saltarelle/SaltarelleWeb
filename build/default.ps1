@@ -245,7 +245,7 @@ function Generate-CSS2Properties($root, $workDir, $targetFile) {
 	$content | Out-File "$workDir\CSS2Properties.pp" -Encoding UTF8
 	$out = New-Object System.Text.StringBuilder
 	$content -split "`n" | % {
-		$match = Select-String -Pattern "^\s*\[\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*\]\s*,\s*$" -InputObject $_
+		$match = Select-String -Pattern "^\s*\[\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*\]\s*,\s*$" -InputObject $_
 		if ($match -ne $null) {
 			$extendedAttrs = @("Throws", "TreatNullAs=EmptyString")
 			$prop = $match.Matches[0].Groups[1].Value

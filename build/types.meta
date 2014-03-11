@@ -155,6 +155,9 @@ CameraCapabilities
 CameraClosedCallback
 	nogenerate
 
+CameraConfiguration
+	nogenerate
+
 CameraControl
 	nogenerate
 
@@ -164,25 +167,37 @@ CameraErrorCallback
 CameraManager
 	nogenerate
 
+CameraMode
+	nogenerate
+
 CameraPictureOptions
 	nogenerate
 
 CameraPreviewStateChange
 	nogenerate
 
-CameraPreviewStreamCallback
+CameraRecorderOptions
 	nogenerate
 
 CameraRecorderStateChange
 	nogenerate
 
+CameraRegion
+	nogenerate
+
 CameraReleaseCallback
 	nogenerate
 
-CameraSelector
+CameraSetConfigurationCallback
 	nogenerate
 
 CameraShutterCallback
+	nogenerate
+
+CameraSize
+	nogenerate
+
+CameraStartRecordingOptions
 	nogenerate
 
 CameraStartRecordingCallback
@@ -272,6 +287,33 @@ CompositionEvent
 	namespace = System.Html
 
 ConnStatusDict
+	nogenerate
+
+Console
+	nogenerate
+
+ConsoleEvent
+	nogenerate
+
+ConsoleProfileEvent
+	nogenerate
+
+ConsoleStackEntry
+	nogenerate
+
+ConsoleTimerStart
+	nogenerate
+
+ConsoleTimerEnd
+	nogenerate
+
+ConsoleTimerError
+	nogenerate
+
+ConsoleCounter
+	nogenerate
+
+ConsoleCounterError
 	nogenerate
 
 ContactAddress
@@ -456,6 +498,9 @@ DeviceStorageEnumerationParameters
 DirectionSetting
 	namespace = System.Html.Media
 
+Directory
+	nogenerate
+
 DistanceModelType
 	namespace = System.Html.Media.Audio
 
@@ -500,6 +545,9 @@ DocumentFragment
 DocumentType
 	namespace = System.Html
 
+DOMCLIRStatus
+	nogenerate
+
 DOMCursor
 	nogenerate
 
@@ -515,10 +563,16 @@ DOMError
 DOMException
 	nogenerate
 
+DOMFileMetadataParameters
+	nogenerate
+
 DOMImplementation
 	namespace = System.Html
 
 DOMMMIError
+	nogenerate
+
+DOMMMIResult
 	nogenerate
 
 DOMParser
@@ -575,6 +629,9 @@ DownloadEvent
 DownloadEventInit
 	nogenerate
 
+DownloadState
+	nogenerate
+
 DragEvent
 	namespace = System.Html
 
@@ -604,13 +661,13 @@ Element
 	alias = System.Html.Element
 
 ElementRegistrationOptions
-	nogenerate
+	namespace = System.Html.WebComponents
 
 ElementReplaceEvent
-	nogenerate
+	namespace = System.Html.WebComponents
 
 ElementReplaceEventInit
-	nogenerate
+	namespace = System.Html.WebComponents
 
 EndingTypes
 	namespace = System.IO
@@ -786,6 +843,9 @@ HashChangeEventInit
 
 History
 	namespace = System.Html
+
+HitRegionOptions
+	namespace = System.Html.Media.Graphics
 
 HTMLAnchorElement
 	namespace = System.Html
@@ -1298,11 +1358,20 @@ KeyEvent
 LegacyQueryInterface
 	skip
 
+LifecycleAttributeChangedCallback
+	namespace = System.Html.WebComponents
+
+LifecycleAttachedCallback
+	namespace = System.Html.WebComponents
+
 LifecycleCallbacks
-	nogenerate
+	namespace = System.Html.WebComponents
 
 LifecycleCreatedCallback
-	nogenerate
+	namespace = System.Html.WebComponents
+
+LifecycleDetachedCallback
+	namespace = System.Html.WebComponents
 
 LineEndings
 	mixin
@@ -1420,6 +1489,9 @@ MimeTypeArray
 MmsAttachment
 	nogenerate
 
+MmsDeliveryInfo
+	nogenerate
+
 MmsParameters
 	nogenerate
 
@@ -1446,6 +1518,9 @@ MozApplicationEventInit
 	nogenerate
 
 MozBoxObject
+	nogenerate
+
+MozCallBarringOption
 	nogenerate
 
 MozCanvasPrintState
@@ -1670,6 +1745,18 @@ NavigatorUserMediaSuccessCallback
 NavigatorUserMediaErrorCallback
 	nogenerate
 
+NetworkCommandOptions
+	nogenerate
+
+NetworkResultOptions
+	nogenerate
+
+NetworkStatsAlarmOptions
+	nogenerate
+
+NetworkStatsGetOptions
+	nogenerate
+
 Node
 	namespace = System.Xml
 	name = XmlNode
@@ -1861,9 +1948,6 @@ PeriodicWave
 PhoneNumberService
 	nogenerate
 
-Pkcs11
-	nogenerate
-
 Plugin
 	namespace = System.Html
 
@@ -2015,11 +2099,11 @@ RTCIceGatheringState
 RTCIceServer
 	namespace = System.Net.WebRTC
 
+RTCIdentityAssertion
+	namespace = System.Net.WebRTC
+
 RTCInboundRTPStreamStats
 	namespace = System.Net.WebRTC
-	
-RTCLogCallback
-	nogenerate
 
 RTCMediaStreamTrackStats
 	namespace = System.Net.WebRTC
@@ -2361,6 +2445,9 @@ SVGFEDisplacementMapElement
 	generateEnum SVGFEDisplacementMapChannelSelector constants "SVG_CHANNEL_(.+)"
 
 SVGFEDistantLightElement
+	namespace = System.Html.Media.Graphics.SVG
+
+SVGFEDropShadowElement
 	namespace = System.Html.Media.Graphics.SVG
 
 SVGFEFloodElement
@@ -2827,6 +2914,12 @@ WebGLBuffer
 WebGLContextAttributes
 	namespace = System.Html.Media.Graphics.WebGL
 
+WebGLExtensionColorBufferFloat
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionColorBufferHalfFloat
+	namespace = System.Html.Media.Graphics.WebGL
+
 WebGLExtensionCompressedTextureATC
 	namespace = System.Html.Media.Graphics.WebGL
 
@@ -2839,6 +2932,9 @@ WebGLExtensionCompressedTextureS3TC
 WebGLExtensionDebugRendererInfo
 	namespace = System.Html.Media.Graphics.WebGL
 
+WebGLExtensionDebugShaders
+	namespace = System.Html.Media.Graphics.WebGL
+
 WebGLExtensionDepthTexture
 	namespace = System.Html.Media.Graphics.WebGL
 
@@ -2846,6 +2942,9 @@ WebGLExtensionDrawBuffers
 	namespace = System.Html.Media.Graphics.WebGL
 
 WebGLExtensionElementIndexUint
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionFragDepth
 	namespace = System.Html.Media.Graphics.WebGL
 
 WebGLExtensionInstancedArrays
@@ -2867,6 +2966,12 @@ WebGLExtensionTextureFloat
 	namespace = System.Html.Media.Graphics.WebGL
 
 WebGLExtensionTextureFloatLinear
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionTextureHalfFloat
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionTextureHalfFloatLinear
 	namespace = System.Html.Media.Graphics.WebGL
 
 WebGLExtensionVertexArray
@@ -2904,7 +3009,16 @@ WebGLVertexArray
 
 WebrtcGlobalInformation
 	nogenerate
-	
+
+WebrtcGlobalLoggingCallback
+	nogenerate
+
+WebrtcGlobalStatisticsCallback
+	nogenerate
+
+WebrtcGlobalStatisticsReport
+	nogenerate
+
 WebSocket
 	namespace = System.Net.WebSockets
 	typeOverride readyState = System.Net.WebSockets.ReadyState

@@ -1,6 +1,3 @@
-interface MozWakeLock;
-
-
 [HeaderFile="Navigator.h", NeedNewResolve]
 interface Navigator {
 
@@ -110,6 +107,12 @@ partial interface Navigator {
 };
 
 
+partial interface Navigator {
+    [Pref="dom.w3c_pointer_events.enabled"]
+    readonly attribute long maxTouchPoints;
+};
+
+
 
 callback interface MozIdleObserver {
 
@@ -143,7 +146,7 @@ partial interface Navigator {
   void addIdleObserver(MozIdleObserver aIdleObserver);
   [Throws, Func="Navigator::HasIdleSupport"]
   void removeIdleObserver(MozIdleObserver aIdleObserver);
-  [Throws, Func="Navigator::HasWakeLockSupport"]
+  [Throws, Pref="dom.wakelock.enabled", Func="Navigator::HasWakeLockSupport"]
   MozWakeLock requestWakeLock(DOMString aTopic);
 };
 
@@ -175,7 +178,6 @@ partial interface Navigator {
 };
 
 
-interface MozConnection;
 partial interface Navigator {
   [Pref="dom.network.enabled"]
   readonly attribute MozConnection? mozConnection;
@@ -238,5 +240,16 @@ partial interface Navigator {
   [Throws, ChromeOnly]
   void mozGetUserMediaDevices(MediaStreamConstraintsInternal constraints,
                               MozGetUserMediaDevicesSuccessCallback onsuccess,
-                              NavigatorUserMediaErrorCallback onerror);
+                              NavigatorUserMediaErrorCallback onerror,
+
+
+
+                              optional unsigned long long innerWindowID = 0);
+};
+
+
+partial interface Navigator {
+  [Throws, Pref="beacon.enabled"]
+  boolean sendBeacon(DOMString url,
+                     optional (ArrayBufferView or Blob or DOMString or FormData)? data = null);
 };

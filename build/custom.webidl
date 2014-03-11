@@ -71,12 +71,6 @@ interface ApplicationCache : EventTarget {
 	attribute EventHandler onobsolete;
 };
 
-interface DOMStringList {
-  readonly attribute unsigned long length;
-  getter DOMString? item(unsigned long index);
-  boolean contains(DOMString string);
-};
-
 [NoInterfaceObject]
 interface LineEndings {
 	DOMString toNativeLineEndings(DOMString string);
@@ -99,22 +93,6 @@ interface File : Blob {
 // Drag-drop
 // http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html
 ////////////////////////////////////////////////////////////////////////////////////////////
-
-interface DataTransfer {
-           attribute DropEffect dropEffect;
-           attribute AllowedDropEffect effectAllowed;
-
-  readonly attribute DataTransferItemList items;
-
-  void setDragImage(Element image, long x, long y);
-
-  /* old interface */
-  readonly attribute DOMString[] types;
-  DOMString getData(DOMString format);
-  void setData(DOMString format, DOMString data);
-  void clearData(optional DOMString format);
-  readonly attribute FileList files;
-};
 
 interface DataTransferItemList {
   readonly attribute unsigned long length;

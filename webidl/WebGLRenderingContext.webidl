@@ -806,6 +806,12 @@ interface WebGLExtensionDebugRendererInfo
 };
 
 [NoInterfaceObject]
+interface WebGLExtensionDebugShaders
+{
+    DOMString getTranslatedShaderSource(WebGLShader? shader);
+};
+
+[NoInterfaceObject]
 interface WebGLExtensionDepthTexture
 {
     const GLenum UNSIGNED_INT_24_8_WEBGL = 0x84FA;
@@ -813,6 +819,11 @@ interface WebGLExtensionDepthTexture
 
 [NoInterfaceObject]
 interface WebGLExtensionElementIndexUint
+{
+};
+
+[NoInterfaceObject]
+interface WebGLExtensionFragDepth
 {
 };
 
@@ -893,6 +904,35 @@ interface WebGLExtensionDrawBuffers {
 [NoInterfaceObject]
 interface WebGLExtensionTextureFloatLinear
 {
+};
+
+[NoInterfaceObject]
+interface WebGLExtensionTextureHalfFloat
+{
+    const GLenum HALF_FLOAT_OES = 0x8D61;
+};
+
+[NoInterfaceObject]
+interface WebGLExtensionTextureHalfFloatLinear
+{
+};
+
+[NoInterfaceObject]
+interface WebGLExtensionColorBufferFloat
+{
+    const GLenum RGBA32F_EXT = 0x8814;
+    const GLenum RGB32F_EXT = 0x8815;
+    const GLenum FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT = 0x8211;
+    const GLenum UNSIGNED_NORMALIZED_EXT = 0x8C17;
+};
+
+[NoInterfaceObject]
+interface WebGLExtensionColorBufferHalfFloat
+{
+    const GLenum RGBA16F_EXT = 0x881A;
+    const GLenum RGB16F_EXT = 0x881B;
+    const GLenum FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT = 0x8211;
+    const GLenum UNSIGNED_NORMALIZED_EXT = 0x8C17;
 };
 
 [NoInterfaceObject]

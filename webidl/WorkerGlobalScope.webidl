@@ -14,11 +14,17 @@
 
 interface WorkerGlobalScope : EventTarget {
   readonly attribute WorkerGlobalScope self;
+
+  [Replaceable]
+  readonly attribute Console console;
+
   readonly attribute WorkerLocation location;
 
   void close();
   attribute OnErrorEventHandler onerror;
 
+  attribute EventHandler onoffline;
+  attribute EventHandler ononline;
   // also has additional members in a partial interface
 };
 
