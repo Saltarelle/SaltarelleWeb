@@ -242,6 +242,7 @@ function Generate-CSS2Properties($root, $workDir, $targetFile) {
 	# This logic is from the file http://dxr.mozilla.org/mozilla-central/source/dom/bindings/GenerateCSS2PropertiesWebIDL.py
 
 	$content = & "$buildtoolsDir\mcpp.exe" -e utf8 -P "$workDir\CSS2PropertiesProps.h"
+	$content | Out-File "$workDir\CSS2Properties.pp" -Encoding UTF8
 	$out = New-Object System.Text.StringBuilder
 	$content -split "`n" | % {
 		$match = Select-String -Pattern "^\s*\[\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*\]\s*,\s*$" -InputObject $_
