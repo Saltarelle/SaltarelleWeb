@@ -27,7 +27,7 @@ namespace System.Html {
 		public static object ShowModalDialog(string url) { return null; }
 
 		[IntrinsicProperty]
-		public static DocumentBase Document { get { return null; } }
+		public static DocumentInstance Document { get { return null; } }
 
 		public static int SetTimeout(Action handler) { return 0; }
 		public static int SetTimeout(Action handler, int timeout) { return 0; }

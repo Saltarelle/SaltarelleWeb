@@ -25,6 +25,10 @@ namespace System.Html {
 			}
 		}
 
+		public static Element AppendChild(Element element) {
+			return default(Element);
+		}
+
 		[IntrinsicProperty]
 		public static ElementCollection Children {
 			get {
@@ -81,6 +85,10 @@ namespace System.Html {
 			return default(ElementCollection);
 		}
 		
+		public static Element InsertBefore(Element node, Element child) {
+			return default(Element);
+		}
+
 		[IntrinsicProperty]
 		public static Element LastElementChild {
 			get {
@@ -101,6 +109,10 @@ namespace System.Html {
 
 		public static ElementNodeList QuerySelectorAll(string selectors) {
 			return default(ElementNodeList);
+		}
+
+		public static Element RemoveChild(Element element) {
+			return default(Element);
 		}
 	}
 }
