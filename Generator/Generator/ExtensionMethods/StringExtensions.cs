@@ -37,7 +37,7 @@ namespace Generator.ExtensionMethods {
 		}
 
 		public static string MakeCSharpName(this string s) {
-			if (s.Length > 2 && s.StartsWith("on"))
+			if (s.Length > 2 && s.StartsWith("on") && s != "online")
 				return "On" + char.ToUpperInvariant(s[2]) + s.Substring(3);
 			else if (s.Length == 0)
 				return "None";

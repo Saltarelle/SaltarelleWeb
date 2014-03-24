@@ -73,13 +73,7 @@ namespace System.Html {
 		public void CancelAnimationFrame(int handle) {
 		}
 
-		public void CaptureEvents(int dummy) {
-		}
-
-		public void ClearInterval(int handle) {
-		}
-
-		public void ClearTimeout(int handle) {
+		public void CaptureEvents() {
 		}
 
 		public void Close() {
@@ -776,6 +770,15 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onpointercancel")]
+		public HtmlEventHandler OnPointercancel {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onpointerdown")]
 		public HtmlEventHandler OnPointerdown {
 			get {
@@ -1154,7 +1157,7 @@ namespace System.Html {
 			return null;
 		}
 
-		public void ReleaseEvents(int dummy) {
+		public void ReleaseEvents() {
 		}
 
 		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener) {
@@ -1287,10 +1290,6 @@ namespace System.Html {
 		}
 
 		public void SetResizable(bool resizable) {
-		}
-
-		public object ShowModalDialog(string url) {
-			return null;
 		}
 
 		public object ShowModalDialog(string url, object argument) {

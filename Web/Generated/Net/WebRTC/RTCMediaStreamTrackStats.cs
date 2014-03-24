@@ -8,11 +8,6 @@ namespace System.Net.WebRTC {
 			set;
 		}
 
-		public uint First {
-			get;
-			set;
-		}
-
 		public uint FrameHeight {
 			get;
 			set;

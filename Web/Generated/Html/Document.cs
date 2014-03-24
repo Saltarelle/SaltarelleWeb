@@ -1,4 +1,5 @@
 ﻿using System.Html.Editing;
+using System.Html.WebComponents;
 using System.Runtime.CompilerServices;
 using System.Xml;
 using System.Xml.XPath;
@@ -171,7 +172,7 @@ namespace System.Html {
 			}
 		}
 
-		public static void CaptureEvents(int eventFlags) {
+		public static void CaptureEvents() {
 		}
 
 		public static CaretPosition CaretPositionFromPoint(float x, float y) {
@@ -239,6 +240,30 @@ namespace System.Html {
 			get {
 				return null;
 			}
+		}
+
+		public static DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMPoint);
+		}
+
+		public static DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMPoint);
+		}
+
+		public static DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public static DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
+		public static DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public static DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
 		}
 
 		[IntrinsicProperty]
@@ -522,6 +547,14 @@ namespace System.Html {
 			get {
 				return default(ElementCollection);
 			}
+		}
+
+		public static DOMQuad[] GetBoxQuads() {
+			return null;
+		}
+
+		public static DOMQuad[] GetBoxQuads(BoxQuadOptions options) {
+			return null;
 		}
 
 		public static ElementNodeList GetElementsByName(string elementName) {
@@ -1109,6 +1142,15 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onpointercancel")]
+		public static HtmlEventHandler OnPointercancel {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onpointerdown")]
 		public static HtmlEventHandler OnPointerdown {
 			get {
@@ -1469,10 +1511,18 @@ namespace System.Html {
 			}
 		}
 
+		public static object RegisterElement(string name) {
+			return null;
+		}
+
+		public static object RegisterElement(string name, ElementRegistrationOptions options) {
+			return null;
+		}
+
 		public static void ReleaseCapture() {
 		}
 
-		public static void ReleaseEvents(int eventFlags) {
+		public static void ReleaseEvents() {
 		}
 
 		public static XmlNode RemoveChild(XmlNode child) {

@@ -62,6 +62,9 @@ namespace System.Html.Media.Audio {
 		public void GetFloatFrequencyData(Float32Array array) {
 		}
 
+		public void GetFloatTimeDomainData(Float32Array array) {
+		}
+
 		[IntrinsicProperty]
 		public double MaxDecibels {
 			get {

@@ -9,7 +9,9 @@ namespace System.Net.WebRTC {
 		Datachannel,
 		Icecandidate,
 		Iceconnectionstatechange,
+		Identityresult,
 		Negotiationneeded,
+		Peeridentity,
 		Removestream,
 		Signalingstatechange
 	}

@@ -32,12 +32,5 @@ namespace System.Html {
 
 		public void Set(string name, string value) {
 		}
-
-		[IntrinsicProperty]
-		public uint Size {
-			get {
-				return 0;
-			}
-		}
 	}
 }

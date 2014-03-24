@@ -7,10 +7,6 @@ namespace System.Data.IndexedDB {
 		internal ObjectStore() {
 		}
 
-		public Request Add(object value) {
-			return default(Request);
-		}
-
 		public Request Add(object value, object key) {
 			return default(Request);
 		}
@@ -23,10 +19,6 @@ namespace System.Data.IndexedDB {
 		}
 
 		public Request Clear() {
-			return default(Request);
-		}
-
-		public Request Count() {
 			return default(Request);
 		}
 
@@ -61,19 +53,11 @@ namespace System.Data.IndexedDB {
 			return default(Request);
 		}
 
-		public Request GetAll() {
-			return default(Request);
-		}
-
 		public Request GetAll(object key) {
 			return default(Request);
 		}
 
 		public Request GetAll(object key, uint limit) {
-			return default(Request);
-		}
-
-		public Request GetAllKeys() {
 			return default(Request);
 		}
 
@@ -110,10 +94,6 @@ namespace System.Data.IndexedDB {
 			}
 		}
 
-		public Request OpenCursor() {
-			return default(Request);
-		}
-
 		public Request OpenCursor(object range) {
 			return default(Request);
 		}
@@ -122,19 +102,11 @@ namespace System.Data.IndexedDB {
 			return default(Request);
 		}
 
-		public Request OpenKeyCursor() {
-			return default(Request);
-		}
-
 		public Request OpenKeyCursor(object range) {
 			return default(Request);
 		}
 
 		public Request OpenKeyCursor(object range, CursorDirection direction) {
-			return default(Request);
-		}
-
-		public Request Put(object value) {
 			return default(Request);
 		}
 

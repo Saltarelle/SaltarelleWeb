@@ -88,17 +88,10 @@ namespace System.Html {
 		public void ToBlob(Action<Blob> callback) {
 		}
 
-		public void ToBlob(Action<Blob> callback, string type) {
-		}
-
 		public void ToBlob(Action<Blob> callback, string type, object encoderOptions) {
 		}
 
 		public string ToDataURL() {
-			return null;
-		}
-
-		public string ToDataURL(string type) {
 			return null;
 		}
 

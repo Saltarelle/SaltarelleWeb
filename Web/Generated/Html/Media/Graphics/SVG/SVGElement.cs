@@ -431,6 +431,15 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onpointercancel")]
+		public HtmlEventHandler OnPointercancel {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onpointerdown")]
 		public HtmlEventHandler OnPointerdown {
 			get {

@@ -57,8 +57,11 @@ namespace Generator {
 			public bool CrossOriginReadable { get; private set; }
 			public bool CrossOriginWritable { get; private set; }
 			public bool CrossOriginCallable { get; private set; }
+			public bool ChromeConstructor { get; private set; }
+			public bool TreatNonObjectAsNull { get; private set; }
 			public TreatUndefinedAsOptions TreatUndefinedAs { get; private set; }
 			public IReadOnlyList<IReadOnlyList<Argument>> Constructors { get; private set; }
+			public IReadOnlyList<IReadOnlyList<Argument>> ChromeConstructors { get; private set; }
 			public IReadOnlyList<Tuple<string, IReadOnlyList<Argument>>> NamedConstructors { get; private set; }
 
 			private ParsedExtendedAttributes() {
@@ -76,6 +79,7 @@ namespace Generator {
 			public static ParsedExtendedAttributes Parse(IEnumerable<ExtendedAttribute> attributes, string scopeName, List<string> errors) {
 				var result = new ParsedExtendedAttributes();
 				var constructors = new List<IReadOnlyList<Argument>>();
+				var chromeConstructors = new List<IReadOnlyList<Argument>>();
 				var namedConstructors = new List<Tuple<string, IReadOnlyList<Argument>>>();
 
 				foreach (var attr in attributes) {
@@ -166,6 +170,9 @@ namespace Generator {
 								case "CrossOriginCallable":
 									result.CrossOriginCallable = true;
 									break;
+								case "TreatNonObjectAsNull":
+									result.TreatNonObjectAsNull = true;
+									break;
 								default:
 									errors.Add(string.Format("Unknown ExtendedAttributeNoArgs `{0}' on `{1}'", noArgs.AttributeName, scopeName));
 									break;
@@ -175,6 +182,9 @@ namespace Generator {
 							switch (argList.AttributeName) {
 								case "Constructor":
 									constructors.Add(argList.Arguments);
+									break;
+								case "ChromeConstructor":
+									chromeConstructors.Add(argList.Arguments);
 									break;
 								default:
 									errors.Add(string.Format("Unknown ExtendedAttributeArgList `{0}' on `{1}'", argList.AttributeName, scopeName));
@@ -263,6 +273,7 @@ namespace Generator {
 
 				result.Constructors = constructors.AsReadOnlySafe();
 				result.NamedConstructors = namedConstructors.AsReadOnlySafe();
+				result.ChromeConstructors = chromeConstructors.AsReadOnlySafe();
 
 				return result;
 			}

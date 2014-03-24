@@ -11,6 +11,9 @@ namespace System.Media.Recording {
 		public MediaRecorder(MediaStream stream) {
 		}
 
+		public MediaRecorder(MediaStream stream, MediaRecorderOptions options) {
+		}
+
 		public void AddEventListener(MediaRecorderEvents type, Action listener) {
 		}
 

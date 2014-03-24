@@ -178,6 +178,13 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty]
+		public TokenList RelList {
+			get {
+				return default(TokenList);
+			}
+		}
+
 		public void RemoveEventListener(AnchorElementEvents type, Action listener) {
 		}
 

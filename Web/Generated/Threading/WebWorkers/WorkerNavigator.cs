@@ -28,6 +28,13 @@ namespace System.Threading.WebWorkers {
 		}
 
 		[IntrinsicProperty]
+		public bool OnLine {
+			get {
+				return false;
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Platform {
 			get {
 				return null;

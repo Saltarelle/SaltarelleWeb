@@ -93,7 +93,7 @@ namespace System.Html {
 			}
 		}
 
-		public void CaptureEvents(int eventFlags) {
+		public void CaptureEvents() {
 		}
 
 		public void Clear() {
@@ -257,7 +257,7 @@ namespace System.Html {
 			return null;
 		}
 
-		public void ReleaseEvents(int eventFlags) {
+		public void ReleaseEvents() {
 		}
 
 		public void RemoveEventListener(DocumentInstanceEvents type, Action listener) {

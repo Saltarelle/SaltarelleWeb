@@ -7,6 +7,9 @@ namespace System.Html {
 		internal DataTransfer() {
 		}
 
+		public void AddElement(Element element) {
+		}
+
 		public void ClearData() {
 		}
 
@@ -42,13 +45,6 @@ namespace System.Html {
 			return null;
 		}
 
-		[IntrinsicProperty]
-		public DataTransferItemList Items {
-			get {
-				return default(DataTransferItemList);
-			}
-		}
-
 		public void SetData(string format, string data) {
 		}
 
@@ -56,9 +52,9 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public string[] Types {
+		public DOMStringList Types {
 			get {
-				return null;
+				return default(DOMStringList);
 			}
 		}
 	}

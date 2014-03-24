@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace System.Xml {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("Element")]
-	public partial class XmlElement : XmlNode {
+	public partial class XmlElement : XmlNode, IGeometryUtils {
 		internal XmlElement() {
 		}
 
@@ -93,6 +93,30 @@ namespace System.Xml {
 			}
 		}
 
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMPoint);
+		}
+
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMPoint);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
 		public ShadowRoot CreateShadowRoot() {
 			return default(ShadowRoot);
 		}
@@ -122,6 +146,14 @@ namespace System.Xml {
 
 		public DOMRect GetBoundingClientRect() {
 			return default(DOMRect);
+		}
+
+		public DOMQuad[] GetBoxQuads() {
+			return null;
+		}
+
+		public DOMQuad[] GetBoxQuads(BoxQuadOptions options) {
+			return null;
 		}
 
 		public DOMRectList GetClientRects() {

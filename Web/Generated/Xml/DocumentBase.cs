@@ -1,11 +1,12 @@
 ﻿using System.Html;
 using System.Html.Editing;
+using System.Html.WebComponents;
 using System.Runtime.CompilerServices;
 using System.Xml.XPath;
 
 namespace System.Xml {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("Document")]
-	public partial class DocumentBase : XmlNode, IXPathEvaluator {
+	public partial class DocumentBase : XmlNode, IXPathEvaluator, IGeometryUtils {
 		public DocumentBase() {
 		}
 
@@ -89,6 +90,30 @@ namespace System.Xml {
 			}
 		}
 
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMPoint);
+		}
+
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMPoint);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
 		public XmlAttribute CreateAttribute(string name) {
 			return default(XmlAttribute);
 		}
@@ -113,7 +138,15 @@ namespace System.Xml {
 			return default(XmlElement);
 		}
 
+		public XmlElement CreateElement(string localName, string typeExtension) {
+			return default(XmlElement);
+		}
+
 		public XmlElement CreateElementNS(string @namespace, string qualifiedName) {
+			return default(XmlElement);
+		}
+
+		public XmlElement CreateElementNS(string @namespace, string qualifiedName, string typeExtension) {
 			return default(XmlElement);
 		}
 
@@ -294,6 +327,14 @@ namespace System.Xml {
 			get {
 				return default(XmlElement);
 			}
+		}
+
+		public DOMQuad[] GetBoxQuads() {
+			return null;
+		}
+
+		public DOMQuad[] GetBoxQuads(BoxQuadOptions options) {
+			return null;
 		}
 
 		public XmlElement GetElementById(string elementId) {
@@ -769,6 +810,15 @@ namespace System.Xml {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onpointercancel")]
+		public HtmlEventHandler OnPointercancel {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onpointerdown")]
 		public HtmlEventHandler OnPointerdown {
 			get {
@@ -1057,6 +1107,14 @@ namespace System.Xml {
 			get {
 				return null;
 			}
+		}
+
+		public object RegisterElement(string name) {
+			return null;
+		}
+
+		public object RegisterElement(string name, ElementRegistrationOptions options) {
+			return null;
 		}
 
 		public void ReleaseCapture() {

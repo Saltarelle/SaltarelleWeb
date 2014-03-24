@@ -186,9 +186,6 @@ namespace System.Html {
 		[ScriptName("DOM_VK_END")]
 		public const uint DOM_VK_END = 35;
 
-		[ScriptName("DOM_VK_ENTER")]
-		public const uint DOM_VK_ENTER = 14;
-
 		[ScriptName("DOM_VK_EQUALS")]
 		public const uint DOM_VK_EQUALS = 61;
 

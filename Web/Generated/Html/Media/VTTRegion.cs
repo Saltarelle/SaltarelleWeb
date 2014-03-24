@@ -7,15 +7,6 @@ namespace System.Html.Media {
 		}
 
 		[IntrinsicProperty]
-		public string Id {
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[IntrinsicProperty]
 		public int Lines {
 			get {
 				return 0;
@@ -48,13 +39,6 @@ namespace System.Html.Media {
 				return null;
 			}
 			set {
-			}
-		}
-
-		[IntrinsicProperty]
-		public TextTrack Track {
-			get {
-				return default(TextTrack);
 			}
 		}
 

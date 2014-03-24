@@ -71,6 +71,24 @@ namespace System.Html.Media {
 			}
 		}
 
+		[IntrinsicProperty]
+		public TypeOption<int, AutoKeyword> Line {
+			get {
+				return default(TypeOption<int, AutoKeyword>);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public AlignSetting LineAlign {
+			get {
+				return default(AlignSetting);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onenter")]
 		public HtmlEventHandler OnEnter {
 			get {
@@ -108,9 +126,18 @@ namespace System.Html.Media {
 		}
 
 		[IntrinsicProperty]
-		public string RegionId {
+		public AlignSetting PositionAlign {
 			get {
-				return null;
+				return default(AlignSetting);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public VTTRegion Region {
+			get {
+				return default(VTTRegion);
 			}
 			set {
 			}

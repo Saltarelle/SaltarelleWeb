@@ -195,23 +195,30 @@ function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$curren
 		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]:$") {
 			$newTake = $take -and $symbols -contains $Matches[1]
 			$currentLine.value++
-            if ($currentLine.Value -lt $lines.Count) {
-    			Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
-            }
+			if ($currentLine.Value -lt $lines.Count) {
+				Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+			}
 		}
 		elseif ($line.Text -match "^if not CONFIG\['([^']+)'\]:$") {
 			$newTake = $take -and -not ($symbols -contains $Matches[1])
 			$currentLine.value++
-            if ($currentLine.Value -lt $lines.Count) {
-    			Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
-            }
+			if ($currentLine.Value -lt $lines.Count) {
+				Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+			}
 		}
 		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]\s==\s'[^']+':$") {
 			$newTake = $false
 			$currentLine.value++
-            if ($currentLine.Value -lt $lines.Count) {
-    			Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
-            }
+			if ($currentLine.Value -lt $lines.Count) {
+				Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+			}
+		}
+		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]\sin\s\[[^]]+]\s*:$") {
+			$newTake = $false
+			$currentLine.value++
+			if ($currentLine.Value -lt $lines.Count) {
+				Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+			}
 		}
 		else {
 			throw "Unknown line $($line.Text)"

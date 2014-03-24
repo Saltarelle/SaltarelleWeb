@@ -28,13 +28,6 @@ namespace System.Html.Media.Graphics {
 		}
 
 		[IntrinsicProperty]
-		public double TotalFrameDelay {
-			get {
-				return 0;
-			}
-		}
-
-		[IntrinsicProperty]
 		public uint TotalVideoFrames {
 			get {
 				return 0;

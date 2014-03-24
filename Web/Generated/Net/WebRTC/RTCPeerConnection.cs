@@ -73,6 +73,12 @@ namespace System.Net.WebRTC {
 		public void CreateOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, MediaConstraints constraints) {
 		}
 
+		public void GetIdentityAssertion() {
+		}
+
+		public void GetIdentityAssertion(RTCPeerConnectionErrorCallback failureCallback) {
+		}
+
 		public MediaStream[] GetLocalStreams() {
 			return null;
 		}
@@ -163,8 +169,26 @@ namespace System.Net.WebRTC {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onidentityresult")]
+		public HtmlEventHandler OnIdentityresult {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onnegotiationneeded")]
 		public HtmlEventHandler OnNegotiationneeded {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpeeridentity")]
+		public HtmlEventHandler OnPeeridentity {
 			get {
 				return default(HtmlEventHandler);
 			}
@@ -187,6 +211,13 @@ namespace System.Net.WebRTC {
 				return default(HtmlEventHandler);
 			}
 			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public RTCIdentityAssertion PeerIdentity {
+			get {
+				return default(RTCIdentityAssertion);
 			}
 		}
 
@@ -228,6 +259,15 @@ namespace System.Net.WebRTC {
 		}
 
 		public void RemoveStream(MediaStream stream) {
+		}
+
+		public void SetIdentityProvider(string provider) {
+		}
+
+		public void SetIdentityProvider(string provider, string protocol) {
+		}
+
+		public void SetIdentityProvider(string provider, string protocol, string username) {
 		}
 
 		public void SetLocalDescription(RTCSessionDescription description) {

@@ -51,6 +51,7 @@ namespace System.Html {
 		Pause,
 		Play,
 		Playing,
+		Pointercancel,
 		Pointerdown,
 		Pointerenter,
 		Pointerleave,

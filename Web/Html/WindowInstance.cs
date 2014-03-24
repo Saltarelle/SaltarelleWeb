@@ -9,6 +9,8 @@ namespace System.Html {
 		[IntrinsicProperty]
 		public object ReturnValue { get; set; }
 
+		public object ShowModalDialog(string url) { return null; }
+
 		[IntrinsicProperty]
 		public DocumentBase Document { get { return default(DocumentBase); } }
 
@@ -57,5 +59,9 @@ namespace System.Html {
 		public int SetInterval(Delegate handler, int timeout, params object[] arguments) { return 0; }
 		public int SetInterval(string handler) { return 0; }
 		public int SetInterval(string handler, int timeout) { return 0; }
+
+		public void ClearInterval(int handle) {}
+
+		public void ClearTimeout(int handle) {}
 	}
 }

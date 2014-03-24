@@ -51,6 +51,7 @@ namespace System.Html.Media.Graphics.SVG {
 		Pause,
 		Play,
 		Playing,
+		Pointercancel,
 		Pointerdown,
 		Pointerenter,
 		Pointerleave,

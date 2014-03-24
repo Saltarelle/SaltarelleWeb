@@ -46,9 +46,6 @@ namespace System.Html.Media {
 		public void AddEventListener(TextTrackEvents type, IEventListener listener, bool capture) {
 		}
 
-		public void AddRegion(VTTRegion region) {
-		}
-
 		[IntrinsicProperty]
 		public TextTrackCueList Cues {
 			get {
@@ -109,13 +106,6 @@ namespace System.Html.Media {
 			}
 		}
 
-		[IntrinsicProperty]
-		public VTTRegionList Regions {
-			get {
-				return default(VTTRegionList);
-			}
-		}
-
 		public void RemoveCue(VTTCue cue) {
 		}
 
@@ -147,9 +137,6 @@ namespace System.Html.Media {
 		}
 
 		public void RemoveEventListener(TextTrackEvents type, IEventListener listener, bool capture) {
-		}
-
-		public void RemoveRegion(VTTRegion region) {
 		}
 	}
 }

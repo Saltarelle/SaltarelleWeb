@@ -546,6 +546,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string BoxSizing {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string CaptionSide {
 			get {
 				return null;
@@ -1004,6 +1013,150 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string Grid {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridArea {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridAutoColumns {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridAutoFlow {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridAutoPosition {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridAutoRows {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridColumn {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridColumnEnd {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridColumnStart {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridRow {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridRowEnd {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridRowStart {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridTemplate {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridTemplateAreas {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridTemplateColumns {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridTemplateRows {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Height {
 			get {
 				return null;
@@ -1367,6 +1520,15 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Overflow {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string OverflowClipBox {
 			get {
 				return null;
 			}
@@ -1779,6 +1941,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string TouchAction {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Transform {
 			get {
 				return null;
@@ -1906,6 +2077,15 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Width {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string WillChange {
 			get {
 				return null;
 			}

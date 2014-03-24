@@ -13,12 +13,22 @@ namespace System.Net.WebRTC {
 			set;
 		}
 
+		public string ComponentId {
+			get;
+			set;
+		}
+
 		public string IpAddress {
 			get;
 			set;
 		}
 
 		public int PortNumber {
+			get;
+			set;
+		}
+
+		public string Transport {
 			get;
 			set;
 		}

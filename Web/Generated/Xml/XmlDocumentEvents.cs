@@ -51,6 +51,7 @@ namespace System.Xml {
 		Pause,
 		Play,
 		Playing,
+		Pointercancel,
 		Pointerdown,
 		Pointerenter,
 		Pointerleave,

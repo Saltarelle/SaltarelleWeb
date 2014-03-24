@@ -2,49 +2,46 @@
 
 namespace System.Html {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
-	public partial class DOMRect {
-		internal DOMRect() {
+	public partial class DOMRect : DOMRectReadOnly {
+		public DOMRect() {
+		}
+
+		public DOMRect(double x, double y, double width, double height) {
 		}
 
 		[IntrinsicProperty]
-		public float Bottom {
+		public double Height {
 			get {
 				return 0;
+			}
+			set {
 			}
 		}
 
 		[IntrinsicProperty]
-		public float Height {
+		public double Width {
 			get {
 				return 0;
+			}
+			set {
 			}
 		}
 
 		[IntrinsicProperty]
-		public float Left {
+		public double X {
 			get {
 				return 0;
+			}
+			set {
 			}
 		}
 
 		[IntrinsicProperty]
-		public float Right {
+		public double Y {
 			get {
 				return 0;
 			}
-		}
-
-		[IntrinsicProperty]
-		public float Top {
-			get {
-				return 0;
-			}
-		}
-
-		[IntrinsicProperty]
-		public float Width {
-			get {
-				return 0;
+			set {
 			}
 		}
 	}

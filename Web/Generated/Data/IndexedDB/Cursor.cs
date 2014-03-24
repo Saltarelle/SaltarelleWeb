@@ -9,9 +9,6 @@ namespace System.Data.IndexedDB {
 		public void Advance(uint count) {
 		}
 
-		public void Continue() {
-		}
-
 		public void Continue(object key) {
 		}
 

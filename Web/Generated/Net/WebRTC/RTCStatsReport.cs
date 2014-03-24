@@ -6,9 +6,6 @@ namespace System.Net.WebRTC {
 		internal RTCStatsReport() {
 		}
 
-		public void ForEach(RTCStatsReportCallback callbackFn) {
-		}
-
 		public void ForEach(RTCStatsReportCallback callbackFn, object thisArg) {
 		}
 

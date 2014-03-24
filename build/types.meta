@@ -4,6 +4,9 @@
 ActivityOptions
 	nogenerate
 
+ActivityRequestHandler
+	nogenerate
+
 AlignSetting
 	namespace = System.Html.Media
 
@@ -127,6 +130,9 @@ BlobEventInit
 BlobPropertyBag
 	namespace = System.IO
 
+BoxQuadOptions
+	namespace = System.Html
+
 ByteString
 	alias = string
 	nogenerate
@@ -171,6 +177,9 @@ CameraMode
 	nogenerate
 
 CameraPictureOptions
+	nogenerate
+
+CameraPosition
 	nogenerate
 
 CameraPreviewStateChange
@@ -236,6 +245,12 @@ CDATASection
 	namespace = System.Xml
 	name = XmlCDataSection
 
+CFStateChangeEvent
+	nogenerate
+
+CFStateChangeEventInit
+	nogenerate
+
 ChannelCountMode
 	namespace = System.Html.Media.Audio
 
@@ -254,6 +269,9 @@ CharacterData
 
 ChildNode
 	mixin
+
+ChromeWindow
+	nogenerate
 
 ChromeWorker
 	nogenerate
@@ -339,7 +357,10 @@ ContactManager
 
 ContextAttributes2D
 	namespace = System.Html.Media.Graphics
-	
+
+ConvertCoordinateOptions
+	namespace = System.Html
+
 ConvolverNode
 	namespace = System.Html.Media.Audio
 
@@ -359,6 +380,9 @@ CSS2Properties
 	namespace = System.Html
 	name = Style
 	ScriptName = CSSStyleDeclaration
+
+CSSBoxType
+	namespace = System.Html
 
 CSSPrimitiveValue
 	namespace = System.Html
@@ -399,6 +423,12 @@ DataChannel
 DataContainerEvent
 	nogenerate
 
+DataErrorEvent
+	nogenerate
+
+DataErrorEventInit
+	nogenerate
+
 DataStore
 	nogenerate
 
@@ -419,6 +449,8 @@ DataStoreTask
 
 DataTransfer
 	namespace = System.Html
+	typeOverride effectAllowed = System.Html.AllowedDropEffect
+	typeOverride dropEffect = System.Html.DropEffect
 
 DataTransferItem
 	namespace = System.Html
@@ -579,10 +611,25 @@ DOMParser
 	namespace = System.Html
 	noconstructors
 
+DOMPoint
+	namespace = System.Html
+
+DOMPointInit
+	namespace = System.Html
+
+DOMPointReadOnly
+	namespace = System.Html
+
+DOMQuad
+	namespace = System.Html
+
 DOMRect
 	namespace = System.Html
 
 DOMRectList
+	namespace = System.Html
+
+DOMRectReadOnly
 	namespace = System.Html
 
 DOMRequest
@@ -819,6 +866,11 @@ GamepadEventInit
 Geolocation
 	namespace = System.Html.Geolocation
 	name = GeolocationService
+
+GeometryUtils
+	namespace = System.Html
+	name = IGeometryUtils
+	interface
 
 GetCameraCallback
 	nogenerate
@@ -1408,6 +1460,9 @@ MediaQueryListListener
 MediaRecorder
 	namespace = System.Media.Recording
 
+MediaRecorderOptions
+	namespace = System.Media.Recording
+
 MediaSource
 	namespace = System.Media.Source
 
@@ -1544,6 +1599,12 @@ MozContactChangeEventInit
 MozControllers
 	nogenerate
 
+MozEmergencyCbModeEvent
+	nogenerate
+
+MozEmergencyCbModeEventInit
+	nogenerate
+
 MozFrameLoader
 	nogenerate
 	noinherit
@@ -1617,6 +1678,12 @@ MozObjectLoadingContent
 MozObserver
 	nogenerate
 
+MozOtaStatusEvent
+	nogenerate
+
+MozOtaStatusEventInit
+	nogenerate
+
 MozPhonetic
 	nogenerate
 	noinherit
@@ -1659,10 +1726,73 @@ MozSmsEventInit
 MozSmsMessage
 	nogenerate
 
+MozStkBipMessage
+	nogenerate
+
+MozStkBrowserSetting
+	nogenerate
+
+MozStkBrowserTerminationEvent
+	nogenerate
+
+MozStkCallEvent
+	nogenerate
+
+MozStkCommand
+	nogenerate
+
 MozStkCommandEvent
 	nogenerate
 
 MozStkCommandEventInit
+	nogenerate
+
+MozStkDuration
+	nogenerate
+
+MozStkGeneralEvent
+	nogenerate
+
+MozStkInput
+	nogenerate
+
+MozStkItem
+	nogenerate
+
+MozStkLanguageSelectionEvent
+	nogenerate
+
+MozStkLocalInfo
+	nogenerate
+
+MozStkLocationEvent
+	nogenerate
+
+MozStkLocationInfo
+	nogenerate
+
+MozStkMenu
+	nogenerate
+
+MozStkPlayTone
+	nogenerate
+
+MozStkProvideLocalInfo
+	nogenerate
+
+MozStkResponse
+	nogenerate
+
+MozStkSetUpCall
+	nogenerate
+
+MozStkSetUpEventList
+	nogenerate
+
+MozStkTextMessage
+	nogenerate
+
+MozStkTimer
 	nogenerate
 
 MozTimeManager
@@ -1702,6 +1832,9 @@ MutationObserverInit
 	nogenerate
 
 MutationRecord
+	nogenerate
+
+NativeOSFileReadOptions
 	nogenerate
 
 Navigator
@@ -1809,6 +1942,9 @@ NotifyAudioAvailableEvent
 NotifyPaintEvent
 	nogenerate
 
+nsIBrowserDOMWindow
+	nogenerate
+
 nsIControllers
 	nogenerate
 
@@ -1823,6 +1959,9 @@ nsIEditor
 	nogenerate
 
 nsIInputStreamCallback
+	nogenerate
+
+nsIMessageBroadcaster
 	nogenerate
 
 nsISelectionListener
@@ -1908,6 +2047,9 @@ ParentNode
 	typeOverride children = System.Xml.XmlElementCollection
 	mixin
 
+Path2D
+	namespace = System.Html.Media.Graphics
+
 PCImplIceConnectionState
 	nogenerate
 
@@ -1944,6 +2086,9 @@ PerformanceTiming
 
 PeriodicWave
 	namespace = System.Html.Media.Audio
+
+PermissionSettings
+	nogenerate
 
 PhoneNumberService
 	nogenerate
@@ -2122,6 +2267,12 @@ RTCPeerConnectionIceEvent
 
 RTCPeerConnectionIceEventInit
 	namespace = System.Net.WebRTC
+
+RTCPeerConnectionIdentityEventInit
+	nogenerate
+
+RTCPeerConnectionIdentityEvent
+	nogenerate
 
 RTCSdpType
 	namespace = System.Net.WebRTC
@@ -2884,6 +3035,12 @@ UserProximityEvent
 UserProximityEventInit
 	namespace = System.Html.Mobile
 
+USSDReceivedEvent
+	nogenerate
+
+USSDReceivedEventInit
+	nogenerate
+
 ValidityState
 	namespace = System.Html
 
@@ -2894,9 +3051,6 @@ VTTCue
 	namespace = System.Html.Media
 
 VTTRegion
-	namespace = System.Html.Media
-
-VTTRegionList
 	namespace = System.Html.Media
 
 WaveShaperNode
@@ -2921,6 +3075,9 @@ WebGLExtensionColorBufferHalfFloat
 	namespace = System.Html.Media.Graphics.WebGL
 
 WebGLExtensionCompressedTextureATC
+	namespace = System.Html.Media.Graphics.WebGL
+
+WebGLExtensionCompressedTextureETC1
 	namespace = System.Html.Media.Graphics.WebGL
 
 WebGLExtensionCompressedTexturePVRTC
@@ -3058,6 +3215,7 @@ Window
 	rename window = Instance
 	remove controllers
 	remove pkcs11
+	remove console
 
 WindowEventHandlers
 	mixin
@@ -3078,6 +3236,8 @@ WindowTimers
 	name = IWindowTimers
 	remove setTimeout
 	remove setInterval
+	remove clearTimeout
+	remove clearInterval
 	interface
 
 WindowProxy
@@ -3098,6 +3258,7 @@ Worker
 
 WorkerGlobalScope
 	namespace = System.Threading.WebWorkers
+	remove console
 
 WorkerLocation
 	namespace = System.Threading.WebWorkers

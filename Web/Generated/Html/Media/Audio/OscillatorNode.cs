@@ -106,7 +106,13 @@ namespace System.Html.Media.Audio {
 
 		public const ushort SQUARE = 1;
 
+		public void Start() {
+		}
+
 		public void Start(double when) {
+		}
+
+		public void Stop() {
 		}
 
 		public void Stop(double when) {

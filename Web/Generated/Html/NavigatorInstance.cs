@@ -1,5 +1,8 @@
-﻿using System.Html.Geolocation;
+﻿using System.Collections.TypedArrays;
+using System.Html.Geolocation;
 using System.Html.Mobile;
+using System.IO;
+using System.Net;
 using System.Runtime.CompilerServices;
 
 namespace System.Html {
@@ -76,6 +79,13 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public int MaxTouchPoints {
+			get {
+				return 0;
+			}
+		}
+
+		[IntrinsicProperty]
 		public MimeTypeArray MimeTypes {
 			get {
 				return default(MimeTypeArray);
@@ -128,6 +138,14 @@ namespace System.Html {
 		}
 
 		public void RegisterProtocolHandler(string scheme, string url, string title) {
+		}
+
+		public bool SendBeacon(string url) {
+			return false;
+		}
+
+		public bool SendBeacon(string url, TypeOption<ArrayBufferView, Blob, string, FormData> data) {
+			return false;
 		}
 
 		public bool TaintEnabled() {

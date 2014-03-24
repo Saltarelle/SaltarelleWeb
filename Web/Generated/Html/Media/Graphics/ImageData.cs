@@ -7,6 +7,15 @@ namespace System.Html.Media.Graphics {
 		internal ImageData() {
 		}
 
+		public ImageData(uint sw, uint sh) {
+		}
+
+		public ImageData(Uint8ClampedArray data, uint sw) {
+		}
+
+		public ImageData(Uint8ClampedArray data, uint sw, uint sh) {
+		}
+
 		[IntrinsicProperty]
 		public Uint8ClampedArray Data {
 			get {

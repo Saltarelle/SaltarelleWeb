@@ -16,6 +16,7 @@ PREPROCESSED_WEBIDL_FILES = [
 
 WEBIDL_FILES = [
     'AbstractWorker.webidl',
+    'ActivityRequestHandler.webidl',
     'AnalyserNode.webidl',
     'AnimationEvent.webidl',
     'AppInfo.webidl',
@@ -83,6 +84,8 @@ WEBIDL_FILES = [
     'DOMImplementation.webidl',
     'DOMMMIError.webidl',
     'DOMParser.webidl',
+    'DOMPoint.webidl',
+    'DOMQuad.webidl',
     'DOMRect.webidl',
     'DOMRectList.webidl',
     'DOMRequest.webidl',
@@ -113,6 +116,7 @@ WEBIDL_FILES = [
     'Function.webidl',
     'GainNode.webidl',
     'Geolocation.webidl',
+    'GeometryUtils.webidl',
     'GetUserMediaRequest.webidl',
     'History.webidl',
     'HTMLAnchorElement.webidl',
@@ -245,6 +249,7 @@ WEBIDL_FILES = [
     'MozWakeLock.webidl',
     'MutationEvent.webidl',
     'MutationObserver.webidl',
+    'NativeOSFileInternals.webidl',
     'NetDashboard.webidl',
     'NetworkOptions.webidl',
     'Node.webidl',
@@ -266,6 +271,7 @@ WEBIDL_FILES = [
     'PerformanceNavigation.webidl',
     'PerformanceTiming.webidl',
     'PeriodicWave.webidl',
+    'PermissionSettings.webidl',
     'PhoneNumberService.webidl',
     'Plugin.webidl',
     'PluginArray.webidl',
@@ -431,7 +437,6 @@ WEBIDL_FILES = [
     'VideoStreamTrack.webidl',
     'VTTCue.webidl',
     'VTTRegion.webidl',
-    'VTTRegionList.webidl',
     'WaveShaperNode.webidl',
     'WebComponents.webidl',
     'WebSocket.webidl',
@@ -612,3 +617,7 @@ if CONFIG['MOZ_B2G_BT']:
         'BluetoothStatusChangedEvent.webidl',
     ]
 
+if CONFIG['MOZ_BUILD_APP'] in ['browser', 'xulrunner']:
+    WEBIDL_FILES += [
+        'BrowserFeedWriter.webidl',
+    ]

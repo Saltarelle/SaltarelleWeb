@@ -47,5 +47,9 @@ namespace System.Html {
 		int SetInterval(Delegate handler, int timeout, params object[] arguments);
 		int SetInterval(string handler);
 		int SetInterval(string handler, int timeout);
+
+		void ClearInterval(int handle);
+
+		void ClearTimeout(int handle);
 	}
 }

@@ -13,7 +13,7 @@ namespace System.Html {
 			set;
 		}
 
-		public ushort Button {
+		public short Button {
 			get;
 			set;
 		}

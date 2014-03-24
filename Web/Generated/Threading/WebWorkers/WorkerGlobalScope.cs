@@ -45,12 +45,6 @@ namespace System.Threading.WebWorkers {
 			return null;
 		}
 
-		public void ClearInterval(int handle) {
-		}
-
-		public void ClearTimeout(int handle) {
-		}
-
 		public void Close() {
 		}
 
@@ -91,6 +85,24 @@ namespace System.Threading.WebWorkers {
 		public ErrorEventHandler OnError {
 			get {
 				return default(ErrorEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onoffline")]
+		public HtmlEventHandler OnOffline {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("ononline")]
+		public HtmlEventHandler OnOnline {
+			get {
+				return default(HtmlEventHandler);
 			}
 			set {
 			}

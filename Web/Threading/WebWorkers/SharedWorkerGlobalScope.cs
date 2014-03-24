@@ -48,5 +48,9 @@ namespace System.Threading.WebWorkers {
 		public static int SetInterval(Delegate handler, int timeout, params object[] arguments) { return 0; }
 		public static int SetInterval(string handler) { return 0; }
 		public static int SetInterval(string handler, int timeout) { return 0; }
+
+		public static void ClearInterval(int handle) {}
+
+		public static void ClearTimeout(int handle) {}
 	}
 }
