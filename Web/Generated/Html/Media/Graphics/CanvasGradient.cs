@@ -6,7 +6,7 @@ namespace System.Html.Media.Graphics {
 		internal CanvasGradient() {
 		}
 
-		public void AddColorStop(float offset, string color) {
+		public void AddColorStop(double offset, string color) {
 		}
 	}
 }

@@ -411,8 +411,8 @@ namespace Generator {
 						case BuiltinType.Boolean:            return new PrimitiveType("bool");
 						case BuiltinType.Byte:               return new PrimitiveType("sbyte");
 						case BuiltinType.Octet:              return new PrimitiveType("byte");
-						case BuiltinType.Float:              return new PrimitiveType("float");
-						case BuiltinType.UnrestrictedFloat:  return new PrimitiveType("float");
+						case BuiltinType.Float:              return new PrimitiveType("double");
+						case BuiltinType.UnrestrictedFloat:  return new PrimitiveType("double");
 						case BuiltinType.Double:             return new PrimitiveType("double");
 						case BuiltinType.UnrestrictedDouble: return new PrimitiveType("double");
 						case BuiltinType.Short:              return new PrimitiveType("short");

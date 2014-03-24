@@ -23,7 +23,7 @@ namespace System.Html {
 			set;
 		}
 
-		public float Pressure {
+		public double Pressure {
 			get;
 			set;
 		}

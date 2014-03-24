@@ -41,7 +41,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public float Pressure {
+		public double Pressure {
 			get {
 				return 0;
 			}

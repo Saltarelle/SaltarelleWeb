@@ -87,7 +87,7 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		public void SetStdDeviation(float stdDeviationX, float stdDeviationY) {
+		public void SetStdDeviation(double stdDeviationX, double stdDeviationY) {
 		}
 
 		[IntrinsicProperty]

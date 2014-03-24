@@ -45,7 +45,7 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IntrinsicProperty]
-		public float SampleRate {
+		public double SampleRate {
 			get {
 				return 0;
 			}

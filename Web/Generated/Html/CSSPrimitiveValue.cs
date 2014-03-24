@@ -88,7 +88,7 @@ namespace System.Html {
 			return default(Counter);
 		}
 
-		public float GetFloatValue(ushort unitType) {
+		public double GetFloatValue(ushort unitType) {
 			return 0;
 		}
 
@@ -111,7 +111,7 @@ namespace System.Html {
 			}
 		}
 
-		public void SetFloatValue(ushort unitType, float floatValue) {
+		public void SetFloatValue(ushort unitType, double floatValue) {
 		}
 
 		public void SetStringValue(ushort stringType, string stringValue) {

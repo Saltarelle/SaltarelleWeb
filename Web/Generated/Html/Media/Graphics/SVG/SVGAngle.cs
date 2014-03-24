@@ -9,7 +9,7 @@ namespace System.Html.Media.Graphics.SVG {
 		public void ConvertToSpecifiedUnits(SVGAngleUnitType unitType) {
 		}
 
-		public void NewValueSpecifiedUnits(SVGAngleUnitType unitType, float valueInSpecifiedUnits) {
+		public void NewValueSpecifiedUnits(SVGAngleUnitType unitType, double valueInSpecifiedUnits) {
 		}
 
 		[ScriptName("SVG_ANGLETYPE_DEG")]
@@ -35,7 +35,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float Value {
+		public double Value {
 			get {
 				return 0;
 			}
@@ -53,7 +53,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float ValueInSpecifiedUnits {
+		public double ValueInSpecifiedUnits {
 			get {
 				return 0;
 			}

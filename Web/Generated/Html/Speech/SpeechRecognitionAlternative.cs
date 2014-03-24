@@ -7,7 +7,7 @@ namespace System.Html.Speech {
 		}
 
 		[IntrinsicProperty]
-		public float Confidence {
+		public double Confidence {
 			get {
 				return 0;
 			}

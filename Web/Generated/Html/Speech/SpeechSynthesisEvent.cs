@@ -20,7 +20,7 @@ namespace System.Html.Speech {
 		}
 
 		[IntrinsicProperty]
-		public float ElapsedTime {
+		public double ElapsedTime {
 			get {
 				return 0;
 			}

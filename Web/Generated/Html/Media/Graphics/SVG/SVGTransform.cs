@@ -7,7 +7,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float Angle {
+		public double Angle {
 			get {
 				return 0;
 			}
@@ -23,19 +23,19 @@ namespace System.Html.Media.Graphics.SVG {
 		public void SetMatrix(SVGMatrix matrix) {
 		}
 
-		public void SetRotate(float angle, float cx, float cy) {
+		public void SetRotate(double angle, double cx, double cy) {
 		}
 
-		public void SetScale(float sx, float sy) {
+		public void SetScale(double sx, double sy) {
 		}
 
-		public void SetSkewX(float angle) {
+		public void SetSkewX(double angle) {
 		}
 
-		public void SetSkewY(float angle) {
+		public void SetSkewY(double angle) {
 		}
 
-		public void SetTranslate(float tx, float ty) {
+		public void SetTranslate(double tx, double ty) {
 		}
 
 		[ScriptName("SVG_TRANSFORM_MATRIX")]

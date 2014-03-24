@@ -7,7 +7,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float A {
+		public double A {
 			get {
 				return 0;
 			}
@@ -16,7 +16,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float B {
+		public double B {
 			get {
 				return 0;
 			}
@@ -25,7 +25,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float C {
+		public double C {
 			get {
 				return 0;
 			}
@@ -34,7 +34,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float D {
+		public double D {
 			get {
 				return 0;
 			}
@@ -43,7 +43,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float E {
+		public double E {
 			get {
 				return 0;
 			}
@@ -52,7 +52,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float F {
+		public double F {
 			get {
 				return 0;
 			}
@@ -76,31 +76,31 @@ namespace System.Html.Media.Graphics.SVG {
 			return default(SVGMatrix);
 		}
 
-		public SVGMatrix Rotate(float angle) {
+		public SVGMatrix Rotate(double angle) {
 			return default(SVGMatrix);
 		}
 
-		public SVGMatrix RotateFromVector(float x, float y) {
+		public SVGMatrix RotateFromVector(double x, double y) {
 			return default(SVGMatrix);
 		}
 
-		public SVGMatrix Scale(float scaleFactor) {
+		public SVGMatrix Scale(double scaleFactor) {
 			return default(SVGMatrix);
 		}
 
-		public SVGMatrix ScaleNonUniform(float scaleFactorX, float scaleFactorY) {
+		public SVGMatrix ScaleNonUniform(double scaleFactorX, double scaleFactorY) {
 			return default(SVGMatrix);
 		}
 
-		public SVGMatrix SkewX(float angle) {
+		public SVGMatrix SkewX(double angle) {
 			return default(SVGMatrix);
 		}
 
-		public SVGMatrix SkewY(float angle) {
+		public SVGMatrix SkewY(double angle) {
 			return default(SVGMatrix);
 		}
 
-		public SVGMatrix Translate(float x, float y) {
+		public SVGMatrix Translate(double x, double y) {
 			return default(SVGMatrix);
 		}
 	}

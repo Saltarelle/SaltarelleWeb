@@ -14,11 +14,11 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		public void InitAudioAvailableEvent(string type, bool canBubble, bool cancelable, float[] frameBuffer, int frameBufferLength, float time, bool allowAudioData) {
+		public void InitAudioAvailableEvent(string type, bool canBubble, bool cancelable, double[] frameBuffer, int frameBufferLength, double time, bool allowAudioData) {
 		}
 
 		[IntrinsicProperty]
-		public float Time {
+		public double Time {
 			get {
 				return 0;
 			}

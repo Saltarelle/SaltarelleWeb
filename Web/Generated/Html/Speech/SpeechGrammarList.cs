@@ -17,13 +17,13 @@ namespace System.Html.Speech {
 		public void AddFromString(string @string) {
 		}
 
-		public void AddFromString(string @string, float weight) {
+		public void AddFromString(string @string, double weight) {
 		}
 
 		public void AddFromURI(string src) {
 		}
 
-		public void AddFromURI(string src, float weight) {
+		public void AddFromURI(string src, double weight) {
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]

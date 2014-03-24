@@ -87,7 +87,7 @@ namespace System.Html.Media.Graphics.WebGL {
 		[ScriptName("BLEND_SRC_RGB")]
 		public const int BLEND_SRC_RGB = 32969;
 
-		public void BlendColor(float red, float green, float blue, float alpha) {
+		public void BlendColor(double red, double green, double blue, double alpha) {
 		}
 
 		public void BlendEquation(int mode) {
@@ -161,10 +161,10 @@ namespace System.Html.Media.Graphics.WebGL {
 		public void Clear(int mask) {
 		}
 
-		public void ClearColor(float red, float green, float blue, float alpha) {
+		public void ClearColor(double red, double green, double blue, double alpha) {
 		}
 
-		public void ClearDepth(float depth) {
+		public void ClearDepth(double depth) {
 		}
 
 		public void ClearStencil(int s) {
@@ -324,7 +324,7 @@ namespace System.Html.Media.Graphics.WebGL {
 		public void DepthMask(bool flag) {
 		}
 
-		public void DepthRange(float zNear, float zFar) {
+		public void DepthRange(double zNear, double zFar) {
 		}
 
 		public void DetachShader(WebGLProgram program, WebGLShader shader) {
@@ -674,7 +674,7 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		public const int LINES = 1;
 
-		public void LineWidth(float width) {
+		public void LineWidth(double width) {
 		}
 
 		[ScriptName("LINK_STATUS")]
@@ -795,7 +795,7 @@ namespace System.Html.Media.Graphics.WebGL {
 		[ScriptName("POLYGON_OFFSET_UNITS")]
 		public const int POLYGON_OFFSET_UNITS = 10752;
 
-		public void PolygonOffset(float factor, float units) {
+		public void PolygonOffset(double factor, double units) {
 		}
 
 		public void ReadPixels(int x, int y, int width, int height, int format, int type, ArrayBufferView pixels) {
@@ -873,7 +873,7 @@ namespace System.Html.Media.Graphics.WebGL {
 		[ScriptName("SAMPLE_COVERAGE_VALUE")]
 		public const int SAMPLE_COVERAGE_VALUE = 32938;
 
-		public void SampleCoverage(float value, bool invert) {
+		public void SampleCoverage(double value, bool invert) {
 		}
 
 		[ScriptName("SAMPLER_2D")]
@@ -1018,7 +1018,7 @@ namespace System.Html.Media.Graphics.WebGL {
 		public void TexImage2D(int target, int level, int internalformat, int format, int type, VideoElement video) {
 		}
 
-		public void TexParameterf(int target, int pname, float param) {
+		public void TexParameterf(int target, int pname, double param) {
 		}
 
 		public void TexParameteri(int target, int pname, int param) {
@@ -1187,10 +1187,10 @@ namespace System.Html.Media.Graphics.WebGL {
 
 		public const int TRIANGLES = 4;
 
-		public void Uniform1f(WebGLUniformLocation location, float x) {
+		public void Uniform1f(WebGLUniformLocation location, double x) {
 		}
 
-		public void Uniform1fv(WebGLUniformLocation location, float[] v) {
+		public void Uniform1fv(WebGLUniformLocation location, double[] v) {
 		}
 
 		public void Uniform1fv(WebGLUniformLocation location, Float32Array v) {
@@ -1205,10 +1205,10 @@ namespace System.Html.Media.Graphics.WebGL {
 		public void Uniform1iv(WebGLUniformLocation location, Int32Array v) {
 		}
 
-		public void Uniform2f(WebGLUniformLocation location, float x, float y) {
+		public void Uniform2f(WebGLUniformLocation location, double x, double y) {
 		}
 
-		public void Uniform2fv(WebGLUniformLocation location, float[] v) {
+		public void Uniform2fv(WebGLUniformLocation location, double[] v) {
 		}
 
 		public void Uniform2fv(WebGLUniformLocation location, Float32Array v) {
@@ -1223,10 +1223,10 @@ namespace System.Html.Media.Graphics.WebGL {
 		public void Uniform2iv(WebGLUniformLocation location, Int32Array v) {
 		}
 
-		public void Uniform3f(WebGLUniformLocation location, float x, float y, float z) {
+		public void Uniform3f(WebGLUniformLocation location, double x, double y, double z) {
 		}
 
-		public void Uniform3fv(WebGLUniformLocation location, float[] v) {
+		public void Uniform3fv(WebGLUniformLocation location, double[] v) {
 		}
 
 		public void Uniform3fv(WebGLUniformLocation location, Float32Array v) {
@@ -1241,10 +1241,10 @@ namespace System.Html.Media.Graphics.WebGL {
 		public void Uniform3iv(WebGLUniformLocation location, Int32Array v) {
 		}
 
-		public void Uniform4f(WebGLUniformLocation location, float x, float y, float z, float w) {
+		public void Uniform4f(WebGLUniformLocation location, double x, double y, double z, double w) {
 		}
 
-		public void Uniform4fv(WebGLUniformLocation location, float[] v) {
+		public void Uniform4fv(WebGLUniformLocation location, double[] v) {
 		}
 
 		public void Uniform4fv(WebGLUniformLocation location, Float32Array v) {
@@ -1259,19 +1259,19 @@ namespace System.Html.Media.Graphics.WebGL {
 		public void Uniform4iv(WebGLUniformLocation location, Int32Array v) {
 		}
 
-		public void UniformMatrix2fv(WebGLUniformLocation location, bool transpose, float[] value) {
+		public void UniformMatrix2fv(WebGLUniformLocation location, bool transpose, double[] value) {
 		}
 
 		public void UniformMatrix2fv(WebGLUniformLocation location, bool transpose, Float32Array value) {
 		}
 
-		public void UniformMatrix3fv(WebGLUniformLocation location, bool transpose, float[] value) {
+		public void UniformMatrix3fv(WebGLUniformLocation location, bool transpose, double[] value) {
 		}
 
 		public void UniformMatrix3fv(WebGLUniformLocation location, bool transpose, Float32Array value) {
 		}
 
-		public void UniformMatrix4fv(WebGLUniformLocation location, bool transpose, float[] value) {
+		public void UniformMatrix4fv(WebGLUniformLocation location, bool transpose, double[] value) {
 		}
 
 		public void UniformMatrix4fv(WebGLUniformLocation location, bool transpose, Float32Array value) {
@@ -1344,37 +1344,37 @@ namespace System.Html.Media.Graphics.WebGL {
 		[ScriptName("VERTEX_SHADER")]
 		public const int VERTEX_SHADER = 35633;
 
-		public void VertexAttrib1f(int indx, float x) {
+		public void VertexAttrib1f(int indx, double x) {
 		}
 
-		public void VertexAttrib1fv(int indx, float[] values) {
+		public void VertexAttrib1fv(int indx, double[] values) {
 		}
 
 		public void VertexAttrib1fv(int indx, Float32Array values) {
 		}
 
-		public void VertexAttrib2f(int indx, float x, float y) {
+		public void VertexAttrib2f(int indx, double x, double y) {
 		}
 
-		public void VertexAttrib2fv(int indx, float[] values) {
+		public void VertexAttrib2fv(int indx, double[] values) {
 		}
 
 		public void VertexAttrib2fv(int indx, Float32Array values) {
 		}
 
-		public void VertexAttrib3f(int indx, float x, float y, float z) {
+		public void VertexAttrib3f(int indx, double x, double y, double z) {
 		}
 
-		public void VertexAttrib3fv(int indx, float[] values) {
+		public void VertexAttrib3fv(int indx, double[] values) {
 		}
 
 		public void VertexAttrib3fv(int indx, Float32Array values) {
 		}
 
-		public void VertexAttrib4f(int indx, float x, float y, float z, float w) {
+		public void VertexAttrib4f(int indx, double x, double y, double z, double w) {
 		}
 
-		public void VertexAttrib4fv(int indx, float[] values) {
+		public void VertexAttrib4fv(int indx, double[] values) {
 		}
 
 		public void VertexAttrib4fv(int indx, Float32Array values) {

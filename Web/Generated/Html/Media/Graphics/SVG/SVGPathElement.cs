@@ -43,11 +43,11 @@ namespace System.Html.Media.Graphics.SVG {
 			}
 		}
 
-		public SVGPathSegArcAbs CreateSVGPathSegArcAbs(float x, float y, float r1, float r2, float angle, bool largeArcFlag, bool sweepFlag) {
+		public SVGPathSegArcAbs CreateSVGPathSegArcAbs(double x, double y, double r1, double r2, double angle, bool largeArcFlag, bool sweepFlag) {
 			return default(SVGPathSegArcAbs);
 		}
 
-		public SVGPathSegArcRel CreateSVGPathSegArcRel(float x, float y, float r1, float r2, float angle, bool largeArcFlag, bool sweepFlag) {
+		public SVGPathSegArcRel CreateSVGPathSegArcRel(double x, double y, double r1, double r2, double angle, bool largeArcFlag, bool sweepFlag) {
 			return default(SVGPathSegArcRel);
 		}
 
@@ -55,79 +55,79 @@ namespace System.Html.Media.Graphics.SVG {
 			return default(SVGPathSegClosePath);
 		}
 
-		public SVGPathSegCurvetoCubicAbs CreateSVGPathSegCurvetoCubicAbs(float x, float y, float x1, float y1, float x2, float y2) {
+		public SVGPathSegCurvetoCubicAbs CreateSVGPathSegCurvetoCubicAbs(double x, double y, double x1, double y1, double x2, double y2) {
 			return default(SVGPathSegCurvetoCubicAbs);
 		}
 
-		public SVGPathSegCurvetoCubicRel CreateSVGPathSegCurvetoCubicRel(float x, float y, float x1, float y1, float x2, float y2) {
+		public SVGPathSegCurvetoCubicRel CreateSVGPathSegCurvetoCubicRel(double x, double y, double x1, double y1, double x2, double y2) {
 			return default(SVGPathSegCurvetoCubicRel);
 		}
 
-		public SVGPathSegCurvetoCubicSmoothAbs CreateSVGPathSegCurvetoCubicSmoothAbs(float x, float y, float x2, float y2) {
+		public SVGPathSegCurvetoCubicSmoothAbs CreateSVGPathSegCurvetoCubicSmoothAbs(double x, double y, double x2, double y2) {
 			return default(SVGPathSegCurvetoCubicSmoothAbs);
 		}
 
-		public SVGPathSegCurvetoCubicSmoothRel CreateSVGPathSegCurvetoCubicSmoothRel(float x, float y, float x2, float y2) {
+		public SVGPathSegCurvetoCubicSmoothRel CreateSVGPathSegCurvetoCubicSmoothRel(double x, double y, double x2, double y2) {
 			return default(SVGPathSegCurvetoCubicSmoothRel);
 		}
 
-		public SVGPathSegCurvetoQuadraticAbs CreateSVGPathSegCurvetoQuadraticAbs(float x, float y, float x1, float y1) {
+		public SVGPathSegCurvetoQuadraticAbs CreateSVGPathSegCurvetoQuadraticAbs(double x, double y, double x1, double y1) {
 			return default(SVGPathSegCurvetoQuadraticAbs);
 		}
 
-		public SVGPathSegCurvetoQuadraticRel CreateSVGPathSegCurvetoQuadraticRel(float x, float y, float x1, float y1) {
+		public SVGPathSegCurvetoQuadraticRel CreateSVGPathSegCurvetoQuadraticRel(double x, double y, double x1, double y1) {
 			return default(SVGPathSegCurvetoQuadraticRel);
 		}
 
-		public SVGPathSegCurvetoQuadraticSmoothAbs CreateSVGPathSegCurvetoQuadraticSmoothAbs(float x, float y) {
+		public SVGPathSegCurvetoQuadraticSmoothAbs CreateSVGPathSegCurvetoQuadraticSmoothAbs(double x, double y) {
 			return default(SVGPathSegCurvetoQuadraticSmoothAbs);
 		}
 
-		public SVGPathSegCurvetoQuadraticSmoothRel CreateSVGPathSegCurvetoQuadraticSmoothRel(float x, float y) {
+		public SVGPathSegCurvetoQuadraticSmoothRel CreateSVGPathSegCurvetoQuadraticSmoothRel(double x, double y) {
 			return default(SVGPathSegCurvetoQuadraticSmoothRel);
 		}
 
-		public SVGPathSegLinetoAbs CreateSVGPathSegLinetoAbs(float x, float y) {
+		public SVGPathSegLinetoAbs CreateSVGPathSegLinetoAbs(double x, double y) {
 			return default(SVGPathSegLinetoAbs);
 		}
 
-		public SVGPathSegLinetoHorizontalAbs CreateSVGPathSegLinetoHorizontalAbs(float x) {
+		public SVGPathSegLinetoHorizontalAbs CreateSVGPathSegLinetoHorizontalAbs(double x) {
 			return default(SVGPathSegLinetoHorizontalAbs);
 		}
 
-		public SVGPathSegLinetoHorizontalRel CreateSVGPathSegLinetoHorizontalRel(float x) {
+		public SVGPathSegLinetoHorizontalRel CreateSVGPathSegLinetoHorizontalRel(double x) {
 			return default(SVGPathSegLinetoHorizontalRel);
 		}
 
-		public SVGPathSegLinetoRel CreateSVGPathSegLinetoRel(float x, float y) {
+		public SVGPathSegLinetoRel CreateSVGPathSegLinetoRel(double x, double y) {
 			return default(SVGPathSegLinetoRel);
 		}
 
-		public SVGPathSegLinetoVerticalAbs CreateSVGPathSegLinetoVerticalAbs(float y) {
+		public SVGPathSegLinetoVerticalAbs CreateSVGPathSegLinetoVerticalAbs(double y) {
 			return default(SVGPathSegLinetoVerticalAbs);
 		}
 
-		public SVGPathSegLinetoVerticalRel CreateSVGPathSegLinetoVerticalRel(float y) {
+		public SVGPathSegLinetoVerticalRel CreateSVGPathSegLinetoVerticalRel(double y) {
 			return default(SVGPathSegLinetoVerticalRel);
 		}
 
-		public SVGPathSegMovetoAbs CreateSVGPathSegMovetoAbs(float x, float y) {
+		public SVGPathSegMovetoAbs CreateSVGPathSegMovetoAbs(double x, double y) {
 			return default(SVGPathSegMovetoAbs);
 		}
 
-		public SVGPathSegMovetoRel CreateSVGPathSegMovetoRel(float x, float y) {
+		public SVGPathSegMovetoRel CreateSVGPathSegMovetoRel(double x, double y) {
 			return default(SVGPathSegMovetoRel);
 		}
 
-		public int GetPathSegAtLength(float distance) {
+		public int GetPathSegAtLength(double distance) {
 			return 0;
 		}
 
-		public SVGPoint GetPointAtLength(float distance) {
+		public SVGPoint GetPointAtLength(double distance) {
 			return default(SVGPoint);
 		}
 
-		public float GetTotalLength() {
+		public double GetTotalLength() {
 			return 0;
 		}
 

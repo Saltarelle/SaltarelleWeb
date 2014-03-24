@@ -175,7 +175,7 @@ namespace System.Html {
 		public static void CaptureEvents() {
 		}
 
-		public static CaretPosition CaretPositionFromPoint(float x, float y) {
+		public static CaretPosition CaretPositionFromPoint(double x, double y) {
 			return default(CaretPosition);
 		}
 
@@ -379,11 +379,11 @@ namespace System.Html {
 			return default(Touch);
 		}
 
-		public static Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, float rotationAngle) {
+		public static Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle) {
 			return default(Touch);
 		}
 
-		public static Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, float rotationAngle, float force) {
+		public static Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle, double force) {
 			return default(Touch);
 		}
 

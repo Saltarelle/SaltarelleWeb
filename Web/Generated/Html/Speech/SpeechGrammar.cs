@@ -16,7 +16,7 @@ namespace System.Html.Speech {
 		}
 
 		[IntrinsicProperty]
-		public float Weight {
+		public double Weight {
 			get {
 				return 0;
 			}

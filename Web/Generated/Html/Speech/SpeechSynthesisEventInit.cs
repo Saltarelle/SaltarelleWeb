@@ -8,7 +8,7 @@ namespace System.Html.Speech {
 			set;
 		}
 
-		public float ElapsedTime {
+		public double ElapsedTime {
 			get;
 			set;
 		}

@@ -39,24 +39,24 @@ namespace System.Html.Media.Graphics.SVG {
 		public void BeginElement() {
 		}
 
-		public void BeginElementAt(float offset) {
+		public void BeginElementAt(double offset) {
 		}
 
 		public void EndElement() {
 		}
 
-		public void EndElementAt(float offset) {
+		public void EndElementAt(double offset) {
 		}
 
-		public float GetCurrentTime() {
+		public double GetCurrentTime() {
 			return 0;
 		}
 
-		public float GetSimpleDuration() {
+		public double GetSimpleDuration() {
 			return 0;
 		}
 
-		public float GetStartTime() {
+		public double GetStartTime() {
 			return 0;
 		}
 

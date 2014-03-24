@@ -9,7 +9,7 @@ namespace System.Html.Media.Graphics.SVG {
 		public void ConvertToSpecifiedUnits(SVGLengthType unitType) {
 		}
 
-		public void NewValueSpecifiedUnits(SVGLengthType unitType, float valueInSpecifiedUnits) {
+		public void NewValueSpecifiedUnits(SVGLengthType unitType, double valueInSpecifiedUnits) {
 		}
 
 		[ScriptName("SVG_LENGTHTYPE_CM")]
@@ -53,7 +53,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float Value {
+		public double Value {
 			get {
 				return 0;
 			}
@@ -71,7 +71,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float ValueInSpecifiedUnits {
+		public double ValueInSpecifiedUnits {
 			get {
 				return 0;
 			}

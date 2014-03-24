@@ -7,7 +7,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float NewScale {
+		public double NewScale {
 			get {
 				return 0;
 			}
@@ -21,7 +21,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float PreviousScale {
+		public double PreviousScale {
 			get {
 				return 0;
 			}

@@ -51,7 +51,7 @@ namespace System.Xml {
 			return default(XmlNode);
 		}
 
-		public CaretPosition CaretPositionFromPoint(float x, float y) {
+		public CaretPosition CaretPositionFromPoint(double x, double y) {
 			return default(CaretPosition);
 		}
 
@@ -234,11 +234,11 @@ namespace System.Xml {
 			return default(Touch);
 		}
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, float rotationAngle) {
+		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle) {
 			return default(Touch);
 		}
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, float rotationAngle, float force) {
+		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle, double force) {
 			return default(Touch);
 		}
 
@@ -311,7 +311,7 @@ namespace System.Xml {
 			}
 		}
 
-		public XmlElement ElementFromPoint(float x, float y) {
+		public XmlElement ElementFromPoint(double x, double y) {
 			return default(XmlElement);
 		}
 

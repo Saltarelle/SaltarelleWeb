@@ -73,7 +73,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float CurrentScale {
+		public double CurrentScale {
 			get {
 				return 0;
 			}
@@ -94,7 +94,7 @@ namespace System.Html.Media.Graphics.SVG {
 		public void ForceRedraw() {
 		}
 
-		public float GetCurrentTime() {
+		public double GetCurrentTime() {
 			return 0;
 		}
 
@@ -113,14 +113,14 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float PixelUnitToMillimeterX {
+		public double PixelUnitToMillimeterX {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public float PixelUnitToMillimeterY {
+		public double PixelUnitToMillimeterY {
 			get {
 				return 0;
 			}
@@ -164,20 +164,20 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float ScreenPixelToMillimeterX {
+		public double ScreenPixelToMillimeterX {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public float ScreenPixelToMillimeterY {
+		public double ScreenPixelToMillimeterY {
 			get {
 				return 0;
 			}
 		}
 
-		public void SetCurrentTime(float seconds) {
+		public void SetCurrentTime(double seconds) {
 		}
 
 		public int SuspendRedraw(int maxWaitMilliseconds) {

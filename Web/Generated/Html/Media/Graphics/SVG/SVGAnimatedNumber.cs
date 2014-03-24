@@ -7,14 +7,14 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float AnimVal {
+		public double AnimVal {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public float BaseVal {
+		public double BaseVal {
 			get {
 				return 0;
 			}

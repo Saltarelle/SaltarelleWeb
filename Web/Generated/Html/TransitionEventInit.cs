@@ -3,7 +3,7 @@
 namespace System.Html {
 	[Imported, Serializable]
 	public partial class TransitionEventInit : EventInit {
-		public float ElapsedTime {
+		public double ElapsedTime {
 			get;
 			set;
 		}

@@ -40,7 +40,7 @@ namespace System.Html.Media.Graphics.SVG {
 			return 0;
 		}
 
-		public float GetComputedTextLength() {
+		public double GetComputedTextLength() {
 			return 0;
 		}
 
@@ -56,7 +56,7 @@ namespace System.Html.Media.Graphics.SVG {
 			return 0;
 		}
 
-		public float GetRotationOfChar(int charnum) {
+		public double GetRotationOfChar(int charnum) {
 			return 0;
 		}
 
@@ -64,7 +64,7 @@ namespace System.Html.Media.Graphics.SVG {
 			return default(SVGPoint);
 		}
 
-		public float GetSubStringLength(int charnum, int nchars) {
+		public double GetSubStringLength(int charnum, int nchars) {
 			return 0;
 		}
 

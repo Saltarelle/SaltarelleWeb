@@ -115,7 +115,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static float DevicePixelRatio {
+		public static double DevicePixelRatio {
 			get {
 				return 0;
 			}

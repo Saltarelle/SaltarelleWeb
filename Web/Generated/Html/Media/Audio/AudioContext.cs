@@ -46,7 +46,7 @@ namespace System.Html.Media.Audio {
 			return default(AudioBuffer);
 		}
 
-		public AudioBuffer CreateBuffer(int numberOfChannels, int length, float sampleRate) {
+		public AudioBuffer CreateBuffer(int numberOfChannels, int length, double sampleRate) {
 			return default(AudioBuffer);
 		}
 
@@ -220,7 +220,7 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IntrinsicProperty]
-		public float SampleRate {
+		public double SampleRate {
 			get {
 				return 0;
 			}
