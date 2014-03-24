@@ -49,7 +49,7 @@ namespace System.Net.WebRTC {
 		}
 
 		[IntrinsicProperty]
-		public uint BufferedAmount {
+		public int BufferedAmount {
 			get {
 				return 0;
 			}

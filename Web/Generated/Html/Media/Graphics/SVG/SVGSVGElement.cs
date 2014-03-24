@@ -180,7 +180,7 @@ namespace System.Html.Media.Graphics.SVG {
 		public void SetCurrentTime(float seconds) {
 		}
 
-		public uint SuspendRedraw(uint maxWaitMilliseconds) {
+		public int SuspendRedraw(int maxWaitMilliseconds) {
 			return 0;
 		}
 
@@ -196,7 +196,7 @@ namespace System.Html.Media.Graphics.SVG {
 		public void UnpauseAnimations() {
 		}
 
-		public void UnsuspendRedraw(uint suspendHandleID) {
+		public void UnsuspendRedraw(int suspendHandleID) {
 		}
 
 		public void UnsuspendRedrawAll() {

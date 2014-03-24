@@ -153,7 +153,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Hspace {
+		public int Hspace {
 			get {
 				return 0;
 			}
@@ -254,7 +254,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Vspace {
+		public int Vspace {
 			get {
 				return 0;
 			}

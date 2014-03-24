@@ -98,7 +98,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint ColSpan {
+		public int ColSpan {
 			get {
 				return 0;
 			}
@@ -164,7 +164,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint RowSpan {
+		public int RowSpan {
 			get {
 				return 0;
 			}

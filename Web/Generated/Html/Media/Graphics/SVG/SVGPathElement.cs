@@ -119,7 +119,7 @@ namespace System.Html.Media.Graphics.SVG {
 			return default(SVGPathSegMovetoRel);
 		}
 
-		public uint GetPathSegAtLength(float distance) {
+		public int GetPathSegAtLength(float distance) {
 			return 0;
 		}
 

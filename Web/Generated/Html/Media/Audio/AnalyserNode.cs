@@ -38,7 +38,7 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IntrinsicProperty]
-		public uint FftSize {
+		public int FftSize {
 			get {
 				return 0;
 			}
@@ -47,7 +47,7 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IntrinsicProperty]
-		public uint FrequencyBinCount {
+		public int FrequencyBinCount {
 			get {
 				return 0;
 			}

@@ -8,7 +8,7 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public SourceBuffer this[uint index] {
+		public SourceBuffer this[int index] {
 			get {
 				return default(SourceBuffer);
 			}
@@ -50,7 +50,7 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

@@ -6,20 +6,20 @@ namespace System.Html.Media.Graphics.WebGL {
 		internal WebGLExtensionInstancedArrays() {
 		}
 
-		public void DrawArraysInstancedANGLE(uint mode, int first, int count, int primcount) {
+		public void DrawArraysInstancedANGLE(int mode, int first, int count, int primcount) {
 		}
 
-		public void DrawElementsInstancedANGLE(uint mode, int count, uint type, long offset, int primcount) {
+		public void DrawElementsInstancedANGLE(int mode, int count, int type, long offset, int primcount) {
 		}
 
 		[IntrinsicProperty, ScriptName("VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE")]
-		public uint VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE {
+		public int VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE {
 			get {
 				return 0;
 			}
 		}
 
-		public void VertexAttribDivisorANGLE(uint index, uint divisor) {
+		public void VertexAttribDivisorANGLE(int index, int divisor) {
 		}
 	}
 }

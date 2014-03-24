@@ -94,7 +94,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Span {
+		public int Span {
 			get {
 				return 0;
 			}

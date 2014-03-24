@@ -8,7 +8,7 @@ namespace System.Net.WebRTC {
 			set;
 		}
 
-		public uint PacketsSent {
+		public int PacketsSent {
 			get;
 			set;
 		}

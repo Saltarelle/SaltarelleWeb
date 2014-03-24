@@ -37,7 +37,7 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IntrinsicProperty]
-		public uint MaxChannelCount {
+		public int MaxChannelCount {
 			get {
 				return 0;
 			}

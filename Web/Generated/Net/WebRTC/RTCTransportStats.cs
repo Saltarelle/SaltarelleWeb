@@ -3,12 +3,12 @@
 namespace System.Net.WebRTC {
 	[Imported, Serializable]
 	public partial class RTCTransportStats : RTCStats {
-		public uint BytesReceived {
+		public int BytesReceived {
 			get;
 			set;
 		}
 
-		public uint BytesSent {
+		public int BytesSent {
 			get;
 			set;
 		}

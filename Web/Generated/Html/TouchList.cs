@@ -8,7 +8,7 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public Touch this[uint index] {
+		public Touch this[int index] {
 			get {
 				return default(Touch);
 			}
@@ -23,12 +23,12 @@ namespace System.Html {
 			return default(Touch);
 		}
 
-		public Touch Item(uint index) {
+		public Touch Item(int index) {
 			return default(Touch);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

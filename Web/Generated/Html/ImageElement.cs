@@ -8,11 +8,11 @@ namespace System.Html {
 		}
 
 		[InlineCode("new Image({width})")]
-		public ImageElement(uint width) {
+		public ImageElement(int width) {
 		}
 
 		[InlineCode("new Image({width}, {height})")]
-		public ImageElement(uint width, uint height) {
+		public ImageElement(int width, int height) {
 		}
 
 		public void AddEventListener(ImageElementEvents type, Action listener) {
@@ -89,7 +89,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Height {
+		public int Height {
 			get {
 				return 0;
 			}
@@ -98,7 +98,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Hspace {
+		public int Hspace {
 			get {
 				return 0;
 			}
@@ -143,14 +143,14 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint NaturalHeight {
+		public int NaturalHeight {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public uint NaturalWidth {
+		public int NaturalWidth {
 			get {
 				return 0;
 			}
@@ -205,7 +205,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Vspace {
+		public int Vspace {
 			get {
 				return 0;
 			}
@@ -214,7 +214,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Width {
+		public int Width {
 			get {
 				return 0;
 			}

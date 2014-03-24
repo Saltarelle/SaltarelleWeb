@@ -102,7 +102,7 @@ namespace System.Xml {
 		public void RemoveEventListener(XmlTextEvents type, IEventListener listener, bool capture) {
 		}
 
-		public XmlText SplitText(uint offset) {
+		public XmlText SplitText(int offset) {
 			return default(XmlText);
 		}
 

@@ -95,7 +95,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Which {
+		public int Which {
 			get {
 				return 0;
 			}

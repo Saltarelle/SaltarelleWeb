@@ -9,7 +9,7 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public DataTransferItem this[uint index] {
+		public DataTransferItem this[int index] {
 			get {
 				return default(DataTransferItem);
 			}
@@ -32,13 +32,13 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}
 		}
 
-		public void Remove(uint index) {
+		public void Remove(int index) {
 		}
 	}
 }

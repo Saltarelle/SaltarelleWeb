@@ -50,7 +50,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Cols {
+		public int Cols {
 			get {
 				return 0;
 			}
@@ -159,7 +159,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Rows {
+		public int Rows {
 			get {
 				return 0;
 			}
@@ -180,7 +180,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint SelectionEnd {
+		public int SelectionEnd {
 			get {
 				return 0;
 			}
@@ -189,7 +189,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint SelectionStart {
+		public int SelectionStart {
 			get {
 				return 0;
 			}
@@ -203,20 +203,20 @@ namespace System.Html {
 		public void SetRangeText(string replacement) {
 		}
 
-		public void SetRangeText(string replacement, uint start, uint end) {
+		public void SetRangeText(string replacement, int start, int end) {
 		}
 
-		public void SetRangeText(string replacement, uint start, uint end, SelectionMode selectionMode) {
+		public void SetRangeText(string replacement, int start, int end, SelectionMode selectionMode) {
 		}
 
-		public void SetSelectionRange(uint start, uint end) {
+		public void SetSelectionRange(int start, int end) {
 		}
 
-		public void SetSelectionRange(uint start, uint end, string direction) {
+		public void SetSelectionRange(int start, int end, string direction) {
 		}
 
 		[IntrinsicProperty]
-		public uint TextLength {
+		public int TextLength {
 			get {
 				return 0;
 			}

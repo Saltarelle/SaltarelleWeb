@@ -13,12 +13,12 @@ namespace System.Net.WebRTC {
 			set;
 		}
 
-		public uint PacketsLost {
+		public int PacketsLost {
 			get;
 			set;
 		}
 
-		public uint PacketsReceived {
+		public int PacketsReceived {
 			get;
 			set;
 		}

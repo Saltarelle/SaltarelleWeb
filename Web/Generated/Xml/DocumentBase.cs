@@ -63,7 +63,7 @@ namespace System.Xml {
 		}
 
 		[IntrinsicProperty]
-		public uint ChildElementCount {
+		public int ChildElementCount {
 			get {
 				return 0;
 			}

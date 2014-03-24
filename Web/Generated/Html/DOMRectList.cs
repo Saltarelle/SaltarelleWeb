@@ -8,7 +8,7 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public DOMRect this[uint index] {
+		public DOMRect this[int index] {
 			get {
 				return default(DOMRect);
 			}
@@ -19,12 +19,12 @@ namespace System.Html {
 			return null;
 		}
 
-		public DOMRect Item(uint index) {
+		public DOMRect Item(int index) {
 			return default(DOMRect);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

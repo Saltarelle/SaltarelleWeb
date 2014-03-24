@@ -8,7 +8,7 @@ namespace System.Xml {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public XmlNode this[uint index] {
+		public XmlNode this[int index] {
 			get {
 				return default(XmlNode);
 			}
@@ -19,12 +19,12 @@ namespace System.Xml {
 			return null;
 		}
 
-		public XmlNode Item(uint index) {
+		public XmlNode Item(int index) {
 			return default(XmlNode);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

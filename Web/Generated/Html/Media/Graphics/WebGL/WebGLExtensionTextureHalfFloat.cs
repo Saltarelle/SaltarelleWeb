@@ -7,7 +7,7 @@ namespace System.Html.Media.Graphics.WebGL {
 		}
 
 		[IntrinsicProperty, ScriptName("HALF_FLOAT_OES")]
-		public uint HALF_FLOAT_OES {
+		public int HALF_FLOAT_OES {
 			get {
 				return 0;
 			}

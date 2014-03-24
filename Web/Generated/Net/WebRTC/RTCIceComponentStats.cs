@@ -8,12 +8,12 @@ namespace System.Net.WebRTC {
 			set;
 		}
 
-		public uint BytesReceived {
+		public int BytesReceived {
 			get;
 			set;
 		}
 
-		public uint BytesSent {
+		public int BytesSent {
 			get;
 			set;
 		}

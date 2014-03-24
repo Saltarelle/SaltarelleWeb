@@ -418,7 +418,7 @@ namespace Generator {
 						case BuiltinType.Short:              return new PrimitiveType("short");
 						case BuiltinType.UnsignedShort:      return new PrimitiveType("ushort");
 						case BuiltinType.Long:               return new PrimitiveType("int");
-						case BuiltinType.UnsignedLong:       return new PrimitiveType("uint");
+						case BuiltinType.UnsignedLong:       return new PrimitiveType("int");
 						case BuiltinType.LongLong:           return new PrimitiveType("long");
 						case BuiltinType.UnsignedLongLong:   return new PrimitiveType("ulong");
 						default: throw new ArgumentException("Invalid builtin type " + builtin.BuiltinType);

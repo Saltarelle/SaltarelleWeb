@@ -21,7 +21,7 @@ namespace System.Html.Media.Graphics.WebGL {
 		}
 
 		[IntrinsicProperty]
-		public uint Type {
+		public int Type {
 			get {
 				return 0;
 			}

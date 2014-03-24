@@ -42,7 +42,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Height {
+		public int Height {
 			get {
 				return 0;
 			}
@@ -90,21 +90,21 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint VideoHeight {
+		public int VideoHeight {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public uint VideoWidth {
+		public int VideoWidth {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public uint Width {
+		public int Width {
 			get {
 				return 0;
 			}

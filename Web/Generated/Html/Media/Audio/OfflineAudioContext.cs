@@ -6,7 +6,7 @@ namespace System.Html.Media.Audio {
 		internal OfflineAudioContext() {
 		}
 
-		public OfflineAudioContext(uint numberOfChannels, uint length, float sampleRate) {
+		public OfflineAudioContext(int numberOfChannels, int length, float sampleRate) {
 		}
 
 		public void AddEventListener(OfflineAudioContextEvents type, Action listener) {

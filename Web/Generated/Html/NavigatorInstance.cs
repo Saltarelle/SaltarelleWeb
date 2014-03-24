@@ -173,11 +173,11 @@ namespace System.Html {
 			}
 		}
 
-		public bool Vibrate(uint duration) {
+		public bool Vibrate(int duration) {
 			return false;
 		}
 
-		public bool Vibrate(uint[] pattern) {
+		public bool Vibrate(int[] pattern) {
 			return false;
 		}
 	}

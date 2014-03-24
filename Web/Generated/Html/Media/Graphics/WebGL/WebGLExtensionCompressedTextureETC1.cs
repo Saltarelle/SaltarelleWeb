@@ -7,7 +7,7 @@ namespace System.Html.Media.Graphics.WebGL {
 		}
 
 		[IntrinsicProperty, ScriptName("COMPRESSED_RGB_ETC1_WEBGL")]
-		public uint COMPRESSED_RGB_ETC1_WEBGL {
+		public int COMPRESSED_RGB_ETC1_WEBGL {
 			get {
 				return 0;
 			}

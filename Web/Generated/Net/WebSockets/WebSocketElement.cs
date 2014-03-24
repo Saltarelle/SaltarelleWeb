@@ -13,12 +13,12 @@ namespace System.Net.WebSockets {
 			set;
 		}
 
-		public uint Msgreceived {
+		public int Msgreceived {
 			get;
 			set;
 		}
 
-		public uint Msgsent {
+		public int Msgsent {
 			get;
 			set;
 		}

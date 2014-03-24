@@ -10,13 +10,13 @@ namespace System.Html.Media.Audio {
 		public void CopyFromChannel(Float32Array destination, int channelNumber) {
 		}
 
-		public void CopyFromChannel(Float32Array destination, int channelNumber, uint startInChannel) {
+		public void CopyFromChannel(Float32Array destination, int channelNumber, int startInChannel) {
 		}
 
 		public void CopyToChannel(Float32Array source, int channelNumber) {
 		}
 
-		public void CopyToChannel(Float32Array source, int channelNumber, uint startInChannel) {
+		public void CopyToChannel(Float32Array source, int channelNumber, int startInChannel) {
 		}
 
 		[IntrinsicProperty]
@@ -26,7 +26,7 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		public Float32Array GetChannelData(uint channel) {
+		public Float32Array GetChannelData(int channel) {
 			return default(Float32Array);
 		}
 

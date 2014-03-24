@@ -9,14 +9,14 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public XmlAttribute this[string name] {
+		public XmlAttribute this[int index] {
 			get {
 				return default(XmlAttribute);
 			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public XmlAttribute this[uint index] {
+		public XmlAttribute this[string name] {
 			get {
 				return default(XmlAttribute);
 			}
@@ -35,12 +35,12 @@ namespace System.Html {
 			return default(XmlAttribute);
 		}
 
-		public XmlAttribute Item(uint index) {
+		public XmlAttribute Item(int index) {
 			return default(XmlAttribute);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

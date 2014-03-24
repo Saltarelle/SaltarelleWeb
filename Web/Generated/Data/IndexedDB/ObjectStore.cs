@@ -57,7 +57,7 @@ namespace System.Data.IndexedDB {
 			return default(Request);
 		}
 
-		public Request GetAll(object key, uint limit) {
+		public Request GetAll(object key, int limit) {
 			return default(Request);
 		}
 
@@ -65,7 +65,7 @@ namespace System.Data.IndexedDB {
 			return default(Request);
 		}
 
-		public Request GetAllKeys(object key, uint limit) {
+		public Request GetAllKeys(object key, int limit) {
 			return default(Request);
 		}
 

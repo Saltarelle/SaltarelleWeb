@@ -13,7 +13,7 @@ namespace System.Html.Speech {
 		}
 
 		[IntrinsicProperty]
-		public uint CharIndex {
+		public int CharIndex {
 			get {
 				return 0;
 			}

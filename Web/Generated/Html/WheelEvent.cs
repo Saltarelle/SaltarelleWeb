@@ -41,12 +41,12 @@ namespace System.Html {
 		}
 
 		[ScriptName("DOM_DELTA_LINE")]
-		public const uint DOM_DELTA_LINE = 1;
+		public const int DOM_DELTA_LINE = 1;
 
 		[ScriptName("DOM_DELTA_PAGE")]
-		public const uint DOM_DELTA_PAGE = 2;
+		public const int DOM_DELTA_PAGE = 2;
 
 		[ScriptName("DOM_DELTA_PIXEL")]
-		public const uint DOM_DELTA_PIXEL = 0;
+		public const int DOM_DELTA_PIXEL = 0;
 	}
 }

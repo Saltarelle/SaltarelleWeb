@@ -8,7 +8,7 @@ namespace System.Net.Messaging {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public MessagePort this[uint index] {
+		public MessagePort this[int index] {
 			get {
 				return default(MessagePort);
 			}
@@ -19,12 +19,12 @@ namespace System.Net.Messaging {
 			return null;
 		}
 
-		public MessagePort Item(uint index) {
+		public MessagePort Item(int index) {
 			return default(MessagePort);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

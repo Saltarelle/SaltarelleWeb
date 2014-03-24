@@ -190,7 +190,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static uint ChildElementCount {
+		public static int ChildElementCount {
 			get {
 				return 0;
 			}

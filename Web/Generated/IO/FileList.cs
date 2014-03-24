@@ -8,7 +8,7 @@ namespace System.IO {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public File this[uint index] {
+		public File this[int index] {
 			get {
 				return default(File);
 			}
@@ -19,12 +19,12 @@ namespace System.IO {
 			return null;
 		}
 
-		public File Item(uint index) {
+		public File Item(int index) {
 			return default(File);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

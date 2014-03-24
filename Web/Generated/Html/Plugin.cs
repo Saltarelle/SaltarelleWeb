@@ -8,14 +8,14 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public MimeType this[string name] {
+		public MimeType this[int index] {
 			get {
 				return default(MimeType);
 			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public MimeType this[uint index] {
+		public MimeType this[string name] {
 			get {
 				return default(MimeType);
 			}
@@ -40,12 +40,12 @@ namespace System.Html {
 			return null;
 		}
 
-		public MimeType Item(uint index) {
+		public MimeType Item(int index) {
 			return default(MimeType);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

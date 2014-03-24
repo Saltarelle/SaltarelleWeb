@@ -14,7 +14,7 @@ namespace System.Html.Media.Audio {
 			}
 		}
 
-		public void InitAudioAvailableEvent(string type, bool canBubble, bool cancelable, float[] frameBuffer, uint frameBufferLength, float time, bool allowAudioData) {
+		public void InitAudioAvailableEvent(string type, bool canBubble, bool cancelable, float[] frameBuffer, int frameBufferLength, float time, bool allowAudioData) {
 		}
 
 		[IntrinsicProperty]

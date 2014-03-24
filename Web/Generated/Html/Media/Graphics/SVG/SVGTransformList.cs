@@ -8,7 +8,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public SVGTransform this[uint index] {
+		public SVGTransform this[int index] {
 			get {
 				return default(SVGTransform);
 			}
@@ -34,7 +34,7 @@ namespace System.Html.Media.Graphics.SVG {
 			return null;
 		}
 
-		public SVGTransform GetItem(uint index) {
+		public SVGTransform GetItem(int index) {
 			return default(SVGTransform);
 		}
 
@@ -42,29 +42,29 @@ namespace System.Html.Media.Graphics.SVG {
 			return default(SVGTransform);
 		}
 
-		public SVGTransform InsertItemBefore(SVGTransform newItem, uint index) {
+		public SVGTransform InsertItemBefore(SVGTransform newItem, int index) {
 			return default(SVGTransform);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public uint NumberOfItems {
+		public int NumberOfItems {
 			get {
 				return 0;
 			}
 		}
 
-		public SVGTransform RemoveItem(uint index) {
+		public SVGTransform RemoveItem(int index) {
 			return default(SVGTransform);
 		}
 
-		public SVGTransform ReplaceItem(SVGTransform newItem, uint index) {
+		public SVGTransform ReplaceItem(SVGTransform newItem, int index) {
 			return default(SVGTransform);
 		}
 	}

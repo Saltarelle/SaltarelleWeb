@@ -47,7 +47,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Height {
+		public int Height {
 			get {
 				return 0;
 			}
@@ -100,7 +100,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Width {
+		public int Width {
 			get {
 				return 0;
 			}

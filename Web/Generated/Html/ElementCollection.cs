@@ -8,14 +8,14 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public Element this[string name] {
+		public Element this[int index] {
 			get {
 				return default(Element);
 			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public Element this[uint index] {
+		public Element this[string name] {
 			get {
 				return default(Element);
 			}
@@ -26,12 +26,12 @@ namespace System.Html {
 			return null;
 		}
 
-		public Element Item(uint index) {
+		public Element Item(int index) {
 			return default(Element);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

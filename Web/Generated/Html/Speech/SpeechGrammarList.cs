@@ -8,7 +8,7 @@ namespace System.Html.Speech {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public SpeechGrammar this[uint index] {
+		public SpeechGrammar this[int index] {
 			get {
 				return default(SpeechGrammar);
 			}
@@ -31,12 +31,12 @@ namespace System.Html.Speech {
 			return null;
 		}
 
-		public SpeechGrammar Item(uint index) {
+		public SpeechGrammar Item(int index) {
 			return default(SpeechGrammar);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

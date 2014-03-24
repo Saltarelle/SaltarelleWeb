@@ -3,17 +3,17 @@
 namespace System.Net.WebRTC {
 	[Imported, Serializable]
 	public partial class RTCMediaStreamTrackStats : RTCStats {
-		public uint AudioLevel {
+		public int AudioLevel {
 			get;
 			set;
 		}
 
-		public uint FrameHeight {
+		public int FrameHeight {
 			get;
 			set;
 		}
 
-		public uint FramesDecoded {
+		public int FramesDecoded {
 			get;
 			set;
 		}
@@ -23,17 +23,17 @@ namespace System.Net.WebRTC {
 			set;
 		}
 
-		public uint FramesReceived {
+		public int FramesReceived {
 			get;
 			set;
 		}
 
-		public uint FramesSent {
+		public int FramesSent {
 			get;
 			set;
 		}
 
-		public uint FrameWidth {
+		public int FrameWidth {
 			get;
 			set;
 		}

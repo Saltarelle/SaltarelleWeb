@@ -58,7 +58,7 @@ namespace System.Net.WebSockets {
 		}
 
 		[IntrinsicProperty]
-		public uint BufferedAmount {
+		public int BufferedAmount {
 			get {
 				return 0;
 			}

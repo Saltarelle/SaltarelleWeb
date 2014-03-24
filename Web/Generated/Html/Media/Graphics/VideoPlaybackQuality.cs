@@ -7,7 +7,7 @@ namespace System.Html.Media.Graphics {
 		}
 
 		[IntrinsicProperty]
-		public uint CorruptedVideoFrames {
+		public int CorruptedVideoFrames {
 			get {
 				return 0;
 			}
@@ -21,14 +21,14 @@ namespace System.Html.Media.Graphics {
 		}
 
 		[IntrinsicProperty]
-		public uint DroppedVideoFrames {
+		public int DroppedVideoFrames {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public uint TotalVideoFrames {
+		public int TotalVideoFrames {
 			get {
 				return 0;
 			}

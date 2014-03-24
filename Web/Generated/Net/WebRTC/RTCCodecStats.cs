@@ -3,12 +3,12 @@
 namespace System.Net.WebRTC {
 	[Imported, Serializable]
 	public partial class RTCCodecStats : RTCStats {
-		public uint Channels {
+		public int Channels {
 			get;
 			set;
 		}
 
-		public uint ClockRate {
+		public int ClockRate {
 			get;
 			set;
 		}
@@ -23,7 +23,7 @@ namespace System.Net.WebRTC {
 			set;
 		}
 
-		public uint PayloadType {
+		public int PayloadType {
 			get;
 			set;
 		}

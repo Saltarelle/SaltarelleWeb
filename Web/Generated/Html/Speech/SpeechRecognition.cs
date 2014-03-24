@@ -76,7 +76,7 @@ namespace System.Html.Speech {
 		}
 
 		[IntrinsicProperty]
-		public uint MaxAlternatives {
+		public int MaxAlternatives {
 			get {
 				return 0;
 			}

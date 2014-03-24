@@ -49,14 +49,14 @@ namespace System.Xml {
 			}
 		}
 
-		public void DeleteData(uint offset, uint count) {
+		public void DeleteData(int offset, int count) {
 		}
 
-		public void InsertData(uint offset, string data) {
+		public void InsertData(int offset, string data) {
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}
@@ -109,10 +109,10 @@ namespace System.Xml {
 		public void RemoveEventListener(XmlCharacterDataEvents type, IEventListener listener, bool capture) {
 		}
 
-		public void ReplaceData(uint offset, uint count, string data) {
+		public void ReplaceData(int offset, int count, string data) {
 		}
 
-		public string SubstringData(uint offset, uint count) {
+		public string SubstringData(int offset, int count) {
 			return null;
 		}
 	}
