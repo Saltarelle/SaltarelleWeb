@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using System.Xml;
 
 namespace System.Html {
 	[IgnoreNamespace, Imported(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'FORM'"), ScriptName("Element")]
@@ -9,16 +8,16 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public Element this[string name] {
+		public Element this[int index] {
 			get {
 				return default(Element);
 			}
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public XmlElement this[uint index] {
+		public Element this[string name] {
 			get {
-				return default(XmlElement);
+				return default(Element);
 			}
 		}
 
@@ -109,7 +108,7 @@ namespace System.Html {
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<XmlElement> GetEnumerator() {
+		public IEnumerator<Element> GetEnumerator() {
 			return null;
 		}
 

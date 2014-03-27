@@ -8,7 +8,7 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public CSSValue this[uint index] {
+		public CSSValue this[int index] {
 			get {
 				return default(CSSValue);
 			}
@@ -19,12 +19,12 @@ namespace System.Html {
 			return null;
 		}
 
-		public CSSValue Item(uint index) {
+		public CSSValue Item(int index) {
 			return default(CSSValue);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

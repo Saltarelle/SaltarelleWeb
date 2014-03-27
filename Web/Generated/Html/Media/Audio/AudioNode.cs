@@ -37,7 +37,7 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IntrinsicProperty]
-		public uint ChannelCount {
+		public int ChannelCount {
 			get {
 				return 0;
 			}
@@ -66,16 +66,16 @@ namespace System.Html.Media.Audio {
 		public void Connect(AudioNode destination) {
 		}
 
-		public void Connect(AudioNode destination, uint output) {
+		public void Connect(AudioNode destination, int output) {
 		}
 
-		public void Connect(AudioNode destination, uint output, uint input) {
+		public void Connect(AudioNode destination, int output, int input) {
 		}
 
 		public void Connect(AudioParam destination) {
 		}
 
-		public void Connect(AudioParam destination, uint output) {
+		public void Connect(AudioParam destination, int output) {
 		}
 
 		[IntrinsicProperty]
@@ -88,18 +88,18 @@ namespace System.Html.Media.Audio {
 		public void Disconnect() {
 		}
 
-		public void Disconnect(uint output) {
+		public void Disconnect(int output) {
 		}
 
 		[IntrinsicProperty]
-		public uint NumberOfInputs {
+		public int NumberOfInputs {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public uint NumberOfOutputs {
+		public int NumberOfOutputs {
 			get {
 				return 0;
 			}

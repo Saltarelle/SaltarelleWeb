@@ -50,6 +50,12 @@
     <Compile Include="Data\Sql\SqlStatementErrorCallback.cs" />
     <Compile Include="Data\Sql\SqlTransactionCallback.cs" />
     <Compile Include="Html\CanvasElement.cs" />
+    <Compile Include="Html\DataTransfer.cs" />
+    <Compile Include="Html\DocumentInstance.cs" />
+    <Compile Include="Html\ShadowRoot.cs" />
+    <Compile Include="Html\IWindowTimers.cs" />
+    <Compile Include="Html\Location.cs" />
+    <Compile Include="Html\WindowInstance.cs" />
     <Compile Include="Html\DOMParser.cs" />
     <Compile Include="Html\EventPhase.cs" />
     <Compile Include="Html\Media\Audio\AudioContext.cs" />
@@ -83,6 +89,8 @@
     <Compile Include="Data\Sql\SqlDatabase.cs" />
     <Compile Include="Html\Media\MediaPlayability.cs" />
     <Compile Include="Html\Media\MediaPreload.cs" />
+    <Compile Include="Html\ElementNodeList.cs" />
+    <Compile Include="Net\WebRTC\RTCPeerConnection.cs" />
     <Compile Include="Net\XmlHttpRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Version.cs" />
@@ -92,6 +100,13 @@
       <SubType>Designer</SubType>
     </None>
     <Compile Include="Net\HttpVerb.cs" />
+    <Compile Include="Threading\WebWorkers\DedicatedWorkerGlobalScope.cs" />
+    <Compile Include="Threading\WebWorkers\SharedWorkerGlobalScope.cs" />
+    <Compile Include="Threading\WebWorkers\WorkerGlobalScope.cs" />
+    <Compile Include="Xml\XmlElementCollection.cs" />
+    <Compile Include="Xml\XmlProcessingInstruction.cs" />
+    <Compile Include="Xml\XmlComment.cs" />
+    <Compile Include="Xml\XmlText.cs" />
     <Compile Include="Xml\XmlDocument.cs" />
     <Compile Include="Xml\XmlDocumentParser.cs" />
     <Compile Include="Xml\XmlNode.cs" />

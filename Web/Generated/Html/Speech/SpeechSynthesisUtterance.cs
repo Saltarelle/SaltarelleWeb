@@ -112,7 +112,7 @@ namespace System.Html.Speech {
 		}
 
 		[IntrinsicProperty]
-		public float Pitch {
+		public double Pitch {
 			get {
 				return 0;
 			}
@@ -121,7 +121,7 @@ namespace System.Html.Speech {
 		}
 
 		[IntrinsicProperty]
-		public float Rate {
+		public double Rate {
 			get {
 				return 0;
 			}
@@ -178,7 +178,7 @@ namespace System.Html.Speech {
 		}
 
 		[IntrinsicProperty]
-		public float Volume {
+		public double Volume {
 			get {
 				return 0;
 			}

@@ -22,12 +22,12 @@ namespace System.Data.WebStorage {
 			return null;
 		}
 
-		public string Key(uint index) {
+		public string Key(int index) {
 			return null;
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

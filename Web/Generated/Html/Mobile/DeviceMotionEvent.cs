@@ -6,6 +6,12 @@ namespace System.Html.Mobile {
 		internal DeviceMotionEvent() {
 		}
 
+		public DeviceMotionEvent(string type) {
+		}
+
+		public DeviceMotionEvent(string type, DeviceMotionEventInit eventInitDict) {
+		}
+
 		[IntrinsicProperty]
 		public DeviceAcceleration Acceleration {
 			get {
@@ -20,10 +26,13 @@ namespace System.Html.Mobile {
 			}
 		}
 
+		public void InitDeviceMotionEvent(string type, bool canBubble, bool cancelable, DeviceAccelerationInit acceleration, DeviceAccelerationInit accelerationIncludingGravity, DeviceRotationRateInit rotationRate, double? interval) {
+		}
+
 		[IntrinsicProperty]
-		public double Interval {
+		public double? Interval {
 			get {
-				return 0;
+				return null;
 			}
 		}
 

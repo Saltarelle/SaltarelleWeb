@@ -18,8 +18,9 @@ namespace Generator.Meta {
 		public IReadOnlyDictionary<string, string> Names { get; private set; }
 		public bool Flags { get; private set; }
 		public bool GenerateInDerivedTypes { get; private set; }
+		public Regex ValueRegex { get; private set; }
 
-		public GeneratedEnum(string enumName, string enumNamespace, GeneratedEnumSourceType sourceType, Regex membersRegex, IEnumerable<Tuple<string, string>> names, bool flags, bool generateInDerivedTypes) {
+		public GeneratedEnum(string enumName, string enumNamespace, GeneratedEnumSourceType sourceType, Regex membersRegex, IEnumerable<Tuple<string, string>> names, bool flags, bool generateInDerivedTypes, Regex valueRegex) {
 			EnumName = enumName;
 			EnumNamespace = enumNamespace;
 			SourceType = sourceType;
@@ -27,6 +28,7 @@ namespace Generator.Meta {
 			Names = new ReadOnlyDictionary<string, string>((names ?? new Tuple<string, string>[0]).ToDictionary(n => n.Item1, n => n.Item2));
 			Flags = flags;
 			GenerateInDerivedTypes = generateInDerivedTypes;
+			ValueRegex = valueRegex;
 		}
 	}
 }

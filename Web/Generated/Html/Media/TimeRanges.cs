@@ -6,18 +6,18 @@ namespace System.Html.Media {
 		internal TimeRanges() {
 		}
 
-		public double End(uint index) {
+		public double End(int index) {
 			return 0;
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}
 		}
 
-		public double Start(uint index) {
+		public double Start(int index) {
 			return 0;
 		}
 	}

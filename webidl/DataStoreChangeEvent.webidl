@@ -6,14 +6,16 @@
 
 dictionary DataStoreChangeEventInit : EventInit {
   DOMString revisionId = "";
-  unsigned long id = 0;
+  DataStoreKey id = 0;
   DOMString operation = "";
+  DOMString owner = "";
 };
 
-[Pref="dom.datastore.enabled",
+[Func="Navigator::HasDataStoreSupport",
  Constructor(DOMString type, optional DataStoreChangeEventInit eventInitDict)]
 interface DataStoreChangeEvent : Event {
   readonly attribute DOMString revisionId;
-  readonly attribute unsigned long id;
+  readonly attribute DataStoreKey id;
   readonly attribute DOMString operation;
+  readonly attribute DOMString owner;
 };

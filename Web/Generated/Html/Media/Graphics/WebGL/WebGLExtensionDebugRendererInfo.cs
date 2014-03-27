@@ -7,14 +7,14 @@ namespace System.Html.Media.Graphics.WebGL {
 		}
 
 		[IntrinsicProperty, ScriptName("UNMASKED_RENDERER_WEBGL")]
-		public uint UNMASKED_RENDERER_WEBGL {
+		public int UNMASKED_RENDERER_WEBGL {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty, ScriptName("UNMASKED_VENDOR_WEBGL")]
-		public uint UNMASKED_VENDOR_WEBGL {
+		public int UNMASKED_VENDOR_WEBGL {
 			get {
 				return 0;
 			}

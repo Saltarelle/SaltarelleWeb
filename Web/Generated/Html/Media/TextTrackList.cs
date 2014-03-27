@@ -8,7 +8,7 @@ namespace System.Html.Media {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public TextTrack this[uint index] {
+		public TextTrack this[int index] {
 			get {
 				return default(TextTrack);
 			}
@@ -54,7 +54,7 @@ namespace System.Html.Media {
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}
@@ -62,6 +62,15 @@ namespace System.Html.Media {
 
 		[IntrinsicProperty, ScriptName("onaddtrack")]
 		public HtmlEventHandler OnAddtrack {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onchange")]
+		public HtmlEventHandler OnChange {
 			get {
 				return default(HtmlEventHandler);
 			}

@@ -7,7 +7,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float X {
+		public double X {
 			get {
 				return 0;
 			}
@@ -16,7 +16,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float X2 {
+		public double X2 {
 			get {
 				return 0;
 			}
@@ -25,7 +25,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float Y {
+		public double Y {
 			get {
 				return 0;
 			}
@@ -34,7 +34,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float Y2 {
+		public double Y2 {
 			get {
 				return 0;
 			}

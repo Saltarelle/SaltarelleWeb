@@ -3,16 +3,16 @@
 namespace System.Html.Media.Graphics.SVG {
 	[Imported]
 	public enum SVGAlign {
-		Unknown = 0,
 		None = 1,
-		Xminymin = 2,
-		Xmidymin = 3,
-		Xmaxymin = 4,
-		Xminymid = 5,
-		Xmidymid = 6,
+		Unknown = 0,
+		Xmaxymax = 10,
 		Xmaxymid = 7,
-		Xminymax = 8,
+		Xmaxymin = 4,
 		Xmidymax = 9,
-		Xmaxymax = 10
+		Xmidymid = 6,
+		Xmidymin = 3,
+		Xminymax = 8,
+		Xminymid = 5,
+		Xminymin = 2
 	}
 }

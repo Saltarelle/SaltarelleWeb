@@ -40,15 +40,15 @@ namespace System.Html.Media.Graphics.SVG {
 			return 0;
 		}
 
-		public float GetComputedTextLength() {
+		public double GetComputedTextLength() {
 			return 0;
 		}
 
-		public SVGPoint GetEndPositionOfChar(uint charnum) {
+		public SVGPoint GetEndPositionOfChar(int charnum) {
 			return default(SVGPoint);
 		}
 
-		public SVGRect GetExtentOfChar(uint charnum) {
+		public SVGRect GetExtentOfChar(int charnum) {
 			return default(SVGRect);
 		}
 
@@ -56,15 +56,15 @@ namespace System.Html.Media.Graphics.SVG {
 			return 0;
 		}
 
-		public float GetRotationOfChar(uint charnum) {
+		public double GetRotationOfChar(int charnum) {
 			return 0;
 		}
 
-		public SVGPoint GetStartPositionOfChar(uint charnum) {
+		public SVGPoint GetStartPositionOfChar(int charnum) {
 			return default(SVGPoint);
 		}
 
-		public float GetSubStringLength(uint charnum, uint nchars) {
+		public double GetSubStringLength(int charnum, int nchars) {
 			return 0;
 		}
 
@@ -114,7 +114,7 @@ namespace System.Html.Media.Graphics.SVG {
 		public void RemoveEventListener(SVGTextContentElementEvents type, IEventListener listener, bool capture) {
 		}
 
-		public void SelectSubString(uint charnum, uint nchars) {
+		public void SelectSubString(int charnum, int nchars) {
 		}
 
 		[IntrinsicProperty]

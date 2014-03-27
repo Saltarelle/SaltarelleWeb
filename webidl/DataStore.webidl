@@ -4,7 +4,9 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-[Pref="dom.datastore.enabled",
+typedef (DOMString or unsigned long) DataStoreKey;
+
+[Func="Navigator::HasDataStoreSupport",
  JSImplementation="@mozilla.org/dom/datastore;1"]
 interface DataStore : EventTarget {
   // Returns the label of the DataSource.
@@ -18,19 +20,16 @@ interface DataStore : EventTarget {
   readonly attribute boolean readOnly;
 
   // Promise<any>
-  Promise get(unsigned long id);
-
-  // Promise<any>
-  Promise get(sequence<unsigned long> id);
+  Promise get(DataStoreKey... id);
 
   // Promise<void>
-  Promise update(unsigned long id, any obj);
+  Promise put(any obj, DataStoreKey id);
 
-  // Promise<unsigned long>
-  Promise add(any obj);
+  // Promise<DataStoreKey>
+  Promise add(any obj, optional DataStoreKey id);
 
   // Promise<boolean>
-  Promise remove(unsigned long id);
+  Promise remove(DataStoreKey id);
 
   // Promise<void>
   Promise clear();
@@ -39,20 +38,10 @@ interface DataStore : EventTarget {
 
   attribute EventHandler onchange;
 
-  // Promise<DataStoreChanges>
-  Promise getChanges(DOMString revisionId);
-
   // Promise<unsigned long>
   Promise getLength();
 
   DataStoreCursor sync(optional DOMString revisionId = "");
-};
-
-dictionary DataStoreChanges {
-  DOMString revisionId;
-  sequence<unsigned long> addedIds;
-  sequence<unsigned long> updatedIds;
-  sequence<unsigned long> removedIds;
 };
 
 [Pref="dom.datastore.enabled",
@@ -80,6 +69,6 @@ dictionary DataStoreTask {
   DOMString revisionId;
 
   DataStoreOperation operation;
-  unsigned long id;
+  DataStoreKey id;
   any data;
 };

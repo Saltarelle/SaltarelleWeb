@@ -93,7 +93,7 @@ namespace System.Html {
 			}
 		}
 
-		public void CaptureEvents(int eventFlags) {
+		public void CaptureEvents() {
 		}
 
 		public void Clear() {
@@ -164,16 +164,16 @@ namespace System.Html {
 			}
 		}
 
-		public XmlNodeList GetElementsByName(string elementName) {
-			return default(XmlNodeList);
+		public ElementNodeList GetElementsByName(string elementName) {
+			return default(ElementNodeList);
 		}
 
-		public XmlNodeList GetItems() {
-			return default(XmlNodeList);
+		public ElementNodeList GetItems() {
+			return default(ElementNodeList);
 		}
 
-		public XmlNodeList GetItems(string typeNames) {
-			return default(XmlNodeList);
+		public ElementNodeList GetItems(string typeNames) {
+			return default(ElementNodeList);
 		}
 
 		public Selection GetSelection() {
@@ -257,7 +257,7 @@ namespace System.Html {
 			return null;
 		}
 
-		public void ReleaseEvents(int eventFlags) {
+		public void ReleaseEvents() {
 		}
 
 		public void RemoveEventListener(DocumentInstanceEvents type, Action listener) {

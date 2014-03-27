@@ -46,7 +46,7 @@ namespace System.Html.Media.Audio {
 			return default(AudioBuffer);
 		}
 
-		public AudioBuffer CreateBuffer(uint numberOfChannels, uint length, float sampleRate) {
+		public AudioBuffer CreateBuffer(int numberOfChannels, int length, double sampleRate) {
 			return default(AudioBuffer);
 		}
 
@@ -58,7 +58,7 @@ namespace System.Html.Media.Audio {
 			return default(ChannelMergerNode);
 		}
 
-		public ChannelMergerNode CreateChannelMerger(uint numberOfInputs) {
+		public ChannelMergerNode CreateChannelMerger(int numberOfInputs) {
 			return default(ChannelMergerNode);
 		}
 
@@ -66,7 +66,7 @@ namespace System.Html.Media.Audio {
 			return default(ChannelSplitterNode);
 		}
 
-		public ChannelSplitterNode CreateChannelSplitter(uint numberOfOutputs) {
+		public ChannelSplitterNode CreateChannelSplitter(int numberOfOutputs) {
 			return default(ChannelSplitterNode);
 		}
 
@@ -106,15 +106,15 @@ namespace System.Html.Media.Audio {
 			return default(ScriptProcessorNode);
 		}
 
-		public ScriptProcessorNode CreateJavaScriptNode(uint bufferSize) {
+		public ScriptProcessorNode CreateJavaScriptNode(int bufferSize) {
 			return default(ScriptProcessorNode);
 		}
 
-		public ScriptProcessorNode CreateJavaScriptNode(uint bufferSize, uint numberOfInputChannels) {
+		public ScriptProcessorNode CreateJavaScriptNode(int bufferSize, int numberOfInputChannels) {
 			return default(ScriptProcessorNode);
 		}
 
-		public ScriptProcessorNode CreateJavaScriptNode(uint bufferSize, uint numberOfInputChannels, uint numberOfOutputChannels) {
+		public ScriptProcessorNode CreateJavaScriptNode(int bufferSize, int numberOfInputChannels, int numberOfOutputChannels) {
 			return default(ScriptProcessorNode);
 		}
 
@@ -146,15 +146,15 @@ namespace System.Html.Media.Audio {
 			return default(ScriptProcessorNode);
 		}
 
-		public ScriptProcessorNode CreateScriptProcessor(uint bufferSize) {
+		public ScriptProcessorNode CreateScriptProcessor(int bufferSize) {
 			return default(ScriptProcessorNode);
 		}
 
-		public ScriptProcessorNode CreateScriptProcessor(uint bufferSize, uint numberOfInputChannels) {
+		public ScriptProcessorNode CreateScriptProcessor(int bufferSize, int numberOfInputChannels) {
 			return default(ScriptProcessorNode);
 		}
 
-		public ScriptProcessorNode CreateScriptProcessor(uint bufferSize, uint numberOfInputChannels, uint numberOfOutputChannels) {
+		public ScriptProcessorNode CreateScriptProcessor(int bufferSize, int numberOfInputChannels, int numberOfOutputChannels) {
 			return default(ScriptProcessorNode);
 		}
 
@@ -220,7 +220,7 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IntrinsicProperty]
-		public float SampleRate {
+		public double SampleRate {
 			get {
 				return 0;
 			}

@@ -8,9 +8,18 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public string this[uint index] {
+		public string this[int index] {
 			get {
 				return null;
+			}
+		}
+
+		[IntrinsicProperty]
+		public string AlignContent {
+			get {
+				return null;
+			}
+			set {
 			}
 		}
 
@@ -142,6 +151,15 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string BackgroundAttachment {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string BackgroundBlendMode {
 			get {
 				return null;
 			}
@@ -528,6 +546,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string BoxSizing {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string CaptionSide {
 			get {
 				return null;
@@ -753,6 +780,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string FlexFlow {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string FlexGrow {
 			get {
 				return null;
@@ -763,6 +799,15 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string FlexShrink {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string FlexWrap {
 			get {
 				return null;
 			}
@@ -968,6 +1013,150 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string Grid {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridArea {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridAutoColumns {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridAutoFlow {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridAutoPosition {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridAutoRows {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridColumn {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridColumnEnd {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridColumnStart {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridRow {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridRowEnd {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridRowStart {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridTemplate {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridTemplateAreas {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridTemplateColumns {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string GridTemplateRows {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Height {
 			get {
 				return null;
@@ -1003,7 +1192,7 @@ namespace System.Html {
 			}
 		}
 
-		public string Item(uint index) {
+		public string Item(int index) {
 			return null;
 		}
 
@@ -1026,7 +1215,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}
@@ -1331,6 +1520,15 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public string Overflow {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public string OverflowClipBox {
 			get {
 				return null;
 			}
@@ -1743,6 +1941,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string TouchAction {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Transform {
 			get {
 				return null;
@@ -1842,6 +2049,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public string Visibility {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string WhiteSpace {
 			get {
 				return null;
@@ -1869,7 +2085,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public string Visibility {
+		public string WillChange {
 			get {
 				return null;
 			}

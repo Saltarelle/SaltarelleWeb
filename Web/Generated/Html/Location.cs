@@ -104,6 +104,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public URLSearchParams SearchParams {
+			get {
+				return default(URLSearchParams);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Username {
 			get {
 				return null;

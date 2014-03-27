@@ -12,7 +12,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Offset {
+		public int Offset {
 			get {
 				return 0;
 			}

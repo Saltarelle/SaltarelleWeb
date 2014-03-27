@@ -13,10 +13,10 @@ namespace System.Html {
 			}
 		}
 
-		public void DeleteRule(uint index) {
+		public void DeleteRule(int index) {
 		}
 
-		public uint InsertRule(string rule, uint index) {
+		public int InsertRule(string rule, int index) {
 			return 0;
 		}
 

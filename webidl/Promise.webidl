@@ -11,9 +11,12 @@
 // have different types for "platform-provided function" and "user-provided
 // function"; for now, we just use "object".
 callback PromiseInit = void (object resolve, object reject);
-callback AnyCallback = any (optional any value);
 
-[Func="mozilla::dom::Promise::EnabledForScope", Constructor(PromiseInit init)]
+[TreatNonCallableAsNull]
+callback AnyCallback = any (any value);
+
+// REMOVE THE RELEVANT ENTRY FROM test_interfaces.html WHEN THIS IS IMPLEMENTED IN JS.
+[Constructor(PromiseInit init)]
 interface Promise {
   // TODO bug 875289 - static Promise fulfill(any value);
 
@@ -22,15 +25,23 @@ interface Promise {
   // the proto of a promise object or someone screws up and manages to create a
   // Promise object in this scope without having resolved the interface object
   // first.
-  [Creator, Throws, Func="mozilla::dom::Promise::EnabledForScope"]
-  static Promise resolve(any value); // same as any(value)
-  [Creator, Throws, Func="mozilla::dom::Promise::EnabledForScope"]
+  [NewObject, Throws]
+  static Promise resolve(any value);
+  [NewObject, Throws]
   static Promise reject(any value);
 
-  [Creator]
-  Promise then([TreatUndefinedAs=Missing] optional AnyCallback fulfillCallback,
-               [TreatUndefinedAs=Missing] optional AnyCallback rejectCallback);
+  // The [TreatNonCallableAsNull] annotation is required since then() should do
+  // nothing instead of throwing errors when non-callable arguments are passed.
+  [NewObject]
+  Promise then([TreatNonCallableAsNull] optional AnyCallback? fulfillCallback = null,
+               [TreatNonCallableAsNull] optional AnyCallback? rejectCallback = null);
 
-  [Creator]
-  Promise catch([TreatUndefinedAs=Missing] optional AnyCallback rejectCallback);
+  [NewObject]
+  Promise catch([TreatNonCallableAsNull] optional AnyCallback? rejectCallback = null);
+
+  [NewObject, Throws]
+  static Promise all(sequence<any> iterable);
+
+  [NewObject, Throws]
+  static Promise race(sequence<any> iterable);
 };

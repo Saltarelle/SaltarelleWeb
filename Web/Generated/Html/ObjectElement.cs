@@ -153,7 +153,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Hspace {
+		public int Hspace {
 			get {
 				return 0;
 			}
@@ -222,6 +222,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public bool TypeMustMatch {
+			get {
+				return false;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string UseMap {
 			get {
 				return null;
@@ -245,6 +254,15 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public int Vspace {
+			get {
+				return 0;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Width {
 			get {
 				return null;
@@ -257,15 +275,6 @@ namespace System.Html {
 		public bool WillValidate {
 			get {
 				return false;
-			}
-		}
-
-		[IntrinsicProperty]
-		public uint Vspace {
-			get {
-				return 0;
-			}
-			set {
 			}
 		}
 	}

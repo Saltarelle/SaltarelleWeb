@@ -3,8 +3,8 @@
 namespace System.Html.Media.Graphics.SVG {
 	[Imported]
 	public enum SVGFEMorphologyOperator {
-		Unknown = 0,
+		Dilate = 2,
 		Erode = 1,
-		Dilate = 2
+		Unknown = 0
 	}
 }

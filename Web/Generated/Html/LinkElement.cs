@@ -99,6 +99,13 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty]
+		public TokenList RelList {
+			get {
+				return default(TokenList);
+			}
+		}
+
 		public void RemoveEventListener(LinkElementEvents type, Action listener) {
 		}
 

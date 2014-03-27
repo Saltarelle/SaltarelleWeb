@@ -3,7 +3,7 @@
 namespace System.Html {
 	[Imported, Serializable]
 	public partial class WheelEventInit : MouseEventInit {
-		public uint DeltaMode {
+		public int DeltaMode {
 			get;
 			set;
 		}

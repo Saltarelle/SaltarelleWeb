@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 
 namespace System.Threading.WebWorkers {
-	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("EventTarget")]
+	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
 	public partial class WorkerGlobalScope : EventTarget, IWindowTimers, IWindowBase64 {
 		internal WorkerGlobalScope() {
 		}
@@ -37,21 +37,21 @@ namespace System.Threading.WebWorkers {
 		public void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture) {
 		}
 
-		public string Atob(string stringToEncode) {
+		public string Atob(string atob) {
 			return null;
 		}
 
-		public string Btoa(string encodedString) {
+		public string Btoa(string btoa) {
 			return null;
-		}
-
-		public void ClearInterval(int intervalId) {
-		}
-
-		public void ClearTimeout(int timeoutId) {
 		}
 
 		public void Close() {
+		}
+
+		public void Dump() {
+		}
+
+		public void Dump(string str) {
 		}
 
 		[ExpandParams]
@@ -69,6 +69,15 @@ namespace System.Threading.WebWorkers {
 		public WorkerNavigator Navigator {
 			get {
 				return default(WorkerNavigator);
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onclose")]
+		public HtmlEventHandler OnClose {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
 			}
 		}
 
@@ -134,40 +143,6 @@ namespace System.Threading.WebWorkers {
 			get {
 				return default(WorkerGlobalScope);
 			}
-		}
-
-		public int SetInterval(Function func) {
-			return 0;
-		}
-
-		[ExpandParams]
-		public int SetInterval(Function func, int delay, params object[] args) {
-			return 0;
-		}
-
-		public int SetInterval(string code) {
-			return 0;
-		}
-
-		public int SetInterval(string code, int delay) {
-			return 0;
-		}
-
-		public int SetTimeout(Function func) {
-			return 0;
-		}
-
-		[ExpandParams]
-		public int SetTimeout(Function func, int delay, params object[] args) {
-			return 0;
-		}
-
-		public int SetTimeout(string code) {
-			return 0;
-		}
-
-		public int SetTimeout(string code, int delay) {
-			return 0;
 		}
 
 		public string ToNativeLineEndings(string @string) {

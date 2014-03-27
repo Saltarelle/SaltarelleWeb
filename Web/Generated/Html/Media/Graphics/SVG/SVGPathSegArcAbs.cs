@@ -7,7 +7,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float Angle {
+		public double Angle {
 			get {
 				return 0;
 			}
@@ -25,7 +25,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float R1 {
+		public double R1 {
 			get {
 				return 0;
 			}
@@ -34,7 +34,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float R2 {
+		public double R2 {
 			get {
 				return 0;
 			}
@@ -52,7 +52,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float X {
+		public double X {
 			get {
 				return 0;
 			}
@@ -61,7 +61,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float Y {
+		public double Y {
 			get {
 				return 0;
 			}

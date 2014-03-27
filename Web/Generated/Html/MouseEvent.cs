@@ -20,7 +20,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public ushort Button {
+		public short Button {
 			get {
 				return 0;
 			}
@@ -56,6 +56,9 @@ namespace System.Html {
 
 		public bool GetModifierState(string keyArg) {
 			return false;
+		}
+
+		public void InitMouseEvent(string typeArg, bool canBubbleArg, bool cancelableArg, WindowInstance viewArg, int detailArg, int screenXArg, int screenYArg, int clientXArg, int clientYArg, bool ctrlKeyArg, bool altKeyArg, bool shiftKeyArg, bool metaKeyArg, short buttonArg, EventTarget relatedTargetArg) {
 		}
 
 		[IntrinsicProperty]

@@ -8,7 +8,7 @@ namespace System.Html.Media {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public VTTCue this[uint index] {
+		public VTTCue this[int index] {
 			get {
 				return default(VTTCue);
 			}
@@ -24,7 +24,7 @@ namespace System.Html.Media {
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

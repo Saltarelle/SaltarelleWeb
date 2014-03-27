@@ -12,6 +12,9 @@ namespace System.Html {
 		public PageTransitionEvent(string type, PageTransitionEventInit eventInitDict) {
 		}
 
+		public void InitPageTransitionEvent(string type, bool canBubble, bool cancelable, bool persisted) {
+		}
+
 		[IntrinsicProperty]
 		public bool Persisted {
 			get {

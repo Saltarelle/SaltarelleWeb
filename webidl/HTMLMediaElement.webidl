@@ -30,7 +30,7 @@ interface HTMLMediaElement : HTMLElement {
   readonly attribute unsigned short networkState;
   [SetterThrows]
            attribute DOMString preload;
-  [Creator]
+  [NewObject]
   readonly attribute TimeRanges buffered;
   void load();
   DOMString canPlayType(DOMString type);
@@ -55,9 +55,9 @@ interface HTMLMediaElement : HTMLElement {
            attribute double defaultPlaybackRate;
   [SetterThrows]
            attribute double playbackRate;
-  [Creator]
+  [NewObject]
   readonly attribute TimeRanges played;
-  [Creator]
+  [NewObject]
   readonly attribute TimeRanges seekable;
   readonly attribute boolean ended;
   [SetterThrows]
@@ -114,11 +114,11 @@ partial interface HTMLMediaElement {
   // used within MozAudioAvailable events to be changed.  The new size must
   // be between 512 and 16384.  The default size, for a  media element with
   // audio is (mozChannels * 1024).
-  [GetterThrows]
+  [Pref="media.audio_data.enabled", GetterThrows]
   readonly attribute unsigned long mozChannels;
-  [GetterThrows]
+  [Pref="media.audio_data.enabled", GetterThrows]
   readonly attribute unsigned long mozSampleRate;
-  [Throws]
+  [Pref="media.audio_data.enabled", Throws]
            attribute unsigned long mozFrameBufferLength;
 
   // Mozilla extension: return embedded metadata from the stream as a
@@ -133,39 +133,9 @@ partial interface HTMLMediaElement {
   readonly attribute double mozFragmentEnd;
 
   // Mozilla extension: an audio channel type for media elements.
-  // An exception is thrown if the app tries to change the audio channel type
-  // without the permission (manifest file for B2G apps).
-  // The supported values are:
-  // * normal (default value)
-  //   Automatically paused if "notification" or higher priority channel
-  //   is played
-  //   Use case: normal applications
-  // * content
-  //   Automatically paused if "notification" or higher priority channel
-  //   is played. Also paused if another app starts using "content"
-  //   channel. Using this channel never affects applications using
-  //   the "normal" channel.
-  //   Use case: video/audio players
-  // * notification
-  //   Automatically paused if "alarm" or higher priority channel is played.
-  //   Use case: New email, incoming SMS
-  // * alarm
-  //   Automatically paused if "telephony" or higher priority channel is
-  //   played.
-  //   User case: Alarm clock, calendar alarms
-  // * telephony
-  //   Automatically paused if "ringer" or higher priority
-  //   channel is played.
-  //   Use case: dialer, voip
-  // * ringer
-  //   Automatically paused if "publicnotification" or higher priority
-  //   channel is played.
-  //   Use case: dialer, voip
-  // * publicnotification
-  //   Always plays in speaker, even when headphones are plugged in.
-  //   Use case: Camera shutter sound.
+  // Read AudioChannel.webidl for more information about this attribute.
   [SetterThrows]
-  attribute DOMString mozAudioChannelType;
+  attribute AudioChannel mozAudioChannelType;
 
   // In addition the media element has this new events:
   // * onmozinterruptbegin - called when the media element is interrupted

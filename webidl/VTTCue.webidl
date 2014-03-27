@@ -9,9 +9,7 @@
 
 enum AutoKeyword { "auto" };
 
-/* Non-spec: Request to add this enum to spec
- * can be found here: https://www.w3.org/Bugs/Public/show_bug.cgi?id=20996 */
-enum TextTrackCueAlign {
+enum AlignSetting {
   "start",
   "middle",
   "end",
@@ -34,20 +32,32 @@ interface VTTCue : EventTarget {
   attribute double startTime;
   attribute double endTime;
   attribute boolean pauseOnExit;
-  attribute DOMString regionId;
+  [Pref="media.webvtt.regions.enabled"]
+  attribute VTTRegion? region;
   attribute DirectionSetting vertical;
   attribute boolean snapToLines;
-  // XXXhumph: https://www.w3.org/Bugs/Public/show_bug.cgi?id=20651
-  // attribute (long or AutoKeyword) line;
+  attribute (long or AutoKeyword) line;
+  [SetterThrows]
+  attribute AlignSetting lineAlign;
   [SetterThrows]
   attribute long position;
   [SetterThrows]
+  attribute AlignSetting positionAlign;
+  [SetterThrows]
   attribute long size;
-  attribute TextTrackCueAlign align;
+  attribute AlignSetting align;
   attribute DOMString text;
   DocumentFragment getCueAsHTML();
 
   attribute EventHandler onenter;
 
   attribute EventHandler onexit;
+};
+
+// Mozilla extensions.
+partial interface VTTCue {
+  [ChromeOnly]
+  attribute HTMLDivElement? displayState;
+  [ChromeOnly]
+  readonly attribute boolean hasBeenReset;
 };

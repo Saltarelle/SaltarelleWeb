@@ -1,4 +1,5 @@
 ﻿using System.Html.Editing;
+using System.Html.WebComponents;
 using System.Runtime.CompilerServices;
 using System.Xml;
 using System.Xml.XPath;
@@ -6,13 +7,6 @@ using System.Xml.XPath;
 namespace System.Html {
 	[IgnoreNamespace, Imported, ScriptName("document")]
 	public static partial class Document {
-		[IntrinsicProperty]
-		public static XmlElement ActiveElement {
-			get {
-				return default(XmlElement);
-			}
-		}
-
 		public static void AddEventListener(DocumentBaseEvents type, Action listener) {
 		}
 
@@ -178,10 +172,10 @@ namespace System.Html {
 			}
 		}
 
-		public static void CaptureEvents(int eventFlags) {
+		public static void CaptureEvents() {
 		}
 
-		public static CaretPosition CaretPositionFromPoint(float x, float y) {
+		public static CaretPosition CaretPositionFromPoint(double x, double y) {
 			return default(CaretPosition);
 		}
 
@@ -196,7 +190,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static uint ChildElementCount {
+		public static int ChildElementCount {
 			get {
 				return 0;
 			}
@@ -206,13 +200,6 @@ namespace System.Html {
 		public static XmlNodeList ChildNodes {
 			get {
 				return default(XmlNodeList);
-			}
-		}
-
-		[IntrinsicProperty]
-		public static ElementCollection Children {
-			get {
-				return default(ElementCollection);
 			}
 		}
 
@@ -255,6 +242,30 @@ namespace System.Html {
 			}
 		}
 
+		public static DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMPoint);
+		}
+
+		public static DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMPoint);
+		}
+
+		public static DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public static DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
+		public static DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public static DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
 		[IntrinsicProperty]
 		public static string Cookie {
 			get {
@@ -282,14 +293,6 @@ namespace System.Html {
 
 		public static XmlDocumentFragment CreateDocumentFragment() {
 			return default(XmlDocumentFragment);
-		}
-
-		public static XmlElement CreateElement(string localName) {
-			return default(XmlElement);
-		}
-
-		public static XmlElement CreateElementNS(string @namespace, string qualifiedName) {
-			return default(XmlElement);
 		}
 
 		public static Event CreateEvent(string @interface) {
@@ -376,11 +379,11 @@ namespace System.Html {
 			return default(Touch);
 		}
 
-		public static Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, float rotationAngle) {
+		public static Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle) {
 			return default(Touch);
 		}
 
-		public static Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, float rotationAngle, float force) {
+		public static Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle, double force) {
 			return default(Touch);
 		}
 
@@ -407,13 +410,6 @@ namespace System.Html {
 
 		public static TreeWalker CreateTreeWalker(XmlNode root, NodeFilter whatToShow, INodeFilter filter) {
 			return default(TreeWalker);
-		}
-
-		[IntrinsicProperty]
-		public static XmlElement CurrentScript {
-			get {
-				return default(XmlElement);
-			}
 		}
 
 		[IntrinsicProperty]
@@ -480,13 +476,6 @@ namespace System.Html {
 		public const ushort DOCUMENT_TYPE_NODE = 10;
 
 		[IntrinsicProperty]
-		public static XmlElement DocumentElement {
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty]
 		public static string DocumentURI {
 			get {
 				return null;
@@ -504,10 +493,6 @@ namespace System.Html {
 
 		[ScriptName("ELEMENT_NODE")]
 		public const ushort ELEMENT_NODE = 1;
-
-		public static XmlElement ElementFromPoint(float x, float y) {
-			return default(XmlElement);
-		}
 
 		[IntrinsicProperty]
 		public static ElementCollection Embeds {
@@ -558,57 +543,30 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static XmlElement FirstElementChild {
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty]
 		public static ElementCollection Forms {
 			get {
 				return default(ElementCollection);
 			}
 		}
 
-		public static XmlElement GetAnonymousElementByAttribute(XmlElement elt, string attrName, string attrValue) {
-			return default(XmlElement);
+		public static DOMQuad[] GetBoxQuads() {
+			return null;
 		}
 
-		public static XmlNodeList GetAnonymousNodes(XmlElement elt) {
-			return default(XmlNodeList);
+		public static DOMQuad[] GetBoxQuads(BoxQuadOptions options) {
+			return null;
 		}
 
-		public static XmlElement GetBindingParent(XmlNode node) {
-			return default(XmlElement);
+		public static ElementNodeList GetElementsByName(string elementName) {
+			return default(ElementNodeList);
 		}
 
-		public static XmlElement GetElementById(string elementId) {
-			return default(XmlElement);
+		public static ElementNodeList GetItems() {
+			return default(ElementNodeList);
 		}
 
-		public static ElementCollection GetElementsByClassName(string classNames) {
-			return default(ElementCollection);
-		}
-
-		public static XmlNodeList GetElementsByName(string elementName) {
-			return default(XmlNodeList);
-		}
-
-		public static ElementCollection GetElementsByTagName(string localName) {
-			return default(ElementCollection);
-		}
-
-		public static ElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
-			return default(ElementCollection);
-		}
-
-		public static XmlNodeList GetItems() {
-			return default(XmlNodeList);
-		}
-
-		public static XmlNodeList GetItems(string typeNames) {
-			return default(XmlNodeList);
+		public static ElementNodeList GetItems(string typeNames) {
+			return default(ElementNodeList);
 		}
 
 		public static Selection GetSelection() {
@@ -694,13 +652,6 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public static XmlElement LastElementChild {
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty]
 		public static string LastModified {
 			get {
 				return null;
@@ -728,9 +679,6 @@ namespace System.Html {
 			get {
 				return default(ElementCollection);
 			}
-		}
-
-		public static void LoadBindingDocument(string documentURL) {
 		}
 
 		[IntrinsicProperty]
@@ -1194,6 +1142,78 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onpointercancel")]
+		public static HtmlEventHandler OnPointercancel {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerdown")]
+		public static HtmlEventHandler OnPointerdown {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerenter")]
+		public static HtmlEventHandler OnPointerenter {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerleave")]
+		public static HtmlEventHandler OnPointerleave {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointermove")]
+		public static HtmlEventHandler OnPointermove {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerout")]
+		public static HtmlEventHandler OnPointerout {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerover")]
+		public static HtmlEventHandler OnPointerover {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerup")]
+		public static HtmlEventHandler OnPointerup {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onprogress")]
 		public static HtmlEventHandler OnProgress {
 			get {
@@ -1365,6 +1385,15 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onvolumechange")]
+		public static HtmlEventHandler OnVolumechange {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onwaiting")]
 		public static HtmlEventHandler OnWaiting {
 			get {
@@ -1376,15 +1405,6 @@ namespace System.Html {
 
 		[IntrinsicProperty, ScriptName("onwheel")]
 		public static HtmlEventHandler OnWheel {
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
-		}
-
-		[IntrinsicProperty, ScriptName("onvolumechange")]
-		public static HtmlEventHandler OnVolumechange {
 			get {
 				return default(HtmlEventHandler);
 			}
@@ -1416,13 +1436,6 @@ namespace System.Html {
 		public static DocumentBase OwnerDocument {
 			get {
 				return default(DocumentBase);
-			}
-		}
-
-		[IntrinsicProperty]
-		public static XmlElement ParentElement {
-			get {
-				return default(XmlElement);
 			}
 		}
 
@@ -1484,14 +1497,6 @@ namespace System.Html {
 			return null;
 		}
 
-		public static XmlElement QuerySelector(string selectors) {
-			return default(XmlElement);
-		}
-
-		public static XmlNodeList QuerySelectorAll(string selectors) {
-			return default(XmlNodeList);
-		}
-
 		[IntrinsicProperty]
 		public static string ReadyState {
 			get {
@@ -1506,10 +1511,18 @@ namespace System.Html {
 			}
 		}
 
+		public static object RegisterElement(string name) {
+			return null;
+		}
+
+		public static object RegisterElement(string name, ElementRegistrationOptions options) {
+			return null;
+		}
+
 		public static void ReleaseCapture() {
 		}
 
-		public static void ReleaseEvents(int eventFlags) {
+		public static void ReleaseEvents() {
 		}
 
 		public static XmlNode RemoveChild(XmlNode child) {

@@ -14,7 +14,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint CharCode {
+		public int CharCode {
 			get {
 				return 0;
 			}
@@ -28,583 +28,583 @@ namespace System.Html {
 		}
 
 		[ScriptName("DOM_KEY_LOCATION_JOYSTICK")]
-		public const uint DOM_KEY_LOCATION_JOYSTICK = 5;
+		public const int DOM_KEY_LOCATION_JOYSTICK = 5;
 
 		[ScriptName("DOM_KEY_LOCATION_LEFT")]
-		public const uint DOM_KEY_LOCATION_LEFT = 1;
+		public const int DOM_KEY_LOCATION_LEFT = 1;
 
 		[ScriptName("DOM_KEY_LOCATION_MOBILE")]
-		public const uint DOM_KEY_LOCATION_MOBILE = 4;
+		public const int DOM_KEY_LOCATION_MOBILE = 4;
 
 		[ScriptName("DOM_KEY_LOCATION_NUMPAD")]
-		public const uint DOM_KEY_LOCATION_NUMPAD = 3;
+		public const int DOM_KEY_LOCATION_NUMPAD = 3;
 
 		[ScriptName("DOM_KEY_LOCATION_RIGHT")]
-		public const uint DOM_KEY_LOCATION_RIGHT = 2;
+		public const int DOM_KEY_LOCATION_RIGHT = 2;
 
 		[ScriptName("DOM_KEY_LOCATION_STANDARD")]
-		public const uint DOM_KEY_LOCATION_STANDARD = 0;
+		public const int DOM_KEY_LOCATION_STANDARD = 0;
 
 		[ScriptName("DOM_VK_0")]
-		public const uint DOM_VK_0 = 48;
+		public const int DOM_VK_0 = 48;
 
 		[ScriptName("DOM_VK_1")]
-		public const uint DOM_VK_1 = 49;
+		public const int DOM_VK_1 = 49;
 
 		[ScriptName("DOM_VK_2")]
-		public const uint DOM_VK_2 = 50;
+		public const int DOM_VK_2 = 50;
 
 		[ScriptName("DOM_VK_3")]
-		public const uint DOM_VK_3 = 51;
+		public const int DOM_VK_3 = 51;
 
 		[ScriptName("DOM_VK_4")]
-		public const uint DOM_VK_4 = 52;
+		public const int DOM_VK_4 = 52;
 
 		[ScriptName("DOM_VK_5")]
-		public const uint DOM_VK_5 = 53;
+		public const int DOM_VK_5 = 53;
 
 		[ScriptName("DOM_VK_6")]
-		public const uint DOM_VK_6 = 54;
+		public const int DOM_VK_6 = 54;
 
 		[ScriptName("DOM_VK_7")]
-		public const uint DOM_VK_7 = 55;
+		public const int DOM_VK_7 = 55;
 
 		[ScriptName("DOM_VK_8")]
-		public const uint DOM_VK_8 = 56;
+		public const int DOM_VK_8 = 56;
 
 		[ScriptName("DOM_VK_9")]
-		public const uint DOM_VK_9 = 57;
+		public const int DOM_VK_9 = 57;
 
 		[ScriptName("DOM_VK_A")]
-		public const uint DOM_VK_A = 65;
+		public const int DOM_VK_A = 65;
 
 		[ScriptName("DOM_VK_ACCEPT")]
-		public const uint DOM_VK_ACCEPT = 30;
+		public const int DOM_VK_ACCEPT = 30;
 
 		[ScriptName("DOM_VK_ADD")]
-		public const uint DOM_VK_ADD = 107;
+		public const int DOM_VK_ADD = 107;
 
 		[ScriptName("DOM_VK_ALT")]
-		public const uint DOM_VK_ALT = 18;
+		public const int DOM_VK_ALT = 18;
 
 		[ScriptName("DOM_VK_ALTGR")]
-		public const uint DOM_VK_ALTGR = 225;
+		public const int DOM_VK_ALTGR = 225;
 
 		[ScriptName("DOM_VK_AMPERSAND")]
-		public const uint DOM_VK_AMPERSAND = 166;
+		public const int DOM_VK_AMPERSAND = 166;
 
 		[ScriptName("DOM_VK_ASTERISK")]
-		public const uint DOM_VK_ASTERISK = 170;
+		public const int DOM_VK_ASTERISK = 170;
 
 		[ScriptName("DOM_VK_AT")]
-		public const uint DOM_VK_AT = 64;
+		public const int DOM_VK_AT = 64;
 
 		[ScriptName("DOM_VK_ATTN")]
-		public const uint DOM_VK_ATTN = 246;
+		public const int DOM_VK_ATTN = 246;
 
 		[ScriptName("DOM_VK_B")]
-		public const uint DOM_VK_B = 66;
+		public const int DOM_VK_B = 66;
 
 		[ScriptName("DOM_VK_BACK_QUOTE")]
-		public const uint DOM_VK_BACK_QUOTE = 192;
+		public const int DOM_VK_BACK_QUOTE = 192;
 
 		[ScriptName("DOM_VK_BACK_SLASH")]
-		public const uint DOM_VK_BACK_SLASH = 220;
+		public const int DOM_VK_BACK_SLASH = 220;
 
 		[ScriptName("DOM_VK_BACK_SPACE")]
-		public const uint DOM_VK_BACK_SPACE = 8;
+		public const int DOM_VK_BACK_SPACE = 8;
 
 		[ScriptName("DOM_VK_C")]
-		public const uint DOM_VK_C = 67;
+		public const int DOM_VK_C = 67;
 
 		[ScriptName("DOM_VK_CANCEL")]
-		public const uint DOM_VK_CANCEL = 3;
+		public const int DOM_VK_CANCEL = 3;
 
 		[ScriptName("DOM_VK_CAPS_LOCK")]
-		public const uint DOM_VK_CAPS_LOCK = 20;
+		public const int DOM_VK_CAPS_LOCK = 20;
 
 		[ScriptName("DOM_VK_CIRCUMFLEX")]
-		public const uint DOM_VK_CIRCUMFLEX = 160;
+		public const int DOM_VK_CIRCUMFLEX = 160;
 
 		[ScriptName("DOM_VK_CLEAR")]
-		public const uint DOM_VK_CLEAR = 12;
+		public const int DOM_VK_CLEAR = 12;
 
 		[ScriptName("DOM_VK_CLOSE_BRACKET")]
-		public const uint DOM_VK_CLOSE_BRACKET = 221;
+		public const int DOM_VK_CLOSE_BRACKET = 221;
 
 		[ScriptName("DOM_VK_CLOSE_CURLY_BRACKET")]
-		public const uint DOM_VK_CLOSE_CURLY_BRACKET = 175;
+		public const int DOM_VK_CLOSE_CURLY_BRACKET = 175;
 
 		[ScriptName("DOM_VK_CLOSE_PAREN")]
-		public const uint DOM_VK_CLOSE_PAREN = 169;
+		public const int DOM_VK_CLOSE_PAREN = 169;
 
 		[ScriptName("DOM_VK_COLON")]
-		public const uint DOM_VK_COLON = 58;
+		public const int DOM_VK_COLON = 58;
 
 		[ScriptName("DOM_VK_COMMA")]
-		public const uint DOM_VK_COMMA = 188;
+		public const int DOM_VK_COMMA = 188;
 
 		[ScriptName("DOM_VK_CONTEXT_MENU")]
-		public const uint DOM_VK_CONTEXT_MENU = 93;
+		public const int DOM_VK_CONTEXT_MENU = 93;
 
 		[ScriptName("DOM_VK_CONTROL")]
-		public const uint DOM_VK_CONTROL = 17;
+		public const int DOM_VK_CONTROL = 17;
 
 		[ScriptName("DOM_VK_CONVERT")]
-		public const uint DOM_VK_CONVERT = 28;
+		public const int DOM_VK_CONVERT = 28;
 
 		[ScriptName("DOM_VK_CRSEL")]
-		public const uint DOM_VK_CRSEL = 247;
+		public const int DOM_VK_CRSEL = 247;
 
 		[ScriptName("DOM_VK_D")]
-		public const uint DOM_VK_D = 68;
+		public const int DOM_VK_D = 68;
 
 		[ScriptName("DOM_VK_DECIMAL")]
-		public const uint DOM_VK_DECIMAL = 110;
+		public const int DOM_VK_DECIMAL = 110;
 
 		[ScriptName("DOM_VK_DELETE")]
-		public const uint DOM_VK_DELETE = 46;
+		public const int DOM_VK_DELETE = 46;
 
 		[ScriptName("DOM_VK_DIVIDE")]
-		public const uint DOM_VK_DIVIDE = 111;
+		public const int DOM_VK_DIVIDE = 111;
 
 		[ScriptName("DOM_VK_DOLLAR")]
-		public const uint DOM_VK_DOLLAR = 164;
+		public const int DOM_VK_DOLLAR = 164;
 
 		[ScriptName("DOM_VK_DOUBLE_QUOTE")]
-		public const uint DOM_VK_DOUBLE_QUOTE = 162;
+		public const int DOM_VK_DOUBLE_QUOTE = 162;
 
 		[ScriptName("DOM_VK_DOWN")]
-		public const uint DOM_VK_DOWN = 40;
+		public const int DOM_VK_DOWN = 40;
 
 		[ScriptName("DOM_VK_E")]
-		public const uint DOM_VK_E = 69;
+		public const int DOM_VK_E = 69;
 
 		[ScriptName("DOM_VK_EISU")]
-		public const uint DOM_VK_EISU = 22;
+		public const int DOM_VK_EISU = 22;
 
 		[ScriptName("DOM_VK_END")]
-		public const uint DOM_VK_END = 35;
-
-		[ScriptName("DOM_VK_ENTER")]
-		public const uint DOM_VK_ENTER = 14;
+		public const int DOM_VK_END = 35;
 
 		[ScriptName("DOM_VK_EQUALS")]
-		public const uint DOM_VK_EQUALS = 61;
+		public const int DOM_VK_EQUALS = 61;
 
 		[ScriptName("DOM_VK_EREOF")]
-		public const uint DOM_VK_EREOF = 249;
+		public const int DOM_VK_EREOF = 249;
 
 		[ScriptName("DOM_VK_ESCAPE")]
-		public const uint DOM_VK_ESCAPE = 27;
+		public const int DOM_VK_ESCAPE = 27;
 
 		[ScriptName("DOM_VK_EXCLAMATION")]
-		public const uint DOM_VK_EXCLAMATION = 161;
+		public const int DOM_VK_EXCLAMATION = 161;
 
 		[ScriptName("DOM_VK_EXECUTE")]
-		public const uint DOM_VK_EXECUTE = 43;
+		public const int DOM_VK_EXECUTE = 43;
 
 		[ScriptName("DOM_VK_EXSEL")]
-		public const uint DOM_VK_EXSEL = 248;
+		public const int DOM_VK_EXSEL = 248;
 
 		[ScriptName("DOM_VK_F")]
-		public const uint DOM_VK_F = 70;
+		public const int DOM_VK_F = 70;
 
 		[ScriptName("DOM_VK_F1")]
-		public const uint DOM_VK_F1 = 112;
+		public const int DOM_VK_F1 = 112;
 
 		[ScriptName("DOM_VK_F10")]
-		public const uint DOM_VK_F10 = 121;
+		public const int DOM_VK_F10 = 121;
 
 		[ScriptName("DOM_VK_F11")]
-		public const uint DOM_VK_F11 = 122;
+		public const int DOM_VK_F11 = 122;
 
 		[ScriptName("DOM_VK_F12")]
-		public const uint DOM_VK_F12 = 123;
+		public const int DOM_VK_F12 = 123;
 
 		[ScriptName("DOM_VK_F13")]
-		public const uint DOM_VK_F13 = 124;
+		public const int DOM_VK_F13 = 124;
 
 		[ScriptName("DOM_VK_F14")]
-		public const uint DOM_VK_F14 = 125;
+		public const int DOM_VK_F14 = 125;
 
 		[ScriptName("DOM_VK_F15")]
-		public const uint DOM_VK_F15 = 126;
+		public const int DOM_VK_F15 = 126;
 
 		[ScriptName("DOM_VK_F16")]
-		public const uint DOM_VK_F16 = 127;
+		public const int DOM_VK_F16 = 127;
 
 		[ScriptName("DOM_VK_F17")]
-		public const uint DOM_VK_F17 = 128;
+		public const int DOM_VK_F17 = 128;
 
 		[ScriptName("DOM_VK_F18")]
-		public const uint DOM_VK_F18 = 129;
+		public const int DOM_VK_F18 = 129;
 
 		[ScriptName("DOM_VK_F19")]
-		public const uint DOM_VK_F19 = 130;
+		public const int DOM_VK_F19 = 130;
 
 		[ScriptName("DOM_VK_F2")]
-		public const uint DOM_VK_F2 = 113;
+		public const int DOM_VK_F2 = 113;
 
 		[ScriptName("DOM_VK_F20")]
-		public const uint DOM_VK_F20 = 131;
+		public const int DOM_VK_F20 = 131;
 
 		[ScriptName("DOM_VK_F21")]
-		public const uint DOM_VK_F21 = 132;
+		public const int DOM_VK_F21 = 132;
 
 		[ScriptName("DOM_VK_F22")]
-		public const uint DOM_VK_F22 = 133;
+		public const int DOM_VK_F22 = 133;
 
 		[ScriptName("DOM_VK_F23")]
-		public const uint DOM_VK_F23 = 134;
+		public const int DOM_VK_F23 = 134;
 
 		[ScriptName("DOM_VK_F24")]
-		public const uint DOM_VK_F24 = 135;
+		public const int DOM_VK_F24 = 135;
 
 		[ScriptName("DOM_VK_F3")]
-		public const uint DOM_VK_F3 = 114;
+		public const int DOM_VK_F3 = 114;
 
 		[ScriptName("DOM_VK_F4")]
-		public const uint DOM_VK_F4 = 115;
+		public const int DOM_VK_F4 = 115;
 
 		[ScriptName("DOM_VK_F5")]
-		public const uint DOM_VK_F5 = 116;
+		public const int DOM_VK_F5 = 116;
 
 		[ScriptName("DOM_VK_F6")]
-		public const uint DOM_VK_F6 = 117;
+		public const int DOM_VK_F6 = 117;
 
 		[ScriptName("DOM_VK_F7")]
-		public const uint DOM_VK_F7 = 118;
+		public const int DOM_VK_F7 = 118;
 
 		[ScriptName("DOM_VK_F8")]
-		public const uint DOM_VK_F8 = 119;
+		public const int DOM_VK_F8 = 119;
 
 		[ScriptName("DOM_VK_F9")]
-		public const uint DOM_VK_F9 = 120;
+		public const int DOM_VK_F9 = 120;
 
 		[ScriptName("DOM_VK_FINAL")]
-		public const uint DOM_VK_FINAL = 24;
+		public const int DOM_VK_FINAL = 24;
 
 		[ScriptName("DOM_VK_G")]
-		public const uint DOM_VK_G = 71;
+		public const int DOM_VK_G = 71;
 
 		[ScriptName("DOM_VK_GREATER_THAN")]
-		public const uint DOM_VK_GREATER_THAN = 62;
+		public const int DOM_VK_GREATER_THAN = 62;
 
 		[ScriptName("DOM_VK_H")]
-		public const uint DOM_VK_H = 72;
+		public const int DOM_VK_H = 72;
 
 		[ScriptName("DOM_VK_HANGUL")]
-		public const uint DOM_VK_HANGUL = 21;
+		public const int DOM_VK_HANGUL = 21;
 
 		[ScriptName("DOM_VK_HANJA")]
-		public const uint DOM_VK_HANJA = 25;
+		public const int DOM_VK_HANJA = 25;
 
 		[ScriptName("DOM_VK_HASH")]
-		public const uint DOM_VK_HASH = 163;
+		public const int DOM_VK_HASH = 163;
 
 		[ScriptName("DOM_VK_HELP")]
-		public const uint DOM_VK_HELP = 6;
+		public const int DOM_VK_HELP = 6;
 
 		[ScriptName("DOM_VK_HOME")]
-		public const uint DOM_VK_HOME = 36;
+		public const int DOM_VK_HOME = 36;
 
 		[ScriptName("DOM_VK_HYPHEN_MINUS")]
-		public const uint DOM_VK_HYPHEN_MINUS = 173;
+		public const int DOM_VK_HYPHEN_MINUS = 173;
 
 		[ScriptName("DOM_VK_I")]
-		public const uint DOM_VK_I = 73;
+		public const int DOM_VK_I = 73;
 
 		[ScriptName("DOM_VK_INSERT")]
-		public const uint DOM_VK_INSERT = 45;
+		public const int DOM_VK_INSERT = 45;
 
 		[ScriptName("DOM_VK_J")]
-		public const uint DOM_VK_J = 74;
+		public const int DOM_VK_J = 74;
 
 		[ScriptName("DOM_VK_JUNJA")]
-		public const uint DOM_VK_JUNJA = 23;
+		public const int DOM_VK_JUNJA = 23;
 
 		[ScriptName("DOM_VK_K")]
-		public const uint DOM_VK_K = 75;
+		public const int DOM_VK_K = 75;
 
 		[ScriptName("DOM_VK_KANA")]
-		public const uint DOM_VK_KANA = 21;
+		public const int DOM_VK_KANA = 21;
 
 		[ScriptName("DOM_VK_KANJI")]
-		public const uint DOM_VK_KANJI = 25;
+		public const int DOM_VK_KANJI = 25;
 
 		[ScriptName("DOM_VK_L")]
-		public const uint DOM_VK_L = 76;
+		public const int DOM_VK_L = 76;
 
 		[ScriptName("DOM_VK_LEFT")]
-		public const uint DOM_VK_LEFT = 37;
+		public const int DOM_VK_LEFT = 37;
 
 		[ScriptName("DOM_VK_LESS_THAN")]
-		public const uint DOM_VK_LESS_THAN = 60;
+		public const int DOM_VK_LESS_THAN = 60;
 
 		[ScriptName("DOM_VK_M")]
-		public const uint DOM_VK_M = 77;
+		public const int DOM_VK_M = 77;
 
 		[ScriptName("DOM_VK_META")]
-		public const uint DOM_VK_META = 224;
+		public const int DOM_VK_META = 224;
 
 		[ScriptName("DOM_VK_MODECHANGE")]
-		public const uint DOM_VK_MODECHANGE = 31;
+		public const int DOM_VK_MODECHANGE = 31;
 
 		[ScriptName("DOM_VK_MULTIPLY")]
-		public const uint DOM_VK_MULTIPLY = 106;
+		public const int DOM_VK_MULTIPLY = 106;
 
 		[ScriptName("DOM_VK_N")]
-		public const uint DOM_VK_N = 78;
+		public const int DOM_VK_N = 78;
 
 		[ScriptName("DOM_VK_NONCONVERT")]
-		public const uint DOM_VK_NONCONVERT = 29;
+		public const int DOM_VK_NONCONVERT = 29;
 
 		[ScriptName("DOM_VK_NUM_LOCK")]
-		public const uint DOM_VK_NUM_LOCK = 144;
+		public const int DOM_VK_NUM_LOCK = 144;
 
 		[ScriptName("DOM_VK_NUMPAD0")]
-		public const uint DOM_VK_NUMPAD0 = 96;
+		public const int DOM_VK_NUMPAD0 = 96;
 
 		[ScriptName("DOM_VK_NUMPAD1")]
-		public const uint DOM_VK_NUMPAD1 = 97;
+		public const int DOM_VK_NUMPAD1 = 97;
 
 		[ScriptName("DOM_VK_NUMPAD2")]
-		public const uint DOM_VK_NUMPAD2 = 98;
+		public const int DOM_VK_NUMPAD2 = 98;
 
 		[ScriptName("DOM_VK_NUMPAD3")]
-		public const uint DOM_VK_NUMPAD3 = 99;
+		public const int DOM_VK_NUMPAD3 = 99;
 
 		[ScriptName("DOM_VK_NUMPAD4")]
-		public const uint DOM_VK_NUMPAD4 = 100;
+		public const int DOM_VK_NUMPAD4 = 100;
 
 		[ScriptName("DOM_VK_NUMPAD5")]
-		public const uint DOM_VK_NUMPAD5 = 101;
+		public const int DOM_VK_NUMPAD5 = 101;
 
 		[ScriptName("DOM_VK_NUMPAD6")]
-		public const uint DOM_VK_NUMPAD6 = 102;
+		public const int DOM_VK_NUMPAD6 = 102;
 
 		[ScriptName("DOM_VK_NUMPAD7")]
-		public const uint DOM_VK_NUMPAD7 = 103;
+		public const int DOM_VK_NUMPAD7 = 103;
 
 		[ScriptName("DOM_VK_NUMPAD8")]
-		public const uint DOM_VK_NUMPAD8 = 104;
+		public const int DOM_VK_NUMPAD8 = 104;
 
 		[ScriptName("DOM_VK_NUMPAD9")]
-		public const uint DOM_VK_NUMPAD9 = 105;
+		public const int DOM_VK_NUMPAD9 = 105;
 
 		[ScriptName("DOM_VK_O")]
-		public const uint DOM_VK_O = 79;
+		public const int DOM_VK_O = 79;
 
 		[ScriptName("DOM_VK_OPEN_BRACKET")]
-		public const uint DOM_VK_OPEN_BRACKET = 219;
+		public const int DOM_VK_OPEN_BRACKET = 219;
 
 		[ScriptName("DOM_VK_OPEN_CURLY_BRACKET")]
-		public const uint DOM_VK_OPEN_CURLY_BRACKET = 174;
+		public const int DOM_VK_OPEN_CURLY_BRACKET = 174;
 
 		[ScriptName("DOM_VK_OPEN_PAREN")]
-		public const uint DOM_VK_OPEN_PAREN = 168;
+		public const int DOM_VK_OPEN_PAREN = 168;
 
 		[ScriptName("DOM_VK_P")]
-		public const uint DOM_VK_P = 80;
+		public const int DOM_VK_P = 80;
 
 		[ScriptName("DOM_VK_PA1")]
-		public const uint DOM_VK_PA1 = 253;
+		public const int DOM_VK_PA1 = 253;
 
 		[ScriptName("DOM_VK_PAGE_DOWN")]
-		public const uint DOM_VK_PAGE_DOWN = 34;
+		public const int DOM_VK_PAGE_DOWN = 34;
 
 		[ScriptName("DOM_VK_PAGE_UP")]
-		public const uint DOM_VK_PAGE_UP = 33;
+		public const int DOM_VK_PAGE_UP = 33;
 
 		[ScriptName("DOM_VK_PAUSE")]
-		public const uint DOM_VK_PAUSE = 19;
+		public const int DOM_VK_PAUSE = 19;
 
 		[ScriptName("DOM_VK_PERCENT")]
-		public const uint DOM_VK_PERCENT = 165;
+		public const int DOM_VK_PERCENT = 165;
 
 		[ScriptName("DOM_VK_PERIOD")]
-		public const uint DOM_VK_PERIOD = 190;
+		public const int DOM_VK_PERIOD = 190;
 
 		[ScriptName("DOM_VK_PIPE")]
-		public const uint DOM_VK_PIPE = 172;
+		public const int DOM_VK_PIPE = 172;
 
 		[ScriptName("DOM_VK_PLAY")]
-		public const uint DOM_VK_PLAY = 250;
+		public const int DOM_VK_PLAY = 250;
 
 		[ScriptName("DOM_VK_PLUS")]
-		public const uint DOM_VK_PLUS = 171;
+		public const int DOM_VK_PLUS = 171;
 
 		[ScriptName("DOM_VK_PRINT")]
-		public const uint DOM_VK_PRINT = 42;
+		public const int DOM_VK_PRINT = 42;
 
 		[ScriptName("DOM_VK_PRINTSCREEN")]
-		public const uint DOM_VK_PRINTSCREEN = 44;
+		public const int DOM_VK_PRINTSCREEN = 44;
 
 		[ScriptName("DOM_VK_Q")]
-		public const uint DOM_VK_Q = 81;
+		public const int DOM_VK_Q = 81;
 
 		[ScriptName("DOM_VK_QUESTION_MARK")]
-		public const uint DOM_VK_QUESTION_MARK = 63;
+		public const int DOM_VK_QUESTION_MARK = 63;
 
 		[ScriptName("DOM_VK_QUOTE")]
-		public const uint DOM_VK_QUOTE = 222;
+		public const int DOM_VK_QUOTE = 222;
 
 		[ScriptName("DOM_VK_R")]
-		public const uint DOM_VK_R = 82;
+		public const int DOM_VK_R = 82;
 
 		[ScriptName("DOM_VK_RETURN")]
-		public const uint DOM_VK_RETURN = 13;
+		public const int DOM_VK_RETURN = 13;
 
 		[ScriptName("DOM_VK_RIGHT")]
-		public const uint DOM_VK_RIGHT = 39;
+		public const int DOM_VK_RIGHT = 39;
 
 		[ScriptName("DOM_VK_S")]
-		public const uint DOM_VK_S = 83;
+		public const int DOM_VK_S = 83;
 
 		[ScriptName("DOM_VK_SCROLL_LOCK")]
-		public const uint DOM_VK_SCROLL_LOCK = 145;
+		public const int DOM_VK_SCROLL_LOCK = 145;
 
 		[ScriptName("DOM_VK_SELECT")]
-		public const uint DOM_VK_SELECT = 41;
+		public const int DOM_VK_SELECT = 41;
 
 		[ScriptName("DOM_VK_SEMICOLON")]
-		public const uint DOM_VK_SEMICOLON = 59;
+		public const int DOM_VK_SEMICOLON = 59;
 
 		[ScriptName("DOM_VK_SEPARATOR")]
-		public const uint DOM_VK_SEPARATOR = 108;
+		public const int DOM_VK_SEPARATOR = 108;
 
 		[ScriptName("DOM_VK_SHIFT")]
-		public const uint DOM_VK_SHIFT = 16;
+		public const int DOM_VK_SHIFT = 16;
 
 		[ScriptName("DOM_VK_SLASH")]
-		public const uint DOM_VK_SLASH = 191;
+		public const int DOM_VK_SLASH = 191;
 
 		[ScriptName("DOM_VK_SLEEP")]
-		public const uint DOM_VK_SLEEP = 95;
+		public const int DOM_VK_SLEEP = 95;
 
 		[ScriptName("DOM_VK_SPACE")]
-		public const uint DOM_VK_SPACE = 32;
+		public const int DOM_VK_SPACE = 32;
 
 		[ScriptName("DOM_VK_SUBTRACT")]
-		public const uint DOM_VK_SUBTRACT = 109;
+		public const int DOM_VK_SUBTRACT = 109;
 
 		[ScriptName("DOM_VK_T")]
-		public const uint DOM_VK_T = 84;
+		public const int DOM_VK_T = 84;
 
 		[ScriptName("DOM_VK_TAB")]
-		public const uint DOM_VK_TAB = 9;
+		public const int DOM_VK_TAB = 9;
 
 		[ScriptName("DOM_VK_TILDE")]
-		public const uint DOM_VK_TILDE = 176;
+		public const int DOM_VK_TILDE = 176;
 
 		[ScriptName("DOM_VK_U")]
-		public const uint DOM_VK_U = 85;
+		public const int DOM_VK_U = 85;
 
 		[ScriptName("DOM_VK_UNDERSCORE")]
-		public const uint DOM_VK_UNDERSCORE = 167;
+		public const int DOM_VK_UNDERSCORE = 167;
 
 		[ScriptName("DOM_VK_UP")]
-		public const uint DOM_VK_UP = 38;
+		public const int DOM_VK_UP = 38;
 
 		[ScriptName("DOM_VK_V")]
-		public const uint DOM_VK_V = 86;
-
-		[ScriptName("DOM_VK_W")]
-		public const uint DOM_VK_W = 87;
-
-		[ScriptName("DOM_VK_WIN")]
-		public const uint DOM_VK_WIN = 91;
-
-		[ScriptName("DOM_VK_WIN_ICO_00")]
-		public const uint DOM_VK_WIN_ICO_00 = 228;
-
-		[ScriptName("DOM_VK_WIN_ICO_CLEAR")]
-		public const uint DOM_VK_WIN_ICO_CLEAR = 230;
-
-		[ScriptName("DOM_VK_WIN_ICO_HELP")]
-		public const uint DOM_VK_WIN_ICO_HELP = 227;
-
-		[ScriptName("DOM_VK_WIN_OEM_ATTN")]
-		public const uint DOM_VK_WIN_OEM_ATTN = 240;
-
-		[ScriptName("DOM_VK_WIN_OEM_AUTO")]
-		public const uint DOM_VK_WIN_OEM_AUTO = 243;
-
-		[ScriptName("DOM_VK_WIN_OEM_BACKTAB")]
-		public const uint DOM_VK_WIN_OEM_BACKTAB = 245;
-
-		[ScriptName("DOM_VK_WIN_OEM_CLEAR")]
-		public const uint DOM_VK_WIN_OEM_CLEAR = 254;
-
-		[ScriptName("DOM_VK_WIN_OEM_COPY")]
-		public const uint DOM_VK_WIN_OEM_COPY = 242;
-
-		[ScriptName("DOM_VK_WIN_OEM_CUSEL")]
-		public const uint DOM_VK_WIN_OEM_CUSEL = 239;
-
-		[ScriptName("DOM_VK_WIN_OEM_ENLW")]
-		public const uint DOM_VK_WIN_OEM_ENLW = 244;
-
-		[ScriptName("DOM_VK_WIN_OEM_FINISH")]
-		public const uint DOM_VK_WIN_OEM_FINISH = 241;
-
-		[ScriptName("DOM_VK_WIN_OEM_FJ_JISHO")]
-		public const uint DOM_VK_WIN_OEM_FJ_JISHO = 146;
-
-		[ScriptName("DOM_VK_WIN_OEM_FJ_LOYA")]
-		public const uint DOM_VK_WIN_OEM_FJ_LOYA = 149;
-
-		[ScriptName("DOM_VK_WIN_OEM_FJ_MASSHOU")]
-		public const uint DOM_VK_WIN_OEM_FJ_MASSHOU = 147;
-
-		[ScriptName("DOM_VK_WIN_OEM_FJ_ROYA")]
-		public const uint DOM_VK_WIN_OEM_FJ_ROYA = 150;
-
-		[ScriptName("DOM_VK_WIN_OEM_FJ_TOUROKU")]
-		public const uint DOM_VK_WIN_OEM_FJ_TOUROKU = 148;
-
-		[ScriptName("DOM_VK_WIN_OEM_JUMP")]
-		public const uint DOM_VK_WIN_OEM_JUMP = 234;
-
-		[ScriptName("DOM_VK_WIN_OEM_PA1")]
-		public const uint DOM_VK_WIN_OEM_PA1 = 235;
-
-		[ScriptName("DOM_VK_WIN_OEM_PA2")]
-		public const uint DOM_VK_WIN_OEM_PA2 = 236;
-
-		[ScriptName("DOM_VK_WIN_OEM_PA3")]
-		public const uint DOM_VK_WIN_OEM_PA3 = 237;
-
-		[ScriptName("DOM_VK_WIN_OEM_RESET")]
-		public const uint DOM_VK_WIN_OEM_RESET = 233;
-
-		[ScriptName("DOM_VK_WIN_OEM_WSCTRL")]
-		public const uint DOM_VK_WIN_OEM_WSCTRL = 238;
+		public const int DOM_VK_V = 86;
 
 		[ScriptName("DOM_VK_VOLUME_DOWN")]
-		public const uint DOM_VK_VOLUME_DOWN = 182;
+		public const int DOM_VK_VOLUME_DOWN = 182;
 
 		[ScriptName("DOM_VK_VOLUME_MUTE")]
-		public const uint DOM_VK_VOLUME_MUTE = 181;
+		public const int DOM_VK_VOLUME_MUTE = 181;
 
 		[ScriptName("DOM_VK_VOLUME_UP")]
-		public const uint DOM_VK_VOLUME_UP = 183;
+		public const int DOM_VK_VOLUME_UP = 183;
+
+		[ScriptName("DOM_VK_W")]
+		public const int DOM_VK_W = 87;
+
+		[ScriptName("DOM_VK_WIN")]
+		public const int DOM_VK_WIN = 91;
+
+		[ScriptName("DOM_VK_WIN_ICO_00")]
+		public const int DOM_VK_WIN_ICO_00 = 228;
+
+		[ScriptName("DOM_VK_WIN_ICO_CLEAR")]
+		public const int DOM_VK_WIN_ICO_CLEAR = 230;
+
+		[ScriptName("DOM_VK_WIN_ICO_HELP")]
+		public const int DOM_VK_WIN_ICO_HELP = 227;
+
+		[ScriptName("DOM_VK_WIN_OEM_ATTN")]
+		public const int DOM_VK_WIN_OEM_ATTN = 240;
+
+		[ScriptName("DOM_VK_WIN_OEM_AUTO")]
+		public const int DOM_VK_WIN_OEM_AUTO = 243;
+
+		[ScriptName("DOM_VK_WIN_OEM_BACKTAB")]
+		public const int DOM_VK_WIN_OEM_BACKTAB = 245;
+
+		[ScriptName("DOM_VK_WIN_OEM_CLEAR")]
+		public const int DOM_VK_WIN_OEM_CLEAR = 254;
+
+		[ScriptName("DOM_VK_WIN_OEM_COPY")]
+		public const int DOM_VK_WIN_OEM_COPY = 242;
+
+		[ScriptName("DOM_VK_WIN_OEM_CUSEL")]
+		public const int DOM_VK_WIN_OEM_CUSEL = 239;
+
+		[ScriptName("DOM_VK_WIN_OEM_ENLW")]
+		public const int DOM_VK_WIN_OEM_ENLW = 244;
+
+		[ScriptName("DOM_VK_WIN_OEM_FINISH")]
+		public const int DOM_VK_WIN_OEM_FINISH = 241;
+
+		[ScriptName("DOM_VK_WIN_OEM_FJ_JISHO")]
+		public const int DOM_VK_WIN_OEM_FJ_JISHO = 146;
+
+		[ScriptName("DOM_VK_WIN_OEM_FJ_LOYA")]
+		public const int DOM_VK_WIN_OEM_FJ_LOYA = 149;
+
+		[ScriptName("DOM_VK_WIN_OEM_FJ_MASSHOU")]
+		public const int DOM_VK_WIN_OEM_FJ_MASSHOU = 147;
+
+		[ScriptName("DOM_VK_WIN_OEM_FJ_ROYA")]
+		public const int DOM_VK_WIN_OEM_FJ_ROYA = 150;
+
+		[ScriptName("DOM_VK_WIN_OEM_FJ_TOUROKU")]
+		public const int DOM_VK_WIN_OEM_FJ_TOUROKU = 148;
+
+		[ScriptName("DOM_VK_WIN_OEM_JUMP")]
+		public const int DOM_VK_WIN_OEM_JUMP = 234;
+
+		[ScriptName("DOM_VK_WIN_OEM_PA1")]
+		public const int DOM_VK_WIN_OEM_PA1 = 235;
+
+		[ScriptName("DOM_VK_WIN_OEM_PA2")]
+		public const int DOM_VK_WIN_OEM_PA2 = 236;
+
+		[ScriptName("DOM_VK_WIN_OEM_PA3")]
+		public const int DOM_VK_WIN_OEM_PA3 = 237;
+
+		[ScriptName("DOM_VK_WIN_OEM_RESET")]
+		public const int DOM_VK_WIN_OEM_RESET = 233;
+
+		[ScriptName("DOM_VK_WIN_OEM_WSCTRL")]
+		public const int DOM_VK_WIN_OEM_WSCTRL = 238;
 
 		[ScriptName("DOM_VK_X")]
-		public const uint DOM_VK_X = 88;
+		public const int DOM_VK_X = 88;
 
 		[ScriptName("DOM_VK_Y")]
-		public const uint DOM_VK_Y = 89;
+		public const int DOM_VK_Y = 89;
 
 		[ScriptName("DOM_VK_Z")]
-		public const uint DOM_VK_Z = 90;
+		public const int DOM_VK_Z = 90;
 
 		[ScriptName("DOM_VK_ZOOM")]
-		public const uint DOM_VK_ZOOM = 251;
+		public const int DOM_VK_ZOOM = 251;
 
 		public bool GetModifierState(string key) {
 			return false;
+		}
+
+		public void InitKeyEvent(string type, bool canBubble, bool cancelable, WindowInstance view, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey, int keyCode, int charCode) {
 		}
 
 		[IntrinsicProperty]
@@ -615,14 +615,14 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint KeyCode {
+		public int KeyCode {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public uint Location {
+		public int Location {
 			get {
 				return 0;
 			}
@@ -630,6 +630,13 @@ namespace System.Html {
 
 		[IntrinsicProperty]
 		public bool MetaKey {
+			get {
+				return false;
+			}
+		}
+
+		[IntrinsicProperty]
+		public bool Repeat {
 			get {
 				return false;
 			}

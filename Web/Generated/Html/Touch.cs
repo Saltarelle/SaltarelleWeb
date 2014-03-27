@@ -21,7 +21,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public float Force {
+		public double Force {
 			get {
 				return 0;
 			}
@@ -63,7 +63,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public float RotationAngle {
+		public double RotationAngle {
 			get {
 				return 0;
 			}

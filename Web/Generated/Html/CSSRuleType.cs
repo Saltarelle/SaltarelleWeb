@@ -3,12 +3,12 @@
 namespace System.Html {
 	[Imported]
 	public enum CSSRuleType {
-		Style = 1,
 		Charset = 2,
+		FontFace = 5,
 		Import = 3,
 		Media = 4,
-		FontFace = 5,
+		Namespace = 10,
 		Page = 6,
-		Namespace = 10
+		Style = 1
 	}
 }

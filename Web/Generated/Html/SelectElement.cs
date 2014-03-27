@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using System.Xml;
 
 namespace System.Html {
 	[IgnoreNamespace, Imported(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'SELECT'"), ScriptName("Element")]
@@ -9,9 +8,9 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public TypeOption<XmlElement, OptionElement> this[uint index] {
+		public TypeOption<Element, OptionElement> this[int index] {
 			get {
-				return default(TypeOption<XmlElement, OptionElement>);
+				return default(TypeOption<Element, OptionElement>);
 			}
 			set {
 			}
@@ -83,16 +82,16 @@ namespace System.Html {
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<XmlElement> GetEnumerator() {
+		public IEnumerator<Element> GetEnumerator() {
 			return null;
 		}
 
-		public XmlElement Item(uint index) {
-			return default(XmlElement);
+		public Element Item(int index) {
+			return default(Element);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}
@@ -194,7 +193,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Size {
+		public int Size {
 			get {
 				return 0;
 			}

@@ -6,10 +6,7 @@ namespace System.Data.IndexedDB {
 		internal Cursor() {
 		}
 
-		public void Advance(uint count) {
-		}
-
-		public void Continue() {
+		public void Advance(int count) {
 		}
 
 		public void Continue(object key) {

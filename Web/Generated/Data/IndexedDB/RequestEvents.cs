@@ -3,9 +3,7 @@
 namespace System.Data.IndexedDB {
 	[Imported, NamedValues]
 	public enum RequestEvents {
-		[ScriptName("onsuccess")]
-		Success,
-		[ScriptName("onerror")]
-		Error
+		Error,
+		Success
 	}
 }

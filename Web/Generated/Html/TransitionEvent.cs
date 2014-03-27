@@ -13,7 +13,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public float ElapsedTime {
+		public double ElapsedTime {
 			get {
 				return 0;
 			}

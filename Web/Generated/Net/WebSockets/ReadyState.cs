@@ -3,9 +3,9 @@
 namespace System.Net.WebSockets {
 	[Imported]
 	public enum ReadyState {
-		Connecting = 0,
-		Open = 1,
+		Closed = 3,
 		Closing = 2,
-		Closed = 3
+		Connecting = 0,
+		Open = 1
 	}
 }

@@ -41,7 +41,6 @@ interface MessageEvent : Event {
    * the similarly-named method on the nsIDOMEvent interface, also setting the
    * data, origin, source, and lastEventId attributes of this appropriately.
    */
-  [Pref="dom.messageChannel.enabled"]
   readonly attribute MessagePortList? ports;
 };
 
@@ -49,9 +48,6 @@ dictionary MessageEventInit : EventInit {
   any data;
   DOMString origin;
   DOMString lastEventId;
-
-  // TODO bug 767926 - This should be: (WindowProxy or MessagePort)? source;
-  object? source = null;
-
+  (WindowProxy or MessagePort)? source = null;
   sequence<MessagePort>? ports;
 };

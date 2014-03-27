@@ -190,7 +190,7 @@ namespace System.Net {
 		}
 
 		[IntrinsicProperty]
-		public uint Timeout {
+		public int Timeout {
 			get {
 				return 0;
 			}

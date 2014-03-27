@@ -38,16 +38,16 @@ namespace System.Xml {
 		}
 
 		[IntrinsicProperty]
-		public uint ChildElementCount {
+		public int ChildElementCount {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public ElementCollection Children {
+		public XmlElementCollection Children {
 			get {
-				return default(ElementCollection);
+				return default(XmlElementCollection);
 			}
 		}
 
@@ -56,6 +56,10 @@ namespace System.Xml {
 			get {
 				return default(XmlElement);
 			}
+		}
+
+		public XmlElement GetElementById(string elementId) {
+			return default(XmlElement);
 		}
 
 		[IntrinsicProperty]

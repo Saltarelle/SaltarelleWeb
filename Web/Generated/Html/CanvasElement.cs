@@ -47,7 +47,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Height {
+		public int Height {
 			get {
 				return 0;
 			}
@@ -88,17 +88,10 @@ namespace System.Html {
 		public void ToBlob(Action<Blob> callback) {
 		}
 
-		public void ToBlob(Action<Blob> callback, string type) {
-		}
-
 		public void ToBlob(Action<Blob> callback, string type, object encoderOptions) {
 		}
 
 		public string ToDataURL() {
-			return null;
-		}
-
-		public string ToDataURL(string type) {
 			return null;
 		}
 
@@ -107,7 +100,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Width {
+		public int Width {
 			get {
 				return 0;
 			}

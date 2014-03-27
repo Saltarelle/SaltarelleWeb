@@ -11,32 +11,32 @@ namespace System.Html.Media.Audio {
 		}
 
 		[IntrinsicProperty]
-		public float DefaultValue {
+		public double DefaultValue {
 			get {
 				return 0;
 			}
 		}
 
-		public void ExponentialRampToValueAtTime(float value, double endTime) {
+		public void ExponentialRampToValueAtTime(double value, double endTime) {
 		}
 
-		public void LinearRampToValueAtTime(float value, double endTime) {
+		public void LinearRampToValueAtTime(double value, double endTime) {
 		}
 
-		public void SetTargetAtTime(float target, double startTime, double timeConstant) {
+		public void SetTargetAtTime(double target, double startTime, double timeConstant) {
 		}
 
-		public void SetTargetValueAtTime(float target, double startTime, double timeConstant) {
+		public void SetTargetValueAtTime(double target, double startTime, double timeConstant) {
 		}
 
-		public void SetValueAtTime(float value, double startTime) {
+		public void SetValueAtTime(double value, double startTime) {
 		}
 
 		public void SetValueCurveAtTime(Float32Array values, double startTime, double duration) {
 		}
 
 		[IntrinsicProperty]
-		public float Value {
+		public double Value {
 			get {
 				return 0;
 			}

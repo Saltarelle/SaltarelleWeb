@@ -28,12 +28,12 @@ interface SVGTextContentElement : SVGGraphicsElement {
   SVGPoint getStartPositionOfChar(unsigned long charnum);
   [Throws]
   SVGPoint getEndPositionOfChar(unsigned long charnum);
-  [Creator, Throws]
+  [NewObject, Throws]
   SVGRect getExtentOfChar(unsigned long charnum);
   [Throws]
   float getRotationOfChar(unsigned long charnum);
   long getCharNumAtPosition(SVGPoint point);
-  [Throws, Pref="svg.text.css-frames.enabled"]
+  [Throws]
   void selectSubString(unsigned long charnum, unsigned long nchars);
 };
 

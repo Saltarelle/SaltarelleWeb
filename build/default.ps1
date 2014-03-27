@@ -146,7 +146,7 @@ function Parse-Line($line) {
 		$spaces++
 	}
 
-	return @{ Indent = $spaces / 4; Text = $line.Substring($spaces) }
+	return @{ Indent = $spaces; Text = $line.Substring($spaces) }
 }
 
 function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$currentLine) {
@@ -154,24 +154,31 @@ function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$curren
 		$line = $lines[$currentLine.value]
 		if ($line.Text -match "^(\S+)\s(\+?=)\s(.+)$") {
 			if ($Matches[1] -ne "MODULE") {
-				if ($matches[3] -ne "[") {
-					throw "Expected '[' on line $($line.Text)"
-				}
 				$target = $Matches[1]
 				$type = $Matches[2]
+				$last = $matches[3]
 				
-				$list = @()
-				$currentLine.value++
-				while (($currentLine.value -lt $lines.Length) -and ($lines[$currentLine.value].Indent -eq ($currentIndent + 1))) {
-					$line = $lines[$currentLine.value]
-					if (-not ($line.Text -match "^'([^']+)',?$")) {
-						throw "Expected 'identifier' on line $($line.Text)"
-					}
-					$list += $Matches[1]
-					$currentLine.value++
+				if ($last -match "^\[\s*'([^']+)'\s*]\s*$") {
+					$list = @($Matches[1])
 				}
-				if (($currentLine.value -ge $lines.Length) -or ($lines[$currentLine.value].Indent -ne $currentIndent) -or ($lines[$currentLine.value].Text -ne "]")) {
-					throw "Expected ']' on line $($currentLines[$currentLine.value].Text)"
+				else {
+					if ($last -ne "[") {
+						throw "Expected '[' on line $($line.Text)"
+					}
+
+					$list = @()
+					$currentLine.value++
+					while (($currentLine.value -lt $lines.Length) -and ($lines[$currentLine.value].Indent -gt $currentIndent)) {
+						$line = $lines[$currentLine.value]
+						if (-not ($line.Text -match "^'([^']+)',?$")) {
+							throw "Expected 'identifier' on line $($line.Text)"
+						}
+						$list += $Matches[1]
+						$currentLine.value++
+					}
+					if (($currentLine.value -ge $lines.Length) -or ($lines[$currentLine.value].Indent -ne $currentIndent) -or ($lines[$currentLine.value].Text -ne "]")) {
+						throw "Expected ']' on line $($lines[$currentLine.value].Text)"
+					}
 				}
 
 				if ($take) {
@@ -188,7 +195,30 @@ function Process($lines, $currentIndent, $symbols, $take, $sources, [ref]$curren
 		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]:$") {
 			$newTake = $take -and $symbols -contains $Matches[1]
 			$currentLine.value++
-			Process $lines ($currentIndent + 1) $symbols $newTake $sources $currentLine
+			if ($currentLine.Value -lt $lines.Count) {
+				Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+			}
+		}
+		elseif ($line.Text -match "^if not CONFIG\['([^']+)'\]:$") {
+			$newTake = $take -and -not ($symbols -contains $Matches[1])
+			$currentLine.value++
+			if ($currentLine.Value -lt $lines.Count) {
+				Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+			}
+		}
+		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]\s==\s'[^']+':$") {
+			$newTake = $false
+			$currentLine.value++
+			if ($currentLine.Value -lt $lines.Count) {
+				Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+			}
+		}
+		elseif ($line.Text -match "^if CONFIG\['([^']+)'\]\sin\s\[[^]]+]\s*:$") {
+			$newTake = $false
+			$currentLine.value++
+			if ($currentLine.Value -lt $lines.Count) {
+				Process $lines $lines[$currentLine.Value].Indent $symbols $newTake $sources $currentLine
+			}
 		}
 		else {
 			throw "Unknown line $($line.Text)"
@@ -200,7 +230,11 @@ function Get-Sources($makefile, $symbols) {
 	$sources = @{}
 	$content = [System.IO.File]::ReadAllText($makefile) -replace "`r`n", "`n" -replace "\\`n",""
 	$lines = $content.Split("`n") | % { Parse-Line($_) } | ? { $_.Text -ne "" }
-	Process $lines 0 $symbols $true $sources ([ref]0)
+    $currentLine = [ref]0
+	Process $lines 0 $symbols $true $sources $currentLine
+    if ($currentLine.Value -ne $lines.Length) {
+        throw "Quit processing after line $($lines[$currentLine.Value].Text)"
+    }
 	$sources["webidl_files"] += $sources["generated_events_webidl_files"]
 	$sources.Remove("generated_events_webidl_files")
 	return $sources
@@ -215,9 +249,10 @@ function Generate-CSS2Properties($root, $workDir, $targetFile) {
 	# This logic is from the file http://dxr.mozilla.org/mozilla-central/source/dom/bindings/GenerateCSS2PropertiesWebIDL.py
 
 	$content = & "$buildtoolsDir\mcpp.exe" -e utf8 -P "$workDir\CSS2PropertiesProps.h"
+	$content | Out-File "$workDir\CSS2Properties.pp" -Encoding UTF8
 	$out = New-Object System.Text.StringBuilder
 	$content -split "`n" | % {
-		$match = Select-String -Pattern "^\s*\[\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*\]\s*,\s*$" -InputObject $_
+		$match = Select-String -Pattern "^\s*\[\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*,\s*`"([^`"]*)`"\s*\]\s*,\s*$" -InputObject $_
 		if ($match -ne $null) {
 			$extendedAttrs = @("Throws", "TreatNullAs=EmptyString")
 			$prop = $match.Matches[0].Groups[1].Value
@@ -279,7 +314,7 @@ Task Download-WebIDL {
 		$current++
 		Write-Host "Preprocessing $_ ($current of $total)"
 		$defines = ($symbols | % { "-D $_" }) -join " "
-		$content = iex "$buildtoolsDir\mcpp.exe -e utf8 $defines -P -C -o `"$webidlDir\$_`" `"$webidlDir\$_.raw`""
+		$content = iex "$buildtoolsDir\mcpp.exe -e utf8 $defines -P -o `"$webidlDir\$_`" `"$webidlDir\$_.raw`""
 	}
 
 	#generation

@@ -8,7 +8,7 @@ namespace System.Html.Speech {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public SpeechRecognitionAlternative this[uint index] {
+		public SpeechRecognitionAlternative this[int index] {
 			get {
 				return default(SpeechRecognitionAlternative);
 			}
@@ -26,12 +26,12 @@ namespace System.Html.Speech {
 			return null;
 		}
 
-		public SpeechRecognitionAlternative Item(uint index) {
+		public SpeechRecognitionAlternative Item(int index) {
 			return default(SpeechRecognitionAlternative);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

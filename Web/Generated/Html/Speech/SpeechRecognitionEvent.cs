@@ -28,7 +28,7 @@ namespace System.Html.Speech {
 		}
 
 		[IntrinsicProperty]
-		public uint ResultIndex {
+		public int ResultIndex {
 			get {
 				return 0;
 			}

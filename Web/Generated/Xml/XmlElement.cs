@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace System.Xml {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("Element")]
-	public partial class XmlElement : XmlNode {
+	public partial class XmlElement : XmlNode, IGeometryUtils {
 		internal XmlElement() {
 		}
 
@@ -45,16 +45,16 @@ namespace System.Xml {
 		}
 
 		[IntrinsicProperty]
-		public uint ChildElementCount {
+		public int ChildElementCount {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public ElementCollection Children {
+		public XmlElementCollection Children {
 			get {
-				return default(ElementCollection);
+				return default(XmlElementCollection);
 			}
 		}
 
@@ -93,6 +93,34 @@ namespace System.Xml {
 			}
 		}
 
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMPoint);
+		}
+
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMPoint);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
+		public ShadowRoot CreateShadowRoot() {
+			return default(ShadowRoot);
+		}
+
 		[IntrinsicProperty]
 		public XmlElement FirstElementChild {
 			get {
@@ -120,20 +148,28 @@ namespace System.Xml {
 			return default(DOMRect);
 		}
 
+		public DOMQuad[] GetBoxQuads() {
+			return null;
+		}
+
+		public DOMQuad[] GetBoxQuads(BoxQuadOptions options) {
+			return null;
+		}
+
 		public DOMRectList GetClientRects() {
 			return default(DOMRectList);
 		}
 
-		public ElementCollection GetElementsByClassName(string classNames) {
-			return default(ElementCollection);
+		public XmlElementCollection GetElementsByClassName(string classNames) {
+			return default(XmlElementCollection);
 		}
 
-		public ElementCollection GetElementsByTagName(string localName) {
-			return default(ElementCollection);
+		public XmlElementCollection GetElementsByTagName(string localName) {
+			return default(XmlElementCollection);
 		}
 
-		public ElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
-			return default(ElementCollection);
+		public XmlElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
+			return default(XmlElementCollection);
 		}
 
 		public bool HasAttribute(string name) {
@@ -176,24 +212,6 @@ namespace System.Xml {
 		public XmlElement NextElementSibling {
 			get {
 				return default(XmlElement);
-			}
-		}
-
-		[IntrinsicProperty, ScriptName("onmouseenter")]
-		public HtmlEventHandler OnMouseenter {
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
-		}
-
-		[IntrinsicProperty, ScriptName("onmouseleave")]
-		public HtmlEventHandler OnMouseleave {
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
 			}
 		}
 
@@ -346,6 +364,13 @@ namespace System.Xml {
 		}
 
 		public void SetCapture(bool retargetToElement) {
+		}
+
+		[IntrinsicProperty]
+		public ShadowRoot ShadowRoot {
+			get {
+				return default(ShadowRoot);
+			}
 		}
 
 		[IntrinsicProperty]

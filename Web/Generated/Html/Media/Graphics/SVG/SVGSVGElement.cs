@@ -1,5 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Xml;
 
 namespace System.Html.Media.Graphics.SVG {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
@@ -74,7 +73,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float CurrentScale {
+		public double CurrentScale {
 			get {
 				return 0;
 			}
@@ -95,12 +94,12 @@ namespace System.Html.Media.Graphics.SVG {
 		public void ForceRedraw() {
 		}
 
-		public float GetCurrentTime() {
+		public double GetCurrentTime() {
 			return 0;
 		}
 
-		public XmlElement GetElementById(string elementId) {
-			return default(XmlElement);
+		public Element GetElementById(string elementId) {
+			return default(Element);
 		}
 
 		[IntrinsicProperty]
@@ -114,14 +113,14 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float PixelUnitToMillimeterX {
+		public double PixelUnitToMillimeterX {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public float PixelUnitToMillimeterY {
+		public double PixelUnitToMillimeterY {
 			get {
 				return 0;
 			}
@@ -165,23 +164,23 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float ScreenPixelToMillimeterX {
+		public double ScreenPixelToMillimeterX {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public float ScreenPixelToMillimeterY {
+		public double ScreenPixelToMillimeterY {
 			get {
 				return 0;
 			}
 		}
 
-		public void SetCurrentTime(float seconds) {
+		public void SetCurrentTime(double seconds) {
 		}
 
-		public uint SuspendRedraw(uint maxWaitMilliseconds) {
+		public int SuspendRedraw(int maxWaitMilliseconds) {
 			return 0;
 		}
 
@@ -197,7 +196,7 @@ namespace System.Html.Media.Graphics.SVG {
 		public void UnpauseAnimations() {
 		}
 
-		public void UnsuspendRedraw(uint suspendHandleID) {
+		public void UnsuspendRedraw(int suspendHandleID) {
 		}
 
 		public void UnsuspendRedrawAll() {
@@ -211,16 +210,16 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public SVGAnimatedLength Width {
+		public SVGAnimatedRect ViewBox {
 			get {
-				return default(SVGAnimatedLength);
+				return default(SVGAnimatedRect);
 			}
 		}
 
 		[IntrinsicProperty]
-		public SVGAnimatedRect ViewBox {
+		public SVGAnimatedLength Width {
 			get {
-				return default(SVGAnimatedRect);
+				return default(SVGAnimatedLength);
 			}
 		}
 

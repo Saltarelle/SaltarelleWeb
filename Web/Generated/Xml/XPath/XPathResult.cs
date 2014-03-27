@@ -66,12 +66,12 @@ namespace System.Xml.XPath {
 			}
 		}
 
-		public XmlNode SnapshotItem(uint index) {
+		public XmlNode SnapshotItem(int index) {
 			return default(XmlNode);
 		}
 
 		[IntrinsicProperty]
-		public uint SnapshotLength {
+		public int SnapshotLength {
 			get {
 				return 0;
 			}

@@ -13,7 +13,6 @@
 
 // http://www.whatwg.org/specs/web-apps/current-work/#the-a-element
 interface HTMLAnchorElement : HTMLElement {
-  stringifier;
            [SetterThrows]
            attribute DOMString target;
            [SetterThrows]
@@ -22,8 +21,7 @@ interface HTMLAnchorElement : HTMLElement {
            attribute DOMString ping;
            [SetterThrows]
            attribute DOMString rel;
-  // relList not supported yet
-  //readonly attribute DOMTokenList relList;
+  readonly attribute DOMTokenList relList;
            [SetterThrows]
            attribute DOMString hreflang;
            [SetterThrows]

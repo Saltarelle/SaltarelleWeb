@@ -11,13 +11,12 @@
  * http://www.w3.org/TR/vibration/#vibration-interface
  * http://www.w3.org/2012/sysapps/runtime/#extension-to-the-navigator-interface-1
  * https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#navigator-interface-extension
+ * http://www.w3.org/TR/beacon/#sec-beacon-method
  *
  * © Copyright 2004-2011 Apple Computer, Inc., Mozilla Foundation, and
  * Opera Software ASA. You are granted a license to use, reproduce
  * and create derivative works of this document.
  */
-
-interface MozWakeLock;
 
 // http://www.whatwg.org/specs/web-apps/current-work/#the-navigator-object
 [HeaderFile="Navigator.h", NeedNewResolve]
@@ -32,18 +31,22 @@ Navigator implements NavigatorStorageUtils;
 
 [NoInterfaceObject]
 interface NavigatorID {
+  // WebKit/Blink/Trident/Presto support this (hardcoded "Mozilla").
+  [Constant]
+  readonly attribute DOMString appCodeName; // constant "Mozilla"
+  [Constant]
   readonly attribute DOMString appName;
-  [Throws]
+  [Constant]
   readonly attribute DOMString appVersion;
-  [Throws]
+  [Constant]
   readonly attribute DOMString platform;
-  [Throws]
+  [Constant]
   readonly attribute DOMString userAgent;
+  [Constant]
+  readonly attribute DOMString product; // constant "Gecko"
 
-  // Spec has this as a const, but that's wrong because it should not
-  // be on the interface object.
-  //const DOMString product = "Gecko"; // for historical reasons
-  readonly attribute DOMString product;
+  // Everyone but WebKit/Blink supports this.  See bug 679971.
+  boolean taintEnabled(); // constant false
 };
 
 [NoInterfaceObject]
@@ -111,7 +114,7 @@ Navigator implements NavigatorBattery;
 // https://wiki.mozilla.org/WebAPI/DataStore
 [NoInterfaceObject]
 interface NavigatorDataStore {
-    [Throws, Creator, Pref="dom.datastore.enabled"]
+    [Throws, NewObject, Func="Navigator::HasDataStoreSupport"]
     Promise getDataStores(DOMString name);
 };
 Navigator implements NavigatorDataStore;
@@ -122,6 +125,12 @@ partial interface Navigator {
     //boolean vibrate ((unsigned long or sequence<unsigned long>) pattern);
     boolean vibrate(unsigned long duration);
     boolean vibrate(sequence<unsigned long> pattern);
+};
+
+// http://www.w3.org/TR/pointerevents/#extensions-to-the-navigator-interface
+partial interface Navigator {
+    [Pref="dom.w3c_pointer_events.enabled"]
+    readonly attribute long maxTouchPoints;
 };
 
 // Mozilla-specific extensions
@@ -136,9 +145,6 @@ callback interface MozIdleObserver {
 
 // nsIDOMNavigator
 partial interface Navigator {
-  // WebKit/Blink/Trident/Presto support this (hardcoded "Mozilla").
-  [Throws]
-  readonly attribute DOMString appCodeName;
   [Throws]
   readonly attribute DOMString oscpu;
   // WebKit/Blink support this; Trident/Presto do not.
@@ -157,8 +163,6 @@ partial interface Navigator {
   // WebKit/Blink/Trident/Presto support this.
   [Throws]
   boolean javaEnabled();
-  // Everyone but WebKit/Blink supports this.  See bug 679971.
-  boolean taintEnabled();
 
   /**
    * Navigator requests to add an idle observer to the existing window.
@@ -194,13 +198,13 @@ partial interface Navigator {
    * One topic can be locked multiple times; it is considered released only when
    * all locks on the topic have been released.
    *
-   * The returned nsIDOMMozWakeLock object is a token of the lock.  You can
+   * The returned MozWakeLock object is a token of the lock.  You can
    * unlock the lock via the object's |unlock| method.  The lock is released
    * automatically when its associated window is unloaded.
    *
    * @param aTopic resource name
    */
-  [Throws, Func="Navigator::HasWakeLockSupport"]
+  [Throws, Pref="dom.wakelock.enabled", Func="Navigator::HasWakeLockSupport"]
   MozWakeLock requestWakeLock(DOMString aTopic);
 };
 
@@ -232,7 +236,6 @@ partial interface Navigator {
 };
 
 // nsIDOMMozNavigatorNetwork
-interface MozConnection;
 partial interface Navigator {
   [Pref="dom.network.enabled"]
   readonly attribute MozConnection? mozConnection;
@@ -256,15 +259,8 @@ partial interface Navigator {
 
 #ifdef MOZ_B2G_RIL
 partial interface Navigator {
-  [Throws, Func="Navigator::HasTelephonySupport"]
-  readonly attribute Telephony? mozTelephony;
-};
-
-// nsIMozNavigatorMobileConnection
-interface MozMobileConnection;
-partial interface Navigator {
   [Throws, Func="Navigator::HasMobileConnectionSupport"]
-  readonly attribute MozMobileConnection mozMobileConnection;
+  readonly attribute MozMobileConnectionArray mozMobileConnections;
 };
 
 partial interface Navigator {
@@ -284,6 +280,11 @@ partial interface Navigator {
   readonly attribute MozIccManager? mozIccManager;
 };
 #endif // MOZ_B2G_RIL
+
+partial interface Navigator {
+  [Throws, Func="Navigator::HasTelephonySupport"]
+  readonly attribute Telephony? mozTelephony;
+};
 
 #ifdef MOZ_GAMEPAD
 // https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#navigator-interface-extension
@@ -340,6 +341,16 @@ partial interface Navigator {
   [Throws, ChromeOnly]
   void mozGetUserMediaDevices(MediaStreamConstraintsInternal constraints,
                               MozGetUserMediaDevicesSuccessCallback onsuccess,
-                              NavigatorUserMediaErrorCallback onerror);
+                              NavigatorUserMediaErrorCallback onerror,
+                              // The originating innerWindowID is needed to
+                              // avoid calling the callbacks if the window has
+                              // navigated away. It is optional only as legacy.
+                              optional unsigned long long innerWindowID = 0);
 };
 #endif // MOZ_MEDIA_NAVIGATOR
+
+partial interface Navigator {
+  [Throws, Pref="beacon.enabled"]
+  boolean sendBeacon(DOMString url,
+                     optional (ArrayBufferView or Blob or DOMString or FormData)? data = null);
+};

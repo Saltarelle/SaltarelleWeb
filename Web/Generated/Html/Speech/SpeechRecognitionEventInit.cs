@@ -14,7 +14,7 @@ namespace System.Html.Speech {
 			set;
 		}
 
-		public uint ResultIndex {
+		public int ResultIndex {
 			get;
 			set;
 		}

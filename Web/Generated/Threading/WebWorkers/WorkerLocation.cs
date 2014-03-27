@@ -35,6 +35,13 @@ namespace System.Threading.WebWorkers {
 		}
 
 		[IntrinsicProperty]
+		public string Origin {
+			get {
+				return null;
+			}
+		}
+
+		[IntrinsicProperty]
 		public string Pathname {
 			get {
 				return null;

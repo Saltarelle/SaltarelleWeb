@@ -6,6 +6,12 @@ namespace System.Html.Media.Graphics {
 		internal CanvasRenderingContext2D() {
 		}
 
+		public void AddHitRegion() {
+		}
+
+		public void AddHitRegion(HitRegionOptions options) {
+		}
+
 		public void Arc(double x, double y, double radius, double startAngle, double endAngle) {
 		}
 
@@ -37,6 +43,12 @@ namespace System.Html.Media.Graphics {
 		public void Clip(CanvasWindingRule winding) {
 		}
 
+		public void Clip(Path2D path) {
+		}
+
+		public void Clip(Path2D path, CanvasWindingRule winding) {
+		}
+
 		public void ClosePath() {
 		}
 
@@ -60,6 +72,13 @@ namespace System.Html.Media.Graphics {
 			return default(CanvasGradient);
 		}
 
+		public bool DrawCustomFocusRing(Element element) {
+			return false;
+		}
+
+		public void DrawFocusIfNeeded(Element element) {
+		}
+
 		public void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double dx, double dy) {
 		}
 
@@ -73,6 +92,12 @@ namespace System.Html.Media.Graphics {
 		}
 
 		public void Fill(CanvasWindingRule winding) {
+		}
+
+		public void Fill(Path2D path) {
+		}
+
+		public void Fill(Path2D path, CanvasWindingRule winding) {
 		}
 
 		public void FillRect(double x, double y, double w, double h) {
@@ -106,6 +131,10 @@ namespace System.Html.Media.Graphics {
 			return default(ImageData);
 		}
 
+		public double[] GetLineDash() {
+			return null;
+		}
+
 		[IntrinsicProperty]
 		public double GlobalAlpha {
 			get {
@@ -132,7 +161,19 @@ namespace System.Html.Media.Graphics {
 			return false;
 		}
 
+		public bool IsPointInPath(Path2D path, double x, double y) {
+			return false;
+		}
+
+		public bool IsPointInPath(Path2D path, double x, double y, CanvasWindingRule winding) {
+			return false;
+		}
+
 		public bool IsPointInStroke(double x, double y) {
+			return false;
+		}
+
+		public bool IsPointInStroke(Path2D path, double x, double y) {
 			return false;
 		}
 
@@ -140,6 +181,15 @@ namespace System.Html.Media.Graphics {
 		public LineCap LineCap {
 			get {
 				return default(LineCap);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public double LineDashOffset {
+			get {
+				return 0;
 			}
 			set {
 			}
@@ -194,6 +244,9 @@ namespace System.Html.Media.Graphics {
 		public void Rect(double x, double y, double w, double h) {
 		}
 
+		public void RemoveHitRegion(string id) {
+		}
+
 		public void Restore() {
 		}
 
@@ -204,6 +257,9 @@ namespace System.Html.Media.Graphics {
 		}
 
 		public void Scale(double x, double y) {
+		}
+
+		public void SetLineDash(double[] segments) {
 		}
 
 		public void SetTransform(double a, double b, double c, double d, double e, double f) {
@@ -246,6 +302,9 @@ namespace System.Html.Media.Graphics {
 		}
 
 		public void Stroke() {
+		}
+
+		public void Stroke(Path2D path) {
 		}
 
 		public void StrokeRect(double x, double y, double w, double h) {

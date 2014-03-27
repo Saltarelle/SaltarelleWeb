@@ -1,5 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Xml;
 
 namespace System.Html {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("HTMLFormControlsCollection")]
@@ -8,14 +7,14 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public TypeOption<XmlNodeList, XmlElement> this[string name] {
+		public TypeOption<ElementNodeList, Element> this[string name] {
 			get {
-				return default(TypeOption<XmlNodeList, XmlElement>);
+				return default(TypeOption<ElementNodeList, Element>);
 			}
 		}
 
-		public TypeOption<XmlNodeList, XmlElement> NamedItem(string name) {
-			return default(TypeOption<XmlNodeList, XmlElement>);
+		public TypeOption<ElementNodeList, Element> NamedItem(string name) {
+			return default(TypeOption<ElementNodeList, Element>);
 		}
 	}
 }

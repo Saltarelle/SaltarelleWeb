@@ -51,8 +51,17 @@ namespace Generator {
 			public bool Clamp { get; private set; }
 			public bool Global { get; private set; }
 			public bool SameObject { get; private set; }
+			public bool NewObject { get; private set; }
+			public bool Replaceable { get; private set; }
+			public bool StoreInSlot { get; private set; }
+			public bool CrossOriginReadable { get; private set; }
+			public bool CrossOriginWritable { get; private set; }
+			public bool CrossOriginCallable { get; private set; }
+			public bool ChromeConstructor { get; private set; }
+			public bool TreatNonObjectAsNull { get; private set; }
 			public TreatUndefinedAsOptions TreatUndefinedAs { get; private set; }
 			public IReadOnlyList<IReadOnlyList<Argument>> Constructors { get; private set; }
+			public IReadOnlyList<IReadOnlyList<Argument>> ChromeConstructors { get; private set; }
 			public IReadOnlyList<Tuple<string, IReadOnlyList<Argument>>> NamedConstructors { get; private set; }
 
 			private ParsedExtendedAttributes() {
@@ -70,6 +79,7 @@ namespace Generator {
 			public static ParsedExtendedAttributes Parse(IEnumerable<ExtendedAttribute> attributes, string scopeName, List<string> errors) {
 				var result = new ParsedExtendedAttributes();
 				var constructors = new List<IReadOnlyList<Argument>>();
+				var chromeConstructors = new List<IReadOnlyList<Argument>>();
 				var namedConstructors = new List<Tuple<string, IReadOnlyList<Argument>>>();
 
 				foreach (var attr in attributes) {
@@ -142,6 +152,27 @@ namespace Generator {
 								case "SameObject":
 									result.SameObject = true;
 									break;
+								case "NewObject":
+									result.NewObject = true;
+									break;
+								case "Replaceable":
+									result.Replaceable = true;
+									break;
+								case "StoreInSlot":
+									result.StoreInSlot = true;
+									break;
+								case "CrossOriginReadable":
+									result.CrossOriginReadable = true;
+									break;
+								case "CrossOriginWritable":
+									result.CrossOriginWritable = true;
+									break;
+								case "CrossOriginCallable":
+									result.CrossOriginCallable = true;
+									break;
+								case "TreatNonObjectAsNull":
+									result.TreatNonObjectAsNull = true;
+									break;
 								default:
 									errors.Add(string.Format("Unknown ExtendedAttributeNoArgs `{0}' on `{1}'", noArgs.AttributeName, scopeName));
 									break;
@@ -151,6 +182,9 @@ namespace Generator {
 							switch (argList.AttributeName) {
 								case "Constructor":
 									constructors.Add(argList.Arguments);
+									break;
+								case "ChromeConstructor":
+									chromeConstructors.Add(argList.Arguments);
 									break;
 								default:
 									errors.Add(string.Format("Unknown ExtendedAttributeArgList `{0}' on `{1}'", argList.AttributeName, scopeName));
@@ -239,6 +273,7 @@ namespace Generator {
 
 				result.Constructors = constructors.AsReadOnlySafe();
 				result.NamedConstructors = namedConstructors.AsReadOnlySafe();
+				result.ChromeConstructors = chromeConstructors.AsReadOnlySafe();
 
 				return result;
 			}
@@ -357,6 +392,7 @@ namespace Generator {
 		}
 
 		private static AstType MakeType(string fullName, IEnumerable<AstType> typeArguments = null) {
+			typeArguments = typeArguments != null ? typeArguments.Select(a => a.Clone()) : null;
 			var parts = fullName.Split('.');
 			AstType result = new SimpleType(parts[0], (parts.Length == 1 ? typeArguments : null) ?? new AstType[0]);
 			for (int i = 1; i < parts.Length; i++)
@@ -375,14 +411,14 @@ namespace Generator {
 						case BuiltinType.Boolean:            return new PrimitiveType("bool");
 						case BuiltinType.Byte:               return new PrimitiveType("sbyte");
 						case BuiltinType.Octet:              return new PrimitiveType("byte");
-						case BuiltinType.Float:              return new PrimitiveType("float");
-						case BuiltinType.UnrestrictedFloat:  return new PrimitiveType("float");
+						case BuiltinType.Float:              return new PrimitiveType("double");
+						case BuiltinType.UnrestrictedFloat:  return new PrimitiveType("double");
 						case BuiltinType.Double:             return new PrimitiveType("double");
 						case BuiltinType.UnrestrictedDouble: return new PrimitiveType("double");
 						case BuiltinType.Short:              return new PrimitiveType("short");
 						case BuiltinType.UnsignedShort:      return new PrimitiveType("ushort");
 						case BuiltinType.Long:               return new PrimitiveType("int");
-						case BuiltinType.UnsignedLong:       return new PrimitiveType("uint");
+						case BuiltinType.UnsignedLong:       return new PrimitiveType("int");
 						case BuiltinType.LongLong:           return new PrimitiveType("long");
 						case BuiltinType.UnsignedLongLong:   return new PrimitiveType("ulong");
 						default: throw new ArgumentException("Invalid builtin type " + builtin.BuiltinType);
@@ -538,8 +574,6 @@ namespace Generator {
 			if (name != null) {
 				if (name.StartsWith("Moz", StringComparison.OrdinalIgnoreCase) || name.StartsWith("onMoz", StringComparison.OrdinalIgnoreCase))
 					return false;
-				if (typeName != null && typeName.EndsWith("Event") && name == "init" + typeName)
-					return false;	// Mozilla-specific deprecated UIEvent.initUIEvent
 			}
 			if (memberAttributes != null && memberAttributes.ChromeOnly)
 				return false;
@@ -913,7 +947,7 @@ namespace Generator {
 		private void AddMembersFromBaseTypes(string currentTypeName, IEnumerable<string> toAdd, IList<EntityDeclaration> members) {
 			foreach (var s in toAdd) {
 				var ast = new CSharpParser().ParseTypeMembers(s.Replace("$type$", currentTypeName)).Single();
-				ast.Modifiers |= Modifiers.Public;;
+				ast.Modifiers |= Modifiers.Public;
 				if (ast is MethodDeclaration) {
 					((MethodDeclaration)ast).Body = GenerateBody(((MethodDeclaration)ast).ReturnType);
 				}
@@ -959,7 +993,7 @@ namespace Generator {
 										if (baseMeta.TypeKind == TypeKind.Default)
 											_errors.Add("The type `" + b + "' cannot be implemented by the type `" + @interface.Name + "' because the implemented type is not a C# interface");
 										_types[b].Decompose(
-											@interface2 => AddMembers(@interface2.Members, baseMeta.TypeOverrides.ToDictionary(o => o.Identifier, o => o.NewType), b, parsedAttributes.NoInterfaceObject, baseMeta.Renames, baseMeta.TypeKind, meta.Removes, false, members),
+											@interface2 => AddMembers(@interface2.Members, baseMeta.TypeOverrides.ToDictionary(o => o.Identifier, o => o.NewType), b, parsedAttributes.NoInterfaceObject, baseMeta.Renames, baseMeta.TypeKind, baseMeta.Removes, false, members),
 											callbackInterface => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a callback interface, not an interface"); },
 											dictionary => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a dictionary, not an interface"); },
 											@callback => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a callback, not an interface"); },
@@ -970,8 +1004,11 @@ namespace Generator {
 									}
 									if (baseMeta.TypeKind == TypeKind.Mixin || baseMeta.TypeKind == TypeKind.Skip)
 										return null;
+									AstType alias = baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName);
+									if (b == @interface.Base)
+										alias = GetOrDefaultAstType(typeOverrides, "base", alias);
 
-									return baseMeta.AliasFor ?? MakeType((!string.IsNullOrEmpty(baseMeta.Namespace) ? baseMeta.Namespace + "." : "") + baseMeta.CSharpName);
+									return alias;
 								}
 								else
 									return null;
@@ -980,17 +1017,15 @@ namespace Generator {
 
 						if (meta.TypeKind == TypeKind.Default && meta.CSharpName != scriptName)
 							attributes.Add(ScriptNameAttribute(scriptName));
-						if (parsedAttributes.Global)
-							attributes.Add(GlobalMethodsAttribute);
 						if (addInsertedMembersFromBaseTypes)
 							AddMembersFromBaseTypes(meta.Namespace + "." + meta.CSharpName, GetMembersToAddFromBaseTypes(new[] { @interface.Base }.Concat(@interface.Implements)), members);
 
 						var resultType = new TypeDeclaration {
 							ClassType = meta.TypeKind == TypeKind.Interface ? ClassType.Interface : ClassType.Class,
-							Modifiers = Modifiers.Public | Modifiers.Partial | (parsedAttributes.Global ? Modifiers.Static : 0),
+							Modifiers = Modifiers.Public | Modifiers.Partial,
 							Name = meta.CSharpName,
 						};
-						resultType.BaseTypes.AddRange(baseTypes);
+						resultType.BaseTypes.AddRange(baseTypes.Select(t => t.Clone()));
 						resultType.Members.AddRange(members.OrderBy(MemberOrderer));
 						AddAttributes(resultType.Attributes, attributes);
 						result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
@@ -1137,7 +1172,7 @@ namespace Generator {
 			}
 		}
 
-		private void GenerateEnum(string enumNamespace, string enumName, GeneratedEnumSourceType type, Regex membersRegex, IReadOnlyDictionary<string, string> names, bool flags, IEnumerable<InterfaceMember> members) {
+		private void GenerateEnum(string enumNamespace, string enumName, GeneratedEnumSourceType type, Regex membersRegex, IReadOnlyDictionary<string, string> names, bool flags, IEnumerable<InterfaceMember> members, Regex valueRegex) {
 			string enumQualifiedName = enumNamespace + "." + enumName;
 			var enumMembers = new List<EnumMemberDeclaration>();
 			foreach (var m in members) {
@@ -1177,8 +1212,18 @@ namespace Generator {
 							string raw = match.Groups[1].Value;
 							string name = GetOrDefaultString(names, raw, raw.MakeCSharpName());
 
+							var value = valueRegex.Match(attribute.Name);
+							if (!match.Success) {
+								_errors.Add("The regular expression used for the values of the enum `" + enumQualifiedName + "' does not match the value " + attribute.Name);
+								return;
+							}
+							if (match.Groups.Count != 2) {
+								_errors.Add("The regular expression used for the values of the enum `" + enumQualifiedName + "' does not have one capture group");
+								return;
+							}
+
 							var enm = new EnumMemberDeclaration { Name = name };
-							AddAttributes(enm.Attributes, ScriptNameAttributeIfRequired(name, attribute.Name));
+							AddAttributes(enm.Attributes, ScriptNameAttributeIfRequired(name, value.Groups[1].Value));
 							enumMembers.Add(enm);
 						}
 					},
@@ -1198,7 +1243,7 @@ namespace Generator {
 				Name = enumName
 			};
 			AddAttributes(t.Attributes, attributes);
-			t.Members.AddRange(enumMembers);
+			t.Members.AddRange(enumMembers.OrderBy(m => m.Name));
 			_result.Add(new NamespacedEntityDeclaration(enumNamespace, t));
 		}
 
@@ -1210,7 +1255,7 @@ namespace Generator {
 					string enumName = ge.EnumName.Replace("$type$", typeName);
 
 					if (members != null) {
-						GenerateEnum(enumNamespace, enumName, ge.SourceType, ge.MembersRegex, ge.Names, ge.Flags, members);
+						GenerateEnum(enumNamespace, enumName, ge.SourceType, ge.MembersRegex, ge.Names, ge.Flags, members, ge.ValueRegex);
 					}
 					else {
 						_errors.Add("Cannot generate an enum from the non-interface type `" + typeName + "'");
@@ -1315,6 +1360,7 @@ namespace Generator {
 					ClassType = ClassType.Class,
 					Name = meta.ClassName,
 				};
+				members.RemoveAll(m => meta.Removes.Contains(m.Name));
 				c.Members.AddRange(members.OrderBy(MemberOrderer));
 				if (meta.GlobalMethods)
 					AddAttributes(c.Attributes, new[] { ImportedAttribute(false), GlobalMethodsAttribute });

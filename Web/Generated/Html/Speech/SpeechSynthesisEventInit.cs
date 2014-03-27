@@ -3,12 +3,12 @@
 namespace System.Html.Speech {
 	[Imported, Serializable]
 	public partial class SpeechSynthesisEventInit : EventInit {
-		public uint CharIndex {
+		public int CharIndex {
 			get;
 			set;
 		}
 
-		public float ElapsedTime {
+		public double ElapsedTime {
 			get;
 			set;
 		}

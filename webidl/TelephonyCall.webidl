@@ -6,6 +6,9 @@
 
 [Pref="dom.telephony.enabled"]
 interface TelephonyCall : EventTarget {
+  // Indicate which service the call comes from.
+  readonly attribute unsigned long serviceId;
+
   readonly attribute DOMString number;
 
   // In CDMA networks, the 2nd waiting call shares the connection with the 1st
@@ -18,6 +21,13 @@ interface TelephonyCall : EventTarget {
   // number. Only the outgoing call could have a value with true and it is
   // available after dialing state.
   readonly attribute boolean emergency;
+
+  // Indicate whether the call state can be switched between "connected" and
+  // "held".
+  readonly attribute boolean switchable;
+
+  // Indicate whether the call can be added into TelephonyCallGroup.
+  readonly attribute boolean mergeable;
 
   readonly attribute DOMError? error;
 

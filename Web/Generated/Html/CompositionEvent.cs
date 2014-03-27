@@ -13,6 +13,9 @@ namespace System.Html {
 			}
 		}
 
+		public void InitCompositionEvent(string typeArg, bool canBubbleArg, bool cancelableArg, WindowInstance viewArg, string dataArg, string localeArg) {
+		}
+
 		[IntrinsicProperty]
 		public string Locale {
 			get {

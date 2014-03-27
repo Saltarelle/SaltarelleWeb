@@ -7,67 +7,67 @@ namespace System.Html.Media.Graphics.WebGL {
 		}
 
 		[ScriptName("ANY_SAMPLES_PASSED")]
-		public const uint ANY_SAMPLES_PASSED = 35887;
+		public const int ANY_SAMPLES_PASSED = 35887;
 
 		[ScriptName("ANY_SAMPLES_PASSED_CONSERVATIVE")]
-		public const uint ANY_SAMPLES_PASSED_CONSERVATIVE = 36202;
+		public const int ANY_SAMPLES_PASSED_CONSERVATIVE = 36202;
 
-		public void BeginQuery(uint target, WebGLQuery queryObject) {
+		public void BeginQuery(int target, WebGLQuery queryObject) {
 		}
 
-		public void BindBufferBase(uint target, uint index, WebGLBuffer buffer) {
+		public void BindBufferBase(int target, int index, WebGLBuffer buffer) {
 		}
 
-		public void BindBufferRange(uint target, uint index, WebGLBuffer buffer, long offset, long size) {
+		public void BindBufferRange(int target, int index, WebGLBuffer buffer, long offset, long size) {
 		}
 
 		public void BindVertexArray(WebGLVertexArray arrayObject) {
 		}
 
 		[ScriptName("COLOR_ATTACHMENT1")]
-		public const uint COLOR_ATTACHMENT1 = 36065;
+		public const int COLOR_ATTACHMENT1 = 36065;
 
 		[ScriptName("COLOR_ATTACHMENT10")]
-		public const uint COLOR_ATTACHMENT10 = 36074;
+		public const int COLOR_ATTACHMENT10 = 36074;
 
 		[ScriptName("COLOR_ATTACHMENT11")]
-		public const uint COLOR_ATTACHMENT11 = 36075;
+		public const int COLOR_ATTACHMENT11 = 36075;
 
 		[ScriptName("COLOR_ATTACHMENT12")]
-		public const uint COLOR_ATTACHMENT12 = 36076;
+		public const int COLOR_ATTACHMENT12 = 36076;
 
 		[ScriptName("COLOR_ATTACHMENT13")]
-		public const uint COLOR_ATTACHMENT13 = 36077;
+		public const int COLOR_ATTACHMENT13 = 36077;
 
 		[ScriptName("COLOR_ATTACHMENT14")]
-		public const uint COLOR_ATTACHMENT14 = 36078;
+		public const int COLOR_ATTACHMENT14 = 36078;
 
 		[ScriptName("COLOR_ATTACHMENT15")]
-		public const uint COLOR_ATTACHMENT15 = 36079;
+		public const int COLOR_ATTACHMENT15 = 36079;
 
 		[ScriptName("COLOR_ATTACHMENT2")]
-		public const uint COLOR_ATTACHMENT2 = 36066;
+		public const int COLOR_ATTACHMENT2 = 36066;
 
 		[ScriptName("COLOR_ATTACHMENT3")]
-		public const uint COLOR_ATTACHMENT3 = 36067;
+		public const int COLOR_ATTACHMENT3 = 36067;
 
 		[ScriptName("COLOR_ATTACHMENT4")]
-		public const uint COLOR_ATTACHMENT4 = 36068;
+		public const int COLOR_ATTACHMENT4 = 36068;
 
 		[ScriptName("COLOR_ATTACHMENT5")]
-		public const uint COLOR_ATTACHMENT5 = 36069;
+		public const int COLOR_ATTACHMENT5 = 36069;
 
 		[ScriptName("COLOR_ATTACHMENT6")]
-		public const uint COLOR_ATTACHMENT6 = 36070;
+		public const int COLOR_ATTACHMENT6 = 36070;
 
 		[ScriptName("COLOR_ATTACHMENT7")]
-		public const uint COLOR_ATTACHMENT7 = 36071;
+		public const int COLOR_ATTACHMENT7 = 36071;
 
 		[ScriptName("COLOR_ATTACHMENT8")]
-		public const uint COLOR_ATTACHMENT8 = 36072;
+		public const int COLOR_ATTACHMENT8 = 36072;
 
 		[ScriptName("COLOR_ATTACHMENT9")]
-		public const uint COLOR_ATTACHMENT9 = 36073;
+		public const int COLOR_ATTACHMENT9 = 36073;
 
 		public WebGLQuery CreateQuery() {
 			return default(WebGLQuery);
@@ -78,7 +78,7 @@ namespace System.Html.Media.Graphics.WebGL {
 		}
 
 		[ScriptName("CURRENT_QUERY")]
-		public const uint CURRENT_QUERY = 34917;
+		public const int CURRENT_QUERY = 34917;
 
 		public void DeleteQuery(WebGLQuery queryObject) {
 		}
@@ -87,77 +87,77 @@ namespace System.Html.Media.Graphics.WebGL {
 		}
 
 		[ScriptName("DRAW_BUFFER0")]
-		public const uint DRAW_BUFFER0 = 34853;
+		public const int DRAW_BUFFER0 = 34853;
 
 		[ScriptName("DRAW_BUFFER1")]
-		public const uint DRAW_BUFFER1 = 34854;
+		public const int DRAW_BUFFER1 = 34854;
 
 		[ScriptName("DRAW_BUFFER10")]
-		public const uint DRAW_BUFFER10 = 34863;
+		public const int DRAW_BUFFER10 = 34863;
 
 		[ScriptName("DRAW_BUFFER11")]
-		public const uint DRAW_BUFFER11 = 34864;
+		public const int DRAW_BUFFER11 = 34864;
 
 		[ScriptName("DRAW_BUFFER12")]
-		public const uint DRAW_BUFFER12 = 34865;
+		public const int DRAW_BUFFER12 = 34865;
 
 		[ScriptName("DRAW_BUFFER13")]
-		public const uint DRAW_BUFFER13 = 34866;
+		public const int DRAW_BUFFER13 = 34866;
 
 		[ScriptName("DRAW_BUFFER14")]
-		public const uint DRAW_BUFFER14 = 34867;
+		public const int DRAW_BUFFER14 = 34867;
 
 		[ScriptName("DRAW_BUFFER15")]
-		public const uint DRAW_BUFFER15 = 34868;
+		public const int DRAW_BUFFER15 = 34868;
 
 		[ScriptName("DRAW_BUFFER2")]
-		public const uint DRAW_BUFFER2 = 34855;
+		public const int DRAW_BUFFER2 = 34855;
 
 		[ScriptName("DRAW_BUFFER3")]
-		public const uint DRAW_BUFFER3 = 34856;
+		public const int DRAW_BUFFER3 = 34856;
 
 		[ScriptName("DRAW_BUFFER4")]
-		public const uint DRAW_BUFFER4 = 34857;
+		public const int DRAW_BUFFER4 = 34857;
 
 		[ScriptName("DRAW_BUFFER5")]
-		public const uint DRAW_BUFFER5 = 34858;
+		public const int DRAW_BUFFER5 = 34858;
 
 		[ScriptName("DRAW_BUFFER6")]
-		public const uint DRAW_BUFFER6 = 34859;
+		public const int DRAW_BUFFER6 = 34859;
 
 		[ScriptName("DRAW_BUFFER7")]
-		public const uint DRAW_BUFFER7 = 34860;
+		public const int DRAW_BUFFER7 = 34860;
 
 		[ScriptName("DRAW_BUFFER8")]
-		public const uint DRAW_BUFFER8 = 34861;
+		public const int DRAW_BUFFER8 = 34861;
 
 		[ScriptName("DRAW_BUFFER9")]
-		public const uint DRAW_BUFFER9 = 34862;
+		public const int DRAW_BUFFER9 = 34862;
 
-		public void DrawArraysInstanced(uint mode, int first, int count, int primcount) {
+		public void DrawArraysInstanced(int mode, int first, int count, int primcount) {
 		}
 
-		public void DrawBuffers(uint[] buffers) {
+		public void DrawBuffers(int[] buffers) {
 		}
 
-		public void DrawElementsInstanced(uint mode, int count, uint type, long offset, int primcount) {
+		public void DrawElementsInstanced(int mode, int count, int type, long offset, int primcount) {
 		}
 
-		public void EndQuery(uint target) {
+		public void EndQuery(int target) {
 		}
 
 		[ScriptName("FRAGMENT_SHADER_DERIVATIVE_HINT")]
-		public const uint FRAGMENT_SHADER_DERIVATIVE_HINT = 35723;
+		public const int FRAGMENT_SHADER_DERIVATIVE_HINT = 35723;
 
-		public object GetParameterIndexed(uint pname, uint index) {
+		public object GetParameterIndexed(int pname, int index) {
 			return null;
 		}
 
-		public WebGLQuery GetQuery(uint target, uint pname) {
+		public WebGLQuery GetQuery(int target, int pname) {
 			return default(WebGLQuery);
 		}
 
-		public object GetQueryObject(WebGLQuery queryObject, uint pname) {
+		public object GetQueryObject(WebGLQuery queryObject, int pname) {
 			return null;
 		}
 
@@ -169,53 +169,53 @@ namespace System.Html.Media.Graphics.WebGL {
 			return false;
 		}
 
-		public const uint MAX = 32776;
+		public const int MAX = 32776;
 
 		[ScriptName("MAX_COLOR_ATTACHMENTS")]
-		public const uint MAX_COLOR_ATTACHMENTS = 36063;
+		public const int MAX_COLOR_ATTACHMENTS = 36063;
 
 		[ScriptName("MAX_DRAW_BUFFERS")]
-		public const uint MAX_DRAW_BUFFERS = 34852;
+		public const int MAX_DRAW_BUFFERS = 34852;
 
 		[ScriptName("MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS")]
-		public const uint MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS = 35979;
+		public const int MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS = 35979;
 
-		public const uint MIN = 32775;
+		public const int MIN = 32775;
 
 		[ScriptName("QUERY_RESULT")]
-		public const uint QUERY_RESULT = 34918;
+		public const int QUERY_RESULT = 34918;
 
 		[ScriptName("QUERY_RESULT_AVAILABLE")]
-		public const uint QUERY_RESULT_AVAILABLE = 34919;
+		public const int QUERY_RESULT_AVAILABLE = 34919;
 
 		[ScriptName("RASTERIZER_DISCARD")]
-		public const uint RASTERIZER_DISCARD = 35977;
+		public const int RASTERIZER_DISCARD = 35977;
 
 		[ScriptName("TRANSFORM_FEEDBACK_BUFFER")]
-		public const uint TRANSFORM_FEEDBACK_BUFFER = 35982;
+		public const int TRANSFORM_FEEDBACK_BUFFER = 35982;
 
 		[ScriptName("TRANSFORM_FEEDBACK_BUFFER_BINDING")]
-		public const uint TRANSFORM_FEEDBACK_BUFFER_BINDING = 35983;
+		public const int TRANSFORM_FEEDBACK_BUFFER_BINDING = 35983;
 
 		[ScriptName("TRANSFORM_FEEDBACK_BUFFER_SIZE")]
-		public const uint TRANSFORM_FEEDBACK_BUFFER_SIZE = 35973;
+		public const int TRANSFORM_FEEDBACK_BUFFER_SIZE = 35973;
 
 		[ScriptName("TRANSFORM_FEEDBACK_BUFFER_START")]
-		public const uint TRANSFORM_FEEDBACK_BUFFER_START = 35972;
+		public const int TRANSFORM_FEEDBACK_BUFFER_START = 35972;
 
 		[ScriptName("TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN")]
-		public const uint TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN = 35976;
+		public const int TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN = 35976;
 
 		[ScriptName("UNSIGNED_INT_24_8")]
-		public const uint UNSIGNED_INT_24_8 = 34042;
+		public const int UNSIGNED_INT_24_8 = 34042;
 
 		[ScriptName("VERTEX_ARRAY_BINDING")]
-		public const uint VERTEX_ARRAY_BINDING = 34229;
+		public const int VERTEX_ARRAY_BINDING = 34229;
 
 		[ScriptName("VERTEX_ATTRIB_ARRAY_DIVISOR")]
-		public const uint VERTEX_ATTRIB_ARRAY_DIVISOR = 35070;
+		public const int VERTEX_ATTRIB_ARRAY_DIVISOR = 35070;
 
-		public void VertexAttribDivisor(uint index, uint divisor) {
+		public void VertexAttribDivisor(int index, int divisor) {
 		}
 	}
 }

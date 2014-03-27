@@ -8,7 +8,7 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public StyleSheet this[uint index] {
+		public StyleSheet this[int index] {
 			get {
 				return default(StyleSheet);
 			}
@@ -19,12 +19,12 @@ namespace System.Html {
 			return null;
 		}
 
-		public StyleSheet Item(uint index) {
+		public StyleSheet Item(int index) {
 			return default(StyleSheet);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

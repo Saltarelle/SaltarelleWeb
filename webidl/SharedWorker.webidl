@@ -4,10 +4,10 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-[PrefControlled,
+[Pref="dom.workers.sharedWorkers.enabled",
  Constructor(DOMString scriptURL, optional DOMString name)]
 interface SharedWorker : EventTarget {
-    readonly attribute WorkerMessagePort port;
+    readonly attribute MessagePort port;
 };
 
 SharedWorker implements AbstractWorker;

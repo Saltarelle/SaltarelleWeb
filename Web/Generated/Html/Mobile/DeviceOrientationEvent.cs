@@ -39,5 +39,8 @@ namespace System.Html.Mobile {
 				return 0;
 			}
 		}
+
+		public void InitDeviceOrientationEvent(string type, bool canBubble, bool cancelable, double alpha, double beta, double gamma, bool absolute) {
+		}
 	}
 }

@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace System.Xml {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("Text")]
-	public partial class XmlText : XmlCharacterData {
+	public partial class XmlText : XmlCharacterData, IGeometryUtils {
 		public XmlText() {
 		}
 
@@ -40,6 +40,38 @@ namespace System.Xml {
 		public void AddEventListener(XmlTextEvents type, IEventListener listener, bool capture) {
 		}
 
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMPoint);
+		}
+
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMPoint);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad[] GetBoxQuads() {
+			return null;
+		}
+
+		public DOMQuad[] GetBoxQuads(BoxQuadOptions options) {
+			return null;
+		}
+
 		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlText> listener) {
 		}
 
@@ -70,7 +102,7 @@ namespace System.Xml {
 		public void RemoveEventListener(XmlTextEvents type, IEventListener listener, bool capture) {
 		}
 
-		public XmlText SplitText(uint offset) {
+		public XmlText SplitText(int offset) {
 			return default(XmlText);
 		}
 

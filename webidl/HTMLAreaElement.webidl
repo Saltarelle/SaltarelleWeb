@@ -14,7 +14,6 @@
 
 // http://www.whatwg.org/specs/web-apps/current-work/#the-area-element
 interface HTMLAreaElement : HTMLElement {
-stringifier;
            [SetterThrows]
            attribute DOMString alt;
            [SetterThrows]
@@ -27,11 +26,11 @@ stringifier;
            attribute DOMString download;
            [SetterThrows]
            attribute DOMString ping;
+           [SetterThrows]
+           attribute DOMString rel;
+  readonly attribute DOMTokenList relList;
 
   // not implemented.
-  //        [SetterThrows]
-  //       attribute DOMString rel;
-  //readonly attribute DOMTokenList relList;
   //
   //       [SetterThrows]
   //       attribute DOMString hreflang;

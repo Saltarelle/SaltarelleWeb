@@ -1,5 +1,4 @@
-﻿using System.Data.Offline;
-using System.Html;
+﻿using System.Html;
 using System.Runtime.CompilerServices;
 
 namespace System.Threading.WebWorkers {
@@ -44,25 +43,12 @@ namespace System.Threading.WebWorkers {
 		public static void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture) {
 		}
 
-		[IntrinsicProperty]
-		public static ApplicationCache ApplicationCache {
-			get {
-				return default(ApplicationCache);
-			}
-		}
-
-		public static string Atob(string stringToEncode) {
+		public static string Atob(string atob) {
 			return null;
 		}
 
-		public static string Btoa(string encodedString) {
+		public static string Btoa(string btoa) {
 			return null;
-		}
-
-		public static void ClearInterval(int intervalId) {
-		}
-
-		public static void ClearTimeout(int timeoutId) {
 		}
 
 		public static void Close() {
@@ -70,6 +56,12 @@ namespace System.Threading.WebWorkers {
 
 		public static bool DispatchEvent(Event @event) {
 			return false;
+		}
+
+		public static void Dump() {
+		}
+
+		public static void Dump(string str) {
 		}
 
 		[ExpandParams]
@@ -94,6 +86,15 @@ namespace System.Threading.WebWorkers {
 		public static WorkerNavigator Navigator {
 			get {
 				return default(WorkerNavigator);
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onclose")]
+		public static HtmlEventHandler OnClose {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
 			}
 		}
 
@@ -174,40 +175,6 @@ namespace System.Threading.WebWorkers {
 			get {
 				return default(WorkerGlobalScope);
 			}
-		}
-
-		public static int SetInterval(Function func) {
-			return 0;
-		}
-
-		[ExpandParams]
-		public static int SetInterval(Function func, int delay, params object[] args) {
-			return 0;
-		}
-
-		public static int SetInterval(string code) {
-			return 0;
-		}
-
-		public static int SetInterval(string code, int delay) {
-			return 0;
-		}
-
-		public static int SetTimeout(Function func) {
-			return 0;
-		}
-
-		[ExpandParams]
-		public static int SetTimeout(Function func, int delay, params object[] args) {
-			return 0;
-		}
-
-		public static int SetTimeout(string code) {
-			return 0;
-		}
-
-		public static int SetTimeout(string code, int delay) {
-			return 0;
 		}
 
 		public static string ToNativeLineEndings(string @string) {

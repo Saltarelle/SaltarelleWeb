@@ -41,9 +41,9 @@ namespace System.Html.Media {
 		}
 
 		[IntrinsicProperty]
-		public TextTrackCueAlign Align {
+		public AlignSetting Align {
 			get {
-				return default(TextTrackCueAlign);
+				return default(AlignSetting);
 			}
 			set {
 			}
@@ -66,6 +66,24 @@ namespace System.Html.Media {
 		public string Id {
 			get {
 				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public TypeOption<int, AutoKeyword> Line {
+			get {
+				return default(TypeOption<int, AutoKeyword>);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public AlignSetting LineAlign {
+			get {
+				return default(AlignSetting);
 			}
 			set {
 			}
@@ -108,9 +126,18 @@ namespace System.Html.Media {
 		}
 
 		[IntrinsicProperty]
-		public string RegionId {
+		public AlignSetting PositionAlign {
 			get {
-				return null;
+				return default(AlignSetting);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public VTTRegion Region {
+			get {
+				return default(VTTRegion);
 			}
 			set {
 			}

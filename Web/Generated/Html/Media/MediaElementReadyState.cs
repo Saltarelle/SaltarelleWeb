@@ -3,10 +3,10 @@
 namespace System.Html.Media {
 	[Imported]
 	public enum MediaElementReadyState {
-		HaveNothing = 0,
-		HaveMetadata = 1,
 		HaveCurrentData = 2,
+		HaveEnoughData = 4,
 		HaveFutureData = 3,
-		HaveEnoughData = 4
+		HaveMetadata = 1,
+		HaveNothing = 0
 	}
 }

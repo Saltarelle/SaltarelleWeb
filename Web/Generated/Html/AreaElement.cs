@@ -160,6 +160,22 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty]
+		public string Rel {
+			get {
+				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public TokenList RelList {
+			get {
+				return default(TokenList);
+			}
+		}
+
 		public void RemoveEventListener(AreaElementEvents type, Action listener) {
 		}
 
@@ -194,6 +210,15 @@ namespace System.Html {
 		public string Search {
 			get {
 				return null;
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty]
+		public URLSearchParams SearchParams {
+			get {
+				return default(URLSearchParams);
 			}
 			set {
 			}

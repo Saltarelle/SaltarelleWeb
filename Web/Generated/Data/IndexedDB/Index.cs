@@ -6,10 +6,6 @@ namespace System.Data.IndexedDB {
 		internal Index() {
 		}
 
-		public Request Count() {
-			return default(Request);
-		}
-
 		public Request Count(object key) {
 			return default(Request);
 		}
@@ -50,19 +46,11 @@ namespace System.Data.IndexedDB {
 			}
 		}
 
-		public Request OpenCursor() {
-			return default(Request);
-		}
-
 		public Request OpenCursor(object range) {
 			return default(Request);
 		}
 
 		public Request OpenCursor(object range, CursorDirection direction) {
-			return default(Request);
-		}
-
-		public Request OpenKeyCursor() {
 			return default(Request);
 		}
 

@@ -18,13 +18,13 @@ namespace System.Html.Editing {
 		}
 
 		[IntrinsicProperty]
-		public uint AnchorOffset {
+		public int AnchorOffset {
 			get {
 				return 0;
 			}
 		}
 
-		public void Collapse(XmlNode node, uint offset) {
+		public void Collapse(XmlNode node, int offset) {
 		}
 
 		public void CollapseToEnd() {
@@ -33,10 +33,14 @@ namespace System.Html.Editing {
 		public void CollapseToStart() {
 		}
 
+		public bool ContainsNode(XmlNode node, bool partlyContained) {
+			return false;
+		}
+
 		public void DeleteFromDocument() {
 		}
 
-		public void Extend(XmlNode node, uint offset) {
+		public void Extend(XmlNode node, int offset) {
 		}
 
 		[IntrinsicProperty]
@@ -47,13 +51,13 @@ namespace System.Html.Editing {
 		}
 
 		[IntrinsicProperty]
-		public uint FocusOffset {
+		public int FocusOffset {
 			get {
 				return 0;
 			}
 		}
 
-		public Range GetRangeAt(uint index) {
+		public Range GetRangeAt(int index) {
 			return default(Range);
 		}
 
@@ -64,8 +68,11 @@ namespace System.Html.Editing {
 			}
 		}
 
+		public void Modify(string alter, string direction, string granularity) {
+		}
+
 		[IntrinsicProperty]
-		public uint RangeCount {
+		public int RangeCount {
 			get {
 				return 0;
 			}

@@ -118,16 +118,16 @@ namespace System.Html.Media.Graphics.SVG {
 		public const ushort SVG_UNIT_TYPE_USERSPACEONUSE = 1;
 
 		[IntrinsicProperty]
-		public SVGAnimatedLength Width {
+		public SVGAnimatedRect ViewBox {
 			get {
-				return default(SVGAnimatedLength);
+				return default(SVGAnimatedRect);
 			}
 		}
 
 		[IntrinsicProperty]
-		public SVGAnimatedRect ViewBox {
+		public SVGAnimatedLength Width {
 			get {
-				return default(SVGAnimatedRect);
+				return default(SVGAnimatedLength);
 			}
 		}
 

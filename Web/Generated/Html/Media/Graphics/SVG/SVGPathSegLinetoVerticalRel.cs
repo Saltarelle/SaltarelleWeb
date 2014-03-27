@@ -7,7 +7,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public float Y {
+		public double Y {
 			get {
 				return 0;
 			}

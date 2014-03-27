@@ -13,6 +13,9 @@ namespace System.Data.WebStorage {
 		public StorageEvent(string type, StorageEventInit eventInitDict) {
 		}
 
+		public void InitStorageEvent(string type, bool canBubble, bool cancelable, string key, string oldValue, string newValue, string url, Storage storageArea) {
+		}
+
 		[IntrinsicProperty]
 		public string Key {
 			get {

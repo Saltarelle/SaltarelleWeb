@@ -200,9 +200,9 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public XmlElement OffsetParent {
+		public Element OffsetParent {
 			get {
-				return default(XmlElement);
+				return default(Element);
 			}
 		}
 
@@ -508,6 +508,24 @@ namespace System.Html {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onmouseenter")]
+		public HtmlEventHandler OnMouseenter {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onmouseleave")]
+		public HtmlEventHandler OnMouseleave {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onmousemove")]
 		public HtmlEventHandler OnMousemove {
 			get {
@@ -573,6 +591,78 @@ namespace System.Html {
 
 		[IntrinsicProperty, ScriptName("onplaying")]
 		public HtmlEventHandler OnPlaying {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointercancel")]
+		public HtmlEventHandler OnPointercancel {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerdown")]
+		public HtmlEventHandler OnPointerdown {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerenter")]
+		public HtmlEventHandler OnPointerenter {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerleave")]
+		public HtmlEventHandler OnPointerleave {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointermove")]
+		public HtmlEventHandler OnPointermove {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerout")]
+		public HtmlEventHandler OnPointerout {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerover")]
+		public HtmlEventHandler OnPointerover {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerup")]
+		public HtmlEventHandler OnPointerup {
 			get {
 				return default(HtmlEventHandler);
 			}
@@ -742,8 +832,8 @@ namespace System.Html {
 			}
 		}
 
-		[IntrinsicProperty, ScriptName("onwaiting")]
-		public HtmlEventHandler OnWaiting {
+		[IntrinsicProperty, ScriptName("onvolumechange")]
+		public HtmlEventHandler OnVolumechange {
 			get {
 				return default(HtmlEventHandler);
 			}
@@ -751,8 +841,8 @@ namespace System.Html {
 			}
 		}
 
-		[IntrinsicProperty, ScriptName("onvolumechange")]
-		public HtmlEventHandler OnVolumechange {
+		[IntrinsicProperty, ScriptName("onwaiting")]
+		public HtmlEventHandler OnWaiting {
 			get {
 				return default(HtmlEventHandler);
 			}
@@ -788,6 +878,15 @@ namespace System.Html {
 		}
 
 		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Element> listener, bool capture) {
+		}
+
+		[IntrinsicProperty]
+		public bool Scrollgrab {
+			get {
+				return false;
+			}
+			set {
+			}
 		}
 
 		[IntrinsicProperty]

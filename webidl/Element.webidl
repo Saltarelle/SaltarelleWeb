@@ -37,7 +37,9 @@ interface Element : Node {
 
   [SameObject]
   readonly attribute MozNamedAttrMap attributes;
+  [Pure]
   DOMString? getAttribute(DOMString name);
+  [Pure]
   DOMString? getAttributeNS(DOMString? namespace, DOMString localName);
   [Throws]
   void setAttribute(DOMString name, DOMString value);
@@ -47,12 +49,16 @@ interface Element : Node {
   void removeAttribute(DOMString name);
   [Throws]
   void removeAttributeNS(DOMString? namespace, DOMString localName);
+  [Pure]
   boolean hasAttribute(DOMString name);
+  [Pure]
   boolean hasAttributeNS(DOMString? namespace, DOMString localName);
 
+  [Pure]
   HTMLCollection getElementsByTagName(DOMString localName);
-  [Throws]
+  [Throws, Pure]
   HTMLCollection getElementsByTagNameNS(DOMString? namespace, DOMString localName);
+  [Pure]
   HTMLCollection getElementsByClassName(DOMString classNames);
 
   /**
@@ -70,11 +76,7 @@ interface Element : Node {
   readonly attribute float fontSizeInflation;
 
   // Mozilla specific stuff
-
-  [LenientThis]
-           attribute EventHandler onmouseenter;
-  [LenientThis]
-           attribute EventHandler onmouseleave;
+  [Pure]
            attribute EventHandler onwheel;
 
   // Selectors API
@@ -84,7 +86,7 @@ interface Element : Node {
    *
    * See <http://dev.w3.org/2006/webapi/selectors-api2/#matchesselector>
    */
-  [Throws]
+  [Throws, Pure]
   boolean mozMatchesSelector(DOMString selector);
 
   // Proprietary extensions
@@ -145,7 +147,8 @@ partial interface Element {
   DOMRect getBoundingClientRect();
 
   // scrolling
-  void scrollIntoView(optional boolean top = true);
+  void scrollIntoView();
+  void scrollIntoView(boolean top);
   // None of the CSSOM attributes are [Pure], because they flush
            attribute long scrollTop;   // scroll on setting
            attribute long scrollLeft;  // scroll on setting
@@ -175,9 +178,9 @@ partial interface Element {
 
 // http://domparsing.spec.whatwg.org/#extensions-to-the-element-interface
 partial interface Element {
-  [Throws,TreatNullAs=EmptyString]
+  [Pure,SetterThrows,TreatNullAs=EmptyString]
   attribute DOMString innerHTML;
-  [Throws,TreatNullAs=EmptyString]
+  [Pure,SetterThrows,TreatNullAs=EmptyString]
   attribute DOMString outerHTML;
   [Throws]
   void insertAdjacentHTML(DOMString position, DOMString text);
@@ -185,11 +188,20 @@ partial interface Element {
 
 // http://www.w3.org/TR/selectors-api/#interface-definitions
 partial interface Element {
-  [Throws]
+  [Throws, Pure]
   Element?  querySelector(DOMString selectors);
-  [Throws]
+  [Throws, Pure]
   NodeList  querySelectorAll(DOMString selectors);
 };
 
+// https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html#shadow-root-object
+partial interface Element {
+  [Throws,Pref="dom.webcomponents.enabled"]
+  ShadowRoot createShadowRoot();
+  [Pref="dom.webcomponents.enabled"]
+  readonly attribute ShadowRoot? shadowRoot;
+};
+
 Element implements ChildNode;
+Element implements NonDocumentTypeChildNode;
 Element implements ParentNode;

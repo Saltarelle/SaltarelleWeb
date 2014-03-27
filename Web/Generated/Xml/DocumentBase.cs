@@ -1,11 +1,12 @@
 ﻿using System.Html;
 using System.Html.Editing;
+using System.Html.WebComponents;
 using System.Runtime.CompilerServices;
 using System.Xml.XPath;
 
 namespace System.Xml {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true), ScriptName("Document")]
-	public partial class DocumentBase : XmlNode, IXPathEvaluator {
+	public partial class DocumentBase : XmlNode, IXPathEvaluator, IGeometryUtils {
 		public DocumentBase() {
 		}
 
@@ -50,7 +51,7 @@ namespace System.Xml {
 			return default(XmlNode);
 		}
 
-		public CaretPosition CaretPositionFromPoint(float x, float y) {
+		public CaretPosition CaretPositionFromPoint(double x, double y) {
 			return default(CaretPosition);
 		}
 
@@ -62,16 +63,16 @@ namespace System.Xml {
 		}
 
 		[IntrinsicProperty]
-		public uint ChildElementCount {
+		public int ChildElementCount {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public ElementCollection Children {
+		public XmlElementCollection Children {
 			get {
-				return default(ElementCollection);
+				return default(XmlElementCollection);
 			}
 		}
 
@@ -87,6 +88,30 @@ namespace System.Xml {
 			get {
 				return null;
 			}
+		}
+
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMPoint);
+		}
+
+		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMPoint);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from) {
+			return default(DOMQuad);
+		}
+
+		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options) {
+			return default(DOMQuad);
 		}
 
 		public XmlAttribute CreateAttribute(string name) {
@@ -113,7 +138,15 @@ namespace System.Xml {
 			return default(XmlElement);
 		}
 
+		public XmlElement CreateElement(string localName, string typeExtension) {
+			return default(XmlElement);
+		}
+
 		public XmlElement CreateElementNS(string @namespace, string qualifiedName) {
+			return default(XmlElement);
+		}
+
+		public XmlElement CreateElementNS(string @namespace, string qualifiedName, string typeExtension) {
 			return default(XmlElement);
 		}
 
@@ -201,11 +234,11 @@ namespace System.Xml {
 			return default(Touch);
 		}
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, float rotationAngle) {
+		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle) {
 			return default(Touch);
 		}
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, float rotationAngle, float force) {
+		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle, double force) {
 			return default(Touch);
 		}
 
@@ -278,7 +311,7 @@ namespace System.Xml {
 			}
 		}
 
-		public XmlElement ElementFromPoint(float x, float y) {
+		public XmlElement ElementFromPoint(double x, double y) {
 			return default(XmlElement);
 		}
 
@@ -296,32 +329,28 @@ namespace System.Xml {
 			}
 		}
 
-		public XmlElement GetAnonymousElementByAttribute(XmlElement elt, string attrName, string attrValue) {
-			return default(XmlElement);
+		public DOMQuad[] GetBoxQuads() {
+			return null;
 		}
 
-		public XmlNodeList GetAnonymousNodes(XmlElement elt) {
-			return default(XmlNodeList);
-		}
-
-		public XmlElement GetBindingParent(XmlNode node) {
-			return default(XmlElement);
+		public DOMQuad[] GetBoxQuads(BoxQuadOptions options) {
+			return null;
 		}
 
 		public XmlElement GetElementById(string elementId) {
 			return default(XmlElement);
 		}
 
-		public ElementCollection GetElementsByClassName(string classNames) {
-			return default(ElementCollection);
+		public XmlElementCollection GetElementsByClassName(string classNames) {
+			return default(XmlElementCollection);
 		}
 
-		public ElementCollection GetElementsByTagName(string localName) {
-			return default(ElementCollection);
+		public XmlElementCollection GetElementsByTagName(string localName) {
+			return default(XmlElementCollection);
 		}
 
-		public ElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
-			return default(ElementCollection);
+		public XmlElementCollection GetElementsByTagNameNS(string @namespace, string localName) {
+			return default(XmlElementCollection);
 		}
 
 		public bool HasFocus() {
@@ -376,9 +405,6 @@ namespace System.Xml {
 			get {
 				return null;
 			}
-		}
-
-		public void LoadBindingDocument(string documentURL) {
 		}
 
 		[IntrinsicProperty]
@@ -784,6 +810,78 @@ namespace System.Xml {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onpointercancel")]
+		public HtmlEventHandler OnPointercancel {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerdown")]
+		public HtmlEventHandler OnPointerdown {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerenter")]
+		public HtmlEventHandler OnPointerenter {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerleave")]
+		public HtmlEventHandler OnPointerleave {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointermove")]
+		public HtmlEventHandler OnPointermove {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerout")]
+		public HtmlEventHandler OnPointerout {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerover")]
+		public HtmlEventHandler OnPointerover {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
+		[IntrinsicProperty, ScriptName("onpointerup")]
+		public HtmlEventHandler OnPointerup {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onprogress")]
 		public HtmlEventHandler OnProgress {
 			get {
@@ -955,6 +1053,15 @@ namespace System.Xml {
 			}
 		}
 
+		[IntrinsicProperty, ScriptName("onvolumechange")]
+		public HtmlEventHandler OnVolumechange {
+			get {
+				return default(HtmlEventHandler);
+			}
+			set {
+			}
+		}
+
 		[IntrinsicProperty, ScriptName("onwaiting")]
 		public HtmlEventHandler OnWaiting {
 			get {
@@ -966,15 +1073,6 @@ namespace System.Xml {
 
 		[IntrinsicProperty, ScriptName("onwheel")]
 		public HtmlEventHandler OnWheel {
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
-		}
-
-		[IntrinsicProperty, ScriptName("onvolumechange")]
-		public HtmlEventHandler OnVolumechange {
 			get {
 				return default(HtmlEventHandler);
 			}
@@ -1009,6 +1107,14 @@ namespace System.Xml {
 			get {
 				return null;
 			}
+		}
+
+		public object RegisterElement(string name) {
+			return null;
+		}
+
+		public object RegisterElement(string name, ElementRegistrationOptions options) {
+			return null;
 		}
 
 		public void ReleaseCapture() {

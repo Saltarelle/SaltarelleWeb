@@ -7,6 +7,13 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
+		public bool BadInput {
+			get {
+				return false;
+			}
+		}
+
+		[IntrinsicProperty]
 		public bool CustomError {
 			get {
 				return false;

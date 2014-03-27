@@ -39,11 +39,11 @@
   whether the use is for internal use such as eCSSProperty_* or
   nsRuleData::ValueFor* or external use such as exposing DOM properties.
 
+  -. 'flags', a bitfield containing CSS_PROPERTY_* flags.
+
   -. 'pref' is the name of a pref that controls whether the property
   is enabled.  The property is enabled if 'pref' is an empty string,
   or if the boolean property whose name is 'pref' is set to true.
-
-  -. 'flags', a bitfield containing CSS_PROPERTY_* flags.
 
   -. 'parsevariant', to be passed to ParseVariant in the parser.
 
@@ -89,8 +89,12 @@
 
 // Callers may also define CSS_PROP_LIST_ONLY_COMPONENTS_OF_ALL_SHORTHAND
 // to exclude properties that are not considered to be components of the 'all'
-// shorthand property.  Currently this is just 'direction', 'unicode-bidi' and
-// a few internal properties.
+// shorthand property.  Currently this excludes 'direction' and 'unicode-bidi',
+// as required by the CSS Cascading and Inheritance specification, and any
+// internal properties that cannot be changed by using CSS syntax.  For example,
+// the internal '-moz-system-font' property is not excluded, as it is set by the
+// 'font' shorthand, while '-x-lang' is excluded as there is no way to set this
+// internal property from a style sheet.
 
 // A caller who wants all the properties can define the |CSS_PROP|
 // macro.
@@ -120,6 +124,7 @@
 #define CSS_PROP_COLUMN(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, stylestructoffset_, animtype_) CSS_PROP(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, Column, stylestructoffset_, animtype_)
 #define CSS_PROP_SVG(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, stylestructoffset_, animtype_) CSS_PROP(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, SVG, stylestructoffset_, animtype_)
 #define CSS_PROP_SVGRESET(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, stylestructoffset_, animtype_) CSS_PROP(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, SVGReset, stylestructoffset_, animtype_)
+#define CSS_PROP_VARIABLES(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, stylestructoffset_, animtype_) CSS_PROP(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, Variables, stylestructoffset_, animtype_)
 
 // For properties that are stored in the CSS backend but are not
 // computed.  An includer may define this in addition to CSS_PROP, but
@@ -226,6 +231,10 @@
 #ifndef CSS_PROP_SVGRESET
 #define CSS_PROP_SVGRESET(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, stylestructoffset_, animtype_) /* nothing */
 #define DEFINED_CSS_PROP_SVGRESET
+#endif
+#ifndef CSS_PROP_VARIABLES
+#define CSS_PROP_VARIABLES(name_, id_, method_, flags_, pref_, parsevariant_, kwtable_, stylestructoffset_, animtype_) /* nothing */
+#define DEFINED_CSS_PROP_VARIABLES
 #endif
 
 #ifndef CSS_PROP_BACKENDONLY
@@ -348,7 +357,6 @@ CSS_PROP_TEXT(
     nullptr,
     offsetof(nsStyleText, mTabSize),
     eStyleAnimType_None)
-#ifndef CSS_PROP_LIST_ONLY_COMPONENTS_OF_ALL_SHORTHAND
 #ifndef CSS_PROP_LIST_EXCLUDE_INTERNAL
 CSS_PROP_FONT(
     -x-system-font,
@@ -363,7 +371,6 @@ CSS_PROP_FONT(
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
 #endif // !defined(CSS_PROP_LIST_EXCLUDE_INTERNAL)
-#endif // !defined(CSS_PROP_LIST_ONLY_COMPONENTS_OF_ALL_SHORTHAND)
 CSS_PROP_SHORTHAND(
     all,
     all,
@@ -540,6 +547,19 @@ CSS_PROP_BACKGROUND(
     "",
     VARIANT_HK,
     kBackgroundInlinePolicyKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_BACKGROUND(
+    background-blend-mode,
+    background_blend_mode,
+    BackgroundBlendMode,
+    CSS_PROPERTY_PARSE_VALUE_LIST |
+        CSS_PROPERTY_APPLIES_TO_FIRST_LETTER_AND_FIRST_LINE |
+        CSS_PROPERTY_APPLIES_TO_PLACEHOLDER |
+        CSS_PROPERTY_VALUE_LIST_USES_COMMAS,
+    "layout.css.background-blend-mode.enabled",
+    VARIANT_KEYWORD, // used by list parsing
+    kBlendModeKTable,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
 CSS_PROP_BACKGROUND(
@@ -764,7 +784,7 @@ CSS_PROP_BORDER(
         CSS_PROPERTY_APPLIES_TO_FIRST_LETTER |
         CSS_PROPERTY_START_IMAGE_LOADS,
     "",
-    VARIANT_HUO,
+    VARIANT_IMAGE | VARIANT_INHERIT,
     nullptr,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
@@ -1360,15 +1380,15 @@ CSS_PROP_BORDER(
     offsetof(nsStyleBorder, mBoxShadow),
     eStyleAnimType_Shadow)
 CSS_PROP_POSITION(
-    -moz-box-sizing,
+    box-sizing,
     box_sizing,
-    CSS_PROP_DOMPROP_PREFIXED(BoxSizing),
+    BoxSizing,
     CSS_PROPERTY_PARSE_VALUE,
     "",
     VARIANT_HK,
     kBoxSizingKTable,
     CSS_PROP_NO_OFFSET,
-    eStyleAnimType_None) // XXX bug 3935
+    eStyleAnimType_None)
 CSS_PROP_TABLEBORDER(
     caption-side,
     caption_side,
@@ -1514,6 +1534,18 @@ CSS_PROP_CONTENT(
     kContentKTable,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
+#ifndef CSS_PROP_LIST_EXCLUDE_INTERNAL
+CSS_PROP_TEXT(
+    -moz-control-character-visibility,
+    _moz_control_character_visibility,
+    CSS_PROP_DOMPROP_PREFIXED(ControlCharacterVisibility),
+    CSS_PROPERTY_PARSE_VALUE,
+    "",
+    VARIANT_HK,
+    kControlCharacterVisibilityKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+#endif
 CSS_PROP_CONTENT(
     counter-increment,
     counter_increment,
@@ -1584,11 +1616,21 @@ CSS_PROP_TABLEBORDER(
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
 CSS_PROP_POSITION(
+    align-content,
+    align_content,
+    AlignContent,
+    CSS_PROPERTY_PARSE_VALUE,
+    "",
+    VARIANT_HK,
+    kAlignContentKTable,
+    offsetof(nsStylePosition, mAlignContent),
+    eStyleAnimType_EnumU8)
+CSS_PROP_POSITION(
     align-items,
     align_items,
     AlignItems,
     CSS_PROPERTY_PARSE_VALUE,
-    "layout.css.flexbox.enabled",
+    "",
     VARIANT_HK,
     kAlignItemsKTable,
     offsetof(nsStylePosition, mAlignItems),
@@ -1598,7 +1640,7 @@ CSS_PROP_POSITION(
     align_self,
     AlignSelf,
     CSS_PROPERTY_PARSE_VALUE,
-    "layout.css.flexbox.enabled",
+    "",
     VARIANT_HK,
     kAlignSelfKTable,
     offsetof(nsStylePosition, mAlignSelf),
@@ -1608,7 +1650,7 @@ CSS_PROP_SHORTHAND(
     flex,
     Flex,
     CSS_PROPERTY_PARSE_FUNCTION,
-    "layout.css.flexbox.enabled")
+    "")
 CSS_PROP_POSITION(
     flex-basis,
     flex_basis,
@@ -1616,7 +1658,7 @@ CSS_PROP_POSITION(
     CSS_PROPERTY_PARSE_VALUE |
         CSS_PROPERTY_VALUE_NONNEGATIVE |
         CSS_PROPERTY_STORES_CALC,
-    "layout.css.flexbox.enabled",
+    "",
     // NOTE: The parsing implementation for the 'flex' shorthand property has
     // its own code to parse each subproperty. It does not depend on the
     // longhand parsing defined here.
@@ -1629,18 +1671,24 @@ CSS_PROP_POSITION(
     flex_direction,
     FlexDirection,
     CSS_PROPERTY_PARSE_VALUE,
-    "layout.css.flexbox.enabled",
+    "",
     VARIANT_HK,
     kFlexDirectionKTable,
     offsetof(nsStylePosition, mFlexDirection),
     eStyleAnimType_EnumU8)
+CSS_PROP_SHORTHAND(
+    flex-flow,
+    flex_flow,
+    FlexFlow,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "")
 CSS_PROP_POSITION(
     flex-grow,
     flex_grow,
     FlexGrow,
     CSS_PROPERTY_PARSE_VALUE |
       CSS_PROPERTY_VALUE_NONNEGATIVE,
-    "layout.css.flexbox.enabled",
+    "",
     // NOTE: The parsing implementation for the 'flex' shorthand property has
     // its own code to parse each subproperty. It does not depend on the
     // longhand parsing defined here.
@@ -1654,7 +1702,7 @@ CSS_PROP_POSITION(
     FlexShrink,
     CSS_PROPERTY_PARSE_VALUE |
       CSS_PROPERTY_VALUE_NONNEGATIVE,
-    "layout.css.flexbox.enabled",
+    "",
     // NOTE: The parsing implementation for the 'flex' shorthand property has
     // its own code to parse each subproperty. It does not depend on the
     // longhand parsing defined here.
@@ -1663,11 +1711,21 @@ CSS_PROP_POSITION(
     offsetof(nsStylePosition, mFlexShrink),
     eStyleAnimType_float) // float, except animations to/from 0 shouldn't work
 CSS_PROP_POSITION(
+    flex-wrap,
+    flex_wrap,
+    FlexWrap,
+    CSS_PROPERTY_PARSE_VALUE,
+    "",
+    VARIANT_HK,
+    kFlexWrapKTable,
+    offsetof(nsStylePosition, mFlexWrap),
+    eStyleAnimType_EnumU8)
+CSS_PROP_POSITION(
     order,
     order,
     Order,
     CSS_PROPERTY_PARSE_VALUE,
-    "layout.css.flexbox.enabled",
+    "",
     VARIANT_HI,
     nullptr,
     offsetof(nsStylePosition, mOrder),
@@ -1677,7 +1735,7 @@ CSS_PROP_POSITION(
     justify_content,
     JustifyContent,
     CSS_PROPERTY_PARSE_VALUE,
-    "layout.css.flexbox.enabled",
+    "",
     VARIANT_HK,
     kJustifyContentKTable,
     offsetof(nsStylePosition, mJustifyContent),
@@ -1950,6 +2008,152 @@ CSS_PROP_UIRESET(
     nullptr,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None) // bug 58646
+CSS_PROP_POSITION(
+    grid-auto-flow,
+    grid_auto_flow,
+    GridAutoFlow,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled",
+    0,
+    kGridAutoFlowKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_POSITION(
+    grid-auto-columns,
+    grid_auto_columns,
+    GridAutoColumns,
+    CSS_PROPERTY_PARSE_FUNCTION |
+        CSS_PROPERTY_STORES_CALC,
+    "layout.css.grid.enabled",
+    0,
+    kGridTrackBreadthKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_POSITION(
+    grid-auto-rows,
+    grid_auto_rows,
+    GridAutoRows,
+    CSS_PROPERTY_PARSE_FUNCTION |
+        CSS_PROPERTY_STORES_CALC,
+    "layout.css.grid.enabled",
+    0,
+    kGridTrackBreadthKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_POSITION(
+    grid-auto-position,
+    grid_auto_position,
+    GridAutoPosition,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled",
+    0,
+    nullptr,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_POSITION(
+    grid-template-areas,
+    grid_template_areas,
+    GridTemplateAreas,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled",
+    0,
+    nullptr,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_POSITION(
+    grid-template-columns,
+    grid_template_columns,
+    GridTemplateColumns,
+    CSS_PROPERTY_PARSE_FUNCTION |
+        CSS_PROPERTY_STORES_CALC |
+        CSS_PROPERTY_GETCS_NEEDS_LAYOUT_FLUSH,
+    "layout.css.grid.enabled",
+    0,
+    kGridTrackBreadthKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_POSITION(
+    grid-template-rows,
+    grid_template_rows,
+    GridTemplateRows,
+    CSS_PROPERTY_PARSE_FUNCTION |
+        CSS_PROPERTY_STORES_CALC |
+        CSS_PROPERTY_GETCS_NEEDS_LAYOUT_FLUSH,
+    "layout.css.grid.enabled",
+    0,
+    kGridTrackBreadthKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_SHORTHAND(
+    grid-template,
+    grid_template,
+    GridTemplate,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled")
+CSS_PROP_SHORTHAND(
+    grid,
+    grid,
+    Grid,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled")
+CSS_PROP_POSITION(
+    grid-column-start,
+    grid_column_start,
+    GridColumnStart,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled",
+    0,
+    nullptr,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_POSITION(
+    grid-column-end,
+    grid_column_end,
+    GridColumnEnd,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled",
+    0,
+    nullptr,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_POSITION(
+    grid-row-start,
+    grid_row_start,
+    GridRowStart,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled",
+    0,
+    nullptr,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_POSITION(
+    grid-row-end,
+    grid_row_end,
+    GridRowEnd,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled",
+    0,
+    nullptr,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_SHORTHAND(
+    grid-column,
+    grid_column,
+    GridColumn,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled")
+CSS_PROP_SHORTHAND(
+    grid-row,
+    grid_row,
+    GridRow,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled")
+CSS_PROP_SHORTHAND(
+    grid-area,
+    grid_area,
+    GridArea,
+    CSS_PROPERTY_PARSE_FUNCTION,
+    "layout.css.grid.enabled")
 CSS_PROP_POSITION(
     height,
     height,
@@ -2331,7 +2535,8 @@ CSS_PROP_DISPLAY(
     mix-blend-mode,
     mix_blend_mode,
     MixBlendMode,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "layout.css.mix-blend-mode.enabled",
     VARIANT_HK,
     kBlendModeKTable,
@@ -2421,6 +2626,18 @@ CSS_PROP_SHORTHAND(
     Overflow,
     CSS_PROPERTY_PARSE_FUNCTION,
     "")
+CSS_PROP_DISPLAY(
+    overflow-clip-box,
+    overflow_clip_box,
+    OverflowClipBox,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_ALWAYS_ENABLED_IN_UA_SHEETS |
+        CSS_PROPERTY_APPLIES_TO_PLACEHOLDER,
+    "layout.css.overflow-clip-box.enabled",
+    VARIANT_HK,
+    kOverflowClipBoxKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
 CSS_PROP_DISPLAY(
     overflow-x,
     overflow_x,
@@ -2701,7 +2918,9 @@ CSS_PROP_DISPLAY(
     position,
     position,
     Position,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        // For position: sticky
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_HK,
     kPositionKTable,
@@ -2766,7 +2985,8 @@ CSS_PROP_TEXT(
     text-align,
     text_align,
     TextAlign,
-    CSS_PROPERTY_PARSE_VALUE | CSS_PROPERTY_APPLIES_TO_PLACEHOLDER,
+    CSS_PROPERTY_PARSE_VALUE | CSS_PROPERTY_VALUE_PARSER_FUNCTION |
+      CSS_PROPERTY_APPLIES_TO_PLACEHOLDER,
     "",
     // When we support aligning on a string, we can parse text-align
     // as a string....
@@ -2778,7 +2998,7 @@ CSS_PROP_TEXT(
     -moz-text-align-last,
     text_align_last,
     CSS_PROP_DOMPROP_PREFIXED(TextAlignLast),
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE | CSS_PROPERTY_VALUE_PARSER_FUNCTION,
     "",
     VARIANT_HK,
     kTextAlignLastKTable,
@@ -2915,7 +3135,8 @@ CSS_PROP_DISPLAY(
     transform,
     Transform,
     CSS_PROPERTY_PARSE_FUNCTION |
-        CSS_PROPERTY_GETCS_NEEDS_LAYOUT_FLUSH,
+        CSS_PROPERTY_GETCS_NEEDS_LAYOUT_FLUSH |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     0,
     nullptr,
@@ -2949,7 +3170,8 @@ CSS_PROP_DISPLAY(
     perspective,
     perspective,
     Perspective,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_NONE | VARIANT_INHERIT | VARIANT_LENGTH | VARIANT_POSITIVE_DIMENSION,
     nullptr,
@@ -2959,7 +3181,8 @@ CSS_PROP_DISPLAY(
     transform-style,
     transform_style,
     TransformStyle,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_HK,
     kTransformStyleKTable,
@@ -2988,6 +3211,17 @@ CSS_PROP_POSITION(
     nullptr,
     offsetof(nsStylePosition, mOffset),
     eStyleAnimType_Sides_Top)
+ CSS_PROP_DISPLAY(
+    touch-action,
+    touch_action,
+    TouchAction,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_VALUE_PARSER_FUNCTION,
+    "layout.css.touch_action.enabled",
+    VARIANT_HK,
+    kTouchActionKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
 CSS_PROP_SHORTHAND(
     transition,
     transition,
@@ -3219,7 +3453,8 @@ CSS_PROP_POSITION(
     z-index,
     z_index,
     ZIndex,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_AHI,
     nullptr,
@@ -3309,9 +3544,10 @@ CSS_PROP_FONT(
     // property when mUnsafeRulesEnabled is set.
     CSS_PROPERTY_PARSE_VALUE,
     "",
-    // script-level can take Integer or Number values, but only Integer
+    // script-level can take Auto, Integer and Number values, but only Auto
+    // ("increment if parent is not in displaystyle") and Integer
     // ("relative") values can be specified in a style sheet.
-    VARIANT_HI,
+    VARIANT_AHI,
     nullptr,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
@@ -3337,6 +3573,28 @@ CSS_PROP_FONT(
     nullptr,
     CSS_PROP_NO_OFFSET,
     eStyleAnimType_None)
+CSS_PROP_FONT(
+    -moz-math-variant,
+    math_variant,
+    MathVariant,
+    CSS_PROPERTY_PARSE_INACCESSIBLE,
+    "",
+    VARIANT_HK,
+    kMathVariantKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+CSS_PROP_FONT(
+    -moz-math-display,
+    math_display,
+    MathDisplay,
+    // NOTE: CSSParserImpl::ParseSingleValueProperty only accepts this
+    // property when mUnsafeRulesEnabled is set.
+    CSS_PROPERTY_PARSE_VALUE,
+    "",
+    VARIANT_HK,
+    kMathDisplayKTable,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
 #endif // !defined(CSS_PROP_LIST_EXCLUDE_INTERNAL)
 #endif // !defined(CSS_PROP_LIST_ONLY_COMPONENTS_OF_ALL_SHORTHAND)
 
@@ -3344,7 +3602,8 @@ CSS_PROP_SVGRESET(
     clip-path,
     clip_path,
     ClipPath,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_HUO,
     nullptr,
@@ -3424,7 +3683,8 @@ CSS_PROP_SVGRESET(
     filter,
     filter,
     Filter,
-    CSS_PROPERTY_PARSE_FUNCTION,
+    CSS_PROPERTY_PARSE_FUNCTION |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     0,
     nullptr,
@@ -3510,7 +3770,8 @@ CSS_PROP_SVGRESET(
     mask,
     mask,
     Mask,
-    CSS_PROPERTY_PARSE_VALUE,
+    CSS_PROPERTY_PARSE_VALUE |
+        CSS_PROPERTY_CREATES_STACKING_CONTEXT,
     "",
     VARIANT_HUO,
     nullptr,
@@ -3671,6 +3932,19 @@ CSS_PROP_SVGRESET(
     offsetof(nsStyleSVGReset, mVectorEffect),
     eStyleAnimType_EnumU8)
 
+CSS_PROP_DISPLAY(
+    will-change,
+    will_change,
+    WillChange,
+    CSS_PROPERTY_PARSE_FUNCTION |
+        CSS_PROPERTY_VALUE_LIST_USES_COMMAS |
+        CSS_PROPERTY_ALWAYS_ENABLED_IN_CHROME_OR_CERTIFIED_APP,
+    "layout.css.will-change.enabled",
+    0,
+    nullptr,
+    CSS_PROP_NO_OFFSET,
+    eStyleAnimType_None)
+
 // The shorthands below are essentially aliases, but they require different
 // parsing rules, and are therefore implemented as shorthands.
 CSS_PROP_SHORTHAND(
@@ -3753,6 +4027,7 @@ CSS_PROP_FONT(
 #undef CSS_PROP_COLUMN
 #undef CSS_PROP_SVG
 #undef CSS_PROP_SVGRESET
+#undef CSS_PROP_VARIABLES
 #ifdef DEFINED_CSS_PROP_BACKENDONLY
 #undef CSS_PROP_BACKENDONLY
 #undef DEFINED_CSS_PROP_BACKENDONLY
@@ -3851,6 +4126,10 @@ CSS_PROP_FONT(
 #ifdef DEFINED_CSS_PROP_SVGRESET
 #undef CSS_PROP_SVGRESET
 #undef DEFINED_CSS_PROP_SVGRESET
+#endif
+#ifdef DEFINED_CSS_PROP_VARIABLES
+#undef CSS_PROP_VARIABLES
+#undef DEFINED_CSS_PROP_VARIABLES
 #endif
 #ifdef DEFINED_CSS_PROP_BACKENDONLY
 #undef CSS_PROP_BACKENDONLY

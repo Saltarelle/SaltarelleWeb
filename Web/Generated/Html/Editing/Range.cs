@@ -39,7 +39,7 @@ namespace System.Html.Editing {
 			return 0;
 		}
 
-		public short ComparePoint(XmlNode node, uint offset) {
+		public short ComparePoint(XmlNode node, int offset) {
 			return 0;
 		}
 
@@ -67,7 +67,7 @@ namespace System.Html.Editing {
 		}
 
 		[IntrinsicProperty]
-		public uint EndOffset {
+		public int EndOffset {
 			get {
 				return 0;
 			}
@@ -92,7 +92,7 @@ namespace System.Html.Editing {
 			return false;
 		}
 
-		public bool IsPointInRange(XmlNode node, uint offset) {
+		public bool IsPointInRange(XmlNode node, int offset) {
 			return false;
 		}
 
@@ -102,7 +102,7 @@ namespace System.Html.Editing {
 		public void SelectNodeContents(XmlNode refNode) {
 		}
 
-		public void SetEnd(XmlNode refNode, uint offset) {
+		public void SetEnd(XmlNode refNode, int offset) {
 		}
 
 		public void SetEndAfter(XmlNode refNode) {
@@ -111,7 +111,7 @@ namespace System.Html.Editing {
 		public void SetEndBefore(XmlNode refNode) {
 		}
 
-		public void SetStart(XmlNode refNode, uint offset) {
+		public void SetStart(XmlNode refNode, int offset) {
 		}
 
 		public void SetStartAfter(XmlNode refNode) {
@@ -134,7 +134,7 @@ namespace System.Html.Editing {
 		}
 
 		[IntrinsicProperty]
-		public uint StartOffset {
+		public int StartOffset {
 			get {
 				return 0;
 			}

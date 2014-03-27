@@ -1,30 +1,6 @@
-/* -*- Mode: IDL; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
-
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this file,
- * You can obtain one at http://mozilla.org/MPL/2.0/.
- *
- * The origin of this IDL file is
- * http://www.whatwg.org/specs/web-apps/current-work/#the-navigator-object
- * http://www.w3.org/TR/tracking-dnt/
- * http://www.w3.org/TR/geolocation-API/#geolocation_interface
- * http://www.w3.org/TR/battery-status/#navigatorbattery-interface
- * http://www.w3.org/TR/vibration/#vibration-interface
- * http://www.w3.org/2012/sysapps/runtime/#extension-to-the-navigator-interface-1
- * https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#navigator-interface-extension
- *
- * © Copyright 2004-2011 Apple Computer, Inc., Mozilla Foundation, and
- * Opera Software ASA. You are granted a license to use, reproduce
- * and create derivative works of this document.
- */
-
-
-interface MozWakeLock;
-
-// http://www.whatwg.org/specs/web-apps/current-work/#the-navigator-object
 [HeaderFile="Navigator.h", NeedNewResolve]
 interface Navigator {
-// objects implementing this interface also implement the interfaces given below
+
 };
 Navigator implements NavigatorID;
 Navigator implements NavigatorLanguage;
@@ -34,18 +10,22 @@ Navigator implements NavigatorStorageUtils;
 
 [NoInterfaceObject]
 interface NavigatorID {
-  readonly attribute DOMString appName;
-  [Throws]
-  readonly attribute DOMString appVersion;
-  [Throws]
-  readonly attribute DOMString platform;
-  [Throws]
-  readonly attribute DOMString userAgent;
 
-// Spec has this as a const, but that's wrong because it should not
-// be on the interface object.
-//const DOMString product = "Gecko"; // for historical reasons
+  [Constant]
+  readonly attribute DOMString appCodeName;
+  [Constant]
+  readonly attribute DOMString appName;
+  [Constant]
+  readonly attribute DOMString appVersion;
+  [Constant]
+  readonly attribute DOMString platform;
+  [Constant]
+  readonly attribute DOMString userAgent;
+  [Constant]
   readonly attribute DOMString product;
+
+
+  boolean taintEnabled();
 };
 
 [NoInterfaceObject]
@@ -60,26 +40,26 @@ interface NavigatorOnLine {
 
 [NoInterfaceObject]
 interface NavigatorContentUtils {
-// content handler registration
+
   [Throws]
   void registerProtocolHandler(DOMString scheme, DOMString url, DOMString title);
   [Throws]
   void registerContentHandler(DOMString mimeType, DOMString url, DOMString title);
-// NOT IMPLEMENTED
-//DOMString isProtocolHandlerRegistered(DOMString scheme, DOMString url);
-//DOMString isContentHandlerRegistered(DOMString mimeType, DOMString url);
-//void unregisterProtocolHandler(DOMString scheme, DOMString url);
-//void unregisterContentHandler(DOMString mimeType, DOMString url);
+
+
+
+
+
 };
 
 [NoInterfaceObject]
 interface NavigatorStorageUtils {
-// NOT IMPLEMENTED
-//void yieldForStorageUpdates();
+
+
 };
 
-// Things that definitely need to be in the spec and and are not for some
-// reason.  See https://www.w3.org/Bugs/Public/show_bug.cgi?id=22406
+
+
 partial interface Navigator {
   [Throws]
   readonly attribute MimeTypeArray mimeTypes;
@@ -87,12 +67,12 @@ partial interface Navigator {
   readonly attribute PluginArray plugins;
 };
 
-// http://www.w3.org/TR/tracking-dnt/ sort of
+
 partial interface Navigator {
   readonly attribute DOMString doNotTrack;
 };
 
-// http://www.w3.org/TR/geolocation-API/#geolocation_interface
+
 [NoInterfaceObject]
 interface NavigatorGeolocation {
   [Throws, Pref="geo.enabled"]
@@ -100,116 +80,77 @@ interface NavigatorGeolocation {
 };
 Navigator implements NavigatorGeolocation;
 
-// http://www.w3.org/TR/battery-status/#navigatorbattery-interface
+
 [NoInterfaceObject]
 interface NavigatorBattery {
-// XXXbz Per spec this should be non-nullable, but we return null in
-// torn-down windows.  See bug 884925.
+
+
     [Throws, Func="Navigator::HasBatterySupport"]
     readonly attribute BatteryManager? battery;
 };
 Navigator implements NavigatorBattery;
 
-// https://wiki.mozilla.org/WebAPI/DataStore
+
 [NoInterfaceObject]
 interface NavigatorDataStore {
-    [Throws, Creator, Pref="dom.datastore.enabled"]
+    [Throws, NewObject, Func="Navigator::HasDataStoreSupport"]
     Promise getDataStores(DOMString name);
 };
 Navigator implements NavigatorDataStore;
 
-// http://www.w3.org/TR/vibration/#vibration-interface
+
 partial interface Navigator {
-// We don't support sequences in unions yet
-//boolean vibrate ((unsigned long or sequence<unsigned long>) pattern);
+
+
     boolean vibrate(unsigned long duration);
     boolean vibrate(sequence<unsigned long> pattern);
 };
 
-// Mozilla-specific extensions
+
+partial interface Navigator {
+    [Pref="dom.w3c_pointer_events.enabled"]
+    readonly attribute long maxTouchPoints;
+};
+
+
 
 callback interface MozIdleObserver {
-// Time is in seconds and is read only when idle observers are added
-// and removed.
+
+
   readonly attribute unsigned long time;
   void onidle();
   void onactive();
 };
 
-// nsIDOMNavigator
+
 partial interface Navigator {
-// WebKit/Blink/Trident/Presto support this (hardcoded "Mozilla").
-  [Throws]
-  readonly attribute DOMString appCodeName;
   [Throws]
   readonly attribute DOMString oscpu;
-// WebKit/Blink support this; Trident/Presto do not.
+
   readonly attribute DOMString vendor;
-// WebKit/Blink supports this (hardcoded ""); Trident/Presto do not.
+
   readonly attribute DOMString vendorSub;
-// WebKit/Blink supports this (hardcoded "20030107"); Trident/Presto don't
+
   readonly attribute DOMString productSub;
-// WebKit/Blink/Trident/Presto support this.
+
   readonly attribute boolean cookieEnabled;
   [Throws]
   readonly attribute DOMString buildID;
   [Throws, Func="Navigator::HasPowerSupport"]
   readonly attribute MozPowerManager mozPower;
 
-// WebKit/Blink/Trident/Presto support this.
+
   [Throws]
   boolean javaEnabled();
-// Everyone but WebKit/Blink supports this.  See bug 679971.
-  boolean taintEnabled();
-
-/**
-   * Navigator requests to add an idle observer to the existing window.
-   */
-
   [Throws, Func="Navigator::HasIdleSupport"]
   void addIdleObserver(MozIdleObserver aIdleObserver);
-
-/**
-   * Navigator requests to remove an idle observer from the existing window.
-   */
-
   [Throws, Func="Navigator::HasIdleSupport"]
   void removeIdleObserver(MozIdleObserver aIdleObserver);
-
-/**
-   * Request a wake lock for a resource.
-   *
-   * A page holds a wake lock to request that a resource not be turned
-   * off (or otherwise made unavailable).
-   *
-   * The topic is the name of a resource that might be made unavailable for
-   * various reasons. For example, on a mobile device the power manager might
-   * decide to turn off the screen after a period of idle time to save power.
-   *
-   * The resource manager checks the lock state of a topic before turning off
-   * the associated resource. For example, a page could hold a lock on the
-   * "screen" topic to prevent the screensaver from appearing or the screen
-   * from turning off.
-   *
-   * The resource manager defines what each topic means and sets policy.  For
-   * example, the resource manager might decide to ignore 'screen' wake locks
-   * held by pages which are not visible.
-   *
-   * One topic can be locked multiple times; it is considered released only when
-   * all locks on the topic have been released.
-   *
-   * The returned nsIDOMMozWakeLock object is a token of the lock.  You can
-   * unlock the lock via the object's |unlock| method.  The lock is released
-   * automatically when its associated window is unloaded.
-   *
-   * @param aTopic resource name
-   */
-
-  [Throws, Func="Navigator::HasWakeLockSupport"]
+  [Throws, Pref="dom.wakelock.enabled", Func="Navigator::HasWakeLockSupport"]
   MozWakeLock requestWakeLock(DOMString aTopic);
 };
 
-// nsIDOMNavigatorDeviceStorage
+
 partial interface Navigator {
   [Throws, Pref="device.storage.enabled"]
   DeviceStorage? getDeviceStorage(DOMString type);
@@ -217,40 +158,39 @@ partial interface Navigator {
   sequence<DeviceStorage> getDeviceStorages(DOMString type);
 };
 
-// nsIDOMNavigatorDesktopNotification
+
 partial interface Navigator {
   [Throws, Func="Navigator::HasDesktopNotificationSupport"]
   readonly attribute DesktopNotificationCenter mozNotification;
 };
 
-// nsIDOMClientInformation
+
 partial interface Navigator {
   [Throws]
   boolean mozIsLocallyAvailable(DOMString uri, boolean whenOffline);
 };
 
-// nsIDOMMozNavigatorMobileMessage
+
 interface MozMobileMessageManager;
 partial interface Navigator {
   [Func="Navigator::HasMobileMessageSupport"]
   readonly attribute MozMobileMessageManager? mozMobileMessage;
 };
 
-// nsIDOMMozNavigatorNetwork
-interface MozConnection;
+
 partial interface Navigator {
   [Pref="dom.network.enabled"]
   readonly attribute MozConnection? mozConnection;
 };
 
-// nsIDOMNavigatorCamera
+
 partial interface Navigator {
   [Throws, Func="Navigator::HasCameraSupport"]
   readonly attribute CameraManager mozCameras;
 };
 
-// nsIDOMNavigatorSystemMessages and sort of maybe
-// http://www.w3.org/2012/sysapps/runtime/#extension-to-the-navigator-interface-1
+
+
 callback systemMessageCallback = void (optional object message);
 partial interface Navigator {
   [Throws, Pref="dom.sysmsg.enabled"]
@@ -258,36 +198,30 @@ partial interface Navigator {
   [Throws, Pref="dom.sysmsg.enabled"]
   boolean mozHasPendingMessage (DOMString type);
 };
+partial interface Navigator {
+  [Throws, Func="Navigator::HasTelephonySupport"]
+  readonly attribute Telephony? mozTelephony;
+};
 
 
 
-
-// https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#navigator-interface-extension
 partial interface Navigator {
   [Throws, Pref="dom.gamepad.enabled"]
   sequence<Gamepad?> getGamepads();
 };
-// MOZ_GAMEPAD
-
-
-
-
-
-
-// nsIDOMMozNavigatorTime
 partial interface Navigator {
   [Throws, Func="Navigator::HasTimeSupport"]
   readonly attribute MozTimeManager mozTime;
 };
-// MOZ_TIME_MANAGER
 
 
-// nsIMozNavigatorAudioChannelManager
+
+
 partial interface Navigator {
   [Throws]
   readonly attribute AudioChannelManager mozAudioChannelManager;
 };
-// MOZ_AUDIO_CHANNEL_MANAGER
+
 
 
 callback NavigatorUserMediaSuccessCallback = void (MediaStream stream);
@@ -300,12 +234,22 @@ partial interface Navigator {
                        NavigatorUserMediaErrorCallback errorCallback);
 };
 
-// nsINavigatorUserMedia
+
 callback MozGetUserMediaDevicesSuccessCallback = void (nsIVariant? devices);
 partial interface Navigator {
   [Throws, ChromeOnly]
   void mozGetUserMediaDevices(MediaStreamConstraintsInternal constraints,
                               MozGetUserMediaDevicesSuccessCallback onsuccess,
-                              NavigatorUserMediaErrorCallback onerror);
+                              NavigatorUserMediaErrorCallback onerror,
+
+
+
+                              optional unsigned long long innerWindowID = 0);
 };
-// MOZ_MEDIA_NAVIGATOR
+
+
+partial interface Navigator {
+  [Throws, Pref="beacon.enabled"]
+  boolean sendBeacon(DOMString url,
+                     optional (ArrayBufferView or Blob or DOMString or FormData)? data = null);
+};

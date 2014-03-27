@@ -19,7 +19,7 @@ namespace System.Html {
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}

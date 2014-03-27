@@ -8,7 +8,7 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public SVGPathSeg this[uint index] {
+		public SVGPathSeg this[int index] {
 			get {
 				return default(SVGPathSeg);
 			}
@@ -26,7 +26,7 @@ namespace System.Html.Media.Graphics.SVG {
 			return null;
 		}
 
-		public SVGPathSeg GetItem(uint index) {
+		public SVGPathSeg GetItem(int index) {
 			return default(SVGPathSeg);
 		}
 
@@ -34,29 +34,29 @@ namespace System.Html.Media.Graphics.SVG {
 			return default(SVGPathSeg);
 		}
 
-		public SVGPathSeg InsertItemBefore(SVGPathSeg newItem, uint index) {
+		public SVGPathSeg InsertItemBefore(SVGPathSeg newItem, int index) {
 			return default(SVGPathSeg);
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}
 		}
 
 		[IntrinsicProperty]
-		public uint NumberOfItems {
+		public int NumberOfItems {
 			get {
 				return 0;
 			}
 		}
 
-		public SVGPathSeg RemoveItem(uint index) {
+		public SVGPathSeg RemoveItem(int index) {
 			return default(SVGPathSeg);
 		}
 
-		public SVGPathSeg ReplaceItem(SVGPathSeg newItem, uint index) {
+		public SVGPathSeg ReplaceItem(SVGPathSeg newItem, int index) {
 			return default(SVGPathSeg);
 		}
 	}

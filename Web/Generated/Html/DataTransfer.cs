@@ -1,11 +1,13 @@
 ﻿using System.IO;
 using System.Runtime.CompilerServices;
-using System.Xml;
 
 namespace System.Html {
 	[IgnoreNamespace, Imported(ObeysTypeSystem = true)]
 	public partial class DataTransfer {
 		internal DataTransfer() {
+		}
+
+		public void AddElement(Element element) {
 		}
 
 		public void ClearData() {
@@ -43,23 +45,16 @@ namespace System.Html {
 			return null;
 		}
 
-		[IntrinsicProperty]
-		public DataTransferItemList Items {
-			get {
-				return default(DataTransferItemList);
-			}
-		}
-
 		public void SetData(string format, string data) {
 		}
 
-		public void SetDragImage(XmlElement image, int x, int y) {
+		public void SetDragImage(Element image, int x, int y) {
 		}
 
 		[IntrinsicProperty]
-		public string[] Types {
+		public DOMStringList Types {
 			get {
-				return null;
+				return default(DOMStringList);
 			}
 		}
 	}

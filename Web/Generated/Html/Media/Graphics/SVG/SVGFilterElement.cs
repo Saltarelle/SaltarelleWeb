@@ -37,20 +37,6 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		[IntrinsicProperty]
-		public SVGAnimatedInteger FilterResX {
-			get {
-				return default(SVGAnimatedInteger);
-			}
-		}
-
-		[IntrinsicProperty]
-		public SVGAnimatedInteger FilterResY {
-			get {
-				return default(SVGAnimatedInteger);
-			}
-		}
-
-		[IntrinsicProperty]
 		public SVGAnimatedEnumeration<SVGUnitType> FilterUnits {
 			get {
 				return default(SVGAnimatedEnumeration<SVGUnitType>);
@@ -106,9 +92,6 @@ namespace System.Html.Media.Graphics.SVG {
 		}
 
 		public void RemoveEventListener(SVGFilterElementEvents type, IEventListener listener, bool capture) {
-		}
-
-		public void SetFilterRes(uint filterResX, uint filterResY) {
 		}
 
 		[ScriptName("SVG_UNIT_TYPE_OBJECTBOUNDINGBOX")]

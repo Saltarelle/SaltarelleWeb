@@ -29,6 +29,9 @@ namespace System.Html {
 			}
 		}
 
+		public void InitUIEvent(string aType, bool aCanBubble, bool aCancelable, WindowInstance aView, int aDetail) {
+		}
+
 		[IntrinsicProperty]
 		public bool IsChar {
 			get {
@@ -85,16 +88,16 @@ namespace System.Html {
 		public const int SCROLL_PAGE_UP = -32768;
 
 		[IntrinsicProperty]
-		public uint Which {
+		public WindowInstance View {
 			get {
-				return 0;
+				return default(WindowInstance);
 			}
 		}
 
 		[IntrinsicProperty]
-		public WindowInstance View {
+		public int Which {
 			get {
-				return default(WindowInstance);
+				return 0;
 			}
 		}
 	}

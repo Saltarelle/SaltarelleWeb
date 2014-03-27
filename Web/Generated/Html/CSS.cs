@@ -6,6 +6,10 @@ namespace System.Html {
 		internal CSS() {
 		}
 
+		public static string Escape(string ident) {
+			return null;
+		}
+
 		public static bool Supports(string conditionText) {
 			return false;
 		}

@@ -3,13 +3,9 @@
 namespace System.Data.IndexedDB {
 	[Imported, NamedValues]
 	public enum OpenDBRequestEvents {
-		[ScriptName("onblocked")]
 		Blocked,
-		[ScriptName("onupgradeneeded")]
-		Upgradeneeded,
-		[ScriptName("onsuccess")]
+		Error,
 		Success,
-		[ScriptName("onerror")]
-		Error
+		Upgradeneeded
 	}
 }

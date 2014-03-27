@@ -8,16 +8,16 @@ namespace System.Html {
 		}
 
 		[IndexerName("__Item"), IntrinsicProperty]
-		public string this[uint index] {
+		public string this[int index] {
 			get {
 				return null;
 			}
 		}
 
-		public void AppendMedium(string medium) {
+		public void AppendMedium(string newMedium) {
 		}
 
-		public void DeleteMedium(string medium) {
+		public void DeleteMedium(string oldMedium) {
 		}
 
 		[EnumerateAsArray, InlineCode("new {$System.ArrayEnumerator}({this})")]
@@ -25,12 +25,12 @@ namespace System.Html {
 			return null;
 		}
 
-		public string Item(uint index) {
+		public string Item(int index) {
 			return null;
 		}
 
 		[IntrinsicProperty]
-		public uint Length {
+		public int Length {
 			get {
 				return 0;
 			}
