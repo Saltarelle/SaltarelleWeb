@@ -12,7 +12,7 @@
     <RootNamespace>System</RootNamespace>
     <AssemblyName>Saltarelle.Web</AssemblyName>
     <NoStdLib>True</NoStdLib>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Saltarelle.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
@@ -96,9 +96,6 @@
     <Compile Include="Properties\Version.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
     <Compile Include="Net\HttpVerb.cs" />
     <Compile Include="Threading\WebWorkers\DedicatedWorkerGlobalScope.cs" />
     <Compile Include="Threading\WebWorkers\SharedWorkerGlobalScope.cs" />
@@ -113,11 +110,13 @@
     <Compile Include="Xml\XmlNodeList.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="mscorlib">
-      <HintPath>$(SolutionDir)packages\Saltarelle.Runtime.2.3.0\tools\Assemblies\mscorlib.dll</HintPath>
+      <HintPath>$(SolutionDir)packages\Saltarelle.Runtime.3.0-alpha-0002\tools\Assemblies\mscorlib.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="!Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.3.0\tools\Saltarelle.Compiler.targets')" />
-  <Import Project="$(SolutionDir)packages\Saltarelle.Compiler.2.3.0\tools\Saltarelle.Compiler.targets" Condition="Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.3.0\tools\Saltarelle.Compiler.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="!Exists('$(SolutionDir)packages\Saltarelle.Compiler.3.0-alpha-0001\tools\Saltarelle.Compiler.targets')" />
+  <Import Project="$(SolutionDir)packages\Saltarelle.Compiler.3.0-alpha-0001\tools\Saltarelle.Compiler.targets" Condition="Exists('$(SolutionDir)packages\Saltarelle.Compiler.3.0-alpha-0001\tools\Saltarelle.Compiler.targets')" />
 </Project>
