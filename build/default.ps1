@@ -10,13 +10,13 @@ properties {
 	$webIDLSymbols = "MOZ_AUDIO_CHANNEL_MANAGER,MOZ_WEBGL,RELEASE_BUILD,MOZ_WEBRTC,MOZ_WEBSPEECH,MOZ_GAMEPAD,MOZ_MEDIA_NAVIGATOR,MOZ_TIME_MANAGER,MOZ_DISABLE_CRYPTOLEGACY"
 }
 
-Function Get-DotNetVersion($RawVersion) {
-	Return New-Object System.Version(($RawVersion -Replace "-.*$","")) # Remove any pre-release information
-}
-
 Function Get-DependencyVersion($RawVersion) {
-	$netVersion = Get-DotNetVersion -RawVersion $RawVersion
-	Return New-Object System.Version($netVersion.Major, $netVersion.Minor)
+	If ($RawVersion -Match "-.+$") {
+		return $RawVersion
+	}
+	else {
+		Return $RawVersion -replace "^([0-9]+\.[0-9]+).*","`$1"
+	}
 }
 
 Task default -Depends Build
@@ -70,18 +70,20 @@ Task Configure -Depends Generate-VersionInfo {
 
 Function Determine-PathVersion($RefCommit, $RefVersion, $Path) {
 	if ($autoVersion) {
-		$RefVersion = New-Object System.Version(($RefVersion -Replace "-.*$",""))
-		if ($RefVersion.Build -lt 0) {
-			$RefVersion = New-Object System.Version($RefVersion.Major, $RefVersion.Minor, 0)
+		if ($RefVersion -Match "^[0-9]+\.[0-9]+$") {
+			$RefVersion = "$RefVersion.0"
 		}
-	
+
 		$revision = ((git log "$RefCommit..HEAD" --pretty=format:"%H" -- (@($Path) | % { """$_""" })) | Measure-Object).Count # Number of commits since our reference commit
-		if ($revision -gt 0) {
-			Return New-Object System.Version($RefVersion.Major, $RefVersion.Minor, $RefVersion.Build, $revision)
+		if ($RefVersion -Match "-.*$") {
+			$RefVersion = "$RefVersion-$($revision.ToString('0000'))"
+		}
+		elseif ($revision -gt 0) {
+			$RefVersion = "$RefVersion.$revision"
 		}
 	}
 
-	$RefVersion
+	Return $RefVersion
 }
 
 Function Determine-Ref {
@@ -125,10 +127,10 @@ Task Determine-Version {
 }
 
 Function Generate-VersionFile($Path, $Version) {
-	$Version = Get-DotNetVersion -RawVersion $Version
+	$Version -match "^[0-9]+" | Out-Null
 @"
-[assembly: System.Reflection.AssemblyVersion("2.0.0.0")]
-[assembly: System.Reflection.AssemblyFileVersion("$Version")]
+[assembly: System.Reflection.AssemblyVersion("$($Matches[0]).0.0.0")]
+[assembly: System.Reflection.AssemblyFileVersion("$($Version -Replace '-.*$','')")]
 "@ | Out-File $Path -Encoding "UTF8"
 }
 
