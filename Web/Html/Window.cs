@@ -78,5 +78,10 @@ namespace System.Html {
 		public static void ClearInterval(int handle) {}
 
 		public static void ClearTimeout(int handle) {}
+		
+		public static System.Data.Sql.SqlDatabase OpenDatabase(string name, string version, string displayName, int estimatedSize)
+        {
+            return null;
+        }
 	}
 }
