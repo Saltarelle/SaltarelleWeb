@@ -11,6 +11,7 @@ properties {
 }
 
 Function Get-DependencyVersion($RawVersion) {
+    return "3.0-alpha"
 	If ($RawVersion -Match "-.+$") {
 		return $RawVersion
 	}
