@@ -20,10 +20,13 @@ param(
     [Parameter(Position=6, Mandatory=0)]
     [switch]$nologo = $false,
     [Parameter(Position=7, Mandatory=0)]
-    [switch]$help = $false,
-    [Parameter(Position=8, Mandatory=0)]
-    [string]$scriptPath = $(Split-Path -parent $MyInvocation.MyCommand.path)
+    [switch]$help = $false
 )
+
+# setting $scriptPath here, not as default argument, to support calling as "powershell -File psake.ps1"
+if (!$scriptPath) {
+  $scriptPath = $(Split-Path -parent $MyInvocation.MyCommand.path)
+}
 
 $currentThread = [System.Threading.Thread]::CurrentThread
 $invariantCulture = [System.Globalization.CultureInfo]::InvariantCulture
