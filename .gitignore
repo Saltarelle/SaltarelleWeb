@@ -18,3 +18,5 @@ Generator/Generator/Meta/MetadataParserImpl/Metadata__.g
 Generator/Generator/Meta/MetadataParserImpl/MetadataLexer.cs
 Generator/Generator/Meta/MetadataParserImpl/MetadataParser.cs
 Generator/Generator/ParserImpl/WebIDL__.g
+packages/*
+~package/packages.config
