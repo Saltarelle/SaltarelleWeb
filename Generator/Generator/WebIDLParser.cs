@@ -8,14 +8,17 @@ using Antlr.Runtime;
 using Antlr.Runtime.Tree;
 using Generator.AstNodes;
 
-namespace Generator {
-	public static class WebIDLParser {
-		public static Definitions Parse(TextReader source) {
-			var lex = new ParserImpl.WebIDLLexer(new ANTLRReaderStream(source));
-			var tokens = new CommonTokenStream(lex);
-			var parser = new ParserImpl.WebIDLParser(tokens);
+namespace Generator
+{
+    public static class WebIDLParser
+    {
+        public static Definitions Parse(TextReader source)
+        {
+            var lex = new ParserImpl.WebIDLLexer(new ANTLRReaderStream(source));
+            var tokens = new CommonTokenStream(lex);
+            var parser = new ParserImpl.WebIDLParser(tokens);
 
-			return parser.definitions();
-		}
-	}
+            return parser.definitions();
+        }
+    }
 }

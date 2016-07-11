@@ -6,86 +6,99 @@ using System.Text;
 using Generator.AstNodes;
 using NUnit.Framework;
 
-namespace Generator.Tests {
-	public class WebIDLResolverTests {
-		private string Format(Dictionary<string, ResolvedDefinition> types) {
-			var sb = new StringBuilder();
-			foreach (var t in types.OrderBy(x => x.Key).Select(x => x.Value)) {
-				t.Decompose(
-					@interface => {
-						if (@interface.ExtendedAttributes.Count > 0)
-							sb.Append("[" + string.Join(", ", @interface.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
-						sb.Append("interface " + @interface.Name + " ");
-						if (@interface.Base != null)
-							sb.Append(": " + @interface.Base + " ");
-						sb.AppendLine("{");
-						foreach (var imp in @interface.Implements.OrderBy(x => x))
-							sb.AppendLine("\timplements " + imp + ";");
-						sb.Append(string.Join("", @interface.Members.Select(m => "\t" + WebIDLFormatter.Format(m))));
-						sb.Append("}");
-					},
-					callbackInterface => {
-						if (callbackInterface.ExtendedAttributes.Count > 0)
-							sb.Append("[" + string.Join(", ", callbackInterface.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
-						sb.Append("callback interface " + callbackInterface.Name + " ");
-						if (callbackInterface.Base != null)
-							sb.Append(": " + callbackInterface.Base + " ");
-						sb.AppendLine("{");
-						sb.Append(string.Join("", callbackInterface.Members.Select(m => "\t" + WebIDLFormatter.Format(m))));
-						sb.Append("}");
-					},
-					dictionary => {
-						if (dictionary.ExtendedAttributes.Count > 0)
-							sb.Append("[" + string.Join(", ", dictionary.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
-						sb.Append("dictionary " + dictionary.Name + " ");
-						if (dictionary.Base != null)
-							sb.Append(": " + dictionary.Base + " ");
-						sb.AppendLine("{");
-						sb.Append(string.Join("", dictionary.Members.Select(m => "\t" + WebIDLFormatter.Format(m))));
-						sb.Append("}");
-					},
-					callback => {
-						if (callback.ExtendedAttributes.Count > 0)
-							sb.Append("[" + string.Join(", ", callback.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
-						sb.Append("callback " + callback.Name + " = " + WebIDLFormatter.Format(callback.ReturnType) + " ");
-						sb.Append("(" + string.Join(", ", callback.Arguments.Select(WebIDLFormatter.Format)) + ")");
-					},
-					exception => {
-						if (exception.ExtendedAttributes.Count > 0)
-							sb.Append("[" + string.Join(", ", exception.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
-						sb.Append("exception " + exception.Name + " ");
-						if (exception.Base != null)
-							sb.Append(": " + exception.Base + " ");
-						sb.AppendLine("{");
-						sb.Append(string.Join("", exception.Members.Select(m => "\t" + WebIDLFormatter.Format(m))));
-						sb.Append("}");
-					},
-					@enum => {
-						if (@enum.ExtendedAttributes.Count > 0)
-							sb.Append("[" + string.Join(", ", @enum.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
-						sb.Append("enum " + @enum.Name + " { " + string.Join(", ", @enum.Values.Select(v => "\"" + v + "\"")) + " }");
-					},
-					declaredInterface => {
-						sb.Append("interface " + declaredInterface.Name);
-					}
-				);
-				sb.AppendLine(";");
-			}
+namespace Generator.Tests
+{
+    public class WebIDLResolverTests
+    {
+        private string Format(Dictionary<string, ResolvedDefinition> types)
+        {
+            var sb = new StringBuilder();
+            foreach (var t in types.OrderBy(x => x.Key).Select(x => x.Value))
+            {
+                t.Decompose(
+                    @interface =>
+                    {
+                        if (@interface.ExtendedAttributes.Count > 0)
+                            sb.Append("[" + string.Join(", ", @interface.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
+                        sb.Append("interface " + @interface.Name + " ");
+                        if (@interface.Base != null)
+                            sb.Append(": " + @interface.Base + " ");
+                        sb.AppendLine("{");
+                        foreach (var imp in @interface.Implements.OrderBy(x => x))
+                            sb.AppendLine("\timplements " + imp + ";");
+                        sb.Append(string.Join("", @interface.Members.Select(m => "\t" + WebIDLFormatter.Format(m))));
+                        sb.Append("}");
+                    },
+                    callbackInterface =>
+                    {
+                        if (callbackInterface.ExtendedAttributes.Count > 0)
+                            sb.Append("[" + string.Join(", ", callbackInterface.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
+                        sb.Append("callback interface " + callbackInterface.Name + " ");
+                        if (callbackInterface.Base != null)
+                            sb.Append(": " + callbackInterface.Base + " ");
+                        sb.AppendLine("{");
+                        sb.Append(string.Join("", callbackInterface.Members.Select(m => "\t" + WebIDLFormatter.Format(m))));
+                        sb.Append("}");
+                    },
+                    dictionary =>
+                    {
+                        if (dictionary.ExtendedAttributes.Count > 0)
+                            sb.Append("[" + string.Join(", ", dictionary.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
+                        sb.Append("dictionary " + dictionary.Name + " ");
+                        if (dictionary.Base != null)
+                            sb.Append(": " + dictionary.Base + " ");
+                        sb.AppendLine("{");
+                        sb.Append(string.Join("", dictionary.Members.Select(m => "\t" + WebIDLFormatter.Format(m))));
+                        sb.Append("}");
+                    },
+                    callback =>
+                    {
+                        if (callback.ExtendedAttributes.Count > 0)
+                            sb.Append("[" + string.Join(", ", callback.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
+                        sb.Append("callback " + callback.Name + " = " + WebIDLFormatter.Format(callback.ReturnType) + " ");
+                        sb.Append("(" + string.Join(", ", callback.Arguments.Select(WebIDLFormatter.Format)) + ")");
+                    },
+                    exception =>
+                    {
+                        if (exception.ExtendedAttributes.Count > 0)
+                            sb.Append("[" + string.Join(", ", exception.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
+                        sb.Append("exception " + exception.Name + " ");
+                        if (exception.Base != null)
+                            sb.Append(": " + exception.Base + " ");
+                        sb.AppendLine("{");
+                        sb.Append(string.Join("", exception.Members.Select(m => "\t" + WebIDLFormatter.Format(m))));
+                        sb.Append("}");
+                    },
+                    @enum =>
+                    {
+                        if (@enum.ExtendedAttributes.Count > 0)
+                            sb.Append("[" + string.Join(", ", @enum.ExtendedAttributes.Select(WebIDLFormatter.Format)) + "] ");
+                        sb.Append("enum " + @enum.Name + " { " + string.Join(", ", @enum.Values.Select(v => "\"" + v + "\"")) + " }");
+                    },
+                    declaredInterface =>
+                    {
+                        sb.Append("interface " + declaredInterface.Name);
+                    }
+                );
+                sb.AppendLine(";");
+            }
 
-			return sb.ToString();
-		}
+            return sb.ToString();
+        }
 
-		private void AssertCorrect(string webidl, string expected) {
-			var ast = WebIDLParser.Parse(new StringReader(webidl));
-			var resolved = WebIDLResolver.Resolve(new[] { ast });
-			string actual = (resolved.Item2.Count > 0 ? string.Join("\n", resolved.Item2.Select(s => "error: " + s)) + "\n\n": "") + Format(resolved.Item1);
+        private void AssertCorrect(string webidl, string expected)
+        {
+            var ast = WebIDLParser.Parse(new StringReader(webidl));
+            var resolved = WebIDLResolver.Resolve(new[] { ast });
+            string actual = (resolved.Item2.Count > 0 ? string.Join("\n", resolved.Item2.Select(s => "error: " + s)) + "\n\n" : "") + Format(resolved.Item1);
 
-			Assert.That(actual.Trim().Replace("\r\n", "\n"), Is.EqualTo(expected.Trim().Replace("\r\n", "\n")), "Expected:\n" + expected + "\n\nActual:\n" + actual);
-		}
+            Assert.That(actual.Trim().Replace("\r\n", "\n"), Is.EqualTo(expected.Trim().Replace("\r\n", "\n")), "Expected:\n" + expected + "\n\nActual:\n" + actual);
+        }
 
-		[Test]
-		public void PartialInterfaceMergesBothExtendedAttributesAndMembers() {
-			AssertCorrect(@"
+        [Test]
+        public void PartialInterfaceMergesBothExtendedAttributesAndMembers()
+        {
+            AssertCorrect(@"
 interface IBase {};
 [Attr1] partial interface I1 {  void method1(); };
 [Attr2] interface I1 : IBase { readonly attribute long a1; };
@@ -106,11 +119,12 @@ interface IBase {};
 };
 interface IBase {
 };");
-		}
+        }
 
-		[Test]
-		public void PartialInterfaceWithoutFullInterfaceWorksButShowsErrors() {
-			AssertCorrect(@"
+        [Test]
+        public void PartialInterfaceWithoutFullInterfaceWorksButShowsErrors()
+        {
+            AssertCorrect(@"
 [Attr1] partial interface I1 {  void method1(); };
 [Attr3] partial interface I1 { readonly attribute Object a2; };
 ",
@@ -120,11 +134,12 @@ interface IBase {
 	void method1();
 	readonly attribute Object a2;
 };");
-		}
+        }
 
-		[Test]
-		public void DuplicateInterfaceDefinitionIsError() {
-			AssertCorrect(@"
+        [Test]
+        public void DuplicateInterfaceDefinitionIsError()
+        {
+            AssertCorrect(@"
 [Attr1] interface I1 {  void method1(); };
 [Attr3] interface I1 { readonly attribute Object a2; };
 ",
@@ -134,11 +149,12 @@ interface IBase {
 	void method1();
 	readonly attribute Object a2;
 };");
-		}
+        }
 
-		[Test]
-		public void InheritingInterfaceFromNonExistentOrNonInterfaceTypeIsAnError() {
-			AssertCorrect(@"
+        [Test]
+        public void InheritingInterfaceFromNonExistentOrNonInterfaceTypeIsAnError()
+        {
+            AssertCorrect(@"
 dictionary D1 {};
 interface I1 : D1 {};
 interface I2 : NonExistent {};
@@ -153,11 +169,12 @@ interface I1 {
 interface I2 {
 };
 ");
-		}
+        }
 
-		[Test]
-		public void PartialDictionaryCombinesBothExtendedAttributesAndMembers() {
-			AssertCorrect(@"
+        [Test]
+        public void PartialDictionaryCombinesBothExtendedAttributesAndMembers()
+        {
+            AssertCorrect(@"
 dictionary DBase {};
 [Attr1] partial dictionary D1 { long f1; };
 [Attr2] dictionary D1 : DBase { Object f2 = 0; };
@@ -179,11 +196,12 @@ dictionary DBase {};
 dictionary DBase {
 };
 ");
-		}
+        }
 
-		[Test]
-		public void PartialDictionaryWithoutFullInterfaceWorksButShowsErrors() {
-			AssertCorrect(@"
+        [Test]
+        public void PartialDictionaryWithoutFullInterfaceWorksButShowsErrors()
+        {
+            AssertCorrect(@"
 [Attr1] partial dictionary D1 { long a; };
 [Attr2] partial dictionary D1 { long b; };
 ",
@@ -193,11 +211,12 @@ dictionary DBase {
 	long a;
 	long b;
 };");
-		}
+        }
 
-		[Test]
-		public void DuplicateDictionaryDefinitionIsError() {
-			AssertCorrect(@"
+        [Test]
+        public void DuplicateDictionaryDefinitionIsError()
+        {
+            AssertCorrect(@"
 [Attr1] dictionary D1 { long a; };
 [Attr2] dictionary D1 { long b; };
 ",
@@ -207,11 +226,12 @@ dictionary DBase {
 	long a;
 	long b;
 };");
-		}
+        }
 
-		[Test]
-		public void InheritingDictionaryFromNonExistentOrNonDictionaryTypeIsAnError() {
-			AssertCorrect(@"
+        [Test]
+        public void InheritingDictionaryFromNonExistentOrNonDictionaryTypeIsAnError()
+        {
+            AssertCorrect(@"
 interface I1 {};
 dictionary D1 : I1 {};
 dictionary D2 : NonExistent {};
@@ -225,11 +245,12 @@ dictionary D2 {
 };
 interface I1 {
 };");
-		}
+        }
 
-		[Test]
-		public void CallbackInterfaceWorks() {
-			AssertCorrect(@"
+        [Test]
+        public void CallbackInterfaceWorks()
+        {
+            AssertCorrect(@"
 callback interface IBase {};
 [Attr1] callback interface I1 : IBase { void method1(); };
 ",
@@ -238,11 +259,12 @@ callback interface IBase {};
 };
 callback interface IBase {
 };");
-		}
+        }
 
-		[Test]
-		public void DuplicateCallbackInterfaceIsAnError() {
-			AssertCorrect(@"
+        [Test]
+        public void DuplicateCallbackInterfaceIsAnError()
+        {
+            AssertCorrect(@"
 callback interface IBase {};
 [Attr1] callback interface I1 : IBase { void method1(); };
 [Attr2] callback interface I1 : IBase { void method2(); };
@@ -255,11 +277,12 @@ callback interface IBase {};
 callback interface IBase {
 };
 ");
-		}
+        }
 
-		[Test]
-		public void InheritingCallbackInterfaceFromNonExistentOrNonCallbackInterfaceTypeIsAnError() {
-			AssertCorrect(@"
+        [Test]
+        public void InheritingCallbackInterfaceFromNonExistentOrNonCallbackInterfaceTypeIsAnError()
+        {
+            AssertCorrect(@"
 interface I1 {};
 callback interface CI1 : I1 {};
 callback interface CI2 : NonExistent {};
@@ -273,20 +296,22 @@ callback interface CI2 {
 };
 interface I1 {
 };");
-		}
+        }
 
-		[Test]
-		public void CallbackWorks() {
-			AssertCorrect(@"
+        [Test]
+        public void CallbackWorks()
+        {
+            AssertCorrect(@"
 [Attr1] callback MyCallback = void (DOMString a, long b);
 ",
 @"[Attr1] callback MyCallback = void (DOMString a, long b);
 ");
-		}
+        }
 
-		[Test]
-		public void RedefinitionOfCallbackIsAnError() {
-			AssertCorrect(@"
+        [Test]
+        public void RedefinitionOfCallbackIsAnError()
+        {
+            AssertCorrect(@"
 [Attr1] callback MyCallback = void (DOMString a, long b);
 [Attr1] callback MyCallback = void (DOMString a, long b);
 ",
@@ -294,11 +319,12 @@ interface I1 {
 
 [Attr1] callback MyCallback = void (DOMString a, long b);
 ");
-		}
+        }
 
-		[Test]
-		public void ExceptionWorks() {
-			AssertCorrect(
+        [Test]
+        public void ExceptionWorks()
+        {
+            AssertCorrect(
 @"exception Ex {
 	const long member1 = 10;
 	short member2;
@@ -309,11 +335,12 @@ interface I1 {
 	short member2;
 };
 ");
-		}
+        }
 
-		[Test]
-		public void RedefinitionOfExceptionIsAnError() {
-			AssertCorrect(
+        [Test]
+        public void RedefinitionOfExceptionIsAnError()
+        {
+            AssertCorrect(
 @"exception Ex { const long member1 = 10; };
 exception Ex { const long member1 = 10; };
 ",
@@ -323,11 +350,12 @@ exception Ex {
 	const long member1 = 10;
 };
 ");
-		}
+        }
 
-		[Test]
-		public void InheritingExceptionFromNonExistentOrNonExceptionTypeIsAnError() {
-			AssertCorrect(@"
+        [Test]
+        public void InheritingExceptionFromNonExistentOrNonExceptionTypeIsAnError()
+        {
+            AssertCorrect(@"
 interface I1 {};
 exception E1 : I1 {};
 exception E2 : NonExistent {};
@@ -341,21 +369,23 @@ exception E2 {
 };
 interface I1 {
 };");
-		}
+        }
 
-		[Test]
-		public void RedefinitionOfTypedefIsAnError() {
-			AssertCorrect(
+        [Test]
+        public void RedefinitionOfTypedefIsAnError()
+        {
+            AssertCorrect(
 @"typedef long MyType;
 typedef long MyType;
 ",
 @"error: Redefinition of typedef `MyType'
 ");
-		}
+        }
 
-		[Test]
-		public void InterfaceDeclarationDoesNothing() {
-			AssertCorrect(
+        [Test]
+        public void InterfaceDeclarationDoesNothing()
+        {
+            AssertCorrect(
 @"interface I1;
 interface I2;
 interface I2 {};
@@ -367,11 +397,12 @@ interface I3;
 interface I3 {
 };
 ");
-		}
+        }
 
-		[Test]
-		public void InterfaceDeclarationGivesAnErrorIfTypeIsRedefinedAsAnotherType() {
-			AssertCorrect(
+        [Test]
+        public void InterfaceDeclarationGivesAnErrorIfTypeIsRedefinedAsAnotherType()
+        {
+            AssertCorrect(
 @"interface T1;
 dictionary T1 {};
 dictionary T2 {};
@@ -383,30 +414,33 @@ error: Type `T2' was defined as dictionary but redefined as interface
 dictionary T2 {
 };
 ");
-		}
+        }
 
-		[Test]
-		public void EnumWorks() {
-			AssertCorrect(
+        [Test]
+        public void EnumWorks()
+        {
+            AssertCorrect(
 @"enum E1 { ""value1"", ""value2"", ""value3"" };",
 @"enum E1 { ""value1"", ""value2"", ""value3"" };
 ");
-		}
+        }
 
-		[Test]
-		public void RedefinitionOfEnumIsAnError() {
-			AssertCorrect(
+        [Test]
+        public void RedefinitionOfEnumIsAnError()
+        {
+            AssertCorrect(
 @"enum E1 { ""value1"", ""value2"", ""value3"" };
 enum E1 { ""value1"", ""value2"", ""value3"" };",
 @"error: Redefinition of enum `E1'
 
 enum E1 { ""value1"", ""value2"", ""value3"" };
 ");
-		}
+        }
 
-		[Test]
-		public void RedefinitionOfInterfaceAsDictionaryIsAnError() {
-			AssertCorrect(
+        [Test]
+        public void RedefinitionOfInterfaceAsDictionaryIsAnError()
+        {
+            AssertCorrect(
 @"interface T {};
 dictionary T {};
 ",
@@ -414,11 +448,12 @@ dictionary T {};
 
 interface T {
 };");
-		}
+        }
 
-		[Test]
-		public void ImplementsStatementWorks() {
-			AssertCorrect(
+        [Test]
+        public void ImplementsStatementWorks()
+        {
+            AssertCorrect(
 @"interface I1 {};
 interface I2 {};
 interface I4 {};
@@ -439,11 +474,12 @@ interface I4 {
 	implements I3;
 };
 ");
-		}
+        }
 
-		[Test]
-		public void TransitiveImplementsStatementsWork() {
-			AssertCorrect(@"
+        [Test]
+        public void TransitiveImplementsStatementsWork()
+        {
+            AssertCorrect(@"
 interface I1 {};
 interface I2 {};
 interface I3 {};
@@ -482,11 +518,12 @@ interface I6 {
 	implements I4;
 };
 ");
-		}
+        }
 
-		[Test]
-		public void ImplementsStatementsSpecifyingNonInterfacesGiveErrors() {
-			AssertCorrect(
+        [Test]
+        public void ImplementsStatementsSpecifyingNonInterfacesGiveErrors()
+        {
+            AssertCorrect(
 @"dictionary D1 {};
 dictionary D2 {};
 interface I1 {};
@@ -514,11 +551,12 @@ interface I2 {
 };
 
 ");
-		}
+        }
 
-		[Test]
-		public void CycleInImplementsGivesAnError() {
-			AssertCorrect(@"
+        [Test]
+        public void CycleInImplementsGivesAnError()
+        {
+            AssertCorrect(@"
 interface I1 {};
 interface I2 {};
 interface I3 {};
@@ -545,11 +583,12 @@ interface I4 {
 };
 
 ");
-		}
+        }
 
-		[Test]
-		public void UnionMembersAreFlattened() {
-			AssertCorrect(@"
+        [Test]
+        public void UnionMembersAreFlattened()
+        {
+            AssertCorrect(@"
 dictionary D {
 	(long or short or (Date or float)? or (DOMString or (long long or unsigned long long) or Object)) m1;
 	(long or (double or float)[] or short) m2;
@@ -559,11 +598,12 @@ dictionary D {
 	(long or short or Date or float or DOMString or long long or unsigned long long or Object)? m1;
 	(long or (double or float)[] or short) m2;
 };");
-		}
+        }
 
-		[Test]
-		public void UnionTypesWithAtLeastOneNullableMemberBecomesNullableUnion() {
-			AssertCorrect(@"
+        [Test]
+        public void UnionTypesWithAtLeastOneNullableMemberBecomesNullableUnion()
+        {
+            AssertCorrect(@"
 typedef short? T1;
 dictionary D {
 	(long or T1 or Date) m1;
@@ -578,11 +618,12 @@ dictionary D {
 	(long or double or short or Date or float)? m3;
 	(long or short or Date)? m4;
 };");
-		}
+        }
 
-		[Test]
-		public void TypedefsAreExpandedInCallbackInterfaces() {
-			AssertCorrect(
+        [Test]
+        public void TypedefsAreExpandedInCallbackInterfaces()
+        {
+            AssertCorrect(
 @"typedef [Attr1] long Type1;
 typedef [Attr2] long Type2;
 typedef [Attr3] long Type3;
@@ -604,11 +645,12 @@ typedef [Attr4] long Type4;
 	attribute long attr;
 };
 ");
-		}
+        }
 
-		[Test]
-		public void TypedefsAreExpandedInInterfaces() {
-			AssertCorrect(
+        [Test]
+        public void TypedefsAreExpandedInInterfaces()
+        {
+            AssertCorrect(
 @"typedef [Attr1] long Type1;
 typedef [Attr2] long Type2;
 typedef [Attr3] long Type3;
@@ -636,11 +678,12 @@ typedef [Attr4] long Type4;
 	getter long item([Attr11, Attr2] long index);
 };
 ");
-		}
+        }
 
-		[Test]
-		public void TypedefsAreExpandedInDictionaries() {
-			AssertCorrect(
+        [Test]
+        public void TypedefsAreExpandedInDictionaries()
+        {
+            AssertCorrect(
 @"typedef [Attr1] long Type1;
 typedef [Attr2] long Type2;
 typedef [Attr3] long Type3;
@@ -651,11 +694,12 @@ typedef [Attr3] long Type3;
 	[Attr6([Attr7, Attr2] long a), Attr3]
 	long c = 0;
 };");
-		}
+        }
 
-		[Test]
-		public void TypedefsAreExpandedInExceptions() {
-			AssertCorrect(
+        [Test]
+        public void TypedefsAreExpandedInExceptions()
+        {
+            AssertCorrect(
 @"typedef [Attr1] long Type1;
 typedef [Attr2] long Type2;
 typedef [Attr3] long Type3;
@@ -671,11 +715,12 @@ typedef [Attr4] long Type4;
 	long attr;
 };
 ");
-		}
+        }
 
-		[Test]
-		public void TypedefsAreExpandedInCallbacks() {
-			AssertCorrect(
+        [Test]
+        public void TypedefsAreExpandedInCallbacks()
+        {
+            AssertCorrect(
 @"typedef [Attr1] long Type1;
 typedef [Attr2] long Type2;
 typedef [Attr3] long Type3;
@@ -683,21 +728,23 @@ typedef [Attr4] long Type4;
 [Constructor([Attr5] Type1 t)] callback MyCallback = Type2 ([Attr6([Attr7] Type3 a)] Type4 x, [Attr8] Type2 y);",
 @"[Constructor([Attr5, Attr1] long t), Attr2] callback MyCallback = long ([Attr6([Attr7, Attr3] long a), Attr4] long x, [Attr8, Attr2] long y);
 ");
-		}
+        }
 
-		[Test]
-		public void TypedefsAreExpandedInEnums() {
-			AssertCorrect(
+        [Test]
+        public void TypedefsAreExpandedInEnums()
+        {
+            AssertCorrect(
 @"typedef [Attr1] long Type1;
 [Constructor([Attr5] Type1 t)] enum MyEnum { ""X"", ""Y"" };
 ",
 @"[Constructor([Attr5, Attr1] long t)] enum MyEnum { ""X"", ""Y"" };
 ");
-		}
+        }
 
-		[Test]
-		public void TypedefsAreExpandedInAllTypesOfExtendedAttributes() {
-			AssertCorrect(
+        [Test]
+        public void TypedefsAreExpandedInAllTypesOfExtendedAttributes()
+        {
+            AssertCorrect(
 @"typedef [Attr1] long Type1;
 typedef [Attr2] long Type2;
 [C1, C2([Attr5] Type1 x, [Attr6] Type2 y), C2=Ident([Attr5] Type1 x, [Attr6] Type2 y), C3=AB, C4=""XY""] interface I1 {};
@@ -705,11 +752,12 @@ typedef [Attr2] long Type2;
 @"[C1, C2([Attr5, Attr1] long x, [Attr6, Attr2] long y), C2=Ident([Attr5, Attr1] long x, [Attr6, Attr2] long y), C3=AB, C4=""XY""] interface I1 {
 };
 ");
-		}
+        }
 
-		[Test]
-		public void TypedefsAreExpandedInAllTypesOfArguments() {
-			AssertCorrect(
+        [Test]
+        public void TypedefsAreExpandedInAllTypesOfArguments()
+        {
+            AssertCorrect(
 @"typedef [Attr1] long Type1;
 typedef [Attr2] long Type2;
 interface I1 {
@@ -723,11 +771,12 @@ interface I1 {
 	void m2([Attr5, Attr1] optional long a, [Attr6, Attr2] optional long b = 10);
 	void m1([Attr5, Attr1] long a, [Attr6, Attr2] long... b);
 };");
-		}
+        }
 
-		[Test]
-		public void UseOfUndeclaredTypeIsAnErrorAndDeclaresTheSymbolAsAnInterface() {
-			AssertCorrect(
+        [Test]
+        public void UseOfUndeclaredTypeIsAnErrorAndDeclaresTheSymbolAsAnInterface()
+        {
+            AssertCorrect(
 @"interface I1 {
 	void m1(SomeType a);
 };
@@ -738,11 +787,12 @@ interface I1 {
 	void m1(SomeType a);
 };
 interface SomeType;");
-		}
+        }
 
-		[Test]
-		public void NestedTypedefsWork() {
-			AssertCorrect(@"
+        [Test]
+        public void NestedTypedefsWork()
+        {
+            AssertCorrect(@"
 typedef [Attr1] long Type1;
 typedef [Attr2] Type1 Type2;
 typedef [Attr3] Type2 Type3;
@@ -754,11 +804,12 @@ interface I1 {
 	[Attr4, Attr3, Attr2, Attr1]
 	attribute long x;
 };");
-		}
+        }
 
-		[Test]
-		public void AttributesArePreservedThroughNullables() {
-			AssertCorrect(@"
+        [Test]
+        public void AttributesArePreservedThroughNullables()
+        {
+            AssertCorrect(@"
 typedef [Attr1] long Type1;
 typedef [Attr2] Type1 Type2;
 interface I1 {
@@ -769,11 +820,12 @@ interface I1 {
 	[Attr3, Attr2, Attr1]
 	attribute long? x;
 };");
-		}
+        }
 
-		[Test]
-		public void NestedNullableIsOnlyNullableOnce() {
-			AssertCorrect(@"
+        [Test]
+        public void NestedNullableIsOnlyNullableOnce()
+        {
+            AssertCorrect(@"
 typedef [Attr1] long? Type1;
 typedef [Attr2] Type1? Type2;
 typedef [Attr3] Type1 Type3;
@@ -815,11 +867,12 @@ interface I1 {
 	attribute long? x10;
 };
 ");
-		}
+        }
 
-		[Test]
-		public void UnionTypeResolveWorks() {
-			AssertCorrect(@"
+        [Test]
+        public void UnionTypeResolveWorks()
+        {
+            AssertCorrect(@"
 typedef [Attr1] long Type1;
 typedef [Attr2] short Type2;
 typedef [Attr3] Object Type3;
@@ -831,11 +884,12 @@ interface I1 {
 	[Attr5]
 	attribute (long or short or Object) a1;
 };");
-		}
+        }
 
-		[Test]
-		public void BuiltinTypeResolveWorks() {
-			AssertCorrect(@"
+        [Test]
+        public void BuiltinTypeResolveWorks()
+        {
+            AssertCorrect(@"
 interface I1 {
 	[Attr5] attribute long a1;
 	[Attr6] attribute short a2;
@@ -847,11 +901,12 @@ interface I1 {
 	[Attr6]
 	attribute short a2;
 };");
-		}
+        }
 
-		[Test]
-		public void VoidTypeResolveWorks() {
-			AssertCorrect(@"
+        [Test]
+        public void VoidTypeResolveWorks()
+        {
+            AssertCorrect(@"
 interface I1 {
 	[Attr5] void m();
 };
@@ -860,11 +915,12 @@ interface I1 {
 	[Attr5]
 	void m();
 };");
-		}
+        }
 
-		[Test]
-		public void ArrayTypeResolveWorks() {
-			AssertCorrect(@"
+        [Test]
+        public void ArrayTypeResolveWorks()
+        {
+            AssertCorrect(@"
 typedef [Attr1] long[] Type1;
 typedef [Attr2] Type1[] Type2;
 interface I1 {
@@ -887,11 +943,12 @@ interface I1 {
 	[AttrE]
 	attribute long[][][] a5;
 };");
-		}
+        }
 
-		[Test]
-		public void SequenceTypeResolveWorks() {
-			AssertCorrect(@"
+        [Test]
+        public void SequenceTypeResolveWorks()
+        {
+            AssertCorrect(@"
 typedef [Attr1] sequence<long> Type1;
 typedef [Attr2] sequence<Type1> Type2;
 interface I1 {
@@ -914,11 +971,12 @@ interface I1 {
 	[AttrE]
 	attribute sequence<sequence<sequence<long>>> a5;
 };");
-		}
+        }
 
-		[Test]
-		public void DeclaredInterfaceAppearsInModelIfAndOnlyIfItIsUsed() {
-			AssertCorrect(@"
+        [Test]
+        public void DeclaredInterfaceAppearsInModelIfAndOnlyIfItIsUsed()
+        {
+            AssertCorrect(@"
 interface I1;
 interface I2;
 interface I3 {
@@ -929,6 +987,6 @@ interface I3 {
 interface I3 {
 	attribute I1 a;
 };");
-		}
-	}
+        }
+    }
 }
