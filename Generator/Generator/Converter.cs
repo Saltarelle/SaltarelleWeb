@@ -309,36 +309,39 @@ namespace Generator
             _metadata = metadata;
         }
 
-        private static Attribute IntrinsicPropertyAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.IntrinsicProperty") }; } }
+        private static Attribute FieldPropertyAttribute { get { return new Attribute { Type = MakeType("Bridge.FieldProperty") }; } }
 
-        private static Attribute EnumerateAsArrayAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.EnumerateAsArray") }; } }
+        private static Attribute EnumerateAsArrayAttribute { get { return new Attribute { Type = MakeType("Bridge.EnumerateAsArray") }; } }
 
-        private static Attribute IgnoreNamespaceAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.IgnoreNamespace") }; } }
+        private static Attribute IgnoreNamespaceAttribute { get { return new Attribute { Type = MakeType("Bridge.Namespace"), Arguments = { new PrimitiveExpression("false") } }; } }
 
-        private static Attribute NamedValuesAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.NamedValues") }; } }
-
-        private static Attribute SerializableAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.Serializable") }; } }
-
-        private static Attribute GlobalMethodsAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.GlobalMethods") }; } }
-
-        private static Attribute FlagsAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.Flags") }; } }
-
-        private static Attribute ExpandParamsAttribute { get { return new Attribute { Type = MakeType("System.Runtime.CompilerServices.ExpandParams") }; } }
-
-        private static Attribute InlineCodeAttribute(string code)
+        private static Attribute NamedValuesAttribute
         {
-            return new Attribute { Type = MakeType("System.Runtime.CompilerServices.InlineCode"), Arguments = { new PrimitiveExpression("\"" + code + "\"", "\"" + code + "\"") } };
+            get { return new Attribute { Type = MakeType("Bridge.Enum"), Arguments = { new MemberReferenceExpression(new IdentifierExpression("Emit"), "StringNamePreserveCase") } }; }
         }
 
-        private Attribute ScriptNameAttribute(string name)
+        private static Attribute SerializableAttribute { get { return new Attribute { Type = MakeType("Bridge.Serializable") }; } }
+
+        private static Attribute GlobalMethodsAttribute { get { return new Attribute { Type = MakeType("Bridge.GlobalMethods") }; } }
+
+        private static Attribute FlagsAttribute { get { return new Attribute { Type = MakeType("Bridge.Flags") }; } }
+
+        private static Attribute ExpandParamsAttribute { get { return new Attribute { Type = MakeType("Bridge.ExpandParams") }; } }
+
+        private static Attribute TemplateAttribute(string code)
         {
-            return new Attribute { Type = MakeType("System.Runtime.CompilerServices.ScriptName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
+            return new Attribute { Type = MakeType("Bridge.Template"), Arguments = { new PrimitiveExpression("\"" + code + "\"", "\"" + code + "\"") } };
         }
 
-        private IEnumerable<Attribute> ScriptNameAttributeIfRequired(string csharpName, string name)
+        private Attribute NameAttribute(string name)
+        {
+            return new Attribute { Type = MakeType("Bridge.Name"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
+        }
+
+        private IEnumerable<Attribute> NameAttributeIfRequired(string csharpName, string name)
         {
             if (csharpName.MakeCamelCase() != name)
-                yield return ScriptNameAttribute(name);
+                yield return NameAttribute(name);
         }
 
         private IEnumerable<Attribute> ExpandParamsIfRequired(IEnumerable<ParameterDeclaration> parameters)
@@ -347,9 +350,9 @@ namespace Generator
                 yield return ExpandParamsAttribute;
         }
 
-        private static Attribute ImportedAttribute(bool obeysTypeSystem, string typeCheckCode = null)
+        private static Attribute ExternalAttribute(bool obeysTypeSystem, string typeCheckCode = null)
         {
-            var result = new Attribute { Type = MakeType("System.Runtime.CompilerServices.Imported") };
+            var result = new Attribute { Type = MakeType("Bridge.External") };
             if (obeysTypeSystem)
                 result.Arguments.Add(new NamedExpression("ObeysTypeSystem", new PrimitiveExpression(true, "true")));
             if (typeCheckCode != null)
@@ -359,7 +362,7 @@ namespace Generator
 
         private static Attribute IndexerNameAttribute(string name)
         {
-            return new Attribute { Type = MakeType("System.Runtime.CompilerServices.IndexerName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
+            return new Attribute { Type = MakeType("Bridge.IndexerName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
         }
 
         private static string GetUnqualifiedTypeName(AstType type)
@@ -723,7 +726,7 @@ namespace Generator
                         hasParameterlessCtor = true;
                     var ctor = new ConstructorDeclaration { Modifiers = Modifiers.Public, Body = new BlockStatement() };
                     ctor.Parameters.AddRange(sig);
-                    AddAttribute(ctor.Attributes, InlineCodeAttribute("new " + c.Item1 + MakeInlineCodeParameterList(sig)));
+                    AddAttribute(ctor.Attributes, TemplateAttribute("new " + c.Item1 + MakeInlineCodeParameterList(sig)));
                     members.Add(ctor);
                 }
             }
@@ -798,8 +801,8 @@ namespace Generator
                                         ReturnType = returnType,
                                         Getter = new Accessor() { Body = addAsInterfaceMembers ? null : GenerateBody(returnType) }
                                     };
-                                    AddAttribute(p.Attributes, IntrinsicPropertyAttribute);
-                                    AddAttributes(p.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+                                    AddAttribute(p.Attributes, FieldPropertyAttribute);
+                                    AddAttributes(p.Attributes, NameAttributeIfRequired(csharpName, name));
                                     members.Add(p);
                                 }
                                 else
@@ -810,7 +813,7 @@ namespace Generator
                                         Variables = { new VariableInitializer { Name = csharpName, Initializer = ConvertValue(@const.Value) } },
                                         ReturnType = returnType
                                     };
-                                    AddAttributes(f.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+                                    AddAttributes(f.Attributes, NameAttributeIfRequired(csharpName, name));
                                     members.Add(f);
                                 }
                             }
@@ -839,7 +842,7 @@ namespace Generator
                                         ReturnType = returnType,
                                         Body = addAsInterfaceMembers ? null : GenerateBody(returnType)
                                     };
-                                    AddAttributes(m.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+                                    AddAttributes(m.Attributes, NameAttributeIfRequired(csharpName, name));
                                     AddAttributes(m.Attributes, ExpandParamsIfRequired(sig));
                                     m.Parameters.AddRange(sig);
                                     members.Add(m);
@@ -860,7 +863,7 @@ namespace Generator
                                             ReturnType = returnType,
                                             Body = addAsInterfaceMembers ? null : GenerateBody(returnType)
                                         };
-                                        AddAttribute(m.Attributes, InlineCodeAttribute("{this}" + MakeInlineCodeParameterList(sig)));
+                                        AddAttribute(m.Attributes, TemplateAttribute("{this}" + MakeInlineCodeParameterList(sig)));
                                         m.Parameters.AddRange(sig);
                                         members.Add(m);
                                     }
@@ -947,7 +950,7 @@ namespace Generator
                                         Parameters = { new ParameterDeclaration(indexType, indexName) },
                                         Body = addAsInterfaceMembers ? null : new BlockStatement()
                                     };
-                                    AddAttribute(m.Attributes, InlineCodeAttribute("delete {this}[{" + indexName + "}]"));
+                                    AddAttribute(m.Attributes, TemplateAttribute("delete {this}[{" + indexName + "}]"));
                                     members.Add(m);
                                 }
 
@@ -975,8 +978,8 @@ namespace Generator
                                 Setter = (attribute.Qualifiers & AttributeQualifiers.ReadOnly) != 0 ? Accessor.Null : new Accessor { Body = addAsInterfaceMembers ? null : new BlockStatement() },
                             };
 
-                            AddAttribute(p.Attributes, IntrinsicPropertyAttribute);
-                            AddAttributes(p.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+                            AddAttribute(p.Attributes, FieldPropertyAttribute);
+                            AddAttributes(p.Attributes, NameAttributeIfRequired(csharpName, name));
                             members.Add(p);
                         }
                     },
@@ -1001,7 +1004,7 @@ namespace Generator
                     Setter = p.CanWrite ? new Accessor { Body = addAsInterfaceMembers ? null : new BlockStatement() } : null,
                 };
                 AddAttribute(i.Attributes, IndexerNameAttribute("__Item"));
-                AddAttribute(i.Attributes, IntrinsicPropertyAttribute);
+                AddAttribute(i.Attributes, FieldPropertyAttribute);
                 members.Add(i);
             }
 
@@ -1016,7 +1019,7 @@ namespace Generator
                     Body = new BlockStatement { Statements = { new ReturnStatement(new NullReferenceExpression()) } }
                 };
                 AddAttribute(m.Attributes, EnumerateAsArrayAttribute);
-                AddAttribute(m.Attributes, InlineCodeAttribute("new {$System.ArrayEnumerator}({this})"));
+                AddAttribute(m.Attributes, TemplateAttribute("new {$System.ArrayEnumerator}({this})"));
                 members.Add(m);
             }
         }
@@ -1039,7 +1042,7 @@ namespace Generator
                         Getter = new Accessor(),
                         Setter = new Accessor(),
                     };
-                    AddAttributes(p.Attributes, ScriptNameAttributeIfRequired(csharpName, name));
+                    AddAttributes(p.Attributes, NameAttributeIfRequired(csharpName, name));
                     members.Add(p);
                 }
             }
@@ -1106,12 +1109,12 @@ namespace Generator
                         if (meta.TagNames.Count > 0)
                         {
                             string typeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && " + (meta.TagNames.Count > 1 ? "(" : "") + string.Join(" || ", meta.TagNames.Select(t => "{this}.tagName === '" + t.ToUpperInvariant() + "'")) + (meta.TagNames.Count > 1 ? ")" : "");
-                            attributes.Add(ImportedAttribute(false, typeCheckCode));
+                            attributes.Add(ExternalAttribute(false, typeCheckCode));
                             scriptName = "Element";
                         }
                         else
                         {
-                            attributes.Add(ImportedAttribute(meta.TypeKind != TypeKind.Interface));
+                            attributes.Add(ExternalAttribute(meta.TypeKind != TypeKind.Interface));
                             scriptName = GetClosestInterfaceObjectName(type);
                         }
 
@@ -1151,7 +1154,7 @@ namespace Generator
                             .Where(x => x != null);
 
                         if (meta.TypeKind == TypeKind.Default && meta.CSharpName != scriptName)
-                            attributes.Add(ScriptNameAttribute(scriptName));
+                            attributes.Add(NameAttribute(scriptName));
                         if (addInsertedMembersFromBaseTypes)
                             AddMembersFromBaseTypes(meta.Namespace + "." + meta.CSharpName, GetMembersToAddFromBaseTypes(new[] { @interface.Base }.Concat(@interface.Implements)), members);
 
@@ -1198,7 +1201,7 @@ namespace Generator
                         };
                         resultType.BaseTypes.AddRange(baseTypes);
                         resultType.Members.AddRange(members.OrderBy(MemberOrderer));
-                        AddAttribute(resultType.Attributes, ImportedAttribute(false));
+                        AddAttribute(resultType.Attributes, ExternalAttribute(false));
                         result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
                     }
                 },
@@ -1233,7 +1236,7 @@ namespace Generator
                         };
                         resultType.BaseTypes.AddRange(baseTypes);
                         resultType.Members.AddRange(members.OrderBy(MemberOrderer));
-                        AddAttribute(resultType.Attributes, ImportedAttribute(false));
+                        AddAttribute(resultType.Attributes, ExternalAttribute(false));
                         AddAttribute(resultType.Attributes, SerializableAttribute);
                         result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
                     }
@@ -1303,10 +1306,10 @@ namespace Generator
                                                    {
                                                        string csharpName = GetOrDefaultString(meta.Renames, v, v.MakeCSharpName());
                                                        var e = new EnumMemberDeclaration { Name = csharpName };
-                                                       AddAttributes(e.Attributes, ScriptNameAttributeIfRequired(csharpName, v));
+                                                       AddAttributes(e.Attributes, NameAttributeIfRequired(csharpName, v));
                                                        return e;
                                                    }));
-                    AddAttribute(t.Attributes, ImportedAttribute(false));
+                    AddAttribute(t.Attributes, ExternalAttribute(false));
                     AddAttribute(t.Attributes, NamedValuesAttribute);
                     result = new NamespacedEntityDeclaration(meta.Namespace, t);
                 },
@@ -1391,7 +1394,7 @@ namespace Generator
                             }
 
                             var enm = new EnumMemberDeclaration { Name = name };
-                            AddAttributes(enm.Attributes, ScriptNameAttributeIfRequired(name, value.Groups[1].Value));
+                            AddAttributes(enm.Attributes, NameAttributeIfRequired(name, value.Groups[1].Value));
                             enumMembers.Add(enm);
                         }
                     },
@@ -1399,7 +1402,7 @@ namespace Generator
                 );
             }
 
-            var attributes = new List<Attribute> { ImportedAttribute(false) };
+            var attributes = new List<Attribute> { ExternalAttribute(false) };
             if (flags)
                 attributes.Add(FlagsAttribute);
             if (type == GeneratedEnumSourceType.Attributes)
@@ -1553,9 +1556,9 @@ namespace Generator
                 members.RemoveAll(m => meta.Removes.Contains(m.Name));
                 c.Members.AddRange(members.OrderBy(MemberOrderer));
                 if (meta.GlobalMethods)
-                    AddAttributes(c.Attributes, new[] { ImportedAttribute(false), GlobalMethodsAttribute });
+                    AddAttributes(c.Attributes, new[] { ExternalAttribute(false), GlobalMethodsAttribute });
                 else
-                    AddAttributes(c.Attributes, new[] { IgnoreNamespaceAttribute, ImportedAttribute(false), ScriptNameAttribute(meta.InstanceName) });
+                    AddAttributes(c.Attributes, new[] { IgnoreNamespaceAttribute, ExternalAttribute(false), NameAttribute(meta.InstanceName) });
 
                 _result.Add(new NamespacedEntityDeclaration(meta.ClassNamespace, c));
             }
