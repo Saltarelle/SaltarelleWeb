@@ -539,43 +539,43 @@ namespace Generator
             );
         }
 
-        private static BlockStatement GenerateBody(AstType returnType)
-        {
-            Expression returnExpr;
-            var pt = returnType as PrimitiveType;
-            if (pt != null)
-            {
-                if (pt.KnownTypeCode == KnownTypeCode.Void)
-                    return new BlockStatement();
+        //private static BlockStatement GenerateBody(AstType returnType)
+        //{
+        //    Expression returnExpr;
+        //    var pt = returnType as PrimitiveType;
+        //    if (pt != null)
+        //    {
+        //        if (pt.KnownTypeCode == KnownTypeCode.Void)
+        //            return new BlockStatement();
 
-                switch (pt.KnownTypeCode)
-                {
-                    case KnownTypeCode.String:
-                    case KnownTypeCode.Object:
-                        returnExpr = new NullReferenceExpression();
-                        break;
-                    case KnownTypeCode.Char:
-                        returnExpr = new PrimitiveExpression('\0', "\\0");
-                        break;
-                    case KnownTypeCode.Boolean:
-                        returnExpr = new PrimitiveExpression(false, "false");
-                        break;
-                    default:
-                        returnExpr = new PrimitiveExpression(0, "0");
-                        break;
-                }
-            }
-            else if (returnType is ComposedType)
-            {
-                returnExpr = new NullReferenceExpression();
-            }
-            else
-            {
-                returnExpr = new DefaultValueExpression(returnType.Clone());
-            }
+        //        switch (pt.KnownTypeCode)
+        //        {
+        //            case KnownTypeCode.String:
+        //            case KnownTypeCode.Object:
+        //                returnExpr = new NullReferenceExpression();
+        //                break;
+        //            case KnownTypeCode.Char:
+        //                returnExpr = new PrimitiveExpression('\0', "\\0");
+        //                break;
+        //            case KnownTypeCode.Boolean:
+        //                returnExpr = new PrimitiveExpression(false, "false");
+        //                break;
+        //            default:
+        //                returnExpr = new PrimitiveExpression(0, "0");
+        //                break;
+        //        }
+        //    }
+        //    else if (returnType is ComposedType)
+        //    {
+        //        returnExpr = new NullReferenceExpression();
+        //    }
+        //    else
+        //    {
+        //        returnExpr = new DefaultValueExpression(returnType.Clone());
+        //    }
 
-            return new BlockStatement { Statements = { new ReturnStatement(returnExpr) } };
-        }
+        //    return new BlockStatement { Statements = { new ReturnStatement(returnExpr) } };
+        //}
 
         private IList<IReadOnlyList<ParameterDeclaration>> GetParameterLists(IEnumerable<Argument> arguments, Dictionary<string, AstType> typeOverrides, bool includePartialSignatures)
         {
@@ -712,7 +712,7 @@ namespace Generator
                 {
                     if (sig.Count == 0)
                         hasParameterlessCtor = true;
-                    var ctor = new ConstructorDeclaration { Modifiers = Modifiers.Public, Body = new BlockStatement() };
+                    var ctor = new ConstructorDeclaration { Modifiers = Modifiers.Public | Modifiers.Extern };
                     ctor.Parameters.AddRange(sig);
                     AddAttributes(ctor.Attributes, ExpandParamsIfRequired(sig));
                     members.Add(ctor);
@@ -724,7 +724,7 @@ namespace Generator
                 {
                     if (sig.Count == 0)
                         hasParameterlessCtor = true;
-                    var ctor = new ConstructorDeclaration { Modifiers = Modifiers.Public, Body = new BlockStatement() };
+                    var ctor = new ConstructorDeclaration { Modifiers = Modifiers.Public | Modifiers.Extern };
                     ctor.Parameters.AddRange(sig);
                     AddAttribute(ctor.Attributes, TemplateAttribute("new " + c.Item1 + MakeInlineCodeParameterList(sig)));
                     members.Add(ctor);
@@ -732,7 +732,7 @@ namespace Generator
             }
             if (!hasParameterlessCtor)
             {
-                members.Add(new ConstructorDeclaration { Modifiers = Modifiers.Internal, Body = new BlockStatement() });
+                members.Add(new ConstructorDeclaration { Modifiers = Modifiers.Internal | Modifiers.Extern });
             }
         }
 
@@ -796,10 +796,10 @@ namespace Generator
                                 {
                                     var p = new PropertyDeclaration
                                     {
-                                        Modifiers = @public,
+                                        Modifiers = @public | Modifiers.Extern,
                                         Name = csharpName,
                                         ReturnType = returnType,
-                                        Getter = new Accessor() { Body = addAsInterfaceMembers ? null : GenerateBody(returnType) }
+                                        Getter = new Accessor() { Body = null }
                                     };
                                     AddAttribute(p.Attributes, FieldPropertyAttribute);
                                     AddAttributes(p.Attributes, NameAttributeIfRequired(csharpName, name));
@@ -837,10 +837,12 @@ namespace Generator
                                     var returnType = type.Clone();
                                     var m = new MethodDeclaration
                                     {
-                                        Modifiers = @public | ((operation.Qualifiers & OperationQualifiers.Static) != 0 ? Modifiers.Static : 0),
+                                        Modifiers = @public
+                                                    | ((operation.Qualifiers & OperationQualifiers.Static) != 0 ? Modifiers.Static : 0)
+                                                    | Modifiers.Extern,
                                         Name = csharpName,
                                         ReturnType = returnType,
-                                        Body = addAsInterfaceMembers ? null : GenerateBody(returnType)
+                                        Body = null
                                     };
                                     AddAttributes(m.Attributes, NameAttributeIfRequired(csharpName, name));
                                     AddAttributes(m.Attributes, ExpandParamsIfRequired(sig));
@@ -858,10 +860,12 @@ namespace Generator
                                         var returnType = type.Clone();
                                         var m = new MethodDeclaration
                                         {
-                                            Modifiers = @public | ((operation.Qualifiers & OperationQualifiers.Static) != 0 ? Modifiers.Static : 0),
+                                            Modifiers = @public
+                                                        | ((operation.Qualifiers & OperationQualifiers.Static) != 0 ? Modifiers.Static : 0)
+                                                        | Modifiers.Extern,
                                             Name = "Call",
                                             ReturnType = returnType,
-                                            Body = addAsInterfaceMembers ? null : GenerateBody(returnType)
+                                            Body = null
                                         };
                                         AddAttribute(m.Attributes, TemplateAttribute("{this}" + MakeInlineCodeParameterList(sig)));
                                         m.Parameters.AddRange(sig);
@@ -944,11 +948,11 @@ namespace Generator
                                     var indexType = GetOrDefaultAstType(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
                                     var m = new MethodDeclaration
                                     {
-                                        Modifiers = @public,
+                                        Modifiers = @public | Modifiers.Extern,
                                         Name = "Delete",
                                         ReturnType = new PrimitiveType("void"),
                                         Parameters = { new ParameterDeclaration(indexType, indexName) },
-                                        Body = addAsInterfaceMembers ? null : new BlockStatement()
+                                        Body = null
                                     };
                                     AddAttribute(m.Attributes, TemplateAttribute("delete {this}[{" + indexName + "}]"));
                                     members.Add(m);
@@ -971,11 +975,13 @@ namespace Generator
                             var attrType = GetOrDefaultAstType(typeOverrides, name, ConvertType(attribute.Type));
                             var p = new PropertyDeclaration
                             {
-                                Modifiers = @public | ((attribute.Qualifiers & AttributeQualifiers.Static) != 0 ? Modifiers.Static : 0),
+                                Modifiers = @public
+                                        | ((attribute.Qualifiers & AttributeQualifiers.Static) != 0 ? Modifiers.Static : 0)
+                                        | Modifiers.Extern,
                                 Name = csharpName,
                                 ReturnType = attrType,
-                                Getter = new Accessor { Body = addAsInterfaceMembers ? null : GenerateBody(attrType) },
-                                Setter = (attribute.Qualifiers & AttributeQualifiers.ReadOnly) != 0 ? Accessor.Null : new Accessor { Body = addAsInterfaceMembers ? null : new BlockStatement() },
+                                Getter = new Accessor { Body = null },
+                                Setter = (attribute.Qualifiers & AttributeQualifiers.ReadOnly) != 0 ? Accessor.Null : new Accessor { Body = null },
                             };
 
                             AddAttribute(p.Attributes, FieldPropertyAttribute);
@@ -1000,8 +1006,8 @@ namespace Generator
                     Modifiers = Modifiers.Public,
                     ReturnType = propertyType,
                     Parameters = { new ParameterDeclaration(p.IndexParameterType, p.IndexParameterNames[0]) },
-                    Getter = p.CanRead ? new Accessor { Body = addAsInterfaceMembers ? null : GenerateBody(propertyType) } : null,
-                    Setter = p.CanWrite ? new Accessor { Body = addAsInterfaceMembers ? null : new BlockStatement() } : null,
+                    Getter = p.CanRead ? new Accessor { Body = null } : null,
+                    Setter = p.CanWrite ? new Accessor { Body = null } : null,
                 };
                 AddAttribute(i.Attributes, IndexerNameAttribute("__Item"));
                 AddAttribute(i.Attributes, FieldPropertyAttribute);
@@ -1013,10 +1019,10 @@ namespace Generator
                 var arrayType = MakeTypeOptionIfRequired(enumerateAsArrayCandidates);
                 var m = new MethodDeclaration
                 {
-                    Modifiers = Modifiers.Public,
+                    Modifiers = Modifiers.Public | Modifiers.Extern,
                     Name = "GetEnumerator",
                     ReturnType = MakeType("System.Collections.Generic.IEnumerator", new[] { arrayType.Clone() }),
-                    Body = new BlockStatement { Statements = { new ReturnStatement(new NullReferenceExpression()) } }
+                    //Body = new BlockStatement { Statements = { new ReturnStatement(new NullReferenceExpression()) } }
                 };
                 AddAttribute(m.Attributes, EnumerateAsArrayAttribute);
                 AddAttribute(m.Attributes, TemplateAttribute("new {$System.ArrayEnumerator}({this})"));
@@ -1036,7 +1042,7 @@ namespace Generator
                     var type = GetOrDefaultAstType(typeOverrides, name, ConvertType(sourceMember.Type));
                     var p = new PropertyDeclaration
                     {
-                        Modifiers = Modifiers.Public,
+                        Modifiers = Modifiers.Public | Modifiers.Extern,
                         Name = csharpName,
                         ReturnType = type,
                         Getter = new Accessor(),
@@ -1076,11 +1082,11 @@ namespace Generator
             foreach (var s in toAdd)
             {
                 var ast = new CSharpParser().ParseTypeMembers(s.Replace("$type$", currentTypeName)).Single();
-                ast.Modifiers |= Modifiers.Public;
-                if (ast is MethodDeclaration)
-                {
-                    ((MethodDeclaration)ast).Body = GenerateBody(((MethodDeclaration)ast).ReturnType);
-                }
+                ast.Modifiers |= Modifiers.Public | Modifiers.Extern;
+                //if (ast is MethodDeclaration)
+                //{
+                //    ((MethodDeclaration)ast).Body = GenerateBody(((MethodDeclaration)ast).ReturnType);
+                //}
                 members.Add(ast);
             }
         }
