@@ -2907,7 +2907,7 @@ SVGZoomAndPan
 SVGZoomEvent
 	namespace = Bridge.Html5.Media.Graphics.SVG
 
-SystemMessageCallback
+systemMessageCallback
 	alias = System.Action<object>
 	nogenerate
 
