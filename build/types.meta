@@ -8,22 +8,22 @@ ActivityRequestHandler
 	nogenerate
 
 AlignSetting
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 AllowedDropEffect
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 AnalyserNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AnimationEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 AnimationEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 AnyCallback
-	namespace = System
+	namespace = Bridge.Html5
 	name = Delegate
 	nogenerate
 
@@ -34,8 +34,8 @@ AppNotificationServiceOptions
 	nogenerate
 
 ApplicationCache
-	namespace = System.Data.Offline
-	typeOverride status = System.Data.Offline.ApplicationCacheStatus
+	namespace = Bridge.Html5.Data.Offline
+	typeOverride status = Bridge.Html5.Data.Offline.ApplicationCacheStatus
 	generateEnum ApplicationCacheStatus constants "(.+)"
 
 ArchiveReader
@@ -48,90 +48,90 @@ ArchiveRequest
 	nogenerate
 
 ArrayBuffer
-	namespace = System.Collections.TypedArrays
+	namespace = Bridge.Html5.Collections.TypedArrays
 	nogenerate
 
 ArrayBufferView
-	namespace = System.Collections.TypedArrays
+	namespace = Bridge.Html5.Collections.TypedArrays
 	nogenerate
 
 AsyncScrollEventDetail
 	nogenerate
 
 Attr
-	namespace = System.Xml
-	typeOverride ownerElement = System.Xml.XmlElement
+	namespace = Bridge.Html5.Xml
+	typeOverride ownerElement = Bridge.Html5.Xml.XmlElement
 	name = XmlAttribute
 
 AudioBuffer
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AudioChannel
 	nogenerate
 
 AudioBufferSourceNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AudioChannelManager
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AudioContext
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 	noconstructors
 
 AudioDestinationNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AudioListener
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AudioNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AudioParam
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AudioProcessingEvent
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AudioStreamTrack
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 AutoKeyword
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 BarProp
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 BatteryManager
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 BeforeUnloadEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 BinaryType
-	namespace = System.Net.WebSockets
+	namespace = Bridge.Html5.Net.WebSockets
 
 BiquadFilterNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 BiquadFilterType
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 Blob
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 BlobEvent
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 BlobEventInit
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 BlobPropertyBag
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 BoxQuadOptions
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 ByteString
 	alias = string
@@ -216,33 +216,33 @@ CameraTakePictureCallback
 	nogenerate
 
 CanvasDrawingStyles
-	typeOverride lineCap = System.Html.Media.Graphics.LineCap
-	typeOverride lineJoin = System.Html.Media.Graphics.LineJoin
-	typeOverride textAlign = System.Html.Media.Graphics.TextAlign
-	typeOverride textBaseline = System.Html.Media.Graphics.TextBaseline
+	typeOverride lineCap = Bridge.Html5.Media.Graphics.LineCap
+	typeOverride lineJoin = Bridge.Html5.Media.Graphics.LineJoin
+	typeOverride textAlign = Bridge.Html5.Media.Graphics.TextAlign
+	typeOverride textBaseline = Bridge.Html5.Media.Graphics.TextBaseline
 	mixin
 
 CanvasGradient
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 CanvasPathMethods
 	mixin
 
 CanvasPattern
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 CanvasRenderingContext2D
-	namespace = System.Html.Media.Graphics
-	typeOverride globalCompositeOperation = System.Html.Media.Graphics.CompositeOperation
+	namespace = Bridge.Html5.Media.Graphics
+	typeOverride globalCompositeOperation = Bridge.Html5.Media.Graphics.CompositeOperation
 
 CanvasWindingRule
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 CaretPosition
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CDATASection
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlCDataSection
 
 CFStateChangeEvent
@@ -252,19 +252,19 @@ CFStateChangeEventInit
 	nogenerate
 
 ChannelCountMode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 ChannelInterpretation
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 ChannelMergerNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 ChannelSplitterNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 CharacterData
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlCharacterData
 
 ChildNode
@@ -277,22 +277,22 @@ ChromeWorker
 	nogenerate
 
 ClipboardEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 ClipboardEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CloseEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CloseEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CommandEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 Comment
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlComment
 
 CompositionClauseParameters
@@ -302,7 +302,7 @@ CompositionClauseSelectionType
 	nogenerate
 
 CompositionEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 ConnStatusDict
 	nogenerate
@@ -356,68 +356,68 @@ ContactManager
 	nogenerate
 
 ContextAttributes2D
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 ConvertCoordinateOptions
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 ConvolverNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 Coordinates
-	namespace = System.Html.Geolocation
+	namespace = Bridge.Html5.Geolocation
 
 Counter
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 Crypto
-	namespace = System.Security.Cryptography
+	namespace = Bridge.Html5.Security.Cryptography
 
 CSS
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CSS2Properties
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = Style
 	ScriptName = CSSStyleDeclaration
 
 CSSBoxType
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CSSPrimitiveValue
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CSSRule
-	namespace = System.Html
-	typeOverride type = System.Html.CSSRuleType
+	namespace = Bridge.Html5
+	typeOverride type = Bridge.Html5.CSSRuleType
 	generateEnum CSSRuleType constants "(.+)_RULE"
 
 CSSRuleList
-	alias = System.Html.CSSRule[]
+	alias = Bridge.Html5.CSSRule[]
 	nogenerate
 
 CSSStyleDeclaration
-	alias = System.Html.Style
+	alias = Bridge.Html5.Style
 	mixin
 	nogenerate
 
 CSSStyleSheet
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CSSValue
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CSSValueList
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CustomEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 CustomEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DataChannel
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 	name = RTCDataChannel
 
 DataContainerEvent
@@ -448,30 +448,30 @@ DataStoreTask
 	nogenerate
 
 DataTransfer
-	namespace = System.Html
-	typeOverride effectAllowed = System.Html.AllowedDropEffect
-	typeOverride dropEffect = System.Html.DropEffect
+	namespace = Bridge.Html5
+	typeOverride effectAllowed = Bridge.Html5.AllowedDropEffect
+	typeOverride dropEffect = Bridge.Html5.DropEffect
 
 DataTransferItem
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DataTransferItemKind
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DataTransferItemList
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DecodeErrorCallback
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 DecodeSuccessCallback
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 DedicatedWorkerGlobalScope
 	nogenerate
 
 DelayNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 DesktopNotification
 	nogenerate
@@ -480,40 +480,40 @@ DesktopNotificationCenter
 	nogenerate
 
 DeviceAcceleration
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceAccelerationInit
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceLightEvent
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceLightEventInit
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceMotionEvent
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceMotionEventInit
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceOrientationEvent
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceOrientationEventInit
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceProximityEvent
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceProximityEventInit
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceRotationRate
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceRotationRateInit
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 DeviceStorage
 	nogenerate
@@ -528,13 +528,13 @@ DeviceStorageEnumerationParameters
 	nogenerate
 
 DirectionSetting
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 Directory
 	nogenerate
 
 DistanceModelType
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 DNSCacheDict
 	nogenerate
@@ -546,36 +546,36 @@ DNSLookupDict
 	nogenerate
 
 Document
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = DocumentBase
 	remove getAnonymousElementByAttribute
 	remove getAnonymousNodes
 	remove getBindingParent
 	remove loadBindingDocument
-	typeOverride whatToShow = System.Xml.NodeFilter
-	typeOverride activeElement = System.Xml.XmlElement
-	typeOverride createElement = System.Xml.XmlElement
-	typeOverride createElementNS = System.Xml.XmlElement
-	typeOverride currentScript = System.Xml.XmlElement
-	typeOverride documentElement = System.Xml.XmlElement
-	typeOverride elementFromPoint = System.Xml.XmlElement
-	typeOverride getElementById = System.Xml.XmlElement
-	typeOverride querySelector = System.Xml.XmlElement
-	typeOverride elt = System.Xml.XmlElement
-	typeOverride getElementsByClassName = System.Xml.XmlElementCollection
-	typeOverride getElementsByTagName = System.Xml.XmlElementCollection
-	typeOverride getElementsByTagNameNS = System.Xml.XmlElementCollection
+	typeOverride whatToShow = Bridge.Html5.Xml.NodeFilter
+	typeOverride activeElement = Bridge.Html5.Xml.XmlElement
+	typeOverride createElement = Bridge.Html5.Xml.XmlElement
+	typeOverride createElementNS = Bridge.Html5.Xml.XmlElement
+	typeOverride currentScript = Bridge.Html5.Xml.XmlElement
+	typeOverride documentElement = Bridge.Html5.Xml.XmlElement
+	typeOverride elementFromPoint = Bridge.Html5.Xml.XmlElement
+	typeOverride getElementById = Bridge.Html5.Xml.XmlElement
+	typeOverride querySelector = Bridge.Html5.Xml.XmlElement
+	typeOverride elt = Bridge.Html5.Xml.XmlElement
+	typeOverride getElementsByClassName = Bridge.Html5.Xml.XmlElementCollection
+	typeOverride getElementsByTagName = Bridge.Html5.Xml.XmlElementCollection
+	typeOverride getElementsByTagNameNS = Bridge.Html5.Xml.XmlElementCollection
 	remove register
 	remove undoManager
 
 DocumentFragment
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlDocumentFragment
-	typeOverride getElementById = System.Xml.XmlElement
-	typeOverride querySelector = System.Xml.XmlElement
+	typeOverride getElementById = Bridge.Html5.Xml.XmlElement
+	typeOverride querySelector = Bridge.Html5.Xml.XmlElement
 
 DocumentType
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMCLIRStatus
 	nogenerate
@@ -590,7 +590,7 @@ DOMDownloadManager
 	nogenerate
 
 DOMError
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMException
 	nogenerate
@@ -599,7 +599,7 @@ DOMFileMetadataParameters
 	nogenerate
 
 DOMImplementation
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMMMIError
 	nogenerate
@@ -608,29 +608,29 @@ DOMMMIResult
 	nogenerate
 
 DOMParser
-	namespace = System.Html
+	namespace = Bridge.Html5
 	noconstructors
 
 DOMPoint
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMPointInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMPointReadOnly
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMQuad
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMRect
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMRectList
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMRectReadOnly
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMRequest
 	nogenerate
@@ -639,20 +639,20 @@ DOMRequestReadyState
 	nogenerate
 
 DOMSettableTokenList
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMStringList
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMStringMap
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DOMTimeStamp
 	alias = long
 	nogenerate
 
 DOMTokenList
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = TokenList
 
 DOMTransaction
@@ -680,10 +680,10 @@ DownloadState
 	nogenerate
 
 DragEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DropEffect
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 DummyInterface
 	nogenerate
@@ -692,61 +692,61 @@ DummyInterfaceWorkers
 	nogenerate
 
 DynamicsCompressorNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 Element
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlElement
 	remove undoManager
 	remove undoScope
-	typeOverride firstElementChild = System.Xml.XmlElement
-	typeOverride lastElementChild = System.Xml.XmlElement
-	typeOverride querySelector = System.Xml.XmlElement
-	typeOverride getElementsByClassName = System.Xml.XmlElementCollection
-	typeOverride getElementsByTagName = System.Xml.XmlElementCollection
-	typeOverride getElementsByTagNameNS = System.Xml.XmlElementCollection
-	alias = System.Html.Element
+	typeOverride firstElementChild = Bridge.Html5.Xml.XmlElement
+	typeOverride lastElementChild = Bridge.Html5.Xml.XmlElement
+	typeOverride querySelector = Bridge.Html5.Xml.XmlElement
+	typeOverride getElementsByClassName = Bridge.Html5.Xml.XmlElementCollection
+	typeOverride getElementsByTagName = Bridge.Html5.Xml.XmlElementCollection
+	typeOverride getElementsByTagNameNS = Bridge.Html5.Xml.XmlElementCollection
+	alias = Bridge.Html5.Element
 
 ElementRegistrationOptions
-	namespace = System.Html.WebComponents
+	namespace = Bridge.Html5.WebComponents
 
 ElementReplaceEvent
-	namespace = System.Html.WebComponents
+	namespace = Bridge.Html5.WebComponents
 
 ElementReplaceEventInit
-	namespace = System.Html.WebComponents
+	namespace = Bridge.Html5.WebComponents
 
 EndingTypes
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 Event
-	namespace = System.Html
-	typeOverride eventPhase = System.Html.EventPhase
+	namespace = Bridge.Html5
+	typeOverride eventPhase = Bridge.Html5.EventPhase
 
 EventHandlerNonNull
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = HtmlEventHandler
 	nogenerate
 
 EventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 EventListener
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = IEventListener
 
 EventSource
-	namespace = System.Net.ServerEvents
+	namespace = Bridge.Html5.Net.ServerEvents
 
 EventSourceInit
-	namespace = System.Net.ServerEvents
+	namespace = Bridge.Html5.Net.ServerEvents
 
 EventTarget
-	namespace = System.Html
-	addInDerivedTypes "void AddEventListener(string type, System.Html.HtmlEventHandlerWithTarget<$type$> listener)"
-	addInDerivedTypes "void AddEventListener(string type, System.Html.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
-	addInDerivedTypes "void RemoveEventListener(string type, System.Html.HtmlEventHandlerWithTarget<$type$> listener)"
-	addInDerivedTypes "void RemoveEventListener(string type, System.Html.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
+	namespace = Bridge.Html5
+	addInDerivedTypes "void AddEventListener(string type, Bridge.Html5.HtmlEventHandlerWithTarget<$type$> listener)"
+	addInDerivedTypes "void AddEventListener(string type, Bridge.Html5.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
+	addInDerivedTypes "void RemoveEventListener(string type, Bridge.Html5.HtmlEventHandlerWithTarget<$type$> listener)"
+	addInDerivedTypes "void RemoveEventListener(string type, Bridge.Html5.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
 
 	addInDerivedTypes "void AddEventListener($type$Events type, IEventListener listener)"
 	addInDerivedTypes "void AddEventListener($type$Events type, IEventListener listener, bool capture)"
@@ -763,23 +763,23 @@ EventTarget
 	addInDerivedTypes "void RemoveEventListener($type$Events type, HtmlEventHandler listener)"
 	addInDerivedTypes "void RemoveEventListener($type$Events type, HtmlEventHandler listener, bool capture)"
 
-	addInDerivedTypes "void AddEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener)"
-	addInDerivedTypes "void AddEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
-	addInDerivedTypes "void RemoveEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener)"
-	addInDerivedTypes "void RemoveEventListener($type$Events type, System.Html.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
+	addInDerivedTypes "void AddEventListener($type$Events type, Bridge.Html5.HtmlEventHandlerWithTarget<$type$> listener)"
+	addInDerivedTypes "void AddEventListener($type$Events type, Bridge.Html5.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
+	addInDerivedTypes "void RemoveEventListener($type$Events type, Bridge.Html5.HtmlEventHandlerWithTarget<$type$> listener)"
+	addInDerivedTypes "void RemoveEventListener($type$Events type, Bridge.Html5.HtmlEventHandlerWithTarget<$type$> listener, bool capture)"
 
 	generateEnum derivedTypes $type$Events attributes "on(.+)" valueRegex "on(.+)"
 
 ErrorEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 	nogenerate
 
 ErrorEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 	nogenerate
 
 Exception
-	namespace = System
+	namespace = Bridge.Html5
 	name = Error
 	nogenerate
 
@@ -787,7 +787,7 @@ ExceptionMembers
 	mixin
 
 File
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 FileCallback
 	nogenerate
@@ -796,38 +796,38 @@ FileHandle
 	nogenerate
 
 FileList
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 FileMode
 	nogenerate
 
 FilePropertyBag
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 FileReader
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 FileReaderSync
-	namespace = System.IO
+	namespace = Bridge.Html5.IO
 
 FileRequest
 	nogenerate
 
 Float32Array
-	namespace = System.Collections.TypedArrays
+	namespace = Bridge.Html5.Collections.TypedArrays
 	nogenerate
 
 FocusEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 FocusEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 FormData
-	namespace = System.Net
+	namespace = Bridge.Html5.Net
 
 FrameRequestCallback
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 Function
 	nogenerate
@@ -837,7 +837,7 @@ FunctionStringCallback
 	nogenerate
 
 GainNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 Gamepad
 	nogenerate
@@ -864,11 +864,11 @@ GamepadEventInit
 	nogenerate
 
 Geolocation
-	namespace = System.Html.Geolocation
+	namespace = Bridge.Html5.Geolocation
 	name = GeolocationService
 
 GeometryUtils
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = IGeometryUtils
 	interface
 
@@ -888,178 +888,178 @@ HalfOpenInfoDict
 	nogenerate
 
 HashChangeEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 HashChangeEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 History
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 HitRegionOptions
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 HTMLAnchorElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = a
 	name = AnchorElement
 
 HTMLAppletElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = applet
 	name = AppletElement
 
 HTMLAreaElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = area
 	name = AreaElement
 
 HTMLAudioElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = audio
 	name = AudioElement
 
 HTMLBaseElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = base
 	name = BaseElement
 
 HTMLBodyElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = body
 	name = BodyElement
 
 HTMLBRElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = br
 	name = BRElement
 
 HTMLButtonElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = button
 	name = ButtonElement
 
 HTMLCanvasElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = canvas
 	name = CanvasElement
-	typeOverride getContext = System.Html.Media.Graphics.CanvasRenderingContext
-	typeOverride callback = System.Action<System.IO.Blob>
+	typeOverride getContext = Bridge.Html5.Media.Graphics.CanvasRenderingContext
+	typeOverride callback = Bridge.Html5.Action<Bridge.Html5.IO.Blob>
 
 HTMLCollection
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = ElementCollection
 
 HTMLContentElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = ContentElement
 
 HTMLDataElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = data
 	name = DataElement
 
 HTMLDataListElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = datalist
 	name = DataListElement
 
 HTMLDirectoryElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = dir
 	name = DirectoryElement
 
 HTMLDivElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = div
 	name = DivElement
 
 HTMLDListElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = dl
 	name = DListElement
 
 HTMLDocument
-	namespace = System.Html
-	typeOverride getElementsByName = System.Html.ElementNodeList
-	typeOverride querySelectorAll = System.Html.ElementNodeList
-	typeOverride getItems = System.Html.ElementNodeList
+	namespace = Bridge.Html5
+	typeOverride getElementsByName = Bridge.Html5.ElementNodeList
+	typeOverride querySelectorAll = Bridge.Html5.ElementNodeList
+	typeOverride getItems = Bridge.Html5.ElementNodeList
 	name = DocumentInstance
 
 HTMLElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = Element
 	remove properties
-	typeOverride base = System.Xml.XmlElement
+	typeOverride base = Bridge.Html5.Xml.XmlElement
 
 HTMLEmbedElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = embed
 	name = EmbedElement
 
 HTMLFieldSetElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = fieldset
 	name = FieldSetElement
 
 HTMLFontElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = font
 	name = FontElement
 
 HTMLFormElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = form
 	name = FormElement
-	typeOverride "getter nsISupports (DOMString name)" = System.Html.Element
+	typeOverride "getter nsISupports (DOMString name)" = Bridge.Html5.Element
 
 HTMLFormControlsCollection
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = FormControlsCollection
-	typeOverride namedItem = System.TypeOption<System.Html.ElementNodeList, System.Html.Element>
+	typeOverride namedItem = Bridge.Html5.TypeOption<Bridge.Html5.ElementNodeList, Bridge.Html5.Element>
 
 HTMLFrameElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = frame
 	name = FrameElement
 
 HTMLFrameSetElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = frameset
 	name = FrameSetElement
 
 HTMLHeadElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = head
 	name = HeadElement
 
 HTMLHeadingElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = h1, h2, h3, h4, h5, h6
 	name = HeadingElement
 
 HTMLHRElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = hr
 	name = HRElement
 
 HTMLHtmlElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = html
 	name = HtmlElement
 
 HTMLIFrameElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = iframe
 	name = IFrameElement
 
 HTMLImageElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = img
 	name = ImageElement
 
 HTMLInputElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = input
 	name = InputElement
 	remove controllers
@@ -1067,113 +1067,113 @@ HTMLInputElement
 	remove setRangeText
 
 HTMLLabelElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = label
 	name = LabelElement
 
 HTMLLegendElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = legend
 	name = LegendElement
 
 HTMLLIElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = li
 	name = LIElement
 
 HTMLLinkElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = link
 	name = LinkElement
 
 HTMLMapElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = map
 	name = MapElement
 
 HTMLMediaElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = media
 	name = MediaElement
-	typeOverride networkState = System.Html.Media.MediaElementNetworkState
-	typeOverride readyState = System.Html.Media.MediaElementReadyState
-	typeOverride canPlayType = System.Html.Media.MediaPlayability
-	typeOverride preload = System.Html.Media.MediaPreload
-	typeOverride crossOrigin = System.Html.Media.MediaCrossOriginPolicy
-	generateEnum System.Html.Media.MediaElementNetworkState constants "NETWORK_(.+)"
-	generateEnum System.Html.Media.MediaElementReadyState constants "((?=HAVE_).+)"
+	typeOverride networkState = Bridge.Html5.Media.MediaElementNetworkState
+	typeOverride readyState = Bridge.Html5.Media.MediaElementReadyState
+	typeOverride canPlayType = Bridge.Html5.Media.MediaPlayability
+	typeOverride preload = Bridge.Html5.Media.MediaPreload
+	typeOverride crossOrigin = Bridge.Html5.Media.MediaCrossOriginPolicy
+	generateEnum Bridge.Html5.Media.MediaElementNetworkState constants "NETWORK_(.+)"
+	generateEnum Bridge.Html5.Media.MediaElementReadyState constants "((?=HAVE_).+)"
 
 HTMLMenuElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = menu
 	name = MenuElement
 
 HTMLMenuItemElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = menuitem
 	name = MenuItemElement
 
 HTMLMetaElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = meta
 	name = MetaElement
 
 HTMLMeterElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = meter
 	name = MeterElement
 
 HTMLModElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = ins, del
 	name = ModElement
 
 HTMLObjectElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = object
 	name = ObjectElement
 
 HTMLOListElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = ol
 	name = OListElement
 
 HTMLOptGroupElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = optgroup
 	name = OptGroupElement
 
 HTMLOptionElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = option
 	name = OptionElement
 
 HTMLOptionsCollection
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = HtmlOptionsCollection
 
 HTMLOutputElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = output
 	name = OutputElement
 
 HTMLParagraphElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = p
 	name = ParagraphElement
 
 HTMLParamElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = param
 	name = ParamElement
 
 HTMLPreElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = pre
 	name = PreElement
 
 HTMLProgressElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = progress
 	name = ProgressElement
 
@@ -1181,105 +1181,105 @@ HTMLPropertiesCollection
 	nogenerate
 
 HTMLQuoteElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = q
 	name = QuoteElement
 
 HTMLScriptElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = script
 	name = ScriptElement
 
 HTMLSelectElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = select
 	name = SelectElement
 
 HTMLShadowElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = ShadowElement
 	
 HTMLSourceElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = source
 	name = SourceElement
 
 HTMLSpanElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = span
 	name = SpanElement
 
 HTMLStyleElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = style
 	name = StyleElement
 
 HTMLTableCaptionElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = caption
 	name = TableCaptionElement
 
 HTMLTableCellElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = td, th
 	name = TableCellElement
 
 HTMLTableColElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = col, colgroup
 	name = TableColElement
 
 HTMLTableElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = table
 	name = TableElement
 
 HTMLTableRowElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = tr
 	name = TableRowElement
 
 HTMLTableSectionElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = thead, tfoot, tbody
 	name = TableSectionElement
 
 HTMLTemplateElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = template
 	name = TemplateElement
 
 HTMLTextAreaElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = textarea
 	name = TextAreaElement
 
 HTMLTimeElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = time
 	name = TimeElement
 
 HTMLTitleElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = title
 	name = TitleElement
 
 HTMLTrackElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = track
 	name = TrackElement
 
 HTMLUListElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = ul
 	name = UListElement
 
 HTMLUnknownElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = UnknownElement
 
 HTMLVideoElement
-	namespace = System.Html
+	namespace = Bridge.Html5
 	tagname = video
 	name = VideoElement
 
@@ -1299,88 +1299,88 @@ IccChangeEventInit
 	nogenerate
 
 IDBCursor
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = Cursor
 
 IDBCursorWithValue
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = CursorWithValue
 
 IDBCursorDirection
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = CursorDirection
 
 IDBDatabase
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = Database
 
 IDBEnvironment
 	mixin
 
 IDBFactory
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = Factory
 
 IDBFileHandle
 	nogenerate
 
 IDBIndex
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = Index
 
 IDBIndexParameters
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = IndexParameters
 
 IDBKeyRange
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = KeyRange
 
 IDBObjectStore
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = ObjectStore
 
 IDBObjectStoreParameters
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = ObjectStoreParameters
 
 IDBOpenDBOptions
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = OpenDBOptions
 
 IDBOpenDBRequest
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = OpenDBRequest
 
 IDBRequest
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = Request
 
 IDBRequestReadyState
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = RequestReadyState
 
 IDBTransaction
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = Transaction
 
 IDBTransactionMode
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = TransactionMode
 
 IDBVersionChangeEvent
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = VersionChangeEvent
 
 IDBVersionChangeEventInit
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 	name = VersionChangeEventInit
 
 IID
 	nogenerate
 
 ImageData
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 ImageDocument
 	nogenerate
@@ -1398,11 +1398,11 @@ InspectorRGBTriple
 	nogenerate
 
 Int32Array
-	namespace = System.Collections.TypedArrays
+	namespace = Bridge.Html5.Collections.TypedArrays
 	nogenerate
 
 KeyboardEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 KeyEvent
 	mixin
@@ -1411,19 +1411,19 @@ LegacyQueryInterface
 	skip
 
 LifecycleAttributeChangedCallback
-	namespace = System.Html.WebComponents
+	namespace = Bridge.Html5.WebComponents
 
 LifecycleAttachedCallback
-	namespace = System.Html.WebComponents
+	namespace = Bridge.Html5.WebComponents
 
 LifecycleCallbacks
-	namespace = System.Html.WebComponents
+	namespace = Bridge.Html5.WebComponents
 
 LifecycleCreatedCallback
-	namespace = System.Html.WebComponents
+	namespace = Bridge.Html5.WebComponents
 
 LifecycleDetachedCallback
-	namespace = System.Html.WebComponents
+	namespace = Bridge.Html5.WebComponents
 
 LineEndings
 	mixin
@@ -1432,78 +1432,78 @@ LinkStyle
 	mixin
 
 LocalMediaStream
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 Location
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 LockedFile
 	nogenerate
 
 MediaElementAudioSourceNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 MediaError
-	namespace = System.Html.Media
-	typeOverride code = System.Html.Media.MediaErrorCode
+	namespace = Bridge.Html5.Media
+	typeOverride code = Bridge.Html5.Media.MediaErrorCode
 	generateEnum MediaErrorCode constants "MEDIA_ERR_(.+)"
 
 MediaList
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 MediaQueryList
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 MediaQueryListListener
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 MediaRecorder
-	namespace = System.Media.Recording
+	namespace = Bridge.Html5.Media.Recording
 
 MediaRecorderOptions
-	namespace = System.Media.Recording
+	namespace = Bridge.Html5.Media.Recording
 
 MediaSource
-	namespace = System.Media.Source
+	namespace = Bridge.Html5.Media.Source
 
 MediaSourceEndOfStreamError
-	namespace = System.Media.Source
+	namespace = Bridge.Html5.Media.Source
 
 MediaSourceReadyState
-	namespace = System.Media.Source
+	namespace = Bridge.Html5.Media.Source
 
 MediaStream
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 MediaStreamAudioDestinationNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 MediaStreamAudioSourceNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 MediaStreamConstraints
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 MediaStreamConstraintsInternal
 	nogenerate
 
 MediaStreamEvent
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 MediaStreamEventInit
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 MediaStreamList
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 MediaStreamTrack
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 MediaTrackConstraintSet
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 MediaTrackConstraints
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 MediaTrackConstraintsInternal
 	nogenerate
@@ -1512,34 +1512,34 @@ MenuBuilder
 	nogenerate
 
 MediaConstraints
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 MediaConstraintsInternal
 	nogenerate
 
 MediaConstraintSet
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 MessageChannel
-	namespace = System.Net.Messaging
+	namespace = Bridge.Html5.Net.Messaging
 
 MessageEvent
-	namespace = System.Net.Messaging
+	namespace = Bridge.Html5.Net.Messaging
 
 MessageEventInit
-	namespace = System.Net.Messaging
+	namespace = Bridge.Html5.Net.Messaging
 
 MessagePort
-	namespace = System.Net.Messaging
+	namespace = Bridge.Html5.Net.Messaging
 
 MessagePortList
-	namespace = System.Net.Messaging
+	namespace = Bridge.Html5.Net.Messaging
 
 MimeType
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 MimeTypeArray
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 MmsAttachment
 	nogenerate
@@ -1554,11 +1554,11 @@ MmsSendParameters
 	nogenerate
 
 MouseEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 	remove initNSMouseEvent
 
 MouseEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 MouseScrollEvent
 	nogenerate
@@ -1667,7 +1667,7 @@ MozMobileMessageManager
 	nogenerate
 
 MozNamedAttrMap
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = AttributeCollection
 	scriptName = Object
 
@@ -1698,17 +1698,17 @@ MozRDFResource
 	nogenerate
 
 mozRTCIceCandidate
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 	name = RTCIceCandidate
 	scriptName = Object
 
 mozRTCPeerConnection
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 	name = RTCPeerConnection
 	noconstructors
 
 mozRTCSessionDescription
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 	name = RTCSessionDescription
 
 MozSettingsEvent
@@ -1838,7 +1838,7 @@ NativeOSFileReadOptions
 	nogenerate
 
 Navigator
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = NavigatorInstance
 	remove getDeviceStorage
 	remove getDeviceStorages
@@ -1891,53 +1891,53 @@ NetworkStatsGetOptions
 	nogenerate
 
 Node
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlNode
-	typeOverride nodeType = System.Xml.XmlNodeType
-	typeOverride compareDocumentPosition = System.Xml.DocumentPosition
-	typeOverride parentElement = System.Xml.XmlElement
+	typeOverride nodeType = Bridge.Html5.Xml.XmlNodeType
+	typeOverride compareDocumentPosition = Bridge.Html5.Xml.DocumentPosition
+	typeOverride parentElement = Bridge.Html5.Xml.XmlElement
 	remove setUserData
 	generateEnum XmlNodeType constants "(.+)_NODE" rename CDATA_SECTION = CDATA
 	generateEnum DocumentPosition constants "DOCUMENT_POSITION_(.+)"
 
 NodeFilter
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = INodeFilter
-	typeOverride acceptNode = System.Xml.NodeFilterReturn
+	typeOverride acceptNode = Bridge.Html5.Xml.NodeFilterReturn
 	generateEnum NodeFilterReturn constants "FILTER_(.+)"
 	generateEnum NodeFilter constants "((?=SHOW_).+)" flags
 
 NodeIterator
-	namespace = System.Xml
-	typeOverride whatToShow = System.Xml.NodeFilter
+	namespace = Bridge.Html5.Xml
+	typeOverride whatToShow = Bridge.Html5.Xml.NodeFilter
 
 NodeList
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlNodeList
 
 NonDocumentTypeChildNode
-	typeOverride nextElementSibling = System.Xml.XmlElement
-	typeOverride previousElementSibling = System.Xml.XmlElement
+	typeOverride nextElementSibling = Bridge.Html5.Xml.XmlElement
+	typeOverride previousElementSibling = Bridge.Html5.Xml.XmlElement
 	mixin
 
 Notification
-	namespace = System.Html.Notifications
+	namespace = Bridge.Html5.Notifications
 	remove "get"
 
 NotificationDirection
-	namespace = System.Html.Notifications
+	namespace = Bridge.Html5.Notifications
 
 NotificationOptions
-	namespace = System.Html.Notifications
+	namespace = Bridge.Html5.Notifications
 
 NotificationPermission
-	namespace = System.Html.Notifications
+	namespace = Bridge.Html5.Notifications
 
 NotificationPermissionCallback
-	namespace = System.Html.Notifications
+	namespace = Bridge.Html5.Notifications
 
 NotifyAudioAvailableEvent
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 NotifyPaintEvent
 	nogenerate
@@ -1952,7 +1952,7 @@ nsIDocShell
 	nogenerate
 
 nsIDOMCrypto
-	namespace = System.Security.Cryptography
+	namespace = Bridge.Html5.Security.Cryptography
 	name = Crypto
 
 nsIEditor
@@ -1977,25 +1977,25 @@ nsIVariant
 	nogenerate
 
 objectURLOptions
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = ObjectUrlOptions
 
 OfflineAudioCompletionEvent
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 OfflineAudioContext
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 OfflineRenderSuccessCallback
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 OfflineResourceList
-	namespace = System.Data.Offline
+	namespace = Bridge.Html5.Data.Offline
 	name = ApplicationCache
 	nogenerate
 
 OnBeforeUnloadEventHandlerNonNull
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = BeforeUnloadEventHandler
 
 OnErrorEventHandlerForNodes
@@ -2005,29 +2005,29 @@ OnErrorEventHandlerForWindow
 	mixin
 
 OnErrorEventHandlerNonNull
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = ErrorEventHandler
 
 OpenWindowEventDetail
 	nogenerate
 
 OscillatorNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 OscillatorType
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 OutputStream
 	nogenerate
 
 OverSampleType
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 PageTransitionEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 PageTransitionEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 PaintRequest
 	nogenerate
@@ -2036,19 +2036,19 @@ PaintRequestList
 	nogenerate
 
 PannerNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 PanningModelType
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 ParentNode
-	typeOverride firstElementChild = System.Xml.XmlElement
-	typeOverride lastElementChild = System.Xml.XmlElement
-	typeOverride children = System.Xml.XmlElementCollection
+	typeOverride firstElementChild = Bridge.Html5.Xml.XmlElement
+	typeOverride lastElementChild = Bridge.Html5.Xml.XmlElement
+	typeOverride children = Bridge.Html5.Xml.XmlElementCollection
 	mixin
 
 Path2D
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 PCImplIceConnectionState
 	nogenerate
@@ -2075,17 +2075,17 @@ PeerConnectionObserver
 	nogenerate
 
 Performance
-	namespace = System.Performance
+	namespace = Bridge.Html5.Performance
 	name = PerformanceDetails
 
 PerformanceNavigation
-	namespace = System.Performance
+	namespace = Bridge.Html5.Performance
 
 PerformanceTiming
-	namespace = System.Performance
+	namespace = Bridge.Html5.Performance
 
 PeriodicWave
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 PermissionSettings
 	nogenerate
@@ -2094,22 +2094,22 @@ PhoneNumberService
 	nogenerate
 
 Plugin
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 PluginArray
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 PointerEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 PointerEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 PopStateEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 PopStateEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 PopupBlockedEvent
 	nogenerate
@@ -2118,19 +2118,19 @@ PopupBlockedEventInit
 	nogenerate
 
 Position
-	namespace = System.Html.Geolocation
+	namespace = Bridge.Html5.Geolocation
 
 PositionCallback
-	namespace = System.Html.Geolocation
+	namespace = Bridge.Html5.Geolocation
 
 PositionError
-	namespace = System.Html.Geolocation
+	namespace = Bridge.Html5.Geolocation
 
 PositionErrorCallback
-	namespace = System.Html.Geolocation
+	namespace = Bridge.Html5.Geolocation
 
 PositionOptions
-	namespace = System.Html.Geolocation
+	namespace = Bridge.Html5.Geolocation
 
 Principal
 	nogenerate
@@ -2139,14 +2139,14 @@ PrintCallback
 	nogenerate
 
 ProcessingInstruction
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlProcessingInstruction
 
 ProgressEvent
-	namespace = System.Net
+	namespace = Bridge.Html5.Net
 
 ProgressEventInit
-	namespace = System.Net
+	namespace = Bridge.Html5.Net
 
 Promise
 	nogenerate
@@ -2161,112 +2161,112 @@ PushManager
 	nogenerate
 
 RandomSource
-	namespace = System.Security.Cryptography
+	namespace = Bridge.Html5.Security.Cryptography
 	name = IRandomSource
 	interface
 
 Range
-	namespace = System.Html.Editing
-	typeOverride how = System.Html.Editing.RangeComparison
+	namespace = Bridge.Html5.Editing
+	typeOverride how = Bridge.Html5.Editing.RangeComparison
 	generateEnum RangeComparison constants "(.+)"
 
 RecordErrorEvent
-	namespace = System.Media.Recording
+	namespace = Bridge.Html5.Media.Recording
 
 RecordErrorEventInit
-	namespace = System.Media.Recording
+	namespace = Bridge.Html5.Media.Recording
 
 RecordingState
-	namespace = System.Media.Recording
+	namespace = Bridge.Html5.Media.Recording
 
 Rect
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 RGBColor
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 RTCCodecStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCConfiguration
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCDataChannel
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 	nogenerate
 
 RTCDataChannelEvent
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 	nogenerate # Generated from DataChannel
 
 RTCDataChannelEventInit
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCDataChannelInit
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCDataChannelState
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCDataChannelType
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCIceCandidateInit
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCIceCandidatePairStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCIceCandidateStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCStatsIceCandidatePairState
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCStatsReport
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCStatsReportCallback
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCStatsReportInternal
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCIceComponentStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCIceConnectionState
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCIceGatheringState
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCIceServer
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCIdentityAssertion
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCInboundRTPStreamStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCMediaStreamTrackStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCMediaStreamStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCOutboundRTPStreamStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCPeerConnectionErrorCallback
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCPeerConnectionIceEvent
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCPeerConnectionIceEventInit
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCPeerConnectionIdentityEventInit
 	nogenerate
@@ -2275,55 +2275,55 @@ RTCPeerConnectionIdentityEvent
 	nogenerate
 
 RTCSdpType
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCSessionDescriptionCallback
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCSessionDescriptionInit
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCSignalingState
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCRTPStreamStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCStatsCallback
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCStatsIceCandidateType
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCStatsType
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 RTCTransportStats
-	namespace = System.Net.WebRTC
+	namespace = Bridge.Html5.Net.WebRTC
 
 Screen
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 ScriptProcessorNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 ScrollAreaEvent
 	nogenerate
 
 ScrollBehavior
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 ScrollOptions
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 Selection
-	namespace = System.Html.Editing
+	namespace = Bridge.Html5.Editing
 
 SelectionMode
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 SettingChange
 	nogenerate
@@ -2338,10 +2338,10 @@ SettingsManager
 	nogenerate
 
 ShadowRoot
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 SharedWorker
-	namespace = System.Threading.WebWorkers
+	namespace = Bridge.Html5.Threading.WebWorkers
 
 SharedWorkerGlobalScope
 	nogenerate
@@ -2365,145 +2365,145 @@ SocketsDict
 	nogenerate
 
 SourceBuffer
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 SourceBufferAppendMode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 SourceBufferList
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 SpeechGrammar
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechGrammarList
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechRecognition
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechRecognitionAlternative
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechRecognitionError
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechRecognitionErrorCode
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechRecognitionErrorInit
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechRecognitionEvent
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 	typeOverride results = object
 
 SpeechRecognitionEventInit
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 	typeOverride results = object
 
 SpeechRecognitionResult
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechRecognitionResultList
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechSynthesis
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechSynthesisEvent
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechSynthesisEventInit
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechSynthesisGetter
 	skip
 
 SpeechSynthesisUtterance
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 SpeechSynthesisVoice
-	namespace = System.Html.Speech
+	namespace = Bridge.Html5.Speech
 
 StackFrame
 	nogenerate
 
 Storage
-	namespace = System.Data.WebStorage
+	namespace = Bridge.Html5.Data.WebStorage
 
 StorageEvent
-	namespace = System.Data.WebStorage
+	namespace = Bridge.Html5.Data.WebStorage
 
 StorageEventInit
-	namespace = System.Data.WebStorage
+	namespace = Bridge.Html5.Data.WebStorage
 
 StorageType
-	namespace = System.Data.IndexedDB
+	namespace = Bridge.Html5.Data.IndexedDB
 
 StyleRuleChangeEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 StyleRuleChangeEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 StyleSheet
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 StyleSheetApplicableStateChangeEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 StyleSheetApplicableStateChangeEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 StyleSheetChangeEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 StyleSheetChangeEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 StyleSheetList
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 SupportedType
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = DOMParserSupportedType
 
 SVGAElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAltGlyphElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAngle
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride unitType = System.Html.Media.Graphics.SVG.SVGAngleUnitType
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride unitType = Bridge.Html5.Media.Graphics.SVG.SVGAngleUnitType
 	generateEnum SVGAngleUnitType constants "SVG_ANGLETYPE_(.+)"
 
 SVGAnimatedAngle
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedBoolean
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedEnumeration
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 	nogenerate
 
 SVGAnimatedInteger
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedLength
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedLengthList
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedNumber
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedNumberList
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedPathData
 	mixin
@@ -2512,153 +2512,153 @@ SVGAnimatedPoints
 	mixin
 
 SVGAnimatedPreserveAspectRatio
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedRect
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedString
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimatedTransformList
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimateElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimateMotionElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimateTransformElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGAnimationElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGCircleElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGClipPathElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride clipPathUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride clipPathUnits = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGUnitType>
 
 SVGComponentTransferFunctionElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride type = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGComponentTransferType>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride type = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGComponentTransferType>
 	generateEnum SVGComponentTransferType constants "SVG_FECOMPONENTTRANSFER_TYPE_(.+)"
 
 SVGDefsElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGDescElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGDocument
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride base = System.Xml.XmlElement
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride base = Bridge.Html5.Xml.XmlElement
 
 SVGEllipseElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEBlendElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride mode = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEBlendMode>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride mode = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGFEBlendMode>
 	generateEnum SVGFEBlendMode constants "SVG_FEBLEND_MODE_(.+)"
 
 SVGFEColorMatrixElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride type = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEColorMatrixType>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride type = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGFEColorMatrixType>
 	generateEnum SVGFEColorMatrixType constants "SVG_FECOLORMATRIX_TYPE_(.+)"
 
 SVGFEComponentTransferElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFECompositeElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride operator = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFECompositeOperator>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride operator = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGFECompositeOperator>
 	generateEnum SVGFECompositeOperator constants "SVG_FECOMPOSITE_OPERATOR_(.+)"
 
 SVGFEConvolveMatrixElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride edgeMode = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEConvolveMatrixEdgeMode>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride edgeMode = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGFEConvolveMatrixEdgeMode>
 	generateEnum SVGFEConvolveMatrixEdgeMode constants "SVG_EDGEMODE_(.+)"
 
 SVGFEDiffuseLightingElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEDisplacementMapElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride xChannelSelector = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector>
-	typeOverride yChannelSelector = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride xChannelSelector = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector>
+	typeOverride yChannelSelector = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGFEDisplacementMapChannelSelector>
 	generateEnum SVGFEDisplacementMapChannelSelector constants "SVG_CHANNEL_(.+)"
 
 SVGFEDistantLightElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEDropShadowElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEFloodElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEFuncAElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEFuncBElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEFuncGElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEFuncRElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEGaussianBlurElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEImageElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEMergeElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEMergeNodeElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEMorphologyElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride operator = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEMorphologyOperator>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride operator = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGFEMorphologyOperator>
 	generateEnum SVGFEMorphologyOperator constants "SVG_MORPHOLOGY_OPERATOR_(.+)"
 
 SVGFEOffsetElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFEPointLightElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFESpecularLightingElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFESpotLightElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFETileElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGFETurbulenceElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride stitchTiles = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFEStitchType>
-	typeOverride type = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGFETurbulenceType>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride stitchTiles = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGFEStitchType>
+	typeOverride type = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGFETurbulenceType>
 	generateEnum SVGFEStitchType constants "SVG_STITCHTYPE_(.+)"
 	generateEnum SVGFETurbulenceType constants "SVG_TURBULENCE_TYPE_(.+)"
 
 SVGFilterElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride filterUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
-	typeOverride primitiveUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride filterUnits = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGUnitType>
+	typeOverride primitiveUnits = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGUnitType>
 
 SVGFilterPrimitiveStandardAttributes
 	mixin
@@ -2667,226 +2667,226 @@ SVGFitToViewBox
 	mixin
 
 SVGForeignObjectElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGGElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGGradientElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride spreadMethod = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGSpreadMethod>
-	typeOverride gradientUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride spreadMethod = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGSpreadMethod>
+	typeOverride gradientUnits = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGUnitType>
 	generateEnum SVGSpreadMethod constants "SVG_SPREADMETHOD_(.+)"
 
 SVGGraphicsElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGImageElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGLength
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride unitType = System.Html.Media.Graphics.SVG.SVGLengthType
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride unitType = Bridge.Html5.Media.Graphics.SVG.SVGLengthType
 	generateEnum SVGLengthType constants "SVG_LENGTHTYPE_(.+)"
 
 SVGLengthList
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGLinearGradientElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGLineElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGMarkerElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride markerUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGMarkerUnits>
-	typeOverride orientType = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGMarkerOrient>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride markerUnits = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGMarkerUnits>
+	typeOverride orientType = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGMarkerOrient>
 	generateEnum SVGMarkerUnits constants "SVG_MARKERUNITS_(.+)"
 	generateEnum SVGMarkerOrient constants "SVG_MARKER_ORIENT_(.+)"
 
 SVGMaskElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride maskContentUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
-	typeOverride maskUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride maskContentUnits = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGUnitType>
+	typeOverride maskUnits = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGUnitType>
 
 SVGMatrix
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGMetadataElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGMPathElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGNumber
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGNumberList
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSeg
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride pathSegType = System.Html.Media.Graphics.SVG.SVGPathSegType
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride pathSegType = Bridge.Html5.Media.Graphics.SVG.SVGPathSegType
 	generateEnum SVGPathSegType constants "PATHSEG_(.+)"
 
 SVGPathSegArcAbs
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegArcRel
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegClosePath
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegCurvetoCubicAbs
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegCurvetoCubicRel
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegCurvetoCubicSmoothAbs
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegCurvetoCubicSmoothRel
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegCurvetoQuadraticAbs
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegCurvetoQuadraticRel
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegCurvetoQuadraticSmoothAbs
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegCurvetoQuadraticSmoothRel
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegLinetoAbs
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegLinetoHorizontalAbs
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegLinetoHorizontalRel
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegLinetoRel
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegLinetoVerticalAbs
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegLinetoVerticalRel
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegList
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegMovetoAbs
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPathSegMovetoRel
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPatternElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride patternUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
-	typeOverride patternContentUnits = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGUnitType>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride patternUnits = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGUnitType>
+	typeOverride patternContentUnits = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGUnitType>
 
 SVGPoint
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPointList
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPolygonElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPolylineElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGPreserveAspectRatio
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride align = System.Html.Media.Graphics.SVG.SVGAlign
-	typeOverride meetOrSlice = System.Html.Media.Graphics.SVG.SVGMeetOrSlice
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride align = Bridge.Html5.Media.Graphics.SVG.SVGAlign
+	typeOverride meetOrSlice = Bridge.Html5.Media.Graphics.SVG.SVGMeetOrSlice
 	generateEnum SVGAlign constants "SVG_PRESERVEASPECTRATIO_(.+)"
 	generateEnum SVGMeetOrSlice constants "SVG_MEETORSLICE_(.+)"
 
 SVGRadialGradientElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGRect
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGRectElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGScriptElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGSetElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGStopElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGStringList
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGStyleElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGSVGElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGSwitchElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGSymbolElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGTests
 	mixin
 
 SVGTextContentElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride lengthAdjust = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGLengthAdjust>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride lengthAdjust = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGLengthAdjust>
 	generateEnum SVGLengthAdjust constants "LENGTHADJUST_(.+)"
 
 SVGTextElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGTextPathElement
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride method = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGTextPathMethod>
-	typeOverride spacing = System.Html.Media.Graphics.SVG.SVGAnimatedEnumeration<System.Html.Media.Graphics.SVG.SVGTextPathSpacing>
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride method = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGTextPathMethod>
+	typeOverride spacing = Bridge.Html5.Media.Graphics.SVG.SVGAnimatedEnumeration<Bridge.Html5.Media.Graphics.SVG.SVGTextPathSpacing>
 	generateEnum SVGTextPathMethod constants "TEXTPATH_METHODTYPE_(.+)"
 	generateEnum SVGTextPathSpacing constants "TEXTPATH_SPACINGTYPE_(.+)"
 
 SVGTextPositioningElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGTitleElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGTransform
-	namespace = System.Html.Media.Graphics.SVG
-	typeOverride type = System.Html.Media.Graphics.SVG.SVGTransformType
+	namespace = Bridge.Html5.Media.Graphics.SVG
+	typeOverride type = Bridge.Html5.Media.Graphics.SVG.SVGTransformType
 	generateEnum SVGTransformType constants "SVG_TRANSFORM_(.+)"
 
 SVGTransformList
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGTSpanElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGUnitTypes
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 	mixin
 	generateEnum SVGUnitType constants "SVG_UNIT_TYPE_(.+)"
 
@@ -2894,21 +2894,21 @@ SVGURIReference
 	mixin
 
 SVGUseElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGViewElement
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
 SVGZoomAndPan
 	mixin
-	typeOverride zoomAndPan = System.Html.Media.Graphics.SVG.SVGZoomAndPanType
-	generateEnum System.Html.Media.Graphics.SVG.SVGZoomAndPanType constants "SVG_ZOOMANDPAN_(.+)"
+	typeOverride zoomAndPan = Bridge.Html5.Media.Graphics.SVG.SVGZoomAndPanType
+	generateEnum Bridge.Html5.Media.Graphics.SVG.SVGZoomAndPanType constants "SVG_ZOOMANDPAN_(.+)"
 
 SVGZoomEvent
-	namespace = System.Html.Media.Graphics.SVG
+	namespace = Bridge.Html5.Media.Graphics.SVG
 
-systemMessageCallback
-	alias = System.Action<object>
+Bridge.Html5MessageCallback
+	alias = Bridge.Html5.Action<object>
 	nogenerate
 
 Telephony
@@ -2921,59 +2921,59 @@ TelephonyCallGroup
 	nogenerate
 
 Text
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlText
 
 TextDecodeOptions
-	namespace = System.Text
+	namespace = Bridge.Html5.Text
 
 TextDecoder
-	namespace = System.Text
+	namespace = Bridge.Html5.Text
 
 TextDecoderOptions
-	namespace = System.Text
+	namespace = Bridge.Html5.Text
 
 TextEncodeOptions
-	namespace = System.Text
+	namespace = Bridge.Html5.Text
 
 TextEncoder
-	namespace = System.Text
+	namespace = Bridge.Html5.Text
 
 TextMetrics
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 TextTrack
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 TextTrackCueList
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 TextTrackKind
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 TextTrackList
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 TextTrackMode
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 TimeEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 TimeRanges
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 Touch
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 TouchEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 TouchEventHandlers
 	mixin
 
 TouchList
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 TrackEvent
 	nogenerate
@@ -2982,30 +2982,30 @@ TrackEventInit
 	nogenerate
 
 TransitionEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 TransitionEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 TreeColumns
 	nogenerate
 
 TreeWalker
-	namespace = System.Xml
-	typeOverride whatToShow = System.Xml.NodeFilter
+	namespace = Bridge.Html5.Xml
+	typeOverride whatToShow = Bridge.Html5.Xml.NodeFilter
 
 UIEvent
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 UIEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 Uint8Array
-	namespace = System.Collections.TypedArrays
+	namespace = Bridge.Html5.Collections.TypedArrays
 	nogenerate
 
 Uint8ClampedArray
-	namespace = System.Collections.TypedArrays
+	namespace = Bridge.Html5.Collections.TypedArrays
 	nogenerate
 
 UndoManager
@@ -3015,10 +3015,10 @@ URI
 	nogenerate
 
 URL
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 URLSearchParams
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 URLUtils
 	mixin
@@ -3030,10 +3030,10 @@ UserDataHandler
 	nogenerate
 
 UserProximityEvent
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 UserProximityEventInit
-	namespace = System.Html.Mobile
+	namespace = Bridge.Html5.Mobile
 
 USSDReceivedEvent
 	nogenerate
@@ -3042,127 +3042,127 @@ USSDReceivedEventInit
 	nogenerate
 
 ValidityState
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 VideoFacingModeEnum
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 VTTCue
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 VTTRegion
-	namespace = System.Html.Media
+	namespace = Bridge.Html5.Media
 
 WaveShaperNode
-	namespace = System.Html.Media.Audio
+	namespace = Bridge.Html5.Media.Audio
 
 WebGL2RenderingContext
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLActiveInfo
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLBuffer
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLContextAttributes
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionColorBufferFloat
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionColorBufferHalfFloat
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionCompressedTextureATC
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionCompressedTextureETC1
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionCompressedTexturePVRTC
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionCompressedTextureS3TC
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionDebugRendererInfo
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionDebugShaders
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionDepthTexture
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionDrawBuffers
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionElementIndexUint
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionFragDepth
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionInstancedArrays
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionLoseContext
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionSRGB
 	nogenerate
 
 WebGLExtensionStandardDerivatives
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionTextureFilterAnisotropic
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionTextureFloat
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionTextureFloatLinear
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionTextureHalfFloat
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionTextureHalfFloatLinear
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLExtensionVertexArray
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLFramebuffer
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLProgram
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLQuery
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLRenderbuffer
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLRenderingContext
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLShader
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLShaderPrecisionFormat
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLTexture
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLUniformLocation
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebGLVertexArray
-	namespace = System.Html.Media.Graphics.WebGL
+	namespace = Bridge.Html5.Media.Graphics.WebGL
 
 WebrtcGlobalInformation
 	nogenerate
@@ -3177,23 +3177,23 @@ WebrtcGlobalStatisticsReport
 	nogenerate
 
 WebSocket
-	namespace = System.Net.WebSockets
-	typeOverride readyState = System.Net.WebSockets.ReadyState
+	namespace = Bridge.Html5.Net.WebSockets
+	typeOverride readyState = Bridge.Html5.Net.WebSockets.ReadyState
 	generateEnum ReadyState constants "(.+)"
 
 WebSocketElement
-	namespace = System.Net.WebSockets
+	namespace = Bridge.Html5.Net.WebSockets
 
 WebSocketDict
-	namespace = System.Net.WebSockets
+	namespace = Bridge.Html5.Net.WebSockets
 
 WheelEvent
-	namespace = System.Html
-	typeOverride deltaMode = System.Html.WheelDeltaMode
+	namespace = Bridge.Html5
+	typeOverride deltaMode = Bridge.Html5.WheelDeltaMode
 	generateEnum WheelDeltaMode constants "DOM_DELTA_(.+)"
 
 WheelEventInit
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 WifiCommandOptions
 	nogenerate
@@ -3202,16 +3202,16 @@ WifiResultOptions
 	nogenerate
 
 VideoPlaybackQuality
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 VideoStreamTrack
-	namespace = System.Html.Media.Graphics
+	namespace = Bridge.Html5.Media.Graphics
 
 Window
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = WindowInstance
 	scriptName = Window
-	typeOverride frames = System.Xml.XmlElement[]
+	typeOverride frames = Bridge.Html5.Xml.XmlElement[]
 	rename window = Instance
 	remove controllers
 	remove pkcs11
@@ -3227,12 +3227,12 @@ WindowSessionStorage
 	mixin
 
 WindowBase64
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = IWindowBase64
 	interface
 
 WindowTimers
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = IWindowTimers
 	remove setTimeout
 	remove setInterval
@@ -3241,80 +3241,80 @@ WindowTimers
 	interface
 
 WindowProxy
-	namespace = System.Html
+	namespace = Bridge.Html5
 	name = WindowInstance
 	nogenerate
 
 VisibilityState
-	namespace = System.Html
+	namespace = Bridge.Html5
 
 VoidFunction
-	namespace = System
+	namespace = Bridge.Html5
 	name = Action
 	nogenerate
 
 Worker
-	namespace = System.Threading.WebWorkers
+	namespace = Bridge.Html5.Threading.WebWorkers
 
 WorkerGlobalScope
-	namespace = System.Threading.WebWorkers
+	namespace = Bridge.Html5.Threading.WebWorkers
 	remove console
 
 WorkerLocation
-	namespace = System.Threading.WebWorkers
+	namespace = Bridge.Html5.Threading.WebWorkers
 
 WorkerNavigator
-	namespace = System.Threading.WebWorkers
+	namespace = Bridge.Html5.Threading.WebWorkers
 
 XMLDocument
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlDocument
 
 XMLHttpRequest
-	namespace = System.Net
+	namespace = Bridge.Html5.Net
 	name = XmlHttpRequest
-	typeOverride readyState = System.Net.ReadyState
+	typeOverride readyState = Bridge.Html5.Net.ReadyState
 	rename onreadystatechange = OnReadyStateChange
 	remove "void send(InputStream data)"
 	noconstructors
 	generateEnum ReadyState constants "(.+)"
 
 XMLHttpRequestEventTarget
-	namespace = System.Net
+	namespace = Bridge.Html5.Net
 	name = XmlHttpRequestEventTarget
 
 XMLHttpRequestResponseType
-	namespace = System.Net
+	namespace = Bridge.Html5.Net
 	name = XmlHttpRequestResponseType
 	rename "" = String
 
 XMLHttpRequestUpload
-	namespace = System.Net
+	namespace = Bridge.Html5.Net
 	name = XmlHttpRequestUpload
 
 XMLSerializer
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlSerializer
 
 XMLStylesheetProcessingInstruction
-	namespace = System.Xml
+	namespace = Bridge.Html5.Xml
 	name = XmlStylesheetProcessingInstruction
 
 XPathEvaluator
-	namespace = System.Xml.XPath
+	namespace = Bridge.Html5.Xml.XPath
 	name = IXPathEvaluator
 	interface
 
 XPathExpression
-	namespace = System.Xml.XPath
-	typeOverride type = System.Xml.XPath.ResultType
+	namespace = Bridge.Html5.Xml.XPath
+	typeOverride type = Bridge.Html5.Xml.XPath.ResultType
 
 XPathNSResolver
-	namespace = System.Xml.XPath
+	namespace = Bridge.Html5.Xml.XPath
 
 XPathResult
-	namespace = System.Xml.XPath
-	typeOverride resultType = System.Xml.XPath.ResultType
+	namespace = Bridge.Html5.Xml.XPath
+	typeOverride resultType = Bridge.Html5.Xml.XPath.ResultType
 	generateEnum ResultType constants "(.+)_TYPE"
 
 XULCommandDispatcher
@@ -3330,7 +3330,7 @@ XULElement
 	nogenerate
 
 
-staticInstance System.Html.Document
+staticInstance Bridge.Html5.Document
 	instanceName = document
 	type = HTMLDocument
 	remove ActiveElement
@@ -3353,18 +3353,18 @@ staticInstance System.Html.Document
 	remove QuerySelector
 	remove QuerySelectorAll
 
-staticInstance System.Html.Window
+staticInstance Bridge.Html5.Window
 	instanceName = window
 	type = Window
 
-staticInstance System.Html.Navigator
+staticInstance Bridge.Html5.Navigator
 	instanceName = navigator
 	type = Navigator
 
-staticInstance System.Threading.WebWorkers.SharedWorkerGlobalScope
+staticInstance Bridge.Html5.Threading.WebWorkers.SharedWorkerGlobalScope
 	type = SharedWorkerGlobalScope
 	globalMethods
 
-staticInstance System.Threading.WebWorkers.DedicatedWorkerGlobalScope
+staticInstance Bridge.Html5.Threading.WebWorkers.DedicatedWorkerGlobalScope
 	type = DedicatedWorkerGlobalScope
 	globalMethods
