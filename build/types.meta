@@ -23,7 +23,7 @@ AnimationEventInit
 	namespace = Bridge.Html5
 
 AnyCallback
-	namespace = Bridge.Html5
+	namespace = System
 	name = Delegate
 	nogenerate
 
@@ -779,7 +779,7 @@ ErrorEventInit
 	nogenerate
 
 Exception
-	namespace = Bridge.Html5
+	namespace = System
 	name = Error
 	nogenerate
 
@@ -944,7 +944,7 @@ HTMLCanvasElement
 	tagname = canvas
 	name = CanvasElement
 	typeOverride getContext = Bridge.Html5.Media.Graphics.CanvasRenderingContext
-	typeOverride callback = Bridge.Html5.Action<Bridge.Html5.IO.Blob>
+	typeOverride callback = System.Action<Bridge.Html5.IO.Blob>
 
 HTMLCollection
 	namespace = Bridge.Html5
@@ -2907,8 +2907,8 @@ SVGZoomAndPan
 SVGZoomEvent
 	namespace = Bridge.Html5.Media.Graphics.SVG
 
-Bridge.Html5MessageCallback
-	alias = Bridge.Html5.Action<object>
+SystemMessageCallback
+	alias = System.Action<object>
 	nogenerate
 
 Telephony
@@ -3249,7 +3249,7 @@ VisibilityState
 	namespace = Bridge.Html5
 
 VoidFunction
-	namespace = Bridge.Html5
+	namespace = System
 	name = Action
 	nogenerate
 
