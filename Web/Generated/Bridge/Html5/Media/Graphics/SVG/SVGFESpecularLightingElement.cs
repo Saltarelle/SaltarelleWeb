@@ -3,176 +3,112 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFESpecularLightingElement : SVGElement
 	{
-		internal SVGFESpecularLightingElement()
-		{
-		}
+		internal extern SVGFESpecularLightingElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture);
 
-		public void AddEventListener(SVGFESpecularLightingElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFESpecularLightingElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFESpecularLightingElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFESpecularLightingElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener);
 
-		public void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture);
 
-		public void AddEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString In1
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString In1
+		public extern SVGAnimatedNumber KernelUnitLengthX
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber KernelUnitLengthX
+		public extern SVGAnimatedNumber KernelUnitLengthY
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFESpecularLightingElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFESpecularLightingElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener);
+
+		public extern void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedString Result
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber KernelUnitLengthY
+		public extern SVGAnimatedNumber SpecularConstant
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString Result
+		public extern SVGAnimatedNumber SpecularExponent
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber SpecularConstant
+		public extern SVGAnimatedNumber SurfaceScale
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber SpecularExponent
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber SurfaceScale
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength X
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength Y
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

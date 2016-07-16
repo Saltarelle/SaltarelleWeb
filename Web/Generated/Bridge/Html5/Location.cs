@@ -3,138 +3,95 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Location
 	{
-		internal Location()
-		{
-		}
+		internal extern Location();
 
-		public void Assign(string url)
+		public extern void Assign(string url);
+
+		[FieldProperty]
+		public extern string Hash
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Hash
+		public extern string Host
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Host
+		public extern string Hostname
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Hostname
+		public extern string Href
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Href
+		public extern string Origin
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Origin
+		public extern string Password
 		{
-			get {
-				return null;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Password
+		public extern string Pathname
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Pathname
+		public extern string Port
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Port
+		public extern string Protocol
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void Reload();
+
+		public extern void Replace(string url);
+
+		[FieldProperty]
+		public extern string Search
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Protocol
+		public extern URLSearchParams SearchParams
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void Reload()
-		{
-		}
-
-		public void Replace(string url)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Search
+		public extern string Username
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public URLSearchParams SearchParams
-		{
-			get {
-				return default(URLSearchParams);
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Username
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

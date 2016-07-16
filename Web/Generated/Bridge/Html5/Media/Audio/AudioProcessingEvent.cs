@@ -3,32 +3,24 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class AudioProcessingEvent : Event
 	{
-		internal AudioProcessingEvent()
+		internal extern AudioProcessingEvent();
+
+		[FieldProperty]
+		public extern AudioBuffer InputBuffer
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public AudioBuffer InputBuffer
+		public extern AudioBuffer OutputBuffer
 		{
-			get {
-				return default(AudioBuffer);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public AudioBuffer OutputBuffer
+		public extern double PlaybackTime
 		{
-			get {
-				return default(AudioBuffer);
-			}
-		}
-
-		[FieldProperty]
-		public double PlaybackTime
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

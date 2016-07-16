@@ -5,58 +5,38 @@ namespace Bridge.Html5.Data.IndexedDB
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBCursor")]
 	public partial class Cursor
 	{
-		internal Cursor()
-		{
-		}
+		internal extern Cursor();
 
-		public void Advance(int count)
-		{
-		}
+		public extern void Advance(int count);
 
-		public void Continue(object key)
-		{
-		}
+		public extern void Continue(object key);
 
-		public Request Delete()
+		public extern Request Delete();
+
+		[FieldProperty]
+		public extern CursorDirection Direction
 		{
-			return default(Request);
+			get;
 		}
 
 		[FieldProperty]
-		public CursorDirection Direction
+		public extern object Key
 		{
-			get {
-				return default(CursorDirection);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public object Key
+		public extern object PrimaryKey
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public object PrimaryKey
+		public extern TypeOption<ObjectStore, Index> Source
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public TypeOption<ObjectStore, Index> Source
-		{
-			get {
-				return default(TypeOption<ObjectStore, Index>);
-			}
-		}
-
-		public Request Update(object value)
-		{
-			return default(Request);
-		}
+		public extern Request Update(object value);
 	}
 }

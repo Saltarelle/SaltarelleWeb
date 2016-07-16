@@ -5,35 +5,23 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class StyleSheetList
 	{
-		internal StyleSheetList()
-		{
-		}
+		internal extern StyleSheetList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public StyleSheet this[int index]
 		{
-			get {
-				return default(StyleSheet);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<StyleSheet> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<StyleSheet> GetEnumerator();
 
-		public StyleSheet Item(int index)
-		{
-			return default(StyleSheet);
-		}
+		public extern StyleSheet Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

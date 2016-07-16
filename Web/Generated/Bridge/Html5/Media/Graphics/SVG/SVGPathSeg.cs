@@ -3,9 +3,7 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPathSeg
 	{
-		internal SVGPathSeg()
-		{
-		}
+		internal extern SVGPathSeg();
 
 		[Name("PATHSEG_ARC_ABS")]
 		public const ushort PATHSEG_ARC_ABS = 10;
@@ -68,19 +66,15 @@
 		public const ushort PATHSEG_UNKNOWN = 0;
 
 		[FieldProperty]
-		public SVGPathSegType PathSegType
+		public extern SVGPathSegType PathSegType
 		{
-			get {
-				return default(SVGPathSegType);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string PathSegTypeAsLetter
+		public extern string PathSegTypeAsLetter
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

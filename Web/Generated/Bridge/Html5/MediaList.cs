@@ -5,53 +5,34 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MediaList
 	{
-		internal MediaList()
-		{
-		}
+		internal extern MediaList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public string this[int index]
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public void AppendMedium(string newMedium)
-		{
-		}
+		public extern void AppendMedium(string newMedium);
 
-		public void DeleteMedium(string oldMedium)
-		{
-		}
+		public extern void DeleteMedium(string oldMedium);
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<string> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<string> GetEnumerator();
 
-		public string Item(int index)
+		public extern string Item(int index);
+
+		[FieldProperty]
+		public extern int Length
 		{
-			return null;
+			get;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern string MediaText
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public string MediaText
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

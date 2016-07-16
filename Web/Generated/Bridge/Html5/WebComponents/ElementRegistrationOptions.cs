@@ -3,13 +3,13 @@
 	[External, Serializable]
 	public partial class ElementRegistrationOptions
 	{
-		public string Extends
+		public extern string Extends
 		{
 			get;
 			set;
 		}
 
-		public object Prototype
+		public extern object Prototype
 		{
 			get;
 			set;

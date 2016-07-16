@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class BlobEventInit : EventInit
 	{
-		public Blob Data
+		public extern Blob Data
 		{
 			get;
 			set;

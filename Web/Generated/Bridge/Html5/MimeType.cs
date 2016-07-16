@@ -3,40 +3,30 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MimeType
 	{
-		internal MimeType()
+		internal extern MimeType();
+
+		[FieldProperty]
+		public extern string Description
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Description
+		public extern Plugin EnabledPlugin
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public Plugin EnabledPlugin
+		public extern string Suffixes
 		{
-			get {
-				return default(Plugin);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Suffixes
+		public extern string Type
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Type
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

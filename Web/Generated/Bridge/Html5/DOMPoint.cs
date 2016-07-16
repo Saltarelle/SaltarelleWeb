@@ -3,64 +3,42 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMPoint : DOMPointReadOnly
 	{
-		public DOMPoint()
-		{
-		}
+		public extern DOMPoint();
 
-		public DOMPoint(DOMPointInit point)
-		{
-		}
+		public extern DOMPoint(DOMPointInit point);
 
-		public DOMPoint(double x, double y)
-		{
-		}
+		public extern DOMPoint(double x, double y);
 
-		public DOMPoint(double x, double y, double z)
-		{
-		}
+		public extern DOMPoint(double x, double y, double z);
 
-		public DOMPoint(double x, double y, double z, double w)
+		public extern DOMPoint(double x, double y, double z, double w);
+
+		[FieldProperty]
+		public extern double W
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double W
+		public extern double X
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double X
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Y
+		public extern double Z
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Z
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

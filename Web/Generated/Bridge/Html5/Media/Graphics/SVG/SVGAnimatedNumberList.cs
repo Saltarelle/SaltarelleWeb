@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimatedNumberList
 	{
-		internal SVGAnimatedNumberList()
+		internal extern SVGAnimatedNumberList();
+
+		[FieldProperty]
+		public extern SVGNumberList AnimVal
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGNumberList AnimVal
+		public extern SVGNumberList BaseVal
 		{
-			get {
-				return default(SVGNumberList);
-			}
-		}
-
-		[FieldProperty]
-		public SVGNumberList BaseVal
-		{
-			get {
-				return default(SVGNumberList);
-			}
+			get;
 		}
 	}
 }

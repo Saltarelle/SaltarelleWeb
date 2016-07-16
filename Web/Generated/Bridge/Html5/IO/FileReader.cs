@@ -3,202 +3,124 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class FileReader : EventTarget
 	{
-		public FileReader()
-		{
-		}
+		public extern FileReader();
 
-		public void Abort()
-		{
-		}
+		public extern void Abort();
 
-		public void AddEventListener(FileReaderEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(FileReaderEvents type, Action listener);
 
-		public void AddEventListener(FileReaderEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(FileReaderEvents type, Action listener, bool capture);
 
-		public void AddEventListener(FileReaderEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(FileReaderEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(FileReaderEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(FileReaderEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener)
-		{
-		}
+		public extern void AddEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener);
 
-		public void AddEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture);
 
-		public void AddEventListener(FileReaderEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(FileReaderEvents type, IEventListener listener);
 
-		public void AddEventListener(FileReaderEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(FileReaderEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture);
 
 		public const ushort DONE = 2;
 
 		public const ushort EMPTY = 0;
 
 		[FieldProperty]
-		public DOMError Error
+		public extern DOMError Error
 		{
-			get {
-				return default(DOMError);
-			}
+			get;
 		}
 
 		public const ushort LOADING = 1;
 
 		[FieldProperty, Name("onabort")]
-		public HtmlEventHandler OnAbort
+		public extern HtmlEventHandler OnAbort
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onload")]
-		public HtmlEventHandler OnLoad
+		public extern HtmlEventHandler OnLoad
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadend")]
-		public HtmlEventHandler OnLoadend
+		public extern HtmlEventHandler OnLoadend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadstart")]
-		public HtmlEventHandler OnLoadstart
+		public extern HtmlEventHandler OnLoadstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onprogress")]
-		public HtmlEventHandler OnProgress
+		public extern HtmlEventHandler OnProgress
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void ReadAsArrayBuffer(Blob blob)
-		{
-		}
+		public extern void ReadAsArrayBuffer(Blob blob);
 
-		public void ReadAsBinaryString(Blob filedata)
-		{
-		}
+		public extern void ReadAsBinaryString(Blob filedata);
 
-		public void ReadAsDataURL(Blob blob)
-		{
-		}
+		public extern void ReadAsDataURL(Blob blob);
 
-		public void ReadAsText(Blob blob)
-		{
-		}
+		public extern void ReadAsText(Blob blob);
 
-		public void ReadAsText(Blob blob, string label)
-		{
-		}
+		public extern void ReadAsText(Blob blob, string label);
 
 		[FieldProperty]
-		public ushort ReadyState
+		public extern ushort ReadyState
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void RemoveEventListener(FileReaderEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(FileReaderEvents type, Action listener);
 
-		public void RemoveEventListener(FileReaderEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(FileReaderEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(FileReaderEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(FileReaderEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(FileReaderEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(FileReaderEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener)
-		{
-		}
+		public extern void RemoveEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener);
 
-		public void RemoveEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(FileReaderEvents type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture);
 
-		public void RemoveEventListener(FileReaderEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(FileReaderEvents type, IEventListener listener);
 
-		public void RemoveEventListener(FileReaderEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(FileReaderEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture);
 
 		[FieldProperty]
-		public object Result
+		public extern object Result
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

@@ -3,144 +3,88 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFETurbulenceElement : SVGElement
 	{
-		internal SVGFETurbulenceElement()
-		{
-		}
+		internal extern SVGFETurbulenceElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture);
 
-		public void AddEventListener(SVGFETurbulenceElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFETurbulenceElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFETurbulenceElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFETurbulenceElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener);
 
-		public void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture);
 
-		public void AddEventListener(SVGFETurbulenceElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFETurbulenceElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFETurbulenceElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFETurbulenceElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedNumber BaseFrequencyX
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber BaseFrequencyX
+		public extern SVGAnimatedNumber BaseFrequencyY
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber BaseFrequencyY
+		public extern SVGAnimatedLength Height
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedInteger NumOctaves
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFETurbulenceElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFETurbulenceElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener);
+
+		public extern void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFETurbulenceElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFETurbulenceElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedString Result
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedInteger NumOctaves
+		public extern SVGAnimatedNumber Seed
 		{
-			get {
-				return default(SVGAnimatedInteger);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFETurbulenceElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFETurbulenceElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFETurbulenceElementEvents type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFETurbulenceElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFETurbulenceElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString Result
+		public extern SVGAnimatedEnumeration<SVGFEStitchType> StitchTiles
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedNumber Seed
-		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGFEStitchType> StitchTiles
-		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGFEStitchType>);
-			}
+			get;
 		}
 
 		[Name("SVG_STITCHTYPE_NOSTITCH")]
@@ -162,35 +106,27 @@
 		public const ushort SVG_TURBULENCE_TYPE_UNKNOWN = 0;
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGFETurbulenceType> Type
+		public extern SVGAnimatedEnumeration<SVGFETurbulenceType> Type
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGFETurbulenceType>);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength X
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Y
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

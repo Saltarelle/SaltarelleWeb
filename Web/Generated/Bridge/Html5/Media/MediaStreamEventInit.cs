@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class MediaStreamEventInit : EventInit
 	{
-		public MediaStream Stream
+		public extern MediaStream Stream
 		{
 			get;
 			set;

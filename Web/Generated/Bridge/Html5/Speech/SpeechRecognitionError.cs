@@ -3,32 +3,22 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechRecognitionError : Event
 	{
-		internal SpeechRecognitionError()
-		{
-		}
+		internal extern SpeechRecognitionError();
 
-		public SpeechRecognitionError(string type)
-		{
-		}
+		public extern SpeechRecognitionError(string type);
 
-		public SpeechRecognitionError(string type, SpeechRecognitionErrorInit eventInitDict)
+		public extern SpeechRecognitionError(string type, SpeechRecognitionErrorInit eventInitDict);
+
+		[FieldProperty]
+		public extern SpeechRecognitionErrorCode Error
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SpeechRecognitionErrorCode Error
+		public extern string Message
 		{
-			get {
-				return default(SpeechRecognitionErrorCode);
-			}
-		}
-
-		[FieldProperty]
-		public string Message
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

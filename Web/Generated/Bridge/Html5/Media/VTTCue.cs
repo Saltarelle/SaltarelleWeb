@@ -6,265 +6,168 @@ namespace Bridge.Html5.Media
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class VTTCue : EventTarget
 	{
-		internal VTTCue()
-		{
-		}
+		internal extern VTTCue();
 
-		public VTTCue(double startTime, double endTime, string text)
-		{
-		}
+		public extern VTTCue(double startTime, double endTime, string text);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<VTTCue> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<VTTCue> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<VTTCue> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<VTTCue> listener, bool capture);
 
-		public void AddEventListener(VTTCueEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(VTTCueEvents type, Action listener);
 
-		public void AddEventListener(VTTCueEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(VTTCueEvents type, Action listener, bool capture);
 
-		public void AddEventListener(VTTCueEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(VTTCueEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(VTTCueEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(VTTCueEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(VTTCueEvents type, HtmlEventHandlerWithTarget<VTTCue> listener)
-		{
-		}
+		public extern void AddEventListener(VTTCueEvents type, HtmlEventHandlerWithTarget<VTTCue> listener);
 
-		public void AddEventListener(VTTCueEvents type, HtmlEventHandlerWithTarget<VTTCue> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(VTTCueEvents type, HtmlEventHandlerWithTarget<VTTCue> listener, bool capture);
 
-		public void AddEventListener(VTTCueEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(VTTCueEvents type, IEventListener listener);
 
-		public void AddEventListener(VTTCueEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(VTTCueEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern AlignSetting Align
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public AlignSetting Align
+		public extern double EndTime
 		{
-			get {
-				return default(AlignSetting);
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern XmlDocumentFragment GetCueAsHTML();
+
+		[FieldProperty]
+		public extern string Id
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double EndTime
+		public extern TypeOption<int, AutoKeyword> Line
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public XmlDocumentFragment GetCueAsHTML()
-		{
-			return default(XmlDocumentFragment);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Id
+		public extern AlignSetting LineAlign
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public TypeOption<int, AutoKeyword> Line
-		{
-			get {
-				return default(TypeOption<int, AutoKeyword>);
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public AlignSetting LineAlign
-		{
-			get {
-				return default(AlignSetting);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onenter")]
-		public HtmlEventHandler OnEnter
+		public extern HtmlEventHandler OnEnter
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onexit")]
-		public HtmlEventHandler OnExit
+		public extern HtmlEventHandler OnExit
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool PauseOnExit
+		public extern bool PauseOnExit
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Position
+		public extern int Position
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public AlignSetting PositionAlign
+		public extern AlignSetting PositionAlign
 		{
-			get {
-				return default(AlignSetting);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public VTTRegion Region
+		public extern VTTRegion Region
 		{
-			get {
-				return default(VTTRegion);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VTTCue> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VTTCue> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VTTCue> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VTTCue> listener, bool capture);
 
-		public void RemoveEventListener(VTTCueEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(VTTCueEvents type, Action listener);
 
-		public void RemoveEventListener(VTTCueEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(VTTCueEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(VTTCueEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(VTTCueEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(VTTCueEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(VTTCueEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(VTTCueEvents type, HtmlEventHandlerWithTarget<VTTCue> listener)
-		{
-		}
+		public extern void RemoveEventListener(VTTCueEvents type, HtmlEventHandlerWithTarget<VTTCue> listener);
 
-		public void RemoveEventListener(VTTCueEvents type, HtmlEventHandlerWithTarget<VTTCue> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(VTTCueEvents type, HtmlEventHandlerWithTarget<VTTCue> listener, bool capture);
 
-		public void RemoveEventListener(VTTCueEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(VTTCueEvents type, IEventListener listener);
 
-		public void RemoveEventListener(VTTCueEvents type, IEventListener listener, bool capture)
+		public extern void RemoveEventListener(VTTCueEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern int Size
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Size
+		public extern bool SnapToLines
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool SnapToLines
+		public extern double StartTime
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double StartTime
+		public extern string Text
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Text
+		public extern TextTrack Track
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public TextTrack Track
+		public extern DirectionSetting Vertical
 		{
-			get {
-				return default(TextTrack);
-			}
-		}
-
-		[FieldProperty]
-		public DirectionSetting Vertical
-		{
-			get {
-				return default(DirectionSetting);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

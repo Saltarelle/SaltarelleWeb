@@ -3,184 +3,108 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MediaRecorder : EventTarget
 	{
-		internal MediaRecorder()
-		{
-		}
+		internal extern MediaRecorder();
 
-		public MediaRecorder(MediaStream stream)
-		{
-		}
+		public extern MediaRecorder(MediaStream stream);
 
-		public MediaRecorder(MediaStream stream, MediaRecorderOptions options)
-		{
-		}
+		public extern MediaRecorder(MediaStream stream, MediaRecorderOptions options);
 
-		public void AddEventListener(MediaRecorderEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(MediaRecorderEvents type, Action listener);
 
-		public void AddEventListener(MediaRecorderEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaRecorderEvents type, Action listener, bool capture);
 
-		public void AddEventListener(MediaRecorderEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(MediaRecorderEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(MediaRecorderEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaRecorderEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener)
-		{
-		}
+		public extern void AddEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener);
 
-		public void AddEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture);
 
-		public void AddEventListener(MediaRecorderEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(MediaRecorderEvents type, IEventListener listener);
 
-		public void AddEventListener(MediaRecorderEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaRecorderEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture);
 
 		[FieldProperty]
-		public string MimeType
+		public extern string MimeType
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("ondataavailable")]
-		public HtmlEventHandler OnDataavailable
+		public extern HtmlEventHandler OnDataavailable
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onstop")]
-		public HtmlEventHandler OnStop
+		public extern HtmlEventHandler OnStop
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onwarning")]
-		public HtmlEventHandler OnWarning
+		public extern HtmlEventHandler OnWarning
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void Pause()
-		{
-		}
+		public extern void Pause();
 
-		public void RemoveEventListener(MediaRecorderEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(MediaRecorderEvents type, Action listener);
 
-		public void RemoveEventListener(MediaRecorderEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MediaRecorderEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener)
-		{
-		}
+		public extern void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener);
 
-		public void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MediaRecorderEvents type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture);
 
-		public void RemoveEventListener(MediaRecorderEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(MediaRecorderEvents type, IEventListener listener);
 
-		public void RemoveEventListener(MediaRecorderEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MediaRecorderEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture);
 
-		public void RequestData()
-		{
-		}
+		public extern void RequestData();
 
-		public void Resume()
-		{
-		}
+		public extern void Resume();
 
-		public void Start()
-		{
-		}
+		public extern void Start();
 
-		public void Start(int timeSlice)
-		{
-		}
+		public extern void Start(int timeSlice);
 
 		[FieldProperty]
-		public RecordingState State
+		public extern RecordingState State
 		{
-			get {
-				return default(RecordingState);
-			}
+			get;
 		}
 
-		public void Stop()
-		{
-		}
+		public extern void Stop();
 
 		[FieldProperty]
-		public MediaStream Stream
+		public extern MediaStream Stream
 		{
-			get {
-				return default(MediaStream);
-			}
+			get;
 		}
 	}
 }

@@ -5,461 +5,268 @@ namespace Bridge.Html5.Xml
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Element")]
 	public partial class XmlElement : XmlNode, IGeometryUtils
 	{
-		internal XmlElement()
-		{
-		}
+		internal extern XmlElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture);
 
-		public void AddEventListener(XmlElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(XmlElementEvents type, Action listener);
 
-		public void AddEventListener(XmlElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(XmlElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(XmlElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(XmlElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener)
-		{
-		}
+		public extern void AddEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener);
 
-		public void AddEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture);
 
-		public void AddEventListener(XmlElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(XmlElementEvents type, IEventListener listener);
 
-		public void AddEventListener(XmlElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(XmlElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern AttributeCollection Attributes
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public AttributeCollection Attributes
+		public extern int ChildElementCount
 		{
-			get {
-				return default(AttributeCollection);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ChildElementCount
+		public extern XmlElementCollection Children
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElementCollection Children
+		public extern TokenList ClassList
 		{
-			get {
-				return default(XmlElementCollection);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public TokenList ClassList
+		public extern int ClientHeight
 		{
-			get {
-				return default(TokenList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ClientHeight
+		public extern int ClientLeft
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ClientLeft
+		public extern int ClientTop
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ClientTop
+		public extern int ClientWidth
 		{
-			get {
-				return 0;
-			}
+			get;
+		}
+
+		public extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from);
+
+		public extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
+
+		public extern DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from);
+
+		public extern DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
+
+		public extern DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from);
+
+		public extern DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
+
+		public extern ShadowRoot CreateShadowRoot();
+
+		[FieldProperty]
+		public extern XmlElement FirstElementChild
+		{
+			get;
+		}
+
+		public extern string GetAttribute(string name);
+
+		public extern XmlAttribute GetAttributeNode(string name);
+
+		public extern XmlAttribute GetAttributeNodeNS(string namespaceURI, string localName);
+
+		public extern string GetAttributeNS(string @namespace, string localName);
+
+		public extern DOMRect GetBoundingClientRect();
+
+		public extern DOMQuad[] GetBoxQuads();
+
+		public extern DOMQuad[] GetBoxQuads(BoxQuadOptions options);
+
+		public extern DOMRectList GetClientRects();
+
+		public extern XmlElementCollection GetElementsByClassName(string classNames);
+
+		public extern XmlElementCollection GetElementsByTagName(string localName);
+
+		public extern XmlElementCollection GetElementsByTagNameNS(string @namespace, string localName);
+
+		public extern bool HasAttribute(string name);
+
+		public extern bool HasAttributeNS(string @namespace, string localName);
+
+		[FieldProperty]
+		public extern string Id
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int ClientWidth
+		public extern string InnerHTML
 		{
-			get {
-				return 0;
-			}
+			get;
+			set;
 		}
 
-		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from)
-		{
-			return default(DOMPoint);
-		}
+		public extern void InsertAdjacentHTML(string position, string text);
 
-		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options)
+		[FieldProperty]
+		public extern XmlElement LastElementChild
 		{
-			return default(DOMPoint);
-		}
-
-		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from)
-		{
-			return default(DOMQuad);
-		}
-
-		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options)
-		{
-			return default(DOMQuad);
-		}
-
-		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from)
-		{
-			return default(DOMQuad);
-		}
-
-		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options)
-		{
-			return default(DOMQuad);
-		}
-
-		public ShadowRoot CreateShadowRoot()
-		{
-			return default(ShadowRoot);
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElement FirstElementChild
+		public extern XmlElement NextElementSibling
 		{
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		public string GetAttribute(string name)
-		{
-			return null;
-		}
-
-		public XmlAttribute GetAttributeNode(string name)
-		{
-			return default(XmlAttribute);
-		}
-
-		public XmlAttribute GetAttributeNodeNS(string namespaceURI, string localName)
-		{
-			return default(XmlAttribute);
-		}
-
-		public string GetAttributeNS(string @namespace, string localName)
-		{
-			return null;
-		}
-
-		public DOMRect GetBoundingClientRect()
-		{
-			return default(DOMRect);
-		}
-
-		public DOMQuad[] GetBoxQuads()
-		{
-			return null;
-		}
-
-		public DOMQuad[] GetBoxQuads(BoxQuadOptions options)
-		{
-			return null;
-		}
-
-		public DOMRectList GetClientRects()
-		{
-			return default(DOMRectList);
-		}
-
-		public XmlElementCollection GetElementsByClassName(string classNames)
-		{
-			return default(XmlElementCollection);
-		}
-
-		public XmlElementCollection GetElementsByTagName(string localName)
-		{
-			return default(XmlElementCollection);
-		}
-
-		public XmlElementCollection GetElementsByTagNameNS(string @namespace, string localName)
-		{
-			return default(XmlElementCollection);
-		}
-
-		public bool HasAttribute(string name)
-		{
-			return false;
-		}
-
-		public bool HasAttributeNS(string @namespace, string localName)
-		{
-			return false;
-		}
-
-		[FieldProperty]
-		public string Id
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string InnerHTML
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void InsertAdjacentHTML(string position, string text)
-		{
-		}
-
-		[FieldProperty]
-		public XmlElement LastElementChild
-		{
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[FieldProperty]
-		public XmlElement NextElementSibling
-		{
-			get {
-				return default(XmlElement);
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onwheel")]
-		public HtmlEventHandler OnWheel
+		public extern HtmlEventHandler OnWheel
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string OuterHTML
+		public extern string OuterHTML
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public XmlElement PreviousElementSibling
+		public extern XmlElement PreviousElementSibling
 		{
-			get {
-				return default(XmlElement);
-			}
+			get;
 		}
 
-		public XmlElement QuerySelector(string selectors)
+		public extern XmlElement QuerySelector(string selectors);
+
+		public extern XmlNodeList QuerySelectorAll(string selectors);
+
+		public extern void ReleaseCapture();
+
+		public extern void Remove();
+
+		public extern void RemoveAttribute(string name);
+
+		public extern XmlAttribute RemoveAttributeNode(XmlAttribute oldAttr);
+
+		public extern void RemoveAttributeNS(string @namespace, string localName);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture);
+
+		public extern void RemoveEventListener(XmlElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(XmlElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(XmlElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(XmlElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener);
+
+		public extern void RemoveEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture);
+
+		public extern void RemoveEventListener(XmlElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(XmlElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern int ScrollHeight
 		{
-			return default(XmlElement);
+			get;
 		}
 
-		public XmlNodeList QuerySelectorAll(string selectors)
-		{
-			return default(XmlNodeList);
-		}
+		public extern void ScrollIntoView();
 
-		public void ReleaseCapture()
-		{
-		}
+		public extern void ScrollIntoView(bool top);
 
-		public void Remove()
+		[FieldProperty]
+		public extern int ScrollLeft
 		{
-		}
-
-		public void RemoveAttribute(string name)
-		{
-		}
-
-		public XmlAttribute RemoveAttributeNode(XmlAttribute oldAttr)
-		{
-			return default(XmlAttribute);
-		}
-
-		public void RemoveAttributeNS(string @namespace, string localName)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlElementEvents type, HtmlEventHandlerWithTarget<XmlElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int ScrollHeight
+		public extern int ScrollLeftMax
 		{
-			get {
-				return 0;
-			}
-		}
-
-		public void ScrollIntoView()
-		{
-		}
-
-		public void ScrollIntoView(bool top)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public int ScrollLeft
+		public extern int ScrollTop
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int ScrollLeftMax
+		public extern int ScrollTopMax
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ScrollTop
+		public extern int ScrollWidth
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern void SetAttribute(string name, string value);
+
+		public extern XmlAttribute SetAttributeNode(XmlAttribute newAttr);
+
+		public extern XmlAttribute SetAttributeNodeNS(XmlAttribute newAttr);
+
+		public extern void SetAttributeNS(string @namespace, string name, string value);
+
+		public extern void SetCapture();
+
+		public extern void SetCapture(bool retargetToElement);
+
+		[FieldProperty]
+		public extern ShadowRoot ShadowRoot
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public int ScrollTopMax
+		public extern string TagName
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int ScrollWidth
-		{
-			get {
-				return 0;
-			}
-		}
-
-		public void SetAttribute(string name, string value)
-		{
-		}
-
-		public XmlAttribute SetAttributeNode(XmlAttribute newAttr)
-		{
-			return default(XmlAttribute);
-		}
-
-		public XmlAttribute SetAttributeNodeNS(XmlAttribute newAttr)
-		{
-			return default(XmlAttribute);
-		}
-
-		public void SetAttributeNS(string @namespace, string name, string value)
-		{
-		}
-
-		public void SetCapture()
-		{
-		}
-
-		public void SetCapture(bool retargetToElement)
-		{
-		}
-
-		[FieldProperty]
-		public ShadowRoot ShadowRoot
-		{
-			get {
-				return default(ShadowRoot);
-			}
-		}
-
-		[FieldProperty]
-		public string TagName
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

@@ -5,35 +5,23 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMRectList
 	{
-		internal DOMRectList()
-		{
-		}
+		internal extern DOMRectList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public DOMRect this[int index]
 		{
-			get {
-				return default(DOMRect);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<DOMRect> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<DOMRect> GetEnumerator();
 
-		public DOMRect Item(int index)
-		{
-			return default(DOMRect);
-		}
+		public extern DOMRect Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

@@ -5,80 +5,49 @@ namespace Bridge.Html5
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'TRACK'"), Name("Element")]
 	public partial class TrackElement : Element
 	{
-		internal TrackElement()
-		{
-		}
+		internal extern TrackElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture);
 
-		public void AddEventListener(TrackElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(TrackElementEvents type, Action listener);
 
-		public void AddEventListener(TrackElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TrackElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(TrackElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(TrackElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(TrackElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TrackElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(TrackElementEvents type, HtmlEventHandlerWithTarget<TrackElement> listener)
-		{
-		}
+		public extern void AddEventListener(TrackElementEvents type, HtmlEventHandlerWithTarget<TrackElement> listener);
 
-		public void AddEventListener(TrackElementEvents type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TrackElementEvents type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture);
 
-		public void AddEventListener(TrackElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(TrackElementEvents type, IEventListener listener);
 
-		public void AddEventListener(TrackElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TrackElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public bool Default
+		public extern bool Default
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		public const ushort ERROR = 3;
 
 		[FieldProperty]
-		public string Kind
+		public extern string Kind
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Label
+		public extern string Label
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		public const ushort LOADED = 2;
@@ -88,79 +57,49 @@ namespace Bridge.Html5
 		public const ushort NONE = 0;
 
 		[FieldProperty]
-		public ushort ReadyState
+		public extern ushort ReadyState
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture);
 
-		public void RemoveEventListener(TrackElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(TrackElementEvents type, Action listener);
 
-		public void RemoveEventListener(TrackElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TrackElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(TrackElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(TrackElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(TrackElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TrackElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(TrackElementEvents type, HtmlEventHandlerWithTarget<TrackElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(TrackElementEvents type, HtmlEventHandlerWithTarget<TrackElement> listener);
 
-		public void RemoveEventListener(TrackElementEvents type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TrackElementEvents type, HtmlEventHandlerWithTarget<TrackElement> listener, bool capture);
 
-		public void RemoveEventListener(TrackElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(TrackElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(TrackElementEvents type, IEventListener listener, bool capture)
+		public extern void RemoveEventListener(TrackElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern string Src
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Src
+		public extern string Srclang
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Srclang
+		public extern TextTrack Track
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public TextTrack Track
-		{
-			get {
-				return default(TextTrack);
-			}
+			get;
 		}
 	}
 }

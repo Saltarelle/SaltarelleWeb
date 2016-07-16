@@ -3,159 +3,95 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBTransaction")]
 	public partial class Transaction : EventTarget
 	{
-		internal Transaction()
-		{
-		}
+		internal extern Transaction();
 
-		public void Abort()
-		{
-		}
+		public extern void Abort();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture);
 
-		public void AddEventListener(TransactionEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(TransactionEvents type, Action listener);
 
-		public void AddEventListener(TransactionEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TransactionEvents type, Action listener, bool capture);
 
-		public void AddEventListener(TransactionEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(TransactionEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(TransactionEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TransactionEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener)
-		{
-		}
+		public extern void AddEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener);
 
-		public void AddEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture);
 
-		public void AddEventListener(TransactionEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(TransactionEvents type, IEventListener listener);
 
-		public void AddEventListener(TransactionEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(TransactionEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern Database Db
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public Database Db
+		public extern DOMError Error
 		{
-			get {
-				return default(Database);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DOMError Error
+		public extern TransactionMode Mode
 		{
-			get {
-				return default(DOMError);
-			}
+			get;
 		}
+
+		public extern ObjectStore ObjectStore(string name);
 
 		[FieldProperty]
-		public TransactionMode Mode
+		public extern DOMStringList ObjectStoreNames
 		{
-			get {
-				return default(TransactionMode);
-			}
-		}
-
-		public ObjectStore ObjectStore(string name)
-		{
-			return default(ObjectStore);
-		}
-
-		[FieldProperty]
-		public DOMStringList ObjectStoreNames
-		{
-			get {
-				return default(DOMStringList);
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onabort")]
-		public HtmlEventHandler OnAbort
+		public extern HtmlEventHandler OnAbort
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncomplete")]
-		public HtmlEventHandler OnComplete
+		public extern HtmlEventHandler OnComplete
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture);
 
-		public void RemoveEventListener(TransactionEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(TransactionEvents type, Action listener);
 
-		public void RemoveEventListener(TransactionEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TransactionEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(TransactionEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(TransactionEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(TransactionEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TransactionEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener)
-		{
-		}
+		public extern void RemoveEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener);
 
-		public void RemoveEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TransactionEvents type, HtmlEventHandlerWithTarget<Transaction> listener, bool capture);
 
-		public void RemoveEventListener(TransactionEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(TransactionEvents type, IEventListener listener);
 
-		public void RemoveEventListener(TransactionEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TransactionEvents type, IEventListener listener, bool capture);
 	}
 }

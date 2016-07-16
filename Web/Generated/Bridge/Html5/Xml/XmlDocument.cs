@@ -3,103 +3,55 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("XMLDocument")]
 	public partial class XmlDocument : DocumentBase
 	{
-		internal XmlDocument()
-		{
-		}
+		internal extern XmlDocument();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture);
 
-		public void AddEventListener(XmlDocumentEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentEvents type, Action listener);
 
-		public void AddEventListener(XmlDocumentEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentEvents type, Action listener, bool capture);
 
-		public void AddEventListener(XmlDocumentEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(XmlDocumentEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener);
 
-		public void AddEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture);
 
-		public void AddEventListener(XmlDocumentEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentEvents type, IEventListener listener);
 
-		public void AddEventListener(XmlDocumentEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public bool Async
+		public extern bool Async
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public bool Load(string url)
-		{
-			return false;
-		}
+		public extern bool Load(string url);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture);
 
-		public void RemoveEventListener(XmlDocumentEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentEvents type, Action listener);
 
-		public void RemoveEventListener(XmlDocumentEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener);
 
-		public void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentEvents type, HtmlEventHandlerWithTarget<XmlDocument> listener, bool capture);
 
-		public void RemoveEventListener(XmlDocumentEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentEvents type, IEventListener listener);
 
-		public void RemoveEventListener(XmlDocumentEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentEvents type, IEventListener listener, bool capture);
 	}
 }

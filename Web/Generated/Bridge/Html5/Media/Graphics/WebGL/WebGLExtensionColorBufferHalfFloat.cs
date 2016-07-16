@@ -3,40 +3,30 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class WebGLExtensionColorBufferHalfFloat
 	{
-		internal WebGLExtensionColorBufferHalfFloat()
-		{
-		}
+		internal extern WebGLExtensionColorBufferHalfFloat();
 
 		[FieldProperty, Name("FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT")]
-		public int FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT
+		public extern int FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("RGB16F_EXT")]
-		public int RGB16F_EXT
+		public extern int RGB16F_EXT
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("RGBA16F_EXT")]
-		public int RGBA16F_EXT
+		public extern int RGBA16F_EXT
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("UNSIGNED_NORMALIZED_EXT")]
-		public int UNSIGNED_NORMALIZED_EXT
+		public extern int UNSIGNED_NORMALIZED_EXT
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

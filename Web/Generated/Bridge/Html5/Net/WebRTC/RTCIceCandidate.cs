@@ -3,42 +3,29 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class RTCIceCandidate
 	{
-		public RTCIceCandidate()
-		{
-		}
+		public extern RTCIceCandidate();
 
-		public RTCIceCandidate(RTCIceCandidateInit candidateInitDict)
+		public extern RTCIceCandidate(RTCIceCandidateInit candidateInitDict);
+
+		[FieldProperty]
+		public extern string Candidate
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Candidate
+		public extern string SdpMid
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string SdpMid
+		public extern ushort? SdpMLineIndex
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public ushort? SdpMLineIndex
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

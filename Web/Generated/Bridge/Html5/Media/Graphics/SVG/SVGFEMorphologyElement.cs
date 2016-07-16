@@ -3,136 +3,82 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFEMorphologyElement : SVGElement
 	{
-		internal SVGFEMorphologyElement()
-		{
-		}
+		internal extern SVGFEMorphologyElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEMorphologyElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEMorphologyElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFEMorphologyElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEMorphologyElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener);
 
-		public void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEMorphologyElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEMorphologyElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFEMorphologyElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFEMorphologyElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString In1
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString In1
+		public extern SVGAnimatedEnumeration<SVGFEMorphologyOperator> Operator
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGFEMorphologyOperator> Operator
+		public extern SVGAnimatedNumber RadiusX
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGFEMorphologyOperator>);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber RadiusX
+		public extern SVGAnimatedNumber RadiusY
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEMorphologyElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFEMorphologyElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener);
+
+		public extern void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEMorphologyElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFEMorphologyElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public SVGAnimatedNumber RadiusY
+		public extern SVGAnimatedString Result
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEMorphologyElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEMorphologyElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEMorphologyElementEvents type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEMorphologyElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEMorphologyElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public SVGAnimatedString Result
-		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[Name("SVG_MORPHOLOGY_OPERATOR_DILATE")]
@@ -145,27 +91,21 @@
 		public const ushort SVG_MORPHOLOGY_OPERATOR_UNKNOWN = 0;
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength X
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Y
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

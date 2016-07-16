@@ -3,68 +3,50 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TouchEvent : UIEvent
 	{
-		internal TouchEvent()
+		internal extern TouchEvent();
+
+		[FieldProperty]
+		public extern bool AltKey
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool AltKey
+		public extern TouchList ChangedTouches
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public TouchList ChangedTouches
+		public extern bool CtrlKey
 		{
-			get {
-				return default(TouchList);
-			}
+			get;
+		}
+
+		public extern void InitTouchEvent(string type, bool canBubble, bool cancelable, WindowInstance view, int detail, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey, TouchList touches, TouchList targetTouches, TouchList changedTouches);
+
+		[FieldProperty]
+		public extern bool MetaKey
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool CtrlKey
+		public extern bool ShiftKey
 		{
-			get {
-				return false;
-			}
-		}
-
-		public void InitTouchEvent(string type, bool canBubble, bool cancelable, WindowInstance view, int detail, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey, TouchList touches, TouchList targetTouches, TouchList changedTouches)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool MetaKey
+		public extern TouchList TargetTouches
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool ShiftKey
+		public extern TouchList Touches
 		{
-			get {
-				return false;
-			}
-		}
-
-		[FieldProperty]
-		public TouchList TargetTouches
-		{
-			get {
-				return default(TouchList);
-			}
-		}
-
-		[FieldProperty]
-		public TouchList Touches
-		{
-			get {
-				return default(TouchList);
-			}
+			get;
 		}
 	}
 }

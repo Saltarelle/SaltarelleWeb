@@ -3,13 +3,13 @@
 	[External, Serializable]
 	public partial class RTCMediaStreamStats : RTCStats
 	{
-		public string StreamIdentifier
+		public extern string StreamIdentifier
 		{
 			get;
 			set;
 		}
 
-		public string[] TrackIds
+		public extern string[] TrackIds
 		{
 			get;
 			set;

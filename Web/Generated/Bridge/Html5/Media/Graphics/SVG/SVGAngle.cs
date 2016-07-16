@@ -3,17 +3,11 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAngle
 	{
-		internal SVGAngle()
-		{
-		}
+		internal extern SVGAngle();
 
-		public void ConvertToSpecifiedUnits(SVGAngleUnitType unitType)
-		{
-		}
+		public extern void ConvertToSpecifiedUnits(SVGAngleUnitType unitType);
 
-		public void NewValueSpecifiedUnits(SVGAngleUnitType unitType, double valueInSpecifiedUnits)
-		{
-		}
+		public extern void NewValueSpecifiedUnits(SVGAngleUnitType unitType, double valueInSpecifiedUnits);
 
 		[Name("SVG_ANGLETYPE_DEG")]
 		public const ushort SVG_ANGLETYPE_DEG = 2;
@@ -31,41 +25,30 @@
 		public const ushort SVG_ANGLETYPE_UNSPECIFIED = 1;
 
 		[FieldProperty]
-		public SVGAngleUnitType UnitType
+		public extern SVGAngleUnitType UnitType
 		{
-			get {
-				return default(SVGAngleUnitType);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Value
+		public extern double Value
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string ValueAsString
+		public extern string ValueAsString
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double ValueInSpecifiedUnits
+		public extern double ValueInSpecifiedUnits
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,160 +3,100 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFECompositeElement : SVGElement
 	{
-		internal SVGFECompositeElement()
-		{
-		}
+		internal extern SVGFECompositeElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture);
 
-		public void AddEventListener(SVGFECompositeElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFECompositeElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFECompositeElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFECompositeElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener);
 
-		public void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture);
 
-		public void AddEventListener(SVGFECompositeElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFECompositeElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFECompositeElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFECompositeElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString In1
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString In1
+		public extern SVGAnimatedString In2
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString In2
+		public extern SVGAnimatedNumber K1
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber K1
+		public extern SVGAnimatedNumber K2
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber K2
+		public extern SVGAnimatedNumber K3
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber K3
+		public extern SVGAnimatedNumber K4
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber K4
+		public extern SVGAnimatedEnumeration<SVGFECompositeOperator> Operator
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFECompositeElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFECompositeElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener);
+
+		public extern void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFECompositeElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFECompositeElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGFECompositeOperator> Operator
+		public extern SVGAnimatedString Result
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGFECompositeOperator>);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFECompositeElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFECompositeElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFECompositeElementEvents type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFECompositeElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFECompositeElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public SVGAnimatedString Result
-		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[Name("SVG_FECOMPOSITE_OPERATOR_ARITHMETIC")]
@@ -181,27 +121,21 @@
 		public const ushort SVG_FECOMPOSITE_OPERATOR_XOR = 5;
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength X
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Y
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

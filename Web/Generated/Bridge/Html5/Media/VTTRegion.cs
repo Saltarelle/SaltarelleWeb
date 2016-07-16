@@ -3,78 +3,55 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class VTTRegion
 	{
-		public VTTRegion()
+		public extern VTTRegion();
+
+		[FieldProperty]
+		public extern int Lines
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Lines
+		public extern double RegionAnchorX
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double RegionAnchorX
+		public extern double RegionAnchorY
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double RegionAnchorY
+		public extern string Scroll
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Scroll
+		public extern double ViewportAnchorX
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double ViewportAnchorX
+		public extern double ViewportAnchorY
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double ViewportAnchorY
+		public extern double Width
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Width
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

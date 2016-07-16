@@ -3,236 +3,150 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && ({this}.tagName === 'TD' || {this}.tagName === 'TH')"), Name("Element")]
 	public partial class TableCellElement : Element
 	{
-		internal TableCellElement()
+		internal extern TableCellElement();
+
+		[FieldProperty]
+		public extern string Abbr
 		{
+			get;
+			set;
+		}
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture);
+
+		public extern void AddEventListener(TableCellElementEvents type, Action listener);
+
+		public extern void AddEventListener(TableCellElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(TableCellElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(TableCellElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(TableCellElementEvents type, HtmlEventHandlerWithTarget<TableCellElement> listener);
+
+		public extern void AddEventListener(TableCellElementEvents type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture);
+
+		public extern void AddEventListener(TableCellElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(TableCellElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern string Align
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Abbr
+		public extern string Axis
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TableCellElementEvents type, Action listener)
-		{
-		}
-
-		public void AddEventListener(TableCellElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TableCellElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void AddEventListener(TableCellElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TableCellElementEvents type, HtmlEventHandlerWithTarget<TableCellElement> listener)
-		{
-		}
-
-		public void AddEventListener(TableCellElementEvents type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TableCellElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(TableCellElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Align
+		public extern string BgColor
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Axis
+		public extern int CellIndex
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string BgColor
+		public extern string Ch
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int CellIndex
+		public extern string ChOff
 		{
-			get {
-				return 0;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Ch
+		public extern int ColSpan
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string ChOff
+		public extern string Headers
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int ColSpan
+		public extern string Height
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Headers
+		public extern bool NoWrap
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture);
+
+		public extern void RemoveEventListener(TableCellElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(TableCellElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(TableCellElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(TableCellElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(TableCellElementEvents type, HtmlEventHandlerWithTarget<TableCellElement> listener);
+
+		public extern void RemoveEventListener(TableCellElementEvents type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture);
+
+		public extern void RemoveEventListener(TableCellElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(TableCellElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern int RowSpan
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Height
+		public extern string Scope
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool NoWrap
+		public extern string VAlign
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TableCellElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(TableCellElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TableCellElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(TableCellElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TableCellElementEvents type, HtmlEventHandlerWithTarget<TableCellElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(TableCellElementEvents type, HtmlEventHandlerWithTarget<TableCellElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TableCellElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(TableCellElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int RowSpan
+		public extern string Width
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Scope
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string VAlign
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Width
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

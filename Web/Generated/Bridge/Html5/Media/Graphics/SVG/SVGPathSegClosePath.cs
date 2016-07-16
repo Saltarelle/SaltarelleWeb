@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPathSegClosePath : SVGPathSeg
 	{
-		internal SVGPathSegClosePath()
-		{
-		}
+		internal extern SVGPathSegClosePath();
 	}
 }

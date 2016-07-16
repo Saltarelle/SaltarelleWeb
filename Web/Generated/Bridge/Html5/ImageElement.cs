@@ -4,278 +4,180 @@
 	public partial class ImageElement : Element
 	{
 		[Template("new Image()")]
-		public ImageElement()
-		{
-		}
+		public extern ImageElement();
 
 		[Template("new Image({width})")]
-		public ImageElement(int width)
-		{
-		}
+		public extern ImageElement(int width);
 
 		[Template("new Image({width}, {height})")]
-		public ImageElement(int width, int height)
-		{
-		}
+		public extern ImageElement(int width, int height);
 
-		public void AddEventListener(ImageElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(ImageElementEvents type, Action listener);
 
-		public void AddEventListener(ImageElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ImageElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(ImageElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(ImageElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(ImageElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ImageElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener)
-		{
-		}
+		public extern void AddEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener);
 
-		public void AddEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture);
 
-		public void AddEventListener(ImageElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(ImageElementEvents type, IEventListener listener);
 
-		public void AddEventListener(ImageElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ImageElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Align
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Align
+		public extern string Alt
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Alt
+		public extern string Border
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Border
+		public extern bool Complete
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool Complete
+		public extern string CrossOrigin
 		{
-			get {
-				return false;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string CrossOrigin
+		public extern int Height
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Height
+		public extern int Hspace
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Hspace
+		public extern bool IsMap
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool IsMap
+		public extern string LongDesc
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string LongDesc
+		public extern string Lowsrc
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Lowsrc
+		public extern string Name
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern int NaturalHeight
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int NaturalHeight
+		public extern int NaturalWidth
 		{
-			get {
-				return 0;
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(ImageElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(ImageElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(ImageElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(ImageElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener);
+
+		public extern void RemoveEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture);
+
+		public extern void RemoveEventListener(ImageElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(ImageElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Src
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int NaturalWidth
+		public extern string UseMap
 		{
-			get {
-				return 0;
-			}
-		}
-
-		public void RemoveEventListener(ImageElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(ImageElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ImageElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(ImageElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(ImageElementEvents type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ImageElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(ImageElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Src
+		public extern int Vspace
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string UseMap
+		public extern int Width
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Vspace
+		public extern int X
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int Width
+		public extern int Y
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public int X
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int Y
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

@@ -3,18 +3,13 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class BarProp
 	{
-		internal BarProp()
-		{
-		}
+		internal extern BarProp();
 
 		[FieldProperty]
-		public bool Visible
+		public extern bool Visible
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

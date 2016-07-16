@@ -3,184 +3,107 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WorkerGlobalScope : EventTarget, IWindowTimers, IWindowBase64
 	{
-		internal WorkerGlobalScope()
-		{
-		}
+		internal extern WorkerGlobalScope();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture);
 
-		public void AddEventListener(WorkerGlobalScopeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(WorkerGlobalScopeEvents type, Action listener);
 
-		public void AddEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener)
-		{
-		}
+		public extern void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
-		public void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture);
 
-		public void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener);
 
-		public void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture);
 
-		public string Atob(string atob)
-		{
-			return null;
-		}
+		public extern string Atob(string atob);
 
-		public string Btoa(string btoa)
-		{
-			return null;
-		}
+		public extern string Btoa(string btoa);
 
-		public void Close()
-		{
-		}
+		public extern void Close();
 
-		public void Dump()
-		{
-		}
+		public extern void Dump();
 
-		public void Dump(string str)
-		{
-		}
+		public extern void Dump(string str);
 
 		[ExpandParams]
-		public void ImportScripts(params string[] urls)
+		public extern void ImportScripts(params string[] urls);
+
+		[FieldProperty]
+		public extern WorkerLocation Location
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public WorkerLocation Location
+		public extern WorkerNavigator Navigator
 		{
-			get {
-				return default(WorkerLocation);
-			}
-		}
-
-		[FieldProperty]
-		public WorkerNavigator Navigator
-		{
-			get {
-				return default(WorkerNavigator);
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onclose")]
-		public HtmlEventHandler OnClose
+		public extern HtmlEventHandler OnClose
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public ErrorEventHandler OnError
+		public extern ErrorEventHandler OnError
 		{
-			get {
-				return default(ErrorEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onoffline")]
-		public HtmlEventHandler OnOffline
+		public extern HtmlEventHandler OnOffline
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ononline")]
-		public HtmlEventHandler OnOnline
+		public extern HtmlEventHandler OnOnline
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture);
 
-		public void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener);
 
-		public void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener)
-		{
-		}
+		public extern void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
-		public void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture);
 
-		public void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener);
 
-		public void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public WorkerGlobalScope Self
+		public extern WorkerGlobalScope Self
 		{
-			get {
-				return default(WorkerGlobalScope);
-			}
+			get;
 		}
 
-		public string ToNativeLineEndings(string @string)
-		{
-			return null;
-		}
+		public extern string ToNativeLineEndings(string @string);
 	}
 }

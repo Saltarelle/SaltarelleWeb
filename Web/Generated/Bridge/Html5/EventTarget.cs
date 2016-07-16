@@ -3,33 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class EventTarget
 	{
-		internal EventTarget()
-		{
-		}
+		internal extern EventTarget();
 
-		public void AddEventListener(string type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(string type, IEventListener listener);
 
-		public void AddEventListener(string type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted)
-		{
-		}
+		public extern void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted);
 
-		public bool DispatchEvent(Event @event)
-		{
-			return false;
-		}
+		public extern bool DispatchEvent(Event @event);
 
-		public void RemoveEventListener(string type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, IEventListener listener);
 
-		public void RemoveEventListener(string type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, IEventListener listener, bool capture);
 	}
 }

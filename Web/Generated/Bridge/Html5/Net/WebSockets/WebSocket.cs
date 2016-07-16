@@ -6,91 +6,52 @@ namespace Bridge.Html5.Net.WebSockets
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebSocket : EventTarget
 	{
-		internal WebSocket()
-		{
-		}
+		internal extern WebSocket();
 
-		public WebSocket(string url)
-		{
-		}
+		public extern WebSocket(string url);
 
-		public WebSocket(string url, string protocols)
-		{
-		}
+		public extern WebSocket(string url, string protocols);
 
-		public WebSocket(string url, string[] protocols)
-		{
-		}
+		public extern WebSocket(string url, string[] protocols);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture);
 
-		public void AddEventListener(WebSocketEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(WebSocketEvents type, Action listener);
 
-		public void AddEventListener(WebSocketEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WebSocketEvents type, Action listener, bool capture);
 
-		public void AddEventListener(WebSocketEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(WebSocketEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(WebSocketEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WebSocketEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener)
-		{
-		}
+		public extern void AddEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener);
 
-		public void AddEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture);
 
-		public void AddEventListener(WebSocketEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(WebSocketEvents type, IEventListener listener);
 
-		public void AddEventListener(WebSocketEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(WebSocketEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern BinaryType BinaryType
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public BinaryType BinaryType
+		public extern int BufferedAmount
 		{
-			get {
-				return default(BinaryType);
-			}
-			set {
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public int BufferedAmount
-		{
-			get {
-				return 0;
-			}
-		}
+		public extern void Close();
 
-		public void Close()
-		{
-		}
+		public extern void Close(ushort code);
 
-		public void Close(ushort code)
-		{
-		}
-
-		public void Close(ushort code, string reason)
-		{
-		}
+		public extern void Close(ushort code, string reason);
 
 		public const ushort CLOSED = 3;
 
@@ -99,133 +60,85 @@ namespace Bridge.Html5.Net.WebSockets
 		public const ushort CONNECTING = 0;
 
 		[FieldProperty]
-		public string Extensions
+		public extern string Extensions
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onclose")]
-		public HtmlEventHandler OnClose
+		public extern HtmlEventHandler OnClose
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmessage")]
-		public HtmlEventHandler OnMessage
+		public extern HtmlEventHandler OnMessage
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onopen")]
-		public HtmlEventHandler OnOpen
+		public extern HtmlEventHandler OnOpen
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		public const ushort OPEN = 1;
 
 		[FieldProperty]
-		public string Protocol
+		public extern string Protocol
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ReadyState ReadyState
+		public extern ReadyState ReadyState
 		{
-			get {
-				return default(ReadyState);
-			}
+			get;
 		}
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture);
 
-		public void RemoveEventListener(WebSocketEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(WebSocketEvents type, Action listener);
 
-		public void RemoveEventListener(WebSocketEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WebSocketEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(WebSocketEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(WebSocketEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(WebSocketEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WebSocketEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener)
-		{
-		}
+		public extern void RemoveEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener);
 
-		public void RemoveEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WebSocketEvents type, HtmlEventHandlerWithTarget<WebSocket> listener, bool capture);
 
-		public void RemoveEventListener(WebSocketEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(WebSocketEvents type, IEventListener listener);
 
-		public void RemoveEventListener(WebSocketEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WebSocketEvents type, IEventListener listener, bool capture);
 
-		public void Send(ArrayBuffer data)
-		{
-		}
+		public extern void Send(ArrayBuffer data);
 
-		public void Send(ArrayBufferView data)
-		{
-		}
+		public extern void Send(ArrayBufferView data);
 
-		public void Send(Blob data)
-		{
-		}
+		public extern void Send(Blob data);
 
-		public void Send(string data)
-		{
-		}
+		public extern void Send(string data);
 
 		[FieldProperty]
-		public string Url
+		public extern string Url
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

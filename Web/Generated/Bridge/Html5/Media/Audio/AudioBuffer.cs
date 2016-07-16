@@ -5,61 +5,40 @@ namespace Bridge.Html5.Media.Audio
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class AudioBuffer
 	{
-		internal AudioBuffer()
+		internal extern AudioBuffer();
+
+		public extern void CopyFromChannel(Float32Array destination, int channelNumber);
+
+		public extern void CopyFromChannel(Float32Array destination, int channelNumber, int startInChannel);
+
+		public extern void CopyToChannel(Float32Array source, int channelNumber);
+
+		public extern void CopyToChannel(Float32Array source, int channelNumber, int startInChannel);
+
+		[FieldProperty]
+		public extern double Duration
 		{
+			get;
 		}
 
-		public void CopyFromChannel(Float32Array destination, int channelNumber)
-		{
-		}
+		public extern Float32Array GetChannelData(int channel);
 
-		public void CopyFromChannel(Float32Array destination, int channelNumber, int startInChannel)
+		[FieldProperty]
+		public extern int Length
 		{
-		}
-
-		public void CopyToChannel(Float32Array source, int channelNumber)
-		{
-		}
-
-		public void CopyToChannel(Float32Array source, int channelNumber, int startInChannel)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public double Duration
+		public extern int NumberOfChannels
 		{
-			get {
-				return 0;
-			}
-		}
-
-		public Float32Array GetChannelData(int channel)
-		{
-			return default(Float32Array);
+			get;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern double SampleRate
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int NumberOfChannels
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public double SampleRate
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

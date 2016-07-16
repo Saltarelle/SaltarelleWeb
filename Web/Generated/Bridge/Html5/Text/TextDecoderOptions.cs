@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class TextDecoderOptions
 	{
-		public bool Fatal
+		public extern bool Fatal
 		{
 			get;
 			set;

@@ -3,123 +3,70 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGMatrix
 	{
-		internal SVGMatrix()
+		internal extern SVGMatrix();
+
+		[FieldProperty]
+		public extern double A
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double A
+		public extern double B
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double B
+		public extern double C
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double C
+		public extern double D
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double D
+		public extern double E
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double E
+		public extern double F
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		[FieldProperty]
-		public double F
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
+		public extern SVGMatrix FlipX();
 
-		public SVGMatrix FlipX()
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix FlipY();
 
-		public SVGMatrix FlipY()
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix Inverse();
 
-		public SVGMatrix Inverse()
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix Multiply(SVGMatrix secondMatrix);
 
-		public SVGMatrix Multiply(SVGMatrix secondMatrix)
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix Rotate(double angle);
 
-		public SVGMatrix Rotate(double angle)
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix RotateFromVector(double x, double y);
 
-		public SVGMatrix RotateFromVector(double x, double y)
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix Scale(double scaleFactor);
 
-		public SVGMatrix Scale(double scaleFactor)
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix ScaleNonUniform(double scaleFactorX, double scaleFactorY);
 
-		public SVGMatrix ScaleNonUniform(double scaleFactorX, double scaleFactorY)
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix SkewX(double angle);
 
-		public SVGMatrix SkewX(double angle)
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix SkewY(double angle);
 
-		public SVGMatrix SkewY(double angle)
-		{
-			return default(SVGMatrix);
-		}
-
-		public SVGMatrix Translate(double x, double y)
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix Translate(double x, double y);
 	}
 }

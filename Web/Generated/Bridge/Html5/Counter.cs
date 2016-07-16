@@ -3,32 +3,24 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Counter
 	{
-		internal Counter()
+		internal extern Counter();
+
+		[FieldProperty]
+		public extern string Identifier
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Identifier
+		public extern string ListStyle
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string ListStyle
+		public extern string Separator
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Separator
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

@@ -3,40 +3,30 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Rect
 	{
-		internal Rect()
+		internal extern Rect();
+
+		[FieldProperty]
+		public extern CSSPrimitiveValue Bottom
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public CSSPrimitiveValue Bottom
+		public extern CSSPrimitiveValue Left
 		{
-			get {
-				return default(CSSPrimitiveValue);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public CSSPrimitiveValue Left
+		public extern CSSPrimitiveValue Right
 		{
-			get {
-				return default(CSSPrimitiveValue);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public CSSPrimitiveValue Right
+		public extern CSSPrimitiveValue Top
 		{
-			get {
-				return default(CSSPrimitiveValue);
-			}
-		}
-
-		[FieldProperty]
-		public CSSPrimitiveValue Top
-		{
-			get {
-				return default(CSSPrimitiveValue);
-			}
+			get;
 		}
 	}
 }

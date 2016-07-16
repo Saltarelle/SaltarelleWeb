@@ -5,94 +5,67 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class UIEvent : Event
 	{
-		internal UIEvent()
-		{
-		}
+		internal extern UIEvent();
 
-		public UIEvent(string type)
-		{
-		}
+		public extern UIEvent(string type);
 
-		public UIEvent(string type, UIEventInit eventInitDict)
+		public extern UIEvent(string type, UIEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern bool CancelBubble
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool CancelBubble
+		public extern int Detail
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern void InitUIEvent(string aType, bool aCanBubble, bool aCancelable, WindowInstance aView, int aDetail);
+
+		[FieldProperty]
+		public extern bool IsChar
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public int Detail
+		public extern int LayerX
 		{
-			get {
-				return 0;
-			}
-		}
-
-		public void InitUIEvent(string aType, bool aCanBubble, bool aCancelable, WindowInstance aView, int aDetail)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool IsChar
+		public extern int LayerY
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int LayerX
+		public extern int PageX
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int LayerY
+		public extern int PageY
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int PageX
+		public extern int RangeOffset
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int PageY
+		public extern XmlNode RangeParent
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int RangeOffset
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public XmlNode RangeParent
-		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 
 		[Name("SCROLL_PAGE_DOWN")]
@@ -102,19 +75,15 @@ namespace Bridge.Html5
 		public const int SCROLL_PAGE_UP = -32768;
 
 		[FieldProperty]
-		public WindowInstance View
+		public extern WindowInstance View
 		{
-			get {
-				return default(WindowInstance);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int Which
+		public extern int Which
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

@@ -3,62 +3,42 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class NodeIterator
 	{
-		internal NodeIterator()
+		internal extern NodeIterator();
+
+		public extern void Detach();
+
+		[FieldProperty]
+		public extern INodeFilter Filter
 		{
+			get;
 		}
 
-		public void Detach()
+		public extern XmlNode NextNode();
+
+		[FieldProperty]
+		public extern bool PointerBeforeReferenceNode
 		{
+			get;
+		}
+
+		public extern XmlNode PreviousNode();
+
+		[FieldProperty]
+		public extern XmlNode ReferenceNode
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public INodeFilter Filter
+		public extern XmlNode Root
 		{
-			get {
-				return default(INodeFilter);
-			}
-		}
-
-		public XmlNode NextNode()
-		{
-			return default(XmlNode);
+			get;
 		}
 
 		[FieldProperty]
-		public bool PointerBeforeReferenceNode
+		public extern NodeFilter WhatToShow
 		{
-			get {
-				return false;
-			}
-		}
-
-		public XmlNode PreviousNode()
-		{
-			return default(XmlNode);
-		}
-
-		[FieldProperty]
-		public XmlNode ReferenceNode
-		{
-			get {
-				return default(XmlNode);
-			}
-		}
-
-		[FieldProperty]
-		public XmlNode Root
-		{
-			get {
-				return default(XmlNode);
-			}
-		}
-
-		[FieldProperty]
-		public NodeFilter WhatToShow
-		{
-			get {
-				return default(NodeFilter);
-			}
+			get;
 		}
 	}
 }

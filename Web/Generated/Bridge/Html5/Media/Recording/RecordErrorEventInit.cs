@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class RecordErrorEventInit : EventInit
 	{
-		public string Name
+		public extern string Name
 		{
 			get;
 			set;

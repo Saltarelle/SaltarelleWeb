@@ -3,24 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class RecordErrorEvent : Event
 	{
-		internal RecordErrorEvent()
-		{
-		}
+		internal extern RecordErrorEvent();
 
-		public RecordErrorEvent(string type)
-		{
-		}
+		public extern RecordErrorEvent(string type);
 
-		public RecordErrorEvent(string type, RecordErrorEventInit eventInitDict)
-		{
-		}
+		public extern RecordErrorEvent(string type, RecordErrorEventInit eventInitDict);
 
 		[FieldProperty]
-		public string Name
+		public extern string Name
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

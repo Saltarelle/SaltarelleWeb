@@ -5,54 +5,33 @@ namespace Bridge.Html5.Media.Audio
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class AudioParam
 	{
-		internal AudioParam()
-		{
-		}
+		internal extern AudioParam();
 
-		public void CancelScheduledValues(double startTime)
-		{
-		}
+		public extern void CancelScheduledValues(double startTime);
 
 		[FieldProperty]
-		public double DefaultValue
+		public extern double DefaultValue
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void ExponentialRampToValueAtTime(double value, double endTime)
-		{
-		}
+		public extern void ExponentialRampToValueAtTime(double value, double endTime);
 
-		public void LinearRampToValueAtTime(double value, double endTime)
-		{
-		}
+		public extern void LinearRampToValueAtTime(double value, double endTime);
 
-		public void SetTargetAtTime(double target, double startTime, double timeConstant)
-		{
-		}
+		public extern void SetTargetAtTime(double target, double startTime, double timeConstant);
 
-		public void SetTargetValueAtTime(double target, double startTime, double timeConstant)
-		{
-		}
+		public extern void SetTargetValueAtTime(double target, double startTime, double timeConstant);
 
-		public void SetValueAtTime(double value, double startTime)
-		{
-		}
+		public extern void SetValueAtTime(double value, double startTime);
 
-		public void SetValueCurveAtTime(Float32Array values, double startTime, double duration)
-		{
-		}
+		public extern void SetValueCurveAtTime(Float32Array values, double startTime, double duration);
 
 		[FieldProperty]
-		public double Value
+		public extern double Value
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

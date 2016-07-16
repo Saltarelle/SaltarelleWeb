@@ -3,26 +3,19 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimatedString
 	{
-		internal SVGAnimatedString()
+		internal extern SVGAnimatedString();
+
+		[FieldProperty]
+		public extern string AnimVal
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string AnimVal
+		public extern string BaseVal
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string BaseVal
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

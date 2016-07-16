@@ -3,13 +3,13 @@
 	[External, Serializable]
 	public partial class ClipboardEventInit : EventInit
 	{
-		public string Data
+		public extern string Data
 		{
 			get;
 			set;
 		}
 
-		public string DataType
+		public extern string DataType
 		{
 			get;
 			set;

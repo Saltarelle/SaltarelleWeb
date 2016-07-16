@@ -3,48 +3,29 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Storage
 	{
-		internal Storage()
-		{
-		}
+		internal extern Storage();
 
 		[IndexerName("__Item"), FieldProperty]
 		public string this[string key]
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void Clear()
-		{
-		}
+		public extern void Clear();
 
-		public string GetItem(string key)
-		{
-			return null;
-		}
+		public extern string GetItem(string key);
 
-		public string Key(int index)
-		{
-			return null;
-		}
+		public extern string Key(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void RemoveItem(string key)
-		{
-		}
+		public extern void RemoveItem(string key);
 
-		public void SetItem(string key, string value)
-		{
-		}
+		public extern void SetItem(string key, string value);
 	}
 }

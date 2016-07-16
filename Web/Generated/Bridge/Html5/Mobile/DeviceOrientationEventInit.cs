@@ -3,25 +3,25 @@
 	[External, Serializable]
 	public partial class DeviceOrientationEventInit : EventInit
 	{
-		public bool Absolute
+		public extern bool Absolute
 		{
 			get;
 			set;
 		}
 
-		public double Alpha
+		public extern double Alpha
 		{
 			get;
 			set;
 		}
 
-		public double Beta
+		public extern double Beta
 		{
 			get;
 			set;
 		}
 
-		public double Gamma
+		public extern double Gamma
 		{
 			get;
 			set;

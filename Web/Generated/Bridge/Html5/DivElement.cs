@@ -3,98 +3,53 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'DIV'"), Name("Element")]
 	public partial class DivElement : Element
 	{
-		internal DivElement()
-		{
-		}
+		internal extern DivElement();
 
-		public void AddEventListener(DivElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(DivElementEvents type, Action listener);
 
-		public void AddEventListener(DivElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DivElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(DivElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(DivElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(DivElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DivElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(DivElementEvents type, HtmlEventHandlerWithTarget<DivElement> listener)
-		{
-		}
+		public extern void AddEventListener(DivElementEvents type, HtmlEventHandlerWithTarget<DivElement> listener);
 
-		public void AddEventListener(DivElementEvents type, HtmlEventHandlerWithTarget<DivElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DivElementEvents type, HtmlEventHandlerWithTarget<DivElement> listener, bool capture);
 
-		public void AddEventListener(DivElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(DivElementEvents type, IEventListener listener);
 
-		public void AddEventListener(DivElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DivElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DivElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DivElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DivElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DivElement> listener, bool capture);
 
 		[FieldProperty]
-		public string Align
+		public extern string Align
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(DivElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(DivElementEvents type, Action listener);
 
-		public void RemoveEventListener(DivElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(DivElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(DivElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(DivElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(DivElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(DivElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(DivElementEvents type, HtmlEventHandlerWithTarget<DivElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(DivElementEvents type, HtmlEventHandlerWithTarget<DivElement> listener);
 
-		public void RemoveEventListener(DivElementEvents type, HtmlEventHandlerWithTarget<DivElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(DivElementEvents type, HtmlEventHandlerWithTarget<DivElement> listener, bool capture);
 
-		public void RemoveEventListener(DivElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(DivElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(DivElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(DivElementEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DivElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DivElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DivElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DivElement> listener, bool capture);
 	}
 }

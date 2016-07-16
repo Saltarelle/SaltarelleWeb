@@ -3,25 +3,25 @@
 	[External, Serializable]
 	public partial class LifecycleCallbacks
 	{
-		public LifecycleAttachedCallback AttachedCallback
+		public extern LifecycleAttachedCallback AttachedCallback
 		{
 			get;
 			set;
 		}
 
-		public LifecycleAttributeChangedCallback AttributeChangedCallback
+		public extern LifecycleAttributeChangedCallback AttributeChangedCallback
 		{
 			get;
 			set;
 		}
 
-		public LifecycleCreatedCallback CreatedCallback
+		public extern LifecycleCreatedCallback CreatedCallback
 		{
 			get;
 			set;
 		}
 
-		public LifecycleDetachedCallback DetachedCallback
+		public extern LifecycleDetachedCallback DetachedCallback
 		{
 			get;
 			set;

@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimatedLengthList
 	{
-		internal SVGAnimatedLengthList()
+		internal extern SVGAnimatedLengthList();
+
+		[FieldProperty]
+		public extern SVGLengthList AnimVal
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGLengthList AnimVal
+		public extern SVGLengthList BaseVal
 		{
-			get {
-				return default(SVGLengthList);
-			}
-		}
-
-		[FieldProperty]
-		public SVGLengthList BaseVal
-		{
-			get {
-				return default(SVGLengthList);
-			}
+			get;
 		}
 	}
 }

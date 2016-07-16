@@ -3,60 +3,42 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class StorageEvent : Event
 	{
-		internal StorageEvent()
-		{
-		}
+		internal extern StorageEvent();
 
-		public StorageEvent(string type)
-		{
-		}
+		public extern StorageEvent(string type);
 
-		public StorageEvent(string type, StorageEventInit eventInitDict)
-		{
-		}
+		public extern StorageEvent(string type, StorageEventInit eventInitDict);
 
-		public void InitStorageEvent(string type, bool canBubble, bool cancelable, string key, string oldValue, string newValue, string url, Storage storageArea)
+		public extern void InitStorageEvent(string type, bool canBubble, bool cancelable, string key, string oldValue, string newValue, string url, Storage storageArea);
+
+		[FieldProperty]
+		public extern string Key
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Key
+		public extern string NewValue
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string NewValue
+		public extern string OldValue
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string OldValue
+		public extern Storage StorageArea
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public Storage StorageArea
+		public extern string Url
 		{
-			get {
-				return default(Storage);
-			}
-		}
-
-		[FieldProperty]
-		public string Url
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class FilePropertyBag : BlobPropertyBag
 	{
-		public string Name
+		public extern string Name
 		{
 			get;
 			set;

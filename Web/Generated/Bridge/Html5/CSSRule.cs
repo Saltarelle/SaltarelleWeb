@@ -3,21 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CSSRule
 	{
-		internal CSSRule()
-		{
-		}
+		internal extern CSSRule();
 
 		[Name("CHARSET_RULE")]
 		public const ushort CHARSET_RULE = 2;
 
 		[FieldProperty]
-		public string CssText
+		public extern string CssText
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[Name("FONT_FACE_RULE")]
@@ -36,30 +31,24 @@
 		public const ushort PAGE_RULE = 6;
 
 		[FieldProperty]
-		public CSSRule ParentRule
+		public extern CSSRule ParentRule
 		{
-			get {
-				return default(CSSRule);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public CSSStyleSheet ParentStyleSheet
+		public extern CSSStyleSheet ParentStyleSheet
 		{
-			get {
-				return default(CSSStyleSheet);
-			}
+			get;
 		}
 
 		[Name("STYLE_RULE")]
 		public const ushort STYLE_RULE = 1;
 
 		[FieldProperty]
-		public CSSRuleType Type
+		public extern CSSRuleType Type
 		{
-			get {
-				return default(CSSRuleType);
-			}
+			get;
 		}
 	}
 }

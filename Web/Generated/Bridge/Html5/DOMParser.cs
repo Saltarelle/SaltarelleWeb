@@ -5,9 +5,6 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMParser
 	{
-		public DocumentBase ParseFromString(string str, DOMParserSupportedType type)
-		{
-			return default(DocumentBase);
-		}
+		public extern DocumentBase ParseFromString(string str, DOMParserSupportedType type);
 	}
 }

@@ -5,40 +5,25 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TouchList
 	{
-		internal TouchList()
-		{
-		}
+		internal extern TouchList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public Touch this[int index]
 		{
-			get {
-				return default(Touch);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<Touch> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<Touch> GetEnumerator();
 
-		public Touch IdentifiedTouch(int identifier)
-		{
-			return default(Touch);
-		}
+		public extern Touch IdentifiedTouch(int identifier);
 
-		public Touch Item(int index)
-		{
-			return default(Touch);
-		}
+		public extern Touch Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

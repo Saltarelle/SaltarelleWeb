@@ -3,170 +3,99 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class AudioNode : EventTarget
 	{
-		internal AudioNode()
-		{
-		}
+		internal extern AudioNode();
 
-		public void AddEventListener(AudioNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(AudioNodeEvents type, Action listener);
 
-		public void AddEventListener(AudioNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(AudioNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(AudioNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(AudioNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(AudioNodeEvents type, HtmlEventHandlerWithTarget<AudioNode> listener)
-		{
-		}
+		public extern void AddEventListener(AudioNodeEvents type, HtmlEventHandlerWithTarget<AudioNode> listener);
 
-		public void AddEventListener(AudioNodeEvents type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioNodeEvents type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture);
 
-		public void AddEventListener(AudioNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(AudioNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(AudioNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioNodeEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture);
+
+		[FieldProperty]
+		public extern int ChannelCount
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int ChannelCount
+		public extern ChannelCountMode ChannelCountMode
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public ChannelCountMode ChannelCountMode
+		public extern ChannelInterpretation ChannelInterpretation
 		{
-			get {
-				return default(ChannelCountMode);
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void Connect(AudioNode destination);
+
+		public extern void Connect(AudioNode destination, int output);
+
+		public extern void Connect(AudioNode destination, int output, int input);
+
+		public extern void Connect(AudioParam destination);
+
+		public extern void Connect(AudioParam destination, int output);
+
+		[FieldProperty]
+		public extern AudioContext Context
+		{
+			get;
+		}
+
+		public extern void Disconnect();
+
+		public extern void Disconnect(int output);
+
+		[FieldProperty]
+		public extern int NumberOfInputs
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public ChannelInterpretation ChannelInterpretation
+		public extern int NumberOfOutputs
 		{
-			get {
-				return default(ChannelInterpretation);
-			}
-			set {
-			}
+			get;
 		}
 
-		public void Connect(AudioNode destination)
-		{
-		}
+		public extern void RemoveEventListener(AudioNodeEvents type, Action listener);
 
-		public void Connect(AudioNode destination, int output)
-		{
-		}
+		public extern void RemoveEventListener(AudioNodeEvents type, Action listener, bool capture);
 
-		public void Connect(AudioNode destination, int output, int input)
-		{
-		}
+		public extern void RemoveEventListener(AudioNodeEvents type, HtmlEventHandler listener);
 
-		public void Connect(AudioParam destination)
-		{
-		}
+		public extern void RemoveEventListener(AudioNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void Connect(AudioParam destination, int output)
-		{
-		}
+		public extern void RemoveEventListener(AudioNodeEvents type, HtmlEventHandlerWithTarget<AudioNode> listener);
 
-		[FieldProperty]
-		public AudioContext Context
-		{
-			get {
-				return default(AudioContext);
-			}
-		}
+		public extern void RemoveEventListener(AudioNodeEvents type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture);
 
-		public void Disconnect()
-		{
-		}
+		public extern void RemoveEventListener(AudioNodeEvents type, IEventListener listener);
 
-		public void Disconnect(int output)
-		{
-		}
+		public extern void RemoveEventListener(AudioNodeEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public int NumberOfInputs
-		{
-			get {
-				return 0;
-			}
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener);
 
-		[FieldProperty]
-		public int NumberOfOutputs
-		{
-			get {
-				return 0;
-			}
-		}
-
-		public void RemoveEventListener(AudioNodeEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(AudioNodeEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(AudioNodeEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(AudioNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(AudioNodeEvents type, HtmlEventHandlerWithTarget<AudioNode> listener)
-		{
-		}
-
-		public void RemoveEventListener(AudioNodeEvents type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(AudioNodeEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(AudioNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture);
 	}
 }

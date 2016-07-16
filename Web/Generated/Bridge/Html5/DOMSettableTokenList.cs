@@ -3,18 +3,13 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMSettableTokenList : TokenList
 	{
-		internal DOMSettableTokenList()
-		{
-		}
+		internal extern DOMSettableTokenList();
 
 		[FieldProperty]
-		public string Value
+		public extern string Value
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

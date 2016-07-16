@@ -3,69 +3,50 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WorkerNavigator
 	{
-		internal WorkerNavigator()
+		internal extern WorkerNavigator();
+
+		[FieldProperty]
+		public extern string AppCodeName
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string AppCodeName
+		public extern string AppName
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string AppName
+		public extern string AppVersion
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string AppVersion
+		public extern bool OnLine
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool OnLine
+		public extern string Platform
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Platform
+		public extern string Product
 		{
-			get {
-				return null;
-			}
+			get;
 		}
+
+		public extern bool TaintEnabled();
 
 		[FieldProperty]
-		public string Product
+		public extern string UserAgent
 		{
-			get {
-				return null;
-			}
-		}
-
-		public bool TaintEnabled()
-		{
-			return false;
-		}
-
-		[FieldProperty]
-		public string UserAgent
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

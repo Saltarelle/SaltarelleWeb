@@ -3,120 +3,70 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGTextPathElement : SVGTextContentElement
 	{
-		internal SVGTextPathElement()
-		{
-		}
+		internal extern SVGTextPathElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture);
 
-		public void AddEventListener(SVGTextPathElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGTextPathElementEvents type, Action listener);
 
-		public void AddEventListener(SVGTextPathElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGTextPathElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener);
 
-		public void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture);
 
-		public void AddEventListener(SVGTextPathElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGTextPathElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGTextPathElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGTextPathElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedString Href
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString Href
+		public extern SVGAnimatedEnumeration<SVGTextPathMethod> Method
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGTextPathElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGTextPathElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener);
+
+		public extern void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGTextPathElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGTextPathElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedEnumeration<SVGTextPathSpacing> Spacing
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGTextPathMethod> Method
+		public extern SVGAnimatedLength StartOffset
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGTextPathMethod>);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGTextPathElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGTextPathElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGTextPathElementEvents type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGTextPathElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGTextPathElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGTextPathSpacing> Spacing
-		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGTextPathSpacing>);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength StartOffset
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[Name("TEXTPATH_METHODTYPE_ALIGN")]

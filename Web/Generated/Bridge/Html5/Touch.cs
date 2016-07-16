@@ -3,104 +3,78 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Touch
 	{
-		internal Touch()
+		internal extern Touch();
+
+		[FieldProperty]
+		public extern int ClientX
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public int ClientX
+		public extern int ClientY
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ClientY
+		public extern double Force
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Force
+		public extern int Identifier
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int Identifier
+		public extern int PageX
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int PageX
+		public extern int PageY
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int PageY
+		public extern int RadiusX
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int RadiusX
+		public extern int RadiusY
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int RadiusY
+		public extern double RotationAngle
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double RotationAngle
+		public extern int ScreenX
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ScreenX
+		public extern int ScreenY
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ScreenY
+		public extern EventTarget Target
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public EventTarget Target
-		{
-			get {
-				return default(EventTarget);
-			}
+			get;
 		}
 	}
 }

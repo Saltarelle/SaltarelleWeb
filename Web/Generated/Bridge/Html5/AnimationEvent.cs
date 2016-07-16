@@ -3,40 +3,28 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class AnimationEvent : Event
 	{
-		internal AnimationEvent()
-		{
-		}
+		internal extern AnimationEvent();
 
-		public AnimationEvent(string type)
-		{
-		}
+		public extern AnimationEvent(string type);
 
-		public AnimationEvent(string type, AnimationEventInit eventInitDict)
+		public extern AnimationEvent(string type, AnimationEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern string AnimationName
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string AnimationName
+		public extern double ElapsedTime
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double ElapsedTime
+		public extern string PseudoElement
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public string PseudoElement
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

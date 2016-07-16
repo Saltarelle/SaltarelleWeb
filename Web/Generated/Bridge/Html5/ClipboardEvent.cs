@@ -3,24 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class ClipboardEvent : Event
 	{
-		internal ClipboardEvent()
-		{
-		}
+		internal extern ClipboardEvent();
 
-		public ClipboardEvent(string type)
-		{
-		}
+		public extern ClipboardEvent(string type);
 
-		public ClipboardEvent(string type, ClipboardEventInit eventInitDict)
-		{
-		}
+		public extern ClipboardEvent(string type, ClipboardEventInit eventInitDict);
 
 		[FieldProperty]
-		public DataTransfer ClipboardData
+		public extern DataTransfer ClipboardData
 		{
-			get {
-				return default(DataTransfer);
-			}
+			get;
 		}
 	}
 }

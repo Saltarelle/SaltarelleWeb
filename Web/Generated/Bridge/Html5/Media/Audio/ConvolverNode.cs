@@ -3,108 +3,60 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class ConvolverNode : AudioNode
 	{
-		internal ConvolverNode()
-		{
-		}
+		internal extern ConvolverNode();
 
-		public void AddEventListener(ConvolverNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(ConvolverNodeEvents type, Action listener);
 
-		public void AddEventListener(ConvolverNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ConvolverNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(ConvolverNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(ConvolverNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(ConvolverNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ConvolverNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(ConvolverNodeEvents type, HtmlEventHandlerWithTarget<ConvolverNode> listener)
-		{
-		}
+		public extern void AddEventListener(ConvolverNodeEvents type, HtmlEventHandlerWithTarget<ConvolverNode> listener);
 
-		public void AddEventListener(ConvolverNodeEvents type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ConvolverNodeEvents type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture);
 
-		public void AddEventListener(ConvolverNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(ConvolverNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(ConvolverNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ConvolverNodeEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture);
+
+		[FieldProperty]
+		public extern AudioBuffer Buffer
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public AudioBuffer Buffer
+		public extern bool Normalize
 		{
-			get {
-				return default(AudioBuffer);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		[FieldProperty]
-		public bool Normalize
-		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
+		public extern void RemoveEventListener(ConvolverNodeEvents type, Action listener);
 
-		public void RemoveEventListener(ConvolverNodeEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(ConvolverNodeEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(ConvolverNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ConvolverNodeEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(ConvolverNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(ConvolverNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(ConvolverNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ConvolverNodeEvents type, HtmlEventHandlerWithTarget<ConvolverNode> listener);
 
-		public void RemoveEventListener(ConvolverNodeEvents type, HtmlEventHandlerWithTarget<ConvolverNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(ConvolverNodeEvents type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture);
 
-		public void RemoveEventListener(ConvolverNodeEvents type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ConvolverNodeEvents type, IEventListener listener);
 
-		public void RemoveEventListener(ConvolverNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(ConvolverNodeEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(ConvolverNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture);
 	}
 }

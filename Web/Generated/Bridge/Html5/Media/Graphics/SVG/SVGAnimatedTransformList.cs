@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimatedTransformList
 	{
-		internal SVGAnimatedTransformList()
+		internal extern SVGAnimatedTransformList();
+
+		[FieldProperty]
+		public extern SVGTransformList AnimVal
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGTransformList AnimVal
+		public extern SVGTransformList BaseVal
 		{
-			get {
-				return default(SVGTransformList);
-			}
-		}
-
-		[FieldProperty]
-		public SVGTransformList BaseVal
-		{
-			get {
-				return default(SVGTransformList);
-			}
+			get;
 		}
 	}
 }

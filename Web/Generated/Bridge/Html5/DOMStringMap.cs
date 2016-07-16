@@ -3,23 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMStringMap
 	{
-		internal DOMStringMap()
-		{
-		}
+		internal extern DOMStringMap();
 
 		[IndexerName("__Item"), FieldProperty]
 		public string this[string name]
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[Template("delete {this}[{name}]")]
-		public void Delete(string name)
-		{
-		}
+		public extern void Delete(string name);
 	}
 }

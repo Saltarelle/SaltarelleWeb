@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class RTCPeerConnectionIceEventInit : EventInit
 	{
-		public RTCIceCandidate Candidate
+		public extern RTCIceCandidate Candidate
 		{
 			get;
 			set;

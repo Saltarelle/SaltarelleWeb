@@ -3,13 +3,13 @@
 	[External, Serializable]
 	public partial class RTCSessionDescriptionInit
 	{
-		public string Sdp
+		public extern string Sdp
 		{
 			get;
 			set;
 		}
 
-		public RTCSdpType? Type
+		public extern RTCSdpType? Type
 		{
 			get;
 			set;

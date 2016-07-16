@@ -3,48 +3,34 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGRect
 	{
-		internal SVGRect()
+		internal extern SVGRect();
+
+		[FieldProperty]
+		public extern double Height
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Height
+		public extern double Width
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Width
+		public extern double X
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double X
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Y
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

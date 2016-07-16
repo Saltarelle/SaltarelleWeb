@@ -5,35 +5,23 @@ namespace Bridge.Html5.Net.Messaging
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class MessagePortList
 	{
-		internal MessagePortList()
-		{
-		}
+		internal extern MessagePortList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public MessagePort this[int index]
 		{
-			get {
-				return default(MessagePort);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<MessagePort> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<MessagePort> GetEnumerator();
 
-		public MessagePort Item(int index)
-		{
-			return default(MessagePort);
-		}
+		public extern MessagePort Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

@@ -3,147 +3,83 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("CharacterData")]
 	public partial class XmlCharacterData : XmlNode
 	{
-		internal XmlCharacterData()
+		internal extern XmlCharacterData();
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture);
+
+		public extern void AddEventListener(XmlCharacterDataEvents type, Action listener);
+
+		public extern void AddEventListener(XmlCharacterDataEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener);
+
+		public extern void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture);
+
+		public extern void AddEventListener(XmlCharacterDataEvents type, IEventListener listener);
+
+		public extern void AddEventListener(XmlCharacterDataEvents type, IEventListener listener, bool capture);
+
+		public extern void AppendData(string data);
+
+		[FieldProperty]
+		public extern string Data
 		{
+			get;
+			set;
 		}
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener)
-		{
-		}
+		public extern void DeleteData(int offset, int count);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture)
-		{
-		}
+		public extern void InsertData(int offset, string data);
 
-		public void AddEventListener(XmlCharacterDataEvents type, Action listener)
+		[FieldProperty]
+		public extern int Length
 		{
-		}
-
-		public void AddEventListener(XmlCharacterDataEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener)
-		{
-		}
-
-		public void AddEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(XmlCharacterDataEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(XmlCharacterDataEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void AppendData(string data)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Data
+		public extern XmlElement NextElementSibling
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void DeleteData(int offset, int count)
-		{
-		}
-
-		public void InsertData(int offset, string data)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern XmlElement PreviousElementSibling
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public XmlElement NextElementSibling
-		{
-			get {
-				return default(XmlElement);
-			}
-		}
+		public extern void Remove();
 
-		[FieldProperty]
-		public XmlElement PreviousElementSibling
-		{
-			get {
-				return default(XmlElement);
-			}
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener);
 
-		public void Remove()
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlCharacterDataEvents type, Action listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlCharacterDataEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(XmlCharacterDataEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(XmlCharacterDataEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener);
 
-		public void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture);
 
-		public void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlCharacterDataEvents type, IEventListener listener);
 
-		public void RemoveEventListener(XmlCharacterDataEvents type, HtmlEventHandlerWithTarget<XmlCharacterData> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlCharacterDataEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(XmlCharacterDataEvents type, IEventListener listener)
-		{
-		}
+		public extern void ReplaceData(int offset, int count, string data);
 
-		public void RemoveEventListener(XmlCharacterDataEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void ReplaceData(int offset, int count, string data)
-		{
-		}
-
-		public string SubstringData(int offset, int count)
-		{
-			return null;
-		}
+		public extern string SubstringData(int offset, int count);
 	}
 }

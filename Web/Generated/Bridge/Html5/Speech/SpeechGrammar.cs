@@ -3,28 +3,20 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechGrammar
 	{
-		public SpeechGrammar()
+		public extern SpeechGrammar();
+
+		[FieldProperty]
+		public extern string Src
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Src
+		public extern double Weight
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Weight
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

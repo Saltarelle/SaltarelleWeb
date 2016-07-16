@@ -5,48 +5,31 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("HTMLCollection")]
 	public partial class ElementCollection
 	{
-		internal ElementCollection()
-		{
-		}
+		internal extern ElementCollection();
 
 		[IndexerName("__Item"), FieldProperty]
 		public Element this[int index]
 		{
-			get {
-				return default(Element);
-			}
+			get;
 		}
 
 		[IndexerName("__Item"), FieldProperty]
 		public Element this[string name]
 		{
-			get {
-				return default(Element);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<Element> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<Element> GetEnumerator();
 
-		public Element Item(int index)
-		{
-			return default(Element);
-		}
+		public extern Element Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public Element NamedItem(string name)
-		{
-			return default(Element);
-		}
+		public extern Element NamedItem(string name);
 	}
 }

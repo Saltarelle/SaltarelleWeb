@@ -3,29 +3,20 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Performance")]
 	public partial class PerformanceDetails
 	{
-		internal PerformanceDetails()
-		{
-		}
+		internal extern PerformanceDetails();
 
 		[FieldProperty]
-		public PerformanceNavigation Navigation
+		public extern PerformanceNavigation Navigation
 		{
-			get {
-				return default(PerformanceNavigation);
-			}
+			get;
 		}
 
-		public double Now()
-		{
-			return 0;
-		}
+		public extern double Now();
 
 		[FieldProperty]
-		public PerformanceTiming Timing
+		public extern PerformanceTiming Timing
 		{
-			get {
-				return default(PerformanceTiming);
-			}
+			get;
 		}
 	}
 }

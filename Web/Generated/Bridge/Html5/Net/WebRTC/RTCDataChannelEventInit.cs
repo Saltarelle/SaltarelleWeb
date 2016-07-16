@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class RTCDataChannelEventInit : EventInit
 	{
-		public RTCDataChannel Channel
+		public extern RTCDataChannel Channel
 		{
 			get;
 			set;

@@ -3,168 +3,106 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Screen : EventTarget
 	{
-		internal Screen()
-		{
-		}
+		internal extern Screen();
 
-		public void AddEventListener(ScreenEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(ScreenEvents type, Action listener);
 
-		public void AddEventListener(ScreenEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ScreenEvents type, Action listener, bool capture);
 
-		public void AddEventListener(ScreenEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(ScreenEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(ScreenEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ScreenEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener)
-		{
-		}
+		public extern void AddEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener);
 
-		public void AddEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener, bool capture);
 
-		public void AddEventListener(ScreenEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(ScreenEvents type, IEventListener listener);
 
-		public void AddEventListener(ScreenEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ScreenEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture);
+
+		[FieldProperty]
+		public extern int AvailHeight
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public int AvailHeight
+		public extern int AvailLeft
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int AvailLeft
+		public extern int AvailTop
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int AvailTop
+		public extern int AvailWidth
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int AvailWidth
+		public extern int ColorDepth
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ColorDepth
+		public extern int Height
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int Height
+		public extern int Left
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int Left
+		public extern int PixelDepth
 		{
-			get {
-				return 0;
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(ScreenEvents type, Action listener);
+
+		public extern void RemoveEventListener(ScreenEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(ScreenEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(ScreenEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener);
+
+		public extern void RemoveEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener, bool capture);
+
+		public extern void RemoveEventListener(ScreenEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(ScreenEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture);
+
+		[FieldProperty]
+		public extern int Top
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public int PixelDepth
+		public extern int Width
 		{
-			get {
-				return 0;
-			}
-		}
-
-		public void RemoveEventListener(ScreenEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(ScreenEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ScreenEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(ScreenEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener)
-		{
-		}
-
-		public void RemoveEventListener(ScreenEvents type, HtmlEventHandlerWithTarget<Screen> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ScreenEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(ScreenEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public int Top
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int Width
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

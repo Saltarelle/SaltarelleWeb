@@ -3,112 +3,64 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFEPointLightElement : SVGElement
 	{
-		internal SVGFEPointLightElement()
-		{
-		}
+		internal extern SVGFEPointLightElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEPointLightElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEPointLightElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFEPointLightElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEPointLightElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFEPointLightElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEPointLightElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFEPointLightElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEPointLightElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFEPointLightElementEvents type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEPointLightElementEvents type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener);
 
-		public void AddEventListener(SVGFEPointLightElementEvents type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEPointLightElementEvents type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEPointLightElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEPointLightElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFEPointLightElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEPointLightElementEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGFEPointLightElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGFEPointLightElementEvents type, Action listener);
 
-		public void RemoveEventListener(SVGFEPointLightElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGFEPointLightElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SVGFEPointLightElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGFEPointLightElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SVGFEPointLightElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGFEPointLightElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SVGFEPointLightElementEvents type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGFEPointLightElementEvents type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener);
 
-		public void RemoveEventListener(SVGFEPointLightElementEvents type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGFEPointLightElementEvents type, HtmlEventHandlerWithTarget<SVGFEPointLightElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGFEPointLightElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGFEPointLightElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SVGFEPointLightElementEvents type, IEventListener listener, bool capture)
+		public extern void RemoveEventListener(SVGFEPointLightElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedNumber X
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber X
+		public extern SVGAnimatedNumber Y
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber Y
+		public extern SVGAnimatedNumber Z
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedNumber Z
-		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 	}
 }

@@ -3,113 +3,80 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MouseEvent : UIEvent
 	{
-		internal MouseEvent()
-		{
-		}
+		internal extern MouseEvent();
 
-		public MouseEvent(string typeArg)
-		{
-		}
+		public extern MouseEvent(string typeArg);
 
-		public MouseEvent(string typeArg, MouseEventInit mouseEventInitDict)
+		public extern MouseEvent(string typeArg, MouseEventInit mouseEventInitDict);
+
+		[FieldProperty]
+		public extern bool AltKey
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool AltKey
+		public extern short Button
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public short Button
+		public extern ushort Buttons
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ushort Buttons
+		public extern int ClientX
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ClientX
+		public extern int ClientY
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ClientY
+		public extern bool CtrlKey
 		{
-			get {
-				return 0;
-			}
+			get;
+		}
+
+		public extern bool GetModifierState(string keyArg);
+
+		public extern void InitMouseEvent(string typeArg, bool canBubbleArg, bool cancelableArg, WindowInstance viewArg, int detailArg, int screenXArg, int screenYArg, int clientXArg, int clientYArg, bool ctrlKeyArg, bool altKeyArg, bool shiftKeyArg, bool metaKeyArg, short buttonArg, EventTarget relatedTargetArg);
+
+		[FieldProperty]
+		public extern bool MetaKey
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool CtrlKey
+		public extern EventTarget RelatedTarget
 		{
-			get {
-				return false;
-			}
-		}
-
-		public bool GetModifierState(string keyArg)
-		{
-			return false;
-		}
-
-		public void InitMouseEvent(string typeArg, bool canBubbleArg, bool cancelableArg, WindowInstance viewArg, int detailArg, int screenXArg, int screenYArg, int clientXArg, int clientYArg, bool ctrlKeyArg, bool altKeyArg, bool shiftKeyArg, bool metaKeyArg, short buttonArg, EventTarget relatedTargetArg)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool MetaKey
+		public extern int ScreenX
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public EventTarget RelatedTarget
+		public extern int ScreenY
 		{
-			get {
-				return default(EventTarget);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ScreenX
+		public extern bool ShiftKey
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int ScreenY
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public bool ShiftKey
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

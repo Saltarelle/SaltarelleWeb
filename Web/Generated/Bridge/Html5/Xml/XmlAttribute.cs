@@ -3,146 +3,89 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Attr")]
 	public partial class XmlAttribute : XmlNode
 	{
-		internal XmlAttribute()
-		{
-		}
+		internal extern XmlAttribute();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture);
 
-		public void AddEventListener(XmlAttributeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(XmlAttributeEvents type, Action listener);
 
-		public void AddEventListener(XmlAttributeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlAttributeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(XmlAttributeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(XmlAttributeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(XmlAttributeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlAttributeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener)
-		{
-		}
+		public extern void AddEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener);
 
-		public void AddEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture);
 
-		public void AddEventListener(XmlAttributeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(XmlAttributeEvents type, IEventListener listener);
 
-		public void AddEventListener(XmlAttributeEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(XmlAttributeEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern string LocalName
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string LocalName
+		public extern string Name
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern string NamespaceURI
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string NamespaceURI
+		public extern XmlElement OwnerElement
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElement OwnerElement
+		public extern string Prefix
 		{
-			get {
-				return default(XmlElement);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture);
+
+		public extern void RemoveEventListener(XmlAttributeEvents type, Action listener);
+
+		public extern void RemoveEventListener(XmlAttributeEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener);
+
+		public extern void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture);
+
+		public extern void RemoveEventListener(XmlAttributeEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(XmlAttributeEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Specified
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Prefix
+		public extern string Value
 		{
-			get {
-				return null;
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlAttributeEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlAttributeEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlAttributeEvents type, HtmlEventHandlerWithTarget<XmlAttribute> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlAttributeEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlAttributeEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public bool Specified
-		{
-			get {
-				return false;
-			}
-		}
-
-		[FieldProperty]
-		public string Value
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

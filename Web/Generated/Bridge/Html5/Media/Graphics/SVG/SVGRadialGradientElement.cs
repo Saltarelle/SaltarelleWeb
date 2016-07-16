@@ -3,128 +3,76 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGRadialGradientElement : SVGGradientElement
 	{
-		internal SVGRadialGradientElement()
-		{
-		}
+		internal extern SVGRadialGradientElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture);
 
-		public void AddEventListener(SVGRadialGradientElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGRadialGradientElementEvents type, Action listener);
 
-		public void AddEventListener(SVGRadialGradientElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGRadialGradientElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener);
 
-		public void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture);
 
-		public void AddEventListener(SVGRadialGradientElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGRadialGradientElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGRadialGradientElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGRadialGradientElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Cx
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Cx
+		public extern SVGAnimatedLength Cy
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Cy
+		public extern SVGAnimatedLength Fx
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Fx
+		public extern SVGAnimatedLength Fy
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Fy
+		public extern SVGAnimatedLength R
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public SVGAnimatedLength R
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGRadialGradientElementEvents type, Action listener);
 
-		public void RemoveEventListener(SVGRadialGradientElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGRadialGradientElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SVGRadialGradientElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener);
 
-		public void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGRadialGradientElementEvents type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGRadialGradientElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SVGRadialGradientElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGRadialGradientElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGRadialGradientElementEvents type, IEventListener listener, bool capture);
 	}
 }

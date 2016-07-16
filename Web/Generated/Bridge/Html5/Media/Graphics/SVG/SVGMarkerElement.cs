@@ -3,161 +3,99 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGMarkerElement : SVGElement
 	{
-		internal SVGMarkerElement()
-		{
-		}
+		internal extern SVGMarkerElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture);
 
-		public void AddEventListener(SVGMarkerElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGMarkerElementEvents type, Action listener);
 
-		public void AddEventListener(SVGMarkerElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGMarkerElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGMarkerElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGMarkerElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGMarkerElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGMarkerElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGMarkerElementEvents type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGMarkerElementEvents type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener);
 
-		public void AddEventListener(SVGMarkerElementEvents type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGMarkerElementEvents type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture);
 
-		public void AddEventListener(SVGMarkerElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGMarkerElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGMarkerElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGMarkerElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength MarkerHeight
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength MarkerHeight
+		public extern SVGAnimatedEnumeration<SVGMarkerUnits> MarkerUnits
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGMarkerUnits> MarkerUnits
+		public extern SVGAnimatedLength MarkerWidth
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGMarkerUnits>);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength MarkerWidth
+		public extern SVGAnimatedAngle OrientAngle
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedAngle OrientAngle
+		public extern SVGAnimatedEnumeration<SVGMarkerOrient> OrientType
 		{
-			get {
-				return default(SVGAnimatedAngle);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGMarkerOrient> OrientType
+		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGMarkerOrient>);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio
+		public extern SVGAnimatedLength RefX
 		{
-			get {
-				return default(SVGAnimatedPreserveAspectRatio);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength RefX
+		public extern SVGAnimatedLength RefY
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public SVGAnimatedLength RefY
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGMarkerElementEvents type, Action listener);
 
-		public void RemoveEventListener(SVGMarkerElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGMarkerElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SVGMarkerElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGMarkerElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SVGMarkerElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGMarkerElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SVGMarkerElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGMarkerElementEvents type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener);
 
-		public void RemoveEventListener(SVGMarkerElementEvents type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGMarkerElementEvents type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGMarkerElementEvents type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGMarkerElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SVGMarkerElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGMarkerElementEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(SVGMarkerElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void SetOrientToAngle(SVGAngle angle);
 
-		public void SetOrientToAngle(SVGAngle angle)
-		{
-		}
-
-		public void SetOrientToAuto()
-		{
-		}
+		public extern void SetOrientToAuto();
 
 		[Name("SVG_MARKER_ORIENT_ANGLE")]
 		public const ushort SVG_MARKER_ORIENT_ANGLE = 2;
@@ -178,11 +116,9 @@
 		public const ushort SVG_MARKERUNITS_USERSPACEONUSE = 1;
 
 		[FieldProperty]
-		public SVGAnimatedRect ViewBox
+		public extern SVGAnimatedRect ViewBox
 		{
-			get {
-				return default(SVGAnimatedRect);
-			}
+			get;
 		}
 	}
 }

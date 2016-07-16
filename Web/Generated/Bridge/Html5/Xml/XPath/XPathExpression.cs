@@ -3,13 +3,8 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class XPathExpression
 	{
-		internal XPathExpression()
-		{
-		}
+		internal extern XPathExpression();
 
-		public XPathResult Evaluate(XmlNode contextNode, ResultType type, XPathResult result)
-		{
-			return default(XPathResult);
-		}
+		public extern XPathResult Evaluate(XmlNode contextNode, ResultType type, XPathResult result);
 	}
 }

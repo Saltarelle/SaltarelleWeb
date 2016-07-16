@@ -6,371 +6,219 @@ namespace Bridge.Html5.Net.WebRTC
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("mozRTCPeerConnection")]
 	public partial class RTCPeerConnection : EventTarget
 	{
-		public void AddEventListener(RTCPeerConnectionEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(RTCPeerConnectionEvents type, Action listener);
 
-		public void AddEventListener(RTCPeerConnectionEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RTCPeerConnectionEvents type, Action listener, bool capture);
 
-		public void AddEventListener(RTCPeerConnectionEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(RTCPeerConnectionEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(RTCPeerConnectionEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RTCPeerConnectionEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(RTCPeerConnectionEvents type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener)
-		{
-		}
+		public extern void AddEventListener(RTCPeerConnectionEvents type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener);
 
-		public void AddEventListener(RTCPeerConnectionEvents type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RTCPeerConnectionEvents type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener, bool capture);
 
-		public void AddEventListener(RTCPeerConnectionEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(RTCPeerConnectionEvents type, IEventListener listener);
 
-		public void AddEventListener(RTCPeerConnectionEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RTCPeerConnectionEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener, bool capture);
 
-		public void AddIceCandidate(RTCIceCandidate candidate)
-		{
-		}
+		public extern void AddIceCandidate(RTCIceCandidate candidate);
 
-		public void AddIceCandidate(RTCIceCandidate candidate, Action successCallback)
-		{
-		}
+		public extern void AddIceCandidate(RTCIceCandidate candidate, Action successCallback);
 
-		public void AddIceCandidate(RTCIceCandidate candidate, Action successCallback, RTCPeerConnectionErrorCallback failureCallback)
-		{
-		}
+		public extern void AddIceCandidate(RTCIceCandidate candidate, Action successCallback, RTCPeerConnectionErrorCallback failureCallback);
 
-		public void AddStream(MediaStream stream)
-		{
-		}
+		public extern void AddStream(MediaStream stream);
 
-		public void AddStream(MediaStream stream, MediaConstraints constraints)
-		{
-		}
+		public extern void AddStream(MediaStream stream, MediaConstraints constraints);
 
-		public void Close()
-		{
-		}
+		public extern void Close();
 
-		public void CreateAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback)
-		{
-		}
+		public extern void CreateAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
 
-		public void CreateAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, MediaConstraints constraints)
-		{
-		}
+		public extern void CreateAnswer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, MediaConstraints constraints);
 
-		public RTCDataChannel CreateDataChannel(string label)
-		{
-			return default(RTCDataChannel);
-		}
+		public extern RTCDataChannel CreateDataChannel(string label);
 
-		public RTCDataChannel CreateDataChannel(string label, RTCDataChannelInit dataChannelDict)
-		{
-			return default(RTCDataChannel);
-		}
+		public extern RTCDataChannel CreateDataChannel(string label, RTCDataChannelInit dataChannelDict);
 
-		public void CreateOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback)
-		{
-		}
+		public extern void CreateOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
 
-		public void CreateOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, MediaConstraints constraints)
-		{
-		}
+		public extern void CreateOffer(RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, MediaConstraints constraints);
 
-		public void GetIdentityAssertion()
-		{
-		}
+		public extern void GetIdentityAssertion();
 
-		public void GetIdentityAssertion(RTCPeerConnectionErrorCallback failureCallback)
-		{
-		}
+		public extern void GetIdentityAssertion(RTCPeerConnectionErrorCallback failureCallback);
 
-		public MediaStream[] GetLocalStreams()
-		{
-			return null;
-		}
+		public extern MediaStream[] GetLocalStreams();
 
-		public MediaStream[] GetRemoteStreams()
-		{
-			return null;
-		}
+		public extern MediaStream[] GetRemoteStreams();
 
-		public void GetStats(MediaStreamTrack selector, RTCStatsCallback successCallback, RTCPeerConnectionErrorCallback failureCallback)
-		{
-		}
+		public extern void GetStats(MediaStreamTrack selector, RTCStatsCallback successCallback, RTCPeerConnectionErrorCallback failureCallback);
 
-		public MediaStream GetStreamById(string streamId)
+		public extern MediaStream GetStreamById(string streamId);
+
+		[FieldProperty]
+		public extern RTCIceConnectionState IceConnectionState
 		{
-			return default(MediaStream);
+			get;
 		}
 
 		[FieldProperty]
-		public RTCIceConnectionState IceConnectionState
+		public extern RTCIceGatheringState IceGatheringState
 		{
-			get {
-				return default(RTCIceConnectionState);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public RTCIceGatheringState IceGatheringState
+		public extern RTCSessionDescription LocalDescription
 		{
-			get {
-				return default(RTCIceGatheringState);
-			}
-		}
-
-		[FieldProperty]
-		public RTCSessionDescription LocalDescription
-		{
-			get {
-				return default(RTCSessionDescription);
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onaddstream")]
-		public HtmlEventHandler OnAddstream
+		public extern HtmlEventHandler OnAddstream
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onclosedconnection")]
-		public HtmlEventHandler OnClosedconnection
+		public extern HtmlEventHandler OnClosedconnection
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onconnection")]
-		public HtmlEventHandler OnConnection
+		public extern HtmlEventHandler OnConnection
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondatachannel")]
-		public HtmlEventHandler OnDatachannel
+		public extern HtmlEventHandler OnDatachannel
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onicecandidate")]
-		public HtmlEventHandler OnIcecandidate
+		public extern HtmlEventHandler OnIcecandidate
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oniceconnectionstatechange")]
-		public HtmlEventHandler OnIceconnectionstatechange
+		public extern HtmlEventHandler OnIceconnectionstatechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onidentityresult")]
-		public HtmlEventHandler OnIdentityresult
+		public extern HtmlEventHandler OnIdentityresult
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onnegotiationneeded")]
-		public HtmlEventHandler OnNegotiationneeded
+		public extern HtmlEventHandler OnNegotiationneeded
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpeeridentity")]
-		public HtmlEventHandler OnPeeridentity
+		public extern HtmlEventHandler OnPeeridentity
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onremovestream")]
-		public HtmlEventHandler OnRemovestream
+		public extern HtmlEventHandler OnRemovestream
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onsignalingstatechange")]
-		public HtmlEventHandler OnSignalingstatechange
+		public extern HtmlEventHandler OnSignalingstatechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public RTCIdentityAssertion PeerIdentity
+		public extern RTCIdentityAssertion PeerIdentity
 		{
-			get {
-				return default(RTCIdentityAssertion);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public RTCSessionDescription RemoteDescription
+		public extern RTCSessionDescription RemoteDescription
 		{
-			get {
-				return default(RTCSessionDescription);
-			}
+			get;
 		}
 
-		public void RemoveEventListener(RTCPeerConnectionEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(RTCPeerConnectionEvents type, Action listener);
 
-		public void RemoveEventListener(RTCPeerConnectionEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RTCPeerConnectionEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(RTCPeerConnectionEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(RTCPeerConnectionEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(RTCPeerConnectionEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RTCPeerConnectionEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(RTCPeerConnectionEvents type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener)
-		{
-		}
+		public extern void RemoveEventListener(RTCPeerConnectionEvents type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener);
 
-		public void RemoveEventListener(RTCPeerConnectionEvents type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RTCPeerConnectionEvents type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener, bool capture);
 
-		public void RemoveEventListener(RTCPeerConnectionEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(RTCPeerConnectionEvents type, IEventListener listener);
 
-		public void RemoveEventListener(RTCPeerConnectionEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RTCPeerConnectionEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCPeerConnection> listener, bool capture);
 
-		public void RemoveStream(MediaStream stream)
-		{
-		}
+		public extern void RemoveStream(MediaStream stream);
 
-		public void SetIdentityProvider(string provider)
-		{
-		}
+		public extern void SetIdentityProvider(string provider);
 
-		public void SetIdentityProvider(string provider, string protocol)
-		{
-		}
+		public extern void SetIdentityProvider(string provider, string protocol);
 
-		public void SetIdentityProvider(string provider, string protocol, string username)
-		{
-		}
+		public extern void SetIdentityProvider(string provider, string protocol, string username);
 
-		public void SetLocalDescription(RTCSessionDescription description)
-		{
-		}
+		public extern void SetLocalDescription(RTCSessionDescription description);
 
-		public void SetLocalDescription(RTCSessionDescription description, Action successCallback)
-		{
-		}
+		public extern void SetLocalDescription(RTCSessionDescription description, Action successCallback);
 
-		public void SetLocalDescription(RTCSessionDescription description, Action successCallback, RTCPeerConnectionErrorCallback failureCallback)
-		{
-		}
+		public extern void SetLocalDescription(RTCSessionDescription description, Action successCallback, RTCPeerConnectionErrorCallback failureCallback);
 
-		public void SetRemoteDescription(RTCSessionDescription description)
-		{
-		}
+		public extern void SetRemoteDescription(RTCSessionDescription description);
 
-		public void SetRemoteDescription(RTCSessionDescription description, Action successCallback)
-		{
-		}
+		public extern void SetRemoteDescription(RTCSessionDescription description, Action successCallback);
 
-		public void SetRemoteDescription(RTCSessionDescription description, Action successCallback, RTCPeerConnectionErrorCallback failureCallback)
-		{
-		}
+		public extern void SetRemoteDescription(RTCSessionDescription description, Action successCallback, RTCPeerConnectionErrorCallback failureCallback);
 
 		[FieldProperty]
-		public RTCSignalingState SignalingState
+		public extern RTCSignalingState SignalingState
 		{
-			get {
-				return default(RTCSignalingState);
-			}
+			get;
 		}
 
-		public void UpdateIce()
-		{
-		}
+		public extern void UpdateIce();
 
-		public void UpdateIce(RTCConfiguration configuration)
-		{
-		}
+		public extern void UpdateIce(RTCConfiguration configuration);
 
-		public void UpdateIce(RTCConfiguration configuration, MediaConstraints constraints)
-		{
-		}
+		public extern void UpdateIce(RTCConfiguration configuration, MediaConstraints constraints);
 	}
 }

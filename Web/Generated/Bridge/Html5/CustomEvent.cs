@@ -3,28 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CustomEvent : Event
 	{
-		internal CustomEvent()
-		{
-		}
+		internal extern CustomEvent();
 
-		public CustomEvent(string type)
-		{
-		}
+		public extern CustomEvent(string type);
 
-		public CustomEvent(string type, CustomEventInit eventInitDict)
-		{
-		}
+		public extern CustomEvent(string type, CustomEventInit eventInitDict);
 
 		[FieldProperty]
-		public object Detail
+		public extern object Detail
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public void InitCustomEvent(string type, bool canBubble, bool cancelable, object detail)
-		{
-		}
+		public extern void InitCustomEvent(string type, bool canBubble, bool cancelable, object detail);
 	}
 }

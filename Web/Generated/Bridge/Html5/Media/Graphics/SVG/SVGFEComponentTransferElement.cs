@@ -3,136 +3,82 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFEComponentTransferElement : SVGElement
 	{
-		internal SVGFEComponentTransferElement()
-		{
-		}
+		internal extern SVGFEComponentTransferElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEComponentTransferElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEComponentTransferElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFEComponentTransferElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEComponentTransferElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener);
 
-		public void AddEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEComponentTransferElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEComponentTransferElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFEComponentTransferElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFEComponentTransferElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString In1
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEComponentTransferElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFEComponentTransferElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener);
+
+		public extern void RemoveEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEComponentTransferElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFEComponentTransferElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedString Result
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString In1
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEComponentTransferElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEComponentTransferElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEComponentTransferElementEvents type, HtmlEventHandlerWithTarget<SVGFEComponentTransferElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEComponentTransferElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEComponentTransferElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString Result
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength X
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength Y
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

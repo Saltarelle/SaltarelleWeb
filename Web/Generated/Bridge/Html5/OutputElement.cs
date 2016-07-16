@@ -3,175 +3,107 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'OUTPUT'"), Name("Element")]
 	public partial class OutputElement : Element
 	{
-		internal OutputElement()
-		{
-		}
+		internal extern OutputElement();
 
-		public void AddEventListener(OutputElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(OutputElementEvents type, Action listener);
 
-		public void AddEventListener(OutputElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OutputElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(OutputElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(OutputElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(OutputElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OutputElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener)
-		{
-		}
+		public extern void AddEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener);
 
-		public void AddEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture);
 
-		public void AddEventListener(OutputElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(OutputElementEvents type, IEventListener listener);
 
-		public void AddEventListener(OutputElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OutputElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture);
 
-		public bool CheckValidity()
+		public extern bool CheckValidity();
+
+		[FieldProperty]
+		public extern string DefaultValue
 		{
-			return false;
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string DefaultValue
+		public extern FormElement Form
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public FormElement Form
+		public extern DOMSettableTokenList HtmlFor
 		{
-			get {
-				return default(FormElement);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DOMSettableTokenList HtmlFor
+		public extern string Name
 		{
-			get {
-				return default(DOMSettableTokenList);
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(OutputElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(OutputElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(OutputElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(OutputElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener);
+
+		public extern void RemoveEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture);
+
+		public extern void RemoveEventListener(OutputElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(OutputElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture);
+
+		public extern void SetCustomValidity(string error);
+
+		[FieldProperty]
+		public extern string Type
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern string ValidationMessage
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(OutputElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(OutputElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(OutputElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(OutputElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(OutputElementEvents type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(OutputElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(OutputElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OutputElement> listener, bool capture)
-		{
-		}
-
-		public void SetCustomValidity(string error)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Type
+		public extern ValidityState Validity
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string ValidationMessage
+		public extern string Value
 		{
-			get {
-				return null;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public ValidityState Validity
+		public extern bool WillValidate
 		{
-			get {
-				return default(ValidityState);
-			}
-		}
-
-		[FieldProperty]
-		public string Value
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public bool WillValidate
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

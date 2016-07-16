@@ -3,20 +3,14 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DragEvent : MouseEvent
 	{
-		internal DragEvent()
-		{
-		}
+		internal extern DragEvent();
 
 		[FieldProperty]
-		public DataTransfer DataTransfer
+		public extern DataTransfer DataTransfer
 		{
-			get {
-				return default(DataTransfer);
-			}
+			get;
 		}
 
-		public void InitDragEvent(string type, bool canBubble, bool cancelable, WindowInstance aView, int aDetail, int aScreenX, int aScreenY, int aClientX, int aClientY, bool aCtrlKey, bool aAltKey, bool aShiftKey, bool aMetaKey, ushort aButton, EventTarget aRelatedTarget, DataTransfer aDataTransfer)
-		{
-		}
+		public extern void InitDragEvent(string type, bool canBubble, bool cancelable, WindowInstance aView, int aDetail, int aScreenX, int aScreenY, int aClientX, int aClientY, bool aCtrlKey, bool aAltKey, bool aShiftKey, bool aMetaKey, ushort aButton, EventTarget aRelatedTarget, DataTransfer aDataTransfer);
 	}
 }

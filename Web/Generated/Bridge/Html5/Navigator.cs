@@ -11,201 +11,139 @@ namespace Bridge.Html5
 	public static partial class Navigator
 	{
 		[FieldProperty]
-		public static string AppCodeName
+		public static extern string AppCodeName
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static string AppName
+		public static extern string AppName
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static string AppVersion
+		public static extern string AppVersion
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static BatteryManager Battery
+		public static extern BatteryManager Battery
 		{
-			get {
-				return default(BatteryManager);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static string BuildID
+		public static extern string BuildID
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static bool CookieEnabled
+		public static extern bool CookieEnabled
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static string DoNotTrack
+		public static extern string DoNotTrack
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static GeolocationService Geolocation
+		public static extern GeolocationService Geolocation
 		{
-			get {
-				return default(GeolocationService);
-			}
+			get;
 		}
 
-		public static bool JavaEnabled()
+		public static extern bool JavaEnabled();
+
+		[FieldProperty]
+		public static extern string Language
 		{
-			return false;
+			get;
 		}
 
 		[FieldProperty]
-		public static string Language
+		public static extern int MaxTouchPoints
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static int MaxTouchPoints
+		public static extern MimeTypeArray MimeTypes
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static MimeTypeArray MimeTypes
+		public static extern bool OnLine
 		{
-			get {
-				return default(MimeTypeArray);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static bool OnLine
+		public static extern string Oscpu
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static string Oscpu
+		public static extern string Platform
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static string Platform
+		public static extern PluginArray Plugins
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static PluginArray Plugins
+		public static extern string Product
 		{
-			get {
-				return default(PluginArray);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static string Product
+		public static extern string ProductSub
 		{
-			get {
-				return null;
-			}
+			get;
+		}
+
+		public static extern void RegisterContentHandler(string mimeType, string url, string title);
+
+		public static extern void RegisterProtocolHandler(string scheme, string url, string title);
+
+		public static extern bool SendBeacon(string url);
+
+		public static extern bool SendBeacon(string url, TypeOption<ArrayBufferView, Blob, string, FormData> data);
+
+		public static extern bool TaintEnabled();
+
+		[FieldProperty]
+		public static extern string UserAgent
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public static string ProductSub
+		public static extern string Vendor
 		{
-			get {
-				return null;
-			}
-		}
-
-		public static void RegisterContentHandler(string mimeType, string url, string title)
-		{
-		}
-
-		public static void RegisterProtocolHandler(string scheme, string url, string title)
-		{
-		}
-
-		public static bool SendBeacon(string url)
-		{
-			return false;
-		}
-
-		public static bool SendBeacon(string url, TypeOption<ArrayBufferView, Blob, string, FormData> data)
-		{
-			return false;
-		}
-
-		public static bool TaintEnabled()
-		{
-			return false;
+			get;
 		}
 
 		[FieldProperty]
-		public static string UserAgent
+		public static extern string VendorSub
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public static string Vendor
-		{
-			get {
-				return null;
-			}
-		}
+		public static extern bool Vibrate(int duration);
 
-		[FieldProperty]
-		public static string VendorSub
-		{
-			get {
-				return null;
-			}
-		}
-
-		public static bool Vibrate(int duration)
-		{
-			return false;
-		}
-
-		public static bool Vibrate(int[] pattern)
-		{
-			return false;
-		}
+		public static extern bool Vibrate(int[] pattern);
 	}
 }

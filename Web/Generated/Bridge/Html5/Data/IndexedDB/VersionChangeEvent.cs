@@ -3,32 +3,22 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBVersionChangeEvent")]
 	public partial class VersionChangeEvent : Event
 	{
-		internal VersionChangeEvent()
-		{
-		}
+		internal extern VersionChangeEvent();
 
-		public VersionChangeEvent(string type)
-		{
-		}
+		public extern VersionChangeEvent(string type);
 
-		public VersionChangeEvent(string type, VersionChangeEventInit eventInitDict)
+		public extern VersionChangeEvent(string type, VersionChangeEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern ulong? NewVersion
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public ulong? NewVersion
+		public extern ulong OldVersion
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public ulong OldVersion
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

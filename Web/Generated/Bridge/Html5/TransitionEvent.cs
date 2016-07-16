@@ -3,40 +3,28 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TransitionEvent : Event
 	{
-		internal TransitionEvent()
-		{
-		}
+		internal extern TransitionEvent();
 
-		public TransitionEvent(string type)
-		{
-		}
+		public extern TransitionEvent(string type);
 
-		public TransitionEvent(string type, TransitionEventInit eventInitDict)
+		public extern TransitionEvent(string type, TransitionEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern double ElapsedTime
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double ElapsedTime
+		public extern string PropertyName
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string PropertyName
+		public extern string PseudoElement
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string PseudoElement
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

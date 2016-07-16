@@ -5,152 +5,88 @@ namespace Bridge.Html5.Media.Audio
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class AnalyserNode : AudioNode
 	{
-		internal AnalyserNode()
-		{
-		}
+		internal extern AnalyserNode();
 
-		public void AddEventListener(AnalyserNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(AnalyserNodeEvents type, Action listener);
 
-		public void AddEventListener(AnalyserNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AnalyserNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(AnalyserNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(AnalyserNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(AnalyserNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AnalyserNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener)
-		{
-		}
+		public extern void AddEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener);
 
-		public void AddEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture);
 
-		public void AddEventListener(AnalyserNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(AnalyserNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(AnalyserNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AnalyserNodeEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture);
+
+		[FieldProperty]
+		public extern int FftSize
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int FftSize
+		public extern int FrequencyBinCount
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern void GetByteFrequencyData(Uint8Array array);
+
+		public extern void GetByteTimeDomainData(Uint8Array array);
+
+		public extern void GetFloatFrequencyData(Float32Array array);
+
+		public extern void GetFloatTimeDomainData(Float32Array array);
+
+		[FieldProperty]
+		public extern double MaxDecibels
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int FrequencyBinCount
+		public extern double MinDecibels
 		{
-			get {
-				return 0;
-			}
+			get;
+			set;
 		}
 
-		public void GetByteFrequencyData(Uint8Array array)
-		{
-		}
+		public extern void RemoveEventListener(AnalyserNodeEvents type, Action listener);
 
-		public void GetByteTimeDomainData(Uint8Array array)
-		{
-		}
+		public extern void RemoveEventListener(AnalyserNodeEvents type, Action listener, bool capture);
 
-		public void GetFloatFrequencyData(Float32Array array)
-		{
-		}
+		public extern void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandler listener);
 
-		public void GetFloatTimeDomainData(Float32Array array)
-		{
-		}
+		public extern void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		[FieldProperty]
-		public double MaxDecibels
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
+		public extern void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener);
+
+		public extern void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture);
+
+		public extern void RemoveEventListener(AnalyserNodeEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(AnalyserNodeEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture);
 
 		[FieldProperty]
-		public double MinDecibels
+		public extern double SmoothingTimeConstant
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(AnalyserNodeEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(AnalyserNodeEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener)
-		{
-		}
-
-		public void RemoveEventListener(AnalyserNodeEvents type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(AnalyserNodeEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(AnalyserNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public double SmoothingTimeConstant
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,223 +3,130 @@
 	[External, GlobalMethods]
 	public static partial class SharedWorkerGlobalScope
 	{
-		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener)
-		{
-		}
+		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
-		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture)
-		{
-		}
+		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture);
 
-		public static void AddEventListener(string type, IEventListener listener)
-		{
-		}
+		public static extern void AddEventListener(string type, IEventListener listener);
 
-		public static void AddEventListener(string type, IEventListener listener, bool capture)
-		{
-		}
+		public static extern void AddEventListener(string type, IEventListener listener, bool capture);
 
-		public static void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted)
-		{
-		}
+		public static extern void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted);
 
-		public static void AddEventListener(WorkerGlobalScopeEvents type, Action listener)
-		{
-		}
+		public static extern void AddEventListener(WorkerGlobalScopeEvents type, Action listener);
 
-		public static void AddEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture)
-		{
-		}
+		public static extern void AddEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture);
 
-		public static void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public static extern void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener);
 
-		public static void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public static extern void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture);
 
-		public static void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener)
-		{
-		}
+		public static extern void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
-		public static void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture)
-		{
-		}
+		public static extern void AddEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture);
 
-		public static void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener)
-		{
-		}
+		public static extern void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener);
 
-		public static void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public static extern void AddEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture);
 
-		public static string Atob(string atob)
-		{
-			return null;
-		}
+		public static extern string Atob(string atob);
 
-		public static string Btoa(string btoa)
-		{
-			return null;
-		}
+		public static extern string Btoa(string btoa);
 
-		public static void Close()
-		{
-		}
+		public static extern void Close();
 
-		public static bool DispatchEvent(Event @event)
-		{
-			return false;
-		}
+		public static extern bool DispatchEvent(Event @event);
 
-		public static void Dump()
-		{
-		}
+		public static extern void Dump();
 
-		public static void Dump(string str)
-		{
-		}
+		public static extern void Dump(string str);
 
 		[ExpandParams]
-		public static void ImportScripts(params string[] urls)
+		public static extern void ImportScripts(params string[] urls);
+
+		[FieldProperty]
+		public static extern WorkerLocation Location
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public static WorkerLocation Location
+		public static extern string Name
 		{
-			get {
-				return default(WorkerLocation);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static string Name
+		public static extern WorkerNavigator Navigator
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public static WorkerNavigator Navigator
-		{
-			get {
-				return default(WorkerNavigator);
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onclose")]
-		public static HtmlEventHandler OnClose
+		public static extern HtmlEventHandler OnClose
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onconnect")]
-		public static HtmlEventHandler OnConnect
+		public static extern HtmlEventHandler OnConnect
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public static ErrorEventHandler OnError
+		public static extern ErrorEventHandler OnError
 		{
-			get {
-				return default(ErrorEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onoffline")]
-		public static HtmlEventHandler OnOffline
+		public static extern HtmlEventHandler OnOffline
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ononline")]
-		public static HtmlEventHandler OnOnline
+		public static extern HtmlEventHandler OnOnline
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener)
-		{
-		}
+		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
-		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture)
-		{
-		}
+		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture);
 
-		public static void RemoveEventListener(string type, IEventListener listener)
-		{
-		}
+		public static extern void RemoveEventListener(string type, IEventListener listener);
 
-		public static void RemoveEventListener(string type, IEventListener listener, bool capture)
-		{
-		}
+		public static extern void RemoveEventListener(string type, IEventListener listener, bool capture);
 
-		public static void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener)
-		{
-		}
+		public static extern void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener);
 
-		public static void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture)
-		{
-		}
+		public static extern void RemoveEventListener(WorkerGlobalScopeEvents type, Action listener, bool capture);
 
-		public static void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public static extern void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener);
 
-		public static void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public static extern void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandler listener, bool capture);
 
-		public static void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener)
-		{
-		}
+		public static extern void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
-		public static void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture)
-		{
-		}
+		public static extern void RemoveEventListener(WorkerGlobalScopeEvents type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener, bool capture);
 
-		public static void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener)
-		{
-		}
+		public static extern void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener);
 
-		public static void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public static extern void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public static WorkerGlobalScope Self
+		public static extern WorkerGlobalScope Self
 		{
-			get {
-				return default(WorkerGlobalScope);
-			}
+			get;
 		}
 
-		public static string ToNativeLineEndings(string @string)
-		{
-			return null;
-		}
+		public static extern string ToNativeLineEndings(string @string);
 	}
 }

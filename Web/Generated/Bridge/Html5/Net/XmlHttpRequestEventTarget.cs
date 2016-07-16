@@ -3,158 +3,95 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("EventTarget")]
 	public partial class XmlHttpRequestEventTarget : EventTarget
 	{
-		internal XmlHttpRequestEventTarget()
-		{
-		}
+		internal extern XmlHttpRequestEventTarget();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture);
 
-		public void AddEventListener(XmlHttpRequestEventTargetEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEventTargetEvents type, Action listener);
 
-		public void AddEventListener(XmlHttpRequestEventTargetEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEventTargetEvents type, Action listener, bool capture);
 
-		public void AddEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener);
 
-		public void AddEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture);
 
-		public void AddEventListener(XmlHttpRequestEventTargetEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEventTargetEvents type, IEventListener listener);
 
-		public void AddEventListener(XmlHttpRequestEventTargetEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEventTargetEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty, Name("onabort")]
-		public HtmlEventHandler OnAbort
+		public extern HtmlEventHandler OnAbort
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onload")]
-		public HtmlEventHandler OnLoad
+		public extern HtmlEventHandler OnLoad
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadend")]
-		public HtmlEventHandler OnLoadend
+		public extern HtmlEventHandler OnLoadend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadstart")]
-		public HtmlEventHandler OnLoadstart
+		public extern HtmlEventHandler OnLoadstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onprogress")]
-		public HtmlEventHandler OnProgress
+		public extern HtmlEventHandler OnProgress
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontimeout")]
-		public HtmlEventHandler OnTimeout
+		public extern HtmlEventHandler OnTimeout
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture);
 
-		public void RemoveEventListener(XmlHttpRequestEventTargetEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlHttpRequestEventTargetEvents type, Action listener);
 
-		public void RemoveEventListener(XmlHttpRequestEventTargetEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlHttpRequestEventTargetEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener);
 
-		public void RemoveEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlHttpRequestEventTargetEvents type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener, bool capture);
 
-		public void RemoveEventListener(XmlHttpRequestEventTargetEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlHttpRequestEventTargetEvents type, IEventListener listener);
 
-		public void RemoveEventListener(XmlHttpRequestEventTargetEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlHttpRequestEventTargetEvents type, IEventListener listener, bool capture);
 	}
 }

@@ -3,42 +3,31 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MediaStreamTrack
 	{
-		internal MediaStreamTrack()
+		internal extern MediaStreamTrack();
+
+		[FieldProperty]
+		public extern bool Enabled
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Enabled
+		public extern string Id
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Id
+		public extern string Kind
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Kind
+		public extern string Label
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Label
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

@@ -3,228 +3,144 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'FRAMESET'"), Name("Element")]
 	public partial class FrameSetElement : Element
 	{
-		internal FrameSetElement()
-		{
-		}
+		internal extern FrameSetElement();
 
-		public void AddEventListener(FrameSetElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(FrameSetElementEvents type, Action listener);
 
-		public void AddEventListener(FrameSetElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(FrameSetElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(FrameSetElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(FrameSetElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(FrameSetElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(FrameSetElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener)
-		{
-		}
+		public extern void AddEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener);
 
-		public void AddEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture);
 
-		public void AddEventListener(FrameSetElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(FrameSetElementEvents type, IEventListener listener);
 
-		public void AddEventListener(FrameSetElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(FrameSetElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture);
 
 		[FieldProperty]
-		public string Cols
+		public extern string Cols
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onafterprint")]
-		public HtmlEventHandler OnAfterprint
+		public extern HtmlEventHandler OnAfterprint
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onbeforeprint")]
-		public HtmlEventHandler OnBeforeprint
+		public extern HtmlEventHandler OnBeforeprint
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onbeforeunload")]
-		public BeforeUnloadEventHandler OnBeforeunload
+		public extern BeforeUnloadEventHandler OnBeforeunload
 		{
-			get {
-				return default(BeforeUnloadEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onhashchange")]
-		public HtmlEventHandler OnHashchange
+		public extern HtmlEventHandler OnHashchange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmessage")]
-		public HtmlEventHandler OnMessage
+		public extern HtmlEventHandler OnMessage
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onoffline")]
-		public HtmlEventHandler OnOffline
+		public extern HtmlEventHandler OnOffline
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ononline")]
-		public HtmlEventHandler OnOnline
+		public extern HtmlEventHandler OnOnline
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpagehide")]
-		public HtmlEventHandler OnPagehide
+		public extern HtmlEventHandler OnPagehide
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpageshow")]
-		public HtmlEventHandler OnPageshow
+		public extern HtmlEventHandler OnPageshow
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpopstate")]
-		public HtmlEventHandler OnPopstate
+		public extern HtmlEventHandler OnPopstate
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onresize")]
-		public HtmlEventHandler OnResize
+		public extern HtmlEventHandler OnResize
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onunload")]
-		public HtmlEventHandler OnUnload
+		public extern HtmlEventHandler OnUnload
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(FrameSetElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(FrameSetElementEvents type, Action listener);
 
-		public void RemoveEventListener(FrameSetElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(FrameSetElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener);
 
-		public void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(FrameSetElementEvents type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture);
 
-		public void RemoveEventListener(FrameSetElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(FrameSetElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(FrameSetElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(FrameSetElementEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameSetElement> listener, bool capture);
 
 		[FieldProperty]
-		public string Rows
+		public extern string Rows
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

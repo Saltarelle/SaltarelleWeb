@@ -5,56 +5,35 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class PluginArray
 	{
-		internal PluginArray()
-		{
-		}
+		internal extern PluginArray();
 
 		[IndexerName("__Item"), FieldProperty]
 		public Plugin this[int index]
 		{
-			get {
-				return default(Plugin);
-			}
+			get;
 		}
 
 		[IndexerName("__Item"), FieldProperty]
 		public Plugin this[string name]
 		{
-			get {
-				return default(Plugin);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<Plugin> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<Plugin> GetEnumerator();
 
-		public Plugin Item(int index)
-		{
-			return default(Plugin);
-		}
+		public extern Plugin Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public Plugin NamedItem(string name)
-		{
-			return default(Plugin);
-		}
+		public extern Plugin NamedItem(string name);
 
-		public void Refresh()
-		{
-		}
+		public extern void Refresh();
 
-		public void Refresh(bool reloadDocuments)
-		{
-		}
+		public extern void Refresh(bool reloadDocuments);
 	}
 }

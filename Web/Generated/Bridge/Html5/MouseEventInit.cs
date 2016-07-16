@@ -3,91 +3,91 @@
 	[External, Serializable]
 	public partial class MouseEventInit
 	{
-		public bool AltKey
+		public extern bool AltKey
 		{
 			get;
 			set;
 		}
 
-		public bool Bubbles
+		public extern bool Bubbles
 		{
 			get;
 			set;
 		}
 
-		public short Button
+		public extern short Button
 		{
 			get;
 			set;
 		}
 
-		public ushort Buttons
+		public extern ushort Buttons
 		{
 			get;
 			set;
 		}
 
-		public bool Cancelable
+		public extern bool Cancelable
 		{
 			get;
 			set;
 		}
 
-		public int ClientX
+		public extern int ClientX
 		{
 			get;
 			set;
 		}
 
-		public int ClientY
+		public extern int ClientY
 		{
 			get;
 			set;
 		}
 
-		public bool CtrlKey
+		public extern bool CtrlKey
 		{
 			get;
 			set;
 		}
 
-		public int Detail
+		public extern int Detail
 		{
 			get;
 			set;
 		}
 
-		public bool MetaKey
+		public extern bool MetaKey
 		{
 			get;
 			set;
 		}
 
-		public EventTarget RelatedTarget
+		public extern EventTarget RelatedTarget
 		{
 			get;
 			set;
 		}
 
-		public int ScreenX
+		public extern int ScreenX
 		{
 			get;
 			set;
 		}
 
-		public int ScreenY
+		public extern int ScreenY
 		{
 			get;
 			set;
 		}
 
-		public bool ShiftKey
+		public extern bool ShiftKey
 		{
 			get;
 			set;
 		}
 
-		public WindowInstance View
+		public extern WindowInstance View
 		{
 			get;
 			set;

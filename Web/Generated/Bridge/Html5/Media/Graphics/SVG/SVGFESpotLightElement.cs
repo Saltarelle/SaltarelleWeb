@@ -3,152 +3,94 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFESpotLightElement : SVGElement
 	{
-		internal SVGFESpotLightElement()
-		{
-		}
+		internal extern SVGFESpotLightElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture);
 
-		public void AddEventListener(SVGFESpotLightElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFESpotLightElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFESpotLightElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFESpotLightElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener);
 
-		public void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture);
 
-		public void AddEventListener(SVGFESpotLightElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFESpotLightElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFESpotLightElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFESpotLightElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedNumber LimitingConeAngle
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber LimitingConeAngle
+		public extern SVGAnimatedNumber PointsAtX
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber PointsAtX
+		public extern SVGAnimatedNumber PointsAtY
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber PointsAtY
+		public extern SVGAnimatedNumber PointsAtZ
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFESpotLightElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFESpotLightElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener);
+
+		public extern void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFESpotLightElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFESpotLightElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedNumber SpecularExponent
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber PointsAtZ
+		public extern SVGAnimatedNumber X
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpotLightElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpotLightElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpotLightElementEvents type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpotLightElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFESpotLightElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber SpecularExponent
+		public extern SVGAnimatedNumber Y
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber X
+		public extern SVGAnimatedNumber Z
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedNumber Y
-		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedNumber Z
-		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 	}
 }

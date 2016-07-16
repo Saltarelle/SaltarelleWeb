@@ -3,32 +3,24 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class KeyboardEvent : UIEvent
 	{
-		internal KeyboardEvent()
+		internal extern KeyboardEvent();
+
+		[FieldProperty]
+		public extern bool AltKey
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool AltKey
+		public extern int CharCode
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int CharCode
+		public extern bool CtrlKey
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public bool CtrlKey
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[Name("DOM_KEY_LOCATION_JOYSTICK")]
@@ -604,61 +596,44 @@
 		[Name("DOM_VK_ZOOM")]
 		public const int DOM_VK_ZOOM = 251;
 
-		public bool GetModifierState(string key)
-		{
-			return false;
-		}
+		public extern bool GetModifierState(string key);
 
-		public void InitKeyEvent(string type, bool canBubble, bool cancelable, WindowInstance view, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey, int keyCode, int charCode)
+		public extern void InitKeyEvent(string type, bool canBubble, bool cancelable, WindowInstance view, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey, int keyCode, int charCode);
+
+		[FieldProperty]
+		public extern string Key
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Key
+		public extern int KeyCode
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int KeyCode
+		public extern int Location
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int Location
+		public extern bool MetaKey
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool MetaKey
+		public extern bool Repeat
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool Repeat
+		public extern bool ShiftKey
 		{
-			get {
-				return false;
-			}
-		}
-
-		[FieldProperty]
-		public bool ShiftKey
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

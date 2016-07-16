@@ -3,16 +3,12 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBCursorWithValue")]
 	public partial class CursorWithValue : Cursor
 	{
-		internal CursorWithValue()
-		{
-		}
+		internal extern CursorWithValue();
 
 		[FieldProperty]
-		public object Value
+		public extern object Value
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

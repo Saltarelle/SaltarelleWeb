@@ -5,82 +5,45 @@ namespace Bridge.Html5.Media.Graphics.SVG
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGTransformList
 	{
-		internal SVGTransformList()
-		{
-		}
+		internal extern SVGTransformList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public SVGTransform this[int index]
 		{
-			get {
-				return default(SVGTransform);
-			}
+			get;
 		}
 
-		public SVGTransform AppendItem(SVGTransform newItem)
-		{
-			return default(SVGTransform);
-		}
+		public extern SVGTransform AppendItem(SVGTransform newItem);
 
-		public void Clear()
-		{
-		}
+		public extern void Clear();
 
-		public SVGTransform Consolidate()
-		{
-			return default(SVGTransform);
-		}
+		public extern SVGTransform Consolidate();
 
-		public SVGTransform CreateSVGTransformFromMatrix(SVGMatrix matrix)
-		{
-			return default(SVGTransform);
-		}
+		public extern SVGTransform CreateSVGTransformFromMatrix(SVGMatrix matrix);
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<SVGTransform> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<SVGTransform> GetEnumerator();
 
-		public SVGTransform GetItem(int index)
-		{
-			return default(SVGTransform);
-		}
+		public extern SVGTransform GetItem(int index);
 
-		public SVGTransform Initialize(SVGTransform newItem)
-		{
-			return default(SVGTransform);
-		}
+		public extern SVGTransform Initialize(SVGTransform newItem);
 
-		public SVGTransform InsertItemBefore(SVGTransform newItem, int index)
+		public extern SVGTransform InsertItemBefore(SVGTransform newItem, int index);
+
+		[FieldProperty]
+		public extern int Length
 		{
-			return default(SVGTransform);
+			get;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern int NumberOfItems
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public int NumberOfItems
-		{
-			get {
-				return 0;
-			}
-		}
+		public extern SVGTransform RemoveItem(int index);
 
-		public SVGTransform RemoveItem(int index)
-		{
-			return default(SVGTransform);
-		}
-
-		public SVGTransform ReplaceItem(SVGTransform newItem, int index)
-		{
-			return default(SVGTransform);
-		}
+		public extern SVGTransform ReplaceItem(SVGTransform newItem, int index);
 	}
 }

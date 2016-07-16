@@ -3,43 +3,43 @@
 	[External, Serializable]
 	public partial class RTCIceCandidatePairStats : RTCStats
 	{
-		public string ComponentId
+		public extern string ComponentId
 		{
 			get;
 			set;
 		}
 
-		public string LocalCandidateId
+		public extern string LocalCandidateId
 		{
 			get;
 			set;
 		}
 
-		public bool Nominated
+		public extern bool Nominated
 		{
 			get;
 			set;
 		}
 
-		public bool Readable
+		public extern bool Readable
 		{
 			get;
 			set;
 		}
 
-		public string RemoteCandidateId
+		public extern string RemoteCandidateId
 		{
 			get;
 			set;
 		}
 
-		public bool Selected
+		public extern bool Selected
 		{
 			get;
 			set;
 		}
 
-		public RTCStatsIceCandidatePairState State
+		public extern RTCStatsIceCandidatePairState State
 		{
 			get;
 			set;

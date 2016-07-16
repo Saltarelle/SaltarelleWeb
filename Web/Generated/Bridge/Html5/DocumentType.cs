@@ -5,124 +5,72 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DocumentType : XmlNode
 	{
-		internal DocumentType()
-		{
-		}
+		internal extern DocumentType();
 
-		public void AddEventListener(DocumentTypeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(DocumentTypeEvents type, Action listener);
 
-		public void AddEventListener(DocumentTypeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DocumentTypeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(DocumentTypeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(DocumentTypeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(DocumentTypeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DocumentTypeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(DocumentTypeEvents type, HtmlEventHandlerWithTarget<DocumentType> listener)
-		{
-		}
+		public extern void AddEventListener(DocumentTypeEvents type, HtmlEventHandlerWithTarget<DocumentType> listener);
 
-		public void AddEventListener(DocumentTypeEvents type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DocumentTypeEvents type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture);
 
-		public void AddEventListener(DocumentTypeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(DocumentTypeEvents type, IEventListener listener);
 
-		public void AddEventListener(DocumentTypeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DocumentTypeEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture);
+
+		[FieldProperty]
+		public extern string InternalSubset
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string InternalSubset
+		public extern string Name
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern string PublicId
 		{
-			get {
-				return null;
-			}
+			get;
 		}
+
+		public extern void Remove();
+
+		public extern void RemoveEventListener(DocumentTypeEvents type, Action listener);
+
+		public extern void RemoveEventListener(DocumentTypeEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(DocumentTypeEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(DocumentTypeEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(DocumentTypeEvents type, HtmlEventHandlerWithTarget<DocumentType> listener);
+
+		public extern void RemoveEventListener(DocumentTypeEvents type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture);
+
+		public extern void RemoveEventListener(DocumentTypeEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(DocumentTypeEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture);
 
 		[FieldProperty]
-		public string PublicId
+		public extern string SystemId
 		{
-			get {
-				return null;
-			}
-		}
-
-		public void Remove()
-		{
-		}
-
-		public void RemoveEventListener(DocumentTypeEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(DocumentTypeEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(DocumentTypeEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(DocumentTypeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(DocumentTypeEvents type, HtmlEventHandlerWithTarget<DocumentType> listener)
-		{
-		}
-
-		public void RemoveEventListener(DocumentTypeEvents type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(DocumentTypeEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(DocumentTypeEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public string SystemId
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

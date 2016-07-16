@@ -3,80 +3,58 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class PointerEvent : MouseEvent
 	{
-		internal PointerEvent()
-		{
-		}
+		internal extern PointerEvent();
 
-		public PointerEvent(string type)
-		{
-		}
+		public extern PointerEvent(string type);
 
-		public PointerEvent(string type, PointerEventInit eventInitDict)
+		public extern PointerEvent(string type, PointerEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern int Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public int Height
+		public extern bool IsPrimary
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool IsPrimary
+		public extern int PointerId
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int PointerId
+		public extern string PointerType
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string PointerType
+		public extern double Pressure
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Pressure
+		public extern int TiltX
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int TiltX
+		public extern int TiltY
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int TiltY
+		public extern int Width
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int Width
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

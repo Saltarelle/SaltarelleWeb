@@ -5,103 +5,55 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("HTMLContentElement")]
 	public partial class ContentElement : Element
 	{
-		internal ContentElement()
-		{
-		}
+		internal extern ContentElement();
 
-		public void AddEventListener(ContentElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(ContentElementEvents type, Action listener);
 
-		public void AddEventListener(ContentElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ContentElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(ContentElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(ContentElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(ContentElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ContentElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(ContentElementEvents type, HtmlEventHandlerWithTarget<ContentElement> listener)
-		{
-		}
+		public extern void AddEventListener(ContentElementEvents type, HtmlEventHandlerWithTarget<ContentElement> listener);
 
-		public void AddEventListener(ContentElementEvents type, HtmlEventHandlerWithTarget<ContentElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ContentElementEvents type, HtmlEventHandlerWithTarget<ContentElement> listener, bool capture);
 
-		public void AddEventListener(ContentElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(ContentElementEvents type, IEventListener listener);
 
-		public void AddEventListener(ContentElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ContentElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ContentElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ContentElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ContentElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ContentElement> listener, bool capture);
 
-		public XmlNodeList GetDistributedNodes()
-		{
-			return default(XmlNodeList);
-		}
+		public extern XmlNodeList GetDistributedNodes();
 
-		public void RemoveEventListener(ContentElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(ContentElementEvents type, Action listener);
 
-		public void RemoveEventListener(ContentElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ContentElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(ContentElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(ContentElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(ContentElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ContentElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(ContentElementEvents type, HtmlEventHandlerWithTarget<ContentElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(ContentElementEvents type, HtmlEventHandlerWithTarget<ContentElement> listener);
 
-		public void RemoveEventListener(ContentElementEvents type, HtmlEventHandlerWithTarget<ContentElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ContentElementEvents type, HtmlEventHandlerWithTarget<ContentElement> listener, bool capture);
 
-		public void RemoveEventListener(ContentElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(ContentElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(ContentElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ContentElementEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ContentElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ContentElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ContentElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ContentElement> listener, bool capture);
 
 		[FieldProperty]
-		public string Select
+		public extern string Select
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

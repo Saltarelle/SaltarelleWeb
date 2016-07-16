@@ -3,137 +3,83 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPatternElement : SVGElement
 	{
-		internal SVGPatternElement()
-		{
-		}
+		internal extern SVGPatternElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture);
 
-		public void AddEventListener(SVGPatternElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGPatternElementEvents type, Action listener);
 
-		public void AddEventListener(SVGPatternElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGPatternElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGPatternElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGPatternElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGPatternElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGPatternElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener);
 
-		public void AddEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture);
 
-		public void AddEventListener(SVGPatternElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGPatternElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGPatternElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGPatternElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString Href
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString Href
+		public extern SVGAnimatedEnumeration<SVGUnitType> PatternContentUnits
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGUnitType> PatternContentUnits
+		public extern SVGAnimatedTransformList PatternTransform
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGUnitType>);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedTransformList PatternTransform
+		public extern SVGAnimatedEnumeration<SVGUnitType> PatternUnits
 		{
-			get {
-				return default(SVGAnimatedTransformList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGUnitType> PatternUnits
+		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGUnitType>);
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio
-		{
-			get {
-				return default(SVGAnimatedPreserveAspectRatio);
-			}
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGPatternElementEvents type, Action listener);
 
-		public void RemoveEventListener(SVGPatternElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGPatternElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SVGPatternElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener);
 
-		public void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGPatternElementEvents type, HtmlEventHandlerWithTarget<SVGPatternElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGPatternElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SVGPatternElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGPatternElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGPatternElementEvents type, IEventListener listener, bool capture);
 
 		[Name("SVG_UNIT_TYPE_OBJECTBOUNDINGBOX")]
 		public const ushort SVG_UNIT_TYPE_OBJECTBOUNDINGBOX = 2;
@@ -145,35 +91,27 @@
 		public const ushort SVG_UNIT_TYPE_USERSPACEONUSE = 1;
 
 		[FieldProperty]
-		public SVGAnimatedRect ViewBox
+		public extern SVGAnimatedRect ViewBox
 		{
-			get {
-				return default(SVGAnimatedRect);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength X
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Y
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

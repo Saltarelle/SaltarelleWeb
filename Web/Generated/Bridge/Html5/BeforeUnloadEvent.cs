@@ -3,18 +3,13 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class BeforeUnloadEvent : Event
 	{
-		internal BeforeUnloadEvent()
-		{
-		}
+		internal extern BeforeUnloadEvent();
 
 		[FieldProperty]
-		public string ReturnValue
+		public extern string ReturnValue
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

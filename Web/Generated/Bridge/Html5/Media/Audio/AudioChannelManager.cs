@@ -3,116 +3,66 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class AudioChannelManager : EventTarget
 	{
-		internal AudioChannelManager()
-		{
-		}
+		internal extern AudioChannelManager();
 
-		public void AddEventListener(AudioChannelManagerEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(AudioChannelManagerEvents type, Action listener);
 
-		public void AddEventListener(AudioChannelManagerEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioChannelManagerEvents type, Action listener, bool capture);
 
-		public void AddEventListener(AudioChannelManagerEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(AudioChannelManagerEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(AudioChannelManagerEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioChannelManagerEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(AudioChannelManagerEvents type, HtmlEventHandlerWithTarget<AudioChannelManager> listener)
-		{
-		}
+		public extern void AddEventListener(AudioChannelManagerEvents type, HtmlEventHandlerWithTarget<AudioChannelManager> listener);
 
-		public void AddEventListener(AudioChannelManagerEvents type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioChannelManagerEvents type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture);
 
-		public void AddEventListener(AudioChannelManagerEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(AudioChannelManagerEvents type, IEventListener listener);
 
-		public void AddEventListener(AudioChannelManagerEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioChannelManagerEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture);
 
 		[FieldProperty]
-		public bool Headphones
+		public extern bool Headphones
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onheadphoneschange")]
-		public HtmlEventHandler OnHeadphoneschange
+		public extern HtmlEventHandler OnHeadphoneschange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(AudioChannelManagerEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(AudioChannelManagerEvents type, Action listener);
 
-		public void RemoveEventListener(AudioChannelManagerEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(AudioChannelManagerEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(AudioChannelManagerEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(AudioChannelManagerEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(AudioChannelManagerEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(AudioChannelManagerEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(AudioChannelManagerEvents type, HtmlEventHandlerWithTarget<AudioChannelManager> listener)
-		{
-		}
+		public extern void RemoveEventListener(AudioChannelManagerEvents type, HtmlEventHandlerWithTarget<AudioChannelManager> listener);
 
-		public void RemoveEventListener(AudioChannelManagerEvents type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(AudioChannelManagerEvents type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture);
 
-		public void RemoveEventListener(AudioChannelManagerEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(AudioChannelManagerEvents type, IEventListener listener);
 
-		public void RemoveEventListener(AudioChannelManagerEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(AudioChannelManagerEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture);
 
 		[FieldProperty]
-		public string VolumeControlChannel
+		public extern string VolumeControlChannel
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

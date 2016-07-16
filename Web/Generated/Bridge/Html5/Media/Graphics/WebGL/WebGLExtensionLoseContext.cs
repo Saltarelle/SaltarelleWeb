@@ -3,16 +3,10 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class WebGLExtensionLoseContext
 	{
-		internal WebGLExtensionLoseContext()
-		{
-		}
+		internal extern WebGLExtensionLoseContext();
 
-		public void LoseContext()
-		{
-		}
+		public extern void LoseContext();
 
-		public void RestoreContext()
-		{
-		}
+		public extern void RestoreContext();
 	}
 }

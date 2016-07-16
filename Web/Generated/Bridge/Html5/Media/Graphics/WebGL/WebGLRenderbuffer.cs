@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGLRenderbuffer
 	{
-		internal WebGLRenderbuffer()
-		{
-		}
+		internal extern WebGLRenderbuffer();
 	}
 }

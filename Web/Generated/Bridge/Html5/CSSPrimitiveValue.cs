@@ -3,9 +3,7 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CSSPrimitiveValue : CSSValue
 	{
-		internal CSSPrimitiveValue()
-		{
-		}
+		internal extern CSSPrimitiveValue();
 
 		[Name("CSS_ATTR")]
 		public const ushort CSS_ATTR = 22;
@@ -85,45 +83,24 @@
 		[Name("CSS_URI")]
 		public const ushort CSS_URI = 20;
 
-		public Counter GetCounterValue()
-		{
-			return default(Counter);
-		}
+		public extern Counter GetCounterValue();
 
-		public double GetFloatValue(ushort unitType)
-		{
-			return 0;
-		}
+		public extern double GetFloatValue(ushort unitType);
 
-		public Rect GetRectValue()
-		{
-			return default(Rect);
-		}
+		public extern Rect GetRectValue();
 
-		public RGBColor GetRGBColorValue()
-		{
-			return default(RGBColor);
-		}
+		public extern RGBColor GetRGBColorValue();
 
-		public string GetStringValue()
-		{
-			return null;
-		}
+		public extern string GetStringValue();
 
 		[FieldProperty]
-		public ushort PrimitiveType
+		public extern ushort PrimitiveType
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void SetFloatValue(ushort unitType, double floatValue)
-		{
-		}
+		public extern void SetFloatValue(ushort unitType, double floatValue);
 
-		public void SetStringValue(ushort stringType, string stringValue)
-		{
-		}
+		public extern void SetStringValue(ushort stringType, string stringValue);
 	}
 }

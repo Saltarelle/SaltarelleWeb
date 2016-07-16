@@ -3,9 +3,7 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGL2RenderingContext : WebGLRenderingContext
 	{
-		internal WebGL2RenderingContext()
-		{
-		}
+		internal extern WebGL2RenderingContext();
 
 		[Name("ANY_SAMPLES_PASSED")]
 		public const int ANY_SAMPLES_PASSED = 35887;
@@ -13,21 +11,13 @@
 		[Name("ANY_SAMPLES_PASSED_CONSERVATIVE")]
 		public const int ANY_SAMPLES_PASSED_CONSERVATIVE = 36202;
 
-		public void BeginQuery(int target, WebGLQuery queryObject)
-		{
-		}
+		public extern void BeginQuery(int target, WebGLQuery queryObject);
 
-		public void BindBufferBase(int target, int index, WebGLBuffer buffer)
-		{
-		}
+		public extern void BindBufferBase(int target, int index, WebGLBuffer buffer);
 
-		public void BindBufferRange(int target, int index, WebGLBuffer buffer, long offset, long size)
-		{
-		}
+		public extern void BindBufferRange(int target, int index, WebGLBuffer buffer, long offset, long size);
 
-		public void BindVertexArray(WebGLVertexArray arrayObject)
-		{
-		}
+		public extern void BindVertexArray(WebGLVertexArray arrayObject);
 
 		[Name("COLOR_ATTACHMENT1")]
 		public const int COLOR_ATTACHMENT1 = 36065;
@@ -74,26 +64,16 @@
 		[Name("COLOR_ATTACHMENT9")]
 		public const int COLOR_ATTACHMENT9 = 36073;
 
-		public WebGLQuery CreateQuery()
-		{
-			return default(WebGLQuery);
-		}
+		public extern WebGLQuery CreateQuery();
 
-		public WebGLVertexArray CreateVertexArray()
-		{
-			return default(WebGLVertexArray);
-		}
+		public extern WebGLVertexArray CreateVertexArray();
 
 		[Name("CURRENT_QUERY")]
 		public const int CURRENT_QUERY = 34917;
 
-		public void DeleteQuery(WebGLQuery queryObject)
-		{
-		}
+		public extern void DeleteQuery(WebGLQuery queryObject);
 
-		public void DeleteVertexArray(WebGLVertexArray arrayObject)
-		{
-		}
+		public extern void DeleteVertexArray(WebGLVertexArray arrayObject);
 
 		[Name("DRAW_BUFFER0")]
 		public const int DRAW_BUFFER0 = 34853;
@@ -143,49 +123,26 @@
 		[Name("DRAW_BUFFER9")]
 		public const int DRAW_BUFFER9 = 34862;
 
-		public void DrawArraysInstanced(int mode, int first, int count, int primcount)
-		{
-		}
+		public extern void DrawArraysInstanced(int mode, int first, int count, int primcount);
 
-		public void DrawBuffers(int[] buffers)
-		{
-		}
+		public extern void DrawBuffers(int[] buffers);
 
-		public void DrawElementsInstanced(int mode, int count, int type, long offset, int primcount)
-		{
-		}
+		public extern void DrawElementsInstanced(int mode, int count, int type, long offset, int primcount);
 
-		public void EndQuery(int target)
-		{
-		}
+		public extern void EndQuery(int target);
 
 		[Name("FRAGMENT_SHADER_DERIVATIVE_HINT")]
 		public const int FRAGMENT_SHADER_DERIVATIVE_HINT = 35723;
 
-		public object GetParameterIndexed(int pname, int index)
-		{
-			return null;
-		}
+		public extern object GetParameterIndexed(int pname, int index);
 
-		public WebGLQuery GetQuery(int target, int pname)
-		{
-			return default(WebGLQuery);
-		}
+		public extern WebGLQuery GetQuery(int target, int pname);
 
-		public object GetQueryObject(WebGLQuery queryObject, int pname)
-		{
-			return null;
-		}
+		public extern object GetQueryObject(WebGLQuery queryObject, int pname);
 
-		public bool IsQuery(WebGLQuery queryObject)
-		{
-			return false;
-		}
+		public extern bool IsQuery(WebGLQuery queryObject);
 
-		public bool IsVertexArray(WebGLVertexArray arrayObject)
-		{
-			return false;
-		}
+		public extern bool IsVertexArray(WebGLVertexArray arrayObject);
 
 		public const int MAX = 32776;
 
@@ -233,8 +190,6 @@
 		[Name("VERTEX_ATTRIB_ARRAY_DIVISOR")]
 		public const int VERTEX_ATTRIB_ARRAY_DIVISOR = 35070;
 
-		public void VertexAttribDivisor(int index, int divisor)
-		{
-		}
+		public extern void VertexAttribDivisor(int index, int divisor);
 	}
 }

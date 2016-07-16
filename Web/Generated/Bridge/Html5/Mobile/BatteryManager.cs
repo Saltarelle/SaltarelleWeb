@@ -3,160 +3,98 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class BatteryManager : EventTarget
 	{
-		internal BatteryManager()
-		{
-		}
+		internal extern BatteryManager();
 
-		public void AddEventListener(BatteryManagerEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(BatteryManagerEvents type, Action listener);
 
-		public void AddEventListener(BatteryManagerEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(BatteryManagerEvents type, Action listener, bool capture);
 
-		public void AddEventListener(BatteryManagerEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(BatteryManagerEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(BatteryManagerEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(BatteryManagerEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener)
-		{
-		}
+		public extern void AddEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener);
 
-		public void AddEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture);
 
-		public void AddEventListener(BatteryManagerEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(BatteryManagerEvents type, IEventListener listener);
 
-		public void AddEventListener(BatteryManagerEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(BatteryManagerEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Charging
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool Charging
+		public extern double ChargingTime
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double ChargingTime
+		public extern double DischargingTime
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double DischargingTime
+		public extern double Level
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public double Level
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onchargingchange")]
-		public HtmlEventHandler OnChargingchange
+		public extern HtmlEventHandler OnChargingchange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onchargingtimechange")]
-		public HtmlEventHandler OnChargingtimechange
+		public extern HtmlEventHandler OnChargingtimechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondischargingtimechange")]
-		public HtmlEventHandler OnDischargingtimechange
+		public extern HtmlEventHandler OnDischargingtimechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onlevelchange")]
-		public HtmlEventHandler OnLevelchange
+		public extern HtmlEventHandler OnLevelchange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(BatteryManagerEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(BatteryManagerEvents type, Action listener);
 
-		public void RemoveEventListener(BatteryManagerEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(BatteryManagerEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener)
-		{
-		}
+		public extern void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener);
 
-		public void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(BatteryManagerEvents type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture);
 
-		public void RemoveEventListener(BatteryManagerEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(BatteryManagerEvents type, IEventListener listener);
 
-		public void RemoveEventListener(BatteryManagerEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(BatteryManagerEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture);
 	}
 }

@@ -3,16 +3,12 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class WebGLExtensionTextureHalfFloat
 	{
-		internal WebGLExtensionTextureHalfFloat()
-		{
-		}
+		internal extern WebGLExtensionTextureHalfFloat();
 
 		[FieldProperty, Name("HALF_FLOAT_OES")]
-		public int HALF_FLOAT_OES
+		public extern int HALF_FLOAT_OES
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

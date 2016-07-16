@@ -3,178 +3,109 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'SCRIPT'"), Name("Element")]
 	public partial class ScriptElement : Element
 	{
-		internal ScriptElement()
-		{
-		}
+		internal extern ScriptElement();
 
-		public void AddEventListener(ScriptElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(ScriptElementEvents type, Action listener);
 
-		public void AddEventListener(ScriptElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ScriptElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(ScriptElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(ScriptElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(ScriptElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ScriptElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener)
-		{
-		}
+		public extern void AddEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener);
 
-		public void AddEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture);
 
-		public void AddEventListener(ScriptElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(ScriptElementEvents type, IEventListener listener);
 
-		public void AddEventListener(ScriptElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ScriptElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Async
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Async
+		public extern string Charset
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Charset
+		public extern string CrossOrigin
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string CrossOrigin
+		public extern bool Defer
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Defer
+		public extern string Event
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Event
+		public extern string HtmlFor
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(ScriptElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(ScriptElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(ScriptElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(ScriptElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener);
+
+		public extern void RemoveEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture);
+
+		public extern void RemoveEventListener(ScriptElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(ScriptElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Src
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string HtmlFor
+		public extern string Text
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(ScriptElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(ScriptElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ScriptElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(ScriptElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(ScriptElementEvents type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ScriptElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(ScriptElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Src
+		public extern string Type
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Text
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Type
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,17 +3,11 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGLength
 	{
-		internal SVGLength()
-		{
-		}
+		internal extern SVGLength();
 
-		public void ConvertToSpecifiedUnits(SVGLengthType unitType)
-		{
-		}
+		public extern void ConvertToSpecifiedUnits(SVGLengthType unitType);
 
-		public void NewValueSpecifiedUnits(SVGLengthType unitType, double valueInSpecifiedUnits)
-		{
-		}
+		public extern void NewValueSpecifiedUnits(SVGLengthType unitType, double valueInSpecifiedUnits);
 
 		[Name("SVG_LENGTHTYPE_CM")]
 		public const ushort SVG_LENGTHTYPE_CM = 6;
@@ -49,41 +43,30 @@
 		public const ushort SVG_LENGTHTYPE_UNKNOWN = 0;
 
 		[FieldProperty]
-		public SVGLengthType UnitType
+		public extern SVGLengthType UnitType
 		{
-			get {
-				return default(SVGLengthType);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Value
+		public extern double Value
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string ValueAsString
+		public extern string ValueAsString
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double ValueInSpecifiedUnits
+		public extern double ValueInSpecifiedUnits
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,16 +3,12 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TextMetrics
 	{
-		internal TextMetrics()
-		{
-		}
+		internal extern TextMetrics();
 
 		[FieldProperty]
-		public double Width
+		public extern double Width
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

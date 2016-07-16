@@ -3,9 +3,7 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class XPathResult
 	{
-		internal XPathResult()
-		{
-		}
+		internal extern XPathResult();
 
 		[Name("ANY_TYPE")]
 		public const ushort ANY_TYPE = 0;
@@ -17,38 +15,29 @@
 		public const ushort BOOLEAN_TYPE = 3;
 
 		[FieldProperty]
-		public bool BooleanValue
+		public extern bool BooleanValue
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[Name("FIRST_ORDERED_NODE_TYPE")]
 		public const ushort FIRST_ORDERED_NODE_TYPE = 9;
 
 		[FieldProperty]
-		public bool InvalidIteratorState
+		public extern bool InvalidIteratorState
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
-		public XmlNode IterateNext()
-		{
-			return default(XmlNode);
-		}
+		public extern XmlNode IterateNext();
 
 		[Name("NUMBER_TYPE")]
 		public const ushort NUMBER_TYPE = 1;
 
 		[FieldProperty]
-		public double NumberValue
+		public extern double NumberValue
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[Name("ORDERED_NODE_ITERATOR_TYPE")]
@@ -58,43 +47,32 @@
 		public const ushort ORDERED_NODE_SNAPSHOT_TYPE = 7;
 
 		[FieldProperty]
-		public ResultType ResultType
+		public extern ResultType ResultType
 		{
-			get {
-				return default(ResultType);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlNode SingleNodeValue
+		public extern XmlNode SingleNodeValue
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 
-		public XmlNode SnapshotItem(int index)
-		{
-			return default(XmlNode);
-		}
+		public extern XmlNode SnapshotItem(int index);
 
 		[FieldProperty]
-		public int SnapshotLength
+		public extern int SnapshotLength
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[Name("STRING_TYPE")]
 		public const ushort STRING_TYPE = 2;
 
 		[FieldProperty]
-		public string StringValue
+		public extern string StringValue
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[Name("UNORDERED_NODE_ITERATOR_TYPE")]

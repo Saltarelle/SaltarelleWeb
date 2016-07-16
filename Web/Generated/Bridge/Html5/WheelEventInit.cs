@@ -3,25 +3,25 @@
 	[External, Serializable]
 	public partial class WheelEventInit : MouseEventInit
 	{
-		public int DeltaMode
+		public extern int DeltaMode
 		{
 			get;
 			set;
 		}
 
-		public double DeltaX
+		public extern double DeltaX
 		{
 			get;
 			set;
 		}
 
-		public double DeltaY
+		public extern double DeltaY
 		{
 			get;
 			set;
 		}
 
-		public double DeltaZ
+		public extern double DeltaZ
 		{
 			get;
 			set;

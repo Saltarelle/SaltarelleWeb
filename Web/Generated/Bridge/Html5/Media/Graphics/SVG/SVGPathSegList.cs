@@ -5,72 +5,41 @@ namespace Bridge.Html5.Media.Graphics.SVG
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPathSegList
 	{
-		internal SVGPathSegList()
-		{
-		}
+		internal extern SVGPathSegList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public SVGPathSeg this[int index]
 		{
-			get {
-				return default(SVGPathSeg);
-			}
+			get;
 		}
 
-		public SVGPathSeg AppendItem(SVGPathSeg newItem)
-		{
-			return default(SVGPathSeg);
-		}
+		public extern SVGPathSeg AppendItem(SVGPathSeg newItem);
 
-		public void Clear()
-		{
-		}
+		public extern void Clear();
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<SVGPathSeg> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<SVGPathSeg> GetEnumerator();
 
-		public SVGPathSeg GetItem(int index)
-		{
-			return default(SVGPathSeg);
-		}
+		public extern SVGPathSeg GetItem(int index);
 
-		public SVGPathSeg Initialize(SVGPathSeg newItem)
-		{
-			return default(SVGPathSeg);
-		}
+		public extern SVGPathSeg Initialize(SVGPathSeg newItem);
 
-		public SVGPathSeg InsertItemBefore(SVGPathSeg newItem, int index)
+		public extern SVGPathSeg InsertItemBefore(SVGPathSeg newItem, int index);
+
+		[FieldProperty]
+		public extern int Length
 		{
-			return default(SVGPathSeg);
+			get;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern int NumberOfItems
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public int NumberOfItems
-		{
-			get {
-				return 0;
-			}
-		}
+		public extern SVGPathSeg RemoveItem(int index);
 
-		public SVGPathSeg RemoveItem(int index)
-		{
-			return default(SVGPathSeg);
-		}
-
-		public SVGPathSeg ReplaceItem(SVGPathSeg newItem, int index)
-		{
-			return default(SVGPathSeg);
-		}
+		public extern SVGPathSeg ReplaceItem(SVGPathSeg newItem, int index);
 	}
 }

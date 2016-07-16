@@ -5,60 +5,35 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("DOMTokenList")]
 	public partial class TokenList
 	{
-		internal TokenList()
-		{
-		}
+		internal extern TokenList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public string this[int index]
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[ExpandParams]
-		public void Add(params string[] tokens)
-		{
-		}
+		public extern void Add(params string[] tokens);
 
-		public bool Contains(string token)
-		{
-			return false;
-		}
+		public extern bool Contains(string token);
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<string> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<string> GetEnumerator();
 
-		public string Item(int index)
-		{
-			return null;
-		}
+		public extern string Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[ExpandParams]
-		public void Remove(params string[] tokens)
-		{
-		}
+		public extern void Remove(params string[] tokens);
 
-		public bool Toggle(string token)
-		{
-			return false;
-		}
+		public extern bool Toggle(string token);
 
-		public bool Toggle(string token, bool force)
-		{
-			return false;
-		}
+		public extern bool Toggle(string token, bool force);
 	}
 }

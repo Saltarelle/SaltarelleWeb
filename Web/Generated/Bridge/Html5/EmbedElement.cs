@@ -5,159 +5,93 @@ namespace Bridge.Html5
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'EMBED'"), Name("Element")]
 	public partial class EmbedElement : Element
 	{
-		internal EmbedElement()
-		{
-		}
+		internal extern EmbedElement();
 
-		public void AddEventListener(EmbedElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(EmbedElementEvents type, Action listener);
 
-		public void AddEventListener(EmbedElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(EmbedElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(EmbedElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(EmbedElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(EmbedElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(EmbedElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener)
-		{
-		}
+		public extern void AddEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener);
 
-		public void AddEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture);
 
-		public void AddEventListener(EmbedElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(EmbedElementEvents type, IEventListener listener);
 
-		public void AddEventListener(EmbedElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(EmbedElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture);
 
 		[FieldProperty]
-		public string Align
+		public extern string Align
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[Template("{this}({*arguments})")]
-		public object Call(params object[] arguments)
-		{
-			return null;
-		}
+		public extern object Call(params object[] arguments);
 
-		public DocumentBase GetSVGDocument()
+		public extern DocumentBase GetSVGDocument();
+
+		[FieldProperty]
+		public extern string Height
 		{
-			return default(DocumentBase);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Height
+		public extern string Name
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(EmbedElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(EmbedElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(EmbedElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(EmbedElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener);
+
+		public extern void RemoveEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture);
+
+		public extern void RemoveEventListener(EmbedElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(EmbedElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Src
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern string Type
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(EmbedElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(EmbedElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(EmbedElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(EmbedElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(EmbedElementEvents type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(EmbedElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(EmbedElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Src
+		public extern string Width
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Type
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Width
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

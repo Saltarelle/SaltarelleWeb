@@ -3,56 +3,34 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class History
 	{
-		internal History()
-		{
-		}
+		internal extern History();
 
-		public void Back()
-		{
-		}
+		public extern void Back();
 
-		public void Forward()
-		{
-		}
+		public extern void Forward();
 
-		public void Go()
-		{
-		}
+		public extern void Go();
 
-		public void Go(int delta)
-		{
-		}
+		public extern void Go(int delta);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void PushState(object data, string title)
-		{
-		}
+		public extern void PushState(object data, string title);
 
-		public void PushState(object data, string title, string url)
-		{
-		}
+		public extern void PushState(object data, string title, string url);
 
-		public void ReplaceState(object data, string title)
-		{
-		}
+		public extern void ReplaceState(object data, string title);
 
-		public void ReplaceState(object data, string title, string url)
-		{
-		}
+		public extern void ReplaceState(object data, string title, string url);
 
 		[FieldProperty]
-		public object State
+		public extern object State
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

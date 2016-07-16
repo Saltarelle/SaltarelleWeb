@@ -3,40 +3,26 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class AudioListener
 	{
-		internal AudioListener()
-		{
-		}
+		internal extern AudioListener();
 
 		[FieldProperty]
-		public double DopplerFactor
+		public extern double DopplerFactor
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void SetOrientation(double x, double y, double z, double xUp, double yUp, double zUp)
-		{
-		}
+		public extern void SetOrientation(double x, double y, double z, double xUp, double yUp, double zUp);
 
-		public void SetPosition(double x, double y, double z)
-		{
-		}
+		public extern void SetPosition(double x, double y, double z);
 
-		public void SetVelocity(double x, double y, double z)
-		{
-		}
+		public extern void SetVelocity(double x, double y, double z);
 
 		[FieldProperty]
-		public double SpeedOfSound
+		public extern double SpeedOfSound
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

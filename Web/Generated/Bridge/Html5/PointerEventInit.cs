@@ -3,49 +3,49 @@
 	[External, Serializable]
 	public partial class PointerEventInit : MouseEventInit
 	{
-		public int Height
+		public extern int Height
 		{
 			get;
 			set;
 		}
 
-		public bool IsPrimary
+		public extern bool IsPrimary
 		{
 			get;
 			set;
 		}
 
-		public int PointerId
+		public extern int PointerId
 		{
 			get;
 			set;
 		}
 
-		public string PointerType
+		public extern string PointerType
 		{
 			get;
 			set;
 		}
 
-		public double Pressure
+		public extern double Pressure
 		{
 			get;
 			set;
 		}
 
-		public int TiltX
+		public extern int TiltX
 		{
 			get;
 			set;
 		}
 
-		public int TiltY
+		public extern int TiltY
 		{
 			get;
 			set;
 		}
 
-		public int Width
+		public extern int Width
 		{
 			get;
 			set;

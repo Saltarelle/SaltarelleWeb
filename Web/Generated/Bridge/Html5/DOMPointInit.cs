@@ -3,25 +3,25 @@
 	[External, Serializable]
 	public partial class DOMPointInit
 	{
-		public double W
+		public extern double W
 		{
 			get;
 			set;
 		}
 
-		public double X
+		public extern double X
 		{
 			get;
 			set;
 		}
 
-		public double Y
+		public extern double Y
 		{
 			get;
 			set;
 		}
 
-		public double Z
+		public extern double Z
 		{
 			get;
 			set;

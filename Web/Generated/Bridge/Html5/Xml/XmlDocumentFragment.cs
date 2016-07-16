@@ -3,135 +3,76 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("DocumentFragment")]
 	public partial class XmlDocumentFragment : XmlNode
 	{
-		public XmlDocumentFragment()
-		{
-		}
+		public extern XmlDocumentFragment();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture);
 
-		public void AddEventListener(XmlDocumentFragmentEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentFragmentEvents type, Action listener);
 
-		public void AddEventListener(XmlDocumentFragmentEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentFragmentEvents type, Action listener, bool capture);
 
-		public void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener);
 
-		public void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture);
 
-		public void AddEventListener(XmlDocumentFragmentEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(XmlDocumentFragmentEvents type, IEventListener listener);
 
-		public void AddEventListener(XmlDocumentFragmentEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(XmlDocumentFragmentEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern int ChildElementCount
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public int ChildElementCount
+		public extern XmlElementCollection Children
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElementCollection Children
+		public extern XmlElement FirstElementChild
 		{
-			get {
-				return default(XmlElementCollection);
-			}
+			get;
 		}
+
+		public extern XmlElement GetElementById(string elementId);
 
 		[FieldProperty]
-		public XmlElement FirstElementChild
+		public extern XmlElement LastElementChild
 		{
-			get {
-				return default(XmlElement);
-			}
+			get;
 		}
 
-		public XmlElement GetElementById(string elementId)
-		{
-			return default(XmlElement);
-		}
+		public extern XmlElement QuerySelector(string selectors);
 
-		[FieldProperty]
-		public XmlElement LastElementChild
-		{
-			get {
-				return default(XmlElement);
-			}
-		}
+		public extern XmlNodeList QuerySelectorAll(string selectors);
 
-		public XmlElement QuerySelector(string selectors)
-		{
-			return default(XmlElement);
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener);
 
-		public XmlNodeList QuerySelectorAll(string selectors)
-		{
-			return default(XmlNodeList);
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentFragmentEvents type, Action listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentFragmentEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(XmlDocumentFragmentEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(XmlDocumentFragmentEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener);
 
-		public void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture);
 
-		public void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentFragmentEvents type, IEventListener listener);
 
-		public void RemoveEventListener(XmlDocumentFragmentEvents type, HtmlEventHandlerWithTarget<XmlDocumentFragment> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlDocumentFragmentEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlDocumentFragmentEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlDocumentFragmentEvents type, IEventListener listener, bool capture);
 	}
 }

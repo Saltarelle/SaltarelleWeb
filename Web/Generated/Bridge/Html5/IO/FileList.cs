@@ -5,35 +5,23 @@ namespace Bridge.Html5.IO
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class FileList
 	{
-		internal FileList()
-		{
-		}
+		internal extern FileList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public File this[int index]
 		{
-			get {
-				return default(File);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<File> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<File> GetEnumerator();
 
-		public File Item(int index)
-		{
-			return default(File);
-		}
+		public extern File Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

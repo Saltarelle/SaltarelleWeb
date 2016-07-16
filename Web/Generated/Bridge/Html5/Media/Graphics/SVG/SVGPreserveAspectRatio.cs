@@ -3,28 +3,20 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPreserveAspectRatio
 	{
-		internal SVGPreserveAspectRatio()
+		internal extern SVGPreserveAspectRatio();
+
+		[FieldProperty]
+		public extern SVGAlign Align
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public SVGAlign Align
+		public extern SVGMeetOrSlice MeetOrSlice
 		{
-			get {
-				return default(SVGAlign);
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public SVGMeetOrSlice MeetOrSlice
-		{
-			get {
-				return default(SVGMeetOrSlice);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[Name("SVG_MEETORSLICE_MEET")]

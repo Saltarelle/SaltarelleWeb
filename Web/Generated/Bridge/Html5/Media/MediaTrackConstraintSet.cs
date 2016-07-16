@@ -5,7 +5,7 @@ namespace Bridge.Html5.Media
 	[External, Serializable]
 	public partial class MediaTrackConstraintSet
 	{
-		public VideoFacingModeEnum FacingMode
+		public extern VideoFacingModeEnum FacingMode
 		{
 			get;
 			set;

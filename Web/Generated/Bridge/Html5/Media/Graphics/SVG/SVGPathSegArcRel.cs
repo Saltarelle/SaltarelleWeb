@@ -3,78 +3,55 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPathSegArcRel : SVGPathSeg
 	{
-		internal SVGPathSegArcRel()
+		internal extern SVGPathSegArcRel();
+
+		[FieldProperty]
+		public extern double Angle
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Angle
+		public extern bool LargeArcFlag
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool LargeArcFlag
+		public extern double R1
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double R1
+		public extern double R2
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double R2
+		public extern bool SweepFlag
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool SweepFlag
+		public extern double X
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double X
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Y
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

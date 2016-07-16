@@ -5,326 +5,210 @@ namespace Bridge.Html5
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'OBJECT'"), Name("Element")]
 	public partial class ObjectElement : Element
 	{
-		internal ObjectElement()
-		{
-		}
+		internal extern ObjectElement();
 
-		public void AddEventListener(ObjectElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(ObjectElementEvents type, Action listener);
 
-		public void AddEventListener(ObjectElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ObjectElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(ObjectElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(ObjectElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(ObjectElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ObjectElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener)
-		{
-		}
+		public extern void AddEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener);
 
-		public void AddEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture);
 
-		public void AddEventListener(ObjectElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(ObjectElementEvents type, IEventListener listener);
 
-		public void AddEventListener(ObjectElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ObjectElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Align
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Align
+		public extern string Archive
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Archive
+		public extern string Border
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Border
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[Template("{this}({*arguments})")]
-		public object Call(params object[] arguments)
-		{
-			return null;
-		}
+		public extern object Call(params object[] arguments);
 
-		public bool CheckValidity()
+		public extern bool CheckValidity();
+
+		[FieldProperty]
+		public extern string Code
 		{
-			return false;
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Code
+		public extern string CodeBase
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string CodeBase
+		public extern string CodeType
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string CodeType
+		public extern DocumentBase ContentDocument
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DocumentBase ContentDocument
+		public extern WindowInstance ContentWindow
 		{
-			get {
-				return default(DocumentBase);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public WindowInstance ContentWindow
+		public extern string Data
 		{
-			get {
-				return default(WindowInstance);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Data
+		public extern bool Declare
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Declare
+		public extern FormElement Form
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern DocumentBase GetSVGDocument();
+
+		[FieldProperty]
+		public extern string Height
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public FormElement Form
+		public extern int Hspace
 		{
-			get {
-				return default(FormElement);
-			}
-		}
-
-		public DocumentBase GetSVGDocument()
-		{
-			return default(DocumentBase);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Height
+		public extern string Name
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(ObjectElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(ObjectElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(ObjectElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(ObjectElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener);
+
+		public extern void RemoveEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture);
+
+		public extern void RemoveEventListener(ObjectElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(ObjectElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture);
+
+		public extern void SetCustomValidity(string error);
+
+		[FieldProperty]
+		public extern string Standby
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Hspace
+		public extern string Type
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern bool TypeMustMatch
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(ObjectElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(ObjectElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ObjectElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(ObjectElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(ObjectElementEvents type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ObjectElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(ObjectElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture)
-		{
-		}
-
-		public void SetCustomValidity(string error)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Standby
+		public extern string UseMap
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Type
+		public extern string ValidationMessage
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool TypeMustMatch
+		public extern ValidityState Validity
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string UseMap
+		public extern int Vspace
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string ValidationMessage
+		public extern string Width
 		{
-			get {
-				return null;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public ValidityState Validity
+		public extern bool WillValidate
 		{
-			get {
-				return default(ValidityState);
-			}
-		}
-
-		[FieldProperty]
-		public int Vspace
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Width
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public bool WillValidate
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

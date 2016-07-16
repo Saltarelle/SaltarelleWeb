@@ -3,168 +3,126 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class PerformanceTiming
 	{
-		internal PerformanceTiming()
+		internal extern PerformanceTiming();
+
+		[FieldProperty]
+		public extern ulong ConnectEnd
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public ulong ConnectEnd
+		public extern ulong ConnectStart
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong ConnectStart
+		public extern ulong DomainLookupEnd
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong DomainLookupEnd
+		public extern ulong DomainLookupStart
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong DomainLookupStart
+		public extern ulong DomComplete
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong DomComplete
+		public extern ulong DomContentLoadedEventEnd
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong DomContentLoadedEventEnd
+		public extern ulong DomContentLoadedEventStart
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong DomContentLoadedEventStart
+		public extern ulong DomInteractive
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong DomInteractive
+		public extern ulong DomLoading
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong DomLoading
+		public extern ulong FetchStart
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong FetchStart
+		public extern ulong LoadEventEnd
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong LoadEventEnd
+		public extern ulong LoadEventStart
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong LoadEventStart
+		public extern ulong NavigationStart
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong NavigationStart
+		public extern ulong RedirectEnd
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong RedirectEnd
+		public extern ulong RedirectStart
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong RedirectStart
+		public extern ulong RequestStart
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong RequestStart
+		public extern ulong ResponseEnd
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong ResponseEnd
+		public extern ulong ResponseStart
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong ResponseStart
+		public extern ulong UnloadEventEnd
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong UnloadEventEnd
+		public extern ulong UnloadEventStart
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public ulong UnloadEventStart
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

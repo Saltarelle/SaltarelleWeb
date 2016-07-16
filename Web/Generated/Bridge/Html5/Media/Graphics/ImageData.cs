@@ -5,44 +5,30 @@ namespace Bridge.Html5.Media.Graphics
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class ImageData
 	{
-		internal ImageData()
-		{
-		}
+		internal extern ImageData();
 
-		public ImageData(int sw, int sh)
-		{
-		}
+		public extern ImageData(int sw, int sh);
 
-		public ImageData(Uint8ClampedArray data, int sw)
-		{
-		}
+		public extern ImageData(Uint8ClampedArray data, int sw);
 
-		public ImageData(Uint8ClampedArray data, int sw, int sh)
+		public extern ImageData(Uint8ClampedArray data, int sw, int sh);
+
+		[FieldProperty]
+		public extern Uint8ClampedArray Data
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public Uint8ClampedArray Data
+		public extern int Height
 		{
-			get {
-				return default(Uint8ClampedArray);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int Height
+		public extern int Width
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int Width
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

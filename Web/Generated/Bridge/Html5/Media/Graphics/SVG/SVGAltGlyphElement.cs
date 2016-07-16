@@ -3,116 +3,66 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAltGlyphElement : SVGTextPositioningElement
 	{
-		internal SVGAltGlyphElement()
-		{
-		}
+		internal extern SVGAltGlyphElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture);
 
-		public void AddEventListener(SVGAltGlyphElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGAltGlyphElementEvents type, Action listener);
 
-		public void AddEventListener(SVGAltGlyphElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGAltGlyphElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener);
 
-		public void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture);
 
-		public void AddEventListener(SVGAltGlyphElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGAltGlyphElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGAltGlyphElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGAltGlyphElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern string Format
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Format
+		public extern string GlyphRef
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string GlyphRef
+		public extern SVGAnimatedString Href
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public SVGAnimatedString Href
-		{
-			get {
-				return default(SVGAnimatedString);
-			}
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGAltGlyphElementEvents type, Action listener);
 
-		public void RemoveEventListener(SVGAltGlyphElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGAltGlyphElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SVGAltGlyphElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener);
 
-		public void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGAltGlyphElementEvents type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGAltGlyphElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SVGAltGlyphElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGAltGlyphElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGAltGlyphElementEvents type, IEventListener listener, bool capture);
 	}
 }

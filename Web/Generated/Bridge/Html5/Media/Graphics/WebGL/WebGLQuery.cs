@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGLQuery
 	{
-		internal WebGLQuery()
-		{
-		}
+		internal extern WebGLQuery();
 	}
 }

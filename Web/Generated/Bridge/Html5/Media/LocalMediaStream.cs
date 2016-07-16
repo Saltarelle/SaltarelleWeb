@@ -3,12 +3,8 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class LocalMediaStream : MediaStream
 	{
-		internal LocalMediaStream()
-		{
-		}
+		internal extern LocalMediaStream();
 
-		public void Stop()
-		{
-		}
+		public extern void Stop();
 	}
 }

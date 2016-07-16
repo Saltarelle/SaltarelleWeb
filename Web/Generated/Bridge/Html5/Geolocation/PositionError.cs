@@ -3,48 +3,36 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class PositionError
 	{
-		internal PositionError()
+		internal extern PositionError();
+
+		[FieldProperty]
+		public extern ushort Code
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public ushort Code
+		public extern string Message
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public string Message
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("PERMISSION_DENIED")]
-		public ushort PERMISSION_DENIED
+		public extern ushort PERMISSION_DENIED
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("POSITION_UNAVAILABLE")]
-		public ushort POSITION_UNAVAILABLE
+		public extern ushort POSITION_UNAVAILABLE
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ushort TIMEOUT
+		public extern ushort TIMEOUT
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class WebGLExtensionTextureHalfFloatLinear
 	{
-		internal WebGLExtensionTextureHalfFloatLinear()
-		{
-		}
+		internal extern WebGLExtensionTextureHalfFloatLinear();
 	}
 }

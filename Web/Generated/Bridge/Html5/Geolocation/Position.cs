@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class Position
 	{
-		internal Position()
+		internal extern Position();
+
+		[FieldProperty]
+		public extern Coordinates Coords
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public Coordinates Coords
+		public extern long Timestamp
 		{
-			get {
-				return default(Coordinates);
-			}
-		}
-
-		[FieldProperty]
-		public long Timestamp
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

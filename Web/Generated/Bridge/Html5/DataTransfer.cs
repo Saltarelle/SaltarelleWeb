@@ -5,69 +5,44 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DataTransfer
 	{
-		internal DataTransfer()
-		{
-		}
+		internal extern DataTransfer();
 
-		public void AddElement(Element element)
-		{
-		}
+		public extern void AddElement(Element element);
 
-		public void ClearData()
-		{
-		}
+		public extern void ClearData();
 
-		public void ClearData(string format)
+		public extern void ClearData(string format);
+
+		[FieldProperty]
+		public extern DropEffect DropEffect
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public DropEffect DropEffect
+		public extern AllowedDropEffect EffectAllowed
 		{
-			get {
-				return default(DropEffect);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public AllowedDropEffect EffectAllowed
+		public extern FileList Files
 		{
-			get {
-				return default(AllowedDropEffect);
-			}
-			set {
-			}
+			get;
 		}
+
+		public extern string GetData(string format);
+
+		public extern void SetData(string format, string data);
+
+		public extern void SetDragImage(Element image, int x, int y);
 
 		[FieldProperty]
-		public FileList Files
+		public extern DOMStringList Types
 		{
-			get {
-				return default(FileList);
-			}
-		}
-
-		public string GetData(string format)
-		{
-			return null;
-		}
-
-		public void SetData(string format, string data)
-		{
-		}
-
-		public void SetDragImage(Element image, int x, int y)
-		{
-		}
-
-		[FieldProperty]
-		public DOMStringList Types
-		{
-			get {
-				return default(DOMStringList);
-			}
+			get;
 		}
 	}
 }

@@ -3,40 +3,28 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class ProgressEvent : Event
 	{
-		internal ProgressEvent()
-		{
-		}
+		internal extern ProgressEvent();
 
-		public ProgressEvent(string type)
-		{
-		}
+		public extern ProgressEvent(string type);
 
-		public ProgressEvent(string type, ProgressEventInit eventInitDict)
+		public extern ProgressEvent(string type, ProgressEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern bool LengthComputable
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool LengthComputable
+		public extern ulong Loaded
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ulong Loaded
+		public extern ulong Total
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public ulong Total
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

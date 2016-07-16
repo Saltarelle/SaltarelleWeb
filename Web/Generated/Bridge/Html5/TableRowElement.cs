@@ -3,176 +3,105 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'TR'"), Name("Element")]
 	public partial class TableRowElement : Element
 	{
-		internal TableRowElement()
-		{
-		}
+		internal extern TableRowElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TableRowElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TableRowElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TableRowElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TableRowElement> listener, bool capture);
 
-		public void AddEventListener(TableRowElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(TableRowElementEvents type, Action listener);
 
-		public void AddEventListener(TableRowElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TableRowElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(TableRowElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(TableRowElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(TableRowElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TableRowElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(TableRowElementEvents type, HtmlEventHandlerWithTarget<TableRowElement> listener)
-		{
-		}
+		public extern void AddEventListener(TableRowElementEvents type, HtmlEventHandlerWithTarget<TableRowElement> listener);
 
-		public void AddEventListener(TableRowElementEvents type, HtmlEventHandlerWithTarget<TableRowElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TableRowElementEvents type, HtmlEventHandlerWithTarget<TableRowElement> listener, bool capture);
 
-		public void AddEventListener(TableRowElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(TableRowElementEvents type, IEventListener listener);
 
-		public void AddEventListener(TableRowElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(TableRowElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern string Align
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Align
+		public extern string BgColor
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string BgColor
+		public extern ElementCollection Cells
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ElementCollection Cells
+		public extern string Ch
 		{
-			get {
-				return default(ElementCollection);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Ch
+		public extern string ChOff
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void DeleteCell(int index);
+
+		public extern Element InsertCell();
+
+		public extern Element InsertCell(int index);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableRowElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableRowElement> listener, bool capture);
+
+		public extern void RemoveEventListener(TableRowElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(TableRowElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(TableRowElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(TableRowElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(TableRowElementEvents type, HtmlEventHandlerWithTarget<TableRowElement> listener);
+
+		public extern void RemoveEventListener(TableRowElementEvents type, HtmlEventHandlerWithTarget<TableRowElement> listener, bool capture);
+
+		public extern void RemoveEventListener(TableRowElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(TableRowElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern int RowIndex
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public string ChOff
+		public extern int SectionRowIndex
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void DeleteCell(int index)
-		{
-		}
-
-		public Element InsertCell()
-		{
-			return default(Element);
-		}
-
-		public Element InsertCell(int index)
-		{
-			return default(Element);
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableRowElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableRowElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TableRowElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(TableRowElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TableRowElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(TableRowElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TableRowElementEvents type, HtmlEventHandlerWithTarget<TableRowElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(TableRowElementEvents type, HtmlEventHandlerWithTarget<TableRowElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TableRowElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(TableRowElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public int RowIndex
+		public extern string VAlign
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int SectionRowIndex
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public string VAlign
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

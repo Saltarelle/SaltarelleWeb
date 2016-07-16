@@ -5,148 +5,90 @@ namespace Bridge.Html5.Data.IndexedDB
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBRequest")]
 	public partial class Request : EventTarget
 	{
-		internal Request()
-		{
-		}
+		internal extern Request();
 
-		public void AddEventListener(RequestEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(RequestEvents type, Action listener);
 
-		public void AddEventListener(RequestEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RequestEvents type, Action listener, bool capture);
 
-		public void AddEventListener(RequestEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(RequestEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(RequestEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RequestEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener)
-		{
-		}
+		public extern void AddEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener);
 
-		public void AddEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener, bool capture);
 
-		public void AddEventListener(RequestEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(RequestEvents type, IEventListener listener);
 
-		public void AddEventListener(RequestEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RequestEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture);
 
 		[FieldProperty]
-		public DOMError Error
+		public extern DOMError Error
 		{
-			get {
-				return default(DOMError);
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onsuccess")]
-		public HtmlEventHandler OnSuccess
+		public extern HtmlEventHandler OnSuccess
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public RequestReadyState ReadyState
+		public extern RequestReadyState ReadyState
 		{
-			get {
-				return default(RequestReadyState);
-			}
+			get;
 		}
 
-		public void RemoveEventListener(RequestEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(RequestEvents type, Action listener);
 
-		public void RemoveEventListener(RequestEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RequestEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(RequestEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(RequestEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(RequestEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RequestEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener)
-		{
-		}
+		public extern void RemoveEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener);
 
-		public void RemoveEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RequestEvents type, HtmlEventHandlerWithTarget<Request> listener, bool capture);
 
-		public void RemoveEventListener(RequestEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(RequestEvents type, IEventListener listener);
 
-		public void RemoveEventListener(RequestEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RequestEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture)
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture);
+
+		[FieldProperty]
+		public extern object Result
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public object Result
+		public extern TypeOption<ObjectStore, Index, Cursor> Source
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public TypeOption<ObjectStore, Index, Cursor> Source
+		public extern Transaction Transaction
 		{
-			get {
-				return default(TypeOption<ObjectStore, Index, Cursor>);
-			}
-		}
-
-		[FieldProperty]
-		public Transaction Transaction
-		{
-			get {
-				return default(Transaction);
-			}
+			get;
 		}
 	}
 }

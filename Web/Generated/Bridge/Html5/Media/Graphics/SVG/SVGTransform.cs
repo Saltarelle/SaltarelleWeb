@@ -3,49 +3,31 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGTransform
 	{
-		internal SVGTransform()
+		internal extern SVGTransform();
+
+		[FieldProperty]
+		public extern double Angle
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double Angle
+		public extern SVGMatrix Matrix
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public SVGMatrix Matrix
-		{
-			get {
-				return default(SVGMatrix);
-			}
-		}
+		public extern void SetMatrix(SVGMatrix matrix);
 
-		public void SetMatrix(SVGMatrix matrix)
-		{
-		}
+		public extern void SetRotate(double angle, double cx, double cy);
 
-		public void SetRotate(double angle, double cx, double cy)
-		{
-		}
+		public extern void SetScale(double sx, double sy);
 
-		public void SetScale(double sx, double sy)
-		{
-		}
+		public extern void SetSkewX(double angle);
 
-		public void SetSkewX(double angle)
-		{
-		}
+		public extern void SetSkewY(double angle);
 
-		public void SetSkewY(double angle)
-		{
-		}
-
-		public void SetTranslate(double tx, double ty)
-		{
-		}
+		public extern void SetTranslate(double tx, double ty);
 
 		[Name("SVG_TRANSFORM_MATRIX")]
 		public const ushort SVG_TRANSFORM_MATRIX = 1;
@@ -69,11 +51,9 @@
 		public const ushort SVG_TRANSFORM_UNKNOWN = 0;
 
 		[FieldProperty]
-		public SVGTransformType Type
+		public extern SVGTransformType Type
 		{
-			get {
-				return default(SVGTransformType);
-			}
+			get;
 		}
 	}
 }

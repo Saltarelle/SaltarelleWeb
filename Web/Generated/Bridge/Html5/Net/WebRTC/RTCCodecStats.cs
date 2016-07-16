@@ -3,31 +3,31 @@
 	[External, Serializable]
 	public partial class RTCCodecStats : RTCStats
 	{
-		public int Channels
+		public extern int Channels
 		{
 			get;
 			set;
 		}
 
-		public int ClockRate
+		public extern int ClockRate
 		{
 			get;
 			set;
 		}
 
-		public string Codec
+		public extern string Codec
 		{
 			get;
 			set;
 		}
 
-		public string Parameters
+		public extern string Parameters
 		{
 			get;
 			set;
 		}
 
-		public int PayloadType
+		public extern int PayloadType
 		{
 			get;
 			set;

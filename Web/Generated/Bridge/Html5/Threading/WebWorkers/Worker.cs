@@ -3,124 +3,68 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Worker : EventTarget
 	{
-		internal Worker()
-		{
-		}
+		internal extern Worker();
 
-		public Worker(string scriptURL)
-		{
-		}
+		public extern Worker(string scriptURL);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener, bool capture);
 
-		public void AddEventListener(WorkerEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(WorkerEvents type, Action listener);
 
-		public void AddEventListener(WorkerEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WorkerEvents type, Action listener, bool capture);
 
-		public void AddEventListener(WorkerEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(WorkerEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(WorkerEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WorkerEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(WorkerEvents type, HtmlEventHandlerWithTarget<Worker> listener)
-		{
-		}
+		public extern void AddEventListener(WorkerEvents type, HtmlEventHandlerWithTarget<Worker> listener);
 
-		public void AddEventListener(WorkerEvents type, HtmlEventHandlerWithTarget<Worker> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WorkerEvents type, HtmlEventHandlerWithTarget<Worker> listener, bool capture);
 
-		public void AddEventListener(WorkerEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(WorkerEvents type, IEventListener listener);
 
-		public void AddEventListener(WorkerEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WorkerEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmessage")]
-		public HtmlEventHandler OnMessage
+		public extern HtmlEventHandler OnMessage
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void PostMessage(object message)
-		{
-		}
+		public extern void PostMessage(object message);
 
-		public void PostMessage(object message, object[] transfer)
-		{
-		}
+		public extern void PostMessage(object message, object[] transfer);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Worker> listener, bool capture);
 
-		public void RemoveEventListener(WorkerEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(WorkerEvents type, Action listener);
 
-		public void RemoveEventListener(WorkerEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WorkerEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(WorkerEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(WorkerEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(WorkerEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WorkerEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(WorkerEvents type, HtmlEventHandlerWithTarget<Worker> listener)
-		{
-		}
+		public extern void RemoveEventListener(WorkerEvents type, HtmlEventHandlerWithTarget<Worker> listener);
 
-		public void RemoveEventListener(WorkerEvents type, HtmlEventHandlerWithTarget<Worker> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WorkerEvents type, HtmlEventHandlerWithTarget<Worker> listener, bool capture);
 
-		public void RemoveEventListener(WorkerEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(WorkerEvents type, IEventListener listener);
 
-		public void RemoveEventListener(WorkerEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WorkerEvents type, IEventListener listener, bool capture);
 
-		public void Terminate()
-		{
-		}
+		public extern void Terminate();
 	}
 }

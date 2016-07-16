@@ -3,128 +3,74 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'PARAM'"), Name("Element")]
 	public partial class ParamElement : Element
 	{
-		internal ParamElement()
+		internal extern ParamElement();
+
+		public extern void AddEventListener(ParamElementEvents type, Action listener);
+
+		public extern void AddEventListener(ParamElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(ParamElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(ParamElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(ParamElementEvents type, HtmlEventHandlerWithTarget<ParamElement> listener);
+
+		public extern void AddEventListener(ParamElementEvents type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture);
+
+		public extern void AddEventListener(ParamElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(ParamElementEvents type, IEventListener listener, bool capture);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Name
 		{
+			get;
+			set;
 		}
 
-		public void AddEventListener(ParamElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(ParamElementEvents type, Action listener);
 
-		public void AddEventListener(ParamElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ParamElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(ParamElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(ParamElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(ParamElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ParamElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(ParamElementEvents type, HtmlEventHandlerWithTarget<ParamElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(ParamElementEvents type, HtmlEventHandlerWithTarget<ParamElement> listener);
 
-		public void AddEventListener(ParamElementEvents type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ParamElementEvents type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture);
 
-		public void AddEventListener(ParamElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(ParamElementEvents type, IEventListener listener);
 
-		public void AddEventListener(ParamElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ParamElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture)
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Type
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern string Value
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(ParamElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(ParamElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ParamElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(ParamElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ParamElementEvents type, HtmlEventHandlerWithTarget<ParamElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(ParamElementEvents type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ParamElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(ParamElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Type
+		public extern string ValueType
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Value
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string ValueType
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

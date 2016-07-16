@@ -3,33 +3,22 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CSSStyleSheet : StyleSheet
 	{
-		internal CSSStyleSheet()
-		{
-		}
+		internal extern CSSStyleSheet();
 
 		[FieldProperty]
-		public CSSRule[] CssRules
+		public extern CSSRule[] CssRules
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public void DeleteRule(int index)
-		{
-		}
+		public extern void DeleteRule(int index);
 
-		public int InsertRule(string rule, int index)
-		{
-			return 0;
-		}
+		public extern int InsertRule(string rule, int index);
 
 		[FieldProperty]
-		public CSSRule OwnerRule
+		public extern CSSRule OwnerRule
 		{
-			get {
-				return default(CSSRule);
-			}
+			get;
 		}
 	}
 }

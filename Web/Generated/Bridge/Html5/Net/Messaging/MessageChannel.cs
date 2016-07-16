@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MessageChannel
 	{
-		public MessageChannel()
+		public extern MessageChannel();
+
+		[FieldProperty]
+		public extern MessagePort Port1
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public MessagePort Port1
+		public extern MessagePort Port2
 		{
-			get {
-				return default(MessagePort);
-			}
-		}
-
-		[FieldProperty]
-		public MessagePort Port2
-		{
-			get {
-				return default(MessagePort);
-			}
+			get;
 		}
 	}
 }

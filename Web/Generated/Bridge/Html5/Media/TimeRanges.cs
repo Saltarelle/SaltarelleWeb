@@ -3,26 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TimeRanges
 	{
-		internal TimeRanges()
-		{
-		}
+		internal extern TimeRanges();
 
-		public double End(int index)
-		{
-			return 0;
-		}
+		public extern double End(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public double Start(int index)
-		{
-			return 0;
-		}
+		public extern double Start(int index);
 	}
 }

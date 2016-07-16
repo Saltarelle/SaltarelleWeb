@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class ScrollOptions
 	{
-		public ScrollBehavior Behavior
+		public extern ScrollBehavior Behavior
 		{
 			get;
 			set;

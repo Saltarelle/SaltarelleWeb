@@ -5,35 +5,23 @@ namespace Bridge.Html5.Xml
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("NodeList")]
 	public partial class XmlNodeList
 	{
-		internal XmlNodeList()
-		{
-		}
+		internal extern XmlNodeList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public XmlNode this[int index]
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<XmlNode> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<XmlNode> GetEnumerator();
 
-		public XmlNode Item(int index)
-		{
-			return default(XmlNode);
-		}
+		public extern XmlNode Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

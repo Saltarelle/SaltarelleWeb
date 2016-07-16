@@ -3,19 +3,19 @@
 	[External, Serializable]
 	public partial class DeviceRotationRateInit
 	{
-		public double? Alpha
+		public extern double? Alpha
 		{
 			get;
 			set;
 		}
 
-		public double? Beta
+		public extern double? Beta
 		{
 			get;
 			set;
 		}
 
-		public double? Gamma
+		public extern double? Gamma
 		{
 			get;
 			set;

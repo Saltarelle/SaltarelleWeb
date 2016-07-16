@@ -6,26 +6,16 @@ namespace Bridge.Html5.Media
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MediaStream
 	{
-		internal MediaStream()
-		{
-		}
+		internal extern MediaStream();
 
 		[FieldProperty]
-		public double CurrentTime
+		public extern double CurrentTime
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public AudioStreamTrack[] GetAudioTracks()
-		{
-			return null;
-		}
+		public extern AudioStreamTrack[] GetAudioTracks();
 
-		public VideoStreamTrack[] GetVideoTracks()
-		{
-			return null;
-		}
+		public extern VideoStreamTrack[] GetVideoTracks();
 	}
 }

@@ -5,38 +5,18 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMImplementation
 	{
-		internal DOMImplementation()
-		{
-		}
+		internal extern DOMImplementation();
 
-		public DocumentBase CreateDocument(string @namespace, string qualifiedName)
-		{
-			return default(DocumentBase);
-		}
+		public extern DocumentBase CreateDocument(string @namespace, string qualifiedName);
 
-		public DocumentBase CreateDocument(string @namespace, string qualifiedName, DocumentType doctype)
-		{
-			return default(DocumentBase);
-		}
+		public extern DocumentBase CreateDocument(string @namespace, string qualifiedName, DocumentType doctype);
 
-		public DocumentType CreateDocumentType(string qualifiedName, string publicId, string systemId)
-		{
-			return default(DocumentType);
-		}
+		public extern DocumentType CreateDocumentType(string qualifiedName, string publicId, string systemId);
 
-		public DocumentBase CreateHTMLDocument()
-		{
-			return default(DocumentBase);
-		}
+		public extern DocumentBase CreateHTMLDocument();
 
-		public DocumentBase CreateHTMLDocument(string title)
-		{
-			return default(DocumentBase);
-		}
+		public extern DocumentBase CreateHTMLDocument(string title);
 
-		public bool HasFeature(string feature, string version)
-		{
-			return false;
-		}
+		public extern bool HasFeature(string feature, string version);
 	}
 }

@@ -5,39 +5,22 @@ namespace Bridge.Html5.Text
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TextDecoder
 	{
-		public TextDecoder()
-		{
-		}
+		public extern TextDecoder();
 
-		public TextDecoder(string label)
-		{
-		}
+		public extern TextDecoder(string label);
 
-		public TextDecoder(string label, TextDecoderOptions options)
-		{
-		}
+		public extern TextDecoder(string label, TextDecoderOptions options);
 
-		public string Decode()
-		{
-			return null;
-		}
+		public extern string Decode();
 
-		public string Decode(ArrayBufferView input)
-		{
-			return null;
-		}
+		public extern string Decode(ArrayBufferView input);
 
-		public string Decode(ArrayBufferView input, TextDecodeOptions options)
-		{
-			return null;
-		}
+		public extern string Decode(ArrayBufferView input, TextDecodeOptions options);
 
 		[FieldProperty]
-		public string Encoding
+		public extern string Encoding
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

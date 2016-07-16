@@ -3,222 +3,139 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechSynthesisUtterance : EventTarget
 	{
-		public SpeechSynthesisUtterance()
-		{
-		}
+		public extern SpeechSynthesisUtterance();
 
-		public SpeechSynthesisUtterance(string text)
-		{
-		}
+		public extern SpeechSynthesisUtterance(string text);
 
-		public void AddEventListener(SpeechSynthesisUtteranceEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SpeechSynthesisUtteranceEvents type, Action listener);
 
-		public void AddEventListener(SpeechSynthesisUtteranceEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SpeechSynthesisUtteranceEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener)
-		{
-		}
+		public extern void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener);
 
-		public void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture);
 
-		public void AddEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener);
 
-		public void AddEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture);
 
 		[FieldProperty]
-		public string Lang
+		public extern string Lang
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onboundary")]
-		public HtmlEventHandler OnBoundary
+		public extern HtmlEventHandler OnBoundary
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onend")]
-		public HtmlEventHandler OnEnd
+		public extern HtmlEventHandler OnEnd
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmark")]
-		public HtmlEventHandler OnMark
+		public extern HtmlEventHandler OnMark
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpause")]
-		public HtmlEventHandler OnPause
+		public extern HtmlEventHandler OnPause
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onresume")]
-		public HtmlEventHandler OnResume
+		public extern HtmlEventHandler OnResume
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onstart")]
-		public HtmlEventHandler OnStart
+		public extern HtmlEventHandler OnStart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Pitch
+		public extern double Pitch
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Rate
+		public extern double Rate
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SpeechSynthesisUtteranceEvents type, Action listener);
 
-		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SpeechSynthesisUtteranceEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener)
-		{
-		}
+		public extern void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener);
 
-		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SpeechSynthesisUtteranceEvents type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture);
 
-		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SpeechSynthesisUtteranceEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture)
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Text
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Text
+		public extern SpeechSynthesisVoice Voice
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public SpeechSynthesisVoice Voice
+		public extern double Volume
 		{
-			get {
-				return default(SpeechSynthesisVoice);
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Volume
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

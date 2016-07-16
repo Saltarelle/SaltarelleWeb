@@ -5,40 +5,25 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMStringList
 	{
-		internal DOMStringList()
-		{
-		}
+		internal extern DOMStringList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public string this[int index]
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public bool Contains(string @string)
-		{
-			return false;
-		}
+		public extern bool Contains(string @string);
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<string> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<string> GetEnumerator();
 
-		public string Item(int index)
-		{
-			return null;
-		}
+		public extern string Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

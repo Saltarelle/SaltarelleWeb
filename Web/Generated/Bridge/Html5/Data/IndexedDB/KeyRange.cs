@@ -3,81 +3,47 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBKeyRange")]
 	public partial class KeyRange
 	{
-		internal KeyRange()
-		{
-		}
+		internal extern KeyRange();
 
-		public static KeyRange Bound(object lower, object upper)
-		{
-			return default(KeyRange);
-		}
+		public static extern KeyRange Bound(object lower, object upper);
 
-		public static KeyRange Bound(object lower, object upper, bool lowerOpen)
-		{
-			return default(KeyRange);
-		}
+		public static extern KeyRange Bound(object lower, object upper, bool lowerOpen);
 
-		public static KeyRange Bound(object lower, object upper, bool lowerOpen, bool upperOpen)
-		{
-			return default(KeyRange);
-		}
+		public static extern KeyRange Bound(object lower, object upper, bool lowerOpen, bool upperOpen);
 
 		[FieldProperty]
-		public object Lower
+		public extern object Lower
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public static KeyRange LowerBound(object lower)
-		{
-			return default(KeyRange);
-		}
+		public static extern KeyRange LowerBound(object lower);
 
-		public static KeyRange LowerBound(object lower, bool open)
-		{
-			return default(KeyRange);
-		}
+		public static extern KeyRange LowerBound(object lower, bool open);
 
 		[FieldProperty]
-		public bool LowerOpen
+		public extern bool LowerOpen
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[Name("only")]
-		public static KeyRange OnLy(object value)
-		{
-			return default(KeyRange);
-		}
+		public static extern KeyRange OnLy(object value);
 
 		[FieldProperty]
-		public object Upper
+		public extern object Upper
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public static KeyRange UpperBound(object upper)
-		{
-			return default(KeyRange);
-		}
+		public static extern KeyRange UpperBound(object upper);
 
-		public static KeyRange UpperBound(object upper, bool open)
-		{
-			return default(KeyRange);
-		}
+		public static extern KeyRange UpperBound(object upper, bool open);
 
 		[FieldProperty]
-		public bool UpperOpen
+		public extern bool UpperOpen
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

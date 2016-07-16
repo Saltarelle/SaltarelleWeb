@@ -3,182 +3,105 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class AudioBufferSourceNode : AudioNode
 	{
-		internal AudioBufferSourceNode()
-		{
-		}
+		internal extern AudioBufferSourceNode();
 
-		public void AddEventListener(AudioBufferSourceNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(AudioBufferSourceNodeEvents type, Action listener);
 
-		public void AddEventListener(AudioBufferSourceNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioBufferSourceNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener)
-		{
-		}
+		public extern void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener);
 
-		public void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture);
 
-		public void AddEventListener(AudioBufferSourceNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(AudioBufferSourceNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(AudioBufferSourceNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AudioBufferSourceNodeEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture);
+
+		[FieldProperty]
+		public extern AudioBuffer Buffer
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public AudioBuffer Buffer
+		public extern bool Loop
 		{
-			get {
-				return default(AudioBuffer);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Loop
+		public extern double LoopEnd
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double LoopEnd
+		public extern double LoopStart
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		[FieldProperty]
-		public double LoopStart
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
+		public extern void NoteGrainOn(double when, double grainOffset, double grainDuration);
 
-		public void NoteGrainOn(double when, double grainOffset, double grainDuration)
-		{
-		}
+		public extern void NoteOff(double when);
 
-		public void NoteOff(double when)
-		{
-		}
-
-		public void NoteOn(double when)
-		{
-		}
+		public extern void NoteOn(double when);
 
 		[FieldProperty, Name("onended")]
-		public HtmlEventHandler OnEnded
+		public extern HtmlEventHandler OnEnded
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public AudioParam PlaybackRate
+		public extern AudioParam PlaybackRate
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
-		public void RemoveEventListener(AudioBufferSourceNodeEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(AudioBufferSourceNodeEvents type, Action listener);
 
-		public void RemoveEventListener(AudioBufferSourceNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(AudioBufferSourceNodeEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener);
 
-		public void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(AudioBufferSourceNodeEvents type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture);
 
-		public void RemoveEventListener(AudioBufferSourceNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(AudioBufferSourceNodeEvents type, IEventListener listener);
 
-		public void RemoveEventListener(AudioBufferSourceNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(AudioBufferSourceNodeEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture);
 
-		public void Start()
-		{
-		}
+		public extern void Start();
 
-		public void Start(double when)
-		{
-		}
+		public extern void Start(double when);
 
-		public void Start(double when, double grainOffset)
-		{
-		}
+		public extern void Start(double when, double grainOffset);
 
-		public void Start(double when, double grainOffset, double grainDuration)
-		{
-		}
+		public extern void Start(double when, double grainOffset, double grainDuration);
 
-		public void Stop()
-		{
-		}
+		public extern void Stop();
 
-		public void Stop(double when)
-		{
-		}
+		public extern void Stop(double when);
 	}
 }

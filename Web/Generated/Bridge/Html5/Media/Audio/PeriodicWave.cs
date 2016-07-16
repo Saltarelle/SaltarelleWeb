@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class PeriodicWave
 	{
-		internal PeriodicWave()
-		{
-		}
+		internal extern PeriodicWave();
 	}
 }

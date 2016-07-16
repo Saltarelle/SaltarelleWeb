@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class MediaRecorderOptions
 	{
-		public string MimeType
+		public extern string MimeType
 		{
 			get;
 			set;

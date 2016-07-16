@@ -3,18 +3,13 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGNumber
 	{
-		internal SVGNumber()
-		{
-		}
+		internal extern SVGNumber();
 
 		[FieldProperty]
-		public double Value
+		public extern double Value
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

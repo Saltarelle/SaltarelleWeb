@@ -3,231 +3,128 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGSVGElement : SVGGraphicsElement
 	{
-		internal SVGSVGElement()
-		{
-		}
+		internal extern SVGSVGElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture);
 
-		public void AddEventListener(SVGSVGElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGSVGElementEvents type, Action listener);
 
-		public void AddEventListener(SVGSVGElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGSVGElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGSVGElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGSVGElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGSVGElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGSVGElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGSVGElementEvents type, HtmlEventHandlerWithTarget<SVGSVGElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGSVGElementEvents type, HtmlEventHandlerWithTarget<SVGSVGElement> listener);
 
-		public void AddEventListener(SVGSVGElementEvents type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGSVGElementEvents type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture);
 
-		public void AddEventListener(SVGSVGElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGSVGElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGSVGElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGSVGElementEvents type, IEventListener listener, bool capture);
 
-		public bool AnimationsPaused()
-		{
-			return false;
-		}
+		public extern bool AnimationsPaused();
 
-		public SVGAngle CreateSVGAngle()
-		{
-			return default(SVGAngle);
-		}
+		public extern SVGAngle CreateSVGAngle();
 
-		public SVGLength CreateSVGLength()
-		{
-			return default(SVGLength);
-		}
+		public extern SVGLength CreateSVGLength();
 
-		public SVGMatrix CreateSVGMatrix()
-		{
-			return default(SVGMatrix);
-		}
+		public extern SVGMatrix CreateSVGMatrix();
 
-		public SVGNumber CreateSVGNumber()
-		{
-			return default(SVGNumber);
-		}
+		public extern SVGNumber CreateSVGNumber();
 
-		public SVGPoint CreateSVGPoint()
-		{
-			return default(SVGPoint);
-		}
+		public extern SVGPoint CreateSVGPoint();
 
-		public SVGRect CreateSVGRect()
-		{
-			return default(SVGRect);
-		}
+		public extern SVGRect CreateSVGRect();
 
-		public SVGTransform CreateSVGTransform()
-		{
-			return default(SVGTransform);
-		}
+		public extern SVGTransform CreateSVGTransform();
 
-		public SVGTransform CreateSVGTransformFromMatrix(SVGMatrix matrix)
+		public extern SVGTransform CreateSVGTransformFromMatrix(SVGMatrix matrix);
+
+		[FieldProperty]
+		public extern double CurrentScale
 		{
-			return default(SVGTransform);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double CurrentScale
+		public extern SVGPoint CurrentTranslate
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern void DeselectAll();
+
+		public extern void ForceRedraw();
+
+		public extern double GetCurrentTime();
+
+		public extern Element GetElementById(string elementId);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
+		{
+			get;
+		}
+
+		public extern void PauseAnimations();
+
+		[FieldProperty]
+		public extern double PixelUnitToMillimeterX
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGPoint CurrentTranslate
+		public extern double PixelUnitToMillimeterY
 		{
-			get {
-				return default(SVGPoint);
-			}
-		}
-
-		public void DeselectAll()
-		{
-		}
-
-		public void ForceRedraw()
-		{
-		}
-
-		public double GetCurrentTime()
-		{
-			return 0;
-		}
-
-		public Element GetElementById(string elementId)
-		{
-			return default(Element);
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
-		public void PauseAnimations()
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGSVGElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGSVGElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGSVGElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGSVGElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGSVGElementEvents type, HtmlEventHandlerWithTarget<SVGSVGElement> listener);
+
+		public extern void RemoveEventListener(SVGSVGElementEvents type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGSVGElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGSVGElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern double ScreenPixelToMillimeterX
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double PixelUnitToMillimeterX
+		public extern double ScreenPixelToMillimeterY
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public double PixelUnitToMillimeterY
-		{
-			get {
-				return 0;
-			}
-		}
+		public extern void SetCurrentTime(double seconds);
 
-		[FieldProperty]
-		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio
-		{
-			get {
-				return default(SVGAnimatedPreserveAspectRatio);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGSVGElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGSVGElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGSVGElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGSVGElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGSVGElementEvents type, HtmlEventHandlerWithTarget<SVGSVGElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGSVGElementEvents type, HtmlEventHandlerWithTarget<SVGSVGElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGSVGElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGSVGElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public double ScreenPixelToMillimeterX
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public double ScreenPixelToMillimeterY
-		{
-			get {
-				return 0;
-			}
-		}
-
-		public void SetCurrentTime(double seconds)
-		{
-		}
-
-		public int SuspendRedraw(int maxWaitMilliseconds)
-		{
-			return 0;
-		}
+		public extern int SuspendRedraw(int maxWaitMilliseconds);
 
 		[Name("SVG_ZOOMANDPAN_DISABLE")]
 		public const ushort SVG_ZOOMANDPAN_DISABLE = 1;
@@ -238,66 +135,47 @@
 		[Name("SVG_ZOOMANDPAN_UNKNOWN")]
 		public const ushort SVG_ZOOMANDPAN_UNKNOWN = 0;
 
-		public void UnpauseAnimations()
-		{
-		}
+		public extern void UnpauseAnimations();
 
-		public void UnsuspendRedraw(int suspendHandleID)
-		{
-		}
+		public extern void UnsuspendRedraw(int suspendHandleID);
 
-		public void UnsuspendRedrawAll()
+		public extern void UnsuspendRedrawAll();
+
+		[FieldProperty]
+		public extern bool UseCurrentView
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool UseCurrentView
+		public extern SVGAnimatedRect ViewBox
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedRect ViewBox
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedRect);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength X
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Y
+		public extern SVGZoomAndPanType ZoomAndPan
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGZoomAndPanType ZoomAndPan
-		{
-			get {
-				return default(SVGZoomAndPanType);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

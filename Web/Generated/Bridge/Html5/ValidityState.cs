@@ -3,88 +3,66 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class ValidityState
 	{
-		internal ValidityState()
+		internal extern ValidityState();
+
+		[FieldProperty]
+		public extern bool BadInput
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool BadInput
+		public extern bool CustomError
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool CustomError
+		public extern bool PatternMismatch
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool PatternMismatch
+		public extern bool RangeOverflow
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool RangeOverflow
+		public extern bool RangeUnderflow
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool RangeUnderflow
+		public extern bool StepMismatch
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool StepMismatch
+		public extern bool TooLong
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool TooLong
+		public extern bool TypeMismatch
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool TypeMismatch
+		public extern bool Valid
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool Valid
+		public extern bool ValueMissing
 		{
-			get {
-				return false;
-			}
-		}
-
-		[FieldProperty]
-		public bool ValueMissing
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

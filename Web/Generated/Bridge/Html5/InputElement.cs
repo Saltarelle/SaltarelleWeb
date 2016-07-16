@@ -6,565 +6,374 @@ namespace Bridge.Html5
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'INPUT'"), Name("Element")]
 	public partial class InputElement : Element
 	{
-		internal InputElement()
+		internal extern InputElement();
+
+		[FieldProperty]
+		public extern string Accept
 		{
+			get;
+			set;
+		}
+
+		public extern void AddEventListener(InputElementEvents type, Action listener);
+
+		public extern void AddEventListener(InputElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(InputElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(InputElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener);
+
+		public extern void AddEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture);
+
+		public extern void AddEventListener(InputElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(InputElementEvents type, IEventListener listener, bool capture);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Align
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Accept
+		public extern string Alt
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void AddEventListener(InputElementEvents type, Action listener)
-		{
-		}
-
-		public void AddEventListener(InputElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(InputElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void AddEventListener(InputElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener)
-		{
-		}
-
-		public void AddEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(InputElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(InputElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Align
+		public extern string Autocomplete
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Alt
+		public extern bool Autofocus
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Autocomplete
+		public extern bool Checked
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern bool CheckValidity();
+
+		[FieldProperty]
+		public extern bool DefaultChecked
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Autofocus
+		public extern string DefaultValue
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Checked
+		public extern bool Disabled
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public bool CheckValidity()
-		{
-			return false;
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool DefaultChecked
+		public extern FileList Files
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string DefaultValue
+		public extern FormElement Form
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool Disabled
+		public extern string FormAction
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public FileList Files
+		public extern string FormEnctype
 		{
-			get {
-				return default(FileList);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public FormElement Form
+		public extern string FormMethod
 		{
-			get {
-				return default(FormElement);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string FormAction
+		public extern bool FormNoValidate
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string FormEnctype
+		public extern string FormTarget
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string FormMethod
+		public extern int Height
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool FormNoValidate
+		public extern bool Indeterminate
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string FormTarget
+		public extern string InputMode
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Height
+		public extern Element List
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool Indeterminate
+		public extern string Max
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string InputMode
+		public extern int MaxLength
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public Element List
+		public extern string Min
 		{
-			get {
-				return default(Element);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Max
+		public extern bool Multiple
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int MaxLength
+		public extern string Name
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void OpenDirectoryPicker();
+
+		[FieldProperty]
+		public extern string Pattern
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Min
+		public extern string Placeholder
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Multiple
+		public extern bool ReadOnly
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(InputElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(InputElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(InputElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(InputElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener);
+
+		public extern void RemoveEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture);
+
+		public extern void RemoveEventListener(InputElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(InputElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Required
+		{
+			get;
+			set;
+		}
+
+		public extern void Select();
+
+		[FieldProperty]
+		public extern string SelectionDirection
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern int SelectionEnd
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void OpenDirectoryPicker()
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Pattern
+		public extern int SelectionStart
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void SetCustomValidity(string error);
+
+		public extern void SetSelectionRange(int start, int end);
+
+		public extern void SetSelectionRange(int start, int end, string direction);
+
+		[FieldProperty]
+		public extern int Size
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Placeholder
+		public extern string Src
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool ReadOnly
+		public extern string Step
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(InputElementEvents type, Action listener)
-		{
-		}
+		public extern void StepDown();
 
-		public void RemoveEventListener(InputElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void StepDown(int n);
 
-		public void RemoveEventListener(InputElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void StepUp();
 
-		public void RemoveEventListener(InputElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void StepUp(int n);
 
-		public void RemoveEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener)
+		[FieldProperty]
+		public extern int TextLength
 		{
-		}
-
-		public void RemoveEventListener(InputElementEvents type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(InputElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(InputElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool Required
+		public extern string Type
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public void Select()
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string SelectionDirection
+		public extern string UseMap
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int SelectionEnd
+		public extern string ValidationMessage
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int SelectionStart
+		public extern ValidityState Validity
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public void SetCustomValidity(string error)
-		{
-		}
-
-		public void SetSelectionRange(int start, int end)
-		{
-		}
-
-		public void SetSelectionRange(int start, int end, string direction)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public int Size
+		public extern string Value
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Src
+		public extern DateTime? ValueAsDate
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Step
+		public extern double ValueAsNumber
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void StepDown()
-		{
-		}
-
-		public void StepDown(int n)
-		{
-		}
-
-		public void StepUp()
-		{
-		}
-
-		public void StepUp(int n)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int TextLength
+		public extern int Width
 		{
-			get {
-				return 0;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Type
+		public extern bool WillValidate
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string UseMap
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string ValidationMessage
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public ValidityState Validity
-		{
-			get {
-				return default(ValidityState);
-			}
-		}
-
-		[FieldProperty]
-		public string Value
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public DateTime? ValueAsDate
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double ValueAsNumber
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public int Width
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public bool WillValidate
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

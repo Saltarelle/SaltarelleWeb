@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimatedPreserveAspectRatio
 	{
-		internal SVGAnimatedPreserveAspectRatio()
+		internal extern SVGAnimatedPreserveAspectRatio();
+
+		[FieldProperty]
+		public extern SVGPreserveAspectRatio AnimVal
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGPreserveAspectRatio AnimVal
+		public extern SVGPreserveAspectRatio BaseVal
 		{
-			get {
-				return default(SVGPreserveAspectRatio);
-			}
-		}
-
-		[FieldProperty]
-		public SVGPreserveAspectRatio BaseVal
-		{
-			get {
-				return default(SVGPreserveAspectRatio);
-			}
+			get;
 		}
 	}
 }

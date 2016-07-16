@@ -6,56 +6,32 @@ namespace Bridge.Html5.IO
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Blob
 	{
-		public Blob()
-		{
-		}
+		public extern Blob();
 
-		public Blob(TypeOption<ArrayBuffer, ArrayBufferView, Blob, string>[] blobParts)
-		{
-		}
+		public extern Blob(TypeOption<ArrayBuffer, ArrayBufferView, Blob, string>[] blobParts);
 
-		public Blob(TypeOption<ArrayBuffer, ArrayBufferView, Blob, string>[] blobParts, BlobPropertyBag options)
-		{
-		}
+		public extern Blob(TypeOption<ArrayBuffer, ArrayBufferView, Blob, string>[] blobParts, BlobPropertyBag options);
 
-		public void Close()
-		{
-		}
+		public extern void Close();
 
 		[FieldProperty]
-		public ulong Size
+		public extern ulong Size
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public Blob Slice()
-		{
-			return default(Blob);
-		}
+		public extern Blob Slice();
 
-		public Blob Slice(long start)
-		{
-			return default(Blob);
-		}
+		public extern Blob Slice(long start);
 
-		public Blob Slice(long start, long end)
-		{
-			return default(Blob);
-		}
+		public extern Blob Slice(long start, long end);
 
-		public Blob Slice(long start, long end, string contentType)
-		{
-			return default(Blob);
-		}
+		public extern Blob Slice(long start, long end, string contentType);
 
 		[FieldProperty]
-		public string Type
+		public extern string Type
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

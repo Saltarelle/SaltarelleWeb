@@ -6,48 +6,29 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DataTransferItemList
 	{
-		internal DataTransferItemList()
-		{
-		}
+		internal extern DataTransferItemList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public DataTransferItem this[int index]
 		{
-			get {
-				return default(DataTransferItem);
-			}
+			get;
 		}
 
-		public DataTransferItem Add(File data)
-		{
-			return default(DataTransferItem);
-		}
+		public extern DataTransferItem Add(File data);
 
-		public DataTransferItem Add(string data, string type)
-		{
-			return default(DataTransferItem);
-		}
+		public extern DataTransferItem Add(string data, string type);
 
-		public void Clear()
-		{
-		}
+		public extern void Clear();
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<DataTransferItem> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<DataTransferItem> GetEnumerator();
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void Remove(int index)
-		{
-		}
+		public extern void Remove(int index);
 	}
 }

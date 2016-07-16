@@ -5,35 +5,23 @@ namespace Bridge.Html5.Media
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TextTrackCueList
 	{
-		internal TextTrackCueList()
-		{
-		}
+		internal extern TextTrackCueList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public VTTCue this[int index]
 		{
-			get {
-				return default(VTTCue);
-			}
+			get;
 		}
 
-		public VTTCue GetCueById(string id)
-		{
-			return default(VTTCue);
-		}
+		public extern VTTCue GetCueById(string id);
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<VTTCue> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<VTTCue> GetEnumerator();
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

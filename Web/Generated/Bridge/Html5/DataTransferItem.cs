@@ -5,33 +5,22 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DataTransferItem
 	{
-		internal DataTransferItem()
-		{
-		}
+		internal extern DataTransferItem();
 
-		public File GetAsFile()
-		{
-			return default(File);
-		}
+		public extern File GetAsFile();
 
-		public void GetAsString(Action<string> callback)
+		public extern void GetAsString(Action<string> callback);
+
+		[FieldProperty]
+		public extern DataTransferItemKind Kind
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public DataTransferItemKind Kind
+		public extern string Type
 		{
-			get {
-				return default(DataTransferItemKind);
-			}
-		}
-
-		[FieldProperty]
-		public string Type
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

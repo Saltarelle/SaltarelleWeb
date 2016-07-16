@@ -3,10 +3,10 @@
 	[Namespace("false"), External]
 	public partial interface IXPathEvaluator
 	{
-		XPathExpression CreateExpression(string expression, XPathNSResolver resolver);
+		extern XPathExpression CreateExpression(string expression, XPathNSResolver resolver);
 
-		XPathNSResolver CreateNSResolver(XmlNode nodeResolver);
+		extern XPathNSResolver CreateNSResolver(XmlNode nodeResolver);
 
-		XPathResult Evaluate(string expression, XmlNode contextNode, XPathNSResolver resolver, ushort type, XPathResult result);
+		extern XPathResult Evaluate(string expression, XmlNode contextNode, XPathNSResolver resolver, ushort type, XPathResult result);
 	}
 }

@@ -3,40 +3,30 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGZoomEvent : UIEvent
 	{
-		internal SVGZoomEvent()
+		internal extern SVGZoomEvent();
+
+		[FieldProperty]
+		public extern double NewScale
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double NewScale
+		public extern SVGPoint NewTranslate
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGPoint NewTranslate
+		public extern double PreviousScale
 		{
-			get {
-				return default(SVGPoint);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double PreviousScale
+		public extern SVGPoint PreviousTranslate
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public SVGPoint PreviousTranslate
-		{
-			get {
-				return default(SVGPoint);
-			}
+			get;
 		}
 	}
 }

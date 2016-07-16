@@ -3,204 +3,128 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'LINK'"), Name("Element")]
 	public partial class LinkElement : Element
 	{
-		internal LinkElement()
-		{
-		}
+		internal extern LinkElement();
 
-		public void AddEventListener(LinkElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(LinkElementEvents type, Action listener);
 
-		public void AddEventListener(LinkElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(LinkElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(LinkElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(LinkElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(LinkElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(LinkElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener)
-		{
-		}
+		public extern void AddEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener);
 
-		public void AddEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture);
 
-		public void AddEventListener(LinkElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(LinkElementEvents type, IEventListener listener);
 
-		public void AddEventListener(LinkElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(LinkElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Charset
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Charset
+		public extern string CrossOrigin
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string CrossOrigin
+		public extern bool Disabled
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Disabled
+		public extern string Href
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Href
+		public extern string Hreflang
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Hreflang
+		public extern string Media
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Media
+		public extern string Rel
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Rel
+		public extern TokenList RelList
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(LinkElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(LinkElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(LinkElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(LinkElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener);
+
+		public extern void RemoveEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture);
+
+		public extern void RemoveEventListener(LinkElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(LinkElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Rev
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public TokenList RelList
+		public extern StyleSheet Sheet
 		{
-			get {
-				return default(TokenList);
-			}
-		}
-
-		public void RemoveEventListener(LinkElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(LinkElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(LinkElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(LinkElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(LinkElementEvents type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(LinkElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(LinkElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Rev
+		public extern string Target
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public StyleSheet Sheet
+		public extern string Type
 		{
-			get {
-				return default(StyleSheet);
-			}
-		}
-
-		[FieldProperty]
-		public string Target
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Type
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

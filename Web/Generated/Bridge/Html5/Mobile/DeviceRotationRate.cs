@@ -3,32 +3,24 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class DeviceRotationRate
 	{
-		internal DeviceRotationRate()
+		internal extern DeviceRotationRate();
+
+		[FieldProperty]
+		public extern double? Alpha
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double? Alpha
+		public extern double? Beta
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double? Beta
+		public extern double? Gamma
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public double? Gamma
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

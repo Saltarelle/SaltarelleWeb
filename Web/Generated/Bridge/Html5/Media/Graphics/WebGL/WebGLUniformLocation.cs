@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGLUniformLocation
 	{
-		internal WebGLUniformLocation()
-		{
-		}
+		internal extern WebGLUniformLocation();
 	}
 }

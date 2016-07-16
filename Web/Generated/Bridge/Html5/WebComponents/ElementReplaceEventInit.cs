@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class ElementReplaceEventInit : EventInit
 	{
-		public Element Upgrade
+		public extern Element Upgrade
 		{
 			get;
 			set;

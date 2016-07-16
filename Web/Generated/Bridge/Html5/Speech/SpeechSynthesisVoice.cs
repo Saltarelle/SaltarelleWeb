@@ -3,48 +3,36 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechSynthesisVoice
 	{
-		internal SpeechSynthesisVoice()
+		internal extern SpeechSynthesisVoice();
+
+		[FieldProperty]
+		public extern bool Default
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool Default
+		public extern string Lang
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Lang
+		public extern bool LocalService
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool LocalService
+		public extern string Name
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern string VoiceURI
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string VoiceURI
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

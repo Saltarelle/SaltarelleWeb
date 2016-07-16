@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class EventSourceInit
 	{
-		public bool WithCredentials
+		public extern bool WithCredentials
 		{
 			get;
 			set;

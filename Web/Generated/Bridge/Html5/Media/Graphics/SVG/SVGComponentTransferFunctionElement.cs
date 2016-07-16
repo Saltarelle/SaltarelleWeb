@@ -3,128 +3,76 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGComponentTransferFunctionElement : SVGElement
 	{
-		internal SVGComponentTransferFunctionElement()
-		{
-		}
+		internal extern SVGComponentTransferFunctionElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture);
 
-		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGComponentTransferFunctionElementEvents type, Action listener);
 
-		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGComponentTransferFunctionElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener);
 
-		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture);
 
-		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedNumber Amplitude
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber Amplitude
+		public extern SVGAnimatedNumber Exponent
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber Exponent
+		public extern SVGAnimatedNumber Intercept
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber Intercept
+		public extern SVGAnimatedNumber Offset
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener);
+
+		public extern void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public SVGAnimatedNumber Offset
+		public extern SVGAnimatedNumber Slope
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public SVGAnimatedNumber Slope
-		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[Name("SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE")]
@@ -146,19 +94,15 @@
 		public const ushort SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN = 0;
 
 		[FieldProperty]
-		public SVGAnimatedNumberList TableValues
+		public extern SVGAnimatedNumberList TableValues
 		{
-			get {
-				return default(SVGAnimatedNumberList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGComponentTransferType> Type
+		public extern SVGAnimatedEnumeration<SVGComponentTransferType> Type
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGComponentTransferType>);
-			}
+			get;
 		}
 	}
 }

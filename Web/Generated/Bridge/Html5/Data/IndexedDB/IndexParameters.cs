@@ -3,13 +3,13 @@
 	[External, Serializable]
 	public partial class IndexParameters
 	{
-		public bool MultiEntry
+		public extern bool MultiEntry
 		{
 			get;
 			set;
 		}
 
-		public bool Unique
+		public extern bool Unique
 		{
 			get;
 			set;

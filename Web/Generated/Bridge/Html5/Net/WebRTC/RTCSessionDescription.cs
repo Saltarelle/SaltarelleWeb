@@ -3,32 +3,22 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("mozRTCSessionDescription")]
 	public partial class RTCSessionDescription
 	{
-		public RTCSessionDescription()
-		{
-		}
+		public extern RTCSessionDescription();
 
-		public RTCSessionDescription(RTCSessionDescriptionInit descriptionInitDict)
+		public extern RTCSessionDescription(RTCSessionDescriptionInit descriptionInitDict);
+
+		[FieldProperty]
+		public extern string Sdp
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Sdp
+		public extern RTCSdpType? Type
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public RTCSdpType? Type
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGLProgram
 	{
-		internal WebGLProgram()
-		{
-		}
+		internal extern WebGLProgram();
 	}
 }

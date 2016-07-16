@@ -3,31 +3,31 @@
 	[External, Serializable]
 	public partial class RTCIceComponentStats : RTCStats
 	{
-		public bool ActiveConnection
+		public extern bool ActiveConnection
 		{
 			get;
 			set;
 		}
 
-		public int BytesReceived
+		public extern int BytesReceived
 		{
 			get;
 			set;
 		}
 
-		public int BytesSent
+		public extern int BytesSent
 		{
 			get;
 			set;
 		}
 
-		public int Component
+		public extern int Component
 		{
 			get;
 			set;
 		}
 
-		public string TransportId
+		public extern string TransportId
 		{
 			get;
 			set;

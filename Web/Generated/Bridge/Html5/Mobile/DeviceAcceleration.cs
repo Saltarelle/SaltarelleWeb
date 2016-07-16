@@ -3,32 +3,24 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class DeviceAcceleration
 	{
-		internal DeviceAcceleration()
+		internal extern DeviceAcceleration();
+
+		[FieldProperty]
+		public extern double? X
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double? X
+		public extern double? Y
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double? Y
+		public extern double? Z
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public double? Z
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

@@ -3,16 +3,12 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class WebGLExtensionStandardDerivatives
 	{
-		internal WebGLExtensionStandardDerivatives()
-		{
-		}
+		internal extern WebGLExtensionStandardDerivatives();
 
 		[FieldProperty, Name("FRAGMENT_SHADER_DERIVATIVE_HINT_OES")]
-		public int FRAGMENT_SHADER_DERIVATIVE_HINT_OES
+		public extern int FRAGMENT_SHADER_DERIVATIVE_HINT_OES
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

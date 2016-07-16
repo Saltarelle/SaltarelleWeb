@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class WebSocketDict
 	{
-		public WebSocketElement[] Websockets
+		public extern WebSocketElement[] Websockets
 		{
 			get;
 			set;

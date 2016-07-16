@@ -3,108 +3,60 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'OPTGROUP'"), Name("Element")]
 	public partial class OptGroupElement : Element
 	{
-		internal OptGroupElement()
-		{
-		}
+		internal extern OptGroupElement();
 
-		public void AddEventListener(OptGroupElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(OptGroupElementEvents type, Action listener);
 
-		public void AddEventListener(OptGroupElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OptGroupElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(OptGroupElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(OptGroupElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(OptGroupElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OptGroupElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener)
-		{
-		}
+		public extern void AddEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener);
 
-		public void AddEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture);
 
-		public void AddEventListener(OptGroupElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(OptGroupElementEvents type, IEventListener listener);
 
-		public void AddEventListener(OptGroupElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OptGroupElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Disabled
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Disabled
+		public extern string Label
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		[FieldProperty]
-		public string Label
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
+		public extern void RemoveEventListener(OptGroupElementEvents type, Action listener);
 
-		public void RemoveEventListener(OptGroupElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(OptGroupElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(OptGroupElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener);
 
-		public void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture);
 
-		public void RemoveEventListener(OptGroupElementEvents type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(OptGroupElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(OptGroupElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(OptGroupElementEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(OptGroupElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture);
 	}
 }

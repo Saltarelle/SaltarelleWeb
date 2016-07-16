@@ -3,99 +3,58 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Node")]
 	public partial class XmlNode : EventTarget
 	{
-		internal XmlNode()
-		{
-		}
+		internal extern XmlNode();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture);
 
-		public void AddEventListener(XmlNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(XmlNodeEvents type, Action listener);
 
-		public void AddEventListener(XmlNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener)
-		{
-		}
+		public extern void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener);
 
-		public void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture);
 
-		public void AddEventListener(XmlNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(XmlNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(XmlNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlNodeEvents type, IEventListener listener, bool capture);
 
-		public XmlNode AppendChild(XmlNode node)
-		{
-			return default(XmlNode);
-		}
+		public extern XmlNode AppendChild(XmlNode node);
 
 		[Name("ATTRIBUTE_NODE")]
 		public const ushort ATTRIBUTE_NODE = 2;
 
 		[FieldProperty]
-		public string BaseURI
+		public extern string BaseURI
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[Name("CDATA_SECTION_NODE")]
 		public const ushort CDATA_SECTION_NODE = 4;
 
 		[FieldProperty]
-		public XmlNodeList ChildNodes
+		public extern XmlNodeList ChildNodes
 		{
-			get {
-				return default(XmlNodeList);
-			}
+			get;
 		}
 
-		public XmlNode CloneNode()
-		{
-			return default(XmlNode);
-		}
+		public extern XmlNode CloneNode();
 
-		public XmlNode CloneNode(bool deep)
-		{
-			return default(XmlNode);
-		}
+		public extern XmlNode CloneNode(bool deep);
 
 		[Name("COMMENT_NODE")]
 		public const ushort COMMENT_NODE = 8;
 
-		public DocumentPosition CompareDocumentPosition(XmlNode other)
-		{
-			return default(DocumentPosition);
-		}
+		public extern DocumentPosition CompareDocumentPosition(XmlNode other);
 
-		public bool Contains(XmlNode other)
-		{
-			return false;
-		}
+		public extern bool Contains(XmlNode other);
 
 		[Name("DOCUMENT_FRAGMENT_NODE")]
 		public const ushort DOCUMENT_FRAGMENT_NODE = 11;
@@ -134,222 +93,140 @@
 		public const ushort ENTITY_REFERENCE_NODE = 5;
 
 		[FieldProperty]
-		public XmlNode FirstChild
+		public extern XmlNode FirstChild
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 
-		public object GetUserData(string key)
-		{
-			return null;
-		}
+		public extern object GetUserData(string key);
 
-		public bool HasAttributes()
-		{
-			return false;
-		}
+		public extern bool HasAttributes();
 
-		public bool HasChildNodes()
-		{
-			return false;
-		}
+		public extern bool HasChildNodes();
 
-		public XmlNode InsertBefore(XmlNode node, XmlNode child)
-		{
-			return default(XmlNode);
-		}
+		public extern XmlNode InsertBefore(XmlNode node, XmlNode child);
 
-		public bool IsDefaultNamespace(string @namespace)
-		{
-			return false;
-		}
+		public extern bool IsDefaultNamespace(string @namespace);
 
-		public bool IsEqualNode(XmlNode node)
+		public extern bool IsEqualNode(XmlNode node);
+
+		[FieldProperty]
+		public extern XmlNode LastChild
 		{
-			return false;
+			get;
 		}
 
 		[FieldProperty]
-		public XmlNode LastChild
+		public extern string LocalName
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
+		}
+
+		public extern string LookupNamespaceURI(string prefix);
+
+		public extern string LookupPrefix(string @namespace);
+
+		[FieldProperty]
+		public extern string NamespaceURI
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public string LocalName
+		public extern XmlNode NextSibling
 		{
-			get {
-				return null;
-			}
-		}
-
-		public string LookupNamespaceURI(string prefix)
-		{
-			return null;
-		}
-
-		public string LookupPrefix(string @namespace)
-		{
-			return null;
+			get;
 		}
 
 		[FieldProperty]
-		public string NamespaceURI
+		public extern string NodeName
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlNode NextSibling
+		public extern XmlNodeType NodeType
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string NodeName
+		public extern string NodeValue
 		{
-			get {
-				return null;
-			}
+			get;
+			set;
 		}
 
-		[FieldProperty]
-		public XmlNodeType NodeType
-		{
-			get {
-				return default(XmlNodeType);
-			}
-		}
-
-		[FieldProperty]
-		public string NodeValue
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void Normalize()
-		{
-		}
+		public extern void Normalize();
 
 		[Name("NOTATION_NODE")]
 		public const ushort NOTATION_NODE = 12;
 
 		[FieldProperty]
-		public DocumentBase OwnerDocument
+		public extern DocumentBase OwnerDocument
 		{
-			get {
-				return default(DocumentBase);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElement ParentElement
+		public extern XmlElement ParentElement
 		{
-			get {
-				return default(XmlElement);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlNode ParentNode
+		public extern XmlNode ParentNode
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Prefix
+		public extern string Prefix
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlNode PreviousSibling
+		public extern XmlNode PreviousSibling
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 
 		[Name("PROCESSING_INSTRUCTION_NODE")]
 		public const ushort PROCESSING_INSTRUCTION_NODE = 7;
 
-		public XmlNode RemoveChild(XmlNode child)
-		{
-			return default(XmlNode);
-		}
+		public extern XmlNode RemoveChild(XmlNode child);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture);
 
-		public void RemoveEventListener(XmlNodeEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlNodeEvents type, Action listener);
 
-		public void RemoveEventListener(XmlNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlNodeEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener);
 
-		public void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture);
 
-		public void RemoveEventListener(XmlNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(XmlNodeEvents type, IEventListener listener);
 
-		public void RemoveEventListener(XmlNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(XmlNodeEvents type, IEventListener listener, bool capture);
 
-		public XmlNode ReplaceChild(XmlNode node, XmlNode child)
-		{
-			return default(XmlNode);
-		}
+		public extern XmlNode ReplaceChild(XmlNode node, XmlNode child);
 
 		[Name("TEXT_NODE")]
 		public const ushort TEXT_NODE = 3;
 
 		[FieldProperty]
-		public string TextContent
+		public extern string TextContent
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,52 +3,36 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DeviceMotionEvent : Event
 	{
-		internal DeviceMotionEvent()
-		{
-		}
+		internal extern DeviceMotionEvent();
 
-		public DeviceMotionEvent(string type)
-		{
-		}
+		public extern DeviceMotionEvent(string type);
 
-		public DeviceMotionEvent(string type, DeviceMotionEventInit eventInitDict)
+		public extern DeviceMotionEvent(string type, DeviceMotionEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern DeviceAcceleration Acceleration
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public DeviceAcceleration Acceleration
+		public extern DeviceAcceleration AccelerationIncludingGravity
 		{
-			get {
-				return default(DeviceAcceleration);
-			}
+			get;
+		}
+
+		public extern void InitDeviceMotionEvent(string type, bool canBubble, bool cancelable, DeviceAccelerationInit acceleration, DeviceAccelerationInit accelerationIncludingGravity, DeviceRotationRateInit rotationRate, double? interval);
+
+		[FieldProperty]
+		public extern double? Interval
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public DeviceAcceleration AccelerationIncludingGravity
+		public extern DeviceRotationRate RotationRate
 		{
-			get {
-				return default(DeviceAcceleration);
-			}
-		}
-
-		public void InitDeviceMotionEvent(string type, bool canBubble, bool cancelable, DeviceAccelerationInit acceleration, DeviceAccelerationInit accelerationIncludingGravity, DeviceRotationRateInit rotationRate, double? interval)
-		{
-		}
-
-		[FieldProperty]
-		public double? Interval
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public DeviceRotationRate RotationRate
-		{
-			get {
-				return default(DeviceRotationRate);
-			}
+			get;
 		}
 	}
 }

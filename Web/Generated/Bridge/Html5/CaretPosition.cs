@@ -5,29 +5,20 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CaretPosition
 	{
-		internal CaretPosition()
-		{
-		}
+		internal extern CaretPosition();
 
-		public DOMRect GetClientRect()
+		public extern DOMRect GetClientRect();
+
+		[FieldProperty]
+		public extern int Offset
 		{
-			return default(DOMRect);
+			get;
 		}
 
 		[FieldProperty]
-		public int Offset
+		public extern XmlNode OffsetNode
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public XmlNode OffsetNode
-		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 	}
 }

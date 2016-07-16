@@ -6,285 +6,177 @@ namespace Bridge.Html5
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'SELECT'"), Name("Element")]
 	public partial class SelectElement : Element
 	{
-		internal SelectElement()
-		{
-		}
+		internal extern SelectElement();
 
 		[IndexerName("__Item"), FieldProperty]
 		public TypeOption<Element, OptionElement> this[int index]
 		{
-			get {
-				return default(TypeOption<Element, OptionElement>);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void Add(TypeOption<OptionElement, OptGroupElement> element)
+		public extern void Add(TypeOption<OptionElement, OptGroupElement> element);
+
+		public extern void Add(TypeOption<OptionElement, OptGroupElement> element, TypeOption<Element, int> before);
+
+		public extern void AddEventListener(SelectElementEvents type, Action listener);
+
+		public extern void AddEventListener(SelectElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(SelectElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(SelectElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener);
+
+		public extern void AddEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture);
+
+		public extern void AddEventListener(SelectElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(SelectElementEvents type, IEventListener listener, bool capture);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Autofocus
 		{
+			get;
+			set;
 		}
 
-		public void Add(TypeOption<OptionElement, OptGroupElement> element, TypeOption<Element, int> before)
-		{
-		}
+		public extern bool CheckValidity();
 
-		public void AddEventListener(SelectElementEvents type, Action listener)
+		[FieldProperty]
+		public extern bool Disabled
 		{
-		}
-
-		public void AddEventListener(SelectElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(SelectElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void AddEventListener(SelectElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener)
-		{
-		}
-
-		public void AddEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(SelectElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(SelectElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Autofocus
+		public extern FormElement Form
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public bool CheckValidity()
-		{
-			return false;
-		}
-
-		[FieldProperty]
-		public bool Disabled
-		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public FormElement Form
-		{
-			get {
-				return default(FormElement);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<Element> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<Element> GetEnumerator();
 
-		public Element Item(int index)
+		public extern Element Item(int index);
+
+		[FieldProperty]
+		public extern int Length
 		{
-			return default(Element);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern bool Multiple
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Multiple
+		public extern string Name
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern OptionElement NamedItem(string name);
+
+		[FieldProperty]
+		public extern HtmlOptionsCollection Options
+		{
+			get;
+		}
+
+		public extern void Remove();
+
+		public extern void Remove(int index);
+
+		public extern void RemoveEventListener(SelectElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SelectElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SelectElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SelectElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener);
+
+		public extern void RemoveEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SelectElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SelectElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Required
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern int SelectedIndex
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public OptionElement NamedItem(string name)
-		{
-			return default(OptionElement);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public HtmlOptionsCollection Options
+		public extern ElementCollection SelectedOptions
 		{
-			get {
-				return default(HtmlOptionsCollection);
-			}
+			get;
 		}
 
-		public void Remove()
-		{
-		}
+		public extern void SetCustomValidity(string error);
 
-		public void Remove(int index)
+		[FieldProperty]
+		public extern int Size
 		{
-		}
-
-		public void RemoveEventListener(SelectElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SelectElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SelectElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SelectElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SelectElementEvents type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SelectElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SelectElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Required
+		public extern string Type
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int SelectedIndex
+		public extern string ValidationMessage
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public ElementCollection SelectedOptions
+		public extern ValidityState Validity
 		{
-			get {
-				return default(ElementCollection);
-			}
-		}
-
-		public void SetCustomValidity(string error)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public int Size
+		public extern string Value
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Type
+		public extern bool WillValidate
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string ValidationMessage
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public ValidityState Validity
-		{
-			get {
-				return default(ValidityState);
-			}
-		}
-
-		[FieldProperty]
-		public string Value
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public bool WillValidate
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

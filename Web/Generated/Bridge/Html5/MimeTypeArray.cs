@@ -5,48 +5,31 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MimeTypeArray
 	{
-		internal MimeTypeArray()
-		{
-		}
+		internal extern MimeTypeArray();
 
 		[IndexerName("__Item"), FieldProperty]
 		public MimeType this[int index]
 		{
-			get {
-				return default(MimeType);
-			}
+			get;
 		}
 
 		[IndexerName("__Item"), FieldProperty]
 		public MimeType this[string name]
 		{
-			get {
-				return default(MimeType);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<MimeType> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<MimeType> GetEnumerator();
 
-		public MimeType Item(int index)
-		{
-			return default(MimeType);
-		}
+		public extern MimeType Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public MimeType NamedItem(string name)
-		{
-			return default(MimeType);
-		}
+		public extern MimeType NamedItem(string name);
 	}
 }

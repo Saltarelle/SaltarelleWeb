@@ -3,24 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DeviceLightEvent : Event
 	{
-		internal DeviceLightEvent()
-		{
-		}
+		internal extern DeviceLightEvent();
 
-		public DeviceLightEvent(string type)
-		{
-		}
+		public extern DeviceLightEvent(string type);
 
-		public DeviceLightEvent(string type, DeviceLightEventInit eventInitDict)
-		{
-		}
+		public extern DeviceLightEvent(string type, DeviceLightEventInit eventInitDict);
 
 		[FieldProperty]
-		public double Value
+		public extern double Value
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

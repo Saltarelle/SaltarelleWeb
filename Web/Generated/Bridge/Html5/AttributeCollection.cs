@@ -6,73 +6,41 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class AttributeCollection
 	{
-		internal AttributeCollection()
-		{
-		}
+		internal extern AttributeCollection();
 
 		[IndexerName("__Item"), FieldProperty]
 		public XmlAttribute this[int index]
 		{
-			get {
-				return default(XmlAttribute);
-			}
+			get;
 		}
 
 		[IndexerName("__Item"), FieldProperty]
 		public XmlAttribute this[string name]
 		{
-			get {
-				return default(XmlAttribute);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<XmlAttribute> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<XmlAttribute> GetEnumerator();
 
-		public XmlAttribute GetNamedItem(string name)
-		{
-			return default(XmlAttribute);
-		}
+		public extern XmlAttribute GetNamedItem(string name);
 
-		public XmlAttribute GetNamedItemNS(string namespaceURI, string localName)
-		{
-			return default(XmlAttribute);
-		}
+		public extern XmlAttribute GetNamedItemNS(string namespaceURI, string localName);
 
-		public XmlAttribute Item(int index)
-		{
-			return default(XmlAttribute);
-		}
+		public extern XmlAttribute Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public XmlAttribute RemoveNamedItem(string name)
-		{
-			return default(XmlAttribute);
-		}
+		public extern XmlAttribute RemoveNamedItem(string name);
 
-		public XmlAttribute RemoveNamedItemNS(string namespaceURI, string localName)
-		{
-			return default(XmlAttribute);
-		}
+		public extern XmlAttribute RemoveNamedItemNS(string namespaceURI, string localName);
 
-		public XmlAttribute SetNamedItem(XmlAttribute arg)
-		{
-			return default(XmlAttribute);
-		}
+		public extern XmlAttribute SetNamedItem(XmlAttribute arg);
 
-		public XmlAttribute SetNamedItemNS(XmlAttribute arg)
-		{
-			return default(XmlAttribute);
-		}
+		public extern XmlAttribute SetNamedItemNS(XmlAttribute arg);
 	}
 }

@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechRecognitionAlternative
 	{
-		internal SpeechRecognitionAlternative()
+		internal extern SpeechRecognitionAlternative();
+
+		[FieldProperty]
+		public extern double Confidence
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double Confidence
+		public extern string Transcript
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public string Transcript
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

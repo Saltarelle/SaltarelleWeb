@@ -3,21 +3,14 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("HTMLFormControlsCollection")]
 	public partial class FormControlsCollection : ElementCollection
 	{
-		internal FormControlsCollection()
-		{
-		}
+		internal extern FormControlsCollection();
 
 		[IndexerName("__Item"), FieldProperty]
 		public TypeOption<ElementNodeList, Element> this[string name]
 		{
-			get {
-				return default(TypeOption<ElementNodeList, Element>);
-			}
+			get;
 		}
 
-		public TypeOption<ElementNodeList, Element> NamedItem(string name)
-		{
-			return default(TypeOption<ElementNodeList, Element>);
-		}
+		public extern TypeOption<ElementNodeList, Element> NamedItem(string name);
 	}
 }

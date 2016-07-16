@@ -3,28 +3,20 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TimeEvent : Event
 	{
-		internal TimeEvent()
-		{
-		}
+		internal extern TimeEvent();
 
 		[FieldProperty]
-		public int Detail
+		public extern int Detail
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void InitTimeEvent(string aType, WindowInstance aView, int aDetail)
-		{
-		}
+		public extern void InitTimeEvent(string aType, WindowInstance aView, int aDetail);
 
 		[FieldProperty]
-		public WindowInstance View
+		public extern WindowInstance View
 		{
-			get {
-				return default(WindowInstance);
-			}
+			get;
 		}
 	}
 }

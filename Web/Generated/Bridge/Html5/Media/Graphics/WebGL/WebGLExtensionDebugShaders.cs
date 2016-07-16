@@ -3,13 +3,8 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class WebGLExtensionDebugShaders
 	{
-		internal WebGLExtensionDebugShaders()
-		{
-		}
+		internal extern WebGLExtensionDebugShaders();
 
-		public string GetTranslatedShaderSource(WebGLShader shader)
-		{
-			return null;
-		}
+		public extern string GetTranslatedShaderSource(WebGLShader shader);
 	}
 }

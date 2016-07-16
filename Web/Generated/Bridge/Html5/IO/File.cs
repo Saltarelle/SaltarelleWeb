@@ -5,24 +5,18 @@ namespace Bridge.Html5.IO
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class File : Blob
 	{
-		internal File()
+		internal extern File();
+
+		[FieldProperty]
+		public extern DateTime LastModifiedDate
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public DateTime LastModifiedDate
+		public extern string Name
 		{
-			get {
-				return default(DateTime);
-			}
-		}
-
-		[FieldProperty]
-		public string Name
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

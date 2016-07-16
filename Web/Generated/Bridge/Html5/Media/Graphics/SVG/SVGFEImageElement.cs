@@ -3,144 +3,88 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFEImageElement : SVGElement
 	{
-		internal SVGFEImageElement()
-		{
-		}
+		internal extern SVGFEImageElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEImageElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEImageElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFEImageElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEImageElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFEImageElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEImageElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFEImageElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEImageElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFEImageElementEvents type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEImageElementEvents type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener);
 
-		public void AddEventListener(SVGFEImageElementEvents type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEImageElementEvents type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEImageElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEImageElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFEImageElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFEImageElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString Href
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString Href
+		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEImageElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFEImageElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEImageElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFEImageElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEImageElementEvents type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener);
+
+		public extern void RemoveEventListener(SVGFEImageElementEvents type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEImageElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFEImageElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedString Result
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedPreserveAspectRatio);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEImageElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEImageElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEImageElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEImageElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEImageElementEvents type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEImageElementEvents type, HtmlEventHandlerWithTarget<SVGFEImageElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEImageElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEImageElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString Result
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength X
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength Y
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

@@ -3,26 +3,19 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimatedInteger
 	{
-		internal SVGAnimatedInteger()
+		internal extern SVGAnimatedInteger();
+
+		[FieldProperty]
+		public extern int AnimVal
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public int AnimVal
+		public extern int BaseVal
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int BaseVal
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

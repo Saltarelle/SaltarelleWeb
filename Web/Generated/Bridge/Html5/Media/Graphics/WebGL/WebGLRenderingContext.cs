@@ -5,9 +5,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGLRenderingContext
 	{
-		internal WebGLRenderingContext()
-		{
-		}
+		internal extern WebGLRenderingContext();
 
 		[Name("ACTIVE_ATTRIBUTES")]
 		public const int ACTIVE_ATTRIBUTES = 35721;
@@ -18,9 +16,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("ACTIVE_UNIFORMS")]
 		public const int ACTIVE_UNIFORMS = 35718;
 
-		public void ActiveTexture(int texture)
-		{
-		}
+		public extern void ActiveTexture(int texture);
 
 		[Name("ALIASED_LINE_WIDTH_RANGE")]
 		public const int ALIASED_LINE_WIDTH_RANGE = 33902;
@@ -44,31 +40,19 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("ATTACHED_SHADERS")]
 		public const int ATTACHED_SHADERS = 35717;
 
-		public void AttachShader(WebGLProgram program, WebGLShader shader)
-		{
-		}
+		public extern void AttachShader(WebGLProgram program, WebGLShader shader);
 
 		public const int BACK = 1029;
 
-		public void BindAttribLocation(WebGLProgram program, int index, string name)
-		{
-		}
+		public extern void BindAttribLocation(WebGLProgram program, int index, string name);
 
-		public void BindBuffer(int target, WebGLBuffer buffer)
-		{
-		}
+		public extern void BindBuffer(int target, WebGLBuffer buffer);
 
-		public void BindFramebuffer(int target, WebGLFramebuffer framebuffer)
-		{
-		}
+		public extern void BindFramebuffer(int target, WebGLFramebuffer framebuffer);
 
-		public void BindRenderbuffer(int target, WebGLRenderbuffer renderbuffer)
-		{
-		}
+		public extern void BindRenderbuffer(int target, WebGLRenderbuffer renderbuffer);
 
-		public void BindTexture(int target, WebGLTexture texture)
-		{
-		}
+		public extern void BindTexture(int target, WebGLTexture texture);
 
 		public const int BLEND = 3042;
 
@@ -96,25 +80,15 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("BLEND_SRC_RGB")]
 		public const int BLEND_SRC_RGB = 32969;
 
-		public void BlendColor(double red, double green, double blue, double alpha)
-		{
-		}
+		public extern void BlendColor(double red, double green, double blue, double alpha);
 
-		public void BlendEquation(int mode)
-		{
-		}
+		public extern void BlendEquation(int mode);
 
-		public void BlendEquationSeparate(int modeRGB, int modeAlpha)
-		{
-		}
+		public extern void BlendEquationSeparate(int modeRGB, int modeAlpha);
 
-		public void BlendFunc(int sfactor, int dfactor)
-		{
-		}
+		public extern void BlendFunc(int sfactor, int dfactor);
 
-		public void BlendFuncSeparate(int srcRGB, int dstRGB, int srcAlpha, int dstAlpha)
-		{
-		}
+		public extern void BlendFuncSeparate(int srcRGB, int dstRGB, int srcAlpha, int dstAlpha);
 
 		[Name("BLUE_BITS")]
 		public const int BLUE_BITS = 3412;
@@ -139,61 +113,38 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("BUFFER_USAGE")]
 		public const int BUFFER_USAGE = 34661;
 
-		public void BufferData(int target, ArrayBuffer data, int usage)
-		{
-		}
+		public extern void BufferData(int target, ArrayBuffer data, int usage);
 
-		public void BufferData(int target, ArrayBufferView data, int usage)
-		{
-		}
+		public extern void BufferData(int target, ArrayBufferView data, int usage);
 
-		public void BufferData(int target, long size, int usage)
-		{
-		}
+		public extern void BufferData(int target, long size, int usage);
 
-		public void BufferSubData(int target, long offset, ArrayBuffer data)
-		{
-		}
+		public extern void BufferSubData(int target, long offset, ArrayBuffer data);
 
-		public void BufferSubData(int target, long offset, ArrayBufferView data)
-		{
-		}
+		public extern void BufferSubData(int target, long offset, ArrayBufferView data);
 
 		public const int BYTE = 5120;
 
 		[FieldProperty]
-		public CanvasElement Canvas
+		public extern CanvasElement Canvas
 		{
-			get {
-				return default(CanvasElement);
-			}
+			get;
 		}
 
 		public const int CCW = 2305;
 
-		public int CheckFramebufferStatus(int target)
-		{
-			return 0;
-		}
+		public extern int CheckFramebufferStatus(int target);
 
 		[Name("CLAMP_TO_EDGE")]
 		public const int CLAMP_TO_EDGE = 33071;
 
-		public void Clear(int mask)
-		{
-		}
+		public extern void Clear(int mask);
 
-		public void ClearColor(double red, double green, double blue, double alpha)
-		{
-		}
+		public extern void ClearColor(double red, double green, double blue, double alpha);
 
-		public void ClearDepth(double depth)
-		{
-		}
+		public extern void ClearDepth(double depth);
 
-		public void ClearStencil(int s)
-		{
-		}
+		public extern void ClearStencil(int s);
 
 		[Name("COLOR_ATTACHMENT0")]
 		public const int COLOR_ATTACHMENT0 = 36064;
@@ -207,27 +158,19 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("COLOR_WRITEMASK")]
 		public const int COLOR_WRITEMASK = 3107;
 
-		public void ColorMask(bool red, bool green, bool blue, bool alpha)
-		{
-		}
+		public extern void ColorMask(bool red, bool green, bool blue, bool alpha);
 
 		[Name("COMPILE_STATUS")]
 		public const int COMPILE_STATUS = 35713;
 
-		public void CompileShader(WebGLShader shader)
-		{
-		}
+		public extern void CompileShader(WebGLShader shader);
 
 		[Name("COMPRESSED_TEXTURE_FORMATS")]
 		public const int COMPRESSED_TEXTURE_FORMATS = 34467;
 
-		public void CompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, ArrayBufferView data)
-		{
-		}
+		public extern void CompressedTexImage2D(int target, int level, int internalformat, int width, int height, int border, ArrayBufferView data);
 
-		public void CompressedTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, ArrayBufferView data)
-		{
-		}
+		public extern void CompressedTexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, ArrayBufferView data);
 
 		[Name("CONSTANT_ALPHA")]
 		public const int CONSTANT_ALPHA = 32771;
@@ -238,43 +181,21 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("CONTEXT_LOST_WEBGL")]
 		public const int CONTEXT_LOST_WEBGL = 37442;
 
-		public void CopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border)
-		{
-		}
+		public extern void CopyTexImage2D(int target, int level, int internalformat, int x, int y, int width, int height, int border);
 
-		public void CopyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x, int y, int width, int height)
-		{
-		}
+		public extern void CopyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x, int y, int width, int height);
 
-		public WebGLBuffer CreateBuffer()
-		{
-			return default(WebGLBuffer);
-		}
+		public extern WebGLBuffer CreateBuffer();
 
-		public WebGLFramebuffer CreateFramebuffer()
-		{
-			return default(WebGLFramebuffer);
-		}
+		public extern WebGLFramebuffer CreateFramebuffer();
 
-		public WebGLProgram CreateProgram()
-		{
-			return default(WebGLProgram);
-		}
+		public extern WebGLProgram CreateProgram();
 
-		public WebGLRenderbuffer CreateRenderbuffer()
-		{
-			return default(WebGLRenderbuffer);
-		}
+		public extern WebGLRenderbuffer CreateRenderbuffer();
 
-		public WebGLShader CreateShader(int type)
-		{
-			return default(WebGLShader);
-		}
+		public extern WebGLShader CreateShader(int type);
 
-		public WebGLTexture CreateTexture()
-		{
-			return default(WebGLTexture);
-		}
+		public extern WebGLTexture CreateTexture();
 
 		[Name("CULL_FACE")]
 		public const int CULL_FACE = 2884;
@@ -282,9 +203,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("CULL_FACE_MODE")]
 		public const int CULL_FACE_MODE = 2885;
 
-		public void CullFace(int mode)
-		{
-		}
+		public extern void CullFace(int mode);
 
 		[Name("CURRENT_PROGRAM")]
 		public const int CURRENT_PROGRAM = 35725;
@@ -302,29 +221,17 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("DELETE_STATUS")]
 		public const int DELETE_STATUS = 35712;
 
-		public void DeleteBuffer(WebGLBuffer buffer)
-		{
-		}
+		public extern void DeleteBuffer(WebGLBuffer buffer);
 
-		public void DeleteFramebuffer(WebGLFramebuffer framebuffer)
-		{
-		}
+		public extern void DeleteFramebuffer(WebGLFramebuffer framebuffer);
 
-		public void DeleteProgram(WebGLProgram program)
-		{
-		}
+		public extern void DeleteProgram(WebGLProgram program);
 
-		public void DeleteRenderbuffer(WebGLRenderbuffer renderbuffer)
-		{
-		}
+		public extern void DeleteRenderbuffer(WebGLRenderbuffer renderbuffer);
 
-		public void DeleteShader(WebGLShader shader)
-		{
-		}
+		public extern void DeleteShader(WebGLShader shader);
 
-		public void DeleteTexture(WebGLTexture texture)
-		{
-		}
+		public extern void DeleteTexture(WebGLTexture texture);
 
 		[Name("DEPTH_ATTACHMENT")]
 		public const int DEPTH_ATTACHMENT = 36096;
@@ -362,57 +269,37 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("DEPTH_WRITEMASK")]
 		public const int DEPTH_WRITEMASK = 2930;
 
-		public void DepthFunc(int func)
-		{
-		}
+		public extern void DepthFunc(int func);
 
-		public void DepthMask(bool flag)
-		{
-		}
+		public extern void DepthMask(bool flag);
 
-		public void DepthRange(double zNear, double zFar)
-		{
-		}
+		public extern void DepthRange(double zNear, double zFar);
 
-		public void DetachShader(WebGLProgram program, WebGLShader shader)
-		{
-		}
+		public extern void DetachShader(WebGLProgram program, WebGLShader shader);
 
-		public void Disable(int cap)
-		{
-		}
+		public extern void Disable(int cap);
 
-		public void DisableVertexAttribArray(int index)
-		{
-		}
+		public extern void DisableVertexAttribArray(int index);
 
 		public const int DITHER = 3024;
 
 		[Name("DONT_CARE")]
 		public const int DONT_CARE = 4352;
 
-		public void DrawArrays(int mode, int first, int count)
-		{
-		}
+		public extern void DrawArrays(int mode, int first, int count);
 
-		public void DrawElements(int mode, int count, int type, long offset)
+		public extern void DrawElements(int mode, int count, int type, long offset);
+
+		[FieldProperty]
+		public extern int DrawingBufferHeight
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public int DrawingBufferHeight
+		public extern int DrawingBufferWidth
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int DrawingBufferWidth
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[Name("DST_ALPHA")]
@@ -430,21 +317,15 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("ELEMENT_ARRAY_BUFFER_BINDING")]
 		public const int ELEMENT_ARRAY_BUFFER_BINDING = 34965;
 
-		public void Enable(int cap)
-		{
-		}
+		public extern void Enable(int cap);
 
-		public void EnableVertexAttribArray(int index)
-		{
-		}
+		public extern void EnableVertexAttribArray(int index);
 
 		public const int EQUAL = 514;
 
 		public const int FASTEST = 4353;
 
-		public void Finish()
-		{
-		}
+		public extern void Finish();
 
 		public const int FLOAT = 5126;
 
@@ -466,9 +347,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("FLOAT_VEC4")]
 		public const int FLOAT_VEC4 = 35666;
 
-		public void Flush()
-		{
-		}
+		public extern void Flush();
 
 		[Name("FRAGMENT_SHADER")]
 		public const int FRAGMENT_SHADER = 35632;
@@ -505,13 +384,9 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("FRAMEBUFFER_UNSUPPORTED")]
 		public const int FRAMEBUFFER_UNSUPPORTED = 36061;
 
-		public void FramebufferRenderbuffer(int target, int attachment, int renderbuffertarget, WebGLRenderbuffer renderbuffer)
-		{
-		}
+		public extern void FramebufferRenderbuffer(int target, int attachment, int renderbuffertarget, WebGLRenderbuffer renderbuffer);
 
-		public void FramebufferTexture2D(int target, int attachment, int textarget, WebGLTexture texture, int level)
-		{
-		}
+		public extern void FramebufferTexture2D(int target, int attachment, int textarget, WebGLTexture texture, int level);
 
 		public const int FRONT = 1028;
 
@@ -521,9 +396,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("FRONT_FACE")]
 		public const int FRONT_FACE = 2886;
 
-		public void FrontFace(int mode)
-		{
-		}
+		public extern void FrontFace(int mode);
 
 		[Name("FUNC_ADD")]
 		public const int FUNC_ADD = 32774;
@@ -537,126 +410,55 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("GENERATE_MIPMAP_HINT")]
 		public const int GENERATE_MIPMAP_HINT = 33170;
 
-		public void GenerateMipmap(int target)
-		{
-		}
+		public extern void GenerateMipmap(int target);
 
 		public const int GEQUAL = 518;
 
-		public WebGLActiveInfo GetActiveAttrib(WebGLProgram program, int index)
-		{
-			return default(WebGLActiveInfo);
-		}
+		public extern WebGLActiveInfo GetActiveAttrib(WebGLProgram program, int index);
 
-		public WebGLActiveInfo GetActiveUniform(WebGLProgram program, int index)
-		{
-			return default(WebGLActiveInfo);
-		}
+		public extern WebGLActiveInfo GetActiveUniform(WebGLProgram program, int index);
 
-		public WebGLShader[] GetAttachedShaders(WebGLProgram program)
-		{
-			return null;
-		}
+		public extern WebGLShader[] GetAttachedShaders(WebGLProgram program);
 
-		public int GetAttribLocation(WebGLProgram program, string name)
-		{
-			return 0;
-		}
+		public extern int GetAttribLocation(WebGLProgram program, string name);
 
-		public object GetBufferParameter(int target, int pname)
-		{
-			return null;
-		}
+		public extern object GetBufferParameter(int target, int pname);
 
-		public WebGLContextAttributes GetContextAttributes()
-		{
-			return default(WebGLContextAttributes);
-		}
+		public extern WebGLContextAttributes GetContextAttributes();
 
-		public int GetError()
-		{
-			return 0;
-		}
+		public extern int GetError();
 
-		public object GetExtension(string name)
-		{
-			return null;
-		}
+		public extern object GetExtension(string name);
 
-		public object GetFramebufferAttachmentParameter(int target, int attachment, int pname)
-		{
-			return null;
-		}
+		public extern object GetFramebufferAttachmentParameter(int target, int attachment, int pname);
 
-		public object GetParameter(int pname)
-		{
-			return null;
-		}
+		public extern object GetParameter(int pname);
 
-		public string GetProgramInfoLog(WebGLProgram program)
-		{
-			return null;
-		}
+		public extern string GetProgramInfoLog(WebGLProgram program);
 
-		public object GetProgramParameter(WebGLProgram program, int pname)
-		{
-			return null;
-		}
+		public extern object GetProgramParameter(WebGLProgram program, int pname);
 
-		public object GetRenderbufferParameter(int target, int pname)
-		{
-			return null;
-		}
+		public extern object GetRenderbufferParameter(int target, int pname);
 
-		public string GetShaderInfoLog(WebGLShader shader)
-		{
-			return null;
-		}
+		public extern string GetShaderInfoLog(WebGLShader shader);
 
-		public object GetShaderParameter(WebGLShader shader, int pname)
-		{
-			return null;
-		}
+		public extern object GetShaderParameter(WebGLShader shader, int pname);
 
-		public WebGLShaderPrecisionFormat GetShaderPrecisionFormat(int shadertype, int precisiontype)
-		{
-			return default(WebGLShaderPrecisionFormat);
-		}
+		public extern WebGLShaderPrecisionFormat GetShaderPrecisionFormat(int shadertype, int precisiontype);
 
-		public string GetShaderSource(WebGLShader shader)
-		{
-			return null;
-		}
+		public extern string GetShaderSource(WebGLShader shader);
 
-		public string[] GetSupportedExtensions()
-		{
-			return null;
-		}
+		public extern string[] GetSupportedExtensions();
 
-		public object GetTexParameter(int target, int pname)
-		{
-			return null;
-		}
+		public extern object GetTexParameter(int target, int pname);
 
-		public object GetUniform(WebGLProgram program, WebGLUniformLocation location)
-		{
-			return null;
-		}
+		public extern object GetUniform(WebGLProgram program, WebGLUniformLocation location);
 
-		public WebGLUniformLocation GetUniformLocation(WebGLProgram program, string name)
-		{
-			return default(WebGLUniformLocation);
-		}
+		public extern WebGLUniformLocation GetUniformLocation(WebGLProgram program, string name);
 
-		public object GetVertexAttrib(int index, int pname)
-		{
-			return null;
-		}
+		public extern object GetVertexAttrib(int index, int pname);
 
-		public long GetVertexAttribOffset(int index, int pname)
-		{
-			return 0;
-		}
+		public extern long GetVertexAttribOffset(int index, int pname);
 
 		public const int GREATER = 516;
 
@@ -669,9 +471,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("HIGH_INT")]
 		public const int HIGH_INT = 36341;
 
-		public void Hint(int target, int mode)
-		{
-		}
+		public extern void Hint(int target, int mode);
 
 		public const int INCR = 7682;
 
@@ -703,45 +503,21 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 
 		public const int INVERT = 5386;
 
-		public bool IsBuffer(WebGLBuffer buffer)
-		{
-			return false;
-		}
+		public extern bool IsBuffer(WebGLBuffer buffer);
 
-		public bool IsContextLost()
-		{
-			return false;
-		}
+		public extern bool IsContextLost();
 
-		public bool IsEnabled(int cap)
-		{
-			return false;
-		}
+		public extern bool IsEnabled(int cap);
 
-		public bool IsFramebuffer(WebGLFramebuffer framebuffer)
-		{
-			return false;
-		}
+		public extern bool IsFramebuffer(WebGLFramebuffer framebuffer);
 
-		public bool IsProgram(WebGLProgram program)
-		{
-			return false;
-		}
+		public extern bool IsProgram(WebGLProgram program);
 
-		public bool IsRenderbuffer(WebGLRenderbuffer renderbuffer)
-		{
-			return false;
-		}
+		public extern bool IsRenderbuffer(WebGLRenderbuffer renderbuffer);
 
-		public bool IsShader(WebGLShader shader)
-		{
-			return false;
-		}
+		public extern bool IsShader(WebGLShader shader);
 
-		public bool IsTexture(WebGLTexture texture)
-		{
-			return false;
-		}
+		public extern bool IsTexture(WebGLTexture texture);
 
 		public const int KEEP = 7680;
 
@@ -768,16 +544,12 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 
 		public const int LINES = 1;
 
-		public void LineWidth(double width)
-		{
-		}
+		public extern void LineWidth(double width);
 
 		[Name("LINK_STATUS")]
 		public const int LINK_STATUS = 35714;
 
-		public void LinkProgram(WebGLProgram program)
-		{
-		}
+		public extern void LinkProgram(WebGLProgram program);
 
 		[Name("LOW_FLOAT")]
 		public const int LOW_FLOAT = 36336;
@@ -877,9 +649,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("PACK_ALIGNMENT")]
 		public const int PACK_ALIGNMENT = 3333;
 
-		public void PixelStorei(int pname, int param)
-		{
-		}
+		public extern void PixelStorei(int pname, int param);
 
 		public const int POINTS = 0;
 
@@ -892,13 +662,9 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("POLYGON_OFFSET_UNITS")]
 		public const int POLYGON_OFFSET_UNITS = 10752;
 
-		public void PolygonOffset(double factor, double units)
-		{
-		}
+		public extern void PolygonOffset(double factor, double units);
 
-		public void ReadPixels(int x, int y, int width, int height, int format, int type, ArrayBufferView pixels)
-		{
-		}
+		public extern void ReadPixels(int x, int y, int width, int height, int format, int type, ArrayBufferView pixels);
 
 		[Name("RED_BITS")]
 		public const int RED_BITS = 3410;
@@ -935,9 +701,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("RENDERBUFFER_WIDTH")]
 		public const int RENDERBUFFER_WIDTH = 36162;
 
-		public void RenderbufferStorage(int target, int internalformat, int width, int height)
-		{
-		}
+		public extern void RenderbufferStorage(int target, int internalformat, int width, int height);
 
 		public const int RENDERER = 7937;
 
@@ -973,9 +737,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("SAMPLE_COVERAGE_VALUE")]
 		public const int SAMPLE_COVERAGE_VALUE = 32938;
 
-		public void SampleCoverage(double value, bool invert)
-		{
-		}
+		public extern void SampleCoverage(double value, bool invert);
 
 		[Name("SAMPLER_2D")]
 		public const int SAMPLER_2D = 35678;
@@ -985,9 +747,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 
 		public const int SAMPLES = 32937;
 
-		public void Scissor(int x, int y, int width, int height)
-		{
-		}
+		public extern void Scissor(int x, int y, int width, int height);
 
 		[Name("SCISSOR_BOX")]
 		public const int SCISSOR_BOX = 3088;
@@ -998,9 +758,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("SHADER_TYPE")]
 		public const int SHADER_TYPE = 35663;
 
-		public void ShaderSource(WebGLShader shader, string source)
-		{
-		}
+		public extern void ShaderSource(WebGLShader shader, string source);
 
 		[Name("SHADING_LANGUAGE_VERSION")]
 		public const int SHADING_LANGUAGE_VERSION = 35724;
@@ -1082,29 +840,17 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("STENCIL_WRITEMASK")]
 		public const int STENCIL_WRITEMASK = 2968;
 
-		public void StencilFunc(int func, int @ref, int mask)
-		{
-		}
+		public extern void StencilFunc(int func, int @ref, int mask);
 
-		public void StencilFuncSeparate(int face, int func, int @ref, int mask)
-		{
-		}
+		public extern void StencilFuncSeparate(int face, int func, int @ref, int mask);
 
-		public void StencilMask(int mask)
-		{
-		}
+		public extern void StencilMask(int mask);
 
-		public void StencilMaskSeparate(int face, int mask)
-		{
-		}
+		public extern void StencilMaskSeparate(int face, int mask);
 
-		public void StencilOp(int fail, int zfail, int zpass)
-		{
-		}
+		public extern void StencilOp(int fail, int zfail, int zpass);
 
-		public void StencilOpSeparate(int face, int fail, int zfail, int zpass)
-		{
-		}
+		public extern void StencilOpSeparate(int face, int fail, int zfail, int zpass);
 
 		[Name("STREAM_DRAW")]
 		public const int STREAM_DRAW = 35040;
@@ -1112,53 +858,29 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("SUBPIXEL_BITS")]
 		public const int SUBPIXEL_BITS = 3408;
 
-		public void TexImage2D(int target, int level, int internalformat, int format, int type, CanvasElement canvas)
-		{
-		}
+		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, CanvasElement canvas);
 
-		public void TexImage2D(int target, int level, int internalformat, int format, int type, ImageData pixels)
-		{
-		}
+		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, ImageData pixels);
 
-		public void TexImage2D(int target, int level, int internalformat, int format, int type, ImageElement image)
-		{
-		}
+		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, ImageElement image);
 
-		public void TexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, ArrayBufferView pixels)
-		{
-		}
+		public extern void TexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, ArrayBufferView pixels);
 
-		public void TexImage2D(int target, int level, int internalformat, int format, int type, VideoElement video)
-		{
-		}
+		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, VideoElement video);
 
-		public void TexParameterf(int target, int pname, double param)
-		{
-		}
+		public extern void TexParameterf(int target, int pname, double param);
 
-		public void TexParameteri(int target, int pname, int param)
-		{
-		}
+		public extern void TexParameteri(int target, int pname, int param);
 
-		public void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, CanvasElement canvas)
-		{
-		}
+		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, CanvasElement canvas);
 
-		public void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, ImageData pixels)
-		{
-		}
+		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, ImageData pixels);
 
-		public void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, ImageElement image)
-		{
-		}
+		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, ImageElement image);
 
-		public void TexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, ArrayBufferView pixels)
-		{
-		}
+		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, ArrayBufferView pixels);
 
-		public void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, VideoElement video)
-		{
-		}
+		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, VideoElement video);
 
 		public const int TEXTURE = 5890;
 
@@ -1308,125 +1030,65 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 
 		public const int TRIANGLES = 4;
 
-		public void Uniform1f(WebGLUniformLocation location, double x)
-		{
-		}
+		public extern void Uniform1f(WebGLUniformLocation location, double x);
 
-		public void Uniform1fv(WebGLUniformLocation location, double[] v)
-		{
-		}
+		public extern void Uniform1fv(WebGLUniformLocation location, double[] v);
 
-		public void Uniform1fv(WebGLUniformLocation location, Float32Array v)
-		{
-		}
+		public extern void Uniform1fv(WebGLUniformLocation location, Float32Array v);
 
-		public void Uniform1i(WebGLUniformLocation location, int x)
-		{
-		}
+		public extern void Uniform1i(WebGLUniformLocation location, int x);
 
-		public void Uniform1iv(WebGLUniformLocation location, int[] v)
-		{
-		}
+		public extern void Uniform1iv(WebGLUniformLocation location, int[] v);
 
-		public void Uniform1iv(WebGLUniformLocation location, Int32Array v)
-		{
-		}
+		public extern void Uniform1iv(WebGLUniformLocation location, Int32Array v);
 
-		public void Uniform2f(WebGLUniformLocation location, double x, double y)
-		{
-		}
+		public extern void Uniform2f(WebGLUniformLocation location, double x, double y);
 
-		public void Uniform2fv(WebGLUniformLocation location, double[] v)
-		{
-		}
+		public extern void Uniform2fv(WebGLUniformLocation location, double[] v);
 
-		public void Uniform2fv(WebGLUniformLocation location, Float32Array v)
-		{
-		}
+		public extern void Uniform2fv(WebGLUniformLocation location, Float32Array v);
 
-		public void Uniform2i(WebGLUniformLocation location, int x, int y)
-		{
-		}
+		public extern void Uniform2i(WebGLUniformLocation location, int x, int y);
 
-		public void Uniform2iv(WebGLUniformLocation location, int[] v)
-		{
-		}
+		public extern void Uniform2iv(WebGLUniformLocation location, int[] v);
 
-		public void Uniform2iv(WebGLUniformLocation location, Int32Array v)
-		{
-		}
+		public extern void Uniform2iv(WebGLUniformLocation location, Int32Array v);
 
-		public void Uniform3f(WebGLUniformLocation location, double x, double y, double z)
-		{
-		}
+		public extern void Uniform3f(WebGLUniformLocation location, double x, double y, double z);
 
-		public void Uniform3fv(WebGLUniformLocation location, double[] v)
-		{
-		}
+		public extern void Uniform3fv(WebGLUniformLocation location, double[] v);
 
-		public void Uniform3fv(WebGLUniformLocation location, Float32Array v)
-		{
-		}
+		public extern void Uniform3fv(WebGLUniformLocation location, Float32Array v);
 
-		public void Uniform3i(WebGLUniformLocation location, int x, int y, int z)
-		{
-		}
+		public extern void Uniform3i(WebGLUniformLocation location, int x, int y, int z);
 
-		public void Uniform3iv(WebGLUniformLocation location, int[] v)
-		{
-		}
+		public extern void Uniform3iv(WebGLUniformLocation location, int[] v);
 
-		public void Uniform3iv(WebGLUniformLocation location, Int32Array v)
-		{
-		}
+		public extern void Uniform3iv(WebGLUniformLocation location, Int32Array v);
 
-		public void Uniform4f(WebGLUniformLocation location, double x, double y, double z, double w)
-		{
-		}
+		public extern void Uniform4f(WebGLUniformLocation location, double x, double y, double z, double w);
 
-		public void Uniform4fv(WebGLUniformLocation location, double[] v)
-		{
-		}
+		public extern void Uniform4fv(WebGLUniformLocation location, double[] v);
 
-		public void Uniform4fv(WebGLUniformLocation location, Float32Array v)
-		{
-		}
+		public extern void Uniform4fv(WebGLUniformLocation location, Float32Array v);
 
-		public void Uniform4i(WebGLUniformLocation location, int x, int y, int z, int w)
-		{
-		}
+		public extern void Uniform4i(WebGLUniformLocation location, int x, int y, int z, int w);
 
-		public void Uniform4iv(WebGLUniformLocation location, int[] v)
-		{
-		}
+		public extern void Uniform4iv(WebGLUniformLocation location, int[] v);
 
-		public void Uniform4iv(WebGLUniformLocation location, Int32Array v)
-		{
-		}
+		public extern void Uniform4iv(WebGLUniformLocation location, Int32Array v);
 
-		public void UniformMatrix2fv(WebGLUniformLocation location, bool transpose, double[] value)
-		{
-		}
+		public extern void UniformMatrix2fv(WebGLUniformLocation location, bool transpose, double[] value);
 
-		public void UniformMatrix2fv(WebGLUniformLocation location, bool transpose, Float32Array value)
-		{
-		}
+		public extern void UniformMatrix2fv(WebGLUniformLocation location, bool transpose, Float32Array value);
 
-		public void UniformMatrix3fv(WebGLUniformLocation location, bool transpose, double[] value)
-		{
-		}
+		public extern void UniformMatrix3fv(WebGLUniformLocation location, bool transpose, double[] value);
 
-		public void UniformMatrix3fv(WebGLUniformLocation location, bool transpose, Float32Array value)
-		{
-		}
+		public extern void UniformMatrix3fv(WebGLUniformLocation location, bool transpose, Float32Array value);
 
-		public void UniformMatrix4fv(WebGLUniformLocation location, bool transpose, double[] value)
-		{
-		}
+		public extern void UniformMatrix4fv(WebGLUniformLocation location, bool transpose, double[] value);
 
-		public void UniformMatrix4fv(WebGLUniformLocation location, bool transpose, Float32Array value)
-		{
-		}
+		public extern void UniformMatrix4fv(WebGLUniformLocation location, bool transpose, Float32Array value);
 
 		[Name("UNPACK_ALIGNMENT")]
 		public const int UNPACK_ALIGNMENT = 3317;
@@ -1458,16 +1120,12 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("UNSIGNED_SHORT_5_6_5")]
 		public const int UNSIGNED_SHORT_5_6_5 = 33635;
 
-		public void UseProgram(WebGLProgram program)
-		{
-		}
+		public extern void UseProgram(WebGLProgram program);
 
 		[Name("VALIDATE_STATUS")]
 		public const int VALIDATE_STATUS = 35715;
 
-		public void ValidateProgram(WebGLProgram program)
-		{
-		}
+		public extern void ValidateProgram(WebGLProgram program);
 
 		public const int VENDOR = 7936;
 
@@ -1497,61 +1155,33 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("VERTEX_SHADER")]
 		public const int VERTEX_SHADER = 35633;
 
-		public void VertexAttrib1f(int indx, double x)
-		{
-		}
+		public extern void VertexAttrib1f(int indx, double x);
 
-		public void VertexAttrib1fv(int indx, double[] values)
-		{
-		}
+		public extern void VertexAttrib1fv(int indx, double[] values);
 
-		public void VertexAttrib1fv(int indx, Float32Array values)
-		{
-		}
+		public extern void VertexAttrib1fv(int indx, Float32Array values);
 
-		public void VertexAttrib2f(int indx, double x, double y)
-		{
-		}
+		public extern void VertexAttrib2f(int indx, double x, double y);
 
-		public void VertexAttrib2fv(int indx, double[] values)
-		{
-		}
+		public extern void VertexAttrib2fv(int indx, double[] values);
 
-		public void VertexAttrib2fv(int indx, Float32Array values)
-		{
-		}
+		public extern void VertexAttrib2fv(int indx, Float32Array values);
 
-		public void VertexAttrib3f(int indx, double x, double y, double z)
-		{
-		}
+		public extern void VertexAttrib3f(int indx, double x, double y, double z);
 
-		public void VertexAttrib3fv(int indx, double[] values)
-		{
-		}
+		public extern void VertexAttrib3fv(int indx, double[] values);
 
-		public void VertexAttrib3fv(int indx, Float32Array values)
-		{
-		}
+		public extern void VertexAttrib3fv(int indx, Float32Array values);
 
-		public void VertexAttrib4f(int indx, double x, double y, double z, double w)
-		{
-		}
+		public extern void VertexAttrib4f(int indx, double x, double y, double z, double w);
 
-		public void VertexAttrib4fv(int indx, double[] values)
-		{
-		}
+		public extern void VertexAttrib4fv(int indx, double[] values);
 
-		public void VertexAttrib4fv(int indx, Float32Array values)
-		{
-		}
+		public extern void VertexAttrib4fv(int indx, Float32Array values);
 
-		public void VertexAttribPointer(int indx, int size, int type, bool normalized, int stride, long offset)
-		{
-		}
+		public extern void VertexAttribPointer(int indx, int size, int type, bool normalized, int stride, long offset);
 
-		public void Viewport(int x, int y, int width, int height)
-		{
-		}
+		public extern void Viewport(int x, int y, int width, int height);
 
 		public const int VIEWPORT = 2978;
 

@@ -5,31 +5,31 @@ namespace Bridge.Html5.Net.Messaging
 	[External, Serializable]
 	public partial class MessageEventInit : EventInit
 	{
-		public object Data
+		public extern object Data
 		{
 			get;
 			set;
 		}
 
-		public string LastEventId
+		public extern string LastEventId
 		{
 			get;
 			set;
 		}
 
-		public string Origin
+		public extern string Origin
 		{
 			get;
 			set;
 		}
 
-		public MessagePort[] Ports
+		public extern MessagePort[] Ports
 		{
 			get;
 			set;
 		}
 
-		public TypeOption<WindowInstance, MessagePort> Source
+		public extern TypeOption<WindowInstance, MessagePort> Source
 		{
 			get;
 			set;

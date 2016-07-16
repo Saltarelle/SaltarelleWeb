@@ -5,145 +5,84 @@ namespace Bridge.Html5.Media
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TextTrackList : EventTarget
 	{
-		internal TextTrackList()
-		{
-		}
+		internal extern TextTrackList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public TextTrack this[int index]
 		{
-			get {
-				return default(TextTrack);
-			}
+			get;
 		}
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture);
 
-		public void AddEventListener(TextTrackListEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(TextTrackListEvents type, Action listener);
 
-		public void AddEventListener(TextTrackListEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TextTrackListEvents type, Action listener, bool capture);
 
-		public void AddEventListener(TextTrackListEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(TextTrackListEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(TextTrackListEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TextTrackListEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener)
-		{
-		}
+		public extern void AddEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener);
 
-		public void AddEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture);
 
-		public void AddEventListener(TextTrackListEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(TextTrackListEvents type, IEventListener listener);
 
-		public void AddEventListener(TextTrackListEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(TextTrackListEvents type, IEventListener listener, bool capture);
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<TextTrack> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<TextTrack> GetEnumerator();
 
-		public TextTrack GetTrackById(string id)
-		{
-			return default(TextTrack);
-		}
+		public extern TextTrack GetTrackById(string id);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onaddtrack")]
-		public HtmlEventHandler OnAddtrack
+		public extern HtmlEventHandler OnAddtrack
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onchange")]
-		public HtmlEventHandler OnChange
+		public extern HtmlEventHandler OnChange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onremovetrack")]
-		public HtmlEventHandler OnRemovetrack
+		public extern HtmlEventHandler OnRemovetrack
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture);
 
-		public void RemoveEventListener(TextTrackListEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackListEvents type, Action listener);
 
-		public void RemoveEventListener(TextTrackListEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackListEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(TextTrackListEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackListEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(TextTrackListEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackListEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener);
 
-		public void RemoveEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackListEvents type, HtmlEventHandlerWithTarget<TextTrackList> listener, bool capture);
 
-		public void RemoveEventListener(TextTrackListEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackListEvents type, IEventListener listener);
 
-		public void RemoveEventListener(TextTrackListEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackListEvents type, IEventListener listener, bool capture);
 	}
 }

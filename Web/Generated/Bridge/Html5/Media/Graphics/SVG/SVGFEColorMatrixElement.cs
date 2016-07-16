@@ -3,112 +3,64 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFEColorMatrixElement : SVGElement
 	{
-		internal SVGFEColorMatrixElement()
-		{
-		}
+		internal extern SVGFEColorMatrixElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEColorMatrixElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEColorMatrixElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFEColorMatrixElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEColorMatrixElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener);
 
-		public void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString In1
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEColorMatrixElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFEColorMatrixElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener);
+
+		public extern void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public SVGAnimatedString In1
+		public extern SVGAnimatedString Result
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEColorMatrixElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEColorMatrixElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public SVGAnimatedString Result
-		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[Name("SVG_FECOLORMATRIX_TYPE_HUEROTATE")]
@@ -127,43 +79,33 @@
 		public const ushort SVG_FECOLORMATRIX_TYPE_UNKNOWN = 0;
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGFEColorMatrixType> Type
+		public extern SVGAnimatedEnumeration<SVGFEColorMatrixType> Type
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGFEColorMatrixType>);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumberList Values
+		public extern SVGAnimatedNumberList Values
 		{
-			get {
-				return default(SVGAnimatedNumberList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength X
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Y
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

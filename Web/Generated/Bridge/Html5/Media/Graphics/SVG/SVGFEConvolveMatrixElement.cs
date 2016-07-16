@@ -3,184 +3,118 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFEConvolveMatrixElement : SVGElement
 	{
-		internal SVGFEConvolveMatrixElement()
-		{
-		}
+		internal extern SVGFEConvolveMatrixElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEConvolveMatrixElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEConvolveMatrixElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener);
 
-		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedNumber Bias
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber Bias
+		public extern SVGAnimatedNumber Divisor
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber Divisor
+		public extern SVGAnimatedEnumeration<SVGFEConvolveMatrixEdgeMode> EdgeMode
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGFEConvolveMatrixEdgeMode> EdgeMode
+		public extern SVGAnimatedLength Height
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGFEConvolveMatrixEdgeMode>);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString In1
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString In1
+		public extern SVGAnimatedNumberList KernelMatrix
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumberList KernelMatrix
+		public extern SVGAnimatedNumber KernelUnitLengthX
 		{
-			get {
-				return default(SVGAnimatedNumberList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber KernelUnitLengthX
+		public extern SVGAnimatedNumber KernelUnitLengthY
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber KernelUnitLengthY
+		public extern SVGAnimatedInteger OrderX
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedInteger OrderX
+		public extern SVGAnimatedInteger OrderY
 		{
-			get {
-				return default(SVGAnimatedInteger);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedInteger OrderY
+		public extern SVGAnimatedBoolean PreserveAlpha
 		{
-			get {
-				return default(SVGAnimatedInteger);
-			}
+			get;
 		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener);
+
+		public extern void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public SVGAnimatedBoolean PreserveAlpha
+		public extern SVGAnimatedString Result
 		{
-			get {
-				return default(SVGAnimatedBoolean);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public SVGAnimatedString Result
-		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[Name("SVG_EDGEMODE_DUPLICATE")]
@@ -196,43 +130,33 @@
 		public const ushort SVG_EDGEMODE_WRAP = 2;
 
 		[FieldProperty]
-		public SVGAnimatedInteger TargetX
+		public extern SVGAnimatedInteger TargetX
 		{
-			get {
-				return default(SVGAnimatedInteger);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedInteger TargetY
+		public extern SVGAnimatedInteger TargetY
 		{
-			get {
-				return default(SVGAnimatedInteger);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength X
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Y
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

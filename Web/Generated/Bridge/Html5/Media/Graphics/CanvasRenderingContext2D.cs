@@ -5,427 +5,242 @@ namespace Bridge.Html5.Media.Graphics
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CanvasRenderingContext2D
 	{
-		internal CanvasRenderingContext2D()
+		internal extern CanvasRenderingContext2D();
+
+		public extern void AddHitRegion();
+
+		public extern void AddHitRegion(HitRegionOptions options);
+
+		public extern void Arc(double x, double y, double radius, double startAngle, double endAngle);
+
+		public extern void Arc(double x, double y, double radius, double startAngle, double endAngle, bool anticlockwise);
+
+		public extern void ArcTo(double x1, double y1, double x2, double y2, double radius);
+
+		public extern void BeginPath();
+
+		public extern void BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y);
+
+		[FieldProperty]
+		public extern CanvasElement Canvas
 		{
+			get;
 		}
 
-		public void AddHitRegion()
+		public extern void ClearRect(double x, double y, double w, double h);
+
+		public extern void Clip();
+
+		public extern void Clip(CanvasWindingRule winding);
+
+		public extern void Clip(Path2D path);
+
+		public extern void Clip(Path2D path, CanvasWindingRule winding);
+
+		public extern void ClosePath();
+
+		public extern ImageData CreateImageData(double sw, double sh);
+
+		public extern ImageData CreateImageData(ImageData imagedata);
+
+		public extern CanvasGradient CreateLinearGradient(double x0, double y0, double x1, double y1);
+
+		public extern CanvasPattern CreatePattern(TypeOption<ImageElement, CanvasElement, VideoElement> image, string repetition);
+
+		public extern CanvasGradient CreateRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1);
+
+		public extern bool DrawCustomFocusRing(Element element);
+
+		public extern void DrawFocusIfNeeded(Element element);
+
+		public extern void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double dx, double dy);
+
+		public extern void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double dx, double dy, double dw, double dh);
+
+		public extern void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
+
+		public extern void Fill();
+
+		public extern void Fill(CanvasWindingRule winding);
+
+		public extern void Fill(Path2D path);
+
+		public extern void Fill(Path2D path, CanvasWindingRule winding);
+
+		public extern void FillRect(double x, double y, double w, double h);
+
+		[FieldProperty]
+		public extern TypeOption<string, CanvasGradient, CanvasPattern> FillStyle
 		{
+			get;
+			set;
 		}
 
-		public void AddHitRegion(HitRegionOptions options)
+		public extern void FillText(string text, double x, double y);
+
+		public extern void FillText(string text, double x, double y, double maxWidth);
+
+		[FieldProperty]
+		public extern string Font
 		{
+			get;
+			set;
 		}
 
-		public void Arc(double x, double y, double radius, double startAngle, double endAngle)
-		{
-		}
+		public extern ImageData GetImageData(double sx, double sy, double sw, double sh);
 
-		public void Arc(double x, double y, double radius, double startAngle, double endAngle, bool anticlockwise)
-		{
-		}
+		public extern double[] GetLineDash();
 
-		public void ArcTo(double x1, double y1, double x2, double y2, double radius)
+		[FieldProperty]
+		public extern double GlobalAlpha
 		{
-		}
-
-		public void BeginPath()
-		{
-		}
-
-		public void BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public CanvasElement Canvas
+		public extern CompositeOperation GlobalCompositeOperation
 		{
-			get {
-				return default(CanvasElement);
-			}
+			get;
+			set;
 		}
 
-		public void ClearRect(double x, double y, double w, double h)
-		{
-		}
+		public extern bool IsPointInPath(double x, double y);
 
-		public void Clip()
-		{
-		}
+		public extern bool IsPointInPath(double x, double y, CanvasWindingRule winding);
 
-		public void Clip(CanvasWindingRule winding)
-		{
-		}
+		public extern bool IsPointInPath(Path2D path, double x, double y);
 
-		public void Clip(Path2D path)
-		{
-		}
+		public extern bool IsPointInPath(Path2D path, double x, double y, CanvasWindingRule winding);
 
-		public void Clip(Path2D path, CanvasWindingRule winding)
-		{
-		}
+		public extern bool IsPointInStroke(double x, double y);
 
-		public void ClosePath()
-		{
-		}
+		public extern bool IsPointInStroke(Path2D path, double x, double y);
 
-		public ImageData CreateImageData(double sw, double sh)
+		[FieldProperty]
+		public extern LineCap LineCap
 		{
-			return default(ImageData);
-		}
-
-		public ImageData CreateImageData(ImageData imagedata)
-		{
-			return default(ImageData);
-		}
-
-		public CanvasGradient CreateLinearGradient(double x0, double y0, double x1, double y1)
-		{
-			return default(CanvasGradient);
-		}
-
-		public CanvasPattern CreatePattern(TypeOption<ImageElement, CanvasElement, VideoElement> image, string repetition)
-		{
-			return default(CanvasPattern);
-		}
-
-		public CanvasGradient CreateRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1)
-		{
-			return default(CanvasGradient);
-		}
-
-		public bool DrawCustomFocusRing(Element element)
-		{
-			return false;
-		}
-
-		public void DrawFocusIfNeeded(Element element)
-		{
-		}
-
-		public void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double dx, double dy)
-		{
-		}
-
-		public void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double dx, double dy, double dw, double dh)
-		{
-		}
-
-		public void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)
-		{
-		}
-
-		public void Fill()
-		{
-		}
-
-		public void Fill(CanvasWindingRule winding)
-		{
-		}
-
-		public void Fill(Path2D path)
-		{
-		}
-
-		public void Fill(Path2D path, CanvasWindingRule winding)
-		{
-		}
-
-		public void FillRect(double x, double y, double w, double h)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public TypeOption<string, CanvasGradient, CanvasPattern> FillStyle
+		public extern double LineDashOffset
 		{
-			get {
-				return default(TypeOption<string, CanvasGradient, CanvasPattern>);
-			}
-			set {
-			}
-		}
-
-		public void FillText(string text, double x, double y)
-		{
-		}
-
-		public void FillText(string text, double x, double y, double maxWidth)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Font
+		public extern LineJoin LineJoin
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public ImageData GetImageData(double sx, double sy, double sw, double sh)
+		public extern void LineTo(double x, double y);
+
+		[FieldProperty]
+		public extern double LineWidth
 		{
-			return default(ImageData);
+			get;
+			set;
 		}
 
-		public double[] GetLineDash()
+		public extern TextMetrics MeasureText(string text);
+
+		[FieldProperty]
+		public extern double MiterLimit
 		{
-			return null;
+			get;
+			set;
+		}
+
+		public extern void MoveTo(double x, double y);
+
+		public extern void PutImageData(ImageData imagedata, double dx, double dy);
+
+		public extern void PutImageData(ImageData imagedata, double dx, double dy, double dirtyX, double dirtyY, double dirtyWidth, double dirtyHeight);
+
+		public extern void QuadraticCurveTo(double cpx, double cpy, double x, double y);
+
+		public extern void Rect(double x, double y, double w, double h);
+
+		public extern void RemoveHitRegion(string id);
+
+		public extern void Restore();
+
+		public extern void Rotate(double angle);
+
+		public extern void Save();
+
+		public extern void Scale(double x, double y);
+
+		public extern void SetLineDash(double[] segments);
+
+		public extern void SetTransform(double a, double b, double c, double d, double e, double f);
+
+		[FieldProperty]
+		public extern double ShadowBlur
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double GlobalAlpha
+		public extern string ShadowColor
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public CompositeOperation GlobalCompositeOperation
+		public extern double ShadowOffsetX
 		{
-			get {
-				return default(CompositeOperation);
-			}
-			set {
-			}
-		}
-
-		public bool IsPointInPath(double x, double y)
-		{
-			return false;
-		}
-
-		public bool IsPointInPath(double x, double y, CanvasWindingRule winding)
-		{
-			return false;
-		}
-
-		public bool IsPointInPath(Path2D path, double x, double y)
-		{
-			return false;
-		}
-
-		public bool IsPointInPath(Path2D path, double x, double y, CanvasWindingRule winding)
-		{
-			return false;
-		}
-
-		public bool IsPointInStroke(double x, double y)
-		{
-			return false;
-		}
-
-		public bool IsPointInStroke(Path2D path, double x, double y)
-		{
-			return false;
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public LineCap LineCap
+		public extern double ShadowOffsetY
 		{
-			get {
-				return default(LineCap);
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void Stroke();
+
+		public extern void Stroke(Path2D path);
+
+		public extern void StrokeRect(double x, double y, double w, double h);
+
+		[FieldProperty]
+		public extern TypeOption<string, CanvasGradient, CanvasPattern> StrokeStyle
+		{
+			get;
+			set;
+		}
+
+		public extern void StrokeText(string text, double x, double y);
+
+		public extern void StrokeText(string text, double x, double y, double maxWidth);
+
+		[FieldProperty]
+		public extern TextAlign TextAlign
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double LineDashOffset
+		public extern TextBaseline TextBaseline
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		[FieldProperty]
-		public LineJoin LineJoin
-		{
-			get {
-				return default(LineJoin);
-			}
-			set {
-			}
-		}
+		public extern void Transform(double a, double b, double c, double d, double e, double f);
 
-		public void LineTo(double x, double y)
-		{
-		}
-
-		[FieldProperty]
-		public double LineWidth
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public TextMetrics MeasureText(string text)
-		{
-			return default(TextMetrics);
-		}
-
-		[FieldProperty]
-		public double MiterLimit
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public void MoveTo(double x, double y)
-		{
-		}
-
-		public void PutImageData(ImageData imagedata, double dx, double dy)
-		{
-		}
-
-		public void PutImageData(ImageData imagedata, double dx, double dy, double dirtyX, double dirtyY, double dirtyWidth, double dirtyHeight)
-		{
-		}
-
-		public void QuadraticCurveTo(double cpx, double cpy, double x, double y)
-		{
-		}
-
-		public void Rect(double x, double y, double w, double h)
-		{
-		}
-
-		public void RemoveHitRegion(string id)
-		{
-		}
-
-		public void Restore()
-		{
-		}
-
-		public void Rotate(double angle)
-		{
-		}
-
-		public void Save()
-		{
-		}
-
-		public void Scale(double x, double y)
-		{
-		}
-
-		public void SetLineDash(double[] segments)
-		{
-		}
-
-		public void SetTransform(double a, double b, double c, double d, double e, double f)
-		{
-		}
-
-		[FieldProperty]
-		public double ShadowBlur
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string ShadowColor
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double ShadowOffsetX
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double ShadowOffsetY
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public void Stroke()
-		{
-		}
-
-		public void Stroke(Path2D path)
-		{
-		}
-
-		public void StrokeRect(double x, double y, double w, double h)
-		{
-		}
-
-		[FieldProperty]
-		public TypeOption<string, CanvasGradient, CanvasPattern> StrokeStyle
-		{
-			get {
-				return default(TypeOption<string, CanvasGradient, CanvasPattern>);
-			}
-			set {
-			}
-		}
-
-		public void StrokeText(string text, double x, double y)
-		{
-		}
-
-		public void StrokeText(string text, double x, double y, double maxWidth)
-		{
-		}
-
-		[FieldProperty]
-		public TextAlign TextAlign
-		{
-			get {
-				return default(TextAlign);
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public TextBaseline TextBaseline
-		{
-			get {
-				return default(TextBaseline);
-			}
-			set {
-			}
-		}
-
-		public void Transform(double a, double b, double c, double d, double e, double f)
-		{
-		}
-
-		public void Translate(double x, double y)
-		{
-		}
+		public extern void Translate(double x, double y);
 	}
 }

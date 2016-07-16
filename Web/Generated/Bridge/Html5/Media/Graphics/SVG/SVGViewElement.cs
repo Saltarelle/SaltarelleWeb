@@ -3,97 +3,53 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGViewElement : SVGElement
 	{
-		internal SVGViewElement()
-		{
-		}
+		internal extern SVGViewElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture);
 
-		public void AddEventListener(SVGViewElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGViewElementEvents type, Action listener);
 
-		public void AddEventListener(SVGViewElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGViewElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGViewElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGViewElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGViewElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGViewElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener);
 
-		public void AddEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture);
 
-		public void AddEventListener(SVGViewElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGViewElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGViewElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGViewElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio
+		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
 		{
-			get {
-				return default(SVGAnimatedPreserveAspectRatio);
-			}
+			get;
 		}
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGViewElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGViewElementEvents type, Action listener);
 
-		public void RemoveEventListener(SVGViewElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGViewElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener);
 
-		public void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGViewElementEvents type, HtmlEventHandlerWithTarget<SVGViewElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGViewElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGViewElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SVGViewElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGViewElementEvents type, IEventListener listener, bool capture);
 
 		[Name("SVG_ZOOMANDPAN_DISABLE")]
 		public const ushort SVG_ZOOMANDPAN_DISABLE = 1;
@@ -105,29 +61,22 @@
 		public const ushort SVG_ZOOMANDPAN_UNKNOWN = 0;
 
 		[FieldProperty]
-		public SVGAnimatedRect ViewBox
+		public extern SVGAnimatedRect ViewBox
 		{
-			get {
-				return default(SVGAnimatedRect);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGStringList ViewTarget
+		public extern SVGStringList ViewTarget
 		{
-			get {
-				return default(SVGStringList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGZoomAndPanType ZoomAndPan
+		public extern SVGZoomAndPanType ZoomAndPan
 		{
-			get {
-				return default(SVGZoomAndPanType);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

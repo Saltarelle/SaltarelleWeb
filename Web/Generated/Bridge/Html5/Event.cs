@@ -3,17 +3,11 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Event
 	{
-		internal Event()
-		{
-		}
+		internal extern Event();
 
-		public Event(string type)
-		{
-		}
+		public extern Event(string type);
 
-		public Event(string type, EventInit eventInitDict)
-		{
-		}
+		public extern Event(string type, EventInit eventInitDict);
 
 		[Name("ALT_MASK")]
 		public const int ALT_MASK = 1;
@@ -22,22 +16,18 @@
 		public const ushort AT_TARGET = 2;
 
 		[FieldProperty]
-		public bool Bubbles
+		public extern bool Bubbles
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[Name("BUBBLING_PHASE")]
 		public const ushort BUBBLING_PHASE = 3;
 
 		[FieldProperty]
-		public bool Cancelable
+		public extern bool Cancelable
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[Name("CAPTURING_PHASE")]
@@ -47,52 +37,37 @@
 		public const int CONTROL_MASK = 2;
 
 		[FieldProperty]
-		public EventTarget CurrentTarget
+		public extern EventTarget CurrentTarget
 		{
-			get {
-				return default(EventTarget);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool DefaultPrevented
+		public extern bool DefaultPrevented
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public EventPhase EventPhase
+		public extern EventPhase EventPhase
 		{
-			get {
-				return default(EventPhase);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public EventTarget ExplicitOriginalTarget
+		public extern EventTarget ExplicitOriginalTarget
 		{
-			get {
-				return default(EventTarget);
-			}
+			get;
 		}
 
-		public bool GetPreventDefault()
-		{
-			return false;
-		}
+		public extern bool GetPreventDefault();
 
-		public void InitEvent(string type, bool bubbles, bool cancelable)
-		{
-		}
+		public extern void InitEvent(string type, bool bubbles, bool cancelable);
 
 		[FieldProperty]
-		public bool IsTrusted
+		public extern bool IsTrusted
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[Name("META_MASK")]
@@ -101,50 +76,36 @@
 		public const ushort NONE = 0;
 
 		[FieldProperty]
-		public EventTarget OriginalTarget
+		public extern EventTarget OriginalTarget
 		{
-			get {
-				return default(EventTarget);
-			}
+			get;
 		}
 
-		public void PreventDefault()
-		{
-		}
+		public extern void PreventDefault();
 
 		[Name("SHIFT_MASK")]
 		public const int SHIFT_MASK = 4;
 
-		public void StopImmediatePropagation()
-		{
-		}
+		public extern void StopImmediatePropagation();
 
-		public void StopPropagation()
+		public extern void StopPropagation();
+
+		[FieldProperty]
+		public extern EventTarget Target
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public EventTarget Target
+		public extern long TimeStamp
 		{
-			get {
-				return default(EventTarget);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public long TimeStamp
+		public extern string Type
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public string Type
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

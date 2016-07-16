@@ -5,106 +5,66 @@ namespace Bridge.Html5.Editing
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Selection
 	{
-		internal Selection()
-		{
-		}
+		internal extern Selection();
 
-		public void AddRange(Range range)
+		public extern void AddRange(Range range);
+
+		[FieldProperty]
+		public extern XmlNode AnchorNode
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public XmlNode AnchorNode
+		public extern int AnchorOffset
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
+		}
+
+		public extern void Collapse(XmlNode node, int offset);
+
+		public extern void CollapseToEnd();
+
+		public extern void CollapseToStart();
+
+		public extern bool ContainsNode(XmlNode node, bool partlyContained);
+
+		public extern void DeleteFromDocument();
+
+		public extern void Extend(XmlNode node, int offset);
+
+		[FieldProperty]
+		public extern XmlNode FocusNode
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public int AnchorOffset
+		public extern int FocusOffset
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void Collapse(XmlNode node, int offset)
-		{
-		}
-
-		public void CollapseToEnd()
-		{
-		}
-
-		public void CollapseToStart()
-		{
-		}
-
-		public bool ContainsNode(XmlNode node, bool partlyContained)
-		{
-			return false;
-		}
-
-		public void DeleteFromDocument()
-		{
-		}
-
-		public void Extend(XmlNode node, int offset)
-		{
-		}
+		public extern Range GetRangeAt(int index);
 
 		[FieldProperty]
-		public XmlNode FocusNode
+		public extern bool IsCollapsed
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
+
+		public extern void Modify(string alter, string direction, string granularity);
 
 		[FieldProperty]
-		public int FocusOffset
+		public extern int RangeCount
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public Range GetRangeAt(int index)
-		{
-			return default(Range);
-		}
+		public extern void RemoveAllRanges();
 
-		[FieldProperty]
-		public bool IsCollapsed
-		{
-			get {
-				return false;
-			}
-		}
+		public extern void RemoveRange(Range range);
 
-		public void Modify(string alter, string direction, string granularity)
-		{
-		}
-
-		[FieldProperty]
-		public int RangeCount
-		{
-			get {
-				return 0;
-			}
-		}
-
-		public void RemoveAllRanges()
-		{
-		}
-
-		public void RemoveRange(Range range)
-		{
-		}
-
-		public void SelectAllChildren(XmlNode node)
-		{
-		}
+		public extern void SelectAllChildren(XmlNode node);
 	}
 }

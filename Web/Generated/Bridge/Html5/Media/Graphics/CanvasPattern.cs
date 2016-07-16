@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CanvasPattern
 	{
-		internal CanvasPattern()
-		{
-		}
+		internal extern CanvasPattern();
 	}
 }

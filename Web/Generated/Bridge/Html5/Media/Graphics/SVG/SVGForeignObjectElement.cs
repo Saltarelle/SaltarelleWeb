@@ -3,120 +3,70 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGForeignObjectElement : SVGGraphicsElement
 	{
-		internal SVGForeignObjectElement()
+		internal extern SVGForeignObjectElement();
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture);
+
+		public extern void AddEventListener(SVGForeignObjectElementEvents type, Action listener);
+
+		public extern void AddEventListener(SVGForeignObjectElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener);
+
+		public extern void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture);
+
+		public extern void AddEventListener(SVGForeignObjectElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(SVGForeignObjectElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture);
 
-		public void AddEventListener(SVGForeignObjectElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGForeignObjectElementEvents type, Action listener);
 
-		public void AddEventListener(SVGForeignObjectElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGForeignObjectElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener);
 
-		public void AddEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture);
 
-		public void AddEventListener(SVGForeignObjectElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGForeignObjectElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGForeignObjectElementEvents type, IEventListener listener, bool capture)
+		public extern void RemoveEventListener(SVGForeignObjectElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Width
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGForeignObjectElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGForeignObjectElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGForeignObjectElementEvents type, HtmlEventHandlerWithTarget<SVGForeignObjectElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGForeignObjectElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGForeignObjectElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength X
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength Y
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

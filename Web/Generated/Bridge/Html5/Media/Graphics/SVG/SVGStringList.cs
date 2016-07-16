@@ -5,72 +5,41 @@ namespace Bridge.Html5.Media.Graphics.SVG
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGStringList
 	{
-		internal SVGStringList()
-		{
-		}
+		internal extern SVGStringList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public string this[int index]
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public string AppendItem(string newItem)
-		{
-			return null;
-		}
+		public extern string AppendItem(string newItem);
 
-		public void Clear()
-		{
-		}
+		public extern void Clear();
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<string> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<string> GetEnumerator();
 
-		public string GetItem(int index)
-		{
-			return null;
-		}
+		public extern string GetItem(int index);
 
-		public string Initialize(string newItem)
-		{
-			return null;
-		}
+		public extern string Initialize(string newItem);
 
-		public string InsertItemBefore(string newItem, int index)
+		public extern string InsertItemBefore(string newItem, int index);
+
+		[FieldProperty]
+		public extern int Length
 		{
-			return null;
+			get;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern int NumberOfItems
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public int NumberOfItems
-		{
-			get {
-				return 0;
-			}
-		}
+		public extern string RemoveItem(int index);
 
-		public string RemoveItem(int index)
-		{
-			return null;
-		}
-
-		public string ReplaceItem(string newItem, int index)
-		{
-			return null;
-		}
+		public extern string ReplaceItem(string newItem, int index);
 	}
 }

@@ -5,35 +5,23 @@ namespace Bridge.Html5.Speech
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechRecognitionResultList
 	{
-		internal SpeechRecognitionResultList()
-		{
-		}
+		internal extern SpeechRecognitionResultList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public SpeechRecognitionResult this[int index]
 		{
-			get {
-				return default(SpeechRecognitionResult);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<SpeechRecognitionResult> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<SpeechRecognitionResult> GetEnumerator();
 
-		public SpeechRecognitionResult Item(int index)
-		{
-			return default(SpeechRecognitionResult);
-		}
+		public extern SpeechRecognitionResult Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

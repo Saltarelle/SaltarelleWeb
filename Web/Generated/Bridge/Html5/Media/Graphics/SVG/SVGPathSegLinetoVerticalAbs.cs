@@ -3,18 +3,13 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPathSegLinetoVerticalAbs : SVGPathSeg
 	{
-		internal SVGPathSegLinetoVerticalAbs()
-		{
-		}
+		internal extern SVGPathSegLinetoVerticalAbs();
 
 		[FieldProperty]
-		public double Y
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

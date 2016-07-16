@@ -3,61 +3,61 @@
 	[External, Serializable]
 	public partial class RTCDataChannelInit
 	{
-		public ushort? Id
+		public extern ushort? Id
 		{
 			get;
 			set;
 		}
 
-		public ushort MaxRetransmitNum
+		public extern ushort MaxRetransmitNum
 		{
 			get;
 			set;
 		}
 
-		public ushort? MaxRetransmits
+		public extern ushort? MaxRetransmits
 		{
 			get;
 			set;
 		}
 
-		public ushort? MaxRetransmitTime
+		public extern ushort? MaxRetransmitTime
 		{
 			get;
 			set;
 		}
 
-		public bool Negotiated
+		public extern bool Negotiated
 		{
 			get;
 			set;
 		}
 
-		public bool Ordered
+		public extern bool Ordered
 		{
 			get;
 			set;
 		}
 
-		public bool OutOfOrderAllowed
+		public extern bool OutOfOrderAllowed
 		{
 			get;
 			set;
 		}
 
-		public bool Preset
+		public extern bool Preset
 		{
 			get;
 			set;
 		}
 
-		public string Protocol
+		public extern string Protocol
 		{
 			get;
 			set;
 		}
 
-		public ushort Stream
+		public extern ushort Stream
 		{
 			get;
 			set;

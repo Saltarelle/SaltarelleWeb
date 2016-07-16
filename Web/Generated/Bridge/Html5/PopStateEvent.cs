@@ -3,28 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class PopStateEvent : Event
 	{
-		internal PopStateEvent()
-		{
-		}
+		internal extern PopStateEvent();
 
-		public PopStateEvent(string type)
-		{
-		}
+		public extern PopStateEvent(string type);
 
-		public PopStateEvent(string type, PopStateEventInit eventInitDict)
-		{
-		}
+		public extern PopStateEvent(string type, PopStateEventInit eventInitDict);
 
-		public void InitPopStateEvent(string type, bool canBubble, bool cancelable, object state)
-		{
-		}
+		public extern void InitPopStateEvent(string type, bool canBubble, bool cancelable, object state);
 
 		[FieldProperty]
-		public object State
+		public extern object State
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

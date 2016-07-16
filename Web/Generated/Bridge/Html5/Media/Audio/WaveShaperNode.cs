@@ -6,108 +6,60 @@ namespace Bridge.Html5.Media.Audio
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WaveShaperNode : AudioNode
 	{
-		internal WaveShaperNode()
-		{
-		}
+		internal extern WaveShaperNode();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture);
 
-		public void AddEventListener(WaveShaperNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(WaveShaperNodeEvents type, Action listener);
 
-		public void AddEventListener(WaveShaperNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WaveShaperNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(WaveShaperNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(WaveShaperNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(WaveShaperNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WaveShaperNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(WaveShaperNodeEvents type, HtmlEventHandlerWithTarget<WaveShaperNode> listener)
-		{
-		}
+		public extern void AddEventListener(WaveShaperNodeEvents type, HtmlEventHandlerWithTarget<WaveShaperNode> listener);
 
-		public void AddEventListener(WaveShaperNodeEvents type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(WaveShaperNodeEvents type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture);
 
-		public void AddEventListener(WaveShaperNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(WaveShaperNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(WaveShaperNodeEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(WaveShaperNodeEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern Float32Array Curve
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public Float32Array Curve
+		public extern OverSampleType Oversample
 		{
-			get {
-				return default(Float32Array);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		[FieldProperty]
-		public OverSampleType Oversample
-		{
-			get {
-				return default(OverSampleType);
-			}
-			set {
-			}
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WaveShaperNodeEvents type, Action listener);
 
-		public void RemoveEventListener(WaveShaperNodeEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(WaveShaperNodeEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(WaveShaperNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WaveShaperNodeEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(WaveShaperNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(WaveShaperNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(WaveShaperNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WaveShaperNodeEvents type, HtmlEventHandlerWithTarget<WaveShaperNode> listener);
 
-		public void RemoveEventListener(WaveShaperNodeEvents type, HtmlEventHandlerWithTarget<WaveShaperNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(WaveShaperNodeEvents type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture);
 
-		public void RemoveEventListener(WaveShaperNodeEvents type, HtmlEventHandlerWithTarget<WaveShaperNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WaveShaperNodeEvents type, IEventListener listener);
 
-		public void RemoveEventListener(WaveShaperNodeEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(WaveShaperNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(WaveShaperNodeEvents type, IEventListener listener, bool capture);
 	}
 }

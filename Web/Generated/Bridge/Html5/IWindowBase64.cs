@@ -3,8 +3,8 @@
 	[Namespace("false"), External]
 	public partial interface IWindowBase64
 	{
-		string Atob(string atob);
+		extern string Atob(string atob);
 
-		string Btoa(string btoa);
+		extern string Btoa(string btoa);
 	}
 }

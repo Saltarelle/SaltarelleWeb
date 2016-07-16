@@ -5,66 +5,37 @@ namespace Bridge.Html5.Editing
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Range
 	{
-		public Range()
-		{
-		}
+		public extern Range();
 
-		public XmlDocumentFragment CloneContents()
-		{
-			return default(XmlDocumentFragment);
-		}
+		public extern XmlDocumentFragment CloneContents();
 
-		public Range CloneRange()
-		{
-			return default(Range);
-		}
+		public extern Range CloneRange();
 
-		public void Collapse()
-		{
-		}
+		public extern void Collapse();
 
-		public void Collapse(bool toStart)
+		public extern void Collapse(bool toStart);
+
+		[FieldProperty]
+		public extern bool Collapsed
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool Collapsed
+		public extern XmlNode CommonAncestorContainer
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public XmlNode CommonAncestorContainer
-		{
-			get {
-				return default(XmlNode);
-			}
-		}
+		public extern short CompareBoundaryPoints(RangeComparison how, Range sourceRange);
 
-		public short CompareBoundaryPoints(RangeComparison how, Range sourceRange)
-		{
-			return 0;
-		}
+		public extern short ComparePoint(XmlNode node, int offset);
 
-		public short ComparePoint(XmlNode node, int offset)
-		{
-			return 0;
-		}
+		public extern XmlDocumentFragment CreateContextualFragment(string fragment);
 
-		public XmlDocumentFragment CreateContextualFragment(string fragment)
-		{
-			return default(XmlDocumentFragment);
-		}
+		public extern void DeleteContents();
 
-		public void DeleteContents()
-		{
-		}
-
-		public void Detach()
-		{
-		}
+		public extern void Detach();
 
 		[Name("END_TO_END")]
 		public const ushort END_TO_END = 2;
@@ -73,81 +44,44 @@ namespace Bridge.Html5.Editing
 		public const ushort END_TO_START = 3;
 
 		[FieldProperty]
-		public XmlNode EndContainer
+		public extern XmlNode EndContainer
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int EndOffset
+		public extern int EndOffset
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public XmlDocumentFragment ExtractContents()
-		{
-			return default(XmlDocumentFragment);
-		}
+		public extern XmlDocumentFragment ExtractContents();
 
-		public DOMRect GetBoundingClientRect()
-		{
-			return default(DOMRect);
-		}
+		public extern DOMRect GetBoundingClientRect();
 
-		public DOMRectList GetClientRects()
-		{
-			return default(DOMRectList);
-		}
+		public extern DOMRectList GetClientRects();
 
-		public void InsertNode(XmlNode node)
-		{
-		}
+		public extern void InsertNode(XmlNode node);
 
-		public bool IntersectsNode(XmlNode node)
-		{
-			return false;
-		}
+		public extern bool IntersectsNode(XmlNode node);
 
-		public bool IsPointInRange(XmlNode node, int offset)
-		{
-			return false;
-		}
+		public extern bool IsPointInRange(XmlNode node, int offset);
 
-		public void SelectNode(XmlNode refNode)
-		{
-		}
+		public extern void SelectNode(XmlNode refNode);
 
-		public void SelectNodeContents(XmlNode refNode)
-		{
-		}
+		public extern void SelectNodeContents(XmlNode refNode);
 
-		public void SetEnd(XmlNode refNode, int offset)
-		{
-		}
+		public extern void SetEnd(XmlNode refNode, int offset);
 
-		public void SetEndAfter(XmlNode refNode)
-		{
-		}
+		public extern void SetEndAfter(XmlNode refNode);
 
-		public void SetEndBefore(XmlNode refNode)
-		{
-		}
+		public extern void SetEndBefore(XmlNode refNode);
 
-		public void SetStart(XmlNode refNode, int offset)
-		{
-		}
+		public extern void SetStart(XmlNode refNode, int offset);
 
-		public void SetStartAfter(XmlNode refNode)
-		{
-		}
+		public extern void SetStartAfter(XmlNode refNode);
 
-		public void SetStartBefore(XmlNode refNode)
-		{
-		}
+		public extern void SetStartBefore(XmlNode refNode);
 
 		[Name("START_TO_END")]
 		public const ushort START_TO_END = 1;
@@ -156,23 +90,17 @@ namespace Bridge.Html5.Editing
 		public const ushort START_TO_START = 0;
 
 		[FieldProperty]
-		public XmlNode StartContainer
+		public extern XmlNode StartContainer
 		{
-			get {
-				return default(XmlNode);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int StartOffset
+		public extern int StartOffset
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public void SurroundContents(XmlNode newParent)
-		{
-		}
+		public extern void SurroundContents(XmlNode newParent);
 	}
 }

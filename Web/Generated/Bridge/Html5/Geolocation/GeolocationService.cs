@@ -3,39 +3,20 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class GeolocationService
 	{
-		internal GeolocationService()
-		{
-		}
+		internal extern GeolocationService();
 
-		public void ClearWatch(int watchId)
-		{
-		}
+		public extern void ClearWatch(int watchId);
 
-		public void GetCurrentPosition(PositionCallback successCallback)
-		{
-		}
+		public extern void GetCurrentPosition(PositionCallback successCallback);
 
-		public void GetCurrentPosition(PositionCallback successCallback, PositionErrorCallback errorCallback)
-		{
-		}
+		public extern void GetCurrentPosition(PositionCallback successCallback, PositionErrorCallback errorCallback);
 
-		public void GetCurrentPosition(PositionCallback successCallback, PositionErrorCallback errorCallback, PositionOptions options)
-		{
-		}
+		public extern void GetCurrentPosition(PositionCallback successCallback, PositionErrorCallback errorCallback, PositionOptions options);
 
-		public int WatchPosition(PositionCallback successCallback)
-		{
-			return 0;
-		}
+		public extern int WatchPosition(PositionCallback successCallback);
 
-		public int WatchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback)
-		{
-			return 0;
-		}
+		public extern int WatchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback);
 
-		public int WatchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback, PositionOptions options)
-		{
-			return 0;
-		}
+		public extern int WatchPosition(PositionCallback successCallback, PositionErrorCallback errorCallback, PositionOptions options);
 	}
 }

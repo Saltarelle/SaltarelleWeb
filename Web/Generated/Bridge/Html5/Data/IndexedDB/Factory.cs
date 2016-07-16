@@ -3,38 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBFactory")]
 	public partial class Factory
 	{
-		internal Factory()
-		{
-		}
+		internal extern Factory();
 
-		public short Cmp(object first, object second)
-		{
-			return 0;
-		}
+		public extern short Cmp(object first, object second);
 
-		public OpenDBRequest DeleteDatabase(string name)
-		{
-			return default(OpenDBRequest);
-		}
+		public extern OpenDBRequest DeleteDatabase(string name);
 
-		public OpenDBRequest DeleteDatabase(string name, OpenDBOptions options)
-		{
-			return default(OpenDBRequest);
-		}
+		public extern OpenDBRequest DeleteDatabase(string name, OpenDBOptions options);
 
-		public OpenDBRequest Open(string name)
-		{
-			return default(OpenDBRequest);
-		}
+		public extern OpenDBRequest Open(string name);
 
-		public OpenDBRequest Open(string name, OpenDBOptions options)
-		{
-			return default(OpenDBRequest);
-		}
+		public extern OpenDBRequest Open(string name, OpenDBOptions options);
 
-		public OpenDBRequest Open(string name, ulong version)
-		{
-			return default(OpenDBRequest);
-		}
+		public extern OpenDBRequest Open(string name, ulong version);
 	}
 }

@@ -3,48 +3,34 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPathSegCurvetoQuadraticRel : SVGPathSeg
 	{
-		internal SVGPathSegCurvetoQuadraticRel()
+		internal extern SVGPathSegCurvetoQuadraticRel();
+
+		[FieldProperty]
+		public extern double X
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double X
+		public extern double X1
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double X1
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Y
+		public extern double Y1
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Y1
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

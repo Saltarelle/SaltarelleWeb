@@ -3,114 +3,65 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'LABEL'"), Name("Element")]
 	public partial class LabelElement : Element
 	{
-		internal LabelElement()
-		{
-		}
+		internal extern LabelElement();
 
-		public void AddEventListener(LabelElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(LabelElementEvents type, Action listener);
 
-		public void AddEventListener(LabelElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(LabelElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(LabelElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(LabelElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(LabelElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(LabelElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener)
-		{
-		}
+		public extern void AddEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener);
 
-		public void AddEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture);
 
-		public void AddEventListener(LabelElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(LabelElementEvents type, IEventListener listener);
 
-		public void AddEventListener(LabelElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(LabelElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern Element Control
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public Element Control
+		public extern FormElement Form
 		{
-			get {
-				return default(Element);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public FormElement Form
+		public extern string HtmlFor
 		{
-			get {
-				return default(FormElement);
-			}
+			get;
+			set;
 		}
 
-		[FieldProperty]
-		public string HtmlFor
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
+		public extern void RemoveEventListener(LabelElementEvents type, Action listener);
 
-		public void RemoveEventListener(LabelElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(LabelElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(LabelElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(LabelElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(LabelElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(LabelElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(LabelElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener);
 
-		public void RemoveEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture);
 
-		public void RemoveEventListener(LabelElementEvents type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(LabelElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(LabelElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(LabelElementEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(LabelElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture);
 	}
 }

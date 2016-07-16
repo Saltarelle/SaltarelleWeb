@@ -3,138 +3,81 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGStyleElement : SVGElement
 	{
-		internal SVGStyleElement()
+		internal extern SVGStyleElement();
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture);
+
+		public extern void AddEventListener(SVGStyleElementEvents type, Action listener);
+
+		public extern void AddEventListener(SVGStyleElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(SVGStyleElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(SVGStyleElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(SVGStyleElementEvents type, HtmlEventHandlerWithTarget<SVGStyleElement> listener);
+
+		public extern void AddEventListener(SVGStyleElementEvents type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture);
+
+		public extern void AddEventListener(SVGStyleElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(SVGStyleElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern string Media
 		{
+			get;
+			set;
 		}
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture);
 
-		public void AddEventListener(SVGStyleElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGStyleElementEvents type, Action listener);
 
-		public void AddEventListener(SVGStyleElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGStyleElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGStyleElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGStyleElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGStyleElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGStyleElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGStyleElementEvents type, HtmlEventHandlerWithTarget<SVGStyleElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGStyleElementEvents type, HtmlEventHandlerWithTarget<SVGStyleElement> listener);
 
-		public void AddEventListener(SVGStyleElementEvents type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGStyleElementEvents type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture);
 
-		public void AddEventListener(SVGStyleElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGStyleElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGStyleElementEvents type, IEventListener listener, bool capture)
+		public extern void RemoveEventListener(SVGStyleElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Scoped
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Media
+		public extern string Title
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGStyleElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGStyleElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGStyleElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGStyleElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGStyleElementEvents type, HtmlEventHandlerWithTarget<SVGStyleElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGStyleElementEvents type, HtmlEventHandlerWithTarget<SVGStyleElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGStyleElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGStyleElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Scoped
+		public extern string Type
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Title
+		public extern string Xmlspace
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Type
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Xmlspace
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

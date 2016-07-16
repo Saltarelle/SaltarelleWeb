@@ -5,48 +5,34 @@ namespace Bridge.Html5.Speech
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechRecognitionEvent : Event
 	{
-		internal SpeechRecognitionEvent()
-		{
-		}
+		internal extern SpeechRecognitionEvent();
 
-		public SpeechRecognitionEvent(string type)
-		{
-		}
+		public extern SpeechRecognitionEvent(string type);
 
-		public SpeechRecognitionEvent(string type, SpeechRecognitionEventInit eventInitDict)
+		public extern SpeechRecognitionEvent(string type, SpeechRecognitionEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern DocumentBase Emma
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public DocumentBase Emma
+		public extern string Interpretation
 		{
-			get {
-				return default(DocumentBase);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Interpretation
+		public extern int ResultIndex
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ResultIndex
+		public extern object Results
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public object Results
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

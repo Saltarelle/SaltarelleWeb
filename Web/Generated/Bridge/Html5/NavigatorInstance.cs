@@ -10,206 +10,142 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Navigator")]
 	public partial class NavigatorInstance
 	{
-		internal NavigatorInstance()
+		internal extern NavigatorInstance();
+
+		[FieldProperty]
+		public extern string AppCodeName
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string AppCodeName
+		public extern string AppName
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string AppName
+		public extern string AppVersion
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string AppVersion
+		public extern BatteryManager Battery
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public BatteryManager Battery
+		public extern string BuildID
 		{
-			get {
-				return default(BatteryManager);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string BuildID
+		public extern bool CookieEnabled
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool CookieEnabled
+		public extern string DoNotTrack
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string DoNotTrack
+		public extern GeolocationService Geolocation
 		{
-			get {
-				return null;
-			}
+			get;
+		}
+
+		public extern bool JavaEnabled();
+
+		[FieldProperty]
+		public extern string Language
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public GeolocationService Geolocation
+		public extern int MaxTouchPoints
 		{
-			get {
-				return default(GeolocationService);
-			}
-		}
-
-		public bool JavaEnabled()
-		{
-			return false;
+			get;
 		}
 
 		[FieldProperty]
-		public string Language
+		public extern MimeTypeArray MimeTypes
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int MaxTouchPoints
+		public extern bool OnLine
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public MimeTypeArray MimeTypes
+		public extern string Oscpu
 		{
-			get {
-				return default(MimeTypeArray);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool OnLine
+		public extern string Platform
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Oscpu
+		public extern PluginArray Plugins
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Platform
+		public extern string Product
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public PluginArray Plugins
+		public extern string ProductSub
 		{
-			get {
-				return default(PluginArray);
-			}
+			get;
+		}
+
+		public extern void RegisterContentHandler(string mimeType, string url, string title);
+
+		public extern void RegisterProtocolHandler(string scheme, string url, string title);
+
+		public extern bool SendBeacon(string url);
+
+		public extern bool SendBeacon(string url, TypeOption<ArrayBufferView, Blob, string, FormData> data);
+
+		public extern bool TaintEnabled();
+
+		[FieldProperty]
+		public extern string UserAgent
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Product
+		public extern string Vendor
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string ProductSub
+		public extern string VendorSub
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public void RegisterContentHandler(string mimeType, string url, string title)
-		{
-		}
+		public extern bool Vibrate(int duration);
 
-		public void RegisterProtocolHandler(string scheme, string url, string title)
-		{
-		}
-
-		public bool SendBeacon(string url)
-		{
-			return false;
-		}
-
-		public bool SendBeacon(string url, TypeOption<ArrayBufferView, Blob, string, FormData> data)
-		{
-			return false;
-		}
-
-		public bool TaintEnabled()
-		{
-			return false;
-		}
-
-		[FieldProperty]
-		public string UserAgent
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Vendor
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string VendorSub
-		{
-			get {
-				return null;
-			}
-		}
-
-		public bool Vibrate(int duration)
-		{
-			return false;
-		}
-
-		public bool Vibrate(int[] pattern)
-		{
-			return false;
-		}
+		public extern bool Vibrate(int[] pattern);
 	}
 }

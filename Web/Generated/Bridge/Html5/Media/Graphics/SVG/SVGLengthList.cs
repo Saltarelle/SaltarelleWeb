@@ -5,72 +5,41 @@ namespace Bridge.Html5.Media.Graphics.SVG
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGLengthList
 	{
-		internal SVGLengthList()
-		{
-		}
+		internal extern SVGLengthList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public SVGLength this[int index]
 		{
-			get {
-				return default(SVGLength);
-			}
+			get;
 		}
 
-		public SVGLength AppendItem(SVGLength newItem)
-		{
-			return default(SVGLength);
-		}
+		public extern SVGLength AppendItem(SVGLength newItem);
 
-		public void Clear()
-		{
-		}
+		public extern void Clear();
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<SVGLength> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<SVGLength> GetEnumerator();
 
-		public SVGLength GetItem(int index)
-		{
-			return default(SVGLength);
-		}
+		public extern SVGLength GetItem(int index);
 
-		public SVGLength Initialize(SVGLength newItem)
-		{
-			return default(SVGLength);
-		}
+		public extern SVGLength Initialize(SVGLength newItem);
 
-		public SVGLength InsertItemBefore(SVGLength newItem, int index)
+		public extern SVGLength InsertItemBefore(SVGLength newItem, int index);
+
+		[FieldProperty]
+		public extern int Length
 		{
-			return default(SVGLength);
+			get;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern int NumberOfItems
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public int NumberOfItems
-		{
-			get {
-				return 0;
-			}
-		}
+		public extern SVGLength RemoveItem(int index);
 
-		public SVGLength RemoveItem(int index)
-		{
-			return default(SVGLength);
-		}
-
-		public SVGLength ReplaceItem(SVGLength newItem, int index)
-		{
-			return default(SVGLength);
-		}
+		public extern SVGLength ReplaceItem(SVGLength newItem, int index);
 	}
 }

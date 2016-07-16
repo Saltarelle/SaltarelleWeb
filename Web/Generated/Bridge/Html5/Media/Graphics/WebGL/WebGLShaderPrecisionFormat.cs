@@ -3,32 +3,24 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGLShaderPrecisionFormat
 	{
-		internal WebGLShaderPrecisionFormat()
+		internal extern WebGLShaderPrecisionFormat();
+
+		[FieldProperty]
+		public extern int Precision
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public int Precision
+		public extern int RangeMax
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int RangeMax
+		public extern int RangeMin
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int RangeMin
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

@@ -3,32 +3,24 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGLActiveInfo
 	{
-		internal WebGLActiveInfo()
+		internal extern WebGLActiveInfo();
+
+		[FieldProperty]
+		public extern string Name
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern int Size
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int Size
+		public extern int Type
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int Type
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

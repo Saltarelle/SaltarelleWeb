@@ -3,120 +3,70 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGGradientElement : SVGElement
 	{
-		internal SVGGradientElement()
-		{
-		}
+		internal extern SVGGradientElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture);
 
-		public void AddEventListener(SVGGradientElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGGradientElementEvents type, Action listener);
 
-		public void AddEventListener(SVGGradientElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGGradientElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGGradientElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGGradientElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGGradientElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGGradientElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener);
 
-		public void AddEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture);
 
-		public void AddEventListener(SVGGradientElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGGradientElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGGradientElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGGradientElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedTransformList GradientTransform
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedTransformList GradientTransform
+		public extern SVGAnimatedEnumeration<SVGUnitType> GradientUnits
 		{
-			get {
-				return default(SVGAnimatedTransformList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGUnitType> GradientUnits
+		public extern SVGAnimatedString Href
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGUnitType>);
-			}
+			get;
 		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGGradientElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGGradientElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener);
+
+		public extern void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGGradientElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGGradientElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public SVGAnimatedString Href
+		public extern SVGAnimatedEnumeration<SVGSpreadMethod> SpreadMethod
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGGradientElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGGradientElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGGradientElementEvents type, HtmlEventHandlerWithTarget<SVGGradientElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGGradientElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGGradientElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGSpreadMethod> SpreadMethod
-		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGSpreadMethod>);
-			}
+			get;
 		}
 
 		[Name("SVG_SPREADMETHOD_PAD")]

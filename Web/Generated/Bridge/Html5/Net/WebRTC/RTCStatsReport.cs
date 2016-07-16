@@ -3,22 +3,12 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class RTCStatsReport
 	{
-		internal RTCStatsReport()
-		{
-		}
+		internal extern RTCStatsReport();
 
-		public void ForEach(RTCStatsReportCallback callbackFn, object thisArg)
-		{
-		}
+		public extern void ForEach(RTCStatsReportCallback callbackFn, object thisArg);
 
-		public object Get(string key)
-		{
-			return null;
-		}
+		public extern object Get(string key);
 
-		public bool Has(string key)
-		{
-			return false;
-		}
+		public extern bool Has(string key);
 	}
 }

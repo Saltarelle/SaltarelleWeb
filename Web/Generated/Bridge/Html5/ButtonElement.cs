@@ -3,229 +3,144 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'BUTTON'"), Name("Element")]
 	public partial class ButtonElement : Element
 	{
-		internal ButtonElement()
+		internal extern ButtonElement();
+
+		public extern void AddEventListener(ButtonElementEvents type, Action listener);
+
+		public extern void AddEventListener(ButtonElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(ButtonElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(ButtonElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener);
+
+		public extern void AddEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture);
+
+		public extern void AddEventListener(ButtonElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(ButtonElementEvents type, IEventListener listener, bool capture);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Autofocus
 		{
+			get;
+			set;
 		}
 
-		public void AddEventListener(ButtonElementEvents type, Action listener)
-		{
-		}
+		public extern bool CheckValidity();
 
-		public void AddEventListener(ButtonElementEvents type, Action listener, bool capture)
+		[FieldProperty]
+		public extern bool Disabled
 		{
-		}
-
-		public void AddEventListener(ButtonElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void AddEventListener(ButtonElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener)
-		{
-		}
-
-		public void AddEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(ButtonElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(ButtonElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Autofocus
+		public extern FormElement Form
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public bool CheckValidity()
-		{
-			return false;
+			get;
 		}
 
 		[FieldProperty]
-		public bool Disabled
+		public extern string FormAction
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public FormElement Form
+		public extern string FormEnctype
 		{
-			get {
-				return default(FormElement);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string FormAction
+		public extern string FormMethod
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string FormEnctype
+		public extern bool FormNoValidate
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string FormMethod
+		public extern string FormTarget
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool FormNoValidate
+		public extern string Name
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(ButtonElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(ButtonElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(ButtonElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(ButtonElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener);
+
+		public extern void RemoveEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture);
+
+		public extern void RemoveEventListener(ButtonElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(ButtonElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture);
+
+		public extern void SetCustomValidity(string error);
+
+		[FieldProperty]
+		public extern string Type
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string FormTarget
+		public extern string ValidationMessage
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern ValidityState Validity
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(ButtonElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(ButtonElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ButtonElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(ButtonElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(ButtonElementEvents type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(ButtonElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(ButtonElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture)
-		{
-		}
-
-		public void SetCustomValidity(string error)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Type
+		public extern string Value
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string ValidationMessage
+		public extern bool WillValidate
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public ValidityState Validity
-		{
-			get {
-				return default(ValidityState);
-			}
-		}
-
-		[FieldProperty]
-		public string Value
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public bool WillValidate
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

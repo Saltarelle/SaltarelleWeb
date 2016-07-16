@@ -3,52 +3,36 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DeviceOrientationEvent : Event
 	{
-		internal DeviceOrientationEvent()
-		{
-		}
+		internal extern DeviceOrientationEvent();
 
-		public DeviceOrientationEvent(string type)
-		{
-		}
+		public extern DeviceOrientationEvent(string type);
 
-		public DeviceOrientationEvent(string type, DeviceOrientationEventInit eventInitDict)
+		public extern DeviceOrientationEvent(string type, DeviceOrientationEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern bool Absolute
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool Absolute
+		public extern double Alpha
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Alpha
+		public extern double Beta
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Beta
+		public extern double Gamma
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public double Gamma
-		{
-			get {
-				return 0;
-			}
-		}
-
-		public void InitDeviceOrientationEvent(string type, bool canBubble, bool cancelable, double alpha, double beta, double gamma, bool absolute)
-		{
-		}
+		public extern void InitDeviceOrientationEvent(string type, bool canBubble, bool cancelable, double alpha, double beta, double gamma, bool absolute);
 	}
 }

@@ -3,128 +3,74 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'META'"), Name("Element")]
 	public partial class MetaElement : Element
 	{
-		internal MetaElement()
-		{
-		}
+		internal extern MetaElement();
 
-		public void AddEventListener(MetaElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(MetaElementEvents type, Action listener);
 
-		public void AddEventListener(MetaElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MetaElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(MetaElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(MetaElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(MetaElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MetaElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener)
-		{
-		}
+		public extern void AddEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener);
 
-		public void AddEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture);
 
-		public void AddEventListener(MetaElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(MetaElementEvents type, IEventListener listener);
 
-		public void AddEventListener(MetaElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MetaElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Content
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Content
+		public extern string HttpEquiv
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string HttpEquiv
+		public extern string Name
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
+
+		public extern void RemoveEventListener(MetaElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(MetaElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(MetaElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(MetaElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener);
+
+		public extern void RemoveEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture);
+
+		public extern void RemoveEventListener(MetaElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(MetaElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture);
 
 		[FieldProperty]
-		public string Name
+		public extern string Scheme
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(MetaElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(MetaElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MetaElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(MetaElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(MetaElementEvents type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MetaElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(MetaElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public string Scheme
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

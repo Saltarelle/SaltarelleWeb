@@ -3,156 +3,86 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimationElement : SVGElement
 	{
-		internal SVGAnimationElement()
-		{
-		}
+		internal extern SVGAnimationElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture);
 
-		public void AddEventListener(SVGAnimationElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGAnimationElementEvents type, Action listener);
 
-		public void AddEventListener(SVGAnimationElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGAnimationElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener);
 
-		public void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture);
 
-		public void AddEventListener(SVGAnimationElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGAnimationElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGAnimationElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGAnimationElementEvents type, IEventListener listener, bool capture);
 
-		public void BeginElement()
-		{
-		}
+		public extern void BeginElement();
 
-		public void BeginElementAt(double offset)
-		{
-		}
+		public extern void BeginElementAt(double offset);
 
-		public void EndElement()
-		{
-		}
+		public extern void EndElement();
 
-		public void EndElementAt(double offset)
-		{
-		}
+		public extern void EndElementAt(double offset);
 
-		public double GetCurrentTime()
-		{
-			return 0;
-		}
+		public extern double GetCurrentTime();
 
-		public double GetSimpleDuration()
-		{
-			return 0;
-		}
+		public extern double GetSimpleDuration();
 
-		public double GetStartTime()
-		{
-			return 0;
-		}
+		public extern double GetStartTime();
 
-		public bool HasExtension(string extension)
-		{
-			return false;
-		}
+		public extern bool HasExtension(string extension);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGAnimationElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGAnimationElementEvents type, Action listener);
 
-		public void RemoveEventListener(SVGAnimationElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGAnimationElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener);
 
-		public void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGAnimationElementEvents type, HtmlEventHandlerWithTarget<SVGAnimationElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGAnimationElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGAnimationElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SVGAnimationElementEvents type, IEventListener listener, bool capture)
+		public extern void RemoveEventListener(SVGAnimationElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGStringList RequiredExtensions
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGStringList RequiredExtensions
+		public extern SVGStringList RequiredFeatures
 		{
-			get {
-				return default(SVGStringList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGStringList RequiredFeatures
+		public extern SVGStringList SystemLanguage
 		{
-			get {
-				return default(SVGStringList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGStringList SystemLanguage
+		public extern SVGElement TargetElement
 		{
-			get {
-				return default(SVGStringList);
-			}
-		}
-
-		[FieldProperty]
-		public SVGElement TargetElement
-		{
-			get {
-				return default(SVGElement);
-			}
+			get;
 		}
 	}
 }

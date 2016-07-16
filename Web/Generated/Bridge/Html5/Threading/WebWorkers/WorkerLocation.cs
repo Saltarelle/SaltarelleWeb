@@ -3,80 +3,60 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WorkerLocation
 	{
-		internal WorkerLocation()
+		internal extern WorkerLocation();
+
+		[FieldProperty]
+		public extern string Hash
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Hash
+		public extern string Host
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Host
+		public extern string Hostname
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Hostname
+		public extern string Href
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Href
+		public extern string Origin
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Origin
+		public extern string Pathname
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Pathname
+		public extern string Port
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Port
+		public extern string Protocol
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Protocol
+		public extern string Search
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Search
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

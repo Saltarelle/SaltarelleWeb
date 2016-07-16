@@ -3,72 +3,54 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMRectReadOnly
 	{
-		internal DOMRectReadOnly()
+		internal extern DOMRectReadOnly();
+
+		[FieldProperty]
+		public extern double Bottom
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double Bottom
+		public extern double Height
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Height
+		public extern double Left
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Left
+		public extern double Right
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Right
+		public extern double Top
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Top
+		public extern double Width
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Width
+		public extern double X
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double X
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public double Y
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

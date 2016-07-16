@@ -3,13 +3,13 @@
 	[External, Serializable]
 	public partial class HashChangeEventInit : EventInit
 	{
-		public string NewURL
+		public extern string NewURL
 		{
 			get;
 			set;
 		}
 
-		public string OldURL
+		public extern string OldURL
 		{
 			get;
 			set;

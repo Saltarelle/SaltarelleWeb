@@ -3,40 +3,30 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class RGBColor
 	{
-		internal RGBColor()
+		internal extern RGBColor();
+
+		[FieldProperty]
+		public extern CSSPrimitiveValue Alpha
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public CSSPrimitiveValue Alpha
+		public extern CSSPrimitiveValue Blue
 		{
-			get {
-				return default(CSSPrimitiveValue);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public CSSPrimitiveValue Blue
+		public extern CSSPrimitiveValue Green
 		{
-			get {
-				return default(CSSPrimitiveValue);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public CSSPrimitiveValue Green
+		public extern CSSPrimitiveValue Red
 		{
-			get {
-				return default(CSSPrimitiveValue);
-			}
-		}
-
-		[FieldProperty]
-		public CSSPrimitiveValue Red
-		{
-			get {
-				return default(CSSPrimitiveValue);
-			}
+			get;
 		}
 	}
 }

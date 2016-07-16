@@ -6,222 +6,139 @@ namespace Bridge.Html5.Net.WebRTC
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("DataChannel")]
 	public partial class RTCDataChannel : EventTarget
 	{
-		internal RTCDataChannel()
-		{
-		}
+		internal extern RTCDataChannel();
 
-		public void AddEventListener(RTCDataChannelEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(RTCDataChannelEvents type, Action listener);
 
-		public void AddEventListener(RTCDataChannelEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RTCDataChannelEvents type, Action listener, bool capture);
 
-		public void AddEventListener(RTCDataChannelEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(RTCDataChannelEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(RTCDataChannelEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RTCDataChannelEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener)
-		{
-		}
+		public extern void AddEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener);
 
-		public void AddEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture);
 
-		public void AddEventListener(RTCDataChannelEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(RTCDataChannelEvents type, IEventListener listener);
 
-		public void AddEventListener(RTCDataChannelEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(RTCDataChannelEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture);
+
+		[FieldProperty]
+		public extern RTCDataChannelType BinaryType
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public RTCDataChannelType BinaryType
+		public extern int BufferedAmount
 		{
-			get {
-				return default(RTCDataChannelType);
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern void Close();
+
+		[FieldProperty]
+		public extern ushort Id
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public int BufferedAmount
+		public extern string Label
 		{
-			get {
-				return 0;
-			}
-		}
-
-		public void Close()
-		{
-		}
-
-		[FieldProperty]
-		public ushort Id
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public string Label
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onclose")]
-		public HtmlEventHandler OnClose
+		public extern HtmlEventHandler OnClose
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmessage")]
-		public HtmlEventHandler OnMessage
+		public extern HtmlEventHandler OnMessage
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onopen")]
-		public HtmlEventHandler OnOpen
+		public extern HtmlEventHandler OnOpen
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Ordered
+		public extern bool Ordered
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Protocol
+		public extern string Protocol
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public RTCDataChannelState ReadyState
+		public extern RTCDataChannelState ReadyState
 		{
-			get {
-				return default(RTCDataChannelState);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool Reliable
+		public extern bool Reliable
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
-		public void RemoveEventListener(RTCDataChannelEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(RTCDataChannelEvents type, Action listener);
 
-		public void RemoveEventListener(RTCDataChannelEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RTCDataChannelEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener)
-		{
-		}
+		public extern void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener);
 
-		public void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RTCDataChannelEvents type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture);
 
-		public void RemoveEventListener(RTCDataChannelEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(RTCDataChannelEvents type, IEventListener listener);
 
-		public void RemoveEventListener(RTCDataChannelEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(RTCDataChannelEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture);
 
-		public void Send(ArrayBuffer data)
-		{
-		}
+		public extern void Send(ArrayBuffer data);
 
-		public void Send(ArrayBufferView data)
-		{
-		}
+		public extern void Send(ArrayBufferView data);
 
-		public void Send(Blob data)
-		{
-		}
+		public extern void Send(Blob data);
 
-		public void Send(string data)
-		{
-		}
+		public extern void Send(string data);
 
 		[FieldProperty]
-		public ushort Stream
+		public extern ushort Stream
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

@@ -3,53 +3,34 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechSynthesis
 	{
-		internal SpeechSynthesis()
-		{
-		}
+		internal extern SpeechSynthesis();
 
-		public void Cancel()
-		{
-		}
+		public extern void Cancel();
 
-		public SpeechSynthesisVoice[] GetVoices()
-		{
-			return null;
-		}
+		public extern SpeechSynthesisVoice[] GetVoices();
 
-		public void Pause()
+		public extern void Pause();
+
+		[FieldProperty]
+		public extern bool Paused
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool Paused
+		public extern bool Pending
 		{
-			get {
-				return false;
-			}
+			get;
 		}
+
+		public extern void Resume();
+
+		public extern void Speak(SpeechSynthesisUtterance utterance);
 
 		[FieldProperty]
-		public bool Pending
+		public extern bool Speaking
 		{
-			get {
-				return false;
-			}
-		}
-
-		public void Resume()
-		{
-		}
-
-		public void Speak(SpeechSynthesisUtterance utterance)
-		{
-		}
-
-		[FieldProperty]
-		public bool Speaking
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

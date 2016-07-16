@@ -3,13 +3,13 @@
 	[External, Serializable]
 	public partial class HitRegionOptions
 	{
-		public Element Control
+		public extern Element Control
 		{
 			get;
 			set;
 		}
 
-		public string Id
+		public extern string Id
 		{
 			get;
 			set;

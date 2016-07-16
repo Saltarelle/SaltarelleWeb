@@ -3,6 +3,6 @@
 	[External]
 	public partial interface IEventListener
 	{
-		void HandleEvent(Event @event);
+		extern void HandleEvent(Event @event);
 	}
 }

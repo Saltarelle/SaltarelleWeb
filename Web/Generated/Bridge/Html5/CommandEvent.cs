@@ -3,20 +3,14 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CommandEvent : Event
 	{
-		internal CommandEvent()
-		{
-		}
+		internal extern CommandEvent();
 
 		[FieldProperty]
-		public string Command
+		public extern string Command
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public void InitCommandEvent(string type, bool canBubble, bool cancelable, string command)
-		{
-		}
+		public extern void InitCommandEvent(string type, bool canBubble, bool cancelable, string command);
 	}
 }

@@ -5,237 +5,150 @@ namespace Bridge.Html5
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'IFRAME'"), Name("Element")]
 	public partial class IFrameElement : Element
 	{
-		internal IFrameElement()
-		{
-		}
+		internal extern IFrameElement();
 
-		public void AddEventListener(IFrameElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(IFrameElementEvents type, Action listener);
 
-		public void AddEventListener(IFrameElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(IFrameElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(IFrameElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(IFrameElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(IFrameElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(IFrameElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener)
-		{
-		}
+		public extern void AddEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener);
 
-		public void AddEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture);
 
-		public void AddEventListener(IFrameElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(IFrameElementEvents type, IEventListener listener);
 
-		public void AddEventListener(IFrameElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(IFrameElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Align
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Align
+		public extern bool AllowFullscreen
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool AllowFullscreen
+		public extern DocumentBase ContentDocument
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DocumentBase ContentDocument
+		public extern WindowInstance ContentWindow
 		{
-			get {
-				return default(DocumentBase);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public WindowInstance ContentWindow
+		public extern string FrameBorder
 		{
-			get {
-				return default(WindowInstance);
-			}
+			get;
+			set;
+		}
+
+		public extern DocumentBase GetSVGDocument();
+
+		[FieldProperty]
+		public extern string Height
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string FrameBorder
+		public extern string LongDesc
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public DocumentBase GetSVGDocument()
-		{
-			return default(DocumentBase);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Height
+		public extern string MarginHeight
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string LongDesc
+		public extern string MarginWidth
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string MarginHeight
+		public extern string Name
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(IFrameElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(IFrameElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(IFrameElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(IFrameElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener);
+
+		public extern void RemoveEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture);
+
+		public extern void RemoveEventListener(IFrameElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(IFrameElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern DOMSettableTokenList Sandbox
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public string MarginWidth
+		public extern string Scrolling
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern string Src
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(IFrameElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(IFrameElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(IFrameElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(IFrameElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(IFrameElementEvents type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(IFrameElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(IFrameElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public DOMSettableTokenList Sandbox
+		public extern string Srcdoc
 		{
-			get {
-				return default(DOMSettableTokenList);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Scrolling
+		public extern string Width
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Src
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Srcdoc
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Width
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

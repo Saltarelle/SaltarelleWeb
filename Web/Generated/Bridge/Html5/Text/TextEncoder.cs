@@ -5,35 +5,20 @@ namespace Bridge.Html5.Text
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TextEncoder
 	{
-		public TextEncoder()
-		{
-		}
+		public extern TextEncoder();
 
-		public TextEncoder(string utfLabel)
-		{
-		}
+		public extern TextEncoder(string utfLabel);
 
-		public Uint8Array Encode()
-		{
-			return default(Uint8Array);
-		}
+		public extern Uint8Array Encode();
 
-		public Uint8Array Encode(string input)
-		{
-			return default(Uint8Array);
-		}
+		public extern Uint8Array Encode(string input);
 
-		public Uint8Array Encode(string input, TextEncodeOptions options)
-		{
-			return default(Uint8Array);
-		}
+		public extern Uint8Array Encode(string input, TextEncodeOptions options);
 
 		[FieldProperty]
-		public string Encoding
+		public extern string Encoding
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

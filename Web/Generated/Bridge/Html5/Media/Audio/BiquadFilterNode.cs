@@ -5,81 +5,51 @@ namespace Bridge.Html5.Media.Audio
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class BiquadFilterNode : AudioNode
 	{
-		internal BiquadFilterNode()
-		{
-		}
+		internal extern BiquadFilterNode();
 
-		public void AddEventListener(BiquadFilterNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(BiquadFilterNodeEvents type, Action listener);
 
-		public void AddEventListener(BiquadFilterNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(BiquadFilterNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener)
-		{
-		}
+		public extern void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener);
 
-		public void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture);
 
-		public void AddEventListener(BiquadFilterNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(BiquadFilterNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(BiquadFilterNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(BiquadFilterNodeEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture);
 
 		public const ushort ALLPASS = 7;
 
 		public const ushort BANDPASS = 2;
 
 		[FieldProperty]
-		public AudioParam Detune
+		public extern AudioParam Detune
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public AudioParam Frequency
+		public extern AudioParam Frequency
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public AudioParam Gain
+		public extern AudioParam Gain
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
-		public void GetFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse)
-		{
-		}
+		public extern void GetFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse);
 
 		public const ushort HIGHPASS = 1;
 
@@ -94,61 +64,36 @@ namespace Bridge.Html5.Media.Audio
 		public const ushort PEAKING = 5;
 
 		[FieldProperty, Name("Q")]
-		public AudioParam Q
+		public extern AudioParam Q
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
-		public void RemoveEventListener(BiquadFilterNodeEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(BiquadFilterNodeEvents type, Action listener);
 
-		public void RemoveEventListener(BiquadFilterNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(BiquadFilterNodeEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener);
 
-		public void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(BiquadFilterNodeEvents type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture);
 
-		public void RemoveEventListener(BiquadFilterNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(BiquadFilterNodeEvents type, IEventListener listener);
 
-		public void RemoveEventListener(BiquadFilterNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(BiquadFilterNodeEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture);
 
 		[FieldProperty]
-		public BiquadFilterType Type
+		public extern BiquadFilterType Type
 		{
-			get {
-				return default(BiquadFilterType);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,19 +3,19 @@
 	[External, Serializable]
 	public partial class CloseEventInit : EventInit
 	{
-		public ushort Code
+		public extern ushort Code
 		{
 			get;
 			set;
 		}
 
-		public string Reason
+		public extern string Reason
 		{
 			get;
 			set;
 		}
 
-		public bool WasClean
+		public extern bool WasClean
 		{
 			get;
 			set;

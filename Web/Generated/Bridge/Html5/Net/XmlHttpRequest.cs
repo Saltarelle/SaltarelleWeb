@@ -7,61 +7,33 @@ namespace Bridge.Html5.Net
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("XMLHttpRequest")]
 	public partial class XmlHttpRequest : XmlHttpRequestEventTarget
 	{
-		public void Abort()
-		{
-		}
+		public extern void Abort();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture);
 
-		public void AddEventListener(XmlHttpRequestEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEvents type, Action listener);
 
-		public void AddEventListener(XmlHttpRequestEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEvents type, Action listener, bool capture);
 
-		public void AddEventListener(XmlHttpRequestEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(XmlHttpRequestEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(XmlHttpRequestEvents type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEvents type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener);
 
-		public void AddEventListener(XmlHttpRequestEvents type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEvents type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture);
 
-		public void AddEventListener(XmlHttpRequestEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEvents type, IEventListener listener);
 
-		public void AddEventListener(XmlHttpRequestEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(XmlHttpRequestEvents type, IEventListener listener, bool capture);
 
 		public const ushort DONE = 4;
 
-		public string GetAllResponseHeaders()
-		{
-			return null;
-		}
+		public extern string GetAllResponseHeaders();
 
-		public string GetResponseHeader(string header)
-		{
-			return null;
-		}
+		public extern string GetResponseHeader(string header);
 
 		[Name("HEADERS_RECEIVED")]
 		public const ushort HEADERS_RECEIVED = 2;
@@ -69,199 +41,125 @@ namespace Bridge.Html5.Net
 		public const ushort LOADING = 3;
 
 		[FieldProperty, Name("onreadystatechange")]
-		public HtmlEventHandler OnReadyStateChange
+		public extern HtmlEventHandler OnReadyStateChange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void Open(string method, string url)
-		{
-		}
+		public extern void Open(string method, string url);
 
-		public void Open(string method, string url, bool async)
-		{
-		}
+		public extern void Open(string method, string url, bool async);
 
-		public void Open(string method, string url, bool async, string user)
-		{
-		}
+		public extern void Open(string method, string url, bool async, string user);
 
-		public void Open(string method, string url, bool async, string user, string password)
-		{
-		}
+		public extern void Open(string method, string url, bool async, string user, string password);
 
 		public const ushort OPENED = 1;
 
-		public void OverrideMimeType(string mime)
+		public extern void OverrideMimeType(string mime);
+
+		[FieldProperty]
+		public extern ReadyState ReadyState
 		{
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture);
+
+		public extern void RemoveEventListener(XmlHttpRequestEvents type, Action listener);
+
+		public extern void RemoveEventListener(XmlHttpRequestEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(XmlHttpRequestEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(XmlHttpRequestEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(XmlHttpRequestEvents type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener);
+
+		public extern void RemoveEventListener(XmlHttpRequestEvents type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture);
+
+		public extern void RemoveEventListener(XmlHttpRequestEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(XmlHttpRequestEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern object Response
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public ReadyState ReadyState
+		public extern string ResponseText
 		{
-			get {
-				return default(ReadyState);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlHttpRequestEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlHttpRequestEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlHttpRequestEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlHttpRequestEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlHttpRequestEvents type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlHttpRequestEvents type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(XmlHttpRequestEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(XmlHttpRequestEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public object Response
+		public extern XmlHttpRequestResponseType ResponseType
 		{
-			get {
-				return null;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string ResponseText
+		public extern DocumentBase ResponseXML
 		{
-			get {
-				return null;
-			}
+			get;
+		}
+
+		public extern void Send();
+
+		public extern void Send(ArrayBuffer data);
+
+		public extern void Send(ArrayBufferView data);
+
+		public extern void Send(Blob data);
+
+		public extern void Send(DocumentBase data);
+
+		public extern void Send(FormData data);
+
+		public extern void Send(string data);
+
+		public extern void SendAsBinary(string body);
+
+		public extern void SetRequestHeader(string header, string value);
+
+		[FieldProperty]
+		public extern ushort Status
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public XmlHttpRequestResponseType ResponseType
+		public extern string StatusText
 		{
-			get {
-				return default(XmlHttpRequestResponseType);
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DocumentBase ResponseXML
+		public extern int Timeout
 		{
-			get {
-				return default(DocumentBase);
-			}
-		}
-
-		public void Send()
-		{
-		}
-
-		public void Send(ArrayBuffer data)
-		{
-		}
-
-		public void Send(ArrayBufferView data)
-		{
-		}
-
-		public void Send(Blob data)
-		{
-		}
-
-		public void Send(DocumentBase data)
-		{
-		}
-
-		public void Send(FormData data)
-		{
-		}
-
-		public void Send(string data)
-		{
-		}
-
-		public void SendAsBinary(string body)
-		{
-		}
-
-		public void SetRequestHeader(string header, string value)
-		{
-		}
-
-		[FieldProperty]
-		public ushort Status
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public string StatusText
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public int Timeout
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		public const ushort UNSENT = 0;
 
 		[FieldProperty]
-		public XmlHttpRequestUpload Upload
+		public extern XmlHttpRequestUpload Upload
 		{
-			get {
-				return default(XmlHttpRequestUpload);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool WithCredentials
+		public extern bool WithCredentials
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

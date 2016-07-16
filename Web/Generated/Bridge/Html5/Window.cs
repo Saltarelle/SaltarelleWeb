@@ -11,1562 +11,1020 @@ namespace Bridge.Html5
 	[Namespace("false"), External, Name("window")]
 	public static partial class Window
 	{
-		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener)
+		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener);
+
+		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture);
+
+		public static extern void AddEventListener(string type, IEventListener listener);
+
+		public static extern void AddEventListener(string type, IEventListener listener, bool capture);
+
+		public static extern void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted);
+
+		public static extern void AddEventListener(WindowInstanceEvents type, Action listener);
+
+		public static extern void AddEventListener(WindowInstanceEvents type, Action listener, bool capture);
+
+		public static extern void AddEventListener(WindowInstanceEvents type, HtmlEventHandler listener);
+
+		public static extern void AddEventListener(WindowInstanceEvents type, HtmlEventHandler listener, bool capture);
+
+		public static extern void AddEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener);
+
+		public static extern void AddEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture);
+
+		public static extern void AddEventListener(WindowInstanceEvents type, IEventListener listener);
+
+		public static extern void AddEventListener(WindowInstanceEvents type, IEventListener listener, bool capture);
+
+		public static extern void Alert();
+
+		public static extern void Alert(string message);
+
+		[FieldProperty]
+		public static extern ApplicationCache ApplicationCache
 		{
+			get;
 		}
 
-		public static void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture)
+		public static extern string Atob(string atob);
+
+		public static extern void Back();
+
+		public static extern void Blur();
+
+		public static extern string Btoa(string btoa);
+
+		public static extern void CancelAnimationFrame(int handle);
+
+		public static extern void CaptureEvents();
+
+		public static extern void Close();
+
+		[FieldProperty]
+		public static extern bool Closed
 		{
+			get;
 		}
 
-		public static void AddEventListener(string type, IEventListener listener)
-		{
-		}
+		public static extern bool Confirm();
 
-		public static void AddEventListener(string type, IEventListener listener, bool capture)
-		{
-		}
+		public static extern bool Confirm(string message);
 
-		public static void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted)
+		[FieldProperty]
+		public static extern object Content
 		{
-		}
-
-		public static void AddEventListener(WindowInstanceEvents type, Action listener)
-		{
-		}
-
-		public static void AddEventListener(WindowInstanceEvents type, Action listener, bool capture)
-		{
-		}
-
-		public static void AddEventListener(WindowInstanceEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public static void AddEventListener(WindowInstanceEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public static void AddEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener)
-		{
-		}
-
-		public static void AddEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture)
-		{
-		}
-
-		public static void AddEventListener(WindowInstanceEvents type, IEventListener listener)
-		{
-		}
-
-		public static void AddEventListener(WindowInstanceEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public static void Alert()
-		{
-		}
-
-		public static void Alert(string message)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public static ApplicationCache ApplicationCache
+		public static extern Crypto Crypto
 		{
-			get {
-				return default(ApplicationCache);
-			}
-		}
-
-		public static string Atob(string atob)
-		{
-			return null;
-		}
-
-		public static void Back()
-		{
-		}
-
-		public static void Blur()
-		{
-		}
-
-		public static string Btoa(string btoa)
-		{
-			return null;
-		}
-
-		public static void CancelAnimationFrame(int handle)
-		{
-		}
-
-		public static void CaptureEvents()
-		{
-		}
-
-		public static void Close()
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public static bool Closed
+		public static extern double DevicePixelRatio
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
-		public static bool Confirm()
-		{
-			return false;
-		}
+		public static extern bool DispatchEvent(Event @event);
 
-		public static bool Confirm(string message)
+		public static extern void Dump(string str);
+
+		public static extern bool Find();
+
+		public static extern bool Find(string str);
+
+		public static extern bool Find(string str, bool caseSensitive);
+
+		public static extern bool Find(string str, bool caseSensitive, bool backwards);
+
+		public static extern bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround);
+
+		public static extern bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround, bool wholeWord);
+
+		public static extern bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround, bool wholeWord, bool searchInFrames);
+
+		public static extern bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround, bool wholeWord, bool searchInFrames, bool showDialog);
+
+		public static extern void Focus();
+
+		public static extern void Forward();
+
+		[FieldProperty]
+		public static extern Element FrameElement
 		{
-			return false;
+			get;
 		}
 
 		[FieldProperty]
-		public static object Content
+		public static extern XmlElement[] Frames
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static Crypto Crypto
+		public static extern bool FullScreen
 		{
-			get {
-				return default(Crypto);
-			}
+			get;
+			set;
+		}
+
+		public static extern Style GetComputedStyle(Element elt);
+
+		public static extern Style GetComputedStyle(Element elt, string pseudoElt);
+
+		public static extern Style GetDefaultComputedStyle(Element elt);
+
+		public static extern Style GetDefaultComputedStyle(Element elt, string pseudoElt);
+
+		public static extern Selection GetSelection();
+
+		[FieldProperty]
+		public static extern History History
+		{
+			get;
+		}
+
+		public static extern void Home();
+
+		[FieldProperty]
+		public static extern Factory IndexedDB
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public static double DevicePixelRatio
+		public static extern int InnerHeight
 		{
-			get {
-				return 0;
-			}
-		}
-
-		public static bool DispatchEvent(Event @event)
-		{
-			return false;
-		}
-
-		public static void Dump(string str)
-		{
-		}
-
-		public static bool Find()
-		{
-			return false;
-		}
-
-		public static bool Find(string str)
-		{
-			return false;
-		}
-
-		public static bool Find(string str, bool caseSensitive)
-		{
-			return false;
-		}
-
-		public static bool Find(string str, bool caseSensitive, bool backwards)
-		{
-			return false;
-		}
-
-		public static bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround)
-		{
-			return false;
-		}
-
-		public static bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround, bool wholeWord)
-		{
-			return false;
-		}
-
-		public static bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround, bool wholeWord, bool searchInFrames)
-		{
-			return false;
-		}
-
-		public static bool Find(string str, bool caseSensitive, bool backwards, bool wrapAround, bool wholeWord, bool searchInFrames, bool showDialog)
-		{
-			return false;
-		}
-
-		public static void Focus()
-		{
-		}
-
-		public static void Forward()
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public static Element FrameElement
+		public static extern int InnerWidth
 		{
-			get {
-				return default(Element);
-			}
-		}
-
-		[FieldProperty]
-		public static XmlElement[] Frames
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public static bool FullScreen
-		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public static Style GetComputedStyle(Element elt)
-		{
-			return default(Style);
-		}
-
-		public static Style GetComputedStyle(Element elt, string pseudoElt)
-		{
-			return default(Style);
-		}
-
-		public static Style GetDefaultComputedStyle(Element elt)
-		{
-			return default(Style);
-		}
-
-		public static Style GetDefaultComputedStyle(Element elt, string pseudoElt)
-		{
-			return default(Style);
-		}
-
-		public static Selection GetSelection()
-		{
-			return default(Selection);
-		}
-
-		[FieldProperty]
-		public static History History
-		{
-			get {
-				return default(History);
-			}
-		}
-
-		public static void Home()
-		{
-		}
-
-		[FieldProperty]
-		public static Factory IndexedDB
-		{
-			get {
-				return default(Factory);
-			}
-		}
-
-		[FieldProperty]
-		public static int InnerHeight
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public static int InnerWidth
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("window")]
-		public static WindowInstance Instance
+		public static extern WindowInstance Instance
 		{
-			get {
-				return default(WindowInstance);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static int Length
+		public static extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static Storage LocalStorage
+		public static extern Storage LocalStorage
 		{
-			get {
-				return default(Storage);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static Location Location
+		public static extern Location Location
 		{
-			get {
-				return default(Location);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static BarProp Locationbar
+		public static extern BarProp Locationbar
 		{
-			get {
-				return default(BarProp);
-			}
+			get;
 		}
 
-		public static MediaQueryList MatchMedia(string query)
+		public static extern MediaQueryList MatchMedia(string query);
+
+		[FieldProperty]
+		public static extern BarProp Menubar
 		{
-			return default(MediaQueryList);
+			get;
+		}
+
+		public static extern void MoveBy(int x, int y);
+
+		public static extern void MoveTo(int x, int y);
+
+		[FieldProperty]
+		public static extern string Name
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public static BarProp Menubar
+		public static extern NavigatorInstance Navigator
 		{
-			get {
-				return default(BarProp);
-			}
-		}
-
-		public static void MoveBy(int x, int y)
-		{
-		}
-
-		public static void MoveTo(int x, int y)
-		{
-		}
-
-		[FieldProperty]
-		public static string Name
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public static NavigatorInstance Navigator
-		{
-			get {
-				return default(NavigatorInstance);
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onabort")]
-		public static HtmlEventHandler OnAbort
+		public static extern HtmlEventHandler OnAbort
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onafterprint")]
-		public static HtmlEventHandler OnAfterprint
+		public static extern HtmlEventHandler OnAfterprint
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onbeforeprint")]
-		public static HtmlEventHandler OnBeforeprint
+		public static extern HtmlEventHandler OnBeforeprint
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onbeforeunload")]
-		public static BeforeUnloadEventHandler OnBeforeunload
+		public static extern BeforeUnloadEventHandler OnBeforeunload
 		{
-			get {
-				return default(BeforeUnloadEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onblur")]
-		public static HtmlEventHandler OnBlur
+		public static extern HtmlEventHandler OnBlur
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncanplay")]
-		public static HtmlEventHandler OnCanplay
+		public static extern HtmlEventHandler OnCanplay
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncanplaythrough")]
-		public static HtmlEventHandler OnCanplaythrough
+		public static extern HtmlEventHandler OnCanplaythrough
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onchange")]
-		public static HtmlEventHandler OnChange
+		public static extern HtmlEventHandler OnChange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onclick")]
-		public static HtmlEventHandler OnClick
+		public static extern HtmlEventHandler OnClick
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncontextmenu")]
-		public static HtmlEventHandler OnContextmenu
+		public static extern HtmlEventHandler OnContextmenu
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondblclick")]
-		public static HtmlEventHandler OnDblclick
+		public static extern HtmlEventHandler OnDblclick
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondevicelight")]
-		public static HtmlEventHandler OnDevicelight
+		public static extern HtmlEventHandler OnDevicelight
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondevicemotion")]
-		public static HtmlEventHandler OnDevicemotion
+		public static extern HtmlEventHandler OnDevicemotion
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondeviceorientation")]
-		public static HtmlEventHandler OnDeviceorientation
+		public static extern HtmlEventHandler OnDeviceorientation
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondeviceproximity")]
-		public static HtmlEventHandler OnDeviceproximity
+		public static extern HtmlEventHandler OnDeviceproximity
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondrag")]
-		public static HtmlEventHandler OnDrag
+		public static extern HtmlEventHandler OnDrag
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragend")]
-		public static HtmlEventHandler OnDragend
+		public static extern HtmlEventHandler OnDragend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragenter")]
-		public static HtmlEventHandler OnDragenter
+		public static extern HtmlEventHandler OnDragenter
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragleave")]
-		public static HtmlEventHandler OnDragleave
+		public static extern HtmlEventHandler OnDragleave
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragover")]
-		public static HtmlEventHandler OnDragover
+		public static extern HtmlEventHandler OnDragover
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragstart")]
-		public static HtmlEventHandler OnDragstart
+		public static extern HtmlEventHandler OnDragstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondrop")]
-		public static HtmlEventHandler OnDrop
+		public static extern HtmlEventHandler OnDrop
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondurationchange")]
-		public static HtmlEventHandler OnDurationchange
+		public static extern HtmlEventHandler OnDurationchange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onemptied")]
-		public static HtmlEventHandler OnEmptied
+		public static extern HtmlEventHandler OnEmptied
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onended")]
-		public static HtmlEventHandler OnEnded
+		public static extern HtmlEventHandler OnEnded
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public static ErrorEventHandler OnError
+		public static extern ErrorEventHandler OnError
 		{
-			get {
-				return default(ErrorEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onfocus")]
-		public static HtmlEventHandler OnFocus
+		public static extern HtmlEventHandler OnFocus
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onhashchange")]
-		public static HtmlEventHandler OnHashchange
+		public static extern HtmlEventHandler OnHashchange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oninput")]
-		public static HtmlEventHandler OnInput
+		public static extern HtmlEventHandler OnInput
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oninvalid")]
-		public static HtmlEventHandler OnInvalid
+		public static extern HtmlEventHandler OnInvalid
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onkeydown")]
-		public static HtmlEventHandler OnKeydown
+		public static extern HtmlEventHandler OnKeydown
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onkeypress")]
-		public static HtmlEventHandler OnKeypress
+		public static extern HtmlEventHandler OnKeypress
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onkeyup")]
-		public static HtmlEventHandler OnKeyup
+		public static extern HtmlEventHandler OnKeyup
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onload")]
-		public static HtmlEventHandler OnLoad
+		public static extern HtmlEventHandler OnLoad
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadeddata")]
-		public static HtmlEventHandler OnLoadeddata
+		public static extern HtmlEventHandler OnLoadeddata
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadedmetadata")]
-		public static HtmlEventHandler OnLoadedmetadata
+		public static extern HtmlEventHandler OnLoadedmetadata
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadstart")]
-		public static HtmlEventHandler OnLoadstart
+		public static extern HtmlEventHandler OnLoadstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmessage")]
-		public static HtmlEventHandler OnMessage
+		public static extern HtmlEventHandler OnMessage
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmousedown")]
-		public static HtmlEventHandler OnMousedown
+		public static extern HtmlEventHandler OnMousedown
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseenter")]
-		public static HtmlEventHandler OnMouseenter
+		public static extern HtmlEventHandler OnMouseenter
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseleave")]
-		public static HtmlEventHandler OnMouseleave
+		public static extern HtmlEventHandler OnMouseleave
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmousemove")]
-		public static HtmlEventHandler OnMousemove
+		public static extern HtmlEventHandler OnMousemove
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseout")]
-		public static HtmlEventHandler OnMouseout
+		public static extern HtmlEventHandler OnMouseout
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseover")]
-		public static HtmlEventHandler OnMouseover
+		public static extern HtmlEventHandler OnMouseover
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseup")]
-		public static HtmlEventHandler OnMouseup
+		public static extern HtmlEventHandler OnMouseup
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onoffline")]
-		public static HtmlEventHandler OnOffline
+		public static extern HtmlEventHandler OnOffline
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ononline")]
-		public static HtmlEventHandler OnOnline
+		public static extern HtmlEventHandler OnOnline
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpagehide")]
-		public static HtmlEventHandler OnPagehide
+		public static extern HtmlEventHandler OnPagehide
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpageshow")]
-		public static HtmlEventHandler OnPageshow
+		public static extern HtmlEventHandler OnPageshow
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpause")]
-		public static HtmlEventHandler OnPause
+		public static extern HtmlEventHandler OnPause
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onplay")]
-		public static HtmlEventHandler OnPlay
+		public static extern HtmlEventHandler OnPlay
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onplaying")]
-		public static HtmlEventHandler OnPlaying
+		public static extern HtmlEventHandler OnPlaying
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointercancel")]
-		public static HtmlEventHandler OnPointercancel
+		public static extern HtmlEventHandler OnPointercancel
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerdown")]
-		public static HtmlEventHandler OnPointerdown
+		public static extern HtmlEventHandler OnPointerdown
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerenter")]
-		public static HtmlEventHandler OnPointerenter
+		public static extern HtmlEventHandler OnPointerenter
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerleave")]
-		public static HtmlEventHandler OnPointerleave
+		public static extern HtmlEventHandler OnPointerleave
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointermove")]
-		public static HtmlEventHandler OnPointermove
+		public static extern HtmlEventHandler OnPointermove
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerout")]
-		public static HtmlEventHandler OnPointerout
+		public static extern HtmlEventHandler OnPointerout
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerover")]
-		public static HtmlEventHandler OnPointerover
+		public static extern HtmlEventHandler OnPointerover
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerup")]
-		public static HtmlEventHandler OnPointerup
+		public static extern HtmlEventHandler OnPointerup
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpopstate")]
-		public static HtmlEventHandler OnPopstate
+		public static extern HtmlEventHandler OnPopstate
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onprogress")]
-		public static HtmlEventHandler OnProgress
+		public static extern HtmlEventHandler OnProgress
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onratechange")]
-		public static HtmlEventHandler OnRatechange
+		public static extern HtmlEventHandler OnRatechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onreset")]
-		public static HtmlEventHandler OnReset
+		public static extern HtmlEventHandler OnReset
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onresize")]
-		public static HtmlEventHandler OnResize
+		public static extern HtmlEventHandler OnResize
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onscroll")]
-		public static HtmlEventHandler OnScroll
+		public static extern HtmlEventHandler OnScroll
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onseeked")]
-		public static HtmlEventHandler OnSeeked
+		public static extern HtmlEventHandler OnSeeked
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onseeking")]
-		public static HtmlEventHandler OnSeeking
+		public static extern HtmlEventHandler OnSeeking
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onselect")]
-		public static HtmlEventHandler OnSelect
+		public static extern HtmlEventHandler OnSelect
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onshow")]
-		public static HtmlEventHandler OnShow
+		public static extern HtmlEventHandler OnShow
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onstalled")]
-		public static HtmlEventHandler OnStalled
+		public static extern HtmlEventHandler OnStalled
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onsubmit")]
-		public static HtmlEventHandler OnSubmit
+		public static extern HtmlEventHandler OnSubmit
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onsuspend")]
-		public static HtmlEventHandler OnSuspend
+		public static extern HtmlEventHandler OnSuspend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontimeupdate")]
-		public static HtmlEventHandler OnTimeupdate
+		public static extern HtmlEventHandler OnTimeupdate
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchcancel")]
-		public static HtmlEventHandler OnTouchcancel
+		public static extern HtmlEventHandler OnTouchcancel
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchend")]
-		public static HtmlEventHandler OnTouchend
+		public static extern HtmlEventHandler OnTouchend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchenter")]
-		public static HtmlEventHandler OnTouchenter
+		public static extern HtmlEventHandler OnTouchenter
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchleave")]
-		public static HtmlEventHandler OnTouchleave
+		public static extern HtmlEventHandler OnTouchleave
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchmove")]
-		public static HtmlEventHandler OnTouchmove
+		public static extern HtmlEventHandler OnTouchmove
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchstart")]
-		public static HtmlEventHandler OnTouchstart
+		public static extern HtmlEventHandler OnTouchstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onunload")]
-		public static HtmlEventHandler OnUnload
+		public static extern HtmlEventHandler OnUnload
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onuserproximity")]
-		public static HtmlEventHandler OnUserproximity
+		public static extern HtmlEventHandler OnUserproximity
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onvolumechange")]
-		public static HtmlEventHandler OnVolumechange
+		public static extern HtmlEventHandler OnVolumechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onwaiting")]
-		public static HtmlEventHandler OnWaiting
+		public static extern HtmlEventHandler OnWaiting
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public static WindowInstance Open()
-		{
-			return default(WindowInstance);
-		}
+		public static extern WindowInstance Open();
 
-		public static WindowInstance Open(string url)
-		{
-			return default(WindowInstance);
-		}
+		public static extern WindowInstance Open(string url);
 
-		public static WindowInstance Open(string url, string target)
-		{
-			return default(WindowInstance);
-		}
+		public static extern WindowInstance Open(string url, string target);
 
-		public static WindowInstance Open(string url, string target, string features)
+		public static extern WindowInstance Open(string url, string target, string features);
+
+		[FieldProperty]
+		public static extern WindowInstance Opener
 		{
-			return default(WindowInstance);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public static WindowInstance Opener
+		public static extern int OuterHeight
 		{
-			get {
-				return default(WindowInstance);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public static int OuterHeight
+		public static extern int OuterWidth
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public static int OuterWidth
+		public static extern int PageXOffset
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static int PageXOffset
+		public static extern int PageYOffset
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static int PageYOffset
+		public static extern WindowInstance Parent
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static WindowInstance Parent
+		public static extern PerformanceDetails Performance
 		{
-			get {
-				return default(WindowInstance);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public static PerformanceDetails Performance
+		public static extern BarProp Personalbar
 		{
-			get {
-				return default(PerformanceDetails);
-			}
+			get;
+		}
+
+		public static extern void PostMessage(object message, string targetOrigin);
+
+		public static extern void PostMessage(object message, string targetOrigin, object[] transfer);
+
+		public static extern void Print();
+
+		public static extern string Prompt();
+
+		public static extern string Prompt(string message);
+
+		public static extern string Prompt(string message, string @default);
+
+		public static extern void ReleaseEvents();
+
+		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener);
+
+		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture);
+
+		public static extern void RemoveEventListener(string type, IEventListener listener);
+
+		public static extern void RemoveEventListener(string type, IEventListener listener, bool capture);
+
+		public static extern void RemoveEventListener(WindowInstanceEvents type, Action listener);
+
+		public static extern void RemoveEventListener(WindowInstanceEvents type, Action listener, bool capture);
+
+		public static extern void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandler listener);
+
+		public static extern void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandler listener, bool capture);
+
+		public static extern void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener);
+
+		public static extern void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture);
+
+		public static extern void RemoveEventListener(WindowInstanceEvents type, IEventListener listener);
+
+		public static extern void RemoveEventListener(WindowInstanceEvents type, IEventListener listener, bool capture);
+
+		public static extern int RequestAnimationFrame(FrameRequestCallback callback);
+
+		public static extern void ResizeBy(int x, int y);
+
+		public static extern void ResizeTo(int x, int y);
+
+		[FieldProperty]
+		public static extern Screen Screen
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public static BarProp Personalbar
+		public static extern int ScreenX
 		{
-			get {
-				return default(BarProp);
-			}
-		}
-
-		public static void PostMessage(object message, string targetOrigin)
-		{
-		}
-
-		public static void PostMessage(object message, string targetOrigin, object[] transfer)
-		{
-		}
-
-		public static void Print()
-		{
-		}
-
-		public static string Prompt()
-		{
-			return null;
-		}
-
-		public static string Prompt(string message)
-		{
-			return null;
-		}
-
-		public static string Prompt(string message, string @default)
-		{
-			return null;
-		}
-
-		public static void ReleaseEvents()
-		{
-		}
-
-		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener)
-		{
-		}
-
-		public static void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture)
-		{
-		}
-
-		public static void RemoveEventListener(string type, IEventListener listener)
-		{
-		}
-
-		public static void RemoveEventListener(string type, IEventListener listener, bool capture)
-		{
-		}
-
-		public static void RemoveEventListener(WindowInstanceEvents type, Action listener)
-		{
-		}
-
-		public static void RemoveEventListener(WindowInstanceEvents type, Action listener, bool capture)
-		{
-		}
-
-		public static void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public static void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public static void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener)
-		{
-		}
-
-		public static void RemoveEventListener(WindowInstanceEvents type, HtmlEventHandlerWithTarget<WindowInstance> listener, bool capture)
-		{
-		}
-
-		public static void RemoveEventListener(WindowInstanceEvents type, IEventListener listener)
-		{
-		}
-
-		public static void RemoveEventListener(WindowInstanceEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public static int RequestAnimationFrame(FrameRequestCallback callback)
-		{
-			return 0;
-		}
-
-		public static void ResizeBy(int x, int y)
-		{
-		}
-
-		public static void ResizeTo(int x, int y)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public static Screen Screen
+		public static extern int ScreenY
 		{
-			get {
-				return default(Screen);
-			}
+			get;
+			set;
+		}
+
+		public static extern void Scroll(int x, int y);
+
+		[FieldProperty]
+		public static extern BarProp Scrollbars
+		{
+			get;
+		}
+
+		public static extern void ScrollBy(int x, int y);
+
+		public static extern void ScrollByLines(int numLines);
+
+		public static extern void ScrollByPages(int numPages);
+
+		[FieldProperty]
+		public static extern int ScrollMaxX
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public static int ScreenX
+		public static extern int ScrollMaxY
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+		}
+
+		public static extern void ScrollTo(int x, int y);
+
+		[FieldProperty]
+		public static extern int ScrollX
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public static int ScreenY
+		public static extern int ScrollY
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public static void Scroll(int x, int y)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public static BarProp Scrollbars
+		public static extern WindowInstance Self
 		{
-			get {
-				return default(BarProp);
-			}
-		}
-
-		public static void ScrollBy(int x, int y)
-		{
-		}
-
-		public static void ScrollByLines(int numLines)
-		{
-		}
-
-		public static void ScrollByPages(int numPages)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public static int ScrollMaxX
+		public static extern Storage SessionStorage
 		{
-			get {
-				return 0;
-			}
+			get;
+		}
+
+		public static extern void SetResizable(bool resizable);
+
+		public static extern object ShowModalDialog(string url, object argument);
+
+		public static extern object ShowModalDialog(string url, object argument, string options);
+
+		public static extern void SizeToContent();
+
+		[FieldProperty]
+		public static extern string Status
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public static int ScrollMaxY
+		public static extern BarProp Statusbar
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		public static void ScrollTo(int x, int y)
+		public static extern void Stop();
+
+		public static extern string ToNativeLineEndings(string @string);
+
+		[FieldProperty]
+		public static extern BarProp Toolbar
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public static int ScrollX
+		public static extern WindowInstance Top
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public static int ScrollY
-		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public static WindowInstance Self
-		{
-			get {
-				return default(WindowInstance);
-			}
-		}
-
-		[FieldProperty]
-		public static Storage SessionStorage
-		{
-			get {
-				return default(Storage);
-			}
-		}
-
-		public static void SetResizable(bool resizable)
-		{
-		}
-
-		public static object ShowModalDialog(string url, object argument)
-		{
-			return null;
-		}
-
-		public static object ShowModalDialog(string url, object argument, string options)
-		{
-			return null;
-		}
-
-		public static void SizeToContent()
-		{
-		}
-
-		[FieldProperty]
-		public static string Status
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public static BarProp Statusbar
-		{
-			get {
-				return default(BarProp);
-			}
-		}
-
-		public static void Stop()
-		{
-		}
-
-		public static string ToNativeLineEndings(string @string)
-		{
-			return null;
-		}
-
-		[FieldProperty]
-		public static BarProp Toolbar
-		{
-			get {
-				return default(BarProp);
-			}
-		}
-
-		[FieldProperty]
-		public static WindowInstance Top
-		{
-			get {
-				return default(WindowInstance);
-			}
-		}
-
-		public static void UpdateCommands(string action)
-		{
-		}
+		public static extern void UpdateCommands(string action);
 	}
 }

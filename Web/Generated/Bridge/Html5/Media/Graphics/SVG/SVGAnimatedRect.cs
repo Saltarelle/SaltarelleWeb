@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimatedRect
 	{
-		internal SVGAnimatedRect()
+		internal extern SVGAnimatedRect();
+
+		[FieldProperty]
+		public extern SVGRect AnimVal
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGRect AnimVal
+		public extern SVGRect BaseVal
 		{
-			get {
-				return default(SVGRect);
-			}
-		}
-
-		[FieldProperty]
-		public SVGRect BaseVal
-		{
-			get {
-				return default(SVGRect);
-			}
+			get;
 		}
 	}
 }

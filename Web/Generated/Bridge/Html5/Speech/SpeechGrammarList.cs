@@ -5,51 +5,31 @@ namespace Bridge.Html5.Speech
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechGrammarList
 	{
-		internal SpeechGrammarList()
-		{
-		}
+		internal extern SpeechGrammarList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public SpeechGrammar this[int index]
 		{
-			get {
-				return default(SpeechGrammar);
-			}
+			get;
 		}
 
-		public void AddFromString(string @string)
-		{
-		}
+		public extern void AddFromString(string @string);
 
-		public void AddFromString(string @string, double weight)
-		{
-		}
+		public extern void AddFromString(string @string, double weight);
 
-		public void AddFromURI(string src)
-		{
-		}
+		public extern void AddFromURI(string src);
 
-		public void AddFromURI(string src, double weight)
-		{
-		}
+		public extern void AddFromURI(string src, double weight);
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<SpeechGrammar> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<SpeechGrammar> GetEnumerator();
 
-		public SpeechGrammar Item(int index)
-		{
-			return default(SpeechGrammar);
-		}
+		public extern SpeechGrammar Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

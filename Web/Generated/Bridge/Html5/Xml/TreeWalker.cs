@@ -3,77 +3,45 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TreeWalker
 	{
-		internal TreeWalker()
+		internal extern TreeWalker();
+
+		[FieldProperty]
+		public extern XmlNode CurrentNode
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public XmlNode CurrentNode
+		public extern INodeFilter Filter
 		{
-			get {
-				return default(XmlNode);
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern XmlNode FirstChild();
+
+		public extern XmlNode LastChild();
+
+		public extern XmlNode NextNode();
+
+		public extern XmlNode NextSibling();
+
+		public extern XmlNode ParentNode();
+
+		public extern XmlNode PreviousNode();
+
+		public extern XmlNode PreviousSibling();
+
+		[FieldProperty]
+		public extern XmlNode Root
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public INodeFilter Filter
+		public extern NodeFilter WhatToShow
 		{
-			get {
-				return default(INodeFilter);
-			}
-		}
-
-		public XmlNode FirstChild()
-		{
-			return default(XmlNode);
-		}
-
-		public XmlNode LastChild()
-		{
-			return default(XmlNode);
-		}
-
-		public XmlNode NextNode()
-		{
-			return default(XmlNode);
-		}
-
-		public XmlNode NextSibling()
-		{
-			return default(XmlNode);
-		}
-
-		public XmlNode ParentNode()
-		{
-			return default(XmlNode);
-		}
-
-		public XmlNode PreviousNode()
-		{
-			return default(XmlNode);
-		}
-
-		public XmlNode PreviousSibling()
-		{
-			return default(XmlNode);
-		}
-
-		[FieldProperty]
-		public XmlNode Root
-		{
-			get {
-				return default(XmlNode);
-			}
-		}
-
-		[FieldProperty]
-		public NodeFilter WhatToShow
-		{
-			get {
-				return default(NodeFilter);
-			}
+			get;
 		}
 	}
 }

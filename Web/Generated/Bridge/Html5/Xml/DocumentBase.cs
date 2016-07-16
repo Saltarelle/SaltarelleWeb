@@ -8,1380 +8,868 @@ namespace Bridge.Html5.Xml
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Document")]
 	public partial class DocumentBase : XmlNode, IXPathEvaluator, IGeometryUtils
 	{
-		public DocumentBase()
+		public extern DocumentBase();
+
+		[FieldProperty]
+		public extern XmlElement ActiveElement
 		{
+			get;
+		}
+
+		public extern void AddEventListener(DocumentBaseEvents type, Action listener);
+
+		public extern void AddEventListener(DocumentBaseEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(DocumentBaseEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(DocumentBaseEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener);
+
+		public extern void AddEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture);
+
+		public extern void AddEventListener(DocumentBaseEvents type, IEventListener listener);
+
+		public extern void AddEventListener(DocumentBaseEvents type, IEventListener listener, bool capture);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture);
+
+		public extern XmlNode AdoptNode(XmlNode node);
+
+		public extern CaretPosition CaretPositionFromPoint(double x, double y);
+
+		[FieldProperty]
+		public extern string CharacterSet
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElement ActiveElement
+		public extern int ChildElementCount
 		{
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		public void AddEventListener(DocumentBaseEvents type, Action listener)
-		{
-		}
-
-		public void AddEventListener(DocumentBaseEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(DocumentBaseEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void AddEventListener(DocumentBaseEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener)
-		{
-		}
-
-		public void AddEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(DocumentBaseEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(DocumentBaseEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture)
-		{
-		}
-
-		public XmlNode AdoptNode(XmlNode node)
-		{
-			return default(XmlNode);
-		}
-
-		public CaretPosition CaretPositionFromPoint(double x, double y)
-		{
-			return default(CaretPosition);
+			get;
 		}
 
 		[FieldProperty]
-		public string CharacterSet
+		public extern XmlElementCollection Children
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int ChildElementCount
+		public extern string CompatMode
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElementCollection Children
+		public extern string ContentType
 		{
-			get {
-				return default(XmlElementCollection);
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public string CompatMode
-		{
-			get {
-				return null;
-			}
-		}
+		public extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from);
 
-		[FieldProperty]
-		public string ContentType
-		{
-			get {
-				return null;
-			}
-		}
+		public extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
 
-		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from)
-		{
-			return default(DOMPoint);
-		}
+		public extern DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from);
 
-		public DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options)
-		{
-			return default(DOMPoint);
-		}
+		public extern DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
 
-		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from)
-		{
-			return default(DOMQuad);
-		}
+		public extern DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from);
 
-		public DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options)
-		{
-			return default(DOMQuad);
-		}
+		public extern DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
 
-		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from)
-		{
-			return default(DOMQuad);
-		}
+		public extern XmlAttribute CreateAttribute(string name);
 
-		public DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options)
-		{
-			return default(DOMQuad);
-		}
+		public extern XmlAttribute CreateAttributeNS(string @namespace, string name);
 
-		public XmlAttribute CreateAttribute(string name)
-		{
-			return default(XmlAttribute);
-		}
+		public extern XmlCDataSection CreateCDATASection(string data);
 
-		public XmlAttribute CreateAttributeNS(string @namespace, string name)
-		{
-			return default(XmlAttribute);
-		}
+		public extern XmlComment CreateComment(string data);
 
-		public XmlCDataSection CreateCDATASection(string data)
-		{
-			return default(XmlCDataSection);
-		}
+		public extern XmlDocumentFragment CreateDocumentFragment();
 
-		public XmlComment CreateComment(string data)
-		{
-			return default(XmlComment);
-		}
+		public extern XmlElement CreateElement(string localName);
 
-		public XmlDocumentFragment CreateDocumentFragment()
-		{
-			return default(XmlDocumentFragment);
-		}
+		public extern XmlElement CreateElement(string localName, string typeExtension);
 
-		public XmlElement CreateElement(string localName)
-		{
-			return default(XmlElement);
-		}
+		public extern XmlElement CreateElementNS(string @namespace, string qualifiedName);
 
-		public XmlElement CreateElement(string localName, string typeExtension)
-		{
-			return default(XmlElement);
-		}
+		public extern XmlElement CreateElementNS(string @namespace, string qualifiedName, string typeExtension);
 
-		public XmlElement CreateElementNS(string @namespace, string qualifiedName)
-		{
-			return default(XmlElement);
-		}
+		public extern Event CreateEvent(string @interface);
 
-		public XmlElement CreateElementNS(string @namespace, string qualifiedName, string typeExtension)
-		{
-			return default(XmlElement);
-		}
+		public extern XPathExpression CreateExpression(string expression, XPathNSResolver resolver);
 
-		public Event CreateEvent(string @interface)
-		{
-			return default(Event);
-		}
+		public extern NodeIterator CreateNodeIterator(XmlNode root);
 
-		public XPathExpression CreateExpression(string expression, XPathNSResolver resolver)
-		{
-			return default(XPathExpression);
-		}
+		public extern NodeIterator CreateNodeIterator(XmlNode root, NodeFilter whatToShow);
 
-		public NodeIterator CreateNodeIterator(XmlNode root)
-		{
-			return default(NodeIterator);
-		}
+		public extern NodeIterator CreateNodeIterator(XmlNode root, NodeFilter whatToShow, INodeFilter filter);
 
-		public NodeIterator CreateNodeIterator(XmlNode root, NodeFilter whatToShow)
-		{
-			return default(NodeIterator);
-		}
+		public extern XPathNSResolver CreateNSResolver(XmlNode nodeResolver);
 
-		public NodeIterator CreateNodeIterator(XmlNode root, NodeFilter whatToShow, INodeFilter filter)
-		{
-			return default(NodeIterator);
-		}
+		public extern XmlProcessingInstruction CreateProcessingInstruction(string target, string data);
 
-		public XPathNSResolver CreateNSResolver(XmlNode nodeResolver)
-		{
-			return default(XPathNSResolver);
-		}
+		public extern Range CreateRange();
 
-		public XmlProcessingInstruction CreateProcessingInstruction(string target, string data)
-		{
-			return default(XmlProcessingInstruction);
-		}
+		public extern XmlText CreateTextNode(string data);
 
-		public Range CreateRange()
-		{
-			return default(Range);
-		}
+		public extern Touch CreateTouch();
 
-		public XmlText CreateTextNode(string data)
-		{
-			return default(XmlText);
-		}
+		public extern Touch CreateTouch(WindowInstance view);
 
-		public Touch CreateTouch()
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target);
 
-		public Touch CreateTouch(WindowInstance view)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY)
-		{
-			return default(Touch);
-		}
+		public extern Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle, double force);
 
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle)
-		{
-			return default(Touch);
-		}
-
-		public Touch CreateTouch(WindowInstance view, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int clientX, int clientY, int radiusX, int radiusY, double rotationAngle, double force)
-		{
-			return default(Touch);
-		}
-
-		public TouchList CreateTouchList()
-		{
-			return default(TouchList);
-		}
+		public extern TouchList CreateTouchList();
 
 		[ExpandParams]
-		public TouchList CreateTouchList(Touch touch, params Touch[] touches)
-		{
-			return default(TouchList);
-		}
+		public extern TouchList CreateTouchList(Touch touch, params Touch[] touches);
 
-		public TouchList CreateTouchList(Touch[] touches)
-		{
-			return default(TouchList);
-		}
+		public extern TouchList CreateTouchList(Touch[] touches);
 
-		public TreeWalker CreateTreeWalker(XmlNode root)
-		{
-			return default(TreeWalker);
-		}
+		public extern TreeWalker CreateTreeWalker(XmlNode root);
 
-		public TreeWalker CreateTreeWalker(XmlNode root, NodeFilter whatToShow)
-		{
-			return default(TreeWalker);
-		}
+		public extern TreeWalker CreateTreeWalker(XmlNode root, NodeFilter whatToShow);
 
-		public TreeWalker CreateTreeWalker(XmlNode root, NodeFilter whatToShow, INodeFilter filter)
+		public extern TreeWalker CreateTreeWalker(XmlNode root, NodeFilter whatToShow, INodeFilter filter);
+
+		[FieldProperty]
+		public extern XmlElement CurrentScript
 		{
-			return default(TreeWalker);
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElement CurrentScript
+		public extern WindowInstance DefaultView
 		{
-			get {
-				return default(XmlElement);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public WindowInstance DefaultView
+		public extern string Dir
 		{
-			get {
-				return default(WindowInstance);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Dir
+		public extern DocumentType Doctype
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DocumentType Doctype
+		public extern XmlElement DocumentElement
 		{
-			get {
-				return default(DocumentType);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElement DocumentElement
+		public extern string DocumentURI
 		{
-			get {
-				return default(XmlElement);
-			}
+			get;
+		}
+
+		public extern XmlElement ElementFromPoint(double x, double y);
+
+		public extern void EnableStyleSheetsForSet(string name);
+
+		public extern XPathResult Evaluate(string expression, XmlNode contextNode, XPathNSResolver resolver, ushort type, XPathResult result);
+
+		[FieldProperty]
+		public extern XmlElement FirstElementChild
+		{
+			get;
+		}
+
+		public extern DOMQuad[] GetBoxQuads();
+
+		public extern DOMQuad[] GetBoxQuads(BoxQuadOptions options);
+
+		public extern XmlElement GetElementById(string elementId);
+
+		public extern XmlElementCollection GetElementsByClassName(string classNames);
+
+		public extern XmlElementCollection GetElementsByTagName(string localName);
+
+		public extern XmlElementCollection GetElementsByTagNameNS(string @namespace, string localName);
+
+		public extern bool HasFocus();
+
+		[FieldProperty]
+		public extern bool Hidden
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public string DocumentURI
+		public extern DOMImplementation Implementation
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public XmlElement ElementFromPoint(double x, double y)
-		{
-			return default(XmlElement);
-		}
+		public extern XmlNode ImportNode(XmlNode node);
 
-		public void EnableStyleSheetsForSet(string name)
-		{
-		}
+		public extern XmlNode ImportNode(XmlNode node, bool deep);
 
-		public XPathResult Evaluate(string expression, XmlNode contextNode, XPathNSResolver resolver, ushort type, XPathResult result)
+		[FieldProperty]
+		public extern string InputEncoding
 		{
-			return default(XPathResult);
+			get;
 		}
 
 		[FieldProperty]
-		public XmlElement FirstElementChild
+		public extern XmlElement LastElementChild
 		{
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		public DOMQuad[] GetBoxQuads()
-		{
-			return null;
-		}
-
-		public DOMQuad[] GetBoxQuads(BoxQuadOptions options)
-		{
-			return null;
-		}
-
-		public XmlElement GetElementById(string elementId)
-		{
-			return default(XmlElement);
-		}
-
-		public XmlElementCollection GetElementsByClassName(string classNames)
-		{
-			return default(XmlElementCollection);
-		}
-
-		public XmlElementCollection GetElementsByTagName(string localName)
-		{
-			return default(XmlElementCollection);
-		}
-
-		public XmlElementCollection GetElementsByTagNameNS(string @namespace, string localName)
-		{
-			return default(XmlElementCollection);
-		}
-
-		public bool HasFocus()
-		{
-			return false;
+			get;
 		}
 
 		[FieldProperty]
-		public bool Hidden
+		public extern string LastModified
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DOMImplementation Implementation
+		public extern string LastStyleSheetSet
 		{
-			get {
-				return default(DOMImplementation);
-			}
-		}
-
-		public XmlNode ImportNode(XmlNode node)
-		{
-			return default(XmlNode);
-		}
-
-		public XmlNode ImportNode(XmlNode node, bool deep)
-		{
-			return default(XmlNode);
+			get;
 		}
 
 		[FieldProperty]
-		public string InputEncoding
+		public extern Location Location
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public XmlElement LastElementChild
-		{
-			get {
-				return default(XmlElement);
-			}
-		}
-
-		[FieldProperty]
-		public string LastModified
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string LastStyleSheetSet
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public Location Location
-		{
-			get {
-				return default(Location);
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onabort")]
-		public HtmlEventHandler OnAbort
+		public extern HtmlEventHandler OnAbort
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onafterscriptexecute")]
-		public HtmlEventHandler OnAfterscriptexecute
+		public extern HtmlEventHandler OnAfterscriptexecute
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onbeforescriptexecute")]
-		public HtmlEventHandler OnBeforescriptexecute
+		public extern HtmlEventHandler OnBeforescriptexecute
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onblur")]
-		public HtmlEventHandler OnBlur
+		public extern HtmlEventHandler OnBlur
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncanplay")]
-		public HtmlEventHandler OnCanplay
+		public extern HtmlEventHandler OnCanplay
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncanplaythrough")]
-		public HtmlEventHandler OnCanplaythrough
+		public extern HtmlEventHandler OnCanplaythrough
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onchange")]
-		public HtmlEventHandler OnChange
+		public extern HtmlEventHandler OnChange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onclick")]
-		public HtmlEventHandler OnClick
+		public extern HtmlEventHandler OnClick
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncontextmenu")]
-		public HtmlEventHandler OnContextmenu
+		public extern HtmlEventHandler OnContextmenu
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncopy")]
-		public HtmlEventHandler OnCopy
+		public extern HtmlEventHandler OnCopy
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncut")]
-		public HtmlEventHandler OnCut
+		public extern HtmlEventHandler OnCut
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondblclick")]
-		public HtmlEventHandler OnDblclick
+		public extern HtmlEventHandler OnDblclick
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondrag")]
-		public HtmlEventHandler OnDrag
+		public extern HtmlEventHandler OnDrag
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragend")]
-		public HtmlEventHandler OnDragend
+		public extern HtmlEventHandler OnDragend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragenter")]
-		public HtmlEventHandler OnDragenter
+		public extern HtmlEventHandler OnDragenter
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragleave")]
-		public HtmlEventHandler OnDragleave
+		public extern HtmlEventHandler OnDragleave
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragover")]
-		public HtmlEventHandler OnDragover
+		public extern HtmlEventHandler OnDragover
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondragstart")]
-		public HtmlEventHandler OnDragstart
+		public extern HtmlEventHandler OnDragstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondrop")]
-		public HtmlEventHandler OnDrop
+		public extern HtmlEventHandler OnDrop
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondurationchange")]
-		public HtmlEventHandler OnDurationchange
+		public extern HtmlEventHandler OnDurationchange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onemptied")]
-		public HtmlEventHandler OnEmptied
+		public extern HtmlEventHandler OnEmptied
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onended")]
-		public HtmlEventHandler OnEnded
+		public extern HtmlEventHandler OnEnded
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onfocus")]
-		public HtmlEventHandler OnFocus
+		public extern HtmlEventHandler OnFocus
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oninput")]
-		public HtmlEventHandler OnInput
+		public extern HtmlEventHandler OnInput
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oninvalid")]
-		public HtmlEventHandler OnInvalid
+		public extern HtmlEventHandler OnInvalid
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onkeydown")]
-		public HtmlEventHandler OnKeydown
+		public extern HtmlEventHandler OnKeydown
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onkeypress")]
-		public HtmlEventHandler OnKeypress
+		public extern HtmlEventHandler OnKeypress
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onkeyup")]
-		public HtmlEventHandler OnKeyup
+		public extern HtmlEventHandler OnKeyup
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onload")]
-		public HtmlEventHandler OnLoad
+		public extern HtmlEventHandler OnLoad
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadeddata")]
-		public HtmlEventHandler OnLoadeddata
+		public extern HtmlEventHandler OnLoadeddata
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadedmetadata")]
-		public HtmlEventHandler OnLoadedmetadata
+		public extern HtmlEventHandler OnLoadedmetadata
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onloadstart")]
-		public HtmlEventHandler OnLoadstart
+		public extern HtmlEventHandler OnLoadstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmousedown")]
-		public HtmlEventHandler OnMousedown
+		public extern HtmlEventHandler OnMousedown
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseenter")]
-		public HtmlEventHandler OnMouseenter
+		public extern HtmlEventHandler OnMouseenter
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseleave")]
-		public HtmlEventHandler OnMouseleave
+		public extern HtmlEventHandler OnMouseleave
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmousemove")]
-		public HtmlEventHandler OnMousemove
+		public extern HtmlEventHandler OnMousemove
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseout")]
-		public HtmlEventHandler OnMouseout
+		public extern HtmlEventHandler OnMouseout
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseover")]
-		public HtmlEventHandler OnMouseover
+		public extern HtmlEventHandler OnMouseover
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onmouseup")]
-		public HtmlEventHandler OnMouseup
+		public extern HtmlEventHandler OnMouseup
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpaste")]
-		public HtmlEventHandler OnPaste
+		public extern HtmlEventHandler OnPaste
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpause")]
-		public HtmlEventHandler OnPause
+		public extern HtmlEventHandler OnPause
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onplay")]
-		public HtmlEventHandler OnPlay
+		public extern HtmlEventHandler OnPlay
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onplaying")]
-		public HtmlEventHandler OnPlaying
+		public extern HtmlEventHandler OnPlaying
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointercancel")]
-		public HtmlEventHandler OnPointercancel
+		public extern HtmlEventHandler OnPointercancel
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerdown")]
-		public HtmlEventHandler OnPointerdown
+		public extern HtmlEventHandler OnPointerdown
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerenter")]
-		public HtmlEventHandler OnPointerenter
+		public extern HtmlEventHandler OnPointerenter
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerleave")]
-		public HtmlEventHandler OnPointerleave
+		public extern HtmlEventHandler OnPointerleave
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointermove")]
-		public HtmlEventHandler OnPointermove
+		public extern HtmlEventHandler OnPointermove
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerout")]
-		public HtmlEventHandler OnPointerout
+		public extern HtmlEventHandler OnPointerout
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerover")]
-		public HtmlEventHandler OnPointerover
+		public extern HtmlEventHandler OnPointerover
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onpointerup")]
-		public HtmlEventHandler OnPointerup
+		public extern HtmlEventHandler OnPointerup
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onprogress")]
-		public HtmlEventHandler OnProgress
+		public extern HtmlEventHandler OnProgress
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onratechange")]
-		public HtmlEventHandler OnRatechange
+		public extern HtmlEventHandler OnRatechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onreadystatechange")]
-		public HtmlEventHandler OnReadystatechange
+		public extern HtmlEventHandler OnReadystatechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onreset")]
-		public HtmlEventHandler OnReset
+		public extern HtmlEventHandler OnReset
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onscroll")]
-		public HtmlEventHandler OnScroll
+		public extern HtmlEventHandler OnScroll
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onseeked")]
-		public HtmlEventHandler OnSeeked
+		public extern HtmlEventHandler OnSeeked
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onseeking")]
-		public HtmlEventHandler OnSeeking
+		public extern HtmlEventHandler OnSeeking
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onselect")]
-		public HtmlEventHandler OnSelect
+		public extern HtmlEventHandler OnSelect
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onshow")]
-		public HtmlEventHandler OnShow
+		public extern HtmlEventHandler OnShow
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onstalled")]
-		public HtmlEventHandler OnStalled
+		public extern HtmlEventHandler OnStalled
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onsubmit")]
-		public HtmlEventHandler OnSubmit
+		public extern HtmlEventHandler OnSubmit
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onsuspend")]
-		public HtmlEventHandler OnSuspend
+		public extern HtmlEventHandler OnSuspend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontimeupdate")]
-		public HtmlEventHandler OnTimeupdate
+		public extern HtmlEventHandler OnTimeupdate
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchcancel")]
-		public HtmlEventHandler OnTouchcancel
+		public extern HtmlEventHandler OnTouchcancel
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchend")]
-		public HtmlEventHandler OnTouchend
+		public extern HtmlEventHandler OnTouchend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchenter")]
-		public HtmlEventHandler OnTouchenter
+		public extern HtmlEventHandler OnTouchenter
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchleave")]
-		public HtmlEventHandler OnTouchleave
+		public extern HtmlEventHandler OnTouchleave
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchmove")]
-		public HtmlEventHandler OnTouchmove
+		public extern HtmlEventHandler OnTouchmove
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ontouchstart")]
-		public HtmlEventHandler OnTouchstart
+		public extern HtmlEventHandler OnTouchstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onvolumechange")]
-		public HtmlEventHandler OnVolumechange
+		public extern HtmlEventHandler OnVolumechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onwaiting")]
-		public HtmlEventHandler OnWaiting
+		public extern HtmlEventHandler OnWaiting
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onwheel")]
-		public HtmlEventHandler OnWheel
+		public extern HtmlEventHandler OnWheel
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string PreferredStyleSheetSet
+		public extern string PreferredStyleSheetSet
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public XmlElement QuerySelector(string selectors)
-		{
-			return default(XmlElement);
-		}
+		public extern XmlElement QuerySelector(string selectors);
 
-		public XmlNodeList QuerySelectorAll(string selectors)
+		public extern XmlNodeList QuerySelectorAll(string selectors);
+
+		[FieldProperty]
+		public extern string ReadyState
 		{
-			return default(XmlNodeList);
+			get;
 		}
 
 		[FieldProperty]
-		public string ReadyState
+		public extern string Referrer
 		{
-			get {
-				return null;
-			}
+			get;
+		}
+
+		public extern object RegisterElement(string name);
+
+		public extern object RegisterElement(string name, ElementRegistrationOptions options);
+
+		public extern void ReleaseCapture();
+
+		public extern void RemoveEventListener(DocumentBaseEvents type, Action listener);
+
+		public extern void RemoveEventListener(DocumentBaseEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener);
+
+		public extern void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture);
+
+		public extern void RemoveEventListener(DocumentBaseEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(DocumentBaseEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture);
+
+		[FieldProperty]
+		public extern string SelectedStyleSheetSet
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Referrer
+		public extern StyleSheetList StyleSheets
 		{
-			get {
-				return null;
-			}
-		}
-
-		public object RegisterElement(string name)
-		{
-			return null;
-		}
-
-		public object RegisterElement(string name, ElementRegistrationOptions options)
-		{
-			return null;
-		}
-
-		public void ReleaseCapture()
-		{
-		}
-
-		public void RemoveEventListener(DocumentBaseEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(DocumentBaseEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener)
-		{
-		}
-
-		public void RemoveEventListener(DocumentBaseEvents type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(DocumentBaseEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(DocumentBaseEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public string SelectedStyleSheetSet
+		public extern DOMStringList StyleSheetSets
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public StyleSheetList StyleSheets
+		public extern string Title
 		{
-			get {
-				return default(StyleSheetList);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public DOMStringList StyleSheetSets
+		public extern string URL
 		{
-			get {
-				return default(DOMStringList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Title
+		public extern VisibilityState VisibilityState
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string URL
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public VisibilityState VisibilityState
-		{
-			get {
-				return default(VisibilityState);
-			}
+			get;
 		}
 	}
 }

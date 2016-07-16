@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class WebGLExtensionElementIndexUint
 	{
-		internal WebGLExtensionElementIndexUint()
-		{
-		}
+		internal extern WebGLExtensionElementIndexUint();
 	}
 }

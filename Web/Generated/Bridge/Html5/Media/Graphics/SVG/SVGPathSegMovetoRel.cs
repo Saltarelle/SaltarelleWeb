@@ -3,28 +3,20 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPathSegMovetoRel : SVGPathSeg
 	{
-		internal SVGPathSegMovetoRel()
+		internal extern SVGPathSegMovetoRel();
+
+		[FieldProperty]
+		public extern double X
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double X
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Y
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

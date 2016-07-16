@@ -3,128 +3,76 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGUseElement : SVGGraphicsElement
 	{
-		internal SVGUseElement()
-		{
-		}
+		internal extern SVGUseElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGUseElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGUseElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGUseElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGUseElement> listener, bool capture);
 
-		public void AddEventListener(SVGUseElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGUseElementEvents type, Action listener);
 
-		public void AddEventListener(SVGUseElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGUseElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGUseElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGUseElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGUseElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGUseElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGUseElementEvents type, HtmlEventHandlerWithTarget<SVGUseElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGUseElementEvents type, HtmlEventHandlerWithTarget<SVGUseElement> listener);
 
-		public void AddEventListener(SVGUseElementEvents type, HtmlEventHandlerWithTarget<SVGUseElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGUseElementEvents type, HtmlEventHandlerWithTarget<SVGUseElement> listener, bool capture);
 
-		public void AddEventListener(SVGUseElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGUseElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGUseElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGUseElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString Href
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGUseElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGUseElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGUseElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGUseElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGUseElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGUseElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGUseElementEvents type, HtmlEventHandlerWithTarget<SVGUseElement> listener);
+
+		public extern void RemoveEventListener(SVGUseElementEvents type, HtmlEventHandlerWithTarget<SVGUseElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGUseElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGUseElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Width
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString Href
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGUseElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGUseElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGUseElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGUseElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGUseElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGUseElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGUseElementEvents type, HtmlEventHandlerWithTarget<SVGUseElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGUseElementEvents type, HtmlEventHandlerWithTarget<SVGUseElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGUseElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGUseElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength X
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength Y
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

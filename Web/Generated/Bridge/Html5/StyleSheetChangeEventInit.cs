@@ -3,13 +3,13 @@
 	[External, Serializable]
 	public partial class StyleSheetChangeEventInit : EventInit
 	{
-		public bool DocumentSheet
+		public extern bool DocumentSheet
 		{
 			get;
 			set;
 		}
 
-		public CSSStyleSheet Stylesheet
+		public extern CSSStyleSheet Stylesheet
 		{
 			get;
 			set;

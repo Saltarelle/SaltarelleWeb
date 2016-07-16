@@ -5,229 +5,142 @@ namespace Bridge.Html5
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'FORM'"), Name("Element")]
 	public partial class FormElement : Element
 	{
-		internal FormElement()
-		{
-		}
+		internal extern FormElement();
 
 		[IndexerName("__Item"), FieldProperty]
 		public Element this[int index]
 		{
-			get {
-				return default(Element);
-			}
+			get;
 		}
 
 		[IndexerName("__Item"), FieldProperty]
 		public Element this[string name]
 		{
-			get {
-				return default(Element);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string AcceptCharset
+		public extern string AcceptCharset
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Action
+		public extern string Action
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void AddEventListener(FormElementEvents type, Action listener)
+		public extern void AddEventListener(FormElementEvents type, Action listener);
+
+		public extern void AddEventListener(FormElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(FormElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(FormElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener);
+
+		public extern void AddEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture);
+
+		public extern void AddEventListener(FormElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(FormElementEvents type, IEventListener listener, bool capture);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Autocomplete
 		{
+			get;
+			set;
 		}
 
-		public void AddEventListener(FormElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern bool CheckValidity();
 
-		public void AddEventListener(FormElementEvents type, HtmlEventHandler listener)
+		[FieldProperty]
+		public extern ElementCollection Elements
 		{
-		}
-
-		public void AddEventListener(FormElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener)
-		{
-		}
-
-		public void AddEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(FormElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(FormElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Autocomplete
+		public extern string Encoding
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public bool CheckValidity()
-		{
-			return false;
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public ElementCollection Elements
+		public extern string Enctype
 		{
-			get {
-				return default(ElementCollection);
-			}
-		}
-
-		[FieldProperty]
-		public string Encoding
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Enctype
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<Element> GetEnumerator()
+		public extern IEnumerator<Element> GetEnumerator();
+
+		[FieldProperty]
+		public extern int Length
 		{
-			return null;
+			get;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern string Method
 		{
-			get {
-				return 0;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Method
+		public extern string Name
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern bool NoValidate
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
+
+		public extern void RemoveEventListener(FormElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(FormElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(FormElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(FormElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener);
+
+		public extern void RemoveEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture);
+
+		public extern void RemoveEventListener(FormElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(FormElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture);
+
+		public extern void Reset();
+
+		public extern void Submit();
 
 		[FieldProperty]
-		public bool NoValidate
+		public extern string Target
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(FormElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(FormElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(FormElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(FormElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(FormElementEvents type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(FormElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(FormElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture)
-		{
-		}
-
-		public void Reset()
-		{
-		}
-
-		public void Submit()
-		{
-		}
-
-		[FieldProperty]
-		public string Target
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

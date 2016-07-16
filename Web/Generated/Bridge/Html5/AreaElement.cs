@@ -3,294 +3,191 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'AREA'"), Name("Element")]
 	public partial class AreaElement : Element
 	{
-		internal AreaElement()
-		{
-		}
+		internal extern AreaElement();
 
-		public void AddEventListener(AreaElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(AreaElementEvents type, Action listener);
 
-		public void AddEventListener(AreaElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AreaElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(AreaElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(AreaElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(AreaElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AreaElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener)
-		{
-		}
+		public extern void AddEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener);
 
-		public void AddEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture);
 
-		public void AddEventListener(AreaElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(AreaElementEvents type, IEventListener listener);
 
-		public void AddEventListener(AreaElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(AreaElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Alt
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Alt
+		public extern string Coords
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Coords
+		public extern string Download
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Download
+		public extern string Hash
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Hash
+		public extern string Host
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Host
+		public extern string Hostname
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Hostname
+		public extern string Href
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Href
+		public extern bool NoHref
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool NoHref
+		public extern string Origin
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Origin
+		public extern string Password
 		{
-			get {
-				return null;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Password
+		public extern string Pathname
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Pathname
+		public extern string Ping
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Ping
+		public extern string Port
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Port
+		public extern string Protocol
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Protocol
+		public extern string Rel
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Rel
+		public extern TokenList RelList
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(AreaElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(AreaElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(AreaElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(AreaElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener);
+
+		public extern void RemoveEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture);
+
+		public extern void RemoveEventListener(AreaElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(AreaElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Search
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public TokenList RelList
+		public extern URLSearchParams SearchParams
 		{
-			get {
-				return default(TokenList);
-			}
-		}
-
-		public void RemoveEventListener(AreaElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(AreaElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(AreaElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(AreaElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(AreaElementEvents type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(AreaElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(AreaElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AreaElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Search
+		public extern string Shape
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public URLSearchParams SearchParams
+		public extern string Target
 		{
-			get {
-				return default(URLSearchParams);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Shape
+		public extern string Username
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Target
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Username
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,32 +3,22 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class RTCIdentityAssertion
 	{
-		internal RTCIdentityAssertion()
-		{
-		}
+		internal extern RTCIdentityAssertion();
 
-		public RTCIdentityAssertion(string idp, string name)
+		public extern RTCIdentityAssertion(string idp, string name);
+
+		[FieldProperty]
+		public extern string Idp
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Idp
+		public extern string Name
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Name
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

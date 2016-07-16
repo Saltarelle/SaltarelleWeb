@@ -3,24 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class FocusEvent : UIEvent
 	{
-		internal FocusEvent()
-		{
-		}
+		internal extern FocusEvent();
 
-		public FocusEvent(string typeArg)
-		{
-		}
+		public extern FocusEvent(string typeArg);
 
-		public FocusEvent(string typeArg, FocusEventInit focusEventInitDict)
-		{
-		}
+		public extern FocusEvent(string typeArg, FocusEventInit focusEventInitDict);
 
 		[FieldProperty]
-		public EventTarget RelatedTarget
+		public extern EventTarget RelatedTarget
 		{
-			get {
-				return default(EventTarget);
-			}
+			get;
 		}
 	}
 }

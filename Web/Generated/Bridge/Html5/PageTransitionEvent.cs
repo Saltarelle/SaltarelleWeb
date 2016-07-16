@@ -3,28 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class PageTransitionEvent : Event
 	{
-		internal PageTransitionEvent()
-		{
-		}
+		internal extern PageTransitionEvent();
 
-		public PageTransitionEvent(string type)
-		{
-		}
+		public extern PageTransitionEvent(string type);
 
-		public PageTransitionEvent(string type, PageTransitionEventInit eventInitDict)
-		{
-		}
+		public extern PageTransitionEvent(string type, PageTransitionEventInit eventInitDict);
 
-		public void InitPageTransitionEvent(string type, bool canBubble, bool cancelable, bool persisted)
-		{
-		}
+		public extern void InitPageTransitionEvent(string type, bool canBubble, bool cancelable, bool persisted);
 
 		[FieldProperty]
-		public bool Persisted
+		public extern bool Persisted
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

@@ -3,148 +3,88 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'METER'"), Name("Element")]
 	public partial class MeterElement : Element
 	{
-		internal MeterElement()
-		{
-		}
+		internal extern MeterElement();
 
-		public void AddEventListener(MeterElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(MeterElementEvents type, Action listener);
 
-		public void AddEventListener(MeterElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MeterElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(MeterElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(MeterElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(MeterElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MeterElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener)
-		{
-		}
+		public extern void AddEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener);
 
-		public void AddEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture);
 
-		public void AddEventListener(MeterElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(MeterElementEvents type, IEventListener listener);
 
-		public void AddEventListener(MeterElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MeterElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern double High
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double High
+		public extern double Low
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Low
+		public extern double Max
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Max
+		public extern double Min
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Min
+		public extern double Optimum
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
+
+		public extern void RemoveEventListener(MeterElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(MeterElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(MeterElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(MeterElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener);
+
+		public extern void RemoveEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture);
+
+		public extern void RemoveEventListener(MeterElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(MeterElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture);
 
 		[FieldProperty]
-		public double Optimum
+		public extern double Value
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(MeterElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(MeterElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MeterElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(MeterElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(MeterElementEvents type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MeterElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(MeterElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public double Value
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -5,35 +5,23 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CSSValueList : CSSValue
 	{
-		internal CSSValueList()
-		{
-		}
+		internal extern CSSValueList();
 
 		[IndexerName("__Item"), FieldProperty]
 		public CSSValue this[int index]
 		{
-			get {
-				return default(CSSValue);
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<CSSValue> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<CSSValue> GetEnumerator();
 
-		public CSSValue Item(int index)
-		{
-			return default(CSSValue);
-		}
+		public extern CSSValue Item(int index);
 
 		[FieldProperty]
-		public int Length
+		public extern int Length
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

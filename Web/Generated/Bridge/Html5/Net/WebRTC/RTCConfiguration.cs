@@ -3,7 +3,7 @@
 	[External, Serializable]
 	public partial class RTCConfiguration
 	{
-		public RTCIceServer[] IceServers
+		public extern RTCIceServer[] IceServers
 		{
 			get;
 			set;

@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGLTexture
 	{
-		internal WebGLTexture()
-		{
-		}
+		internal extern WebGLTexture();
 	}
 }

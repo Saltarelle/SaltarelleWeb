@@ -3,168 +3,106 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFEDiffuseLightingElement : SVGElement
 	{
-		internal SVGFEDiffuseLightingElement()
-		{
-		}
+		internal extern SVGFEDiffuseLightingElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEDiffuseLightingElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEDiffuseLightingElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener);
 
-		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedNumber DiffuseConstant
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber DiffuseConstant
+		public extern SVGAnimatedLength Height
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString In1
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString In1
+		public extern SVGAnimatedNumber KernelUnitLengthX
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber KernelUnitLengthX
+		public extern SVGAnimatedNumber KernelUnitLengthY
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener);
+
+		public extern void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedString Result
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber KernelUnitLengthY
+		public extern SVGAnimatedNumber SurfaceScale
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, HtmlEventHandlerWithTarget<SVGFEDiffuseLightingElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEDiffuseLightingElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString Result
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedNumber SurfaceScale
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedNumber);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength X
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength Y
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

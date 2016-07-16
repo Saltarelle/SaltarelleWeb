@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimatedAngle
 	{
-		internal SVGAnimatedAngle()
+		internal extern SVGAnimatedAngle();
+
+		[FieldProperty]
+		public extern SVGAngle AnimVal
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAngle AnimVal
+		public extern SVGAngle BaseVal
 		{
-			get {
-				return default(SVGAngle);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAngle BaseVal
-		{
-			get {
-				return default(SVGAngle);
-			}
+			get;
 		}
 	}
 }

@@ -3,48 +3,34 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WheelEvent : MouseEvent
 	{
-		internal WheelEvent()
-		{
-		}
+		internal extern WheelEvent();
 
-		public WheelEvent(string type)
-		{
-		}
+		public extern WheelEvent(string type);
 
-		public WheelEvent(string type, WheelEventInit eventInitDict)
+		public extern WheelEvent(string type, WheelEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern WheelDeltaMode DeltaMode
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public WheelDeltaMode DeltaMode
+		public extern double DeltaX
 		{
-			get {
-				return default(WheelDeltaMode);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double DeltaX
+		public extern double DeltaY
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double DeltaY
+		public extern double DeltaZ
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public double DeltaZ
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[Name("DOM_DELTA_LINE")]

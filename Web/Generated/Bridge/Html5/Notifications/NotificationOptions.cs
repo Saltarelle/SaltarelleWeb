@@ -3,31 +3,31 @@
 	[External, Serializable]
 	public partial class NotificationOptions
 	{
-		public string Body
+		public extern string Body
 		{
 			get;
 			set;
 		}
 
-		public NotificationDirection Dir
+		public extern NotificationDirection Dir
 		{
 			get;
 			set;
 		}
 
-		public string Icon
+		public extern string Icon
 		{
 			get;
 			set;
 		}
 
-		public string Lang
+		public extern string Lang
 		{
 			get;
 			set;
 		}
 
-		public string Tag
+		public extern string Tag
 		{
 			get;
 			set;

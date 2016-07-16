@@ -3,44 +3,30 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CloseEvent : Event
 	{
-		internal CloseEvent()
+		internal extern CloseEvent();
+
+		public extern CloseEvent(string type);
+
+		public extern CloseEvent(string type, CloseEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern ushort Code
 		{
+			get;
 		}
 
-		public CloseEvent(string type)
-		{
-		}
+		public extern void InitCloseEvent(string type, bool canBubble, bool cancelable, bool wasClean, ushort code, string reason);
 
-		public CloseEvent(string type, CloseEventInit eventInitDict)
+		[FieldProperty]
+		public extern string Reason
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public ushort Code
+		public extern bool WasClean
 		{
-			get {
-				return 0;
-			}
-		}
-
-		public void InitCloseEvent(string type, bool canBubble, bool cancelable, bool wasClean, ushort code, string reason)
-		{
-		}
-
-		[FieldProperty]
-		public string Reason
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public bool WasClean
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

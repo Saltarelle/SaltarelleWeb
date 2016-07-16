@@ -3,33 +3,22 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPoint
 	{
-		internal SVGPoint()
-		{
-		}
+		internal extern SVGPoint();
 
-		public SVGPoint MatrixTransform(SVGMatrix matrix)
+		public extern SVGPoint MatrixTransform(SVGMatrix matrix);
+
+		[FieldProperty]
+		public extern double X
 		{
-			return default(SVGPoint);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double X
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Y
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

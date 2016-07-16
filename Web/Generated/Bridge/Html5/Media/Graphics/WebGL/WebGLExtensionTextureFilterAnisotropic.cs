@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class WebGLExtensionTextureFilterAnisotropic
 	{
-		internal WebGLExtensionTextureFilterAnisotropic()
-		{
-		}
+		internal extern WebGLExtensionTextureFilterAnisotropic();
 
 		[FieldProperty, Name("MAX_TEXTURE_MAX_ANISOTROPY_EXT")]
-		public int MAX_TEXTURE_MAX_ANISOTROPY_EXT
+		public extern int MAX_TEXTURE_MAX_ANISOTROPY_EXT
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("TEXTURE_MAX_ANISOTROPY_EXT")]
-		public int TEXTURE_MAX_ANISOTROPY_EXT
+		public extern int TEXTURE_MAX_ANISOTROPY_EXT
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

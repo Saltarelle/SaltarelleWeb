@@ -3,32 +3,22 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMError
 	{
-		internal DOMError()
-		{
-		}
+		internal extern DOMError();
 
-		public DOMError(string name)
-		{
-		}
+		public extern DOMError(string name);
 
-		public DOMError(string name, string message)
+		public extern DOMError(string name, string message);
+
+		[FieldProperty]
+		public extern string Message
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Message
+		public extern string Name
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Name
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

@@ -3,24 +3,18 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class PerformanceNavigation
 	{
-		internal PerformanceNavigation()
+		internal extern PerformanceNavigation();
+
+		[FieldProperty]
+		public extern ushort RedirectCount
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public ushort RedirectCount
+		public extern ushort Type
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public ushort Type
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[Name("TYPE_BACK_FORWARD")]

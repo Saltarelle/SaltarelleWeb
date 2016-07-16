@@ -3,64 +3,48 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class Coordinates
 	{
-		internal Coordinates()
+		internal extern Coordinates();
+
+		[FieldProperty]
+		public extern double Accuracy
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double Accuracy
+		public extern double? Altitude
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double? Altitude
+		public extern double? AltitudeAccuracy
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double? AltitudeAccuracy
+		public extern double? Heading
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double? Heading
+		public extern double Latitude
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Latitude
+		public extern double Longitude
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Longitude
+		public extern double? Speed
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public double? Speed
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

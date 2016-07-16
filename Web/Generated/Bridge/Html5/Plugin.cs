@@ -5,80 +5,55 @@ namespace Bridge.Html5
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Plugin
 	{
-		internal Plugin()
-		{
-		}
+		internal extern Plugin();
 
 		[IndexerName("__Item"), FieldProperty]
 		public MimeType this[int index]
 		{
-			get {
-				return default(MimeType);
-			}
+			get;
 		}
 
 		[IndexerName("__Item"), FieldProperty]
 		public MimeType this[string name]
 		{
-			get {
-				return default(MimeType);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Description
+		public extern string Description
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Filename
+		public extern string Filename
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public IEnumerator<MimeType> GetEnumerator()
-		{
-			return null;
-		}
+		public extern IEnumerator<MimeType> GetEnumerator();
 
-		public MimeType Item(int index)
+		public extern MimeType Item(int index);
+
+		[FieldProperty]
+		public extern int Length
 		{
-			return default(MimeType);
+			get;
 		}
 
 		[FieldProperty]
-		public int Length
+		public extern string Name
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
+
+		public extern MimeType NamedItem(string name);
 
 		[FieldProperty]
-		public string Name
+		public extern string Version
 		{
-			get {
-				return null;
-			}
-		}
-
-		public MimeType NamedItem(string name)
-		{
-			return default(MimeType);
-		}
-
-		[FieldProperty]
-		public string Version
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

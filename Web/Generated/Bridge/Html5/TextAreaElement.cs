@@ -3,319 +3,203 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'TEXTAREA'"), Name("Element")]
 	public partial class TextAreaElement : Element
 	{
-		internal TextAreaElement()
+		internal extern TextAreaElement();
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture);
+
+		public extern void AddEventListener(TextAreaElementEvents type, Action listener);
+
+		public extern void AddEventListener(TextAreaElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(TextAreaElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(TextAreaElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener);
+
+		public extern void AddEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture);
+
+		public extern void AddEventListener(TextAreaElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(TextAreaElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Autofocus
 		{
+			get;
+			set;
 		}
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener)
-		{
-		}
+		public extern bool CheckValidity();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture)
+		[FieldProperty]
+		public extern int Cols
 		{
-		}
-
-		public void AddEventListener(TextAreaElementEvents type, Action listener)
-		{
-		}
-
-		public void AddEventListener(TextAreaElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TextAreaElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void AddEventListener(TextAreaElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener)
-		{
-		}
-
-		public void AddEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TextAreaElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(TextAreaElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Autofocus
+		public extern string DefaultValue
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public bool CheckValidity()
-		{
-			return false;
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int Cols
+		public extern bool Disabled
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string DefaultValue
+		public extern FormElement Form
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool Disabled
+		public extern int MaxLength
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public FormElement Form
+		public extern string Name
 		{
-			get {
-				return default(FormElement);
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int MaxLength
+		public extern string Placeholder
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern bool ReadOnly
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture);
+
+		public extern void RemoveEventListener(TextAreaElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(TextAreaElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener);
+
+		public extern void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture);
+
+		public extern void RemoveEventListener(TextAreaElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(TextAreaElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Required
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Placeholder
+		public extern int Rows
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void Select();
+
+		[FieldProperty]
+		public extern string SelectionDirection
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool ReadOnly
+		public extern int SelectionEnd
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TextAreaElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(TextAreaElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(TextAreaElementEvents type, HtmlEventHandlerWithTarget<TextAreaElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(TextAreaElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(TextAreaElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Required
+		public extern int SelectionStart
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void SetCustomValidity(string error);
+
+		public extern void SetRangeText(string replacement);
+
+		public extern void SetRangeText(string replacement, int start, int end);
+
+		public extern void SetRangeText(string replacement, int start, int end, SelectionMode selectionMode);
+
+		public extern void SetSelectionRange(int start, int end);
+
+		public extern void SetSelectionRange(int start, int end, string direction);
+
+		[FieldProperty]
+		public extern int TextLength
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public int Rows
+		public extern string Type
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public void Select()
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public string SelectionDirection
+		public extern string ValidationMessage
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int SelectionEnd
+		public extern ValidityState Validity
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int SelectionStart
+		public extern string Value
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		public void SetCustomValidity(string error)
-		{
-		}
-
-		public void SetRangeText(string replacement)
-		{
-		}
-
-		public void SetRangeText(string replacement, int start, int end)
-		{
-		}
-
-		public void SetRangeText(string replacement, int start, int end, SelectionMode selectionMode)
-		{
-		}
-
-		public void SetSelectionRange(int start, int end)
-		{
-		}
-
-		public void SetSelectionRange(int start, int end, string direction)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public int TextLength
+		public extern bool WillValidate
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Type
+		public extern string Wrap
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string ValidationMessage
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public ValidityState Validity
-		{
-			get {
-				return default(ValidityState);
-			}
-		}
-
-		[FieldProperty]
-		public string Value
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public bool WillValidate
-		{
-			get {
-				return false;
-			}
-		}
-
-		[FieldProperty]
-		public string Wrap
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

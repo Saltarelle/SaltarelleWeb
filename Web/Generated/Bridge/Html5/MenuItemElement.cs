@@ -3,158 +3,95 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'MENUITEM'"), Name("Element")]
 	public partial class MenuItemElement : Element
 	{
-		internal MenuItemElement()
-		{
-		}
+		internal extern MenuItemElement();
 
-		public void AddEventListener(MenuItemElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(MenuItemElementEvents type, Action listener);
 
-		public void AddEventListener(MenuItemElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MenuItemElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(MenuItemElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(MenuItemElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(MenuItemElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MenuItemElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener)
-		{
-		}
+		public extern void AddEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener);
 
-		public void AddEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture);
 
-		public void AddEventListener(MenuItemElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(MenuItemElementEvents type, IEventListener listener);
 
-		public void AddEventListener(MenuItemElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MenuItemElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Checked
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Checked
+		public extern bool DefaultChecked
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool DefaultChecked
+		public extern bool Disabled
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Disabled
+		public extern string Icon
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Icon
+		public extern string Label
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Label
+		public extern string Radiogroup
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
+
+		public extern void RemoveEventListener(MenuItemElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(MenuItemElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener);
+
+		public extern void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture);
+
+		public extern void RemoveEventListener(MenuItemElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(MenuItemElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture);
 
 		[FieldProperty]
-		public string Radiogroup
+		public extern string Type
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(MenuItemElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(MenuItemElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(MenuItemElementEvents type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MenuItemElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(MenuItemElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public string Type
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

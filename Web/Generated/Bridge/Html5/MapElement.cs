@@ -3,106 +3,59 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'MAP'"), Name("Element")]
 	public partial class MapElement : Element
 	{
-		internal MapElement()
-		{
-		}
+		internal extern MapElement();
 
-		public void AddEventListener(MapElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(MapElementEvents type, Action listener);
 
-		public void AddEventListener(MapElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MapElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(MapElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(MapElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(MapElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MapElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener)
-		{
-		}
+		public extern void AddEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener);
 
-		public void AddEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture);
 
-		public void AddEventListener(MapElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(MapElementEvents type, IEventListener listener);
 
-		public void AddEventListener(MapElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MapElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern ElementCollection Areas
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public ElementCollection Areas
+		public extern string Name
 		{
-			get {
-				return default(ElementCollection);
-			}
+			get;
+			set;
 		}
 
-		[FieldProperty]
-		public string Name
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
+		public extern void RemoveEventListener(MapElementEvents type, Action listener);
 
-		public void RemoveEventListener(MapElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(MapElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(MapElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MapElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(MapElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(MapElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(MapElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener);
 
-		public void RemoveEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture);
 
-		public void RemoveEventListener(MapElementEvents type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MapElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(MapElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(MapElementEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(MapElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture);
 	}
 }

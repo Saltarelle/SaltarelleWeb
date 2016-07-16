@@ -3,8 +3,6 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class WebGLShader
 	{
-		internal WebGLShader()
-		{
-		}
+		internal extern WebGLShader();
 	}
 }

@@ -5,144 +5,81 @@ namespace Bridge.Html5.Media.Source
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MediaSource : EventTarget
 	{
-		public MediaSource()
-		{
-		}
+		public extern MediaSource();
 
 		[FieldProperty]
-		public SourceBufferList ActiveSourceBuffers
+		public extern SourceBufferList ActiveSourceBuffers
 		{
-			get {
-				return default(SourceBufferList);
-			}
+			get;
 		}
 
-		public void AddEventListener(MediaSourceEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(MediaSourceEvents type, Action listener);
 
-		public void AddEventListener(MediaSourceEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaSourceEvents type, Action listener, bool capture);
 
-		public void AddEventListener(MediaSourceEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(MediaSourceEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(MediaSourceEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaSourceEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener)
-		{
-		}
+		public extern void AddEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener);
 
-		public void AddEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture);
 
-		public void AddEventListener(MediaSourceEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(MediaSourceEvents type, IEventListener listener);
 
-		public void AddEventListener(MediaSourceEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaSourceEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture);
 
-		public SourceBuffer AddSourceBuffer(string type)
-		{
-			return default(SourceBuffer);
-		}
+		public extern SourceBuffer AddSourceBuffer(string type);
 
 		[FieldProperty]
-		public double Duration
+		public extern double Duration
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void EndOfStream()
-		{
-		}
+		public extern void EndOfStream();
 
-		public void EndOfStream(MediaSourceEndOfStreamError error)
-		{
-		}
+		public extern void EndOfStream(MediaSourceEndOfStreamError error);
 
-		public static bool IsTypeSupported(string type)
-		{
-			return false;
-		}
+		public static extern bool IsTypeSupported(string type);
 
 		[FieldProperty]
-		public MediaSourceReadyState ReadyState
+		public extern MediaSourceReadyState ReadyState
 		{
-			get {
-				return default(MediaSourceReadyState);
-			}
+			get;
 		}
 
-		public void RemoveEventListener(MediaSourceEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(MediaSourceEvents type, Action listener);
 
-		public void RemoveEventListener(MediaSourceEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MediaSourceEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(MediaSourceEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(MediaSourceEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(MediaSourceEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MediaSourceEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener)
-		{
-		}
+		public extern void RemoveEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener);
 
-		public void RemoveEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MediaSourceEvents type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture);
 
-		public void RemoveEventListener(MediaSourceEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(MediaSourceEvents type, IEventListener listener);
 
-		public void RemoveEventListener(MediaSourceEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MediaSourceEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaSource> listener, bool capture);
 
-		public void RemoveSourceBuffer(SourceBuffer sourceBuffer)
-		{
-		}
+		public extern void RemoveSourceBuffer(SourceBuffer sourceBuffer);
 
 		[FieldProperty]
-		public SourceBufferList SourceBuffers
+		public extern SourceBufferList SourceBuffers
 		{
-			get {
-				return default(SourceBufferList);
-			}
+			get;
 		}
 	}
 }

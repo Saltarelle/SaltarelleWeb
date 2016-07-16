@@ -3,26 +3,19 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGAnimatedBoolean
 	{
-		internal SVGAnimatedBoolean()
+		internal extern SVGAnimatedBoolean();
+
+		[FieldProperty]
+		public extern bool AnimVal
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool AnimVal
+		public extern bool BaseVal
 		{
-			get {
-				return false;
-			}
-		}
-
-		[FieldProperty]
-		public bool BaseVal
-		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,24 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class RTCPeerConnectionIceEvent : Event
 	{
-		internal RTCPeerConnectionIceEvent()
-		{
-		}
+		internal extern RTCPeerConnectionIceEvent();
 
-		public RTCPeerConnectionIceEvent(string type)
-		{
-		}
+		public extern RTCPeerConnectionIceEvent(string type);
 
-		public RTCPeerConnectionIceEvent(string type, RTCPeerConnectionIceEventInit eventInitDict)
-		{
-		}
+		public extern RTCPeerConnectionIceEvent(string type, RTCPeerConnectionIceEventInit eventInitDict);
 
 		[FieldProperty]
-		public RTCIceCandidate Candidate
+		public extern RTCIceCandidate Candidate
 		{
-			get {
-				return default(RTCIceCandidate);
-			}
+			get;
 		}
 	}
 }

@@ -3,162 +3,96 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class OscillatorNode : AudioNode
 	{
-		internal OscillatorNode()
-		{
-		}
+		internal extern OscillatorNode();
 
-		public void AddEventListener(OscillatorNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(OscillatorNodeEvents type, Action listener);
 
-		public void AddEventListener(OscillatorNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OscillatorNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(OscillatorNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(OscillatorNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(OscillatorNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OscillatorNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener)
-		{
-		}
+		public extern void AddEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener);
 
-		public void AddEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture);
 
-		public void AddEventListener(OscillatorNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(OscillatorNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(OscillatorNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OscillatorNodeEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture);
 
 		public const ushort CUSTOM = 4;
 
 		[FieldProperty]
-		public AudioParam Detune
+		public extern AudioParam Detune
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public AudioParam Frequency
+		public extern AudioParam Frequency
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
-		public void NoteOff(double when)
-		{
-		}
+		public extern void NoteOff(double when);
 
-		public void NoteOn(double when)
-		{
-		}
+		public extern void NoteOn(double when);
 
 		[FieldProperty, Name("onended")]
-		public HtmlEventHandler OnEnded
+		public extern HtmlEventHandler OnEnded
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(OscillatorNodeEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(OscillatorNodeEvents type, Action listener);
 
-		public void RemoveEventListener(OscillatorNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(OscillatorNodeEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener);
 
-		public void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(OscillatorNodeEvents type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture);
 
-		public void RemoveEventListener(OscillatorNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(OscillatorNodeEvents type, IEventListener listener);
 
-		public void RemoveEventListener(OscillatorNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(OscillatorNodeEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OscillatorNode> listener, bool capture);
 
 		public const ushort SAWTOOTH = 2;
 
-		public void SetPeriodicWave(PeriodicWave periodicWave)
-		{
-		}
+		public extern void SetPeriodicWave(PeriodicWave periodicWave);
 
 		public const ushort SINE = 0;
 
 		public const ushort SQUARE = 1;
 
-		public void Start()
-		{
-		}
+		public extern void Start();
 
-		public void Start(double when)
-		{
-		}
+		public extern void Start(double when);
 
-		public void Stop()
-		{
-		}
+		public extern void Stop();
 
-		public void Stop(double when)
-		{
-		}
+		public extern void Stop(double when);
 
 		public const ushort TRIANGLE = 3;
 
 		[FieldProperty]
-		public OscillatorType Type
+		public extern OscillatorType Type
 		{
-			get {
-				return default(OscillatorType);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

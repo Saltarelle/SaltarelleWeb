@@ -3,172 +3,106 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TextTrack : EventTarget
 	{
-		internal TextTrack()
+		internal extern TextTrack();
+
+		[FieldProperty]
+		public extern TextTrackCueList ActiveCues
 		{
+			get;
+		}
+
+		public extern void AddCue(VTTCue cue);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture);
+
+		public extern void AddEventListener(TextTrackEvents type, Action listener);
+
+		public extern void AddEventListener(TextTrackEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(TextTrackEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(TextTrackEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener);
+
+		public extern void AddEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture);
+
+		public extern void AddEventListener(TextTrackEvents type, IEventListener listener);
+
+		public extern void AddEventListener(TextTrackEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern TextTrackCueList Cues
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public TextTrackCueList ActiveCues
+		public extern string Id
 		{
-			get {
-				return default(TextTrackCueList);
-			}
-		}
-
-		public void AddCue(VTTCue cue)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TextTrackEvents type, Action listener)
-		{
-		}
-
-		public void AddEventListener(TextTrackEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TextTrackEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void AddEventListener(TextTrackEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener)
-		{
-		}
-
-		public void AddEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(TextTrackEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(TextTrackEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public TextTrackCueList Cues
+		public extern string InBandMetadataTrackDispatchType
 		{
-			get {
-				return default(TextTrackCueList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Id
+		public extern TextTrackKind Kind
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string InBandMetadataTrackDispatchType
+		public extern string Label
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public TextTrackKind Kind
+		public extern string Language
 		{
-			get {
-				return default(TextTrackKind);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Label
+		public extern TextTrackMode Mode
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Language
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public TextTrackMode Mode
-		{
-			get {
-				return default(TextTrackMode);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("oncuechange")]
-		public HtmlEventHandler OnCuechange
+		public extern HtmlEventHandler OnCuechange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveCue(VTTCue cue)
-		{
-		}
+		public extern void RemoveCue(VTTCue cue);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture);
 
-		public void RemoveEventListener(TextTrackEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackEvents type, Action listener);
 
-		public void RemoveEventListener(TextTrackEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(TextTrackEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(TextTrackEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener);
 
-		public void RemoveEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackEvents type, HtmlEventHandlerWithTarget<TextTrack> listener, bool capture);
 
-		public void RemoveEventListener(TextTrackEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackEvents type, IEventListener listener);
 
-		public void RemoveEventListener(TextTrackEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(TextTrackEvents type, IEventListener listener, bool capture);
 	}
 }

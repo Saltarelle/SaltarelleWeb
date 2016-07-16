@@ -3,128 +3,76 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGFEBlendElement : SVGElement
 	{
-		internal SVGFEBlendElement()
-		{
-		}
+		internal extern SVGFEBlendElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEBlendElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEBlendElementEvents type, Action listener);
 
-		public void AddEventListener(SVGFEBlendElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEBlendElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener);
 
-		public void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture);
 
-		public void AddEventListener(SVGFEBlendElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGFEBlendElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGFEBlendElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGFEBlendElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Height
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Height
+		public extern SVGAnimatedString In1
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString In1
+		public extern SVGAnimatedString In2
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedString In2
+		public extern SVGAnimatedEnumeration<SVGFEBlendMode> Mode
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEBlendElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGFEBlendElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener);
+
+		public extern void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGFEBlendElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGFEBlendElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public SVGAnimatedEnumeration<SVGFEBlendMode> Mode
+		public extern SVGAnimatedString Result
 		{
-			get {
-				return default(SVGAnimatedEnumeration<SVGFEBlendMode>);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEBlendElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEBlendElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEBlendElementEvents type, HtmlEventHandlerWithTarget<SVGFEBlendElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEBlendElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGFEBlendElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public SVGAnimatedString Result
-		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
 		[Name("SVG_FEBLEND_MODE_DARKEN")]
@@ -146,27 +94,21 @@
 		public const ushort SVG_FEBLEND_MODE_UNKNOWN = 0;
 
 		[FieldProperty]
-		public SVGAnimatedLength Width
+		public extern SVGAnimatedLength Width
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength X
+		public extern SVGAnimatedLength X
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Y
+		public extern SVGAnimatedLength Y
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

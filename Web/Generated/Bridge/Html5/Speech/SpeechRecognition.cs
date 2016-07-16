@@ -3,270 +3,171 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechRecognition : EventTarget
 	{
-		public SpeechRecognition()
-		{
-		}
+		public extern SpeechRecognition();
 
-		public void Abort()
-		{
-		}
+		public extern void Abort();
 
-		public void AddEventListener(SpeechRecognitionEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SpeechRecognitionEvents type, Action listener);
 
-		public void AddEventListener(SpeechRecognitionEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SpeechRecognitionEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener)
-		{
-		}
+		public extern void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener);
 
-		public void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture);
 
-		public void AddEventListener(SpeechRecognitionEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SpeechRecognitionEvents type, IEventListener listener);
 
-		public void AddEventListener(SpeechRecognitionEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SpeechRecognitionEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Continuous
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Continuous
+		public extern SpeechGrammarList Grammars
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public SpeechGrammarList Grammars
+		public extern bool InterimResults
 		{
-			get {
-				return default(SpeechGrammarList);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool InterimResults
+		public extern string Lang
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Lang
+		public extern int MaxAlternatives
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public int MaxAlternatives
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onaudioend")]
-		public HtmlEventHandler OnAudioend
+		public extern HtmlEventHandler OnAudioend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onaudiostart")]
-		public HtmlEventHandler OnAudiostart
+		public extern HtmlEventHandler OnAudiostart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onend")]
-		public HtmlEventHandler OnEnd
+		public extern HtmlEventHandler OnEnd
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onnomatch")]
-		public HtmlEventHandler OnNomatch
+		public extern HtmlEventHandler OnNomatch
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onresult")]
-		public HtmlEventHandler OnResult
+		public extern HtmlEventHandler OnResult
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onsoundend")]
-		public HtmlEventHandler OnSoundend
+		public extern HtmlEventHandler OnSoundend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onsoundstart")]
-		public HtmlEventHandler OnSoundstart
+		public extern HtmlEventHandler OnSoundstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onspeechend")]
-		public HtmlEventHandler OnSpeechend
+		public extern HtmlEventHandler OnSpeechend
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onspeechstart")]
-		public HtmlEventHandler OnSpeechstart
+		public extern HtmlEventHandler OnSpeechstart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onstart")]
-		public HtmlEventHandler OnStart
+		public extern HtmlEventHandler OnStart
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(SpeechRecognitionEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SpeechRecognitionEvents type, Action listener);
 
-		public void RemoveEventListener(SpeechRecognitionEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SpeechRecognitionEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener)
-		{
-		}
+		public extern void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener);
 
-		public void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SpeechRecognitionEvents type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture);
 
-		public void RemoveEventListener(SpeechRecognitionEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SpeechRecognitionEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SpeechRecognitionEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SpeechRecognitionEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture);
 
 		[FieldProperty]
-		public string ServiceURI
+		public extern string ServiceURI
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void Start()
-		{
-		}
+		public extern void Start();
 
-		public void Stop()
-		{
-		}
+		public extern void Stop();
 	}
 }

@@ -3,68 +3,46 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMQuad
 	{
-		public DOMQuad()
-		{
-		}
+		public extern DOMQuad();
 
-		public DOMQuad(DOMPointInit p1)
-		{
-		}
+		public extern DOMQuad(DOMPointInit p1);
 
-		public DOMQuad(DOMPointInit p1, DOMPointInit p2)
-		{
-		}
+		public extern DOMQuad(DOMPointInit p1, DOMPointInit p2);
 
-		public DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3)
-		{
-		}
+		public extern DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3);
 
-		public DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3, DOMPointInit p4)
-		{
-		}
+		public extern DOMQuad(DOMPointInit p1, DOMPointInit p2, DOMPointInit p3, DOMPointInit p4);
 
-		public DOMQuad(DOMRectReadOnly rect)
+		public extern DOMQuad(DOMRectReadOnly rect);
+
+		[FieldProperty]
+		public extern DOMRectReadOnly Bounds
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public DOMRectReadOnly Bounds
+		public extern DOMPoint P1
 		{
-			get {
-				return default(DOMRectReadOnly);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DOMPoint P1
+		public extern DOMPoint P2
 		{
-			get {
-				return default(DOMPoint);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DOMPoint P2
+		public extern DOMPoint P3
 		{
-			get {
-				return default(DOMPoint);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public DOMPoint P3
+		public extern DOMPoint P4
 		{
-			get {
-				return default(DOMPoint);
-			}
-		}
-
-		[FieldProperty]
-		public DOMPoint P4
-		{
-			get {
-				return default(DOMPoint);
-			}
+			get;
 		}
 	}
 }

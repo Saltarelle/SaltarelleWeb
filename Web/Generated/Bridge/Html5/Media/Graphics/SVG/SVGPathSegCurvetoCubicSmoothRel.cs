@@ -3,48 +3,34 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGPathSegCurvetoCubicSmoothRel : SVGPathSeg
 	{
-		internal SVGPathSegCurvetoCubicSmoothRel()
+		internal extern SVGPathSegCurvetoCubicSmoothRel();
+
+		[FieldProperty]
+		public extern double X
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double X
+		public extern double X2
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double X2
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double Y
+		public extern double Y2
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public double Y2
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

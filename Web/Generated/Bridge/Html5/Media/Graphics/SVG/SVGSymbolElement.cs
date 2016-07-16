@@ -3,133 +3,78 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGSymbolElement : SVGElement
 	{
-		internal SVGSymbolElement()
+		internal extern SVGSymbolElement();
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture);
+
+		public extern void AddEventListener(SVGSymbolElementEvents type, Action listener);
+
+		public extern void AddEventListener(SVGSymbolElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener);
+
+		public extern void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture);
+
+		public extern void AddEventListener(SVGSymbolElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(SVGSymbolElementEvents type, IEventListener listener, bool capture);
+
+		public extern bool HasExtension(string extension);
+
+		[FieldProperty]
+		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
 		{
+			get;
 		}
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture);
 
-		public void AddEventListener(SVGSymbolElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGSymbolElementEvents type, Action listener);
 
-		public void AddEventListener(SVGSymbolElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGSymbolElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener);
 
-		public void AddEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture);
 
-		public void AddEventListener(SVGSymbolElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGSymbolElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGSymbolElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGSymbolElementEvents type, IEventListener listener, bool capture);
 
-		public bool HasExtension(string extension)
+		[FieldProperty]
+		public extern SVGStringList RequiredExtensions
 		{
-			return false;
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedPreserveAspectRatio PreserveAspectRatio
+		public extern SVGStringList RequiredFeatures
 		{
-			get {
-				return default(SVGAnimatedPreserveAspectRatio);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGSymbolElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGSymbolElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGSymbolElementEvents type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGSymbolElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGSymbolElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGStringList RequiredExtensions
+		public extern SVGStringList SystemLanguage
 		{
-			get {
-				return default(SVGStringList);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public SVGStringList RequiredFeatures
+		public extern SVGAnimatedRect ViewBox
 		{
-			get {
-				return default(SVGStringList);
-			}
-		}
-
-		[FieldProperty]
-		public SVGStringList SystemLanguage
-		{
-			get {
-				return default(SVGStringList);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedRect ViewBox
-		{
-			get {
-				return default(SVGAnimatedRect);
-			}
+			get;
 		}
 	}
 }

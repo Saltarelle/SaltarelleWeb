@@ -3,13 +3,8 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("XMLSerializer")]
 	public partial class XmlSerializer
 	{
-		public XmlSerializer()
-		{
-		}
+		public extern XmlSerializer();
 
-		public string SerializeToString(XmlNode root)
-		{
-			return null;
-		}
+		public extern string SerializeToString(XmlNode root);
 	}
 }

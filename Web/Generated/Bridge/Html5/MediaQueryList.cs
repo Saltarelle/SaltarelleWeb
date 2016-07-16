@@ -3,32 +3,22 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MediaQueryList
 	{
-		internal MediaQueryList()
-		{
-		}
+		internal extern MediaQueryList();
 
-		public void AddListener(MediaQueryListListener listener)
+		public extern void AddListener(MediaQueryListListener listener);
+
+		[FieldProperty]
+		public extern bool Matches
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public bool Matches
+		public extern string Media
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
-		[FieldProperty]
-		public string Media
-		{
-			get {
-				return null;
-			}
-		}
-
-		public void RemoveListener(MediaQueryListListener listener)
-		{
-		}
+		public extern void RemoveListener(MediaQueryListListener listener);
 	}
 }

@@ -3,40 +3,28 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechSynthesisEvent : Event
 	{
-		internal SpeechSynthesisEvent()
-		{
-		}
+		internal extern SpeechSynthesisEvent();
 
-		public SpeechSynthesisEvent(string type)
-		{
-		}
+		public extern SpeechSynthesisEvent(string type);
 
-		public SpeechSynthesisEvent(string type, SpeechSynthesisEventInit eventInitDict)
+		public extern SpeechSynthesisEvent(string type, SpeechSynthesisEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern int CharIndex
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public int CharIndex
+		public extern double ElapsedTime
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double ElapsedTime
+		public extern string Name
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public string Name
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

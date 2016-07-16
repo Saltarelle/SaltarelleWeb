@@ -3,19 +3,19 @@
 	[External, Serializable]
 	public partial class RTCIceServer
 	{
-		public string Credential
+		public extern string Credential
 		{
 			get;
 			set;
 		}
 
-		public string Url
+		public extern string Url
 		{
 			get;
 			set;
 		}
 
-		public string Username
+		public extern string Username
 		{
 			get;
 			set;

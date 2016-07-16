@@ -4,184 +4,112 @@
 	public partial class OptionElement : Element
 	{
 		[Template("new Option()")]
-		public OptionElement()
-		{
-		}
+		public extern OptionElement();
 
 		[Template("new Option({text})")]
-		public OptionElement(string text)
-		{
-		}
+		public extern OptionElement(string text);
 
 		[Template("new Option({text}, {value})")]
-		public OptionElement(string text, string value)
-		{
-		}
+		public extern OptionElement(string text, string value);
 
 		[Template("new Option({text}, {value}, {defaultSelected})")]
-		public OptionElement(string text, string value, bool defaultSelected)
-		{
-		}
+		public extern OptionElement(string text, string value, bool defaultSelected);
 
 		[Template("new Option({text}, {value}, {defaultSelected}, {selected})")]
-		public OptionElement(string text, string value, bool defaultSelected, bool selected)
-		{
-		}
+		public extern OptionElement(string text, string value, bool defaultSelected, bool selected);
 
-		public void AddEventListener(OptionElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(OptionElementEvents type, Action listener);
 
-		public void AddEventListener(OptionElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OptionElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(OptionElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(OptionElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(OptionElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OptionElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener)
-		{
-		}
+		public extern void AddEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener);
 
-		public void AddEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture);
 
-		public void AddEventListener(OptionElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(OptionElementEvents type, IEventListener listener);
 
-		public void AddEventListener(OptionElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(OptionElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool DefaultSelected
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool DefaultSelected
+		public extern bool Disabled
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Disabled
+		public extern FormElement Form
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public FormElement Form
+		public extern int Index
 		{
-			get {
-				return default(FormElement);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int Index
+		public extern string Label
 		{
-			get {
-				return 0;
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(OptionElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(OptionElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(OptionElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(OptionElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener);
+
+		public extern void RemoveEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture);
+
+		public extern void RemoveEventListener(OptionElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(OptionElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern bool Selected
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Label
+		public extern string Text
 		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(OptionElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(OptionElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(OptionElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(OptionElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(OptionElementEvents type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(OptionElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(OptionElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Selected
+		public extern string Value
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Text
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Value
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

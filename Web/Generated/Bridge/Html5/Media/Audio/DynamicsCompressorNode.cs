@@ -3,136 +3,82 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DynamicsCompressorNode : AudioNode
 	{
-		internal DynamicsCompressorNode()
-		{
-		}
+		internal extern DynamicsCompressorNode();
 
-		public void AddEventListener(DynamicsCompressorNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(DynamicsCompressorNodeEvents type, Action listener);
 
-		public void AddEventListener(DynamicsCompressorNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DynamicsCompressorNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener)
-		{
-		}
+		public extern void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener);
 
-		public void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture);
 
-		public void AddEventListener(DynamicsCompressorNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(DynamicsCompressorNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(DynamicsCompressorNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DynamicsCompressorNodeEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture);
+
+		[FieldProperty]
+		public extern AudioParam Attack
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public AudioParam Attack
+		public extern AudioParam Knee
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public AudioParam Knee
+		public extern AudioParam Ratio
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public AudioParam Ratio
+		public extern AudioParam Reduction
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public AudioParam Reduction
+		public extern AudioParam Release
 		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
+
+		public extern void RemoveEventListener(DynamicsCompressorNodeEvents type, Action listener);
+
+		public extern void RemoveEventListener(DynamicsCompressorNodeEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener);
+
+		public extern void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture);
+
+		public extern void RemoveEventListener(DynamicsCompressorNodeEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(DynamicsCompressorNodeEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture);
 
 		[FieldProperty]
-		public AudioParam Release
+		public extern AudioParam Threshold
 		{
-			get {
-				return default(AudioParam);
-			}
-		}
-
-		public void RemoveEventListener(DynamicsCompressorNodeEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(DynamicsCompressorNodeEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener)
-		{
-		}
-
-		public void RemoveEventListener(DynamicsCompressorNodeEvents type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(DynamicsCompressorNodeEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(DynamicsCompressorNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public AudioParam Threshold
-		{
-			get {
-				return default(AudioParam);
-			}
+			get;
 		}
 	}
 }

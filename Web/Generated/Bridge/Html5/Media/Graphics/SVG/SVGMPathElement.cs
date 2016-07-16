@@ -3,96 +3,52 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGMPathElement : SVGElement
 	{
-		internal SVGMPathElement()
-		{
-		}
+		internal extern SVGMPathElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMPathElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMPathElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMPathElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGMPathElement> listener, bool capture);
 
-		public void AddEventListener(SVGMPathElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGMPathElementEvents type, Action listener);
 
-		public void AddEventListener(SVGMPathElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGMPathElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGMPathElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGMPathElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGMPathElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGMPathElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGMPathElementEvents type, HtmlEventHandlerWithTarget<SVGMPathElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGMPathElementEvents type, HtmlEventHandlerWithTarget<SVGMPathElement> listener);
 
-		public void AddEventListener(SVGMPathElementEvents type, HtmlEventHandlerWithTarget<SVGMPathElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGMPathElementEvents type, HtmlEventHandlerWithTarget<SVGMPathElement> listener, bool capture);
 
-		public void AddEventListener(SVGMPathElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGMPathElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGMPathElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGMPathElementEvents type, IEventListener listener, bool capture);
 
 		[FieldProperty]
-		public SVGAnimatedString Href
+		public extern SVGAnimatedString Href
 		{
-			get {
-				return default(SVGAnimatedString);
-			}
+			get;
 		}
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMPathElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMPathElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMPathElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMPathElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGMPathElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGMPathElementEvents type, Action listener);
 
-		public void RemoveEventListener(SVGMPathElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGMPathElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(SVGMPathElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGMPathElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(SVGMPathElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGMPathElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(SVGMPathElementEvents type, HtmlEventHandlerWithTarget<SVGMPathElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGMPathElementEvents type, HtmlEventHandlerWithTarget<SVGMPathElement> listener);
 
-		public void RemoveEventListener(SVGMPathElementEvents type, HtmlEventHandlerWithTarget<SVGMPathElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGMPathElementEvents type, HtmlEventHandlerWithTarget<SVGMPathElement> listener, bool capture);
 
-		public void RemoveEventListener(SVGMPathElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGMPathElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(SVGMPathElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGMPathElementEvents type, IEventListener listener, bool capture);
 	}
 }

@@ -3,91 +3,56 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBIndex")]
 	public partial class Index
 	{
-		internal Index()
-		{
-		}
+		internal extern Index();
 
-		public Request Count(object key)
-		{
-			return default(Request);
-		}
+		public extern Request Count(object key);
 
-		public Request Get(object key)
-		{
-			return default(Request);
-		}
+		public extern Request Get(object key);
 
-		public Request GetKey(object key)
+		public extern Request GetKey(object key);
+
+		[FieldProperty]
+		public extern object KeyPath
 		{
-			return default(Request);
+			get;
 		}
 
 		[FieldProperty]
-		public object KeyPath
+		public extern bool MultiEntry
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool MultiEntry
+		public extern string Name
 		{
-			get {
-				return false;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern ObjectStore ObjectStore
 		{
-			get {
-				return null;
-			}
+			get;
+		}
+
+		public extern Request OpenCursor(object range);
+
+		public extern Request OpenCursor(object range, CursorDirection direction);
+
+		public extern Request OpenKeyCursor(object range);
+
+		public extern Request OpenKeyCursor(object range, CursorDirection direction);
+
+		[FieldProperty]
+		public extern string StoreName
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public ObjectStore ObjectStore
+		public extern bool Unique
 		{
-			get {
-				return default(ObjectStore);
-			}
-		}
-
-		public Request OpenCursor(object range)
-		{
-			return default(Request);
-		}
-
-		public Request OpenCursor(object range, CursorDirection direction)
-		{
-			return default(Request);
-		}
-
-		public Request OpenKeyCursor(object range)
-		{
-			return default(Request);
-		}
-
-		public Request OpenKeyCursor(object range, CursorDirection direction)
-		{
-			return default(Request);
-		}
-
-		[FieldProperty]
-		public string StoreName
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public bool Unique
-		{
-			get {
-				return false;
-			}
+			get;
 		}
 	}
 }

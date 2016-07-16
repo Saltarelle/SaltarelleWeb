@@ -3,13 +3,13 @@
 	[External, Serializable]
 	public partial class RTCTransportStats : RTCStats
 	{
-		public int BytesReceived
+		public extern int BytesReceived
 		{
 			get;
 			set;
 		}
 
-		public int BytesSent
+		public extern int BytesSent
 		{
 			get;
 			set;

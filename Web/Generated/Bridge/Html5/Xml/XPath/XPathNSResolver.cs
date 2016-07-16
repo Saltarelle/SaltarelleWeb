@@ -3,13 +3,8 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class XPathNSResolver
 	{
-		internal XPathNSResolver()
-		{
-		}
+		internal extern XPathNSResolver();
 
-		public string LookupNamespaceURI(string prefix)
-		{
-			return null;
-		}
+		public extern string LookupNamespaceURI(string prefix);
 	}
 }

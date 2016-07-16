@@ -3,204 +3,126 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Notification : EventTarget
 	{
-		internal Notification()
+		internal extern Notification();
+
+		public extern Notification(string title);
+
+		public extern Notification(string title, NotificationOptions options);
+
+		public extern void AddEventListener(NotificationEvents type, Action listener);
+
+		public extern void AddEventListener(NotificationEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(NotificationEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(NotificationEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener);
+
+		public extern void AddEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener, bool capture);
+
+		public extern void AddEventListener(NotificationEvents type, IEventListener listener);
+
+		public extern void AddEventListener(NotificationEvents type, IEventListener listener, bool capture);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Body
 		{
+			get;
 		}
 
-		public Notification(string title)
-		{
-		}
+		public extern void Close();
 
-		public Notification(string title, NotificationOptions options)
+		[FieldProperty]
+		public extern NotificationDirection Dir
 		{
-		}
-
-		public void AddEventListener(NotificationEvents type, Action listener)
-		{
-		}
-
-		public void AddEventListener(NotificationEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(NotificationEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void AddEventListener(NotificationEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener)
-		{
-		}
-
-		public void AddEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(NotificationEvents type, IEventListener listener)
-		{
-		}
-
-		public void AddEventListener(NotificationEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener)
-		{
-		}
-
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Body
+		public extern string Icon
 		{
-			get {
-				return null;
-			}
-		}
-
-		public void Close()
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public NotificationDirection Dir
+		public extern string Lang
 		{
-			get {
-				return default(NotificationDirection);
-			}
-		}
-
-		[FieldProperty]
-		public string Icon
-		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Lang
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onclick")]
-		public HtmlEventHandler OnClick
+		public extern HtmlEventHandler OnClick
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onclose")]
-		public HtmlEventHandler OnClose
+		public extern HtmlEventHandler OnClose
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onshow")]
-		public HtmlEventHandler OnShow
+		public extern HtmlEventHandler OnShow
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public static NotificationPermission Permission
+		public static extern NotificationPermission Permission
 		{
-			get {
-				return default(NotificationPermission);
-			}
+			get;
 		}
 
-		public void RemoveEventListener(NotificationEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(NotificationEvents type, Action listener);
 
-		public void RemoveEventListener(NotificationEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(NotificationEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(NotificationEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(NotificationEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(NotificationEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(NotificationEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener)
-		{
-		}
+		public extern void RemoveEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener);
 
-		public void RemoveEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(NotificationEvents type, HtmlEventHandlerWithTarget<Notification> listener, bool capture);
 
-		public void RemoveEventListener(NotificationEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(NotificationEvents type, IEventListener listener);
 
-		public void RemoveEventListener(NotificationEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(NotificationEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture);
 
-		public static void RequestPermission()
-		{
-		}
+		public static extern void RequestPermission();
 
-		public static void RequestPermission(NotificationPermissionCallback permissionCallback)
+		public static extern void RequestPermission(NotificationPermissionCallback permissionCallback);
+
+		[FieldProperty]
+		public extern string Tag
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Tag
+		public extern string Title
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Title
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

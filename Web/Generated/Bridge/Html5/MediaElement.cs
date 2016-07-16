@@ -5,168 +5,106 @@ namespace Bridge.Html5
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'MEDIA'"), Name("Element")]
 	public partial class MediaElement : Element
 	{
-		internal MediaElement()
-		{
-		}
+		internal extern MediaElement();
 
-		public void AddEventListener(MediaElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(MediaElementEvents type, Action listener);
 
-		public void AddEventListener(MediaElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(MediaElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(MediaElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(MediaElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener)
-		{
-		}
+		public extern void AddEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener);
 
-		public void AddEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture);
 
-		public void AddEventListener(MediaElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(MediaElementEvents type, IEventListener listener);
 
-		public void AddEventListener(MediaElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MediaElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture);
 
-		public TextTrack AddTextTrack(TextTrackKind kind)
-		{
-			return default(TextTrack);
-		}
+		public extern TextTrack AddTextTrack(TextTrackKind kind);
 
-		public TextTrack AddTextTrack(TextTrackKind kind, string label)
-		{
-			return default(TextTrack);
-		}
+		public extern TextTrack AddTextTrack(TextTrackKind kind, string label);
 
-		public TextTrack AddTextTrack(TextTrackKind kind, string label, string language)
+		public extern TextTrack AddTextTrack(TextTrackKind kind, string label, string language);
+
+		[FieldProperty]
+		public extern bool Autoplay
 		{
-			return default(TextTrack);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Autoplay
+		public extern TimeRanges Buffered
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+		}
+
+		public extern MediaPlayability CanPlayType(string type);
+
+		[FieldProperty]
+		public extern bool Controls
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public TimeRanges Buffered
+		public extern MediaCrossOriginPolicy CrossOrigin
 		{
-			get {
-				return default(TimeRanges);
-			}
-		}
-
-		public MediaPlayability CanPlayType(string type)
-		{
-			return default(MediaPlayability);
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Controls
+		public extern string CurrentSrc
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public MediaCrossOriginPolicy CrossOrigin
+		public extern double CurrentTime
 		{
-			get {
-				return default(MediaCrossOriginPolicy);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string CurrentSrc
+		public extern bool DefaultMuted
 		{
-			get {
-				return null;
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double CurrentTime
+		public extern double DefaultPlaybackRate
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool DefaultMuted
+		public extern double Duration
 		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double DefaultPlaybackRate
+		public extern bool Ended
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Duration
+		public extern MediaError Error
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public bool Ended
-		{
-			get {
-				return false;
-			}
-		}
-
-		[FieldProperty]
-		public MediaError Error
-		{
-			get {
-				return default(MediaError);
-			}
+			get;
 		}
 
 		[Name("HAVE_CURRENT_DATA")]
@@ -184,28 +122,20 @@ namespace Bridge.Html5
 		[Name("HAVE_NOTHING")]
 		public const ushort HAVE_NOTHING = 0;
 
-		public void Load()
+		public extern void Load();
+
+		[FieldProperty]
+		public extern bool Loop
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Loop
+		public extern bool Muted
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public bool Muted
-		{
-			get {
-				return false;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[Name("NETWORK_EMPTY")]
@@ -221,147 +151,97 @@ namespace Bridge.Html5
 		public const ushort NETWORK_NO_SOURCE = 3;
 
 		[FieldProperty]
-		public MediaElementNetworkState NetworkState
+		public extern MediaElementNetworkState NetworkState
 		{
-			get {
-				return default(MediaElementNetworkState);
-			}
+			get;
 		}
 
-		public void Pause()
+		public extern void Pause();
+
+		[FieldProperty]
+		public extern bool Paused
 		{
+			get;
+		}
+
+		public extern void Play();
+
+		[FieldProperty]
+		public extern double PlaybackRate
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool Paused
+		public extern TimeRanges Played
 		{
-			get {
-				return false;
-			}
-		}
-
-		public void Play()
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public double PlaybackRate
+		public extern MediaPreload Preload
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public TimeRanges Played
+		public extern MediaElementReadyState ReadyState
 		{
-			get {
-				return default(TimeRanges);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(MediaElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(MediaElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(MediaElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(MediaElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener);
+
+		public extern void RemoveEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture);
+
+		public extern void RemoveEventListener(MediaElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(MediaElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern TimeRanges Seekable
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public MediaPreload Preload
+		public extern bool Seeking
 		{
-			get {
-				return default(MediaPreload);
-			}
-			set {
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public MediaElementReadyState ReadyState
+		public extern string Src
 		{
-			get {
-				return default(MediaElementReadyState);
-			}
-		}
-
-		public void RemoveEventListener(MediaElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(MediaElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MediaElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(MediaElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(MediaElementEvents type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(MediaElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(MediaElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture)
-		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public TimeRanges Seekable
+		public extern TextTrackList TextTracks
 		{
-			get {
-				return default(TimeRanges);
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public bool Seeking
+		public extern double Volume
 		{
-			get {
-				return false;
-			}
-		}
-
-		[FieldProperty]
-		public string Src
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public TextTrackList TextTracks
-		{
-			get {
-				return default(TextTrackList);
-			}
-		}
-
-		[FieldProperty]
-		public double Volume
-		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,9 +3,7 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CSSValue
 	{
-		internal CSSValue()
-		{
-		}
+		internal extern CSSValue();
 
 		[Name("CSS_CUSTOM")]
 		public const ushort CSS_CUSTOM = 3;
@@ -20,21 +18,16 @@
 		public const ushort CSS_VALUE_LIST = 2;
 
 		[FieldProperty]
-		public string CssText
+		public extern string CssText
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public ushort CssValueType
+		public extern ushort CssValueType
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

@@ -3,40 +3,30 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class VideoPlaybackQuality
 	{
-		internal VideoPlaybackQuality()
+		internal extern VideoPlaybackQuality();
+
+		[FieldProperty]
+		public extern int CorruptedVideoFrames
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public int CorruptedVideoFrames
+		public extern double CreationTime
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double CreationTime
+		public extern int DroppedVideoFrames
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public int DroppedVideoFrames
+		public extern int TotalVideoFrames
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public int TotalVideoFrames
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

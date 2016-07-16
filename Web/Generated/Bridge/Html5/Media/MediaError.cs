@@ -3,16 +3,12 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MediaError
 	{
-		internal MediaError()
-		{
-		}
+		internal extern MediaError();
 
 		[FieldProperty]
-		public MediaErrorCode Code
+		public extern MediaErrorCode Code
 		{
-			get {
-				return default(MediaErrorCode);
-			}
+			get;
 		}
 
 		[Name("MEDIA_ERR_ABORTED")]

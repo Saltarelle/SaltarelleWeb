@@ -3,24 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class BlobEvent : Event
 	{
-		internal BlobEvent()
-		{
-		}
+		internal extern BlobEvent();
 
-		public BlobEvent(string type)
-		{
-		}
+		public extern BlobEvent(string type);
 
-		public BlobEvent(string type, BlobEventInit eventInitDict)
-		{
-		}
+		public extern BlobEvent(string type, BlobEventInit eventInitDict);
 
 		[FieldProperty]
-		public Blob Data
+		public extern Blob Data
 		{
-			get {
-				return default(Blob);
-			}
+			get;
 		}
 	}
 }

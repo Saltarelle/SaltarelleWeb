@@ -3,28 +3,20 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CompositionEvent : UIEvent
 	{
-		internal CompositionEvent()
-		{
-		}
+		internal extern CompositionEvent();
 
 		[FieldProperty]
-		public string Data
+		public extern string Data
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 
-		public void InitCompositionEvent(string typeArg, bool canBubbleArg, bool cancelableArg, WindowInstance viewArg, string dataArg, string localeArg)
-		{
-		}
+		public extern void InitCompositionEvent(string typeArg, bool canBubbleArg, bool cancelableArg, WindowInstance viewArg, string dataArg, string localeArg);
 
 		[FieldProperty]
-		public string Locale
+		public extern string Locale
 		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

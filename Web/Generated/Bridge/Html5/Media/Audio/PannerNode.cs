@@ -3,88 +3,54 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class PannerNode : AudioNode
 	{
-		internal PannerNode()
-		{
-		}
+		internal extern PannerNode();
 
-		public void AddEventListener(PannerNodeEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(PannerNodeEvents type, Action listener);
 
-		public void AddEventListener(PannerNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(PannerNodeEvents type, Action listener, bool capture);
 
-		public void AddEventListener(PannerNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(PannerNodeEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(PannerNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(PannerNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener)
-		{
-		}
+		public extern void AddEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener);
 
-		public void AddEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture);
 
-		public void AddEventListener(PannerNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(PannerNodeEvents type, IEventListener listener);
 
-		public void AddEventListener(PannerNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(PannerNodeEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture);
+
+		[FieldProperty]
+		public extern double ConeInnerAngle
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double ConeInnerAngle
+		public extern double ConeOuterAngle
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double ConeOuterAngle
+		public extern double ConeOuterGain
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double ConeOuterGain
+		public extern DistanceModelType DistanceModel
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public DistanceModelType DistanceModel
-		{
-			get {
-				return default(DistanceModelType);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		public const ushort EQUALPOWER = 0;
@@ -101,95 +67,57 @@
 		public const ushort LINEAR_DISTANCE = 0;
 
 		[FieldProperty]
-		public double MaxDistance
+		public extern double MaxDistance
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public PanningModelType PanningModel
+		public extern PanningModelType PanningModel
 		{
-			get {
-				return default(PanningModelType);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public double RefDistance
+		public extern double RefDistance
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(PannerNodeEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(PannerNodeEvents type, Action listener);
 
-		public void RemoveEventListener(PannerNodeEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(PannerNodeEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(PannerNodeEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(PannerNodeEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(PannerNodeEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(PannerNodeEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener);
 
-		public void RemoveEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(PannerNodeEvents type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture);
 
-		public void RemoveEventListener(PannerNodeEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(PannerNodeEvents type, IEventListener listener);
 
-		public void RemoveEventListener(PannerNodeEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(PannerNodeEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture);
 
 		[FieldProperty]
-		public double RolloffFactor
+		public extern double RolloffFactor
 		{
-			get {
-				return 0;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void SetOrientation(double x, double y, double z)
-		{
-		}
+		public extern void SetOrientation(double x, double y, double z);
 
-		public void SetPosition(double x, double y, double z)
-		{
-		}
+		public extern void SetPosition(double x, double y, double z);
 
-		public void SetVelocity(double x, double y, double z)
-		{
-		}
+		public extern void SetVelocity(double x, double y, double z);
 	}
 }

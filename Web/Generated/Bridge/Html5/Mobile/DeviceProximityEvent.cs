@@ -3,40 +3,28 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DeviceProximityEvent : Event
 	{
-		internal DeviceProximityEvent()
-		{
-		}
+		internal extern DeviceProximityEvent();
 
-		public DeviceProximityEvent(string type)
-		{
-		}
+		public extern DeviceProximityEvent(string type);
 
-		public DeviceProximityEvent(string type, DeviceProximityEventInit eventInitDict)
+		public extern DeviceProximityEvent(string type, DeviceProximityEventInit eventInitDict);
+
+		[FieldProperty]
+		public extern double Max
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double Max
+		public extern double Min
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Min
+		public extern double Value
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public double Value
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

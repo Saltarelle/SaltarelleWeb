@@ -5,33 +5,16 @@ namespace Bridge.Html5.IO
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class FileReaderSync
 	{
-		public FileReaderSync()
-		{
-		}
+		public extern FileReaderSync();
 
-		public ArrayBuffer ReadAsArrayBuffer(Blob blob)
-		{
-			return default(ArrayBuffer);
-		}
+		public extern ArrayBuffer ReadAsArrayBuffer(Blob blob);
 
-		public string ReadAsBinaryString(Blob blob)
-		{
-			return null;
-		}
+		public extern string ReadAsBinaryString(Blob blob);
 
-		public string ReadAsDataURL(Blob blob)
-		{
-			return null;
-		}
+		public extern string ReadAsDataURL(Blob blob);
 
-		public string ReadAsText(Blob blob)
-		{
-			return null;
-		}
+		public extern string ReadAsText(Blob blob);
 
-		public string ReadAsText(Blob blob, string encoding)
-		{
-			return null;
-		}
+		public extern string ReadAsText(Blob blob, string encoding);
 	}
 }

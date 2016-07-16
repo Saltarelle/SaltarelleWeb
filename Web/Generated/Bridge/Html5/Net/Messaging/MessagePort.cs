@@ -3,114 +3,61 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MessagePort : EventTarget
 	{
-		internal MessagePort()
-		{
-		}
+		internal extern MessagePort();
 
-		public void AddEventListener(MessagePortEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(MessagePortEvents type, Action listener);
 
-		public void AddEventListener(MessagePortEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MessagePortEvents type, Action listener, bool capture);
 
-		public void AddEventListener(MessagePortEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(MessagePortEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(MessagePortEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MessagePortEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener)
-		{
-		}
+		public extern void AddEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener);
 
-		public void AddEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture);
 
-		public void AddEventListener(MessagePortEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(MessagePortEvents type, IEventListener listener);
 
-		public void AddEventListener(MessagePortEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(MessagePortEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture);
 
-		public void Close()
-		{
-		}
+		public extern void Close();
 
 		[FieldProperty, Name("onmessage")]
-		public HtmlEventHandler OnMessage
+		public extern HtmlEventHandler OnMessage
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void PostMessage(object message)
-		{
-		}
+		public extern void PostMessage(object message);
 
-		public void PostMessage(object message, object[] transferable)
-		{
-		}
+		public extern void PostMessage(object message, object[] transferable);
 
-		public void RemoveEventListener(MessagePortEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(MessagePortEvents type, Action listener);
 
-		public void RemoveEventListener(MessagePortEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MessagePortEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(MessagePortEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(MessagePortEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(MessagePortEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MessagePortEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener)
-		{
-		}
+		public extern void RemoveEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener);
 
-		public void RemoveEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MessagePortEvents type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture);
 
-		public void RemoveEventListener(MessagePortEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(MessagePortEvents type, IEventListener listener);
 
-		public void RemoveEventListener(MessagePortEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(MessagePortEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MessagePort> listener, bool capture);
 
-		public void Start()
-		{
-		}
+		public extern void Start();
 	}
 }

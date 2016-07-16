@@ -3,36 +3,24 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class HashChangeEvent : Event
 	{
-		internal HashChangeEvent()
-		{
-		}
+		internal extern HashChangeEvent();
 
-		public HashChangeEvent(string type)
-		{
-		}
+		public extern HashChangeEvent(string type);
 
-		public HashChangeEvent(string type, HashChangeEventInit eventInitDict)
-		{
-		}
+		public extern HashChangeEvent(string type, HashChangeEventInit eventInitDict);
 
-		public void InitHashChangeEvent(string type, bool canBubble, bool cancelable, string oldURL, string newURL)
+		public extern void InitHashChangeEvent(string type, bool canBubble, bool cancelable, string oldURL, string newURL);
+
+		[FieldProperty]
+		public extern string NewURL
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string NewURL
+		public extern string OldURL
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string OldURL
-		{
-			get {
-				return null;
-			}
+			get;
 		}
 	}
 }

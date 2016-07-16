@@ -3,188 +3,107 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBDatabase")]
 	public partial class Database : EventTarget
 	{
-		internal Database()
-		{
-		}
+		internal extern Database();
 
-		public void AddEventListener(DatabaseEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(DatabaseEvents type, Action listener);
 
-		public void AddEventListener(DatabaseEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DatabaseEvents type, Action listener, bool capture);
 
-		public void AddEventListener(DatabaseEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(DatabaseEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(DatabaseEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DatabaseEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener)
-		{
-		}
+		public extern void AddEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener);
 
-		public void AddEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener, bool capture);
 
-		public void AddEventListener(DatabaseEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(DatabaseEvents type, IEventListener listener);
 
-		public void AddEventListener(DatabaseEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(DatabaseEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture);
 
-		public void Close()
-		{
-		}
+		public extern void Close();
 
-		public ObjectStore CreateObjectStore(string name)
-		{
-			return default(ObjectStore);
-		}
+		public extern ObjectStore CreateObjectStore(string name);
 
-		public ObjectStore CreateObjectStore(string name, ObjectStoreParameters optionalParameters)
-		{
-			return default(ObjectStore);
-		}
+		public extern ObjectStore CreateObjectStore(string name, ObjectStoreParameters optionalParameters);
 
-		public void DeleteObjectStore(string name)
+		public extern void DeleteObjectStore(string name);
+
+		[FieldProperty]
+		public extern string Name
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public string Name
+		public extern DOMStringList ObjectStoreNames
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public DOMStringList ObjectStoreNames
-		{
-			get {
-				return default(DOMStringList);
-			}
+			get;
 		}
 
 		[FieldProperty, Name("onabort")]
-		public HtmlEventHandler OnAbort
+		public extern HtmlEventHandler OnAbort
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onversionchange")]
-		public HtmlEventHandler OnVersionchange
+		public extern HtmlEventHandler OnVersionchange
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(DatabaseEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(DatabaseEvents type, Action listener);
 
-		public void RemoveEventListener(DatabaseEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(DatabaseEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(DatabaseEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(DatabaseEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(DatabaseEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(DatabaseEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener)
-		{
-		}
+		public extern void RemoveEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener);
 
-		public void RemoveEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(DatabaseEvents type, HtmlEventHandlerWithTarget<Database> listener, bool capture);
 
-		public void RemoveEventListener(DatabaseEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(DatabaseEvents type, IEventListener listener);
 
-		public void RemoveEventListener(DatabaseEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(DatabaseEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture);
 
 		[FieldProperty]
-		public StorageType Storage
+		public extern StorageType Storage
 		{
-			get {
-				return default(StorageType);
-			}
+			get;
 		}
 
-		public Transaction Transaction(string storeName)
-		{
-			return default(Transaction);
-		}
+		public extern Transaction Transaction(string storeName);
 
-		public Transaction Transaction(string storeName, TransactionMode mode)
-		{
-			return default(Transaction);
-		}
+		public extern Transaction Transaction(string storeName, TransactionMode mode);
 
-		public Transaction Transaction(string[] storeNames)
-		{
-			return default(Transaction);
-		}
+		public extern Transaction Transaction(string[] storeNames);
 
-		public Transaction Transaction(string[] storeNames, TransactionMode mode)
-		{
-			return default(Transaction);
-		}
+		public extern Transaction Transaction(string[] storeNames, TransactionMode mode);
 
 		[FieldProperty]
-		public ulong Version
+		public extern ulong Version
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

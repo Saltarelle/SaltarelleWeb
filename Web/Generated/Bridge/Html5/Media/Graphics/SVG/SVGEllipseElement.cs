@@ -3,120 +3,70 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGEllipseElement : SVGGraphicsElement
 	{
-		internal SVGEllipseElement()
-		{
-		}
+		internal extern SVGEllipseElement();
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture);
 
-		public void AddEventListener(SVGEllipseElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(SVGEllipseElementEvents type, Action listener);
 
-		public void AddEventListener(SVGEllipseElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGEllipseElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener)
-		{
-		}
+		public extern void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener);
 
-		public void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture);
 
-		public void AddEventListener(SVGEllipseElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(SVGEllipseElementEvents type, IEventListener listener);
 
-		public void AddEventListener(SVGEllipseElementEvents type, IEventListener listener, bool capture)
+		public extern void AddEventListener(SVGEllipseElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Cx
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Cx
+		public extern SVGAnimatedLength Cy
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
+		}
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGEllipseElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(SVGEllipseElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener);
+
+		public extern void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture);
+
+		public extern void RemoveEventListener(SVGEllipseElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGEllipseElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGAnimatedLength Rx
+		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGAnimatedLength Cy
+		public extern SVGAnimatedLength Ry
 		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGEllipseElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGEllipseElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGEllipseElementEvents type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGEllipseElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGEllipseElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength Rx
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedLength Ry
-		{
-			get {
-				return default(SVGAnimatedLength);
-			}
+			get;
 		}
 	}
 }

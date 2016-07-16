@@ -3,138 +3,81 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'HR'"), Name("Element")]
 	public partial class HRElement : Element
 	{
-		internal HRElement()
-		{
-		}
+		internal extern HRElement();
 
-		public void AddEventListener(HRElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(HRElementEvents type, Action listener);
 
-		public void AddEventListener(HRElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(HRElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(HRElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(HRElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(HRElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(HRElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(HRElementEvents type, HtmlEventHandlerWithTarget<HRElement> listener)
-		{
-		}
+		public extern void AddEventListener(HRElementEvents type, HtmlEventHandlerWithTarget<HRElement> listener);
 
-		public void AddEventListener(HRElementEvents type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(HRElementEvents type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture);
 
-		public void AddEventListener(HRElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(HRElementEvents type, IEventListener listener);
 
-		public void AddEventListener(HRElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(HRElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture)
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Align
 		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Align
+		public extern string Color
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public string Color
+		public extern bool NoShade
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
+		}
+
+		public extern void RemoveEventListener(HRElementEvents type, Action listener);
+
+		public extern void RemoveEventListener(HRElementEvents type, Action listener, bool capture);
+
+		public extern void RemoveEventListener(HRElementEvents type, HtmlEventHandler listener);
+
+		public extern void RemoveEventListener(HRElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void RemoveEventListener(HRElementEvents type, HtmlEventHandlerWithTarget<HRElement> listener);
+
+		public extern void RemoveEventListener(HRElementEvents type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture);
+
+		public extern void RemoveEventListener(HRElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(HRElementEvents type, IEventListener listener, bool capture);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener);
+
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture);
+
+		[FieldProperty]
+		public extern string Size
+		{
+			get;
+			set;
 		}
 
 		[FieldProperty]
-		public bool NoShade
+		public extern string Width
 		{
-			get {
-				return false;
-			}
-			set {
-			}
-		}
-
-		public void RemoveEventListener(HRElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(HRElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(HRElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(HRElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(HRElementEvents type, HtmlEventHandlerWithTarget<HRElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(HRElementEvents type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(HRElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(HRElementEvents type, IEventListener listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture)
-		{
-		}
-
-		[FieldProperty]
-		public string Size
-		{
-			get {
-				return null;
-			}
-			set {
-			}
-		}
-
-		[FieldProperty]
-		public string Width
-		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 	}
 }

@@ -3,53 +3,29 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class ApplicationCache : EventTarget
 	{
-		internal ApplicationCache()
-		{
-		}
+		internal extern ApplicationCache();
 
-		public void Abort()
-		{
-		}
+		public extern void Abort();
 
-		public void AddEventListener(ApplicationCacheEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(ApplicationCacheEvents type, Action listener);
 
-		public void AddEventListener(ApplicationCacheEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ApplicationCacheEvents type, Action listener, bool capture);
 
-		public void AddEventListener(ApplicationCacheEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(ApplicationCacheEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(ApplicationCacheEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ApplicationCacheEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener)
-		{
-		}
+		public extern void AddEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener);
 
-		public void AddEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture);
 
-		public void AddEventListener(ApplicationCacheEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(ApplicationCacheEvents type, IEventListener listener);
 
-		public void AddEventListener(ApplicationCacheEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ApplicationCacheEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture);
 
 		public const ushort CHECKING = 2;
 
@@ -60,142 +36,92 @@
 		public const ushort OBSOLETE = 5;
 
 		[FieldProperty, Name("oncached")]
-		public HtmlEventHandler OnCached
+		public extern HtmlEventHandler OnCached
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onchecking")]
-		public HtmlEventHandler OnChecking
+		public extern HtmlEventHandler OnChecking
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("ondownloading")]
-		public HtmlEventHandler OnDownloading
+		public extern HtmlEventHandler OnDownloading
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onerror")]
-		public HtmlEventHandler OnError
+		public extern HtmlEventHandler OnError
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onnoupdate")]
-		public HtmlEventHandler OnNoupdate
+		public extern HtmlEventHandler OnNoupdate
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onobsolete")]
-		public HtmlEventHandler OnObsolete
+		public extern HtmlEventHandler OnObsolete
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onprogress")]
-		public HtmlEventHandler OnProgress
+		public extern HtmlEventHandler OnProgress
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
 		[FieldProperty, Name("onupdateready")]
-		public HtmlEventHandler OnUpdateready
+		public extern HtmlEventHandler OnUpdateready
 		{
-			get {
-				return default(HtmlEventHandler);
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(ApplicationCacheEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(ApplicationCacheEvents type, Action listener);
 
-		public void RemoveEventListener(ApplicationCacheEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ApplicationCacheEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener)
-		{
-		}
+		public extern void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener);
 
-		public void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ApplicationCacheEvents type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture);
 
-		public void RemoveEventListener(ApplicationCacheEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(ApplicationCacheEvents type, IEventListener listener);
 
-		public void RemoveEventListener(ApplicationCacheEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ApplicationCacheEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture);
 
 		[FieldProperty]
-		public ApplicationCacheStatus Status
+		public extern ApplicationCacheStatus Status
 		{
-			get {
-				return default(ApplicationCacheStatus);
-			}
+			get;
 		}
 
-		public void SwapCache()
-		{
-		}
+		public extern void SwapCache();
 
 		public const ushort UNCACHED = 0;
 
-		public void Update()
-		{
-		}
+		public extern void Update();
 
 		public const ushort UPDATEREADY = 4;
 	}

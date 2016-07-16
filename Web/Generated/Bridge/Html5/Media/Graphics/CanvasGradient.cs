@@ -3,12 +3,8 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class CanvasGradient
 	{
-		internal CanvasGradient()
-		{
-		}
+		internal extern CanvasGradient();
 
-		public void AddColorStop(double offset, string color)
-		{
-		}
+		public extern void AddColorStop(double offset, string color);
 	}
 }

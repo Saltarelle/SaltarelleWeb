@@ -3,161 +3,92 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGGraphicsElement : SVGElement
 	{
-		internal SVGGraphicsElement()
+		internal extern SVGGraphicsElement();
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener);
+
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture);
+
+		public extern void AddEventListener(SVGGraphicsElementEvents type, Action listener);
+
+		public extern void AddEventListener(SVGGraphicsElementEvents type, Action listener, bool capture);
+
+		public extern void AddEventListener(SVGGraphicsElementEvents type, HtmlEventHandler listener);
+
+		public extern void AddEventListener(SVGGraphicsElementEvents type, HtmlEventHandler listener, bool capture);
+
+		public extern void AddEventListener(SVGGraphicsElementEvents type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener);
+
+		public extern void AddEventListener(SVGGraphicsElementEvents type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture);
+
+		public extern void AddEventListener(SVGGraphicsElementEvents type, IEventListener listener);
+
+		public extern void AddEventListener(SVGGraphicsElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGElement FarthestViewportElement
 		{
+			get;
 		}
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener)
+		public extern SVGRect GetBBox();
+
+		public extern SVGMatrix GetCTM();
+
+		public extern SVGMatrix GetScreenCTM();
+
+		public extern SVGMatrix GetTransformToElement(SVGGraphicsElement element);
+
+		public extern bool HasExtension(string extension);
+
+		[FieldProperty]
+		public extern SVGElement NearestViewportElement
 		{
+			get;
 		}
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener);
 
-		public void AddEventListener(SVGGraphicsElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture);
 
-		public void AddEventListener(SVGGraphicsElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGGraphicsElementEvents type, Action listener);
 
-		public void AddEventListener(SVGGraphicsElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGGraphicsElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(SVGGraphicsElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGGraphicsElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(SVGGraphicsElementEvents type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGGraphicsElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(SVGGraphicsElementEvents type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(SVGGraphicsElementEvents type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener);
 
-		public void AddEventListener(SVGGraphicsElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(SVGGraphicsElementEvents type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture);
 
-		public void AddEventListener(SVGGraphicsElementEvents type, IEventListener listener, bool capture)
+		public extern void RemoveEventListener(SVGGraphicsElementEvents type, IEventListener listener);
+
+		public extern void RemoveEventListener(SVGGraphicsElementEvents type, IEventListener listener, bool capture);
+
+		[FieldProperty]
+		public extern SVGStringList RequiredExtensions
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGElement FarthestViewportElement
+		public extern SVGStringList RequiredFeatures
 		{
-			get {
-				return default(SVGElement);
-			}
-		}
-
-		public SVGRect GetBBox()
-		{
-			return default(SVGRect);
-		}
-
-		public SVGMatrix GetCTM()
-		{
-			return default(SVGMatrix);
-		}
-
-		public SVGMatrix GetScreenCTM()
-		{
-			return default(SVGMatrix);
-		}
-
-		public SVGMatrix GetTransformToElement(SVGGraphicsElement element)
-		{
-			return default(SVGMatrix);
-		}
-
-		public bool HasExtension(string extension)
-		{
-			return false;
+			get;
 		}
 
 		[FieldProperty]
-		public SVGElement NearestViewportElement
+		public extern SVGStringList SystemLanguage
 		{
-			get {
-				return default(SVGElement);
-			}
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGGraphicsElementEvents type, Action listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGGraphicsElementEvents type, Action listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGGraphicsElementEvents type, HtmlEventHandler listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGGraphicsElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGGraphicsElementEvents type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGGraphicsElementEvents type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener, bool capture)
-		{
-		}
-
-		public void RemoveEventListener(SVGGraphicsElementEvents type, IEventListener listener)
-		{
-		}
-
-		public void RemoveEventListener(SVGGraphicsElementEvents type, IEventListener listener, bool capture)
-		{
+			get;
 		}
 
 		[FieldProperty]
-		public SVGStringList RequiredExtensions
+		public extern SVGAnimatedTransformList Transform
 		{
-			get {
-				return default(SVGStringList);
-			}
-		}
-
-		[FieldProperty]
-		public SVGStringList RequiredFeatures
-		{
-			get {
-				return default(SVGStringList);
-			}
-		}
-
-		[FieldProperty]
-		public SVGStringList SystemLanguage
-		{
-			get {
-				return default(SVGStringList);
-			}
-		}
-
-		[FieldProperty]
-		public SVGAnimatedTransformList Transform
-		{
-			get {
-				return default(SVGAnimatedTransformList);
-			}
+			get;
 		}
 	}
 }

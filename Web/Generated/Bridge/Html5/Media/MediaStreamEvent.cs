@@ -3,24 +3,16 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MediaStreamEvent : Event
 	{
-		internal MediaStreamEvent()
-		{
-		}
+		internal extern MediaStreamEvent();
 
-		public MediaStreamEvent(string type)
-		{
-		}
+		public extern MediaStreamEvent(string type);
 
-		public MediaStreamEvent(string type, MediaStreamEventInit eventInitDict)
-		{
-		}
+		public extern MediaStreamEvent(string type, MediaStreamEventInit eventInitDict);
 
 		[FieldProperty]
-		public MediaStream Stream
+		public extern MediaStream Stream
 		{
-			get {
-				return default(MediaStream);
-			}
+			get;
 		}
 	}
 }

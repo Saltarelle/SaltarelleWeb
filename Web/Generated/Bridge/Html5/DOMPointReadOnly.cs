@@ -3,40 +3,30 @@
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMPointReadOnly
 	{
-		internal DOMPointReadOnly()
+		internal extern DOMPointReadOnly();
+
+		[FieldProperty]
+		public extern double W
 		{
+			get;
 		}
 
 		[FieldProperty]
-		public double W
+		public extern double X
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double X
+		public extern double Y
 		{
-			get {
-				return 0;
-			}
+			get;
 		}
 
 		[FieldProperty]
-		public double Y
+		public extern double Z
 		{
-			get {
-				return 0;
-			}
-		}
-
-		[FieldProperty]
-		public double Z
-		{
-			get {
-				return 0;
-			}
+			get;
 		}
 	}
 }

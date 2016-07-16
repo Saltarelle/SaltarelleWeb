@@ -3,147 +3,76 @@
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBObjectStore")]
 	public partial class ObjectStore
 	{
-		internal ObjectStore()
+		internal extern ObjectStore();
+
+		public extern Request Add(object value, object key);
+
+		[FieldProperty]
+		public extern bool AutoIncrement
 		{
+			get;
 		}
 
-		public Request Add(object value, object key)
+		public extern Request Clear();
+
+		public extern Request Count(object key);
+
+		public extern Index CreateIndex(string name, string keyPath);
+
+		public extern Index CreateIndex(string name, string keyPath, IndexParameters optionalParameters);
+
+		public extern Index CreateIndex(string name, string[] keyPath);
+
+		public extern Index CreateIndex(string name, string[] keyPath, IndexParameters optionalParameters);
+
+		public extern Request Delete(object key);
+
+		public extern void DeleteIndex(string indexName);
+
+		public extern Request Get(object key);
+
+		public extern Request GetAll(object key);
+
+		public extern Request GetAll(object key, int limit);
+
+		public extern Request GetAllKeys(object key);
+
+		public extern Request GetAllKeys(object key, int limit);
+
+		public extern Index Index(string name);
+
+		[FieldProperty]
+		public extern DOMStringList IndexNames
 		{
-			return default(Request);
+			get;
 		}
 
 		[FieldProperty]
-		public bool AutoIncrement
+		public extern object KeyPath
 		{
-			get {
-				return false;
-			}
-		}
-
-		public Request Clear()
-		{
-			return default(Request);
-		}
-
-		public Request Count(object key)
-		{
-			return default(Request);
-		}
-
-		public Index CreateIndex(string name, string keyPath)
-		{
-			return default(Index);
-		}
-
-		public Index CreateIndex(string name, string keyPath, IndexParameters optionalParameters)
-		{
-			return default(Index);
-		}
-
-		public Index CreateIndex(string name, string[] keyPath)
-		{
-			return default(Index);
-		}
-
-		public Index CreateIndex(string name, string[] keyPath, IndexParameters optionalParameters)
-		{
-			return default(Index);
-		}
-
-		public Request Delete(object key)
-		{
-			return default(Request);
-		}
-
-		public void DeleteIndex(string indexName)
-		{
-		}
-
-		public Request Get(object key)
-		{
-			return default(Request);
-		}
-
-		public Request GetAll(object key)
-		{
-			return default(Request);
-		}
-
-		public Request GetAll(object key, int limit)
-		{
-			return default(Request);
-		}
-
-		public Request GetAllKeys(object key)
-		{
-			return default(Request);
-		}
-
-		public Request GetAllKeys(object key, int limit)
-		{
-			return default(Request);
-		}
-
-		public Index Index(string name)
-		{
-			return default(Index);
+			get;
 		}
 
 		[FieldProperty]
-		public DOMStringList IndexNames
+		public extern string Name
 		{
-			get {
-				return default(DOMStringList);
-			}
+			get;
 		}
+
+		public extern Request OpenCursor(object range);
+
+		public extern Request OpenCursor(object range, CursorDirection direction);
+
+		public extern Request OpenKeyCursor(object range);
+
+		public extern Request OpenKeyCursor(object range, CursorDirection direction);
+
+		public extern Request Put(object value, object key);
 
 		[FieldProperty]
-		public object KeyPath
+		public extern Transaction Transaction
 		{
-			get {
-				return null;
-			}
-		}
-
-		[FieldProperty]
-		public string Name
-		{
-			get {
-				return null;
-			}
-		}
-
-		public Request OpenCursor(object range)
-		{
-			return default(Request);
-		}
-
-		public Request OpenCursor(object range, CursorDirection direction)
-		{
-			return default(Request);
-		}
-
-		public Request OpenKeyCursor(object range)
-		{
-			return default(Request);
-		}
-
-		public Request OpenKeyCursor(object range, CursorDirection direction)
-		{
-			return default(Request);
-		}
-
-		public Request Put(object value, object key)
-		{
-			return default(Request);
-		}
-
-		[FieldProperty]
-		public Transaction Transaction
-		{
-			get {
-				return default(Transaction);
-			}
+			get;
 		}
 	}
 }

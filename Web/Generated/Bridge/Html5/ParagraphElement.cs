@@ -3,98 +3,53 @@
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'P'"), Name("Element")]
 	public partial class ParagraphElement : Element
 	{
-		internal ParagraphElement()
-		{
-		}
+		internal extern ParagraphElement();
 
-		public void AddEventListener(ParagraphElementEvents type, Action listener)
-		{
-		}
+		public extern void AddEventListener(ParagraphElementEvents type, Action listener);
 
-		public void AddEventListener(ParagraphElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ParagraphElementEvents type, Action listener, bool capture);
 
-		public void AddEventListener(ParagraphElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void AddEventListener(ParagraphElementEvents type, HtmlEventHandler listener);
 
-		public void AddEventListener(ParagraphElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ParagraphElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void AddEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener)
-		{
-		}
+		public extern void AddEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener);
 
-		public void AddEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture);
 
-		public void AddEventListener(ParagraphElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void AddEventListener(ParagraphElementEvents type, IEventListener listener);
 
-		public void AddEventListener(ParagraphElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(ParagraphElementEvents type, IEventListener listener, bool capture);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener);
 
-		public void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture)
-		{
-		}
+		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture);
 
 		[FieldProperty]
-		public string Align
+		public extern string Align
 		{
-			get {
-				return null;
-			}
-			set {
-			}
+			get;
+			set;
 		}
 
-		public void RemoveEventListener(ParagraphElementEvents type, Action listener)
-		{
-		}
+		public extern void RemoveEventListener(ParagraphElementEvents type, Action listener);
 
-		public void RemoveEventListener(ParagraphElementEvents type, Action listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ParagraphElementEvents type, Action listener, bool capture);
 
-		public void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandler listener)
-		{
-		}
+		public extern void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandler listener);
 
-		public void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandler listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandler listener, bool capture);
 
-		public void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener);
 
-		public void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ParagraphElementEvents type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture);
 
-		public void RemoveEventListener(ParagraphElementEvents type, IEventListener listener)
-		{
-		}
+		public extern void RemoveEventListener(ParagraphElementEvents type, IEventListener listener);
 
-		public void RemoveEventListener(ParagraphElementEvents type, IEventListener listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(ParagraphElementEvents type, IEventListener listener, bool capture);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener);
 
-		public void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture)
-		{
-		}
+		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParagraphElement> listener, bool capture);
 	}
 }
