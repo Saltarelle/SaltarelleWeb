@@ -11,18 +11,19 @@ namespace Generator
 
         private static CSharpFormattingOptions CreateFormattingOptions()
         {
-            var result = FormattingOptionsFactory.CreateKRStyle();
-            result.NamespaceBraceStyle = BraceStyle.EndOfLine;
-            result.ClassBraceStyle = BraceStyle.EndOfLine;
-            result.EnumBraceStyle = BraceStyle.EndOfLine;
-            result.InterfaceBraceStyle = BraceStyle.EndOfLine;
-            result.ConstructorBraceStyle = BraceStyle.EndOfLine;
-            result.MethodBraceStyle = BraceStyle.EndOfLine;
-            result.PropertyBraceStyle = BraceStyle.EndOfLine;
-            result.BlankLinesBetweenMembers = 1;
-            result.AllowPropertyGetBlockInline = true;
-            result.AllowPropertySetBlockInline = true;
-            result.BlankLinesAfterUsings = 1;
+            var result = FormattingOptionsFactory.CreateSharpDevelop();
+
+            result.NamespaceBraceStyle = BraceStyle.NextLine;
+            result.ClassBraceStyle = BraceStyle.NextLine;
+            result.EnumBraceStyle = BraceStyle.NextLine;
+            result.InterfaceBraceStyle = BraceStyle.NextLine;
+            result.ConstructorBraceStyle = BraceStyle.NextLine;
+            result.MethodBraceStyle = BraceStyle.NextLine;
+            result.PropertyBraceStyle = BraceStyle.NextLine;
+            //result.BlankLinesBetweenMembers = 1;
+            //result.AllowPropertyGetBlockInline = true;
+            //result.AllowPropertySetBlockInline = true;
+            //result.BlankLinesAfterUsings = 1;
             return result;
         }
 
