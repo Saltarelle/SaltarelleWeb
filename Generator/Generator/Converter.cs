@@ -361,10 +361,10 @@ namespace Generator
             return result;
         }
 
-        private static Attribute IndexerNameAttribute(string name)
-        {
-            return new Attribute { Type = MakeType("Bridge.IndexerName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
-        }
+        //private static Attribute IndexerNameAttribute(string name)
+        //{
+        //    return new Attribute { Type = MakeType("Bridge.IndexerName"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
+        //}
 
         private static string GetUnqualifiedTypeName(AstType type)
         {
@@ -1009,14 +1009,14 @@ namespace Generator
                 var propertyType = MakeTypeOptionIfRequired(p.PropertyTypes);
                 var i = new IndexerDeclaration
                 {
-                    Modifiers = Modifiers.Public,
+                    Modifiers = Modifiers.Public | Modifiers.Extern,
                     ReturnType = propertyType,
                     Parameters = { new ParameterDeclaration(p.IndexParameterType, p.IndexParameterNames[0]) },
                     Getter = p.CanRead ? new Accessor { Body = null } : null,
                     Setter = p.CanWrite ? new Accessor { Body = null } : null,
                 };
-                AddAttribute(i.Attributes, IndexerNameAttribute("__Item"));
-                AddAttribute(i.Attributes, FieldPropertyAttribute);
+                //AddAttribute(i.Attributes, IndexerNameAttribute("__Item"));
+                //AddAttribute(i.Attributes, FieldPropertyAttribute);
                 members.Add(i);
             }
 
