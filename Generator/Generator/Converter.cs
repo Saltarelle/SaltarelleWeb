@@ -354,10 +354,10 @@ namespace Generator
         private static Attribute ExternalAttribute(bool obeysTypeSystem, string typeCheckCode = null)
         {
             var result = new Attribute { Type = MakeType("Bridge.External") };
-            if (obeysTypeSystem)
-                result.Arguments.Add(new NamedExpression("ObeysTypeSystem", new PrimitiveExpression(true, "true")));
-            if (typeCheckCode != null)
-                result.Arguments.Add(new NamedExpression("TypeCheckCode", new PrimitiveExpression("\"" + typeCheckCode + "\"", "\"" + typeCheckCode + "\"")));
+            //if (obeysTypeSystem)
+            //    result.Arguments.Add(new NamedExpression("ObeysTypeSystem", new PrimitiveExpression(true, "true")));
+            //if (typeCheckCode != null)
+            //    result.Arguments.Add(new NamedExpression("TypeCheckCode", new PrimitiveExpression("\"" + typeCheckCode + "\"", "\"" + typeCheckCode + "\"")));
             return result;
         }
 
