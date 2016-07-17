@@ -3,7 +3,7 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum MediaSourceEndOfStreamError
 	{
-		Network,
-		Decode
+		Decode,
+		Network
 	}
 }

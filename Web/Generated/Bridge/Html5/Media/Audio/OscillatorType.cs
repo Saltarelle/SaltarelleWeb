@@ -13,10 +13,10 @@
 		_3,
 		[Name("4")]
 		_4,
+		Custom,
+		Sawtooth,
 		Sine,
 		Square,
-		Sawtooth,
-		Triangle,
-		Custom
+		Triangle
 	}
 }

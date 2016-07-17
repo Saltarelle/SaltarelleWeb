@@ -3,8 +3,8 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum RTCSdpType
 	{
+		Answer,
 		Offer,
-		Pranswer,
-		Answer
+		Pranswer
 	}
 }

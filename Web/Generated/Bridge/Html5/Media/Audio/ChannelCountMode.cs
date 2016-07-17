@@ -3,9 +3,9 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum ChannelCountMode
 	{
-		Max,
 		[Name("clamped-max")]
 		ClampedMax,
-		Explicit
+		Explicit,
+		Max
 	}
 }

@@ -4,8 +4,8 @@
 	public enum RTCStatsIceCandidateType
 	{
 		Host,
-		Serverreflexive,
 		Peerreflexive,
-		Relayed
+		Relayed,
+		Serverreflexive
 	}
 }

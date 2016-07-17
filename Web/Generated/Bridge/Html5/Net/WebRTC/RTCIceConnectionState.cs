@@ -3,12 +3,12 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum RTCIceConnectionState
 	{
-		New,
 		Checking,
-		Connected,
+		Closed,
 		Completed,
-		Failed,
+		Connected,
 		Disconnected,
-		Closed
+		Failed,
+		New
 	}
 }

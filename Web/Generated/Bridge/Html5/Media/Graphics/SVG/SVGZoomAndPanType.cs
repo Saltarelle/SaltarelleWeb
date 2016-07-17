@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGZoomAndPanType
 	{
+		Unknown = 0,
 		Disable = 1,
-		Magnify = 2,
-		Unknown = 0
+		Magnify = 2
 	}
 }

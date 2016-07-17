@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGMarkerOrient
 	{
-		Angle = 2,
+		Unknown = 0,
 		Auto = 1,
-		Unknown = 0
+		Angle = 2
 	}
 }

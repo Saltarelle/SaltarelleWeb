@@ -3,15 +3,15 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum DOMParserSupportedType
 	{
+		[Name("application/xhtml+xml")]
+		ApplicationXhtmlXml,
+		[Name("application/xml")]
+		ApplicationXml,
+		[Name("image/svg+xml")]
+		ImageSvgXml,
 		[Name("text/html")]
 		TextHtml,
 		[Name("text/xml")]
-		TextXml,
-		[Name("application/xml")]
-		ApplicationXml,
-		[Name("application/xhtml+xml")]
-		ApplicationXhtmlXml,
-		[Name("image/svg+xml")]
-		ImageSvgXml
+		TextXml
 	}
 }

@@ -3,12 +3,12 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGFECompositeOperator
 	{
-		Arithmetic = 6,
-		Atop = 4,
+		Unknown = 0,
+		Over = 1,
 		In = 2,
 		Out = 3,
-		Over = 1,
-		Unknown = 0,
-		Xor = 5
+		Atop = 4,
+		Xor = 5,
+		Arithmetic = 6
 	}
 }

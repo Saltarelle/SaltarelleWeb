@@ -3,7 +3,7 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum DataTransferItemKind
 	{
-		String,
-		File
+		File,
+		String
 	}
 }

@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGUnitType
 	{
-		Objectboundingbox = 2,
 		Unknown = 0,
-		Userspaceonuse = 1
+		Userspaceonuse = 1,
+		Objectboundingbox = 2
 	}
 }

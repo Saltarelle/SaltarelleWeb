@@ -3,9 +3,9 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum ReadyState
 	{
-		Closed = 3,
-		Closing = 2,
 		Connecting = 0,
-		Open = 1
+		Open = 1,
+		Closing = 2,
+		Closed = 3
 	}
 }

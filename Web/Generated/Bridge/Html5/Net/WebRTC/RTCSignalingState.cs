@@ -3,15 +3,15 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum RTCSignalingState
 	{
-		Stable,
+		Closed,
 		[Name("have-local-offer")]
 		HaveLocalOffer,
-		[Name("have-remote-offer")]
-		HaveRemoteOffer,
 		[Name("have-local-pranswer")]
 		HaveLocalPranswer,
+		[Name("have-remote-offer")]
+		HaveRemoteOffer,
 		[Name("have-remote-pranswer")]
 		HaveRemotePranswer,
-		Closed
+		Stable
 	}
 }

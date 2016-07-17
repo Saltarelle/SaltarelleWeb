@@ -3,7 +3,7 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum BinaryType
 	{
-		Blob,
-		Arraybuffer
+		Arraybuffer,
+		Blob
 	}
 }

@@ -9,8 +9,8 @@
 		_1,
 		[Name("2")]
 		_2,
-		Linear,
+		Exponential,
 		Inverse,
-		Exponential
+		Linear
 	}
 }

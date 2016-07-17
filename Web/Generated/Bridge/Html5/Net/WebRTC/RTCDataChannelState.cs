@@ -3,9 +3,9 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum RTCDataChannelState
 	{
-		Connecting,
-		Open,
+		Closed,
 		Closing,
-		Closed
+		Connecting,
+		Open
 	}
 }

@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGLengthAdjust
 	{
+		Unknown = 0,
 		Spacing = 1,
-		Spacingandglyphs = 2,
-		Unknown = 0
+		Spacingandglyphs = 2
 	}
 }

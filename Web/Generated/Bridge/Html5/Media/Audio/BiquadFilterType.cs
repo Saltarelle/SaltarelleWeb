@@ -19,13 +19,13 @@
 		_6,
 		[Name("7")]
 		_7,
-		Lowpass,
-		Highpass,
+		Allpass,
 		Bandpass,
-		Lowshelf,
+		Highpass,
 		Highshelf,
-		Peaking,
+		Lowpass,
+		Lowshelf,
 		Notch,
-		Allpass
+		Peaking
 	}
 }

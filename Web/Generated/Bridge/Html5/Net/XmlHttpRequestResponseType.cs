@@ -3,12 +3,12 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum XmlHttpRequestResponseType
 	{
-		[Name("")]
-		String,
 		Arraybuffer,
 		Blob,
 		Document,
 		Json,
+		[Name("")]
+		String,
 		Text
 	}
 }

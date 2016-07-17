@@ -3,9 +3,9 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGFEConvolveMatrixEdgeMode
 	{
-		Duplicate = 1,
-		None = 3,
 		Unknown = 0,
-		Wrap = 2
+		Duplicate = 1,
+		Wrap = 2,
+		None = 3
 	}
 }

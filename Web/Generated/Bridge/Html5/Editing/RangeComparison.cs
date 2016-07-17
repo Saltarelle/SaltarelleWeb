@@ -3,9 +3,9 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum RangeComparison
 	{
-		EndToEnd = 2,
-		EndToStart = 3,
+		StartToStart = 0,
 		StartToEnd = 1,
-		StartToStart = 0
+		EndToEnd = 2,
+		EndToStart = 3
 	}
 }

@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGFEStitchType
 	{
-		Nostitch = 2,
+		Unknown = 0,
 		Stitch = 1,
-		Unknown = 0
+		Nostitch = 2
 	}
 }

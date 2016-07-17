@@ -3,11 +3,11 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum ApplicationCacheStatus
 	{
+		Uncached = 0,
+		Idle = 1,
 		Checking = 2,
 		Downloading = 3,
-		Idle = 1,
-		Obsolete = 5,
-		Uncached = 0,
-		Updateready = 4
+		Updateready = 4,
+		Obsolete = 5
 	}
 }

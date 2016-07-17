@@ -3,9 +3,9 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum CSSBoxType
 	{
-		Margin,
 		Border,
-		Padding,
-		Content
+		Content,
+		Margin,
+		Padding
 	}
 }

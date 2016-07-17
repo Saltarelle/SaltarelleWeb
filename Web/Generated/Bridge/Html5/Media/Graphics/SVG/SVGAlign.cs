@@ -3,16 +3,16 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGAlign
 	{
-		None = 1,
 		Unknown = 0,
-		Xmaxymax = 10,
-		Xmaxymid = 7,
-		Xmaxymin = 4,
-		Xmidymax = 9,
-		Xmidymid = 6,
+		None = 1,
+		Xminymin = 2,
 		Xmidymin = 3,
-		Xminymax = 8,
+		Xmaxymin = 4,
 		Xminymid = 5,
-		Xminymin = 2
+		Xmidymid = 6,
+		Xmaxymid = 7,
+		Xminymax = 8,
+		Xmidymax = 9,
+		Xmaxymax = 10
 	}
 }

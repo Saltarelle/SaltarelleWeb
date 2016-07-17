@@ -3,10 +3,10 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGFEColorMatrixType
 	{
-		Huerotate = 3,
-		Luminancetoalpha = 4,
+		Unknown = 0,
 		Matrix = 1,
 		Saturate = 2,
-		Unknown = 0
+		Huerotate = 3,
+		Luminancetoalpha = 4
 	}
 }

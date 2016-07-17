@@ -3,9 +3,9 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum SelectionMode
 	{
-		Select,
-		Start,
 		End,
-		Preserve
+		Preserve,
+		Select,
+		Start
 	}
 }

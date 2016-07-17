@@ -5,7 +5,7 @@
 	{
 		[Name("")]
 		None,
-		Rl,
-		Lr
+		Lr,
+		Rl
 	}
 }

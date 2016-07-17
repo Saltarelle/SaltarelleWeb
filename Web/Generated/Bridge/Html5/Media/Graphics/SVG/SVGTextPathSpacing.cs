@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGTextPathSpacing
 	{
+		Unknown = 0,
 		Auto = 1,
-		Exact = 2,
-		Unknown = 0
+		Exact = 2
 	}
 }

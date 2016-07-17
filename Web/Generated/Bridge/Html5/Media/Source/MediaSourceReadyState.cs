@@ -4,7 +4,7 @@
 	public enum MediaSourceReadyState
 	{
 		Closed,
-		Open,
-		Ended
+		Ended,
+		Open
 	}
 }

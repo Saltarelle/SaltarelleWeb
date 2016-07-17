@@ -3,11 +3,11 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum RTCStatsIceCandidatePairState
 	{
-		Frozen,
-		Waiting,
-		Inprogress,
+		Cancelled,
 		Failed,
+		Frozen,
+		Inprogress,
 		Succeeded,
-		Cancelled
+		Waiting
 	}
 }

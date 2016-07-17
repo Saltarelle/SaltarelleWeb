@@ -4,7 +4,7 @@
 	public enum RecordingState
 	{
 		Inactive,
-		Recording,
-		Paused
+		Paused,
+		Recording
 	}
 }

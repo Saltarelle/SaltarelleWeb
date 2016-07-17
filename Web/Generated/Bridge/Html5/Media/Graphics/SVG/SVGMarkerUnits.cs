@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGMarkerUnits
 	{
-		Strokewidth = 2,
 		Unknown = 0,
-		Userspaceonuse = 1
+		Userspaceonuse = 1,
+		Strokewidth = 2
 	}
 }

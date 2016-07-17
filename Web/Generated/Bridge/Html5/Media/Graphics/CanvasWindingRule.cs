@@ -3,7 +3,7 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum CanvasWindingRule
 	{
-		Nonzero,
-		Evenodd
+		Evenodd,
+		Nonzero
 	}
 }

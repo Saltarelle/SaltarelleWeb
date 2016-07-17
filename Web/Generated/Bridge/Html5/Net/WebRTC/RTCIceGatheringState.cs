@@ -3,8 +3,8 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum RTCIceGatheringState
 	{
-		New,
+		Complete,
 		Gathering,
-		Complete
+		New
 	}
 }

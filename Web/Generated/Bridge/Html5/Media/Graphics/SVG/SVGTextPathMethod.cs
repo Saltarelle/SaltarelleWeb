@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGTextPathMethod
 	{
+		Unknown = 0,
 		Align = 1,
-		Stretch = 2,
-		Unknown = 0
+		Stretch = 2
 	}
 }

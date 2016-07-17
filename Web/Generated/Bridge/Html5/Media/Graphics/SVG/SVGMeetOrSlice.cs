@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGMeetOrSlice
 	{
+		Unknown = 0,
 		Meet = 1,
-		Slice = 2,
-		Unknown = 0
+		Slice = 2
 	}
 }

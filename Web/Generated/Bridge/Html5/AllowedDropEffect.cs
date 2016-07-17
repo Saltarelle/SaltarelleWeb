@@ -4,13 +4,13 @@
 	public enum AllowedDropEffect
 	{
 		None,
+		All,
 		Copy,
 		CopyLink,
 		CopyMove,
 		Link,
 		LinkMove,
 		Move,
-		All,
 		Uninitialized
 	}
 }

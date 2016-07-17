@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGFETurbulenceType
 	{
+		Unknown = 0,
 		Fractalnoise = 1,
-		Turbulence = 2,
-		Unknown = 0
+		Turbulence = 2
 	}
 }

@@ -3,10 +3,10 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGFEDisplacementMapChannelSelector
 	{
-		A = 4,
-		B = 3,
-		G = 2,
+		Unknown = 0,
 		R = 1,
-		Unknown = 0
+		G = 2,
+		B = 3,
+		A = 4
 	}
 }

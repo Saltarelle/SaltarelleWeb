@@ -3,10 +3,10 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum MediaElementReadyState
 	{
-		HaveCurrentData = 2,
-		HaveEnoughData = 4,
-		HaveFutureData = 3,
+		HaveNothing = 0,
 		HaveMetadata = 1,
-		HaveNothing = 0
+		HaveCurrentData = 2,
+		HaveFutureData = 3,
+		HaveEnoughData = 4
 	}
 }

@@ -4,8 +4,8 @@
 	public enum MediaErrorCode
 	{
 		Aborted = 1,
-		Decode = 3,
 		Network = 2,
+		Decode = 3,
 		SrcNotSupported = 4
 	}
 }

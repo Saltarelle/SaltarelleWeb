@@ -3,8 +3,8 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGFEMorphologyOperator
 	{
-		Dilate = 2,
+		Unknown = 0,
 		Erode = 1,
-		Unknown = 0
+		Dilate = 2
 	}
 }

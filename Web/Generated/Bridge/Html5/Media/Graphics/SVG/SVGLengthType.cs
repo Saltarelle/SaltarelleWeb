@@ -3,16 +3,16 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGLengthType
 	{
-		Cm = 6,
+		Unknown = 0,
+		Number = 1,
+		Percentage = 2,
 		Ems = 3,
 		Exs = 4,
-		In = 8,
-		Mm = 7,
-		Number = 1,
-		Pc = 10,
-		Percentage = 2,
-		Pt = 9,
 		Px = 5,
-		Unknown = 0
+		Cm = 6,
+		Mm = 7,
+		In = 8,
+		Pt = 9,
+		Pc = 10
 	}
 }

@@ -3,12 +3,12 @@
 	[External, Name("Number"), Enum(Emit.Value)]
 	public enum SVGTransformType
 	{
+		Unknown = 0,
 		Matrix = 1,
-		Rotate = 4,
-		Scale = 3,
-		Skewx = 5,
-		Skewy = 6,
 		Translate = 2,
-		Unknown = 0
+		Scale = 3,
+		Rotate = 4,
+		Skewx = 5,
+		Skewy = 6
 	}
 }

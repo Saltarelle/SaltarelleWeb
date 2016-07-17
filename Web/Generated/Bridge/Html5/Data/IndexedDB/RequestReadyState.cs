@@ -3,7 +3,7 @@
 	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum RequestReadyState
 	{
-		Pending,
-		Done
+		Done,
+		Pending
 	}
 }
