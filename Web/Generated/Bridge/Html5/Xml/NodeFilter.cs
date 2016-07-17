@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[External, Flags]
+	[External, Flags, Name("Number"), Enum(Emit.Value)]
 	public enum NodeFilter
 	{
 		ShowAll = -1,

@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Audio
 {
-	[External, Enum(Emit.StringNamePreserveCase)]
+	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum AudioDestinationNodeEvents
 	{
 

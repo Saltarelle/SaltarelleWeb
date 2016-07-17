@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml.XPath
 {
-	[External]
+	[External, Name("Number"), Enum(Emit.Value)]
 	public enum ResultType
 	{
 		Any = 0,

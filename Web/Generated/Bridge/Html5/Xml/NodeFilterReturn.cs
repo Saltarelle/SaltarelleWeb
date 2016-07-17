@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[External]
+	[External, Name("Number"), Enum(Emit.Value)]
 	public enum NodeFilterReturn
 	{
 		Accept = 1,

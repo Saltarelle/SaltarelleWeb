@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics
 {
-	[External, Enum(Emit.StringNamePreserveCase)]
+	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum CanvasWindingRule
 	{
 		Nonzero,

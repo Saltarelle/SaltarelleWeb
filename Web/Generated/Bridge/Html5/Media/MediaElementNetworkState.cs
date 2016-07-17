@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media
 {
-	[External]
+	[External, Name("Number"), Enum(Emit.Value)]
 	public enum MediaElementNetworkState
 	{
 		Empty = 0,

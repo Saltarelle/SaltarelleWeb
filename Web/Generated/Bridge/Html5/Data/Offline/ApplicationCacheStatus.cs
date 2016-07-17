@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.Offline
 {
-	[External]
+	[External, Name("Number"), Enum(Emit.Value)]
 	public enum ApplicationCacheStatus
 	{
 		Checking = 2,

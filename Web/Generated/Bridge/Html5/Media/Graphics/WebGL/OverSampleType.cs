@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics.WebGL
 {
-	[External, Enum(Emit.StringNamePreserveCase)]
+	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum OverSampleType
 	{
 		None,

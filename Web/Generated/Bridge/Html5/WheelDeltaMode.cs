@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[External]
+	[External, Name("Number"), Enum(Emit.Value)]
 	public enum WheelDeltaMode
 	{
 		Line = 1,

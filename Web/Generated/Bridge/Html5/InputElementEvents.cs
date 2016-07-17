@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[External, Enum(Emit.StringNamePreserveCase)]
+	[External, Name("String"), Enum(Emit.StringNameLowerCase)]
 	public enum InputElementEvents
 	{
 		Abort,
