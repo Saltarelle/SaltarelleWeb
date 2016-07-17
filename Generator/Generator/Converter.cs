@@ -1320,7 +1320,7 @@ namespace Generator
                                             AddAttributes(e.Attributes, NameAttributeIfRequired(csharpName, v));
                                             return e;
                                         })
-                                        .OrderBy(x => x.Name));
+                                        .OrderBy(x => x, new EnumMemberDeclarationComparer(false)));
                     AddAttribute(t.Attributes, ExternalAttribute(false));
                     AddAttributes(t.Attributes, EnumAndNameAttributes(false));
                     result = new NamespacedEntityDeclaration(meta.Namespace, t);
@@ -1432,14 +1432,7 @@ namespace Generator
             };
             AddAttributes(t.Attributes, attributes);
 
-            if (byValue)
-            {
-                t.Members.AddRange(enumMembers.OrderBy(m => ((PrimitiveExpression)m.Initializer).Value));
-            }
-            else
-            {
-                t.Members.AddRange(enumMembers.OrderBy(m => m.Name));
-            }
+            t.Members.AddRange(enumMembers.OrderBy(m => m, new EnumMemberDeclarationComparer(byValue)));
 
             _result.Add(new NamespacedEntityDeclaration(enumNamespace, t));
         }

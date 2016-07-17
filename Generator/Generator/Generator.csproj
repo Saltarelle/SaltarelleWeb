@@ -102,6 +102,7 @@
     <Compile Include="AstNodes\Definitions.cs" />
     <Compile Include="AstNodes\ExtendedAttribute.cs" />
     <Compile Include="AstNodes\WebIDLType.cs" />
+    <Compile Include="EnumMemberDeclarationComparer.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="ExtensionMethods\StringExtensions.cs" />
     <Compile Include="ExtensionMethods\EnumerableExtensions.cs" />
