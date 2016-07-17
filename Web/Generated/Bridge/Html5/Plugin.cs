@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5
 {
 	[Namespace("false"), External]
-	public partial class Plugin
+	public partial class Plugin : IEnumerable<MimeType>
 	{
 		internal extern Plugin();
 
@@ -18,6 +21,12 @@
 		public readonly string Description;
 
 		public readonly string Filename;
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<MimeType> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern MimeType Item(int index);
 

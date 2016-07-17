@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5.IO
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5.IO
 {
 	[Namespace("false"), External]
-	public partial class FileList
+	public partial class FileList : IEnumerable<File>
 	{
 		internal extern FileList();
 
@@ -9,6 +12,12 @@
 		{
 			get;
 		}
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<File> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern File Item(int index);
 

@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5
 {
 	[Namespace("false"), External, Name("Element")]
-	public partial class FormElement : Element
+	public partial class FormElement : Element, IEnumerable<Element>
 	{
 		internal extern FormElement();
 
@@ -48,6 +51,12 @@
 		public string Encoding;
 
 		public string Enctype;
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<Element> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public readonly int Length;
 

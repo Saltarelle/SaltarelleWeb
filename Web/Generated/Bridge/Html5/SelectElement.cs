@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
 	[Namespace("false"), External, Name("Element")]
-	public partial class SelectElement : Element
+	public partial class SelectElement : Element, IEnumerable<Element>
 	{
 		internal extern SelectElement();
 
@@ -44,6 +46,12 @@ namespace Bridge.Html5
 		public bool Disabled;
 
 		public readonly FormElement Form;
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<Element> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern Element Item(int index);
 

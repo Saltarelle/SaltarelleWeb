@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5
 {
 	[Namespace("false"), External]
-	public partial class MimeTypeArray
+	public partial class MimeTypeArray : IEnumerable<MimeType>
 	{
 		internal extern MimeTypeArray();
 
@@ -14,6 +17,12 @@
 		{
 			get;
 		}
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<MimeType> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern MimeType Item(int index);
 

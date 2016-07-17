@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5
 {
 	[Namespace("false"), External, Name("HTMLCollection")]
-	public partial class ElementCollection
+	public partial class ElementCollection : IEnumerable<Element>
 	{
 		internal extern ElementCollection();
 
@@ -14,6 +17,12 @@
 		{
 			get;
 		}
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<Element> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern Element Item(int index);
 

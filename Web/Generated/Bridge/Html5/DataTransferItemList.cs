@@ -1,9 +1,11 @@
 ﻿using Bridge.Html5.IO;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
 	[Namespace("false"), External]
-	public partial class DataTransferItemList
+	public partial class DataTransferItemList : IEnumerable<DataTransferItem>
 	{
 		internal extern DataTransferItemList();
 
@@ -17,6 +19,12 @@ namespace Bridge.Html5
 		public extern DataTransferItem Add(string data, string type);
 
 		public extern void Clear();
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<DataTransferItem> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public readonly int Length;
 

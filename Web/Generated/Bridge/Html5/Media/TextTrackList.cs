@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5.Media
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5.Media
 {
 	[Namespace("false"), External]
-	public partial class TextTrackList : EventTarget
+	public partial class TextTrackList : EventTarget, IEnumerable<TextTrack>
 	{
 		internal extern TextTrackList();
 
@@ -30,7 +33,13 @@
 
 		public extern void AddEventListener(TextTrackListEvents type, IEventListener listener, bool capture);
 
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<TextTrack> GetEnumerator();
+
 		public extern TextTrack GetTrackById(string id);
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public readonly int Length;
 

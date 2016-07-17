@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5
 {
 	[Namespace("false"), External, Name("CSSStyleDeclaration")]
-	public partial class Style
+	public partial class Style : IEnumerable<string>
 	{
 		internal extern Style();
 
@@ -228,6 +231,9 @@
 
 		public string FontWeight;
 
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<string> GetEnumerator();
+
 		public extern CSSValue GetPropertyCSSValue(string property);
 
 		public extern string GetPropertyPriority(string property);
@@ -267,6 +273,9 @@
 		public string GridTemplateRows;
 
 		public string Height;
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public string ImageOrientation;
 

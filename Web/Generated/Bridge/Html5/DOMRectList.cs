@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5
 {
 	[Namespace("false"), External]
-	public partial class DOMRectList
+	public partial class DOMRectList : IEnumerable<DOMRect>
 	{
 		internal extern DOMRectList();
 
@@ -9,6 +12,12 @@
 		{
 			get;
 		}
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<DOMRect> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern DOMRect Item(int index);
 

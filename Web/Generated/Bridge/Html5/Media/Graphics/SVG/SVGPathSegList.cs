@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5.Media.Graphics.SVG
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5.Media.Graphics.SVG
 {
 	[Namespace("false"), External]
-	public partial class SVGPathSegList
+	public partial class SVGPathSegList : IEnumerable<SVGPathSeg>
 	{
 		internal extern SVGPathSegList();
 
@@ -14,7 +17,13 @@
 
 		public extern void Clear();
 
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<SVGPathSeg> GetEnumerator();
+
 		public extern SVGPathSeg GetItem(int index);
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern SVGPathSeg Initialize(SVGPathSeg newItem);
 

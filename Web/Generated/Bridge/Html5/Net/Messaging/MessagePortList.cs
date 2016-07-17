@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5.Net.Messaging
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5.Net.Messaging
 {
 	[Namespace("false"), External, Name("Object")]
-	public partial class MessagePortList
+	public partial class MessagePortList : IEnumerable<MessagePort>
 	{
 		internal extern MessagePortList();
 
@@ -9,6 +12,12 @@
 		{
 			get;
 		}
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<MessagePort> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern MessagePort Item(int index);
 

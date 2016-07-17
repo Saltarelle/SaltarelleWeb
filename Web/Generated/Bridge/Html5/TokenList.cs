@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5
 {
 	[Namespace("false"), External, Name("DOMTokenList")]
-	public partial class TokenList
+	public partial class TokenList : IEnumerable<string>
 	{
 		internal extern TokenList();
 
@@ -14,6 +17,12 @@
 		public extern void Add(params string[] tokens);
 
 		public extern bool Contains(string token);
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<string> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern string Item(int index);
 

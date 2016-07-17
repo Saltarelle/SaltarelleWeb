@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5.Speech
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5.Speech
 {
 	[Namespace("false"), External]
-	public partial class SpeechRecognitionResultList
+	public partial class SpeechRecognitionResultList : IEnumerable<SpeechRecognitionResult>
 	{
 		internal extern SpeechRecognitionResultList();
 
@@ -9,6 +12,12 @@
 		{
 			get;
 		}
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<SpeechRecognitionResult> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern SpeechRecognitionResult Item(int index);
 

@@ -1,9 +1,11 @@
 ﻿using Bridge.Html5.Xml;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
 	[Namespace("false"), External, Name("Object")]
-	public partial class AttributeCollection
+	public partial class AttributeCollection : IEnumerable<XmlAttribute>
 	{
 		internal extern AttributeCollection();
 
@@ -17,9 +19,15 @@ namespace Bridge.Html5
 			get;
 		}
 
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<XmlAttribute> GetEnumerator();
+
 		public extern XmlAttribute GetNamedItem(string name);
 
 		public extern XmlAttribute GetNamedItemNS(string namespaceURI, string localName);
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public extern XmlAttribute Item(int index);
 

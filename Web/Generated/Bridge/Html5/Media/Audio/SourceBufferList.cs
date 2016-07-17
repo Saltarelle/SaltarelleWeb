@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5.Media.Audio
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace Bridge.Html5.Media.Audio
 {
 	[Namespace("false"), External]
-	public partial class SourceBufferList : EventTarget
+	public partial class SourceBufferList : EventTarget, IEnumerable<SourceBuffer>
 	{
 		internal extern SourceBufferList();
 
@@ -29,6 +32,12 @@
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener);
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceBufferList> listener, bool capture);
+
+		[Template("Bridge.getEnumerator({this})")]
+		public extern IEnumerator<SourceBuffer> GetEnumerator();
+
+		[Template("Bridge.getEnumerator({this})")]
+		extern IEnumerator IEnumerable.GetEnumerator();
 
 		public readonly int Length;
 
