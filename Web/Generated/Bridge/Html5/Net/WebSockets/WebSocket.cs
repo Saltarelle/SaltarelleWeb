@@ -3,7 +3,7 @@ using Bridge.Html5.IO;
 
 namespace Bridge.Html5.Net.WebSockets
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class WebSocket : EventTarget
 	{
 		internal extern WebSocket();

@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("XMLHttpRequestUpload")]
+	[Namespace("false"), External, Name("XMLHttpRequestUpload")]
 	public partial class XmlHttpRequestUpload : XmlHttpRequestEventTarget
 	{
 		internal extern XmlHttpRequestUpload();

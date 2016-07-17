@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class TreeWalker
 	{
 		internal extern TreeWalker();

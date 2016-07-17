@@ -3,7 +3,7 @@ using System;
 
 namespace Bridge.Html5.Media
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class VTTCue : EventTarget
 	{
 		internal extern VTTCue();

@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBOpenDBRequest")]
+	[Namespace("false"), External, Name("IDBOpenDBRequest")]
 	public partial class OpenDBRequest : Request
 	{
 		internal extern OpenDBRequest();

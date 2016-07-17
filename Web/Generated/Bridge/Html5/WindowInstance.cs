@@ -8,7 +8,7 @@ using Bridge.Html5.Xml;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("Window")]
+	[Namespace("false"), External, Name("Window")]
 	public partial class WindowInstance : EventTarget, IWindowTimers, IWindowBase64
 	{
 		internal extern WindowInstance();

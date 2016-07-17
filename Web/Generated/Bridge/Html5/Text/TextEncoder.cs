@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Text
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class TextEncoder
 	{
 		public extern TextEncoder();

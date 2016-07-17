@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && ({this}.tagName === 'H1' || {this}.tagName === 'H2' || {this}.tagName === 'H3' || {this}.tagName === 'H4' || {this}.tagName === 'H5' || {this}.tagName === 'H6')"), Name("Element")]
+	[Namespace("false"), External, Name("Element")]
 	public partial class HeadingElement : Element
 	{
 		internal extern HeadingElement();

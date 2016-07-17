@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("HTMLFormControlsCollection")]
+	[Namespace("false"), External, Name("HTMLFormControlsCollection")]
 	public partial class FormControlsCollection : ElementCollection
 	{
 		internal extern FormControlsCollection();

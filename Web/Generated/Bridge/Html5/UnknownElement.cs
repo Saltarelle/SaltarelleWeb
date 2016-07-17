@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("HTMLUnknownElement")]
+	[Namespace("false"), External, Name("HTMLUnknownElement")]
 	public partial class UnknownElement : Element
 	{
 		internal extern UnknownElement();

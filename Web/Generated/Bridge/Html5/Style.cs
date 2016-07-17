@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("CSSStyleDeclaration")]
+	[Namespace("false"), External, Name("CSSStyleDeclaration")]
 	public partial class Style
 	{
 		internal extern Style();

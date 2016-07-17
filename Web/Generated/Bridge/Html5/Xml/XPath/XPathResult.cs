@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml.XPath
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class XPathResult
 	{
 		internal extern XPathResult();

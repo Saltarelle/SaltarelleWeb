@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("CharacterData")]
+	[Namespace("false"), External, Name("CharacterData")]
 	public partial class XmlCharacterData : XmlNode
 	{
 		internal extern XmlCharacterData();

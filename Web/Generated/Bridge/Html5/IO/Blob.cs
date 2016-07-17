@@ -3,7 +3,7 @@ using System;
 
 namespace Bridge.Html5.IO
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class Blob
 	{
 		public extern Blob();

@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("Comment")]
+	[Namespace("false"), External, Name("Comment")]
 	public partial class XmlComment : XmlCharacterData
 	{
 		public extern XmlComment();

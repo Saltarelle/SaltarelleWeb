@@ -5,7 +5,7 @@ using System;
 
 namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("Document")]
+	[Namespace("false"), External, Name("Document")]
 	public partial class DocumentBase : XmlNode, IXPathEvaluator, IGeometryUtils
 	{
 		public extern DocumentBase();

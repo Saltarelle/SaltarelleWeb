@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Notifications
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class Notification : EventTarget
 	{
 		internal extern Notification();

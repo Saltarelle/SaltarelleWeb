@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBObjectStore")]
+	[Namespace("false"), External, Name("IDBObjectStore")]
 	public partial class ObjectStore
 	{
 		internal extern ObjectStore();

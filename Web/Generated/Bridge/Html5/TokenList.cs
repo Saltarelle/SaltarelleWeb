@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("DOMTokenList")]
+	[Namespace("false"), External, Name("DOMTokenList")]
 	public partial class TokenList
 	{
 		internal extern TokenList();

@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBTransaction")]
+	[Namespace("false"), External, Name("IDBTransaction")]
 	public partial class Transaction : EventTarget
 	{
 		internal extern Transaction();

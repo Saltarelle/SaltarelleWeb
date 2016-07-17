@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class DOMImplementation
 	{
 		internal extern DOMImplementation();

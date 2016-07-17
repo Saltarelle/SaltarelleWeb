@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net.WebRTC
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class MediaStreamTrack
 	{
 		internal extern MediaStreamTrack();

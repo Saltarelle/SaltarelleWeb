@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'A'"), Name("Element")]
+	[Namespace("false"), External, Name("Element")]
 	public partial class AnchorElement : Element
 	{
 		internal extern AnchorElement();

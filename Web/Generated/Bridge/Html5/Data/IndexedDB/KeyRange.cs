@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBKeyRange")]
+	[Namespace("false"), External, Name("IDBKeyRange")]
 	public partial class KeyRange
 	{
 		internal extern KeyRange();

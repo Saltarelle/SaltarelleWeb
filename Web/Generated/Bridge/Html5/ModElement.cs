@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && ({this}.tagName === 'INS' || {this}.tagName === 'DEL')"), Name("Element")]
+	[Namespace("false"), External, Name("Element")]
 	public partial class ModElement : Element
 	{
 		internal extern ModElement();

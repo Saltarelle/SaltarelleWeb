@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class TextMetrics
 	{
 		internal extern TextMetrics();

@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBCursor")]
+	[Namespace("false"), External, Name("IDBCursor")]
 	public partial class Cursor
 	{
 		internal extern Cursor();

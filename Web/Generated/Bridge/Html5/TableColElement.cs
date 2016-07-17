@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && ({this}.tagName === 'COL' || {this}.tagName === 'COLGROUP')"), Name("Element")]
+	[Namespace("false"), External, Name("Element")]
 	public partial class TableColElement : Element
 	{
 		internal extern TableColElement();

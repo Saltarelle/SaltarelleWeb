@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics.SVG
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class SVGPathElement : SVGGraphicsElement
 	{
 		internal extern SVGPathElement();

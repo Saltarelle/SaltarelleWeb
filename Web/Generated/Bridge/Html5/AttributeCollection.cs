@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
+	[Namespace("false"), External, Name("Object")]
 	public partial class AttributeCollection
 	{
 		internal extern AttributeCollection();

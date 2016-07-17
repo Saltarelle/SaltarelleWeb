@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("Node")]
+	[Namespace("false"), External, Name("Node")]
 	public partial class XmlNode : EventTarget
 	{
 		internal extern XmlNode();

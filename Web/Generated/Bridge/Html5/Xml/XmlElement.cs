@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("Element")]
+	[Namespace("false"), External, Name("Element")]
 	public partial class XmlElement : XmlNode, IGeometryUtils
 	{
 		internal extern XmlElement();

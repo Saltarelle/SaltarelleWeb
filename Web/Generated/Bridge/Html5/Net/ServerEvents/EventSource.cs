@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net.ServerEvents
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class EventSource : EventTarget
 	{
 		internal extern EventSource();

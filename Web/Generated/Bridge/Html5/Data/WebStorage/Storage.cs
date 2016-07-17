@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.WebStorage
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class Storage
 	{
 		internal extern Storage();

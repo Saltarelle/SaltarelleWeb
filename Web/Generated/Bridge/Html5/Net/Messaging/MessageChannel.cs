@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net.Messaging
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class MessageChannel
 	{
 		public extern MessageChannel();

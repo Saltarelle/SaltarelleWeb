@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("IDBIndex")]
+	[Namespace("false"), External, Name("IDBIndex")]
 	public partial class Index
 	{
 		internal extern Index();

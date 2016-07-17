@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics.WebGL
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class WebGLShaderPrecisionFormat
 	{
 		internal extern WebGLShaderPrecisionFormat();

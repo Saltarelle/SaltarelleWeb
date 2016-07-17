@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics.WebGL
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
+	[Namespace("false"), External, Name("Object")]
 	public partial class WebGLExtensionCompressedTextureS3TC
 	{
 		internal extern WebGLExtensionCompressedTextureS3TC();

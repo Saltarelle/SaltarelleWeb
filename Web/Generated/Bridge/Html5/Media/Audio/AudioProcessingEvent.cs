@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Audio
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class AudioProcessingEvent : Event
 	{
 		internal extern AudioProcessingEvent();

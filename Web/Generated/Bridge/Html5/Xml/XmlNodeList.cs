@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("NodeList")]
+	[Namespace("false"), External, Name("NodeList")]
 	public partial class XmlNodeList
 	{
 		internal extern XmlNodeList();

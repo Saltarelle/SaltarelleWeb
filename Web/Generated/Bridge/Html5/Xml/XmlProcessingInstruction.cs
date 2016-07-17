@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("ProcessingInstruction")]
+	[Namespace("false"), External, Name("ProcessingInstruction")]
 	public partial class XmlProcessingInstruction : XmlCharacterData
 	{
 		internal extern XmlProcessingInstruction();

@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("HTMLCollection")]
+	[Namespace("false"), External, Name("HTMLCollection")]
 	public partial class ElementCollection
 	{
 		internal extern ElementCollection();

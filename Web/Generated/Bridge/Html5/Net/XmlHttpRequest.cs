@@ -4,7 +4,7 @@ using Bridge.Html5.Xml;
 
 namespace Bridge.Html5.Net
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("XMLHttpRequest")]
+	[Namespace("false"), External, Name("XMLHttpRequest")]
 	public partial class XmlHttpRequest : XmlHttpRequestEventTarget
 	{
 		public extern void Abort();

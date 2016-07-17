@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'FRAME'"), Name("Element")]
+	[Namespace("false"), External, Name("Element")]
 	public partial class FrameElement : Element
 	{
 		internal extern FrameElement();

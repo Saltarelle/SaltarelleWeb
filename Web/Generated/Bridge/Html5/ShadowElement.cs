@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("HTMLShadowElement")]
+	[Namespace("false"), External, Name("HTMLShadowElement")]
 	public partial class ShadowElement : Element
 	{
 		internal extern ShadowElement();

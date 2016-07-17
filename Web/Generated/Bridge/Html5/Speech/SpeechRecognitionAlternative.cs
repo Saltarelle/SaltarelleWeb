@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Speech
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class SpeechRecognitionAlternative
 	{
 		internal extern SpeechRecognitionAlternative();

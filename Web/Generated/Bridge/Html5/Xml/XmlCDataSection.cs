@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("CDATASection")]
+	[Namespace("false"), External, Name("CDATASection")]
 	public partial class XmlCDataSection : XmlText
 	{
 		internal extern XmlCDataSection();

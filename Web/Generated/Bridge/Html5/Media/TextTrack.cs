@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class TextTrack : EventTarget
 	{
 		internal extern TextTrack();

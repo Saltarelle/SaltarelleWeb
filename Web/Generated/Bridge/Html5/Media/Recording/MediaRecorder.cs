@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Recording
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class MediaRecorder : EventTarget
 	{
 		internal extern MediaRecorder();

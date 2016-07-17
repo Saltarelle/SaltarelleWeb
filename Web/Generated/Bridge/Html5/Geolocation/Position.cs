@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Geolocation
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
+	[Namespace("false"), External, Name("Object")]
 	public partial class Position
 	{
 		internal extern Position();

@@ -7,7 +7,7 @@ using System;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External(ObeysTypeSystem = true), Name("Navigator")]
+	[Namespace("false"), External, Name("Navigator")]
 	public partial class NavigatorInstance
 	{
 		internal extern NavigatorInstance();

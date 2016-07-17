@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Threading.WebWorkers
 {
-	[Namespace("false"), External(ObeysTypeSystem = true)]
+	[Namespace("false"), External]
 	public partial class SharedWorker : EventTarget
 	{
 		internal extern SharedWorker();
