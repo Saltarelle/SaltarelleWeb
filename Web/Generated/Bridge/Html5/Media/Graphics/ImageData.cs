@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Media.Graphics
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class ImageData
 	{
 		internal extern ImageData();

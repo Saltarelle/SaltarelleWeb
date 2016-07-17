@@ -3,7 +3,7 @@ using Bridge.Html5.Media.Graphics;
 
 namespace Bridge.Html5.Media
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class MediaStream
 	{
 		internal extern MediaStream();

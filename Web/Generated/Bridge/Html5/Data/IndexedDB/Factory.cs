@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External, Name("IDBFactory")]
+	[Namespace(false), External, Name("IDBFactory")]
 	public partial class Factory
 	{
 		internal extern Factory();

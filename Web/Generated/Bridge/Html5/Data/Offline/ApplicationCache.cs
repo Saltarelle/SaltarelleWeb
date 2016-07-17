@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.Offline
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class ApplicationCache : EventTarget
 	{
 		internal extern ApplicationCache();

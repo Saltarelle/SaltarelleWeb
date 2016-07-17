@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("Object")]
+	[Namespace(false), External, Name("Object")]
 	public partial class AttributeCollection : IEnumerable<XmlAttribute>
 	{
 		internal extern AttributeCollection();

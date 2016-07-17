@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("Element")]
+	[Namespace(false), External, Name("Element")]
 	public partial class IFrameElement : Element
 	{
 		internal extern IFrameElement();

@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Editing
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class Selection
 	{
 		internal extern Selection();

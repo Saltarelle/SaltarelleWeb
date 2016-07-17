@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External, Name("Attr")]
+	[Namespace(false), External, Name("Attr")]
 	public partial class XmlAttribute : XmlNode
 	{
 		internal extern XmlAttribute();

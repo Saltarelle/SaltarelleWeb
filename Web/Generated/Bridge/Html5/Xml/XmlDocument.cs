@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External, Name("XMLDocument")]
+	[Namespace(false), External, Name("XMLDocument")]
 	public partial class XmlDocument : DocumentBase
 	{
 		internal extern XmlDocument();

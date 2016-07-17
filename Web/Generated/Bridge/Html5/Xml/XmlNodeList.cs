@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External, Name("NodeList")]
+	[Namespace(false), External, Name("NodeList")]
 	public partial class XmlNodeList : IEnumerable<XmlNode>
 	{
 		internal extern XmlNodeList();

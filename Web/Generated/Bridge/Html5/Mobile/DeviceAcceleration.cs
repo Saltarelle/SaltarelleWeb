@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Mobile
 {
-	[Namespace("false"), External, Name("Object")]
+	[Namespace(false), External, Name("Object")]
 	public partial class DeviceAcceleration
 	{
 		internal extern DeviceAcceleration();

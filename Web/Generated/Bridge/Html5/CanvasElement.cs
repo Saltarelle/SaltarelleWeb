@@ -4,7 +4,7 @@ using System;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("Element")]
+	[Namespace(false), External, Name("Element")]
 	public partial class CanvasElement : Element
 	{
 		internal extern CanvasElement();

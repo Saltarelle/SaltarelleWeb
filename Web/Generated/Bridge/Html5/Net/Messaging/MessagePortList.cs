@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5.Net.Messaging
 {
-	[Namespace("false"), External, Name("Object")]
+	[Namespace(false), External, Name("Object")]
 	public partial class MessagePortList : IEnumerable<MessagePort>
 	{
 		internal extern MessagePortList();

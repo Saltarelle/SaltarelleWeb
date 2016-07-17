@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("Element")]
+	[Namespace(false), External, Name("Element")]
 	public partial class SelectElement : Element, IEnumerable<Element>
 	{
 		internal extern SelectElement();

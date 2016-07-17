@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Media.Audio
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class SourceBuffer : EventTarget
 	{
 		internal extern SourceBuffer();

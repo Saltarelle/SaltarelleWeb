@@ -3,7 +3,7 @@ using Bridge.Html5.Media.Graphics.WebGL;
 
 namespace Bridge.Html5.Media.Audio
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class WaveShaperNode : AudioNode
 	{
 		internal extern WaveShaperNode();

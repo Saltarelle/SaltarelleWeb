@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("CSSStyleDeclaration")]
+	[Namespace(false), External, Name("CSSStyleDeclaration")]
 	public partial class Style : IEnumerable<string>
 	{
 		internal extern Style();

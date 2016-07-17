@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Media.Source
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class MediaSource : EventTarget
 	{
 		public extern MediaSource();

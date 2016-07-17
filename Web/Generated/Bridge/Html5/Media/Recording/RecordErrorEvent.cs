@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Recording
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class RecordErrorEvent : Event
 	{
 		internal extern RecordErrorEvent();

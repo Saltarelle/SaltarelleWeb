@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5.Media.Graphics.SVG
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class SVGStringList : IEnumerable<string>
 	{
 		internal extern SVGStringList();

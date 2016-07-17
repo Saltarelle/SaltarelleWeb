@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.WebComponents
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class ElementReplaceEvent : Event
 	{
 		internal extern ElementReplaceEvent();

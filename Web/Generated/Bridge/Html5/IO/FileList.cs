@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5.IO
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class FileList : IEnumerable<File>
 	{
 		internal extern FileList();

@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External, Name("DocumentFragment")]
+	[Namespace(false), External, Name("DocumentFragment")]
 	public partial class XmlDocumentFragment : XmlNode
 	{
 		public extern XmlDocumentFragment();

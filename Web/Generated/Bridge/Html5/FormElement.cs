@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("Element")]
+	[Namespace(false), External, Name("Element")]
 	public partial class FormElement : Element, IEnumerable<Element>
 	{
 		internal extern FormElement();

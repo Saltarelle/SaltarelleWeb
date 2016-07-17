@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class DOMParser
 	{
 		public extern DocumentBase ParseFromString(string str, DOMParserSupportedType type);

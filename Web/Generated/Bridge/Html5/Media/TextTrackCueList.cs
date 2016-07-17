@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5.Media
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class TextTrackCueList : IEnumerable<VTTCue>
 	{
 		internal extern TextTrackCueList();

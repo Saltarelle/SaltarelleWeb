@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Media.Graphics.SVG
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class SVGElement : XmlElement
 	{
 		internal extern SVGElement();

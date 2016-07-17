@@ -3,7 +3,7 @@ using Bridge.Html5.IO;
 
 namespace Bridge.Html5.Net.WebRTC
 {
-	[Namespace("false"), External, Name("DataChannel")]
+	[Namespace(false), External, Name("DataChannel")]
 	public partial class RTCDataChannel : EventTarget
 	{
 		internal extern RTCDataChannel();

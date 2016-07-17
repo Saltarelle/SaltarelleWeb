@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Media.Graphics.WebGL
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class WebGLRenderingContext
 	{
 		internal extern WebGLRenderingContext();

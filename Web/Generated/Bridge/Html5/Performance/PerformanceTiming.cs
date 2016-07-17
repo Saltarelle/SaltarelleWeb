@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Performance
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class PerformanceTiming
 	{
 		internal extern PerformanceTiming();

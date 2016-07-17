@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Security.Cryptography
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class Crypto : IRandomSource
 	{
 		internal extern Crypto();

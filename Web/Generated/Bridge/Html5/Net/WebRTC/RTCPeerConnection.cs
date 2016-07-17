@@ -3,7 +3,7 @@ using System;
 
 namespace Bridge.Html5.Net.WebRTC
 {
-	[Namespace("false"), External, Name("mozRTCPeerConnection")]
+	[Namespace(false), External, Name("mozRTCPeerConnection")]
 	public partial class RTCPeerConnection : EventTarget
 	{
 		public extern void AddEventListener(RTCPeerConnectionEvents type, Action listener);

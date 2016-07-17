@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("HTMLContentElement")]
+	[Namespace(false), External, Name("HTMLContentElement")]
 	public partial class ContentElement : Element
 	{
 		internal extern ContentElement();

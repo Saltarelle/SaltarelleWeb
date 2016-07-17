@@ -4,7 +4,7 @@ using Bridge.Html5.Media.Source;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class URL
 	{
 		internal extern URL();

@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("HTMLOptionsCollection")]
+	[Namespace(false), External, Name("HTMLOptionsCollection")]
 	public partial class HtmlOptionsCollection : ElementCollection
 	{
 		internal extern HtmlOptionsCollection();

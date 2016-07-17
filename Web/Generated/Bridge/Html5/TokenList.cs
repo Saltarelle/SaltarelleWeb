@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("DOMTokenList")]
+	[Namespace(false), External, Name("DOMTokenList")]
 	public partial class TokenList : IEnumerable<string>
 	{
 		internal extern TokenList();

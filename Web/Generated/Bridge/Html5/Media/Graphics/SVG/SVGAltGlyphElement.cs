@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics.SVG
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class SVGAltGlyphElement : SVGTextPositioningElement
 	{
 		internal extern SVGAltGlyphElement();

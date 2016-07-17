@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("HTMLCollection")]
+	[Namespace(false), External, Name("HTMLCollection")]
 	public partial class ElementCollection : IEnumerable<Element>
 	{
 		internal extern ElementCollection();

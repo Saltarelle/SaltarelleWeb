@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Xml
 {
-	[Namespace("false"), External, Name("Text")]
+	[Namespace(false), External, Name("Text")]
 	public partial class XmlText : XmlCharacterData, IGeometryUtils
 	{
 		public extern XmlText();

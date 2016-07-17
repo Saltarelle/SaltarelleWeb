@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Speech
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class SpeechSynthesisEvent : Event
 	{
 		internal extern SpeechSynthesisEvent();

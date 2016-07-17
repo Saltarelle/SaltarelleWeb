@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External, Name("IDBVersionChangeEvent")]
+	[Namespace(false), External, Name("IDBVersionChangeEvent")]
 	public partial class VersionChangeEvent : Event
 	{
 		internal extern VersionChangeEvent();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class StyleSheetList : IEnumerable<StyleSheet>
 	{
 		internal extern StyleSheetList();

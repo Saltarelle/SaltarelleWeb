@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5.Media.Audio
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class SourceBufferList : EventTarget, IEnumerable<SourceBuffer>
 	{
 		internal extern SourceBufferList();

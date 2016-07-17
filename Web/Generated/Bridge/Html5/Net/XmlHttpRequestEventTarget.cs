@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net
 {
-	[Namespace("false"), External, Name("EventTarget")]
+	[Namespace(false), External, Name("EventTarget")]
 	public partial class XmlHttpRequestEventTarget : EventTarget
 	{
 		internal extern XmlHttpRequestEventTarget();

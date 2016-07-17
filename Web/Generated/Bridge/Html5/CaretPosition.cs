@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class CaretPosition
 	{
 		internal extern CaretPosition();

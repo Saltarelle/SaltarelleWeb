@@ -3,7 +3,7 @@ using Bridge.Html5.Xml;
 
 namespace Bridge.Html5
 {
-	[Namespace("false"), External, Name("HTMLDocument")]
+	[Namespace(false), External, Name("HTMLDocument")]
 	public partial class DocumentInstance : DocumentBase
 	{
 		internal extern DocumentInstance();

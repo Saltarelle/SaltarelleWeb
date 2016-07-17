@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.IO
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class File : Blob
 	{
 		internal extern File();

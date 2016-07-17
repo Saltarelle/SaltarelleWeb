@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External, Name("IDBRequest")]
+	[Namespace(false), External, Name("IDBRequest")]
 	public partial class Request : EventTarget
 	{
 		internal extern Request();

@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Audio
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class ChannelMergerNode : AudioNode
 	{
 		internal extern ChannelMergerNode();

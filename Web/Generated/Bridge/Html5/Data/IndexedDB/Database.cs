@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.IndexedDB
 {
-	[Namespace("false"), External, Name("IDBDatabase")]
+	[Namespace(false), External, Name("IDBDatabase")]
 	public partial class Database : EventTarget
 	{
 		internal extern Database();

@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Net.Messaging
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class MessageEvent : Event
 	{
 		internal extern MessageEvent();

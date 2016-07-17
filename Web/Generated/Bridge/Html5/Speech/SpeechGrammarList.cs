@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Html5.Speech
 {
-	[Namespace("false"), External]
+	[Namespace(false), External]
 	public partial class SpeechGrammarList : IEnumerable<SpeechGrammar>
 	{
 		internal extern SpeechGrammarList();
