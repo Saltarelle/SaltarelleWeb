@@ -313,7 +313,7 @@ namespace Generator
 
         //private static Attribute EnumerateAsArrayAttribute { get { return new Attribute { Type = MakeType("Bridge.EnumerateAsArray") }; } }
 
-        private static Attribute IgnoreNamespaceAttribute { get { return new Attribute { Type = MakeType("Bridge.Namespace"), Arguments = { new PrimitiveExpression("false") } }; } }
+        private static Attribute IgnoreNamespaceAttribute { get { return new Attribute { Type = MakeType("Bridge.Namespace"), Arguments = { new PrimitiveExpression(false) } }; } }
 
         private static IEnumerable<Attribute> EnumAndNameAttributes(bool byValue)
         {
