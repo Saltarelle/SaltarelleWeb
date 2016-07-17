@@ -1,4 +1,6 @@
-﻿namespace Bridge.Html5.Xml
+﻿using System;
+
+namespace Bridge.Html5.Xml
 {
 	[External, Flags, Name("Number"), Enum(Emit.Value)]
 	public enum NodeFilter
