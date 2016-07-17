@@ -31,23 +31,11 @@ namespace Bridge.Html5.Media.Audio
 
 		public const ushort BANDPASS = 2;
 
-		[FieldProperty]
-		public extern AudioParam Detune
-		{
-			get;
-		}
+		public readonly AudioParam Detune;
 
-		[FieldProperty]
-		public extern AudioParam Frequency
-		{
-			get;
-		}
+		public readonly AudioParam Frequency;
 
-		[FieldProperty]
-		public extern AudioParam Gain
-		{
-			get;
-		}
+		public readonly AudioParam Gain;
 
 		public extern void GetFrequencyResponse(Float32Array frequencyHz, Float32Array magResponse, Float32Array phaseResponse);
 
@@ -63,11 +51,8 @@ namespace Bridge.Html5.Media.Audio
 
 		public const ushort PEAKING = 5;
 
-		[FieldProperty, Name("Q")]
-		public extern AudioParam Q
-		{
-			get;
-		}
+		[Name("Q")]
+		public readonly AudioParam Q;
 
 		public extern void RemoveEventListener(BiquadFilterNodeEvents type, Action listener);
 
@@ -89,11 +74,6 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BiquadFilterNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern BiquadFilterType Type
-		{
-			get;
-			set;
-		}
+		public BiquadFilterType Type;
 	}
 }

@@ -9,10 +9,6 @@
 
 		public extern RTCPeerConnectionIceEvent(string type, RTCPeerConnectionIceEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern RTCIceCandidate Candidate
-		{
-			get;
-		}
+		public readonly RTCIceCandidate Candidate;
 	}
 }

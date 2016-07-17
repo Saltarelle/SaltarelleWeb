@@ -33,12 +33,7 @@ namespace Bridge.Html5
 
 		public extern CanvasRenderingContext GetContext(string contextId, object contextOptions);
 
-		[FieldProperty]
-		public extern int Height
-		{
-			get;
-			set;
-		}
+		public int Height;
 
 		public extern void RemoveEventListener(CanvasElementEvents type, Action listener);
 
@@ -68,11 +63,6 @@ namespace Bridge.Html5
 
 		public extern string ToDataURL(string type, object encoderOptions);
 
-		[FieldProperty]
-		public extern int Width
-		{
-			get;
-			set;
-		}
+		public int Width;
 	}
 }

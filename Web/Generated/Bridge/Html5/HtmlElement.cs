@@ -45,11 +45,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HtmlElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Version
-		{
-			get;
-			set;
-		}
+		public string Version;
 	}
 }

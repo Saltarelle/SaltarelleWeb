@@ -28,84 +28,35 @@ namespace Bridge.Html5.Net.WebRTC
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<RTCDataChannel> listener, bool capture);
 
-		[FieldProperty]
-		public extern RTCDataChannelType BinaryType
-		{
-			get;
-			set;
-		}
+		public RTCDataChannelType BinaryType;
 
-		[FieldProperty]
-		public extern int BufferedAmount
-		{
-			get;
-		}
+		public readonly int BufferedAmount;
 
 		public extern void Close();
 
-		[FieldProperty]
-		public extern ushort Id
-		{
-			get;
-		}
+		public readonly ushort Id;
 
-		[FieldProperty]
-		public extern string Label
-		{
-			get;
-		}
+		public readonly string Label;
 
-		[FieldProperty, Name("onclose")]
-		public extern HtmlEventHandler OnClose
-		{
-			get;
-			set;
-		}
+		[Name("onclose")]
+		public HtmlEventHandler OnClose;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onmessage")]
-		public extern HtmlEventHandler OnMessage
-		{
-			get;
-			set;
-		}
+		[Name("onmessage")]
+		public HtmlEventHandler OnMessage;
 
-		[FieldProperty, Name("onopen")]
-		public extern HtmlEventHandler OnOpen
-		{
-			get;
-			set;
-		}
+		[Name("onopen")]
+		public HtmlEventHandler OnOpen;
 
-		[FieldProperty]
-		public extern bool Ordered
-		{
-			get;
-		}
+		public readonly bool Ordered;
 
-		[FieldProperty]
-		public extern string Protocol
-		{
-			get;
-		}
+		public readonly string Protocol;
 
-		[FieldProperty]
-		public extern RTCDataChannelState ReadyState
-		{
-			get;
-		}
+		public readonly RTCDataChannelState ReadyState;
 
-		[FieldProperty]
-		public extern bool Reliable
-		{
-			get;
-		}
+		public readonly bool Reliable;
 
 		public extern void RemoveEventListener(RTCDataChannelEvents type, Action listener);
 
@@ -135,10 +86,6 @@ namespace Bridge.Html5.Net.WebRTC
 
 		public extern void Send(string data);
 
-		[FieldProperty]
-		public extern ushort Stream
-		{
-			get;
-		}
+		public readonly ushort Stream;
 	}
 }

@@ -5,11 +5,6 @@
 	{
 		internal extern DOMSettableTokenList();
 
-		[FieldProperty]
-		public extern string Value
-		{
-			get;
-			set;
-		}
+		public string Value;
 	}
 }

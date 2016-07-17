@@ -25,60 +25,21 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Charset
-		{
-			get;
-			set;
-		}
+		public string Charset;
 
-		[FieldProperty]
-		public extern string CrossOrigin
-		{
-			get;
-			set;
-		}
+		public string CrossOrigin;
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern string Href
-		{
-			get;
-			set;
-		}
+		public string Href;
 
-		[FieldProperty]
-		public extern string Hreflang
-		{
-			get;
-			set;
-		}
+		public string Hreflang;
 
-		[FieldProperty]
-		public extern string Media
-		{
-			get;
-			set;
-		}
+		public string Media;
 
-		[FieldProperty]
-		public extern string Rel
-		{
-			get;
-			set;
-		}
+		public string Rel;
 
-		[FieldProperty]
-		public extern TokenList RelList
-		{
-			get;
-		}
+		public readonly TokenList RelList;
 
 		public extern void RemoveEventListener(LinkElementEvents type, Action listener);
 
@@ -100,31 +61,12 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LinkElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Rev
-		{
-			get;
-			set;
-		}
+		public string Rev;
 
-		[FieldProperty]
-		public extern StyleSheet Sheet
-		{
-			get;
-		}
+		public readonly StyleSheet Sheet;
 
-		[FieldProperty]
-		public extern string Target
-		{
-			get;
-			set;
-		}
+		public string Target;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

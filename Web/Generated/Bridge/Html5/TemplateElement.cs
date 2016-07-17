@@ -27,11 +27,7 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(TemplateElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern XmlDocumentFragment Content
-		{
-			get;
-		}
+		public readonly XmlDocumentFragment Content;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TemplateElement> listener);
 

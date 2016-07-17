@@ -25,17 +25,9 @@
 
 		public extern void AddEventListener(SVGEllipseElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Cx
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Cx;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Cy
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Cy;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGEllipseElement> listener);
 
@@ -57,16 +49,8 @@
 
 		public extern void RemoveEventListener(SVGEllipseElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Rx
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Rx;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Ry
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Ry;
 	}
 }

@@ -25,40 +25,15 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern double High
-		{
-			get;
-			set;
-		}
+		public double High;
 
-		[FieldProperty]
-		public extern double Low
-		{
-			get;
-			set;
-		}
+		public double Low;
 
-		[FieldProperty]
-		public extern double Max
-		{
-			get;
-			set;
-		}
+		public double Max;
 
-		[FieldProperty]
-		public extern double Min
-		{
-			get;
-			set;
-		}
+		public double Min;
 
-		[FieldProperty]
-		public extern double Optimum
-		{
-			get;
-			set;
-		}
+		public double Optimum;
 
 		public extern void RemoveEventListener(MeterElementEvents type, Action listener);
 
@@ -80,11 +55,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MeterElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern double Value
-		{
-			get;
-			set;
-		}
+		public double Value;
 	}
 }

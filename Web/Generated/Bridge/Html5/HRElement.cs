@@ -25,26 +25,11 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern string Color
-		{
-			get;
-			set;
-		}
+		public string Color;
 
-		[FieldProperty]
-		public extern bool NoShade
-		{
-			get;
-			set;
-		}
+		public bool NoShade;
 
 		public extern void RemoveEventListener(HRElementEvents type, Action listener);
 
@@ -66,18 +51,8 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<HRElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Size
-		{
-			get;
-			set;
-		}
+		public string Size;
 
-		[FieldProperty]
-		public extern string Width
-		{
-			get;
-			set;
-		}
+		public string Width;
 	}
 }

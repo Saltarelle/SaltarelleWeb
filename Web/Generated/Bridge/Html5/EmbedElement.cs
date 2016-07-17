@@ -27,31 +27,16 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
 		[Template("{this}({*arguments})")]
 		public extern object Call(params object[] arguments);
 
 		public extern DocumentBase GetSVGDocument();
 
-		[FieldProperty]
-		public extern string Height
-		{
-			get;
-			set;
-		}
+		public string Height;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern void RemoveEventListener(EmbedElementEvents type, Action listener);
 
@@ -73,25 +58,10 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EmbedElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 
-		[FieldProperty]
-		public extern string Width
-		{
-			get;
-			set;
-		}
+		public string Width;
 	}
 }

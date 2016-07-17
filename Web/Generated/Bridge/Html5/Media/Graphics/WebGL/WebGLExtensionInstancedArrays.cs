@@ -9,11 +9,8 @@
 
 		public extern void DrawElementsInstancedANGLE(int mode, int count, int type, long offset, int primcount);
 
-		[FieldProperty, Name("VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE")]
-		public extern int VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE
-		{
-			get;
-		}
+		[Name("VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE")]
+		public readonly int VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE;
 
 		public extern void VertexAttribDivisorANGLE(int index, int divisor);
 	}

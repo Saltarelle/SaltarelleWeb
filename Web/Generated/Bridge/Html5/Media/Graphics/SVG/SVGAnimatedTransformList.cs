@@ -5,16 +5,8 @@
 	{
 		internal extern SVGAnimatedTransformList();
 
-		[FieldProperty]
-		public extern SVGTransformList AnimVal
-		{
-			get;
-		}
+		public readonly SVGTransformList AnimVal;
 
-		[FieldProperty]
-		public extern SVGTransformList BaseVal
-		{
-			get;
-		}
+		public readonly SVGTransformList BaseVal;
 	}
 }

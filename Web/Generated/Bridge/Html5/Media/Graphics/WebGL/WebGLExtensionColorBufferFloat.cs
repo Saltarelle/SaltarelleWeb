@@ -5,28 +5,16 @@
 	{
 		internal extern WebGLExtensionColorBufferFloat();
 
-		[FieldProperty, Name("FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT")]
-		public extern int FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT
-		{
-			get;
-		}
+		[Name("FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT")]
+		public readonly int FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT;
 
-		[FieldProperty, Name("RGB32F_EXT")]
-		public extern int RGB32F_EXT
-		{
-			get;
-		}
+		[Name("RGB32F_EXT")]
+		public readonly int RGB32F_EXT;
 
-		[FieldProperty, Name("RGBA32F_EXT")]
-		public extern int RGBA32F_EXT
-		{
-			get;
-		}
+		[Name("RGBA32F_EXT")]
+		public readonly int RGBA32F_EXT;
 
-		[FieldProperty, Name("UNSIGNED_NORMALIZED_EXT")]
-		public extern int UNSIGNED_NORMALIZED_EXT
-		{
-			get;
-		}
+		[Name("UNSIGNED_NORMALIZED_EXT")]
+		public readonly int UNSIGNED_NORMALIZED_EXT;
 	}
 }

@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class MediaTrackConstraints
 	{
-		public extern object Mandatory
-		{
-			get;
-			set;
-		}
+		public object Mandatory;
 
-		public extern MediaTrackConstraintSet[] Optional
-		{
-			get;
-			set;
-		}
+		public MediaTrackConstraintSet[] Optional;
 	}
 }

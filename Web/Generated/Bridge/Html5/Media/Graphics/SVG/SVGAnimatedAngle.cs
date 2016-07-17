@@ -5,16 +5,8 @@
 	{
 		internal extern SVGAnimatedAngle();
 
-		[FieldProperty]
-		public extern SVGAngle AnimVal
-		{
-			get;
-		}
+		public readonly SVGAngle AnimVal;
 
-		[FieldProperty]
-		public extern SVGAngle BaseVal
-		{
-			get;
-		}
+		public readonly SVGAngle BaseVal;
 	}
 }

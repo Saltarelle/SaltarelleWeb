@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(SVGPathElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGPathSegList AnimatedPathSegList
-		{
-			get;
-		}
+		public readonly SVGPathSegList AnimatedPathSegList;
 
 		public extern SVGPathSegArcAbs CreateSVGPathSegArcAbs(double x, double y, double r1, double r2, double angle, bool largeArcFlag, bool sweepFlag);
 
@@ -75,17 +71,9 @@
 
 		public extern double GetTotalLength();
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber PathLength
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber PathLength;
 
-		[FieldProperty]
-		public extern SVGPathSegList PathSegList
-		{
-			get;
-		}
+		public readonly SVGPathSegList PathSegList;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPathElement> listener);
 

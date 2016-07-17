@@ -125,11 +125,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 
 		public const int BYTE = 5120;
 
-		[FieldProperty]
-		public extern CanvasElement Canvas
-		{
-			get;
-		}
+		public readonly CanvasElement Canvas;
 
 		public const int CCW = 2305;
 
@@ -290,17 +286,9 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 
 		public extern void DrawElements(int mode, int count, int type, long offset);
 
-		[FieldProperty]
-		public extern int DrawingBufferHeight
-		{
-			get;
-		}
+		public readonly int DrawingBufferHeight;
 
-		[FieldProperty]
-		public extern int DrawingBufferWidth
-		{
-			get;
-		}
+		public readonly int DrawingBufferWidth;
 
 		[Name("DST_ALPHA")]
 		public const int DST_ALPHA = 772;

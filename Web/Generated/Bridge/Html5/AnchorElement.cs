@@ -25,122 +25,39 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Charset
-		{
-			get;
-			set;
-		}
+		public string Charset;
 
-		[FieldProperty]
-		public extern string Coords
-		{
-			get;
-			set;
-		}
+		public string Coords;
 
-		[FieldProperty]
-		public extern string Download
-		{
-			get;
-			set;
-		}
+		public string Download;
 
-		[FieldProperty]
-		public extern string Hash
-		{
-			get;
-			set;
-		}
+		public string Hash;
 
-		[FieldProperty]
-		public extern string Host
-		{
-			get;
-			set;
-		}
+		public string Host;
 
-		[FieldProperty]
-		public extern string Hostname
-		{
-			get;
-			set;
-		}
+		public string Hostname;
 
-		[FieldProperty]
-		public extern string Href
-		{
-			get;
-			set;
-		}
+		public string Href;
 
-		[FieldProperty]
-		public extern string Hreflang
-		{
-			get;
-			set;
-		}
+		public string Hreflang;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
-		[FieldProperty]
-		public extern string Origin
-		{
-			get;
-		}
+		public readonly string Origin;
 
-		[FieldProperty]
-		public extern string Password
-		{
-			get;
-			set;
-		}
+		public string Password;
 
-		[FieldProperty]
-		public extern string Pathname
-		{
-			get;
-			set;
-		}
+		public string Pathname;
 
-		[FieldProperty]
-		public extern string Ping
-		{
-			get;
-			set;
-		}
+		public string Ping;
 
-		[FieldProperty]
-		public extern string Port
-		{
-			get;
-			set;
-		}
+		public string Port;
 
-		[FieldProperty]
-		public extern string Protocol
-		{
-			get;
-			set;
-		}
+		public string Protocol;
 
-		[FieldProperty]
-		public extern string Rel
-		{
-			get;
-			set;
-		}
+		public string Rel;
 
-		[FieldProperty]
-		public extern TokenList RelList
-		{
-			get;
-		}
+		public readonly TokenList RelList;
 
 		public extern void RemoveEventListener(AnchorElementEvents type, Action listener);
 
@@ -162,60 +79,20 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnchorElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Rev
-		{
-			get;
-			set;
-		}
+		public string Rev;
 
-		[FieldProperty]
-		public extern string Search
-		{
-			get;
-			set;
-		}
+		public string Search;
 
-		[FieldProperty]
-		public extern URLSearchParams SearchParams
-		{
-			get;
-			set;
-		}
+		public URLSearchParams SearchParams;
 
-		[FieldProperty]
-		public extern string Shape
-		{
-			get;
-			set;
-		}
+		public string Shape;
 
-		[FieldProperty]
-		public extern string Target
-		{
-			get;
-			set;
-		}
+		public string Target;
 
-		[FieldProperty]
-		public extern string Text
-		{
-			get;
-			set;
-		}
+		public string Text;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 
-		[FieldProperty]
-		public extern string Username
-		{
-			get;
-			set;
-		}
+		public string Username;
 	}
 }

@@ -7,11 +7,7 @@ namespace Bridge.Html5.Media.Source
 	{
 		public extern MediaSource();
 
-		[FieldProperty]
-		public extern SourceBufferList ActiveSourceBuffers
-		{
-			get;
-		}
+		public readonly SourceBufferList ActiveSourceBuffers;
 
 		public extern void AddEventListener(MediaSourceEvents type, Action listener);
 
@@ -35,12 +31,7 @@ namespace Bridge.Html5.Media.Source
 
 		public extern SourceBuffer AddSourceBuffer(string type);
 
-		[FieldProperty]
-		public extern double Duration
-		{
-			get;
-			set;
-		}
+		public double Duration;
 
 		public extern void EndOfStream();
 
@@ -48,11 +39,7 @@ namespace Bridge.Html5.Media.Source
 
 		public static extern bool IsTypeSupported(string type);
 
-		[FieldProperty]
-		public extern MediaSourceReadyState ReadyState
-		{
-			get;
-		}
+		public readonly MediaSourceReadyState ReadyState;
 
 		public extern void RemoveEventListener(MediaSourceEvents type, Action listener);
 
@@ -76,10 +63,6 @@ namespace Bridge.Html5.Media.Source
 
 		public extern void RemoveSourceBuffer(SourceBuffer sourceBuffer);
 
-		[FieldProperty]
-		public extern SourceBufferList SourceBuffers
-		{
-			get;
-		}
+		public readonly SourceBufferList SourceBuffers;
 	}
 }

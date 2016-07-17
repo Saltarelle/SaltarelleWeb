@@ -9,10 +9,6 @@
 
 		public extern BlobEvent(string type, BlobEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern Blob Data
-		{
-			get;
-		}
+		public readonly Blob Data;
 	}
 }

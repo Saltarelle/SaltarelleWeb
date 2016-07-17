@@ -25,54 +25,26 @@
 
 		public extern void AddEventListener(XmlHttpRequestEventTargetEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty, Name("onabort")]
-		public extern HtmlEventHandler OnAbort
-		{
-			get;
-			set;
-		}
+		[Name("onabort")]
+		public HtmlEventHandler OnAbort;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onload")]
-		public extern HtmlEventHandler OnLoad
-		{
-			get;
-			set;
-		}
+		[Name("onload")]
+		public HtmlEventHandler OnLoad;
 
-		[FieldProperty, Name("onloadend")]
-		public extern HtmlEventHandler OnLoadend
-		{
-			get;
-			set;
-		}
+		[Name("onloadend")]
+		public HtmlEventHandler OnLoadend;
 
-		[FieldProperty, Name("onloadstart")]
-		public extern HtmlEventHandler OnLoadstart
-		{
-			get;
-			set;
-		}
+		[Name("onloadstart")]
+		public HtmlEventHandler OnLoadstart;
 
-		[FieldProperty, Name("onprogress")]
-		public extern HtmlEventHandler OnProgress
-		{
-			get;
-			set;
-		}
+		[Name("onprogress")]
+		public HtmlEventHandler OnProgress;
 
-		[FieldProperty, Name("ontimeout")]
-		public extern HtmlEventHandler OnTimeout
-		{
-			get;
-			set;
-		}
+		[Name("ontimeout")]
+		public HtmlEventHandler OnTimeout;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequestEventTarget> listener);
 

@@ -5,124 +5,44 @@
 	{
 		internal extern PerformanceTiming();
 
-		[FieldProperty]
-		public extern ulong ConnectEnd
-		{
-			get;
-		}
+		public readonly ulong ConnectEnd;
 
-		[FieldProperty]
-		public extern ulong ConnectStart
-		{
-			get;
-		}
+		public readonly ulong ConnectStart;
 
-		[FieldProperty]
-		public extern ulong DomainLookupEnd
-		{
-			get;
-		}
+		public readonly ulong DomainLookupEnd;
 
-		[FieldProperty]
-		public extern ulong DomainLookupStart
-		{
-			get;
-		}
+		public readonly ulong DomainLookupStart;
 
-		[FieldProperty]
-		public extern ulong DomComplete
-		{
-			get;
-		}
+		public readonly ulong DomComplete;
 
-		[FieldProperty]
-		public extern ulong DomContentLoadedEventEnd
-		{
-			get;
-		}
+		public readonly ulong DomContentLoadedEventEnd;
 
-		[FieldProperty]
-		public extern ulong DomContentLoadedEventStart
-		{
-			get;
-		}
+		public readonly ulong DomContentLoadedEventStart;
 
-		[FieldProperty]
-		public extern ulong DomInteractive
-		{
-			get;
-		}
+		public readonly ulong DomInteractive;
 
-		[FieldProperty]
-		public extern ulong DomLoading
-		{
-			get;
-		}
+		public readonly ulong DomLoading;
 
-		[FieldProperty]
-		public extern ulong FetchStart
-		{
-			get;
-		}
+		public readonly ulong FetchStart;
 
-		[FieldProperty]
-		public extern ulong LoadEventEnd
-		{
-			get;
-		}
+		public readonly ulong LoadEventEnd;
 
-		[FieldProperty]
-		public extern ulong LoadEventStart
-		{
-			get;
-		}
+		public readonly ulong LoadEventStart;
 
-		[FieldProperty]
-		public extern ulong NavigationStart
-		{
-			get;
-		}
+		public readonly ulong NavigationStart;
 
-		[FieldProperty]
-		public extern ulong RedirectEnd
-		{
-			get;
-		}
+		public readonly ulong RedirectEnd;
 
-		[FieldProperty]
-		public extern ulong RedirectStart
-		{
-			get;
-		}
+		public readonly ulong RedirectStart;
 
-		[FieldProperty]
-		public extern ulong RequestStart
-		{
-			get;
-		}
+		public readonly ulong RequestStart;
 
-		[FieldProperty]
-		public extern ulong ResponseEnd
-		{
-			get;
-		}
+		public readonly ulong ResponseEnd;
 
-		[FieldProperty]
-		public extern ulong ResponseStart
-		{
-			get;
-		}
+		public readonly ulong ResponseStart;
 
-		[FieldProperty]
-		public extern ulong UnloadEventEnd
-		{
-			get;
-		}
+		public readonly ulong UnloadEventEnd;
 
-		[FieldProperty]
-		public extern ulong UnloadEventStart
-		{
-			get;
-		}
+		public readonly ulong UnloadEventStart;
 	}
 }

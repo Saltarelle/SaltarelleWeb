@@ -25,19 +25,9 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Compact
-		{
-			get;
-			set;
-		}
+		public bool Compact;
 
-		[FieldProperty]
-		public extern string Label
-		{
-			get;
-			set;
-		}
+		public string Label;
 
 		public extern void RemoveEventListener(MenuElementEvents type, Action listener);
 
@@ -59,11 +49,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

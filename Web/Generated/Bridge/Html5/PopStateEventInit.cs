@@ -3,10 +3,6 @@
 	[External, Serializable]
 	public partial class PopStateEventInit : EventInit
 	{
-		public extern object State
-		{
-			get;
-			set;
-		}
+		public object State;
 	}
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5
+﻿namespace Bridge.Html5
 {
 	[Namespace("false"), External(TypeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && {this}.tagName === 'FORM'"), Name("Element")]
 	public partial class FormElement : Element
@@ -19,19 +17,9 @@ namespace Bridge.Html5
 			get;
 		}
 
-		[FieldProperty]
-		public extern string AcceptCharset
-		{
-			get;
-			set;
-		}
+		public string AcceptCharset;
 
-		[FieldProperty]
-		public extern string Action
-		{
-			get;
-			set;
-		}
+		public string Action;
 
 		public extern void AddEventListener(FormElementEvents type, Action listener);
 
@@ -53,64 +41,23 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<FormElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Autocomplete
-		{
-			get;
-			set;
-		}
+		public string Autocomplete;
 
 		public extern bool CheckValidity();
 
-		[FieldProperty]
-		public extern ElementCollection Elements
-		{
-			get;
-		}
+		public readonly ElementCollection Elements;
 
-		[FieldProperty]
-		public extern string Encoding
-		{
-			get;
-			set;
-		}
+		public string Encoding;
 
-		[FieldProperty]
-		public extern string Enctype
-		{
-			get;
-			set;
-		}
+		public string Enctype;
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<Element> GetEnumerator();
+		public readonly int Length;
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public string Method;
 
-		[FieldProperty]
-		public extern string Method
-		{
-			get;
-			set;
-		}
+		public string Name;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern bool NoValidate
-		{
-			get;
-			set;
-		}
+		public bool NoValidate;
 
 		public extern void RemoveEventListener(FormElementEvents type, Action listener);
 
@@ -136,11 +83,6 @@ namespace Bridge.Html5
 
 		public extern void Submit();
 
-		[FieldProperty]
-		public extern string Target
-		{
-			get;
-			set;
-		}
+		public string Target;
 	}
 }

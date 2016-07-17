@@ -9,22 +9,10 @@
 
 		public extern SpeechSynthesisEvent(string type, SpeechSynthesisEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern int CharIndex
-		{
-			get;
-		}
+		public readonly int CharIndex;
 
-		[FieldProperty]
-		public extern double ElapsedTime
-		{
-			get;
-		}
+		public readonly double ElapsedTime;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 	}
 }

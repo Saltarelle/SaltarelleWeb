@@ -45,10 +45,6 @@
 
 		public extern void RemoveEventListener(XmlProcessingInstructionEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Target
-		{
-			get;
-		}
+		public readonly string Target;
 	}
 }

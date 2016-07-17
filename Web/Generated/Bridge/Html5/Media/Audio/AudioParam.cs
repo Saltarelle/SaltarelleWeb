@@ -9,11 +9,7 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void CancelScheduledValues(double startTime);
 
-		[FieldProperty]
-		public extern double DefaultValue
-		{
-			get;
-		}
+		public readonly double DefaultValue;
 
 		public extern void ExponentialRampToValueAtTime(double value, double endTime);
 
@@ -27,11 +23,6 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void SetValueCurveAtTime(Float32Array values, double startTime, double duration);
 
-		[FieldProperty]
-		public extern double Value
-		{
-			get;
-			set;
-		}
+		public double Value;
 	}
 }

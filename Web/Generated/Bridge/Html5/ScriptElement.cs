@@ -25,47 +25,17 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Async
-		{
-			get;
-			set;
-		}
+		public bool Async;
 
-		[FieldProperty]
-		public extern string Charset
-		{
-			get;
-			set;
-		}
+		public string Charset;
 
-		[FieldProperty]
-		public extern string CrossOrigin
-		{
-			get;
-			set;
-		}
+		public string CrossOrigin;
 
-		[FieldProperty]
-		public extern bool Defer
-		{
-			get;
-			set;
-		}
+		public bool Defer;
 
-		[FieldProperty]
-		public extern string Event
-		{
-			get;
-			set;
-		}
+		public string Event;
 
-		[FieldProperty]
-		public extern string HtmlFor
-		{
-			get;
-			set;
-		}
+		public string HtmlFor;
 
 		public extern void RemoveEventListener(ScriptElementEvents type, Action listener);
 
@@ -87,25 +57,10 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ScriptElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 
-		[FieldProperty]
-		public extern string Text
-		{
-			get;
-			set;
-		}
+		public string Text;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

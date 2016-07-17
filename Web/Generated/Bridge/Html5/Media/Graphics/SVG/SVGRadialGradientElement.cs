@@ -25,35 +25,15 @@
 
 		public extern void AddEventListener(SVGRadialGradientElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Cx
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Cx;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Cy
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Cy;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Fx
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Fx;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Fy
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Fy;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength R
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength R;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRadialGradientElement> listener);
 

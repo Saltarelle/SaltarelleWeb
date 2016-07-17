@@ -33,79 +33,29 @@ namespace Bridge.Html5
 
 		public extern TextTrack AddTextTrack(TextTrackKind kind, string label, string language);
 
-		[FieldProperty]
-		public extern bool Autoplay
-		{
-			get;
-			set;
-		}
+		public bool Autoplay;
 
-		[FieldProperty]
-		public extern TimeRanges Buffered
-		{
-			get;
-		}
+		public readonly TimeRanges Buffered;
 
 		public extern MediaPlayability CanPlayType(string type);
 
-		[FieldProperty]
-		public extern bool Controls
-		{
-			get;
-			set;
-		}
+		public bool Controls;
 
-		[FieldProperty]
-		public extern MediaCrossOriginPolicy CrossOrigin
-		{
-			get;
-			set;
-		}
+		public MediaCrossOriginPolicy CrossOrigin;
 
-		[FieldProperty]
-		public extern string CurrentSrc
-		{
-			get;
-		}
+		public readonly string CurrentSrc;
 
-		[FieldProperty]
-		public extern double CurrentTime
-		{
-			get;
-			set;
-		}
+		public double CurrentTime;
 
-		[FieldProperty]
-		public extern bool DefaultMuted
-		{
-			get;
-			set;
-		}
+		public bool DefaultMuted;
 
-		[FieldProperty]
-		public extern double DefaultPlaybackRate
-		{
-			get;
-			set;
-		}
+		public double DefaultPlaybackRate;
 
-		[FieldProperty]
-		public extern double Duration
-		{
-			get;
-		}
+		public readonly double Duration;
 
-		[FieldProperty]
-		public extern bool Ended
-		{
-			get;
-		}
+		public readonly bool Ended;
 
-		[FieldProperty]
-		public extern MediaError Error
-		{
-			get;
-		}
+		public readonly MediaError Error;
 
 		[Name("HAVE_CURRENT_DATA")]
 		public const ushort HAVE_CURRENT_DATA = 2;
@@ -124,19 +74,9 @@ namespace Bridge.Html5
 
 		public extern void Load();
 
-		[FieldProperty]
-		public extern bool Loop
-		{
-			get;
-			set;
-		}
+		public bool Loop;
 
-		[FieldProperty]
-		public extern bool Muted
-		{
-			get;
-			set;
-		}
+		public bool Muted;
 
 		[Name("NETWORK_EMPTY")]
 		public const ushort NETWORK_EMPTY = 0;
@@ -150,47 +90,21 @@ namespace Bridge.Html5
 		[Name("NETWORK_NO_SOURCE")]
 		public const ushort NETWORK_NO_SOURCE = 3;
 
-		[FieldProperty]
-		public extern MediaElementNetworkState NetworkState
-		{
-			get;
-		}
+		public readonly MediaElementNetworkState NetworkState;
 
 		public extern void Pause();
 
-		[FieldProperty]
-		public extern bool Paused
-		{
-			get;
-		}
+		public readonly bool Paused;
 
 		public extern void Play();
 
-		[FieldProperty]
-		public extern double PlaybackRate
-		{
-			get;
-			set;
-		}
+		public double PlaybackRate;
 
-		[FieldProperty]
-		public extern TimeRanges Played
-		{
-			get;
-		}
+		public readonly TimeRanges Played;
 
-		[FieldProperty]
-		public extern MediaPreload Preload
-		{
-			get;
-			set;
-		}
+		public MediaPreload Preload;
 
-		[FieldProperty]
-		public extern MediaElementReadyState ReadyState
-		{
-			get;
-		}
+		public readonly MediaElementReadyState ReadyState;
 
 		public extern void RemoveEventListener(MediaElementEvents type, Action listener);
 
@@ -212,36 +126,14 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern TimeRanges Seekable
-		{
-			get;
-		}
+		public readonly TimeRanges Seekable;
 
-		[FieldProperty]
-		public extern bool Seeking
-		{
-			get;
-		}
+		public readonly bool Seeking;
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 
-		[FieldProperty]
-		public extern TextTrackList TextTracks
-		{
-			get;
-		}
+		public readonly TextTrackList TextTracks;
 
-		[FieldProperty]
-		public extern double Volume
-		{
-			get;
-			set;
-		}
+		public double Volume;
 	}
 }

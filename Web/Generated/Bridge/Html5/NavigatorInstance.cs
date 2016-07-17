@@ -12,109 +12,41 @@ namespace Bridge.Html5
 	{
 		internal extern NavigatorInstance();
 
-		[FieldProperty]
-		public extern string AppCodeName
-		{
-			get;
-		}
+		public readonly string AppCodeName;
 
-		[FieldProperty]
-		public extern string AppName
-		{
-			get;
-		}
+		public readonly string AppName;
 
-		[FieldProperty]
-		public extern string AppVersion
-		{
-			get;
-		}
+		public readonly string AppVersion;
 
-		[FieldProperty]
-		public extern BatteryManager Battery
-		{
-			get;
-		}
+		public readonly BatteryManager Battery;
 
-		[FieldProperty]
-		public extern string BuildID
-		{
-			get;
-		}
+		public readonly string BuildID;
 
-		[FieldProperty]
-		public extern bool CookieEnabled
-		{
-			get;
-		}
+		public readonly bool CookieEnabled;
 
-		[FieldProperty]
-		public extern string DoNotTrack
-		{
-			get;
-		}
+		public readonly string DoNotTrack;
 
-		[FieldProperty]
-		public extern GeolocationService Geolocation
-		{
-			get;
-		}
+		public readonly GeolocationService Geolocation;
 
 		public extern bool JavaEnabled();
 
-		[FieldProperty]
-		public extern string Language
-		{
-			get;
-		}
+		public readonly string Language;
 
-		[FieldProperty]
-		public extern int MaxTouchPoints
-		{
-			get;
-		}
+		public readonly int MaxTouchPoints;
 
-		[FieldProperty]
-		public extern MimeTypeArray MimeTypes
-		{
-			get;
-		}
+		public readonly MimeTypeArray MimeTypes;
 
-		[FieldProperty]
-		public extern bool OnLine
-		{
-			get;
-		}
+		public readonly bool OnLine;
 
-		[FieldProperty]
-		public extern string Oscpu
-		{
-			get;
-		}
+		public readonly string Oscpu;
 
-		[FieldProperty]
-		public extern string Platform
-		{
-			get;
-		}
+		public readonly string Platform;
 
-		[FieldProperty]
-		public extern PluginArray Plugins
-		{
-			get;
-		}
+		public readonly PluginArray Plugins;
 
-		[FieldProperty]
-		public extern string Product
-		{
-			get;
-		}
+		public readonly string Product;
 
-		[FieldProperty]
-		public extern string ProductSub
-		{
-			get;
-		}
+		public readonly string ProductSub;
 
 		public extern void RegisterContentHandler(string mimeType, string url, string title);
 
@@ -126,23 +58,11 @@ namespace Bridge.Html5
 
 		public extern bool TaintEnabled();
 
-		[FieldProperty]
-		public extern string UserAgent
-		{
-			get;
-		}
+		public readonly string UserAgent;
 
-		[FieldProperty]
-		public extern string Vendor
-		{
-			get;
-		}
+		public readonly string Vendor;
 
-		[FieldProperty]
-		public extern string VendorSub
-		{
-			get;
-		}
+		public readonly string VendorSub;
 
 		public extern bool Vibrate(int duration);
 

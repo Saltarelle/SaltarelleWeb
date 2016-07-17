@@ -11,34 +11,14 @@ namespace Bridge.Html5.Net.Messaging
 
 		public extern MessageEvent(string type, MessageEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern object Data
-		{
-			get;
-		}
+		public readonly object Data;
 
-		[FieldProperty]
-		public extern string LastEventId
-		{
-			get;
-		}
+		public readonly string LastEventId;
 
-		[FieldProperty]
-		public extern string Origin
-		{
-			get;
-		}
+		public readonly string Origin;
 
-		[FieldProperty]
-		public extern MessagePortList Ports
-		{
-			get;
-		}
+		public readonly MessagePortList Ports;
 
-		[FieldProperty]
-		public extern TypeOption<WindowInstance, MessagePort> Source
-		{
-			get;
-		}
+		public readonly TypeOption<WindowInstance, MessagePort> Source;
 	}
 }

@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class RTCOutboundRTPStreamStats : RTCRTPStreamStats
 	{
-		public extern ulong BytesSent
-		{
-			get;
-			set;
-		}
+		public ulong BytesSent;
 
-		public extern int PacketsSent
-		{
-			get;
-			set;
-		}
+		public int PacketsSent;
 	}
 }

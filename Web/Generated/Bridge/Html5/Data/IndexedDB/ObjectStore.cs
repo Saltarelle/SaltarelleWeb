@@ -7,11 +7,7 @@
 
 		public extern Request Add(object value, object key);
 
-		[FieldProperty]
-		public extern bool AutoIncrement
-		{
-			get;
-		}
+		public readonly bool AutoIncrement;
 
 		public extern Request Clear();
 
@@ -41,23 +37,11 @@
 
 		public extern Index Index(string name);
 
-		[FieldProperty]
-		public extern DOMStringList IndexNames
-		{
-			get;
-		}
+		public readonly DOMStringList IndexNames;
 
-		[FieldProperty]
-		public extern object KeyPath
-		{
-			get;
-		}
+		public readonly object KeyPath;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 
 		public extern Request OpenCursor(object range);
 
@@ -69,10 +53,6 @@
 
 		public extern Request Put(object value, object key);
 
-		[FieldProperty]
-		public extern Transaction Transaction
-		{
-			get;
-		}
+		public readonly Transaction Transaction;
 	}
 }

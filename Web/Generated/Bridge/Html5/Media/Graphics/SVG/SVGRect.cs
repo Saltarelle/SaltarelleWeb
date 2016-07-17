@@ -5,32 +5,12 @@
 	{
 		internal extern SVGRect();
 
-		[FieldProperty]
-		public extern double Height
-		{
-			get;
-			set;
-		}
+		public double Height;
 
-		[FieldProperty]
-		public extern double Width
-		{
-			get;
-			set;
-		}
+		public double Width;
 
-		[FieldProperty]
-		public extern double X
-		{
-			get;
-			set;
-		}
+		public double X;
 
-		[FieldProperty]
-		public extern double Y
-		{
-			get;
-			set;
-		}
+		public double Y;
 	}
 }

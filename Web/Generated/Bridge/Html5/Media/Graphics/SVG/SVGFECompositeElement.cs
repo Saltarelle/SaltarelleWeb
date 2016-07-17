@@ -25,53 +25,21 @@
 
 		public extern void AddEventListener(SVGFECompositeElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
-		[FieldProperty]
-		public extern SVGAnimatedString In1
-		{
-			get;
-		}
+		public readonly SVGAnimatedString In1;
 
-		[FieldProperty]
-		public extern SVGAnimatedString In2
-		{
-			get;
-		}
+		public readonly SVGAnimatedString In2;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber K1
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber K1;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber K2
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber K2;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber K3
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber K3;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber K4
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber K4;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGFECompositeOperator> Operator
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGFECompositeOperator> Operator;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFECompositeElement> listener);
 
@@ -93,11 +61,7 @@
 
 		public extern void RemoveEventListener(SVGFECompositeElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Result
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Result;
 
 		[Name("SVG_FECOMPOSITE_OPERATOR_ARITHMETIC")]
 		public const ushort SVG_FECOMPOSITE_OPERATOR_ARITHMETIC = 6;
@@ -120,22 +84,10 @@
 		[Name("SVG_FECOMPOSITE_OPERATOR_XOR")]
 		public const ushort SVG_FECOMPOSITE_OPERATOR_XOR = 5;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 	}
 }

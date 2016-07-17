@@ -17,20 +17,10 @@ namespace Bridge.Html5
 
 		public extern void Add(TypeOption<OptionElement, OptGroupElement> element, TypeOption<Element, int> before);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-			set;
-		}
+		public int Length;
 
 		public extern void Remove(int index);
 
-		[FieldProperty]
-		public extern int SelectedIndex
-		{
-			get;
-			set;
-		}
+		public int SelectedIndex;
 	}
 }

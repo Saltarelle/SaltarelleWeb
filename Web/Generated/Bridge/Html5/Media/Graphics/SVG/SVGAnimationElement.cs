@@ -61,28 +61,12 @@
 
 		public extern void RemoveEventListener(SVGAnimationElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGStringList RequiredExtensions
-		{
-			get;
-		}
+		public readonly SVGStringList RequiredExtensions;
 
-		[FieldProperty]
-		public extern SVGStringList RequiredFeatures
-		{
-			get;
-		}
+		public readonly SVGStringList RequiredFeatures;
 
-		[FieldProperty]
-		public extern SVGStringList SystemLanguage
-		{
-			get;
-		}
+		public readonly SVGStringList SystemLanguage;
 
-		[FieldProperty]
-		public extern SVGElement TargetElement
-		{
-			get;
-		}
+		public readonly SVGElement TargetElement;
 	}
 }

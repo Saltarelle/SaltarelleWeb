@@ -25,69 +25,25 @@
 
 		public extern void AddEventListener(TextAreaElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Autofocus
-		{
-			get;
-			set;
-		}
+		public bool Autofocus;
 
 		public extern bool CheckValidity();
 
-		[FieldProperty]
-		public extern int Cols
-		{
-			get;
-			set;
-		}
+		public int Cols;
 
-		[FieldProperty]
-		public extern string DefaultValue
-		{
-			get;
-			set;
-		}
+		public string DefaultValue;
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern FormElement Form
-		{
-			get;
-		}
+		public readonly FormElement Form;
 
-		[FieldProperty]
-		public extern int MaxLength
-		{
-			get;
-			set;
-		}
+		public int MaxLength;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
-		[FieldProperty]
-		public extern string Placeholder
-		{
-			get;
-			set;
-		}
+		public string Placeholder;
 
-		[FieldProperty]
-		public extern bool ReadOnly
-		{
-			get;
-			set;
-		}
+		public bool ReadOnly;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextAreaElement> listener);
 
@@ -109,42 +65,17 @@
 
 		public extern void RemoveEventListener(TextAreaElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Required
-		{
-			get;
-			set;
-		}
+		public bool Required;
 
-		[FieldProperty]
-		public extern int Rows
-		{
-			get;
-			set;
-		}
+		public int Rows;
 
 		public extern void Select();
 
-		[FieldProperty]
-		public extern string SelectionDirection
-		{
-			get;
-			set;
-		}
+		public string SelectionDirection;
 
-		[FieldProperty]
-		public extern int SelectionEnd
-		{
-			get;
-			set;
-		}
+		public int SelectionEnd;
 
-		[FieldProperty]
-		public extern int SelectionStart
-		{
-			get;
-			set;
-		}
+		public int SelectionStart;
 
 		public extern void SetCustomValidity(string error);
 
@@ -158,48 +89,18 @@
 
 		public extern void SetSelectionRange(int start, int end, string direction);
 
-		[FieldProperty]
-		public extern int TextLength
-		{
-			get;
-		}
+		public readonly int TextLength;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-		}
+		public readonly string Type;
 
-		[FieldProperty]
-		public extern string ValidationMessage
-		{
-			get;
-		}
+		public readonly string ValidationMessage;
 
-		[FieldProperty]
-		public extern ValidityState Validity
-		{
-			get;
-		}
+		public readonly ValidityState Validity;
 
-		[FieldProperty]
-		public extern string Value
-		{
-			get;
-			set;
-		}
+		public string Value;
 
-		[FieldProperty]
-		public extern bool WillValidate
-		{
-			get;
-		}
+		public readonly bool WillValidate;
 
-		[FieldProperty]
-		public extern string Wrap
-		{
-			get;
-			set;
-		}
+		public string Wrap;
 	}
 }

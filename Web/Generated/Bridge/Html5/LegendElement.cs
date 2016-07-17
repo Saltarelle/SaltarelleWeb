@@ -25,18 +25,9 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<LegendElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern FormElement Form
-		{
-			get;
-		}
+		public readonly FormElement Form;
 
 		public extern void RemoveEventListener(LegendElementEvents type, Action listener);
 

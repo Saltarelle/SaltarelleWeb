@@ -5,22 +5,10 @@
 	{
 		internal extern Counter();
 
-		[FieldProperty]
-		public extern string Identifier
-		{
-			get;
-		}
+		public readonly string Identifier;
 
-		[FieldProperty]
-		public extern string ListStyle
-		{
-			get;
-		}
+		public readonly string ListStyle;
 
-		[FieldProperty]
-		public extern string Separator
-		{
-			get;
-		}
+		public readonly string Separator;
 	}
 }

@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class BlobPropertyBag
 	{
-		public extern EndingTypes Endings
-		{
-			get;
-			set;
-		}
+		public EndingTypes Endings;
 
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

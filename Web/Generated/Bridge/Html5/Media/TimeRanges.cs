@@ -7,11 +7,7 @@
 
 		public extern double End(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
 		public extern double Start(int index);
 	}

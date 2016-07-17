@@ -7,18 +7,10 @@ namespace Bridge.Html5.Media.Audio
 	{
 		internal extern NotifyAudioAvailableEvent();
 
-		[FieldProperty]
-		public extern Float32Array FrameBuffer
-		{
-			get;
-		}
+		public readonly Float32Array FrameBuffer;
 
 		public extern void InitAudioAvailableEvent(string type, bool canBubble, bool cancelable, double[] frameBuffer, int frameBufferLength, double time, bool allowAudioData);
 
-		[FieldProperty]
-		public extern double Time
-		{
-			get;
-		}
+		public readonly double Time;
 	}
 }

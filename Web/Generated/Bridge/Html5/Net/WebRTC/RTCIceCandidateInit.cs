@@ -3,22 +3,10 @@
 	[External, Serializable]
 	public partial class RTCIceCandidateInit
 	{
-		public extern string Candidate
-		{
-			get;
-			set;
-		}
+		public string Candidate;
 
-		public extern string SdpMid
-		{
-			get;
-			set;
-		}
+		public string SdpMid;
 
-		public extern ushort SdpMLineIndex
-		{
-			get;
-			set;
-		}
+		public ushort SdpMLineIndex;
 	}
 }

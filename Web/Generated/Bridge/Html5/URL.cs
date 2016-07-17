@@ -27,89 +27,30 @@ namespace Bridge.Html5
 
 		public static extern string CreateObjectURL(MediaStream stream, ObjectUrlOptions options);
 
-		[FieldProperty]
-		public extern string Hash
-		{
-			get;
-			set;
-		}
+		public string Hash;
 
-		[FieldProperty]
-		public extern string Host
-		{
-			get;
-			set;
-		}
+		public string Host;
 
-		[FieldProperty]
-		public extern string Hostname
-		{
-			get;
-			set;
-		}
+		public string Hostname;
 
-		[FieldProperty]
-		public extern string Href
-		{
-			get;
-			set;
-		}
+		public string Href;
 
-		[FieldProperty]
-		public extern string Origin
-		{
-			get;
-		}
+		public readonly string Origin;
 
-		[FieldProperty]
-		public extern string Password
-		{
-			get;
-			set;
-		}
+		public string Password;
 
-		[FieldProperty]
-		public extern string Pathname
-		{
-			get;
-			set;
-		}
+		public string Pathname;
 
-		[FieldProperty]
-		public extern string Port
-		{
-			get;
-			set;
-		}
+		public string Port;
 
-		[FieldProperty]
-		public extern string Protocol
-		{
-			get;
-			set;
-		}
+		public string Protocol;
 
 		public static extern void RevokeObjectURL(string url);
 
-		[FieldProperty]
-		public extern string Search
-		{
-			get;
-			set;
-		}
+		public string Search;
 
-		[FieldProperty]
-		public extern URLSearchParams SearchParams
-		{
-			get;
-			set;
-		}
+		public URLSearchParams SearchParams;
 
-		[FieldProperty]
-		public extern string Username
-		{
-			get;
-			set;
-		}
+		public string Username;
 	}
 }

@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(XmlDocumentEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Async
-		{
-			get;
-			set;
-		}
+		public bool Async;
 
 		public extern bool Load(string url);
 

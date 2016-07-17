@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DelayNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern AudioParam DelayTime
-		{
-			get;
-		}
+		public readonly AudioParam DelayTime;
 
 		public extern void RemoveEventListener(DelayNodeEvents type, Action listener);
 

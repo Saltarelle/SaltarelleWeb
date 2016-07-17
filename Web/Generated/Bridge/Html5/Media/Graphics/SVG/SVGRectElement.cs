@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(SVGRectElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGRectElement> listener);
 
@@ -51,34 +47,14 @@
 
 		public extern void RemoveEventListener(SVGRectElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Rx
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Rx;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Ry
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Ry;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 	}
 }

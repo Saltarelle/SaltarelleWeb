@@ -8,12 +8,7 @@
 		[Name("CHARSET_RULE")]
 		public const ushort CHARSET_RULE = 2;
 
-		[FieldProperty]
-		public extern string CssText
-		{
-			get;
-			set;
-		}
+		public string CssText;
 
 		[Name("FONT_FACE_RULE")]
 		public const ushort FONT_FACE_RULE = 5;
@@ -30,25 +25,13 @@
 		[Name("PAGE_RULE")]
 		public const ushort PAGE_RULE = 6;
 
-		[FieldProperty]
-		public extern CSSRule ParentRule
-		{
-			get;
-		}
+		public readonly CSSRule ParentRule;
 
-		[FieldProperty]
-		public extern CSSStyleSheet ParentStyleSheet
-		{
-			get;
-		}
+		public readonly CSSStyleSheet ParentStyleSheet;
 
 		[Name("STYLE_RULE")]
 		public const ushort STYLE_RULE = 1;
 
-		[FieldProperty]
-		public extern CSSRuleType Type
-		{
-			get;
-		}
+		public readonly CSSRuleType Type;
 	}
 }

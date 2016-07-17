@@ -24,31 +24,12 @@
 		[Name("SVG_ANGLETYPE_UNSPECIFIED")]
 		public const ushort SVG_ANGLETYPE_UNSPECIFIED = 1;
 
-		[FieldProperty]
-		public extern SVGAngleUnitType UnitType
-		{
-			get;
-		}
+		public readonly SVGAngleUnitType UnitType;
 
-		[FieldProperty]
-		public extern double Value
-		{
-			get;
-			set;
-		}
+		public double Value;
 
-		[FieldProperty]
-		public extern string ValueAsString
-		{
-			get;
-			set;
-		}
+		public string ValueAsString;
 
-		[FieldProperty]
-		public extern double ValueInSpecifiedUnits
-		{
-			get;
-			set;
-		}
+		public double ValueInSpecifiedUnits;
 	}
 }

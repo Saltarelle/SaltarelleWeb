@@ -5,10 +5,7 @@
 	{
 		internal extern WebGLExtensionTextureHalfFloat();
 
-		[FieldProperty, Name("HALF_FLOAT_OES")]
-		public extern int HALF_FLOAT_OES
-		{
-			get;
-		}
+		[Name("HALF_FLOAT_OES")]
+		public readonly int HALF_FLOAT_OES;
 	}
 }

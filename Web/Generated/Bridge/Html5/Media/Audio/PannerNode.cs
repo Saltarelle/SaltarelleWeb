@@ -25,33 +25,13 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern double ConeInnerAngle
-		{
-			get;
-			set;
-		}
+		public double ConeInnerAngle;
 
-		[FieldProperty]
-		public extern double ConeOuterAngle
-		{
-			get;
-			set;
-		}
+		public double ConeOuterAngle;
 
-		[FieldProperty]
-		public extern double ConeOuterGain
-		{
-			get;
-			set;
-		}
+		public double ConeOuterGain;
 
-		[FieldProperty]
-		public extern DistanceModelType DistanceModel
-		{
-			get;
-			set;
-		}
+		public DistanceModelType DistanceModel;
 
 		public const ushort EQUALPOWER = 0;
 
@@ -66,26 +46,11 @@
 		[Name("LINEAR_DISTANCE")]
 		public const ushort LINEAR_DISTANCE = 0;
 
-		[FieldProperty]
-		public extern double MaxDistance
-		{
-			get;
-			set;
-		}
+		public double MaxDistance;
 
-		[FieldProperty]
-		public extern PanningModelType PanningModel
-		{
-			get;
-			set;
-		}
+		public PanningModelType PanningModel;
 
-		[FieldProperty]
-		public extern double RefDistance
-		{
-			get;
-			set;
-		}
+		public double RefDistance;
 
 		public extern void RemoveEventListener(PannerNodeEvents type, Action listener);
 
@@ -107,12 +72,7 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PannerNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern double RolloffFactor
-		{
-			get;
-			set;
-		}
+		public double RolloffFactor;
 
 		public extern void SetOrientation(double x, double y, double z);
 

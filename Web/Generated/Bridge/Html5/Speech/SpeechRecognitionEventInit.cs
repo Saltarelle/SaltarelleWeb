@@ -5,28 +5,12 @@ namespace Bridge.Html5.Speech
 	[External, Serializable]
 	public partial class SpeechRecognitionEventInit : EventInit
 	{
-		public extern DocumentBase Emma
-		{
-			get;
-			set;
-		}
+		public DocumentBase Emma;
 
-		public extern string Interpretation
-		{
-			get;
-			set;
-		}
+		public string Interpretation;
 
-		public extern int ResultIndex
-		{
-			get;
-			set;
-		}
+		public int ResultIndex;
 
-		public extern object Results
-		{
-			get;
-			set;
-		}
+		public object Results;
 	}
 }

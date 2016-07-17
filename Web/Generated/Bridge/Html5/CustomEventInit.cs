@@ -3,10 +3,6 @@
 	[External, Serializable]
 	public partial class CustomEventInit : EventInit
 	{
-		public extern object Detail
-		{
-			get;
-			set;
-		}
+		public object Detail;
 	}
 }

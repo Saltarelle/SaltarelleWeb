@@ -25,18 +25,9 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MapElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern ElementCollection Areas
-		{
-			get;
-		}
+		public readonly ElementCollection Areas;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern void RemoveEventListener(MapElementEvents type, Action listener);
 

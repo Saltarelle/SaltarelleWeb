@@ -42,31 +42,12 @@
 		[Name("SVG_LENGTHTYPE_UNKNOWN")]
 		public const ushort SVG_LENGTHTYPE_UNKNOWN = 0;
 
-		[FieldProperty]
-		public extern SVGLengthType UnitType
-		{
-			get;
-		}
+		public readonly SVGLengthType UnitType;
 
-		[FieldProperty]
-		public extern double Value
-		{
-			get;
-			set;
-		}
+		public double Value;
 
-		[FieldProperty]
-		public extern string ValueAsString
-		{
-			get;
-			set;
-		}
+		public string ValueAsString;
 
-		[FieldProperty]
-		public extern double ValueInSpecifiedUnits
-		{
-			get;
-			set;
-		}
+		public double ValueInSpecifiedUnits;
 	}
 }

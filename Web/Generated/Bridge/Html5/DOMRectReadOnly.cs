@@ -5,52 +5,20 @@
 	{
 		internal extern DOMRectReadOnly();
 
-		[FieldProperty]
-		public extern double Bottom
-		{
-			get;
-		}
+		public readonly double Bottom;
 
-		[FieldProperty]
-		public extern double Height
-		{
-			get;
-		}
+		public readonly double Height;
 
-		[FieldProperty]
-		public extern double Left
-		{
-			get;
-		}
+		public readonly double Left;
 
-		[FieldProperty]
-		public extern double Right
-		{
-			get;
-		}
+		public readonly double Right;
 
-		[FieldProperty]
-		public extern double Top
-		{
-			get;
-		}
+		public readonly double Top;
 
-		[FieldProperty]
-		public extern double Width
-		{
-			get;
-		}
+		public readonly double Width;
 
-		[FieldProperty]
-		public extern double X
-		{
-			get;
-		}
+		public readonly double X;
 
-		[FieldProperty]
-		public extern double Y
-		{
-			get;
-		}
+		public readonly double Y;
 	}
 }

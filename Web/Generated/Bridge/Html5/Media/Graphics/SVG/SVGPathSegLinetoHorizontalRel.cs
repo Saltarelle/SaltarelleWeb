@@ -5,11 +5,6 @@
 	{
 		internal extern SVGPathSegLinetoHorizontalRel();
 
-		[FieldProperty]
-		public extern double X
-		{
-			get;
-			set;
-		}
+		public double X;
 	}
 }

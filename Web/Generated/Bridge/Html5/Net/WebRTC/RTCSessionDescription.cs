@@ -7,18 +7,8 @@
 
 		public extern RTCSessionDescription(RTCSessionDescriptionInit descriptionInitDict);
 
-		[FieldProperty]
-		public extern string Sdp
-		{
-			get;
-			set;
-		}
+		public string Sdp;
 
-		[FieldProperty]
-		public extern RTCSdpType? Type
-		{
-			get;
-			set;
-		}
+		public RTCSdpType? Type;
 	}
 }

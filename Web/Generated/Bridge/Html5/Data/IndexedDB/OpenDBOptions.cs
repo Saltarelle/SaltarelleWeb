@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class OpenDBOptions
 	{
-		public extern StorageType Storage
-		{
-			get;
-			set;
-		}
+		public StorageType Storage;
 
-		public extern ulong Version
-		{
-			get;
-			set;
-		}
+		public ulong Version;
 	}
 }

@@ -3,22 +3,10 @@
 	[External, Serializable]
 	public partial class PositionOptions
 	{
-		public extern bool EnableHighAccuracy
-		{
-			get;
-			set;
-		}
+		public bool EnableHighAccuracy;
 
-		public extern int MaximumAge
-		{
-			get;
-			set;
-		}
+		public int MaximumAge;
 
-		public extern int Timeout
-		{
-			get;
-			set;
-		}
+		public int Timeout;
 	}
 }

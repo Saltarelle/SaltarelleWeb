@@ -31,18 +31,10 @@ namespace Bridge.Html5.Threading.WebWorkers
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SharedWorker> listener, bool capture);
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty]
-		public extern MessagePort Port
-		{
-			get;
-		}
+		public readonly MessagePort Port;
 
 		public extern void RemoveEventListener(SharedWorkerEvents type, Action listener);
 

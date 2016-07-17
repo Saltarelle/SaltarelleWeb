@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(UListElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Compact
-		{
-			get;
-			set;
-		}
+		public bool Compact;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<UListElement> listener);
 
@@ -52,11 +47,6 @@
 
 		public extern void RemoveEventListener(UListElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

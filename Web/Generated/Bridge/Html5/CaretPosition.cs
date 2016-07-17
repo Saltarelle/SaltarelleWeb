@@ -9,16 +9,8 @@ namespace Bridge.Html5
 
 		public extern DOMRect GetClientRect();
 
-		[FieldProperty]
-		public extern int Offset
-		{
-			get;
-		}
+		public readonly int Offset;
 
-		[FieldProperty]
-		public extern XmlNode OffsetNode
-		{
-			get;
-		}
+		public readonly XmlNode OffsetNode;
 	}
 }

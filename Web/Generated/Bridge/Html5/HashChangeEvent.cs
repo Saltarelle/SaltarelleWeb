@@ -11,16 +11,8 @@
 
 		public extern void InitHashChangeEvent(string type, bool canBubble, bool cancelable, string oldURL, string newURL);
 
-		[FieldProperty]
-		public extern string NewURL
-		{
-			get;
-		}
+		public readonly string NewURL;
 
-		[FieldProperty]
-		public extern string OldURL
-		{
-			get;
-		}
+		public readonly string OldURL;
 	}
 }

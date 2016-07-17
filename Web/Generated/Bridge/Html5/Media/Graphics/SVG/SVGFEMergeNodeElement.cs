@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(SVGFEMergeNodeElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString In1
-		{
-			get;
-		}
+		public readonly SVGAnimatedString In1;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMergeNodeElement> listener);
 

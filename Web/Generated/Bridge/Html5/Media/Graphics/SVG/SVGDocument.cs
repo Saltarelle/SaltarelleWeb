@@ -27,11 +27,7 @@ namespace Bridge.Html5.Media.Graphics.SVG
 
 		public extern void AddEventListener(SVGDocumentEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Domain
-		{
-			get;
-		}
+		public readonly string Domain;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGDocument> listener);
 
@@ -53,10 +49,6 @@ namespace Bridge.Html5.Media.Graphics.SVG
 
 		public extern void RemoveEventListener(SVGDocumentEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGElement RootElement
-		{
-			get;
-		}
+		public readonly SVGElement RootElement;
 	}
 }

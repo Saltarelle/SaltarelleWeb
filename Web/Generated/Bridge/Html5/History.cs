@@ -13,11 +13,7 @@
 
 		public extern void Go(int delta);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
 		public extern void PushState(object data, string title);
 
@@ -27,10 +23,6 @@
 
 		public extern void ReplaceState(object data, string title, string url);
 
-		[FieldProperty]
-		public extern object State
-		{
-			get;
-		}
+		public readonly object State;
 	}
 }

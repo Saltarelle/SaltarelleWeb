@@ -11,26 +11,14 @@
 
 		public extern void Pause();
 
-		[FieldProperty]
-		public extern bool Paused
-		{
-			get;
-		}
+		public readonly bool Paused;
 
-		[FieldProperty]
-		public extern bool Pending
-		{
-			get;
-		}
+		public readonly bool Pending;
 
 		public extern void Resume();
 
 		public extern void Speak(SpeechSynthesisUtterance utterance);
 
-		[FieldProperty]
-		public extern bool Speaking
-		{
-			get;
-		}
+		public readonly bool Speaking;
 	}
 }

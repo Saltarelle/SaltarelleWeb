@@ -5,29 +5,12 @@
 	{
 		internal extern MediaStreamTrack();
 
-		[FieldProperty]
-		public extern bool Enabled
-		{
-			get;
-			set;
-		}
+		public bool Enabled;
 
-		[FieldProperty]
-		public extern string Id
-		{
-			get;
-		}
+		public readonly string Id;
 
-		[FieldProperty]
-		public extern string Kind
-		{
-			get;
-		}
+		public readonly string Kind;
 
-		[FieldProperty]
-		public extern string Label
-		{
-			get;
-		}
+		public readonly string Label;
 	}
 }

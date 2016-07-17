@@ -9,30 +9,14 @@
 
 		public extern DeviceMotionEvent(string type, DeviceMotionEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern DeviceAcceleration Acceleration
-		{
-			get;
-		}
+		public readonly DeviceAcceleration Acceleration;
 
-		[FieldProperty]
-		public extern DeviceAcceleration AccelerationIncludingGravity
-		{
-			get;
-		}
+		public readonly DeviceAcceleration AccelerationIncludingGravity;
 
 		public extern void InitDeviceMotionEvent(string type, bool canBubble, bool cancelable, DeviceAccelerationInit acceleration, DeviceAccelerationInit accelerationIncludingGravity, DeviceRotationRateInit rotationRate, double? interval);
 
-		[FieldProperty]
-		public extern double? Interval
-		{
-			get;
-		}
+		public readonly double? Interval;
 
-		[FieldProperty]
-		public extern DeviceRotationRate RotationRate
-		{
-			get;
-		}
+		public readonly DeviceRotationRate RotationRate;
 	}
 }

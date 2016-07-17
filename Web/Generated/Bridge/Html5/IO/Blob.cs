@@ -14,11 +14,7 @@ namespace Bridge.Html5.IO
 
 		public extern void Close();
 
-		[FieldProperty]
-		public extern ulong Size
-		{
-			get;
-		}
+		public readonly ulong Size;
 
 		public extern Blob Slice();
 
@@ -28,10 +24,6 @@ namespace Bridge.Html5.IO
 
 		public extern Blob Slice(long start, long end, string contentType);
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-		}
+		public readonly string Type;
 	}
 }

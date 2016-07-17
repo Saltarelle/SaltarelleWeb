@@ -7,17 +7,9 @@
 
 		public extern void AddListener(MediaQueryListListener listener);
 
-		[FieldProperty]
-		public extern bool Matches
-		{
-			get;
-		}
+		public readonly bool Matches;
 
-		[FieldProperty]
-		public extern string Media
-		{
-			get;
-		}
+		public readonly string Media;
 
 		public extern void RemoveListener(MediaQueryListListener listener);
 	}

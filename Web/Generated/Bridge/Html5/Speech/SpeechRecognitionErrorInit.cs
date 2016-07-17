@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class SpeechRecognitionErrorInit : EventInit
 	{
-		public extern SpeechRecognitionErrorCode Error
-		{
-			get;
-			set;
-		}
+		public SpeechRecognitionErrorCode Error;
 
-		public extern string Message
-		{
-			get;
-			set;
-		}
+		public string Message;
 	}
 }

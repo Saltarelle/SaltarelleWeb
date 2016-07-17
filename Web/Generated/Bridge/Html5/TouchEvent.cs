@@ -5,48 +5,20 @@
 	{
 		internal extern TouchEvent();
 
-		[FieldProperty]
-		public extern bool AltKey
-		{
-			get;
-		}
+		public readonly bool AltKey;
 
-		[FieldProperty]
-		public extern TouchList ChangedTouches
-		{
-			get;
-		}
+		public readonly TouchList ChangedTouches;
 
-		[FieldProperty]
-		public extern bool CtrlKey
-		{
-			get;
-		}
+		public readonly bool CtrlKey;
 
 		public extern void InitTouchEvent(string type, bool canBubble, bool cancelable, WindowInstance view, int detail, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey, TouchList touches, TouchList targetTouches, TouchList changedTouches);
 
-		[FieldProperty]
-		public extern bool MetaKey
-		{
-			get;
-		}
+		public readonly bool MetaKey;
 
-		[FieldProperty]
-		public extern bool ShiftKey
-		{
-			get;
-		}
+		public readonly bool ShiftKey;
 
-		[FieldProperty]
-		public extern TouchList TargetTouches
-		{
-			get;
-		}
+		public readonly TouchList TargetTouches;
 
-		[FieldProperty]
-		public extern TouchList Touches
-		{
-			get;
-		}
+		public readonly TouchList Touches;
 	}
 }

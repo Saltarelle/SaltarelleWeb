@@ -25,23 +25,11 @@
 
 		public extern void AddEventListener(SVGCircleElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Cx
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Cx;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Cy
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Cy;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength R
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength R;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGCircleElement> listener);
 

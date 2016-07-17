@@ -25,17 +25,9 @@
 
 		public extern void AddEventListener(SVGTextPathElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Href
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Href;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGTextPathMethod> Method
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGTextPathMethod> Method;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPathElement> listener);
 
@@ -57,17 +49,9 @@
 
 		public extern void RemoveEventListener(SVGTextPathElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGTextPathSpacing> Spacing
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGTextPathSpacing> Spacing;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength StartOffset
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength StartOffset;
 
 		[Name("TEXTPATH_METHODTYPE_ALIGN")]
 		public const ushort TEXTPATH_METHODTYPE_ALIGN = 1;

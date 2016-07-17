@@ -9,10 +9,6 @@
 
 		public extern DeviceLightEvent(string type, DeviceLightEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern double Value
-		{
-			get;
-		}
+		public readonly double Value;
 	}
 }

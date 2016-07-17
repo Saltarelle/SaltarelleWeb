@@ -5,28 +5,16 @@
 	{
 		internal extern WebGLExtensionCompressedTexturePVRTC();
 
-		[FieldProperty, Name("COMPRESSED_RGB_PVRTC_2BPPV1")]
-		public extern int COMPRESSED_RGB_PVRTC_2BPPV1
-		{
-			get;
-		}
+		[Name("COMPRESSED_RGB_PVRTC_2BPPV1")]
+		public readonly int COMPRESSED_RGB_PVRTC_2BPPV1;
 
-		[FieldProperty, Name("COMPRESSED_RGB_PVRTC_4BPPV1")]
-		public extern int COMPRESSED_RGB_PVRTC_4BPPV1
-		{
-			get;
-		}
+		[Name("COMPRESSED_RGB_PVRTC_4BPPV1")]
+		public readonly int COMPRESSED_RGB_PVRTC_4BPPV1;
 
-		[FieldProperty, Name("COMPRESSED_RGBA_PVRTC_2BPPV1")]
-		public extern int COMPRESSED_RGBA_PVRTC_2BPPV1
-		{
-			get;
-		}
+		[Name("COMPRESSED_RGBA_PVRTC_2BPPV1")]
+		public readonly int COMPRESSED_RGBA_PVRTC_2BPPV1;
 
-		[FieldProperty, Name("COMPRESSED_RGBA_PVRTC_4BPPV1")]
-		public extern int COMPRESSED_RGBA_PVRTC_4BPPV1
-		{
-			get;
-		}
+		[Name("COMPRESSED_RGBA_PVRTC_4BPPV1")]
+		public readonly int COMPRESSED_RGBA_PVRTC_4BPPV1;
 	}
 }

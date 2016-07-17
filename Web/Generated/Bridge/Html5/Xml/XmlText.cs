@@ -67,10 +67,6 @@ namespace Bridge.Html5.Xml
 
 		public extern XmlText SplitText(int offset);
 
-		[FieldProperty]
-		public extern string WholeText
-		{
-			get;
-		}
+		public readonly string WholeText;
 	}
 }

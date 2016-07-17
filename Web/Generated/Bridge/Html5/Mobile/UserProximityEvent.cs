@@ -9,10 +9,6 @@
 
 		public extern UserProximityEvent(string type, UserProximityEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern bool Near
-		{
-			get;
-		}
+		public readonly bool Near;
 	}
 }

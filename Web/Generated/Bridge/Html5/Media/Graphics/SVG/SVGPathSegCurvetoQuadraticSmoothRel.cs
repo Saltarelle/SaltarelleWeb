@@ -5,18 +5,8 @@
 	{
 		internal extern SVGPathSegCurvetoQuadraticSmoothRel();
 
-		[FieldProperty]
-		public extern double X
-		{
-			get;
-			set;
-		}
+		public double X;
 
-		[FieldProperty]
-		public extern double Y
-		{
-			get;
-			set;
-		}
+		public double Y;
 	}
 }

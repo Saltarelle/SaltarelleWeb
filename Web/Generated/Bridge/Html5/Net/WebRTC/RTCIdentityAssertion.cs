@@ -7,18 +7,8 @@
 
 		public extern RTCIdentityAssertion(string idp, string name);
 
-		[FieldProperty]
-		public extern string Idp
-		{
-			get;
-			set;
-		}
+		public string Idp;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 	}
 }

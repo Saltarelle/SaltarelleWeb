@@ -3,28 +3,12 @@
 	[External, Serializable]
 	public partial class DeviceMotionEventInit : EventInit
 	{
-		public extern DeviceAccelerationInit Acceleration
-		{
-			get;
-			set;
-		}
+		public DeviceAccelerationInit Acceleration;
 
-		public extern DeviceAccelerationInit AccelerationIncludingGravity
-		{
-			get;
-			set;
-		}
+		public DeviceAccelerationInit AccelerationIncludingGravity;
 
-		public extern double? Interval
-		{
-			get;
-			set;
-		}
+		public double? Interval;
 
-		public extern DeviceRotationRateInit RotationRate
-		{
-			get;
-			set;
-		}
+		public DeviceRotationRateInit RotationRate;
 	}
 }

@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class ObjectStoreParameters
 	{
-		public extern bool AutoIncrement
-		{
-			get;
-			set;
-		}
+		public bool AutoIncrement;
 
-		public extern object KeyPath
-		{
-			get;
-			set;
-		}
+		public object KeyPath;
 	}
 }

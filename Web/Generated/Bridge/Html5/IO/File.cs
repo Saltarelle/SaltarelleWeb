@@ -7,16 +7,8 @@ namespace Bridge.Html5.IO
 	{
 		internal extern File();
 
-		[FieldProperty]
-		public extern DateTime LastModifiedDate
-		{
-			get;
-		}
+		public readonly DateTime LastModifiedDate;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 	}
 }

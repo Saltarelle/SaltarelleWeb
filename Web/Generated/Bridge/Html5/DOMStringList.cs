@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5
+﻿namespace Bridge.Html5
 {
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class DOMStringList
@@ -15,15 +13,8 @@ namespace Bridge.Html5
 
 		public extern bool Contains(string @string);
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<string> GetEnumerator();
-
 		public extern string Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 	}
 }

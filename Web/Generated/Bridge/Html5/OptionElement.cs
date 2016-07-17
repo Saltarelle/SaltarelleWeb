@@ -38,38 +38,15 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool DefaultSelected
-		{
-			get;
-			set;
-		}
+		public bool DefaultSelected;
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern FormElement Form
-		{
-			get;
-		}
+		public readonly FormElement Form;
 
-		[FieldProperty]
-		public extern int Index
-		{
-			get;
-		}
+		public readonly int Index;
 
-		[FieldProperty]
-		public extern string Label
-		{
-			get;
-			set;
-		}
+		public string Label;
 
 		public extern void RemoveEventListener(OptionElementEvents type, Action listener);
 
@@ -91,25 +68,10 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OptionElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Selected
-		{
-			get;
-			set;
-		}
+		public bool Selected;
 
-		[FieldProperty]
-		public extern string Text
-		{
-			get;
-			set;
-		}
+		public string Text;
 
-		[FieldProperty]
-		public extern string Value
-		{
-			get;
-			set;
-		}
+		public string Value;
 	}
 }

@@ -25,19 +25,11 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OpenDBRequest> listener, bool capture);
 
-		[FieldProperty, Name("onblocked")]
-		public extern HtmlEventHandler OnBlocked
-		{
-			get;
-			set;
-		}
+		[Name("onblocked")]
+		public HtmlEventHandler OnBlocked;
 
-		[FieldProperty, Name("onupgradeneeded")]
-		public extern HtmlEventHandler OnUpgradeneeded
-		{
-			get;
-			set;
-		}
+		[Name("onupgradeneeded")]
+		public HtmlEventHandler OnUpgradeneeded;
 
 		public extern void RemoveEventListener(OpenDBRequestEvents type, Action listener);
 

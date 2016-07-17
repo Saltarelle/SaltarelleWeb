@@ -25,29 +25,13 @@
 
 		public extern void AddEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
-		[FieldProperty]
-		public extern SVGAnimatedString In1
-		{
-			get;
-		}
+		public readonly SVGAnimatedString In1;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber KernelUnitLengthX
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber KernelUnitLengthX;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber KernelUnitLengthY
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber KernelUnitLengthY;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpecularLightingElement> listener);
 
@@ -69,46 +53,18 @@
 
 		public extern void RemoveEventListener(SVGFESpecularLightingElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Result
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Result;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber SpecularConstant
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber SpecularConstant;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber SpecularExponent
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber SpecularExponent;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber SurfaceScale
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber SurfaceScale;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 	}
 }

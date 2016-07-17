@@ -13,25 +13,11 @@ namespace Bridge.Html5
 
 		public extern void ClearData(string format);
 
-		[FieldProperty]
-		public extern DropEffect DropEffect
-		{
-			get;
-			set;
-		}
+		public DropEffect DropEffect;
 
-		[FieldProperty]
-		public extern AllowedDropEffect EffectAllowed
-		{
-			get;
-			set;
-		}
+		public AllowedDropEffect EffectAllowed;
 
-		[FieldProperty]
-		public extern FileList Files
-		{
-			get;
-		}
+		public readonly FileList Files;
 
 		public extern string GetData(string format);
 
@@ -39,10 +25,6 @@ namespace Bridge.Html5
 
 		public extern void SetDragImage(Element image, int x, int y);
 
-		[FieldProperty]
-		public extern DOMStringList Types
-		{
-			get;
-		}
+		public readonly DOMStringList Types;
 	}
 }

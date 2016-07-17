@@ -14,31 +14,19 @@
 		[Name("BOOLEAN_TYPE")]
 		public const ushort BOOLEAN_TYPE = 3;
 
-		[FieldProperty]
-		public extern bool BooleanValue
-		{
-			get;
-		}
+		public readonly bool BooleanValue;
 
 		[Name("FIRST_ORDERED_NODE_TYPE")]
 		public const ushort FIRST_ORDERED_NODE_TYPE = 9;
 
-		[FieldProperty]
-		public extern bool InvalidIteratorState
-		{
-			get;
-		}
+		public readonly bool InvalidIteratorState;
 
 		public extern XmlNode IterateNext();
 
 		[Name("NUMBER_TYPE")]
 		public const ushort NUMBER_TYPE = 1;
 
-		[FieldProperty]
-		public extern double NumberValue
-		{
-			get;
-		}
+		public readonly double NumberValue;
 
 		[Name("ORDERED_NODE_ITERATOR_TYPE")]
 		public const ushort ORDERED_NODE_ITERATOR_TYPE = 5;
@@ -46,34 +34,18 @@
 		[Name("ORDERED_NODE_SNAPSHOT_TYPE")]
 		public const ushort ORDERED_NODE_SNAPSHOT_TYPE = 7;
 
-		[FieldProperty]
-		public extern ResultType ResultType
-		{
-			get;
-		}
+		public readonly ResultType ResultType;
 
-		[FieldProperty]
-		public extern XmlNode SingleNodeValue
-		{
-			get;
-		}
+		public readonly XmlNode SingleNodeValue;
 
 		public extern XmlNode SnapshotItem(int index);
 
-		[FieldProperty]
-		public extern int SnapshotLength
-		{
-			get;
-		}
+		public readonly int SnapshotLength;
 
 		[Name("STRING_TYPE")]
 		public const ushort STRING_TYPE = 2;
 
-		[FieldProperty]
-		public extern string StringValue
-		{
-			get;
-		}
+		public readonly string StringValue;
 
 		[Name("UNORDERED_NODE_ITERATOR_TYPE")]
 		public const ushort UNORDERED_NODE_ITERATOR_TYPE = 4;

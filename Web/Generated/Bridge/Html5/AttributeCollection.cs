@@ -1,5 +1,4 @@
 ﻿using Bridge.Html5.Xml;
-using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
@@ -20,20 +19,13 @@ namespace Bridge.Html5
 			get;
 		}
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<XmlAttribute> GetEnumerator();
-
 		public extern XmlAttribute GetNamedItem(string name);
 
 		public extern XmlAttribute GetNamedItemNS(string namespaceURI, string localName);
 
 		public extern XmlAttribute Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
 		public extern XmlAttribute RemoveNamedItem(string name);
 

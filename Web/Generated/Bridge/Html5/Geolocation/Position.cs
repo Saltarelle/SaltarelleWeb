@@ -5,16 +5,8 @@
 	{
 		internal extern Position();
 
-		[FieldProperty]
-		public extern Coordinates Coords
-		{
-			get;
-		}
+		public readonly Coordinates Coords;
 
-		[FieldProperty]
-		public extern long Timestamp
-		{
-			get;
-		}
+		public readonly long Timestamp;
 	}
 }

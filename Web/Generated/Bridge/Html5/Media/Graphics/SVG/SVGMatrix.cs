@@ -5,47 +5,17 @@
 	{
 		internal extern SVGMatrix();
 
-		[FieldProperty]
-		public extern double A
-		{
-			get;
-			set;
-		}
+		public double A;
 
-		[FieldProperty]
-		public extern double B
-		{
-			get;
-			set;
-		}
+		public double B;
 
-		[FieldProperty]
-		public extern double C
-		{
-			get;
-			set;
-		}
+		public double C;
 
-		[FieldProperty]
-		public extern double D
-		{
-			get;
-			set;
-		}
+		public double D;
 
-		[FieldProperty]
-		public extern double E
-		{
-			get;
-			set;
-		}
+		public double E;
 
-		[FieldProperty]
-		public extern double F
-		{
-			get;
-			set;
-		}
+		public double F;
 
 		public extern SVGMatrix FlipX();
 

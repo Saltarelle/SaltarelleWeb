@@ -7,38 +7,18 @@
 
 		public extern void Detach();
 
-		[FieldProperty]
-		public extern INodeFilter Filter
-		{
-			get;
-		}
+		public readonly INodeFilter Filter;
 
 		public extern XmlNode NextNode();
 
-		[FieldProperty]
-		public extern bool PointerBeforeReferenceNode
-		{
-			get;
-		}
+		public readonly bool PointerBeforeReferenceNode;
 
 		public extern XmlNode PreviousNode();
 
-		[FieldProperty]
-		public extern XmlNode ReferenceNode
-		{
-			get;
-		}
+		public readonly XmlNode ReferenceNode;
 
-		[FieldProperty]
-		public extern XmlNode Root
-		{
-			get;
-		}
+		public readonly XmlNode Root;
 
-		[FieldProperty]
-		public extern NodeFilter WhatToShow
-		{
-			get;
-		}
+		public readonly NodeFilter WhatToShow;
 	}
 }

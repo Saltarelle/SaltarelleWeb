@@ -25,19 +25,9 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OptGroupElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern string Label
-		{
-			get;
-			set;
-		}
+		public string Label;
 
 		public extern void RemoveEventListener(OptGroupElementEvents type, Action listener);
 

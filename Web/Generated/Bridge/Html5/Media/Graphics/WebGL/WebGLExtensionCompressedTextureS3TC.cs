@@ -5,28 +5,16 @@
 	{
 		internal extern WebGLExtensionCompressedTextureS3TC();
 
-		[FieldProperty, Name("COMPRESSED_RGB_S3TC_DXT1_EXT")]
-		public extern int COMPRESSED_RGB_S3TC_DXT1_EXT
-		{
-			get;
-		}
+		[Name("COMPRESSED_RGB_S3TC_DXT1_EXT")]
+		public readonly int COMPRESSED_RGB_S3TC_DXT1_EXT;
 
-		[FieldProperty, Name("COMPRESSED_RGBA_S3TC_DXT1_EXT")]
-		public extern int COMPRESSED_RGBA_S3TC_DXT1_EXT
-		{
-			get;
-		}
+		[Name("COMPRESSED_RGBA_S3TC_DXT1_EXT")]
+		public readonly int COMPRESSED_RGBA_S3TC_DXT1_EXT;
 
-		[FieldProperty, Name("COMPRESSED_RGBA_S3TC_DXT3_EXT")]
-		public extern int COMPRESSED_RGBA_S3TC_DXT3_EXT
-		{
-			get;
-		}
+		[Name("COMPRESSED_RGBA_S3TC_DXT3_EXT")]
+		public readonly int COMPRESSED_RGBA_S3TC_DXT3_EXT;
 
-		[FieldProperty, Name("COMPRESSED_RGBA_S3TC_DXT5_EXT")]
-		public extern int COMPRESSED_RGBA_S3TC_DXT5_EXT
-		{
-			get;
-		}
+		[Name("COMPRESSED_RGBA_S3TC_DXT5_EXT")]
+		public readonly int COMPRESSED_RGBA_S3TC_DXT5_EXT;
 	}
 }

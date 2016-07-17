@@ -25,26 +25,11 @@
 
 		public extern void AddEventListener(TableSectionElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern string Ch
-		{
-			get;
-			set;
-		}
+		public string Ch;
 
-		[FieldProperty]
-		public extern string ChOff
-		{
-			get;
-			set;
-		}
+		public string ChOff;
 
 		public extern void DeleteRow(int index);
 
@@ -72,17 +57,8 @@
 
 		public extern void RemoveEventListener(TableSectionElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern ElementCollection Rows
-		{
-			get;
-		}
+		public readonly ElementCollection Rows;
 
-		[FieldProperty]
-		public extern string VAlign
-		{
-			get;
-			set;
-		}
+		public string VAlign;
 	}
 }

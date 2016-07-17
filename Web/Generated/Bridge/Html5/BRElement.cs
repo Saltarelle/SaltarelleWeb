@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<BRElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Clear
-		{
-			get;
-			set;
-		}
+		public string Clear;
 
 		public extern void RemoveEventListener(BRElementEvents type, Action listener);
 

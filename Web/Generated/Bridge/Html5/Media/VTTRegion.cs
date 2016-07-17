@@ -5,53 +5,18 @@
 	{
 		public extern VTTRegion();
 
-		[FieldProperty]
-		public extern int Lines
-		{
-			get;
-			set;
-		}
+		public int Lines;
 
-		[FieldProperty]
-		public extern double RegionAnchorX
-		{
-			get;
-			set;
-		}
+		public double RegionAnchorX;
 
-		[FieldProperty]
-		public extern double RegionAnchorY
-		{
-			get;
-			set;
-		}
+		public double RegionAnchorY;
 
-		[FieldProperty]
-		public extern string Scroll
-		{
-			get;
-			set;
-		}
+		public string Scroll;
 
-		[FieldProperty]
-		public extern double ViewportAnchorX
-		{
-			get;
-			set;
-		}
+		public double ViewportAnchorX;
 
-		[FieldProperty]
-		public extern double ViewportAnchorY
-		{
-			get;
-			set;
-		}
+		public double ViewportAnchorY;
 
-		[FieldProperty]
-		public extern double Width
-		{
-			get;
-			set;
-		}
+		public double Width;
 	}
 }

@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<GainNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern AudioParam Gain
-		{
-			get;
-		}
+		public readonly AudioParam Gain;
 
 		public extern void RemoveEventListener(GainNodeEvents type, Action listener);
 

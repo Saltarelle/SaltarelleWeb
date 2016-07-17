@@ -27,59 +27,21 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<FrameElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern DocumentBase ContentDocument
-		{
-			get;
-		}
+		public readonly DocumentBase ContentDocument;
 
-		[FieldProperty]
-		public extern WindowInstance ContentWindow
-		{
-			get;
-		}
+		public readonly WindowInstance ContentWindow;
 
-		[FieldProperty]
-		public extern string FrameBorder
-		{
-			get;
-			set;
-		}
+		public string FrameBorder;
 
-		[FieldProperty]
-		public extern string LongDesc
-		{
-			get;
-			set;
-		}
+		public string LongDesc;
 
-		[FieldProperty]
-		public extern string MarginHeight
-		{
-			get;
-			set;
-		}
+		public string MarginHeight;
 
-		[FieldProperty]
-		public extern string MarginWidth
-		{
-			get;
-			set;
-		}
+		public string MarginWidth;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
-		[FieldProperty]
-		public extern bool NoResize
-		{
-			get;
-			set;
-		}
+		public bool NoResize;
 
 		public extern void RemoveEventListener(FrameElementEvents type, Action listener);
 
@@ -101,18 +63,8 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FrameElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Scrolling
-		{
-			get;
-			set;
-		}
+		public string Scrolling;
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 	}
 }

@@ -40,12 +40,8 @@ namespace Bridge.Html5.Net
 
 		public const ushort LOADING = 3;
 
-		[FieldProperty, Name("onreadystatechange")]
-		public extern HtmlEventHandler OnReadyStateChange
-		{
-			get;
-			set;
-		}
+		[Name("onreadystatechange")]
+		public HtmlEventHandler OnReadyStateChange;
 
 		public extern void Open(string method, string url);
 
@@ -59,11 +55,7 @@ namespace Bridge.Html5.Net
 
 		public extern void OverrideMimeType(string mime);
 
-		[FieldProperty]
-		public extern ReadyState ReadyState
-		{
-			get;
-		}
+		public readonly ReadyState ReadyState;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlHttpRequest> listener);
 
@@ -85,30 +77,13 @@ namespace Bridge.Html5.Net
 
 		public extern void RemoveEventListener(XmlHttpRequestEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern object Response
-		{
-			get;
-		}
+		public readonly object Response;
 
-		[FieldProperty]
-		public extern string ResponseText
-		{
-			get;
-		}
+		public readonly string ResponseText;
 
-		[FieldProperty]
-		public extern XmlHttpRequestResponseType ResponseType
-		{
-			get;
-			set;
-		}
+		public XmlHttpRequestResponseType ResponseType;
 
-		[FieldProperty]
-		public extern DocumentBase ResponseXML
-		{
-			get;
-		}
+		public readonly DocumentBase ResponseXML;
 
 		public extern void Send();
 
@@ -128,38 +103,16 @@ namespace Bridge.Html5.Net
 
 		public extern void SetRequestHeader(string header, string value);
 
-		[FieldProperty]
-		public extern ushort Status
-		{
-			get;
-		}
+		public readonly ushort Status;
 
-		[FieldProperty]
-		public extern string StatusText
-		{
-			get;
-		}
+		public readonly string StatusText;
 
-		[FieldProperty]
-		public extern int Timeout
-		{
-			get;
-			set;
-		}
+		public int Timeout;
 
 		public const ushort UNSENT = 0;
 
-		[FieldProperty]
-		public extern XmlHttpRequestUpload Upload
-		{
-			get;
-		}
+		public readonly XmlHttpRequestUpload Upload;
 
-		[FieldProperty]
-		public extern bool WithCredentials
-		{
-			get;
-			set;
-		}
+		public bool WithCredentials;
 	}
 }

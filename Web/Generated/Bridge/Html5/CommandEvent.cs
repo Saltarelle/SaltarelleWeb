@@ -5,11 +5,7 @@
 	{
 		internal extern CommandEvent();
 
-		[FieldProperty]
-		public extern string Command
-		{
-			get;
-		}
+		public readonly string Command;
 
 		public extern void InitCommandEvent(string type, bool canBubble, bool cancelable, string command);
 	}

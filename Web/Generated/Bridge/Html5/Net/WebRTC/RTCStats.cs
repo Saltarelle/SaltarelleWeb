@@ -3,22 +3,10 @@
 	[External, Serializable]
 	public partial class RTCStats
 	{
-		public extern string Id
-		{
-			get;
-			set;
-		}
+		public string Id;
 
-		public extern double Timestamp
-		{
-			get;
-			set;
-		}
+		public double Timestamp;
 
-		public extern RTCStatsType Type
-		{
-			get;
-			set;
-		}
+		public RTCStatsType Type;
 	}
 }

@@ -13,32 +13,12 @@
 
 		public extern DOMPoint(double x, double y, double z, double w);
 
-		[FieldProperty]
-		public extern double W
-		{
-			get;
-			set;
-		}
+		public double W;
 
-		[FieldProperty]
-		public extern double X
-		{
-			get;
-			set;
-		}
+		public double X;
 
-		[FieldProperty]
-		public extern double Y
-		{
-			get;
-			set;
-		}
+		public double Y;
 
-		[FieldProperty]
-		public extern double Z
-		{
-			get;
-			set;
-		}
+		public double Z;
 	}
 }

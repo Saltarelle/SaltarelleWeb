@@ -9,22 +9,10 @@
 
 		public extern ProgressEvent(string type, ProgressEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern bool LengthComputable
-		{
-			get;
-		}
+		public readonly bool LengthComputable;
 
-		[FieldProperty]
-		public extern ulong Loaded
-		{
-			get;
-		}
+		public readonly ulong Loaded;
 
-		[FieldProperty]
-		public extern ulong Total
-		{
-			get;
-		}
+		public readonly ulong Total;
 	}
 }

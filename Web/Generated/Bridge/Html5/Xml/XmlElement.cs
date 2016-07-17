@@ -27,53 +27,21 @@ namespace Bridge.Html5.Xml
 
 		public extern void AddEventListener(XmlElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern AttributeCollection Attributes
-		{
-			get;
-		}
+		public readonly AttributeCollection Attributes;
 
-		[FieldProperty]
-		public extern int ChildElementCount
-		{
-			get;
-		}
+		public readonly int ChildElementCount;
 
-		[FieldProperty]
-		public extern XmlElementCollection Children
-		{
-			get;
-		}
+		public readonly XmlElementCollection Children;
 
-		[FieldProperty]
-		public extern TokenList ClassList
-		{
-			get;
-		}
+		public readonly TokenList ClassList;
 
-		[FieldProperty]
-		public extern int ClientHeight
-		{
-			get;
-		}
+		public readonly int ClientHeight;
 
-		[FieldProperty]
-		public extern int ClientLeft
-		{
-			get;
-		}
+		public readonly int ClientLeft;
 
-		[FieldProperty]
-		public extern int ClientTop
-		{
-			get;
-		}
+		public readonly int ClientTop;
 
-		[FieldProperty]
-		public extern int ClientWidth
-		{
-			get;
-		}
+		public readonly int ClientWidth;
 
 		public extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from);
 
@@ -89,11 +57,7 @@ namespace Bridge.Html5.Xml
 
 		public extern ShadowRoot CreateShadowRoot();
 
-		[FieldProperty]
-		public extern XmlElement FirstElementChild
-		{
-			get;
-		}
+		public readonly XmlElement FirstElementChild;
 
 		public extern string GetAttribute(string name);
 
@@ -121,53 +85,22 @@ namespace Bridge.Html5.Xml
 
 		public extern bool HasAttributeNS(string @namespace, string localName);
 
-		[FieldProperty]
-		public extern string Id
-		{
-			get;
-			set;
-		}
+		public string Id;
 
-		[FieldProperty]
-		public extern string InnerHTML
-		{
-			get;
-			set;
-		}
+		public string InnerHTML;
 
 		public extern void InsertAdjacentHTML(string position, string text);
 
-		[FieldProperty]
-		public extern XmlElement LastElementChild
-		{
-			get;
-		}
+		public readonly XmlElement LastElementChild;
 
-		[FieldProperty]
-		public extern XmlElement NextElementSibling
-		{
-			get;
-		}
+		public readonly XmlElement NextElementSibling;
 
-		[FieldProperty, Name("onwheel")]
-		public extern HtmlEventHandler OnWheel
-		{
-			get;
-			set;
-		}
+		[Name("onwheel")]
+		public HtmlEventHandler OnWheel;
 
-		[FieldProperty]
-		public extern string OuterHTML
-		{
-			get;
-			set;
-		}
+		public string OuterHTML;
 
-		[FieldProperty]
-		public extern XmlElement PreviousElementSibling
-		{
-			get;
-		}
+		public readonly XmlElement PreviousElementSibling;
 
 		public extern XmlElement QuerySelector(string selectors);
 
@@ -203,47 +136,21 @@ namespace Bridge.Html5.Xml
 
 		public extern void RemoveEventListener(XmlElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern int ScrollHeight
-		{
-			get;
-		}
+		public readonly int ScrollHeight;
 
 		public extern void ScrollIntoView();
 
 		public extern void ScrollIntoView(bool top);
 
-		[FieldProperty]
-		public extern int ScrollLeft
-		{
-			get;
-			set;
-		}
+		public int ScrollLeft;
 
-		[FieldProperty]
-		public extern int ScrollLeftMax
-		{
-			get;
-		}
+		public readonly int ScrollLeftMax;
 
-		[FieldProperty]
-		public extern int ScrollTop
-		{
-			get;
-			set;
-		}
+		public int ScrollTop;
 
-		[FieldProperty]
-		public extern int ScrollTopMax
-		{
-			get;
-		}
+		public readonly int ScrollTopMax;
 
-		[FieldProperty]
-		public extern int ScrollWidth
-		{
-			get;
-		}
+		public readonly int ScrollWidth;
 
 		public extern void SetAttribute(string name, string value);
 
@@ -257,16 +164,8 @@ namespace Bridge.Html5.Xml
 
 		public extern void SetCapture(bool retargetToElement);
 
-		[FieldProperty]
-		public extern ShadowRoot ShadowRoot
-		{
-			get;
-		}
+		public readonly ShadowRoot ShadowRoot;
 
-		[FieldProperty]
-		public extern string TagName
-		{
-			get;
-		}
+		public readonly string TagName;
 	}
 }

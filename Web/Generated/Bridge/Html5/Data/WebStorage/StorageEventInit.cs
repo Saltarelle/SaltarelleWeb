@@ -3,34 +3,14 @@
 	[External, Serializable]
 	public partial class StorageEventInit : EventInit
 	{
-		public extern string Key
-		{
-			get;
-			set;
-		}
+		public string Key;
 
-		public extern string NewValue
-		{
-			get;
-			set;
-		}
+		public string NewValue;
 
-		public extern string OldValue
-		{
-			get;
-			set;
-		}
+		public string OldValue;
 
-		public extern Storage StorageArea
-		{
-			get;
-			set;
-		}
+		public Storage StorageArea;
 
-		public extern string Url
-		{
-			get;
-			set;
-		}
+		public string Url;
 	}
 }

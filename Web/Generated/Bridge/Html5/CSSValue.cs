@@ -17,17 +17,8 @@
 		[Name("CSS_VALUE_LIST")]
 		public const ushort CSS_VALUE_LIST = 2;
 
-		[FieldProperty]
-		public extern string CssText
-		{
-			get;
-			set;
-		}
+		public string CssText;
 
-		[FieldProperty]
-		public extern ushort CssValueType
-		{
-			get;
-		}
+		public readonly ushort CssValueType;
 	}
 }

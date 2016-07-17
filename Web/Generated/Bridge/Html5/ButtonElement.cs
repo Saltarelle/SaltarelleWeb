@@ -25,69 +25,25 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ButtonElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Autofocus
-		{
-			get;
-			set;
-		}
+		public bool Autofocus;
 
 		public extern bool CheckValidity();
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern FormElement Form
-		{
-			get;
-		}
+		public readonly FormElement Form;
 
-		[FieldProperty]
-		public extern string FormAction
-		{
-			get;
-			set;
-		}
+		public string FormAction;
 
-		[FieldProperty]
-		public extern string FormEnctype
-		{
-			get;
-			set;
-		}
+		public string FormEnctype;
 
-		[FieldProperty]
-		public extern string FormMethod
-		{
-			get;
-			set;
-		}
+		public string FormMethod;
 
-		[FieldProperty]
-		public extern bool FormNoValidate
-		{
-			get;
-			set;
-		}
+		public bool FormNoValidate;
 
-		[FieldProperty]
-		public extern string FormTarget
-		{
-			get;
-			set;
-		}
+		public string FormTarget;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern void RemoveEventListener(ButtonElementEvents type, Action listener);
 
@@ -111,36 +67,14 @@
 
 		public extern void SetCustomValidity(string error);
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 
-		[FieldProperty]
-		public extern string ValidationMessage
-		{
-			get;
-		}
+		public readonly string ValidationMessage;
 
-		[FieldProperty]
-		public extern ValidityState Validity
-		{
-			get;
-		}
+		public readonly ValidityState Validity;
 
-		[FieldProperty]
-		public extern string Value
-		{
-			get;
-			set;
-		}
+		public string Value;
 
-		[FieldProperty]
-		public extern bool WillValidate
-		{
-			get;
-		}
+		public readonly bool WillValidate;
 	}
 }

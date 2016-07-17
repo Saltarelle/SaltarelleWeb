@@ -31,55 +31,27 @@
 
 		public const ushort EMPTY = 0;
 
-		[FieldProperty]
-		public extern DOMError Error
-		{
-			get;
-		}
+		public readonly DOMError Error;
 
 		public const ushort LOADING = 1;
 
-		[FieldProperty, Name("onabort")]
-		public extern HtmlEventHandler OnAbort
-		{
-			get;
-			set;
-		}
+		[Name("onabort")]
+		public HtmlEventHandler OnAbort;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onload")]
-		public extern HtmlEventHandler OnLoad
-		{
-			get;
-			set;
-		}
+		[Name("onload")]
+		public HtmlEventHandler OnLoad;
 
-		[FieldProperty, Name("onloadend")]
-		public extern HtmlEventHandler OnLoadend
-		{
-			get;
-			set;
-		}
+		[Name("onloadend")]
+		public HtmlEventHandler OnLoadend;
 
-		[FieldProperty, Name("onloadstart")]
-		public extern HtmlEventHandler OnLoadstart
-		{
-			get;
-			set;
-		}
+		[Name("onloadstart")]
+		public HtmlEventHandler OnLoadstart;
 
-		[FieldProperty, Name("onprogress")]
-		public extern HtmlEventHandler OnProgress
-		{
-			get;
-			set;
-		}
+		[Name("onprogress")]
+		public HtmlEventHandler OnProgress;
 
 		public extern void ReadAsArrayBuffer(Blob blob);
 
@@ -91,11 +63,7 @@
 
 		public extern void ReadAsText(Blob blob, string label);
 
-		[FieldProperty]
-		public extern ushort ReadyState
-		{
-			get;
-		}
+		public readonly ushort ReadyState;
 
 		public extern void RemoveEventListener(FileReaderEvents type, Action listener);
 
@@ -117,10 +85,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FileReader> listener, bool capture);
 
-		[FieldProperty]
-		public extern object Result
-		{
-			get;
-		}
+		public readonly object Result;
 	}
 }

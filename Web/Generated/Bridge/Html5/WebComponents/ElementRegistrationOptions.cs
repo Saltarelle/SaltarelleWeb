@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class ElementRegistrationOptions
 	{
-		public extern string Extends
-		{
-			get;
-			set;
-		}
+		public string Extends;
 
-		public extern object Prototype
-		{
-			get;
-			set;
-		}
+		public object Prototype;
 	}
 }

@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Href
-		{
-			get;
-			set;
-		}
+		public string Href;
 
 		public extern void RemoveEventListener(BaseElementEvents type, Action listener);
 
@@ -52,11 +47,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BaseElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Target
-		{
-			get;
-			set;
-		}
+		public string Target;
 	}
 }

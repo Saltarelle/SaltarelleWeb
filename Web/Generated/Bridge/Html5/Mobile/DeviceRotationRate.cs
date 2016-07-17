@@ -5,22 +5,10 @@
 	{
 		internal extern DeviceRotationRate();
 
-		[FieldProperty]
-		public extern double? Alpha
-		{
-			get;
-		}
+		public readonly double? Alpha;
 
-		[FieldProperty]
-		public extern double? Beta
-		{
-			get;
-		}
+		public readonly double? Beta;
 
-		[FieldProperty]
-		public extern double? Gamma
-		{
-			get;
-		}
+		public readonly double? Gamma;
 	}
 }

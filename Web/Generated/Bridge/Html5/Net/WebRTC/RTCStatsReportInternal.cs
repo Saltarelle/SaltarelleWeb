@@ -3,70 +3,26 @@
 	[External, Serializable]
 	public partial class RTCStatsReportInternal
 	{
-		public extern RTCCodecStats[] CodecStats
-		{
-			get;
-			set;
-		}
+		public RTCCodecStats[] CodecStats;
 
-		public extern RTCIceCandidatePairStats[] IceCandidatePairStats
-		{
-			get;
-			set;
-		}
+		public RTCIceCandidatePairStats[] IceCandidatePairStats;
 
-		public extern RTCIceCandidateStats[] IceCandidateStats
-		{
-			get;
-			set;
-		}
+		public RTCIceCandidateStats[] IceCandidateStats;
 
-		public extern RTCIceComponentStats[] IceComponentStats
-		{
-			get;
-			set;
-		}
+		public RTCIceComponentStats[] IceComponentStats;
 
-		public extern RTCInboundRTPStreamStats[] InboundRTPStreamStats
-		{
-			get;
-			set;
-		}
+		public RTCInboundRTPStreamStats[] InboundRTPStreamStats;
 
-		public extern RTCMediaStreamStats[] MediaStreamStats
-		{
-			get;
-			set;
-		}
+		public RTCMediaStreamStats[] MediaStreamStats;
 
-		public extern RTCMediaStreamTrackStats[] MediaStreamTrackStats
-		{
-			get;
-			set;
-		}
+		public RTCMediaStreamTrackStats[] MediaStreamTrackStats;
 
-		public extern RTCOutboundRTPStreamStats[] OutboundRTPStreamStats
-		{
-			get;
-			set;
-		}
+		public RTCOutboundRTPStreamStats[] OutboundRTPStreamStats;
 
-		public extern string Pcid
-		{
-			get;
-			set;
-		}
+		public string Pcid;
 
-		public extern RTCRTPStreamStats[] RtpStreamStats
-		{
-			get;
-			set;
-		}
+		public RTCRTPStreamStats[] RtpStreamStats;
 
-		public extern RTCTransportStats[] TransportStats
-		{
-			get;
-			set;
-		}
+		public RTCTransportStats[] TransportStats;
 	}
 }

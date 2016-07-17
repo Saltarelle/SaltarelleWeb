@@ -3,64 +3,24 @@
 	[External, Serializable]
 	public partial class RTCMediaStreamTrackStats : RTCStats
 	{
-		public extern int AudioLevel
-		{
-			get;
-			set;
-		}
+		public int AudioLevel;
 
-		public extern int FrameHeight
-		{
-			get;
-			set;
-		}
+		public int FrameHeight;
 
-		public extern int FramesDecoded
-		{
-			get;
-			set;
-		}
+		public int FramesDecoded;
 
-		public extern double FramesPerSecond
-		{
-			get;
-			set;
-		}
+		public double FramesPerSecond;
 
-		public extern int FramesReceived
-		{
-			get;
-			set;
-		}
+		public int FramesReceived;
 
-		public extern int FramesSent
-		{
-			get;
-			set;
-		}
+		public int FramesSent;
 
-		public extern int FrameWidth
-		{
-			get;
-			set;
-		}
+		public int FrameWidth;
 
-		public extern bool RemoteSource
-		{
-			get;
-			set;
-		}
+		public bool RemoteSource;
 
-		public extern string[] SsrcIds
-		{
-			get;
-			set;
-		}
+		public string[] SsrcIds;
 
-		public extern string TrackIdentifier
-		{
-			get;
-			set;
-		}
+		public string TrackIdentifier;
 	}
 }

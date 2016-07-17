@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern void RemoveEventListener(ParamElementEvents type, Action listener);
 
@@ -52,25 +47,10 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ParamElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 
-		[FieldProperty]
-		public extern string Value
-		{
-			get;
-			set;
-		}
+		public string Value;
 
-		[FieldProperty]
-		public extern string ValueType
-		{
-			get;
-			set;
-		}
+		public string ValueType;
 	}
 }

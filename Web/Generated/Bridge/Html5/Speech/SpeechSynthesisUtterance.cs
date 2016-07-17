@@ -27,75 +27,32 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Lang
-		{
-			get;
-			set;
-		}
+		public string Lang;
 
-		[FieldProperty, Name("onboundary")]
-		public extern HtmlEventHandler OnBoundary
-		{
-			get;
-			set;
-		}
+		[Name("onboundary")]
+		public HtmlEventHandler OnBoundary;
 
-		[FieldProperty, Name("onend")]
-		public extern HtmlEventHandler OnEnd
-		{
-			get;
-			set;
-		}
+		[Name("onend")]
+		public HtmlEventHandler OnEnd;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onmark")]
-		public extern HtmlEventHandler OnMark
-		{
-			get;
-			set;
-		}
+		[Name("onmark")]
+		public HtmlEventHandler OnMark;
 
-		[FieldProperty, Name("onpause")]
-		public extern HtmlEventHandler OnPause
-		{
-			get;
-			set;
-		}
+		[Name("onpause")]
+		public HtmlEventHandler OnPause;
 
-		[FieldProperty, Name("onresume")]
-		public extern HtmlEventHandler OnResume
-		{
-			get;
-			set;
-		}
+		[Name("onresume")]
+		public HtmlEventHandler OnResume;
 
-		[FieldProperty, Name("onstart")]
-		public extern HtmlEventHandler OnStart
-		{
-			get;
-			set;
-		}
+		[Name("onstart")]
+		public HtmlEventHandler OnStart;
 
-		[FieldProperty]
-		public extern double Pitch
-		{
-			get;
-			set;
-		}
+		public double Pitch;
 
-		[FieldProperty]
-		public extern double Rate
-		{
-			get;
-			set;
-		}
+		public double Rate;
 
 		public extern void RemoveEventListener(SpeechSynthesisUtteranceEvents type, Action listener);
 
@@ -117,25 +74,10 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechSynthesisUtterance> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Text
-		{
-			get;
-			set;
-		}
+		public string Text;
 
-		[FieldProperty]
-		public extern SpeechSynthesisVoice Voice
-		{
-			get;
-			set;
-		}
+		public SpeechSynthesisVoice Voice;
 
-		[FieldProperty]
-		public extern double Volume
-		{
-			get;
-			set;
-		}
+		public double Volume;
 	}
 }

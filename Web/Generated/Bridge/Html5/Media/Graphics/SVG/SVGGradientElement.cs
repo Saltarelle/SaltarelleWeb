@@ -25,23 +25,11 @@
 
 		public extern void AddEventListener(SVGGradientElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedTransformList GradientTransform
-		{
-			get;
-		}
+		public readonly SVGAnimatedTransformList GradientTransform;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGUnitType> GradientUnits
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGUnitType> GradientUnits;
 
-		[FieldProperty]
-		public extern SVGAnimatedString Href
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Href;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGradientElement> listener);
 
@@ -63,11 +51,7 @@
 
 		public extern void RemoveEventListener(SVGGradientElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGSpreadMethod> SpreadMethod
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGSpreadMethod> SpreadMethod;
 
 		[Name("SVG_SPREADMETHOD_PAD")]
 		public const ushort SVG_SPREADMETHOD_PAD = 1;

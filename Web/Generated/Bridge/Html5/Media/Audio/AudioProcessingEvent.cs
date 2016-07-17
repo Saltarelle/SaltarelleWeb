@@ -5,22 +5,10 @@
 	{
 		internal extern AudioProcessingEvent();
 
-		[FieldProperty]
-		public extern AudioBuffer InputBuffer
-		{
-			get;
-		}
+		public readonly AudioBuffer InputBuffer;
 
-		[FieldProperty]
-		public extern AudioBuffer OutputBuffer
-		{
-			get;
-		}
+		public readonly AudioBuffer OutputBuffer;
 
-		[FieldProperty]
-		public extern double PlaybackTime
-		{
-			get;
-		}
+		public readonly double PlaybackTime;
 	}
 }

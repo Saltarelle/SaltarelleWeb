@@ -5,53 +5,18 @@
 	{
 		internal extern SVGPathSegArcRel();
 
-		[FieldProperty]
-		public extern double Angle
-		{
-			get;
-			set;
-		}
+		public double Angle;
 
-		[FieldProperty]
-		public extern bool LargeArcFlag
-		{
-			get;
-			set;
-		}
+		public bool LargeArcFlag;
 
-		[FieldProperty]
-		public extern double R1
-		{
-			get;
-			set;
-		}
+		public double R1;
 
-		[FieldProperty]
-		public extern double R2
-		{
-			get;
-			set;
-		}
+		public double R2;
 
-		[FieldProperty]
-		public extern bool SweepFlag
-		{
-			get;
-			set;
-		}
+		public bool SweepFlag;
 
-		[FieldProperty]
-		public extern double X
-		{
-			get;
-			set;
-		}
+		public double X;
 
-		[FieldProperty]
-		public extern double Y
-		{
-			get;
-			set;
-		}
+		public double Y;
 	}
 }

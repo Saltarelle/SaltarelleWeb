@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ShadowElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern ShadowRoot OlderShadowRoot
-		{
-			get;
-		}
+		public readonly ShadowRoot OlderShadowRoot;
 
 		public extern void RemoveEventListener(ShadowElementEvents type, Action listener);
 

@@ -5,34 +5,14 @@
 	{
 		internal extern SpeechSynthesisVoice();
 
-		[FieldProperty]
-		public extern bool Default
-		{
-			get;
-		}
+		public readonly bool Default;
 
-		[FieldProperty]
-		public extern string Lang
-		{
-			get;
-		}
+		public readonly string Lang;
 
-		[FieldProperty]
-		public extern bool LocalService
-		{
-			get;
-		}
+		public readonly bool LocalService;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 
-		[FieldProperty]
-		public extern string VoiceURI
-		{
-			get;
-		}
+		public readonly string VoiceURI;
 	}
 }

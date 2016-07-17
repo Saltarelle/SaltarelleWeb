@@ -18,11 +18,7 @@
 
 		public extern string Key(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
 		public extern void RemoveItem(string key);
 

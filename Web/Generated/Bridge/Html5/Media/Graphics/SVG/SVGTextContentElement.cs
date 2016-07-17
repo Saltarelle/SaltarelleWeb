@@ -41,11 +41,7 @@
 
 		public extern double GetSubStringLength(int charnum, int nchars);
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGLengthAdjust> LengthAdjust
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGLengthAdjust> LengthAdjust;
 
 		[Name("LENGTHADJUST_SPACING")]
 		public const ushort LENGTHADJUST_SPACING = 1;
@@ -78,10 +74,6 @@
 
 		public extern void SelectSubString(int charnum, int nchars);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength TextLength
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength TextLength;
 	}
 }

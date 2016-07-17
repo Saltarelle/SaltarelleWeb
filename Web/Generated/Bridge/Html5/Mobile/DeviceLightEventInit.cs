@@ -3,10 +3,6 @@
 	[External, Serializable]
 	public partial class DeviceLightEventInit : EventInit
 	{
-		public extern double Value
-		{
-			get;
-			set;
-		}
+		public double Value;
 	}
 }

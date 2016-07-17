@@ -25,53 +25,21 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture);
 
-		[FieldProperty]
-		public extern int AvailHeight
-		{
-			get;
-		}
+		public readonly int AvailHeight;
 
-		[FieldProperty]
-		public extern int AvailLeft
-		{
-			get;
-		}
+		public readonly int AvailLeft;
 
-		[FieldProperty]
-		public extern int AvailTop
-		{
-			get;
-		}
+		public readonly int AvailTop;
 
-		[FieldProperty]
-		public extern int AvailWidth
-		{
-			get;
-		}
+		public readonly int AvailWidth;
 
-		[FieldProperty]
-		public extern int ColorDepth
-		{
-			get;
-		}
+		public readonly int ColorDepth;
 
-		[FieldProperty]
-		public extern int Height
-		{
-			get;
-		}
+		public readonly int Height;
 
-		[FieldProperty]
-		public extern int Left
-		{
-			get;
-		}
+		public readonly int Left;
 
-		[FieldProperty]
-		public extern int PixelDepth
-		{
-			get;
-		}
+		public readonly int PixelDepth;
 
 		public extern void RemoveEventListener(ScreenEvents type, Action listener);
 
@@ -93,16 +61,8 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Screen> listener, bool capture);
 
-		[FieldProperty]
-		public extern int Top
-		{
-			get;
-		}
+		public readonly int Top;
 
-		[FieldProperty]
-		public extern int Width
-		{
-			get;
-		}
+		public readonly int Width;
 	}
 }

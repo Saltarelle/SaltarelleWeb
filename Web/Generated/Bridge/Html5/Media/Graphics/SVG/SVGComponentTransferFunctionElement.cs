@@ -25,29 +25,13 @@
 
 		public extern void AddEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Amplitude
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Amplitude;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Exponent
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Exponent;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Intercept
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Intercept;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Offset
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Offset;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGComponentTransferFunctionElement> listener);
 
@@ -69,11 +53,7 @@
 
 		public extern void RemoveEventListener(SVGComponentTransferFunctionElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Slope
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Slope;
 
 		[Name("SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE")]
 		public const ushort SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE = 3;
@@ -93,16 +73,8 @@
 		[Name("SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN")]
 		public const ushort SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN = 0;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumberList TableValues
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumberList TableValues;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGComponentTransferType> Type
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGComponentTransferType> Type;
 	}
 }

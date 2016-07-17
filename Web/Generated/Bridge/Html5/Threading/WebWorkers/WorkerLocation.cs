@@ -5,58 +5,22 @@
 	{
 		internal extern WorkerLocation();
 
-		[FieldProperty]
-		public extern string Hash
-		{
-			get;
-		}
+		public readonly string Hash;
 
-		[FieldProperty]
-		public extern string Host
-		{
-			get;
-		}
+		public readonly string Host;
 
-		[FieldProperty]
-		public extern string Hostname
-		{
-			get;
-		}
+		public readonly string Hostname;
 
-		[FieldProperty]
-		public extern string Href
-		{
-			get;
-		}
+		public readonly string Href;
 
-		[FieldProperty]
-		public extern string Origin
-		{
-			get;
-		}
+		public readonly string Origin;
 
-		[FieldProperty]
-		public extern string Pathname
-		{
-			get;
-		}
+		public readonly string Pathname;
 
-		[FieldProperty]
-		public extern string Port
-		{
-			get;
-		}
+		public readonly string Port;
 
-		[FieldProperty]
-		public extern string Protocol
-		{
-			get;
-		}
+		public readonly string Protocol;
 
-		[FieldProperty]
-		public extern string Search
-		{
-			get;
-		}
+		public readonly string Search;
 	}
 }

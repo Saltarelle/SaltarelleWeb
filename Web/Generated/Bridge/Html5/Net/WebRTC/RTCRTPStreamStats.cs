@@ -3,40 +3,16 @@
 	[External, Serializable]
 	public partial class RTCRTPStreamStats : RTCStats
 	{
-		public extern string CodecId
-		{
-			get;
-			set;
-		}
+		public string CodecId;
 
-		public extern bool IsRemote
-		{
-			get;
-			set;
-		}
+		public bool IsRemote;
 
-		public extern string MediaTrackId
-		{
-			get;
-			set;
-		}
+		public string MediaTrackId;
 
-		public extern string RemoteId
-		{
-			get;
-			set;
-		}
+		public string RemoteId;
 
-		public extern string Ssrc
-		{
-			get;
-			set;
-		}
+		public string Ssrc;
 
-		public extern string TransportId
-		{
-			get;
-			set;
-		}
+		public string TransportId;
 	}
 }

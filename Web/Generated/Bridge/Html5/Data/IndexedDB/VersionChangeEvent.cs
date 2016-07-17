@@ -9,16 +9,8 @@
 
 		public extern VersionChangeEvent(string type, VersionChangeEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern ulong? NewVersion
-		{
-			get;
-		}
+		public readonly ulong? NewVersion;
 
-		[FieldProperty]
-		public extern ulong OldVersion
-		{
-			get;
-		}
+		public readonly ulong OldVersion;
 	}
 }

@@ -5,16 +5,8 @@
 	{
 		internal extern SVGAnimatedRect();
 
-		[FieldProperty]
-		public extern SVGRect AnimVal
-		{
-			get;
-		}
+		public readonly SVGRect AnimVal;
 
-		[FieldProperty]
-		public extern SVGRect BaseVal
-		{
-			get;
-		}
+		public readonly SVGRect BaseVal;
 	}
 }

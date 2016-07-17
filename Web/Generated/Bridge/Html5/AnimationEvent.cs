@@ -9,22 +9,10 @@
 
 		public extern AnimationEvent(string type, AnimationEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern string AnimationName
-		{
-			get;
-		}
+		public readonly string AnimationName;
 
-		[FieldProperty]
-		public extern double ElapsedTime
-		{
-			get;
-		}
+		public readonly double ElapsedTime;
 
-		[FieldProperty]
-		public extern string PseudoElement
-		{
-			get;
-		}
+		public readonly string PseudoElement;
 	}
 }

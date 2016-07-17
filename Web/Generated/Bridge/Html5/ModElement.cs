@@ -25,19 +25,9 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ModElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Cite
-		{
-			get;
-			set;
-		}
+		public string Cite;
 
-		[FieldProperty]
-		public extern string DateTime
-		{
-			get;
-			set;
-		}
+		public string DateTime;
 
 		public extern void RemoveEventListener(ModElementEvents type, Action listener);
 

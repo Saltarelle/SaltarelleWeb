@@ -5,11 +5,6 @@
 	{
 		internal extern SVGNumber();
 
-		[FieldProperty]
-		public extern double Value
-		{
-			get;
-			set;
-		}
+		public double Value;
 	}
 }

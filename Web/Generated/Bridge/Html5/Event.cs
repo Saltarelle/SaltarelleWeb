@@ -15,20 +15,12 @@
 		[Name("AT_TARGET")]
 		public const ushort AT_TARGET = 2;
 
-		[FieldProperty]
-		public extern bool Bubbles
-		{
-			get;
-		}
+		public readonly bool Bubbles;
 
 		[Name("BUBBLING_PHASE")]
 		public const ushort BUBBLING_PHASE = 3;
 
-		[FieldProperty]
-		public extern bool Cancelable
-		{
-			get;
-		}
+		public readonly bool Cancelable;
 
 		[Name("CAPTURING_PHASE")]
 		public const ushort CAPTURING_PHASE = 1;
@@ -36,50 +28,26 @@
 		[Name("CONTROL_MASK")]
 		public const int CONTROL_MASK = 2;
 
-		[FieldProperty]
-		public extern EventTarget CurrentTarget
-		{
-			get;
-		}
+		public readonly EventTarget CurrentTarget;
 
-		[FieldProperty]
-		public extern bool DefaultPrevented
-		{
-			get;
-		}
+		public readonly bool DefaultPrevented;
 
-		[FieldProperty]
-		public extern EventPhase EventPhase
-		{
-			get;
-		}
+		public readonly EventPhase EventPhase;
 
-		[FieldProperty]
-		public extern EventTarget ExplicitOriginalTarget
-		{
-			get;
-		}
+		public readonly EventTarget ExplicitOriginalTarget;
 
 		public extern bool GetPreventDefault();
 
 		public extern void InitEvent(string type, bool bubbles, bool cancelable);
 
-		[FieldProperty]
-		public extern bool IsTrusted
-		{
-			get;
-		}
+		public readonly bool IsTrusted;
 
 		[Name("META_MASK")]
 		public const int META_MASK = 8;
 
 		public const ushort NONE = 0;
 
-		[FieldProperty]
-		public extern EventTarget OriginalTarget
-		{
-			get;
-		}
+		public readonly EventTarget OriginalTarget;
 
 		public extern void PreventDefault();
 
@@ -90,22 +58,10 @@
 
 		public extern void StopPropagation();
 
-		[FieldProperty]
-		public extern EventTarget Target
-		{
-			get;
-		}
+		public readonly EventTarget Target;
 
-		[FieldProperty]
-		public extern long TimeStamp
-		{
-			get;
-		}
+		public readonly long TimeStamp;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-		}
+		public readonly string Type;
 	}
 }

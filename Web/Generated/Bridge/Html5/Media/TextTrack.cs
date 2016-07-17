@@ -5,11 +5,7 @@
 	{
 		internal extern TextTrack();
 
-		[FieldProperty]
-		public extern TextTrackCueList ActiveCues
-		{
-			get;
-		}
+		public readonly TextTrackCueList ActiveCues;
 
 		public extern void AddCue(VTTCue cue);
 
@@ -33,55 +29,22 @@
 
 		public extern void AddEventListener(TextTrackEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern TextTrackCueList Cues
-		{
-			get;
-		}
+		public readonly TextTrackCueList Cues;
 
-		[FieldProperty]
-		public extern string Id
-		{
-			get;
-		}
+		public readonly string Id;
 
-		[FieldProperty]
-		public extern string InBandMetadataTrackDispatchType
-		{
-			get;
-		}
+		public readonly string InBandMetadataTrackDispatchType;
 
-		[FieldProperty]
-		public extern TextTrackKind Kind
-		{
-			get;
-		}
+		public readonly TextTrackKind Kind;
 
-		[FieldProperty]
-		public extern string Label
-		{
-			get;
-		}
+		public readonly string Label;
 
-		[FieldProperty]
-		public extern string Language
-		{
-			get;
-		}
+		public readonly string Language;
 
-		[FieldProperty]
-		public extern TextTrackMode Mode
-		{
-			get;
-			set;
-		}
+		public TextTrackMode Mode;
 
-		[FieldProperty, Name("oncuechange")]
-		public extern HtmlEventHandler OnCuechange
-		{
-			get;
-			set;
-		}
+		[Name("oncuechange")]
+		public HtmlEventHandler OnCuechange;
 
 		public extern void RemoveCue(VTTCue cue);
 

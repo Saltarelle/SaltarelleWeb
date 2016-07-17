@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class StyleRuleChangeEventInit : EventInit
 	{
-		public extern CSSRule Rule
-		{
-			get;
-			set;
-		}
+		public CSSRule Rule;
 
-		public extern CSSStyleSheet Stylesheet
-		{
-			get;
-			set;
-		}
+		public CSSStyleSheet Stylesheet;
 	}
 }

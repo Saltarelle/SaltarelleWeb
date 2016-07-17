@@ -5,17 +5,8 @@
 	{
 		internal extern SVGAnimatedInteger();
 
-		[FieldProperty]
-		public extern int AnimVal
-		{
-			get;
-		}
+		public readonly int AnimVal;
 
-		[FieldProperty]
-		public extern int BaseVal
-		{
-			get;
-			set;
-		}
+		public int BaseVal;
 	}
 }

@@ -9,10 +9,6 @@
 
 		public extern MediaStreamEvent(string type, MediaStreamEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern MediaStream Stream
-		{
-			get;
-		}
+		public readonly MediaStream Stream;
 	}
 }

@@ -9,22 +9,10 @@
 
 		public extern TransitionEvent(string type, TransitionEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern double ElapsedTime
-		{
-			get;
-		}
+		public readonly double ElapsedTime;
 
-		[FieldProperty]
-		public extern string PropertyName
-		{
-			get;
-		}
+		public readonly string PropertyName;
 
-		[FieldProperty]
-		public extern string PseudoElement
-		{
-			get;
-		}
+		public readonly string PseudoElement;
 	}
 }

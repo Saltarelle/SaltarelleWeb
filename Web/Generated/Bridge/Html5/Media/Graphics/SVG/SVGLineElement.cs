@@ -45,28 +45,12 @@
 
 		public extern void RemoveEventListener(SVGLineElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X1
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X1;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X2
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X2;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y1
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y1;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y2
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y2;
 	}
 }

@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SourceElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Media
-		{
-			get;
-			set;
-		}
+		public string Media;
 
 		public extern void RemoveEventListener(SourceElementEvents type, Action listener);
 
@@ -52,18 +47,8 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

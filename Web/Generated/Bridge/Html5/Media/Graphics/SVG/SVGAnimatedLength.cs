@@ -5,16 +5,8 @@
 	{
 		internal extern SVGAnimatedLength();
 
-		[FieldProperty]
-		public extern SVGLength AnimVal
-		{
-			get;
-		}
+		public readonly SVGLength AnimVal;
 
-		[FieldProperty]
-		public extern SVGLength BaseVal
-		{
-			get;
-		}
+		public readonly SVGLength BaseVal;
 	}
 }

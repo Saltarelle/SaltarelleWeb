@@ -3,22 +3,10 @@
 	[External, Serializable]
 	public partial class AnimationEventInit : EventInit
 	{
-		public extern string AnimationName
-		{
-			get;
-			set;
-		}
+		public string AnimationName;
 
-		public extern double ElapsedTime
-		{
-			get;
-			set;
-		}
+		public double ElapsedTime;
 
-		public extern string PseudoElement
-		{
-			get;
-			set;
-		}
+		public string PseudoElement;
 	}
 }

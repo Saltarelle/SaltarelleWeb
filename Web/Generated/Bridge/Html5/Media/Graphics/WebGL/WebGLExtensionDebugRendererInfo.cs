@@ -5,16 +5,10 @@
 	{
 		internal extern WebGLExtensionDebugRendererInfo();
 
-		[FieldProperty, Name("UNMASKED_RENDERER_WEBGL")]
-		public extern int UNMASKED_RENDERER_WEBGL
-		{
-			get;
-		}
+		[Name("UNMASKED_RENDERER_WEBGL")]
+		public readonly int UNMASKED_RENDERER_WEBGL;
 
-		[FieldProperty, Name("UNMASKED_VENDOR_WEBGL")]
-		public extern int UNMASKED_VENDOR_WEBGL
-		{
-			get;
-		}
+		[Name("UNMASKED_VENDOR_WEBGL")]
+		public readonly int UNMASKED_VENDOR_WEBGL;
 	}
 }

@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DataListElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern ElementCollection Options
-		{
-			get;
-		}
+		public readonly ElementCollection Options;
 
 		public extern void RemoveEventListener(DataListElementEvents type, Action listener);
 

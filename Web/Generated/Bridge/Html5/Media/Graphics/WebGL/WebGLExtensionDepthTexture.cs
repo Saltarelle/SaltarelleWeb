@@ -5,10 +5,7 @@
 	{
 		internal extern WebGLExtensionDepthTexture();
 
-		[FieldProperty, Name("UNSIGNED_INT_24_8_WEBGL")]
-		public extern int UNSIGNED_INT_24_8_WEBGL
-		{
-			get;
-		}
+		[Name("UNSIGNED_INT_24_8_WEBGL")]
+		public readonly int UNSIGNED_INT_24_8_WEBGL;
 	}
 }

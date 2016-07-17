@@ -3,22 +3,10 @@
 	[External, Serializable]
 	public partial class DeviceProximityEventInit : EventInit
 	{
-		public extern double Max
-		{
-			get;
-			set;
-		}
+		public double Max;
 
-		public extern double Min
-		{
-			get;
-			set;
-		}
+		public double Min;
 
-		public extern double Value
-		{
-			get;
-			set;
-		}
+		public double Value;
 	}
 }

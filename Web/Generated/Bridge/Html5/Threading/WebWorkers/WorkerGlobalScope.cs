@@ -38,45 +38,21 @@
 		[ExpandParams]
 		public extern void ImportScripts(params string[] urls);
 
-		[FieldProperty]
-		public extern WorkerLocation Location
-		{
-			get;
-		}
+		public readonly WorkerLocation Location;
 
-		[FieldProperty]
-		public extern WorkerNavigator Navigator
-		{
-			get;
-		}
+		public readonly WorkerNavigator Navigator;
 
-		[FieldProperty, Name("onclose")]
-		public extern HtmlEventHandler OnClose
-		{
-			get;
-			set;
-		}
+		[Name("onclose")]
+		public HtmlEventHandler OnClose;
 
-		[FieldProperty, Name("onerror")]
-		public extern ErrorEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public ErrorEventHandler OnError;
 
-		[FieldProperty, Name("onoffline")]
-		public extern HtmlEventHandler OnOffline
-		{
-			get;
-			set;
-		}
+		[Name("onoffline")]
+		public HtmlEventHandler OnOffline;
 
-		[FieldProperty, Name("ononline")]
-		public extern HtmlEventHandler OnOnline
-		{
-			get;
-			set;
-		}
+		[Name("ononline")]
+		public HtmlEventHandler OnOnline;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
@@ -98,11 +74,7 @@
 
 		public extern void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern WorkerGlobalScope Self
-		{
-			get;
-		}
+		public readonly WorkerGlobalScope Self;
 
 		public extern string ToNativeLineEndings(string @string);
 	}

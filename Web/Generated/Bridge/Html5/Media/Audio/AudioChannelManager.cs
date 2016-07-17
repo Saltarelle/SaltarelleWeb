@@ -25,18 +25,10 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Headphones
-		{
-			get;
-		}
+		public readonly bool Headphones;
 
-		[FieldProperty, Name("onheadphoneschange")]
-		public extern HtmlEventHandler OnHeadphoneschange
-		{
-			get;
-			set;
-		}
+		[Name("onheadphoneschange")]
+		public HtmlEventHandler OnHeadphoneschange;
 
 		public extern void RemoveEventListener(AudioChannelManagerEvents type, Action listener);
 
@@ -58,11 +50,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioChannelManager> listener, bool capture);
 
-		[FieldProperty]
-		public extern string VolumeControlChannel
-		{
-			get;
-			set;
-		}
+		public string VolumeControlChannel;
 	}
 }

@@ -5,10 +5,6 @@
 	{
 		internal extern CursorWithValue();
 
-		[FieldProperty]
-		public extern object Value
-		{
-			get;
-		}
+		public readonly object Value;
 	}
 }

@@ -30,84 +30,31 @@ namespace Bridge.Html5.Media
 
 		public extern void AddEventListener(VTTCueEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern AlignSetting Align
-		{
-			get;
-			set;
-		}
+		public AlignSetting Align;
 
-		[FieldProperty]
-		public extern double EndTime
-		{
-			get;
-			set;
-		}
+		public double EndTime;
 
 		public extern XmlDocumentFragment GetCueAsHTML();
 
-		[FieldProperty]
-		public extern string Id
-		{
-			get;
-			set;
-		}
+		public string Id;
 
-		[FieldProperty]
-		public extern TypeOption<int, AutoKeyword> Line
-		{
-			get;
-			set;
-		}
+		public TypeOption<int, AutoKeyword> Line;
 
-		[FieldProperty]
-		public extern AlignSetting LineAlign
-		{
-			get;
-			set;
-		}
+		public AlignSetting LineAlign;
 
-		[FieldProperty, Name("onenter")]
-		public extern HtmlEventHandler OnEnter
-		{
-			get;
-			set;
-		}
+		[Name("onenter")]
+		public HtmlEventHandler OnEnter;
 
-		[FieldProperty, Name("onexit")]
-		public extern HtmlEventHandler OnExit
-		{
-			get;
-			set;
-		}
+		[Name("onexit")]
+		public HtmlEventHandler OnExit;
 
-		[FieldProperty]
-		public extern bool PauseOnExit
-		{
-			get;
-			set;
-		}
+		public bool PauseOnExit;
 
-		[FieldProperty]
-		public extern int Position
-		{
-			get;
-			set;
-		}
+		public int Position;
 
-		[FieldProperty]
-		public extern AlignSetting PositionAlign
-		{
-			get;
-			set;
-		}
+		public AlignSetting PositionAlign;
 
-		[FieldProperty]
-		public extern VTTRegion Region
-		{
-			get;
-			set;
-		}
+		public VTTRegion Region;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VTTCue> listener);
 
@@ -129,45 +76,16 @@ namespace Bridge.Html5.Media
 
 		public extern void RemoveEventListener(VTTCueEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern int Size
-		{
-			get;
-			set;
-		}
+		public int Size;
 
-		[FieldProperty]
-		public extern bool SnapToLines
-		{
-			get;
-			set;
-		}
+		public bool SnapToLines;
 
-		[FieldProperty]
-		public extern double StartTime
-		{
-			get;
-			set;
-		}
+		public double StartTime;
 
-		[FieldProperty]
-		public extern string Text
-		{
-			get;
-			set;
-		}
+		public string Text;
 
-		[FieldProperty]
-		public extern TextTrack Track
-		{
-			get;
-		}
+		public readonly TextTrack Track;
 
-		[FieldProperty]
-		public extern DirectionSetting Vertical
-		{
-			get;
-			set;
-		}
+		public DirectionSetting Vertical;
 	}
 }

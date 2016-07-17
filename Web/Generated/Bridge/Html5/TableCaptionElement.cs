@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(TableCaptionElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCaptionElement> listener);
 

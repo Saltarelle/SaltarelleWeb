@@ -5,12 +5,7 @@
 	{
 		internal extern TableCellElement();
 
-		[FieldProperty]
-		public extern string Abbr
-		{
-			get;
-			set;
-		}
+		public string Abbr;
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener);
 
@@ -32,74 +27,25 @@
 
 		public extern void AddEventListener(TableCellElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern string Axis
-		{
-			get;
-			set;
-		}
+		public string Axis;
 
-		[FieldProperty]
-		public extern string BgColor
-		{
-			get;
-			set;
-		}
+		public string BgColor;
 
-		[FieldProperty]
-		public extern int CellIndex
-		{
-			get;
-		}
+		public readonly int CellIndex;
 
-		[FieldProperty]
-		public extern string Ch
-		{
-			get;
-			set;
-		}
+		public string Ch;
 
-		[FieldProperty]
-		public extern string ChOff
-		{
-			get;
-			set;
-		}
+		public string ChOff;
 
-		[FieldProperty]
-		public extern int ColSpan
-		{
-			get;
-			set;
-		}
+		public int ColSpan;
 
-		[FieldProperty]
-		public extern string Headers
-		{
-			get;
-			set;
-		}
+		public string Headers;
 
-		[FieldProperty]
-		public extern string Height
-		{
-			get;
-			set;
-		}
+		public string Height;
 
-		[FieldProperty]
-		public extern bool NoWrap
-		{
-			get;
-			set;
-		}
+		public bool NoWrap;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TableCellElement> listener);
 
@@ -121,32 +67,12 @@
 
 		public extern void RemoveEventListener(TableCellElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern int RowSpan
-		{
-			get;
-			set;
-		}
+		public int RowSpan;
 
-		[FieldProperty]
-		public extern string Scope
-		{
-			get;
-			set;
-		}
+		public string Scope;
 
-		[FieldProperty]
-		public extern string VAlign
-		{
-			get;
-			set;
-		}
+		public string VAlign;
 
-		[FieldProperty]
-		public extern string Width
-		{
-			get;
-			set;
-		}
+		public string Width;
 	}
 }

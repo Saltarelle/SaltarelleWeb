@@ -5,22 +5,10 @@
 	{
 		internal extern DeviceAcceleration();
 
-		[FieldProperty]
-		public extern double? X
-		{
-			get;
-		}
+		public readonly double? X;
 
-		[FieldProperty]
-		public extern double? Y
-		{
-			get;
-		}
+		public readonly double? Y;
 
-		[FieldProperty]
-		public extern double? Z
-		{
-			get;
-		}
+		public readonly double? Z;
 	}
 }

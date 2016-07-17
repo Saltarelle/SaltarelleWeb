@@ -5,28 +5,12 @@ namespace Bridge.Html5.Media
 	[External, Serializable]
 	public partial class MediaStreamConstraints
 	{
-		public extern TypeOption<bool, object> Audio
-		{
-			get;
-			set;
-		}
+		public TypeOption<bool, object> Audio;
 
-		public extern bool Fake
-		{
-			get;
-			set;
-		}
+		public bool Fake;
 
-		public extern bool Picture
-		{
-			get;
-			set;
-		}
+		public bool Picture;
 
-		public extern TypeOption<bool, object> Video
-		{
-			get;
-			set;
-		}
+		public TypeOption<bool, object> Video;
 	}
 }

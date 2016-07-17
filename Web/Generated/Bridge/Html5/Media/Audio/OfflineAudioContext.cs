@@ -27,12 +27,8 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OfflineAudioContext> listener, bool capture);
 
-		[FieldProperty, Name("oncomplete")]
-		public extern HtmlEventHandler OnComplete
-		{
-			get;
-			set;
-		}
+		[Name("oncomplete")]
+		public HtmlEventHandler OnComplete;
 
 		public extern void RemoveEventListener(OfflineAudioContextEvents type, Action listener);
 

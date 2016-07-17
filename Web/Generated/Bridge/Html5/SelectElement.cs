@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
@@ -39,61 +38,25 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Autofocus
-		{
-			get;
-			set;
-		}
+		public bool Autofocus;
 
 		public extern bool CheckValidity();
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern FormElement Form
-		{
-			get;
-		}
-
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<Element> GetEnumerator();
+		public readonly FormElement Form;
 
 		public extern Element Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-			set;
-		}
+		public int Length;
 
-		[FieldProperty]
-		public extern bool Multiple
-		{
-			get;
-			set;
-		}
+		public bool Multiple;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern OptionElement NamedItem(string name);
 
-		[FieldProperty]
-		public extern HtmlOptionsCollection Options
-		{
-			get;
-		}
+		public readonly HtmlOptionsCollection Options;
 
 		public extern void Remove();
 
@@ -119,64 +82,24 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SelectElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Required
-		{
-			get;
-			set;
-		}
+		public bool Required;
 
-		[FieldProperty]
-		public extern int SelectedIndex
-		{
-			get;
-			set;
-		}
+		public int SelectedIndex;
 
-		[FieldProperty]
-		public extern ElementCollection SelectedOptions
-		{
-			get;
-		}
+		public readonly ElementCollection SelectedOptions;
 
 		public extern void SetCustomValidity(string error);
 
-		[FieldProperty]
-		public extern int Size
-		{
-			get;
-			set;
-		}
+		public int Size;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-		}
+		public readonly string Type;
 
-		[FieldProperty]
-		public extern string ValidationMessage
-		{
-			get;
-		}
+		public readonly string ValidationMessage;
 
-		[FieldProperty]
-		public extern ValidityState Validity
-		{
-			get;
-		}
+		public readonly ValidityState Validity;
 
-		[FieldProperty]
-		public extern string Value
-		{
-			get;
-			set;
-		}
+		public string Value;
 
-		[FieldProperty]
-		public extern bool WillValidate
-		{
-			get;
-		}
+		public readonly bool WillValidate;
 	}
 }

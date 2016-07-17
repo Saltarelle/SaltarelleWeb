@@ -45,10 +45,6 @@
 
 		public extern void RemoveEventListener(XmlStylesheetProcessingInstructionEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern StyleSheet Sheet
-		{
-			get;
-		}
+		public readonly StyleSheet Sheet;
 	}
 }

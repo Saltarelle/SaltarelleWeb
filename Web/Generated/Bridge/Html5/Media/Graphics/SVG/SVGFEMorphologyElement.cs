@@ -25,35 +25,15 @@
 
 		public extern void AddEventListener(SVGFEMorphologyElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
-		[FieldProperty]
-		public extern SVGAnimatedString In1
-		{
-			get;
-		}
+		public readonly SVGAnimatedString In1;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGFEMorphologyOperator> Operator
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGFEMorphologyOperator> Operator;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber RadiusX
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber RadiusX;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber RadiusY
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber RadiusY;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEMorphologyElement> listener);
 
@@ -75,11 +55,7 @@
 
 		public extern void RemoveEventListener(SVGFEMorphologyElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Result
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Result;
 
 		[Name("SVG_MORPHOLOGY_OPERATOR_DILATE")]
 		public const ushort SVG_MORPHOLOGY_OPERATOR_DILATE = 2;
@@ -90,22 +66,10 @@
 		[Name("SVG_MORPHOLOGY_OPERATOR_UNKNOWN")]
 		public const ushort SVG_MORPHOLOGY_OPERATOR_UNKNOWN = 0;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 	}
 }

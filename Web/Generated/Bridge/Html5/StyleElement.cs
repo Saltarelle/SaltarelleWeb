@@ -25,19 +25,9 @@
 
 		public extern void AddEventListener(StyleElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern string Media
-		{
-			get;
-			set;
-		}
+		public string Media;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<StyleElement> listener);
 
@@ -59,24 +49,10 @@
 
 		public extern void RemoveEventListener(StyleElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Scoped
-		{
-			get;
-			set;
-		}
+		public bool Scoped;
 
-		[FieldProperty]
-		public extern StyleSheet Sheet
-		{
-			get;
-		}
+		public readonly StyleSheet Sheet;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

@@ -5,28 +5,12 @@
 	{
 		internal extern VideoPlaybackQuality();
 
-		[FieldProperty]
-		public extern int CorruptedVideoFrames
-		{
-			get;
-		}
+		public readonly int CorruptedVideoFrames;
 
-		[FieldProperty]
-		public extern double CreationTime
-		{
-			get;
-		}
+		public readonly double CreationTime;
 
-		[FieldProperty]
-		public extern int DroppedVideoFrames
-		{
-			get;
-		}
+		public readonly int DroppedVideoFrames;
 
-		[FieldProperty]
-		public extern int TotalVideoFrames
-		{
-			get;
-		}
+		public readonly int TotalVideoFrames;
 	}
 }

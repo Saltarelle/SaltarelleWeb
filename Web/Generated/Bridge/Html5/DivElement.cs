@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DivElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
 		public extern void RemoveEventListener(DivElementEvents type, Action listener);
 

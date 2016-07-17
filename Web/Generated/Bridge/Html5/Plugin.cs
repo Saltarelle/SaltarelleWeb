@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5
+﻿namespace Bridge.Html5
 {
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class Plugin
@@ -19,41 +17,18 @@ namespace Bridge.Html5
 			get;
 		}
 
-		[FieldProperty]
-		public extern string Description
-		{
-			get;
-		}
+		public readonly string Description;
 
-		[FieldProperty]
-		public extern string Filename
-		{
-			get;
-		}
-
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<MimeType> GetEnumerator();
+		public readonly string Filename;
 
 		public extern MimeType Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 
 		public extern MimeType NamedItem(string name);
 
-		[FieldProperty]
-		public extern string Version
-		{
-			get;
-		}
+		public readonly string Version;
 	}
 }

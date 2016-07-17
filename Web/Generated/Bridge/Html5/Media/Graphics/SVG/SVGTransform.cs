@@ -5,17 +5,9 @@
 	{
 		internal extern SVGTransform();
 
-		[FieldProperty]
-		public extern double Angle
-		{
-			get;
-		}
+		public readonly double Angle;
 
-		[FieldProperty]
-		public extern SVGMatrix Matrix
-		{
-			get;
-		}
+		public readonly SVGMatrix Matrix;
 
 		public extern void SetMatrix(SVGMatrix matrix);
 
@@ -50,10 +42,6 @@
 		[Name("SVG_TRANSFORM_UNKNOWN")]
 		public const ushort SVG_TRANSFORM_UNKNOWN = 0;
 
-		[FieldProperty]
-		public extern SVGTransformType Type
-		{
-			get;
-		}
+		public readonly SVGTransformType Type;
 	}
 }

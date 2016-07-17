@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5.Speech
+﻿namespace Bridge.Html5.Speech
 {
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SpeechRecognitionResultList
@@ -13,15 +11,8 @@ namespace Bridge.Html5.Speech
 			get;
 		}
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<SpeechRecognitionResult> GetEnumerator();
-
 		public extern SpeechRecognitionResult Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 	}
 }

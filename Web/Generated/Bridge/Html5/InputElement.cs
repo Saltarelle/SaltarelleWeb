@@ -8,12 +8,7 @@ namespace Bridge.Html5
 	{
 		internal extern InputElement();
 
-		[FieldProperty]
-		public extern string Accept
-		{
-			get;
-			set;
-		}
+		public string Accept;
 
 		public extern void AddEventListener(InputElementEvents type, Action listener);
 
@@ -35,195 +30,63 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern string Alt
-		{
-			get;
-			set;
-		}
+		public string Alt;
 
-		[FieldProperty]
-		public extern string Autocomplete
-		{
-			get;
-			set;
-		}
+		public string Autocomplete;
 
-		[FieldProperty]
-		public extern bool Autofocus
-		{
-			get;
-			set;
-		}
+		public bool Autofocus;
 
-		[FieldProperty]
-		public extern bool Checked
-		{
-			get;
-			set;
-		}
+		public bool Checked;
 
 		public extern bool CheckValidity();
 
-		[FieldProperty]
-		public extern bool DefaultChecked
-		{
-			get;
-			set;
-		}
+		public bool DefaultChecked;
 
-		[FieldProperty]
-		public extern string DefaultValue
-		{
-			get;
-			set;
-		}
+		public string DefaultValue;
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern FileList Files
-		{
-			get;
-		}
+		public readonly FileList Files;
 
-		[FieldProperty]
-		public extern FormElement Form
-		{
-			get;
-		}
+		public readonly FormElement Form;
 
-		[FieldProperty]
-		public extern string FormAction
-		{
-			get;
-			set;
-		}
+		public string FormAction;
 
-		[FieldProperty]
-		public extern string FormEnctype
-		{
-			get;
-			set;
-		}
+		public string FormEnctype;
 
-		[FieldProperty]
-		public extern string FormMethod
-		{
-			get;
-			set;
-		}
+		public string FormMethod;
 
-		[FieldProperty]
-		public extern bool FormNoValidate
-		{
-			get;
-			set;
-		}
+		public bool FormNoValidate;
 
-		[FieldProperty]
-		public extern string FormTarget
-		{
-			get;
-			set;
-		}
+		public string FormTarget;
 
-		[FieldProperty]
-		public extern int Height
-		{
-			get;
-			set;
-		}
+		public int Height;
 
-		[FieldProperty]
-		public extern bool Indeterminate
-		{
-			get;
-			set;
-		}
+		public bool Indeterminate;
 
-		[FieldProperty]
-		public extern string InputMode
-		{
-			get;
-			set;
-		}
+		public string InputMode;
 
-		[FieldProperty]
-		public extern Element List
-		{
-			get;
-		}
+		public readonly Element List;
 
-		[FieldProperty]
-		public extern string Max
-		{
-			get;
-			set;
-		}
+		public string Max;
 
-		[FieldProperty]
-		public extern int MaxLength
-		{
-			get;
-			set;
-		}
+		public int MaxLength;
 
-		[FieldProperty]
-		public extern string Min
-		{
-			get;
-			set;
-		}
+		public string Min;
 
-		[FieldProperty]
-		public extern bool Multiple
-		{
-			get;
-			set;
-		}
+		public bool Multiple;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern void OpenDirectoryPicker();
 
-		[FieldProperty]
-		public extern string Pattern
-		{
-			get;
-			set;
-		}
+		public string Pattern;
 
-		[FieldProperty]
-		public extern string Placeholder
-		{
-			get;
-			set;
-		}
+		public string Placeholder;
 
-		[FieldProperty]
-		public extern bool ReadOnly
-		{
-			get;
-			set;
-		}
+		public bool ReadOnly;
 
 		public extern void RemoveEventListener(InputElementEvents type, Action listener);
 
@@ -245,35 +108,15 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<InputElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Required
-		{
-			get;
-			set;
-		}
+		public bool Required;
 
 		public extern void Select();
 
-		[FieldProperty]
-		public extern string SelectionDirection
-		{
-			get;
-			set;
-		}
+		public string SelectionDirection;
 
-		[FieldProperty]
-		public extern int SelectionEnd
-		{
-			get;
-			set;
-		}
+		public int SelectionEnd;
 
-		[FieldProperty]
-		public extern int SelectionStart
-		{
-			get;
-			set;
-		}
+		public int SelectionStart;
 
 		public extern void SetCustomValidity(string error);
 
@@ -281,26 +124,11 @@ namespace Bridge.Html5
 
 		public extern void SetSelectionRange(int start, int end, string direction);
 
-		[FieldProperty]
-		public extern int Size
-		{
-			get;
-			set;
-		}
+		public int Size;
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 
-		[FieldProperty]
-		public extern string Step
-		{
-			get;
-			set;
-		}
+		public string Step;
 
 		public extern void StepDown();
 
@@ -310,70 +138,24 @@ namespace Bridge.Html5
 
 		public extern void StepUp(int n);
 
-		[FieldProperty]
-		public extern int TextLength
-		{
-			get;
-		}
+		public readonly int TextLength;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 
-		[FieldProperty]
-		public extern string UseMap
-		{
-			get;
-			set;
-		}
+		public string UseMap;
 
-		[FieldProperty]
-		public extern string ValidationMessage
-		{
-			get;
-		}
+		public readonly string ValidationMessage;
 
-		[FieldProperty]
-		public extern ValidityState Validity
-		{
-			get;
-		}
+		public readonly ValidityState Validity;
 
-		[FieldProperty]
-		public extern string Value
-		{
-			get;
-			set;
-		}
+		public string Value;
 
-		[FieldProperty]
-		public extern DateTime? ValueAsDate
-		{
-			get;
-			set;
-		}
+		public DateTime? ValueAsDate;
 
-		[FieldProperty]
-		public extern double ValueAsNumber
-		{
-			get;
-			set;
-		}
+		public double ValueAsNumber;
 
-		[FieldProperty]
-		public extern int Width
-		{
-			get;
-			set;
-		}
+		public int Width;
 
-		[FieldProperty]
-		public extern bool WillValidate
-		{
-			get;
-		}
+		public readonly bool WillValidate;
 	}
 }

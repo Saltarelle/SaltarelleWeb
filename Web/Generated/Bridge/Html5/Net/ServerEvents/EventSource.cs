@@ -35,34 +35,18 @@
 
 		public const ushort CONNECTING = 0;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onmessage")]
-		public extern HtmlEventHandler OnMessage
-		{
-			get;
-			set;
-		}
+		[Name("onmessage")]
+		public HtmlEventHandler OnMessage;
 
-		[FieldProperty, Name("onopen")]
-		public extern HtmlEventHandler OnOpen
-		{
-			get;
-			set;
-		}
+		[Name("onopen")]
+		public HtmlEventHandler OnOpen;
 
 		public const ushort OPEN = 1;
 
-		[FieldProperty]
-		public extern ushort ReadyState
-		{
-			get;
-		}
+		public readonly ushort ReadyState;
 
 		public extern void RemoveEventListener(EventSourceEvents type, Action listener);
 
@@ -84,16 +68,8 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<EventSource> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Url
-		{
-			get;
-		}
+		public readonly string Url;
 
-		[FieldProperty]
-		public extern bool WithCredentials
-		{
-			get;
-		}
+		public readonly bool WithCredentials;
 	}
 }

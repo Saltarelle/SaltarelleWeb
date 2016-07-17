@@ -5,10 +5,6 @@
 	{
 		internal extern OfflineAudioCompletionEvent();
 
-		[FieldProperty]
-		public extern AudioBuffer RenderedBuffer
-		{
-			get;
-		}
+		public readonly AudioBuffer RenderedBuffer;
 	}
 }

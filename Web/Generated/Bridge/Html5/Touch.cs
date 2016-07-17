@@ -5,76 +5,28 @@
 	{
 		internal extern Touch();
 
-		[FieldProperty]
-		public extern int ClientX
-		{
-			get;
-		}
+		public readonly int ClientX;
 
-		[FieldProperty]
-		public extern int ClientY
-		{
-			get;
-		}
+		public readonly int ClientY;
 
-		[FieldProperty]
-		public extern double Force
-		{
-			get;
-		}
+		public readonly double Force;
 
-		[FieldProperty]
-		public extern int Identifier
-		{
-			get;
-		}
+		public readonly int Identifier;
 
-		[FieldProperty]
-		public extern int PageX
-		{
-			get;
-		}
+		public readonly int PageX;
 
-		[FieldProperty]
-		public extern int PageY
-		{
-			get;
-		}
+		public readonly int PageY;
 
-		[FieldProperty]
-		public extern int RadiusX
-		{
-			get;
-		}
+		public readonly int RadiusX;
 
-		[FieldProperty]
-		public extern int RadiusY
-		{
-			get;
-		}
+		public readonly int RadiusY;
 
-		[FieldProperty]
-		public extern double RotationAngle
-		{
-			get;
-		}
+		public readonly double RotationAngle;
 
-		[FieldProperty]
-		public extern int ScreenX
-		{
-			get;
-		}
+		public readonly int ScreenX;
 
-		[FieldProperty]
-		public extern int ScreenY
-		{
-			get;
-		}
+		public readonly int ScreenY;
 
-		[FieldProperty]
-		public extern EventTarget Target
-		{
-			get;
-		}
+		public readonly EventTarget Target;
 	}
 }

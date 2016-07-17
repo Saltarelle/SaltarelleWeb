@@ -5,19 +5,9 @@
 	{
 		internal extern SVGPreserveAspectRatio();
 
-		[FieldProperty]
-		public extern SVGAlign Align
-		{
-			get;
-			set;
-		}
+		public SVGAlign Align;
 
-		[FieldProperty]
-		public extern SVGMeetOrSlice MeetOrSlice
-		{
-			get;
-			set;
-		}
+		public SVGMeetOrSlice MeetOrSlice;
 
 		[Name("SVG_MEETORSLICE_MEET")]
 		public const ushort SVG_MEETORSLICE_MEET = 1;

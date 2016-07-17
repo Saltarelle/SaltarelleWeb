@@ -27,28 +27,16 @@
 
 		public const ushort CUSTOM = 4;
 
-		[FieldProperty]
-		public extern AudioParam Detune
-		{
-			get;
-		}
+		public readonly AudioParam Detune;
 
-		[FieldProperty]
-		public extern AudioParam Frequency
-		{
-			get;
-		}
+		public readonly AudioParam Frequency;
 
 		public extern void NoteOff(double when);
 
 		public extern void NoteOn(double when);
 
-		[FieldProperty, Name("onended")]
-		public extern HtmlEventHandler OnEnded
-		{
-			get;
-			set;
-		}
+		[Name("onended")]
+		public HtmlEventHandler OnEnded;
 
 		public extern void RemoveEventListener(OscillatorNodeEvents type, Action listener);
 
@@ -88,11 +76,6 @@
 
 		public const ushort TRIANGLE = 3;
 
-		[FieldProperty]
-		public extern OscillatorType Type
-		{
-			get;
-			set;
-		}
+		public OscillatorType Type;
 	}
 }

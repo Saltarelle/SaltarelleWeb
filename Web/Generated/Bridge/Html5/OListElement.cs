@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<OListElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Compact
-		{
-			get;
-			set;
-		}
+		public bool Compact;
 
 		public extern void RemoveEventListener(OListElementEvents type, Action listener);
 
@@ -52,25 +47,10 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<OListElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Reversed
-		{
-			get;
-			set;
-		}
+		public bool Reversed;
 
-		[FieldProperty]
-		public extern int Start
-		{
-			get;
-			set;
-		}
+		public int Start;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

@@ -29,39 +29,19 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MediaRecorder> listener, bool capture);
 
-		[FieldProperty]
-		public extern string MimeType
-		{
-			get;
-		}
+		public readonly string MimeType;
 
-		[FieldProperty, Name("ondataavailable")]
-		public extern HtmlEventHandler OnDataavailable
-		{
-			get;
-			set;
-		}
+		[Name("ondataavailable")]
+		public HtmlEventHandler OnDataavailable;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onstop")]
-		public extern HtmlEventHandler OnStop
-		{
-			get;
-			set;
-		}
+		[Name("onstop")]
+		public HtmlEventHandler OnStop;
 
-		[FieldProperty, Name("onwarning")]
-		public extern HtmlEventHandler OnWarning
-		{
-			get;
-			set;
-		}
+		[Name("onwarning")]
+		public HtmlEventHandler OnWarning;
 
 		public extern void Pause();
 
@@ -93,18 +73,10 @@
 
 		public extern void Start(int timeSlice);
 
-		[FieldProperty]
-		public extern RecordingState State
-		{
-			get;
-		}
+		public readonly RecordingState State;
 
 		public extern void Stop();
 
-		[FieldProperty]
-		public extern MediaStream Stream
-		{
-			get;
-		}
+		public readonly MediaStream Stream;
 	}
 }

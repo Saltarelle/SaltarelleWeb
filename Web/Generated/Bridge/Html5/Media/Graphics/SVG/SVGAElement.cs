@@ -25,18 +25,9 @@
 
 		public extern void AddEventListener(SVGAElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Download
-		{
-			get;
-			set;
-		}
+		public string Download;
 
-		[FieldProperty]
-		public extern SVGAnimatedString Href
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Href;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAElement> listener);
 
@@ -58,10 +49,6 @@
 
 		public extern void RemoveEventListener(SVGAElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Target
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Target;
 	}
 }

@@ -5,64 +5,24 @@
 	{
 		internal extern ValidityState();
 
-		[FieldProperty]
-		public extern bool BadInput
-		{
-			get;
-		}
+		public readonly bool BadInput;
 
-		[FieldProperty]
-		public extern bool CustomError
-		{
-			get;
-		}
+		public readonly bool CustomError;
 
-		[FieldProperty]
-		public extern bool PatternMismatch
-		{
-			get;
-		}
+		public readonly bool PatternMismatch;
 
-		[FieldProperty]
-		public extern bool RangeOverflow
-		{
-			get;
-		}
+		public readonly bool RangeOverflow;
 
-		[FieldProperty]
-		public extern bool RangeUnderflow
-		{
-			get;
-		}
+		public readonly bool RangeUnderflow;
 
-		[FieldProperty]
-		public extern bool StepMismatch
-		{
-			get;
-		}
+		public readonly bool StepMismatch;
 
-		[FieldProperty]
-		public extern bool TooLong
-		{
-			get;
-		}
+		public readonly bool TooLong;
 
-		[FieldProperty]
-		public extern bool TypeMismatch
-		{
-			get;
-		}
+		public readonly bool TypeMismatch;
 
-		[FieldProperty]
-		public extern bool Valid
-		{
-			get;
-		}
+		public readonly bool Valid;
 
-		[FieldProperty]
-		public extern bool ValueMissing
-		{
-			get;
-		}
+		public readonly bool ValueMissing;
 	}
 }

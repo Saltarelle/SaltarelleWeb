@@ -45,10 +45,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MediaStreamAudioDestinationNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern MediaStream Stream
-		{
-			get;
-		}
+		public readonly MediaStream Stream;
 	}
 }

@@ -5,16 +5,8 @@
 	{
 		internal extern SVGAnimatedPreserveAspectRatio();
 
-		[FieldProperty]
-		public extern SVGPreserveAspectRatio AnimVal
-		{
-			get;
-		}
+		public readonly SVGPreserveAspectRatio AnimVal;
 
-		[FieldProperty]
-		public extern SVGPreserveAspectRatio BaseVal
-		{
-			get;
-		}
+		public readonly SVGPreserveAspectRatio BaseVal;
 	}
 }

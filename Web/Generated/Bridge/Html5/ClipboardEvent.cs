@@ -9,10 +9,6 @@
 
 		public extern ClipboardEvent(string type, ClipboardEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern DataTransfer ClipboardData
-		{
-			get;
-		}
+		public readonly DataTransfer ClipboardData;
 	}
 }

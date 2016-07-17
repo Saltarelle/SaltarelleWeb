@@ -5,10 +5,6 @@
 	{
 		internal extern TextMetrics();
 
-		[FieldProperty]
-		public extern double Width
-		{
-			get;
-		}
+		public readonly double Width;
 	}
 }

@@ -5,28 +5,12 @@
 	{
 		internal extern MimeType();
 
-		[FieldProperty]
-		public extern string Description
-		{
-			get;
-		}
+		public readonly string Description;
 
-		[FieldProperty]
-		public extern Plugin EnabledPlugin
-		{
-			get;
-		}
+		public readonly Plugin EnabledPlugin;
 
-		[FieldProperty]
-		public extern string Suffixes
-		{
-			get;
-		}
+		public readonly string Suffixes;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-		}
+		public readonly string Type;
 	}
 }

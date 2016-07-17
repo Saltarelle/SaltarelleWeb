@@ -13,29 +13,13 @@ namespace Bridge.Html5.Data.IndexedDB
 
 		public extern Request Delete();
 
-		[FieldProperty]
-		public extern CursorDirection Direction
-		{
-			get;
-		}
+		public readonly CursorDirection Direction;
 
-		[FieldProperty]
-		public extern object Key
-		{
-			get;
-		}
+		public readonly object Key;
 
-		[FieldProperty]
-		public extern object PrimaryKey
-		{
-			get;
-		}
+		public readonly object PrimaryKey;
 
-		[FieldProperty]
-		public extern TypeOption<ObjectStore, Index> Source
-		{
-			get;
-		}
+		public readonly TypeOption<ObjectStore, Index> Source;
 
 		public extern Request Update(object value);
 	}

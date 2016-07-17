@@ -5,11 +5,6 @@
 	{
 		internal extern BarProp();
 
-		[FieldProperty]
-		public extern bool Visible
-		{
-			get;
-			set;
-		}
+		public bool Visible;
 	}
 }

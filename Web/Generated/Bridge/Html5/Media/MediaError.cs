@@ -5,11 +5,7 @@
 	{
 		internal extern MediaError();
 
-		[FieldProperty]
-		public extern MediaErrorCode Code
-		{
-			get;
-		}
+		public readonly MediaErrorCode Code;
 
 		[Name("MEDIA_ERR_ABORTED")]
 		public const ushort MEDIA_ERR_ABORTED = 1;

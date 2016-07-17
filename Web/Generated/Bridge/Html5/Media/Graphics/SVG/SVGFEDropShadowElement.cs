@@ -25,29 +25,13 @@
 
 		public extern void AddEventListener(SVGFEDropShadowElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Dx
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Dx;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Dy
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Dy;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
-		[FieldProperty]
-		public extern SVGAnimatedString In1
-		{
-			get;
-		}
+		public readonly SVGAnimatedString In1;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDropShadowElement> listener);
 
@@ -69,42 +53,18 @@
 
 		public extern void RemoveEventListener(SVGFEDropShadowElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Result
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Result;
 
 		public extern void SetStdDeviation(double stdDeviationX, double stdDeviationY);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber StdDeviationX
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber StdDeviationX;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber StdDeviationY
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber StdDeviationY;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 	}
 }

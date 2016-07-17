@@ -5,10 +5,7 @@
 	{
 		internal extern WebGLExtensionStandardDerivatives();
 
-		[FieldProperty, Name("FRAGMENT_SHADER_DERIVATIVE_HINT_OES")]
-		public extern int FRAGMENT_SHADER_DERIVATIVE_HINT_OES
-		{
-			get;
-		}
+		[Name("FRAGMENT_SHADER_DERIVATIVE_HINT_OES")]
+		public readonly int FRAGMENT_SHADER_DERIVATIVE_HINT_OES;
 	}
 }

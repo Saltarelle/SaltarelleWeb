@@ -5,18 +5,10 @@
 	{
 		internal extern CompositionEvent();
 
-		[FieldProperty]
-		public extern string Data
-		{
-			get;
-		}
+		public readonly string Data;
 
 		public extern void InitCompositionEvent(string typeArg, bool canBubbleArg, bool cancelableArg, WindowInstance viewArg, string dataArg, string localeArg);
 
-		[FieldProperty]
-		public extern string Locale
-		{
-			get;
-		}
+		public readonly string Locale;
 	}
 }

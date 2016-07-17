@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5.Xml
+﻿namespace Bridge.Html5.Xml
 {
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("NodeList")]
 	public partial class XmlNodeList
@@ -13,15 +11,8 @@ namespace Bridge.Html5.Xml
 			get;
 		}
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<XmlNode> GetEnumerator();
-
 		public extern XmlNode Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 	}
 }

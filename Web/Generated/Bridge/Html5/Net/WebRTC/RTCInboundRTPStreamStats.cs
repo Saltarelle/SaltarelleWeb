@@ -3,28 +3,12 @@
 	[External, Serializable]
 	public partial class RTCInboundRTPStreamStats : RTCRTPStreamStats
 	{
-		public extern ulong BytesReceived
-		{
-			get;
-			set;
-		}
+		public ulong BytesReceived;
 
-		public extern double Jitter
-		{
-			get;
-			set;
-		}
+		public double Jitter;
 
-		public extern int PacketsLost
-		{
-			get;
-			set;
-		}
+		public int PacketsLost;
 
-		public extern int PacketsReceived
-		{
-			get;
-			set;
-		}
+		public int PacketsReceived;
 	}
 }

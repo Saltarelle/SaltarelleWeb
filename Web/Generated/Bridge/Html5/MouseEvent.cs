@@ -9,74 +9,30 @@
 
 		public extern MouseEvent(string typeArg, MouseEventInit mouseEventInitDict);
 
-		[FieldProperty]
-		public extern bool AltKey
-		{
-			get;
-		}
+		public readonly bool AltKey;
 
-		[FieldProperty]
-		public extern short Button
-		{
-			get;
-		}
+		public readonly short Button;
 
-		[FieldProperty]
-		public extern ushort Buttons
-		{
-			get;
-		}
+		public readonly ushort Buttons;
 
-		[FieldProperty]
-		public extern int ClientX
-		{
-			get;
-		}
+		public readonly int ClientX;
 
-		[FieldProperty]
-		public extern int ClientY
-		{
-			get;
-		}
+		public readonly int ClientY;
 
-		[FieldProperty]
-		public extern bool CtrlKey
-		{
-			get;
-		}
+		public readonly bool CtrlKey;
 
 		public extern bool GetModifierState(string keyArg);
 
 		public extern void InitMouseEvent(string typeArg, bool canBubbleArg, bool cancelableArg, WindowInstance viewArg, int detailArg, int screenXArg, int screenYArg, int clientXArg, int clientYArg, bool ctrlKeyArg, bool altKeyArg, bool shiftKeyArg, bool metaKeyArg, short buttonArg, EventTarget relatedTargetArg);
 
-		[FieldProperty]
-		public extern bool MetaKey
-		{
-			get;
-		}
+		public readonly bool MetaKey;
 
-		[FieldProperty]
-		public extern EventTarget RelatedTarget
-		{
-			get;
-		}
+		public readonly EventTarget RelatedTarget;
 
-		[FieldProperty]
-		public extern int ScreenX
-		{
-			get;
-		}
+		public readonly int ScreenX;
 
-		[FieldProperty]
-		public extern int ScreenY
-		{
-			get;
-		}
+		public readonly int ScreenY;
 
-		[FieldProperty]
-		public extern bool ShiftKey
-		{
-			get;
-		}
+		public readonly bool ShiftKey;
 	}
 }

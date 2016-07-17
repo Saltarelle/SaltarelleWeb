@@ -25,18 +25,9 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern double Max
-		{
-			get;
-			set;
-		}
+		public double Max;
 
-		[FieldProperty]
-		public extern double Position
-		{
-			get;
-		}
+		public readonly double Position;
 
 		public extern void RemoveEventListener(ProgressElementEvents type, Action listener);
 
@@ -58,11 +49,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ProgressElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern double Value
-		{
-			get;
-			set;
-		}
+		public double Value;
 	}
 }

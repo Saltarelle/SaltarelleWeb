@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DirectoryElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Compact
-		{
-			get;
-			set;
-		}
+		public bool Compact;
 
 		public extern void RemoveEventListener(DirectoryElementEvents type, Action listener);
 

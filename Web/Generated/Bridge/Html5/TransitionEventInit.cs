@@ -3,22 +3,10 @@
 	[External, Serializable]
 	public partial class TransitionEventInit : EventInit
 	{
-		public extern double ElapsedTime
-		{
-			get;
-			set;
-		}
+		public double ElapsedTime;
 
-		public extern string PropertyName
-		{
-			get;
-			set;
-		}
+		public string PropertyName;
 
-		public extern string PseudoElement
-		{
-			get;
-			set;
-		}
+		public string PseudoElement;
 	}
 }

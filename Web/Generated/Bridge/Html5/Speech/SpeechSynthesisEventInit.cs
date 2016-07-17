@@ -3,22 +3,10 @@
 	[External, Serializable]
 	public partial class SpeechSynthesisEventInit : EventInit
 	{
-		public extern int CharIndex
-		{
-			get;
-			set;
-		}
+		public int CharIndex;
 
-		public extern double ElapsedTime
-		{
-			get;
-			set;
-		}
+		public double ElapsedTime;
 
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 	}
 }

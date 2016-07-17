@@ -5,16 +5,8 @@
 	{
 		public extern MessageChannel();
 
-		[FieldProperty]
-		public extern MessagePort Port1
-		{
-			get;
-		}
+		public readonly MessagePort Port1;
 
-		[FieldProperty]
-		public extern MessagePort Port2
-		{
-			get;
-		}
+		public readonly MessagePort Port2;
 	}
 }

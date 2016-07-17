@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(SVGMPathElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Href
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Href;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMPathElement> listener);
 

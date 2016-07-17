@@ -11,34 +11,14 @@
 
 		public extern void InitStorageEvent(string type, bool canBubble, bool cancelable, string key, string oldValue, string newValue, string url, Storage storageArea);
 
-		[FieldProperty]
-		public extern string Key
-		{
-			get;
-		}
+		public readonly string Key;
 
-		[FieldProperty]
-		public extern string NewValue
-		{
-			get;
-		}
+		public readonly string NewValue;
 
-		[FieldProperty]
-		public extern string OldValue
-		{
-			get;
-		}
+		public readonly string OldValue;
 
-		[FieldProperty]
-		public extern Storage StorageArea
-		{
-			get;
-		}
+		public readonly Storage StorageArea;
 
-		[FieldProperty]
-		public extern string Url
-		{
-			get;
-		}
+		public readonly string Url;
 	}
 }

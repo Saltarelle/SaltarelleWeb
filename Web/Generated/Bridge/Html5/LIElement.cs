@@ -45,18 +45,8 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<LIElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 
-		[FieldProperty]
-		public extern int Value
-		{
-			get;
-			set;
-		}
+		public int Value;
 	}
 }

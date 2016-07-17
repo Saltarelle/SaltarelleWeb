@@ -25,17 +25,9 @@
 
 		public extern void AddEventListener(SVGFEDistantLightElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Azimuth
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Azimuth;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Elevation
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Elevation;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDistantLightElement> listener);
 

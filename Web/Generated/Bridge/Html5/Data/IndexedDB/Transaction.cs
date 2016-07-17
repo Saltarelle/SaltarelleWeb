@@ -27,52 +27,24 @@
 
 		public extern void AddEventListener(TransactionEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern Database Db
-		{
-			get;
-		}
+		public readonly Database Db;
 
-		[FieldProperty]
-		public extern DOMError Error
-		{
-			get;
-		}
+		public readonly DOMError Error;
 
-		[FieldProperty]
-		public extern TransactionMode Mode
-		{
-			get;
-		}
+		public readonly TransactionMode Mode;
 
 		public extern ObjectStore ObjectStore(string name);
 
-		[FieldProperty]
-		public extern DOMStringList ObjectStoreNames
-		{
-			get;
-		}
+		public readonly DOMStringList ObjectStoreNames;
 
-		[FieldProperty, Name("onabort")]
-		public extern HtmlEventHandler OnAbort
-		{
-			get;
-			set;
-		}
+		[Name("onabort")]
+		public HtmlEventHandler OnAbort;
 
-		[FieldProperty, Name("oncomplete")]
-		public extern HtmlEventHandler OnComplete
-		{
-			get;
-			set;
-		}
+		[Name("oncomplete")]
+		public HtmlEventHandler OnComplete;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Transaction> listener);
 

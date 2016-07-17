@@ -35,61 +35,29 @@
 
 		public const ushort OBSOLETE = 5;
 
-		[FieldProperty, Name("oncached")]
-		public extern HtmlEventHandler OnCached
-		{
-			get;
-			set;
-		}
+		[Name("oncached")]
+		public HtmlEventHandler OnCached;
 
-		[FieldProperty, Name("onchecking")]
-		public extern HtmlEventHandler OnChecking
-		{
-			get;
-			set;
-		}
+		[Name("onchecking")]
+		public HtmlEventHandler OnChecking;
 
-		[FieldProperty, Name("ondownloading")]
-		public extern HtmlEventHandler OnDownloading
-		{
-			get;
-			set;
-		}
+		[Name("ondownloading")]
+		public HtmlEventHandler OnDownloading;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onnoupdate")]
-		public extern HtmlEventHandler OnNoupdate
-		{
-			get;
-			set;
-		}
+		[Name("onnoupdate")]
+		public HtmlEventHandler OnNoupdate;
 
-		[FieldProperty, Name("onobsolete")]
-		public extern HtmlEventHandler OnObsolete
-		{
-			get;
-			set;
-		}
+		[Name("onobsolete")]
+		public HtmlEventHandler OnObsolete;
 
-		[FieldProperty, Name("onprogress")]
-		public extern HtmlEventHandler OnProgress
-		{
-			get;
-			set;
-		}
+		[Name("onprogress")]
+		public HtmlEventHandler OnProgress;
 
-		[FieldProperty, Name("onupdateready")]
-		public extern HtmlEventHandler OnUpdateready
-		{
-			get;
-			set;
-		}
+		[Name("onupdateready")]
+		public HtmlEventHandler OnUpdateready;
 
 		public extern void RemoveEventListener(ApplicationCacheEvents type, Action listener);
 
@@ -111,11 +79,7 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ApplicationCache> listener, bool capture);
 
-		[FieldProperty]
-		public extern ApplicationCacheStatus Status
-		{
-			get;
-		}
+		public readonly ApplicationCacheStatus Status;
 
 		public extern void SwapCache();
 

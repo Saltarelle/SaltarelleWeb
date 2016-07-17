@@ -25,17 +25,9 @@
 
 		public extern void AddEventListener(SVGTextPositioningElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLengthList Dx
-		{
-			get;
-		}
+		public readonly SVGAnimatedLengthList Dx;
 
-		[FieldProperty]
-		public extern SVGAnimatedLengthList Dy
-		{
-			get;
-		}
+		public readonly SVGAnimatedLengthList Dy;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGTextPositioningElement> listener);
 
@@ -57,22 +49,10 @@
 
 		public extern void RemoveEventListener(SVGTextPositioningElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumberList Rotate
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumberList Rotate;
 
-		[FieldProperty]
-		public extern SVGAnimatedLengthList X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLengthList X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLengthList Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLengthList Y;
 	}
 }

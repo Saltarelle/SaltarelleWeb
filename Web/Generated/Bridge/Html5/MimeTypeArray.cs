@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5
+﻿namespace Bridge.Html5
 {
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class MimeTypeArray
@@ -19,16 +17,9 @@ namespace Bridge.Html5
 			get;
 		}
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<MimeType> GetEnumerator();
-
 		public extern MimeType Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
 		public extern MimeType NamedItem(string name);
 	}

@@ -5,17 +5,9 @@
 	{
 		internal extern PerformanceNavigation();
 
-		[FieldProperty]
-		public extern ushort RedirectCount
-		{
-			get;
-		}
+		public readonly ushort RedirectCount;
 
-		[FieldProperty]
-		public extern ushort Type
-		{
-			get;
-		}
+		public readonly ushort Type;
 
 		[Name("TYPE_BACK_FORWARD")]
 		public const ushort TYPE_BACK_FORWARD = 2;

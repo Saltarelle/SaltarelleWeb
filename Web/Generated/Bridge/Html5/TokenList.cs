@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5
+﻿namespace Bridge.Html5
 {
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("DOMTokenList")]
 	public partial class TokenList
@@ -18,16 +16,9 @@ namespace Bridge.Html5
 
 		public extern bool Contains(string token);
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<string> GetEnumerator();
-
 		public extern string Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
 		[ExpandParams]
 		public extern void Remove(params string[] tokens);

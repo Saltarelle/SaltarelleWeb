@@ -11,10 +11,6 @@
 
 		public extern void InitPopStateEvent(string type, bool canBubble, bool cancelable, object state);
 
-		[FieldProperty]
-		public extern object State
-		{
-			get;
-		}
+		public readonly object State;
 	}
 }

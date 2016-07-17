@@ -45,11 +45,6 @@
 
 		public extern void RemoveEventListener(TitleElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Text
-		{
-			get;
-			set;
-		}
+		public string Text;
 	}
 }

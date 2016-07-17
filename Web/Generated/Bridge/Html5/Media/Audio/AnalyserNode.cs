@@ -27,18 +27,9 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern int FftSize
-		{
-			get;
-			set;
-		}
+		public int FftSize;
 
-		[FieldProperty]
-		public extern int FrequencyBinCount
-		{
-			get;
-		}
+		public readonly int FrequencyBinCount;
 
 		public extern void GetByteFrequencyData(Uint8Array array);
 
@@ -48,19 +39,9 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void GetFloatTimeDomainData(Float32Array array);
 
-		[FieldProperty]
-		public extern double MaxDecibels
-		{
-			get;
-			set;
-		}
+		public double MaxDecibels;
 
-		[FieldProperty]
-		public extern double MinDecibels
-		{
-			get;
-			set;
-		}
+		public double MinDecibels;
 
 		public extern void RemoveEventListener(AnalyserNodeEvents type, Action listener);
 
@@ -82,11 +63,6 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AnalyserNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern double SmoothingTimeConstant
-		{
-			get;
-			set;
-		}
+		public double SmoothingTimeConstant;
 	}
 }

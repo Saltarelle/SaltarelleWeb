@@ -3,10 +3,6 @@
 	[External, Serializable]
 	public partial class PageTransitionEventInit : EventInit
 	{
-		public extern bool Persisted
-		{
-			get;
-			set;
-		}
+		public bool Persisted;
 	}
 }

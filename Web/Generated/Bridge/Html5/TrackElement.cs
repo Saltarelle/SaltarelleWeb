@@ -27,28 +27,13 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(TrackElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Default
-		{
-			get;
-			set;
-		}
+		public bool Default;
 
 		public const ushort ERROR = 3;
 
-		[FieldProperty]
-		public extern string Kind
-		{
-			get;
-			set;
-		}
+		public string Kind;
 
-		[FieldProperty]
-		public extern string Label
-		{
-			get;
-			set;
-		}
+		public string Label;
 
 		public const ushort LOADED = 2;
 
@@ -56,11 +41,7 @@ namespace Bridge.Html5
 
 		public const ushort NONE = 0;
 
-		[FieldProperty]
-		public extern ushort ReadyState
-		{
-			get;
-		}
+		public readonly ushort ReadyState;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TrackElement> listener);
 
@@ -82,24 +63,10 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(TrackElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 
-		[FieldProperty]
-		public extern string Srclang
-		{
-			get;
-			set;
-		}
+		public string Srclang;
 
-		[FieldProperty]
-		public extern TextTrack Track
-		{
-			get;
-		}
+		public readonly TextTrack Track;
 	}
 }

@@ -5,17 +5,8 @@
 	{
 		internal extern SVGAnimatedString();
 
-		[FieldProperty]
-		public extern string AnimVal
-		{
-			get;
-		}
+		public readonly string AnimVal;
 
-		[FieldProperty]
-		public extern string BaseVal
-		{
-			get;
-			set;
-		}
+		public string BaseVal;
 	}
 }

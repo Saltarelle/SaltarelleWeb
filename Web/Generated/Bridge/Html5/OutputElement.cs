@@ -27,31 +27,13 @@
 
 		public extern bool CheckValidity();
 
-		[FieldProperty]
-		public extern string DefaultValue
-		{
-			get;
-			set;
-		}
+		public string DefaultValue;
 
-		[FieldProperty]
-		public extern FormElement Form
-		{
-			get;
-		}
+		public readonly FormElement Form;
 
-		[FieldProperty]
-		public extern DOMSettableTokenList HtmlFor
-		{
-			get;
-		}
+		public readonly DOMSettableTokenList HtmlFor;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern void RemoveEventListener(OutputElementEvents type, Action listener);
 
@@ -75,35 +57,14 @@
 
 		public extern void SetCustomValidity(string error);
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-		}
+		public readonly string Type;
 
-		[FieldProperty]
-		public extern string ValidationMessage
-		{
-			get;
-		}
+		public readonly string ValidationMessage;
 
-		[FieldProperty]
-		public extern ValidityState Validity
-		{
-			get;
-		}
+		public readonly ValidityState Validity;
 
-		[FieldProperty]
-		public extern string Value
-		{
-			get;
-			set;
-		}
+		public string Value;
 
-		[FieldProperty]
-		public extern bool WillValidate
-		{
-			get;
-		}
+		public readonly bool WillValidate;
 	}
 }

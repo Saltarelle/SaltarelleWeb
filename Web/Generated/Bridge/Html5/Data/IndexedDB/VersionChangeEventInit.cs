@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class VersionChangeEventInit : EventInit
 	{
-		public extern ulong? NewVersion
-		{
-			get;
-			set;
-		}
+		public ulong? NewVersion;
 
-		public extern ulong OldVersion
-		{
-			get;
-			set;
-		}
+		public ulong OldVersion;
 	}
 }

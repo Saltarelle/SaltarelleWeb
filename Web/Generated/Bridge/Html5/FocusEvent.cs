@@ -9,10 +9,6 @@
 
 		public extern FocusEvent(string typeArg, FocusEventInit focusEventInitDict);
 
-		[FieldProperty]
-		public extern EventTarget RelatedTarget
-		{
-			get;
-		}
+		public readonly EventTarget RelatedTarget;
 	}
 }

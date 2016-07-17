@@ -25,33 +25,13 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioBufferSourceNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern AudioBuffer Buffer
-		{
-			get;
-			set;
-		}
+		public AudioBuffer Buffer;
 
-		[FieldProperty]
-		public extern bool Loop
-		{
-			get;
-			set;
-		}
+		public bool Loop;
 
-		[FieldProperty]
-		public extern double LoopEnd
-		{
-			get;
-			set;
-		}
+		public double LoopEnd;
 
-		[FieldProperty]
-		public extern double LoopStart
-		{
-			get;
-			set;
-		}
+		public double LoopStart;
 
 		public extern void NoteGrainOn(double when, double grainOffset, double grainDuration);
 
@@ -59,18 +39,10 @@
 
 		public extern void NoteOn(double when);
 
-		[FieldProperty, Name("onended")]
-		public extern HtmlEventHandler OnEnded
-		{
-			get;
-			set;
-		}
+		[Name("onended")]
+		public HtmlEventHandler OnEnded;
 
-		[FieldProperty]
-		public extern AudioParam PlaybackRate
-		{
-			get;
-		}
+		public readonly AudioParam PlaybackRate;
 
 		public extern void RemoveEventListener(AudioBufferSourceNodeEvents type, Action listener);
 

@@ -25,53 +25,21 @@
 
 		public extern void AddEventListener(SVGMarkerElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength MarkerHeight
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength MarkerHeight;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGMarkerUnits> MarkerUnits
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGMarkerUnits> MarkerUnits;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength MarkerWidth
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength MarkerWidth;
 
-		[FieldProperty]
-		public extern SVGAnimatedAngle OrientAngle
-		{
-			get;
-		}
+		public readonly SVGAnimatedAngle OrientAngle;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGMarkerOrient> OrientType
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGMarkerOrient> OrientType;
 
-		[FieldProperty]
-		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
-		{
-			get;
-		}
+		public readonly SVGAnimatedPreserveAspectRatio PreserveAspectRatio;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength RefX
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength RefX;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength RefY
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength RefY;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMarkerElement> listener);
 
@@ -115,10 +83,6 @@
 		[Name("SVG_MARKERUNITS_USERSPACEONUSE")]
 		public const ushort SVG_MARKERUNITS_USERSPACEONUSE = 1;
 
-		[FieldProperty]
-		public extern SVGAnimatedRect ViewBox
-		{
-			get;
-		}
+		public readonly SVGAnimatedRect ViewBox;
 	}
 }

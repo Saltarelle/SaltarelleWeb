@@ -3,40 +3,16 @@
 	[External, Serializable]
 	public partial class WebSocketElement
 	{
-		public extern bool Encrypted
-		{
-			get;
-			set;
-		}
+		public bool Encrypted;
 
-		public extern string Hostport
-		{
-			get;
-			set;
-		}
+		public string Hostport;
 
-		public extern int Msgreceived
-		{
-			get;
-			set;
-		}
+		public int Msgreceived;
 
-		public extern int Msgsent
-		{
-			get;
-			set;
-		}
+		public int Msgsent;
 
-		public extern double Receivedsize
-		{
-			get;
-			set;
-		}
+		public double Receivedsize;
 
-		public extern double Sentsize
-		{
-			get;
-			set;
-		}
+		public double Sentsize;
 	}
 }

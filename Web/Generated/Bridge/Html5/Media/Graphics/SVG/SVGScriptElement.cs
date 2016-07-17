@@ -25,18 +25,9 @@
 
 		public extern void AddEventListener(SVGScriptElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string CrossOrigin
-		{
-			get;
-			set;
-		}
+		public string CrossOrigin;
 
-		[FieldProperty]
-		public extern SVGAnimatedString Href
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Href;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGScriptElement> listener);
 
@@ -58,11 +49,6 @@
 
 		public extern void RemoveEventListener(SVGScriptElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

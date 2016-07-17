@@ -27,11 +27,7 @@
 
 		public extern bool HasExtension(string extension);
 
-		[FieldProperty]
-		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
-		{
-			get;
-		}
+		public readonly SVGAnimatedPreserveAspectRatio PreserveAspectRatio;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSymbolElement> listener);
 
@@ -53,28 +49,12 @@
 
 		public extern void RemoveEventListener(SVGSymbolElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGStringList RequiredExtensions
-		{
-			get;
-		}
+		public readonly SVGStringList RequiredExtensions;
 
-		[FieldProperty]
-		public extern SVGStringList RequiredFeatures
-		{
-			get;
-		}
+		public readonly SVGStringList RequiredFeatures;
 
-		[FieldProperty]
-		public extern SVGStringList SystemLanguage
-		{
-			get;
-		}
+		public readonly SVGStringList SystemLanguage;
 
-		[FieldProperty]
-		public extern SVGAnimatedRect ViewBox
-		{
-			get;
-		}
+		public readonly SVGAnimatedRect ViewBox;
 	}
 }

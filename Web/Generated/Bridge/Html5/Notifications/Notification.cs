@@ -29,65 +29,29 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Notification> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Body
-		{
-			get;
-		}
+		public readonly string Body;
 
 		public extern void Close();
 
-		[FieldProperty]
-		public extern NotificationDirection Dir
-		{
-			get;
-		}
+		public readonly NotificationDirection Dir;
 
-		[FieldProperty]
-		public extern string Icon
-		{
-			get;
-		}
+		public readonly string Icon;
 
-		[FieldProperty]
-		public extern string Lang
-		{
-			get;
-		}
+		public readonly string Lang;
 
-		[FieldProperty, Name("onclick")]
-		public extern HtmlEventHandler OnClick
-		{
-			get;
-			set;
-		}
+		[Name("onclick")]
+		public HtmlEventHandler OnClick;
 
-		[FieldProperty, Name("onclose")]
-		public extern HtmlEventHandler OnClose
-		{
-			get;
-			set;
-		}
+		[Name("onclose")]
+		public HtmlEventHandler OnClose;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onshow")]
-		public extern HtmlEventHandler OnShow
-		{
-			get;
-			set;
-		}
+		[Name("onshow")]
+		public HtmlEventHandler OnShow;
 
-		[FieldProperty]
-		public static extern NotificationPermission Permission
-		{
-			get;
-		}
+		public readonly NotificationPermission Permission;
 
 		public extern void RemoveEventListener(NotificationEvents type, Action listener);
 
@@ -113,16 +77,8 @@
 
 		public static extern void RequestPermission(NotificationPermissionCallback permissionCallback);
 
-		[FieldProperty]
-		public extern string Tag
-		{
-			get;
-		}
+		public readonly string Tag;
 
-		[FieldProperty]
-		public extern string Title
-		{
-			get;
-		}
+		public readonly string Title;
 	}
 }

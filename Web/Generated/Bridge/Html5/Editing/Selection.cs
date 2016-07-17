@@ -9,17 +9,9 @@ namespace Bridge.Html5.Editing
 
 		public extern void AddRange(Range range);
 
-		[FieldProperty]
-		public extern XmlNode AnchorNode
-		{
-			get;
-		}
+		public readonly XmlNode AnchorNode;
 
-		[FieldProperty]
-		public extern int AnchorOffset
-		{
-			get;
-		}
+		public readonly int AnchorOffset;
 
 		public extern void Collapse(XmlNode node, int offset);
 
@@ -33,33 +25,17 @@ namespace Bridge.Html5.Editing
 
 		public extern void Extend(XmlNode node, int offset);
 
-		[FieldProperty]
-		public extern XmlNode FocusNode
-		{
-			get;
-		}
+		public readonly XmlNode FocusNode;
 
-		[FieldProperty]
-		public extern int FocusOffset
-		{
-			get;
-		}
+		public readonly int FocusOffset;
 
 		public extern Range GetRangeAt(int index);
 
-		[FieldProperty]
-		public extern bool IsCollapsed
-		{
-			get;
-		}
+		public readonly bool IsCollapsed;
 
 		public extern void Modify(string alter, string direction, string granularity);
 
-		[FieldProperty]
-		public extern int RangeCount
-		{
-			get;
-		}
+		public readonly int RangeCount;
 
 		public extern void RemoveAllRanges();
 

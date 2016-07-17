@@ -5,10 +5,7 @@
 	{
 		internal extern WebGLExtensionCompressedTextureETC1();
 
-		[FieldProperty, Name("COMPRESSED_RGB_ETC1_WEBGL")]
-		public extern int COMPRESSED_RGB_ETC1_WEBGL
-		{
-			get;
-		}
+		[Name("COMPRESSED_RGB_ETC1_WEBGL")]
+		public readonly int COMPRESSED_RGB_ETC1_WEBGL;
 	}
 }

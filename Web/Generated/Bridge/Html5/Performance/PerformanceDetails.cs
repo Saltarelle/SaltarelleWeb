@@ -5,18 +5,10 @@
 	{
 		internal extern PerformanceDetails();
 
-		[FieldProperty]
-		public extern PerformanceNavigation Navigation
-		{
-			get;
-		}
+		public readonly PerformanceNavigation Navigation;
 
 		public extern double Now();
 
-		[FieldProperty]
-		public extern PerformanceTiming Timing
-		{
-			get;
-		}
+		public readonly PerformanceTiming Timing;
 	}
 }

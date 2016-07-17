@@ -9,22 +9,10 @@
 
 		public extern DeviceProximityEvent(string type, DeviceProximityEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern double Max
-		{
-			get;
-		}
+		public readonly double Max;
 
-		[FieldProperty]
-		public extern double Min
-		{
-			get;
-		}
+		public readonly double Min;
 
-		[FieldProperty]
-		public extern double Value
-		{
-			get;
-		}
+		public readonly double Value;
 	}
 }

@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(SVGClipPathElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGUnitType> ClipPathUnits
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGUnitType> ClipPathUnits;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGClipPathElement> listener);
 
@@ -60,10 +56,6 @@
 		[Name("SVG_UNIT_TYPE_USERSPACEONUSE")]
 		public const ushort SVG_UNIT_TYPE_USERSPACEONUSE = 1;
 
-		[FieldProperty]
-		public extern SVGAnimatedTransformList Transform
-		{
-			get;
-		}
+		public readonly SVGAnimatedTransformList Transform;
 	}
 }

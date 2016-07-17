@@ -11,10 +11,6 @@
 
 		public extern void InitElementReplaceEvent(string type, bool canBubble, bool cancelable, Element upgrade);
 
-		[FieldProperty]
-		public extern Element Upgrade
-		{
-			get;
-		}
+		public readonly Element Upgrade;
 	}
 }

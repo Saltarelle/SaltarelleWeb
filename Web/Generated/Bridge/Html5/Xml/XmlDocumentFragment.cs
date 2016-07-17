@@ -25,31 +25,15 @@
 
 		public extern void AddEventListener(XmlDocumentFragmentEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern int ChildElementCount
-		{
-			get;
-		}
+		public readonly int ChildElementCount;
 
-		[FieldProperty]
-		public extern XmlElementCollection Children
-		{
-			get;
-		}
+		public readonly XmlElementCollection Children;
 
-		[FieldProperty]
-		public extern XmlElement FirstElementChild
-		{
-			get;
-		}
+		public readonly XmlElement FirstElementChild;
 
 		public extern XmlElement GetElementById(string elementId);
 
-		[FieldProperty]
-		public extern XmlElement LastElementChild
-		{
-			get;
-		}
+		public readonly XmlElement LastElementChild;
 
 		public extern XmlElement QuerySelector(string selectors);
 

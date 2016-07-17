@@ -45,22 +45,10 @@
 
 		public extern void RemoveEventListener(SVGFEPointLightElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber X
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber X;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Y;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Z
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Z;
 	}
 }

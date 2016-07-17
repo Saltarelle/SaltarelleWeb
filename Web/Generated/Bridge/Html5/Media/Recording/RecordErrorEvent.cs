@@ -9,10 +9,6 @@
 
 		public extern RecordErrorEvent(string type, RecordErrorEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 	}
 }

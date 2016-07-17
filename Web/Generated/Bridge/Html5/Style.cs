@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5
+﻿namespace Bridge.Html5
 {
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("CSSStyleDeclaration")]
 	public partial class Style
@@ -13,771 +11,223 @@ namespace Bridge.Html5
 			get;
 		}
 
-		[FieldProperty]
-		public extern string AlignContent
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AlignItems
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AlignSelf
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string All
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Animation
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AnimationDelay
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AnimationDirection
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AnimationDuration
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AnimationFillMode
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AnimationIterationCount
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AnimationName
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AnimationPlayState
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string AnimationTimingFunction
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackfaceVisibility
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Background
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackgroundAttachment
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackgroundBlendMode
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackgroundClip
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackgroundColor
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackgroundImage
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackgroundOrigin
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackgroundPosition
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackgroundRepeat
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BackgroundSize
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Border
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderBottom
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderBottomColor
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderBottomLeftRadius
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderBottomRightRadius
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderBottomStyle
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderBottomWidth
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderCollapse
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderColor
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderImage
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderImageOutset
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderImageRepeat
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderImageSlice
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderImageSource
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderImageWidth
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderLeft
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderLeftColor
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderLeftStyle
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderLeftWidth
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderRadius
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderRight
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderRightColor
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderRightStyle
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderRightWidth
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderSpacing
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderStyle
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderTop
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderTopColor
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderTopLeftRadius
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderTopRightRadius
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderTopStyle
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderTopWidth
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BorderWidth
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Bottom
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BoxShadow
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string BoxSizing
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string CaptionSide
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Clear
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Clip
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string ClipPath
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string ClipRule
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Color
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string ColorInterpolation
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string ColorInterpolationFilters
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Content
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string CounterIncrement
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string CounterReset
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string CssFloat
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string CssText
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Cursor
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Direction
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Display
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string DominantBaseline
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string EmptyCells
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Fill
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FillOpacity
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FillRule
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Filter
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Flex
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FlexBasis
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FlexDirection
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FlexFlow
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FlexGrow
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FlexShrink
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FlexWrap
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FloodColor
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FloodOpacity
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Font
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontFamily
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontFeatureSettings
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontKerning
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontLanguageOverride
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontSize
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontSizeAdjust
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontStretch
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontStyle
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontSynthesis
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontVariant
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontVariantAlternates
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontVariantCaps
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontVariantEastAsian
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontVariantLigatures
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontVariantNumeric
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontVariantPosition
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string FontWeight
-		{
-			get;
-			set;
-		}
-
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<string> GetEnumerator();
+		public string AlignContent;
+
+		public string AlignItems;
+
+		public string AlignSelf;
+
+		public string All;
+
+		public string Animation;
+
+		public string AnimationDelay;
+
+		public string AnimationDirection;
+
+		public string AnimationDuration;
+
+		public string AnimationFillMode;
+
+		public string AnimationIterationCount;
+
+		public string AnimationName;
+
+		public string AnimationPlayState;
+
+		public string AnimationTimingFunction;
+
+		public string BackfaceVisibility;
+
+		public string Background;
+
+		public string BackgroundAttachment;
+
+		public string BackgroundBlendMode;
+
+		public string BackgroundClip;
+
+		public string BackgroundColor;
+
+		public string BackgroundImage;
+
+		public string BackgroundOrigin;
+
+		public string BackgroundPosition;
+
+		public string BackgroundRepeat;
+
+		public string BackgroundSize;
+
+		public string Border;
+
+		public string BorderBottom;
+
+		public string BorderBottomColor;
+
+		public string BorderBottomLeftRadius;
+
+		public string BorderBottomRightRadius;
+
+		public string BorderBottomStyle;
+
+		public string BorderBottomWidth;
+
+		public string BorderCollapse;
+
+		public string BorderColor;
+
+		public string BorderImage;
+
+		public string BorderImageOutset;
+
+		public string BorderImageRepeat;
+
+		public string BorderImageSlice;
+
+		public string BorderImageSource;
+
+		public string BorderImageWidth;
+
+		public string BorderLeft;
+
+		public string BorderLeftColor;
+
+		public string BorderLeftStyle;
+
+		public string BorderLeftWidth;
+
+		public string BorderRadius;
+
+		public string BorderRight;
+
+		public string BorderRightColor;
+
+		public string BorderRightStyle;
+
+		public string BorderRightWidth;
+
+		public string BorderSpacing;
+
+		public string BorderStyle;
+
+		public string BorderTop;
+
+		public string BorderTopColor;
+
+		public string BorderTopLeftRadius;
+
+		public string BorderTopRightRadius;
+
+		public string BorderTopStyle;
+
+		public string BorderTopWidth;
+
+		public string BorderWidth;
+
+		public string Bottom;
+
+		public string BoxShadow;
+
+		public string BoxSizing;
+
+		public string CaptionSide;
+
+		public string Clear;
+
+		public string Clip;
+
+		public string ClipPath;
+
+		public string ClipRule;
+
+		public string Color;
+
+		public string ColorInterpolation;
+
+		public string ColorInterpolationFilters;
+
+		public string Content;
+
+		public string CounterIncrement;
+
+		public string CounterReset;
+
+		public string CssFloat;
+
+		public string CssText;
+
+		public string Cursor;
+
+		public string Direction;
+
+		public string Display;
+
+		public string DominantBaseline;
+
+		public string EmptyCells;
+
+		public string Fill;
+
+		public string FillOpacity;
+
+		public string FillRule;
+
+		public string Filter;
+
+		public string Flex;
+
+		public string FlexBasis;
+
+		public string FlexDirection;
+
+		public string FlexFlow;
+
+		public string FlexGrow;
+
+		public string FlexShrink;
+
+		public string FlexWrap;
+
+		public string FloodColor;
+
+		public string FloodOpacity;
+
+		public string Font;
+
+		public string FontFamily;
+
+		public string FontFeatureSettings;
+
+		public string FontKerning;
+
+		public string FontLanguageOverride;
+
+		public string FontSize;
+
+		public string FontSizeAdjust;
+
+		public string FontStretch;
+
+		public string FontStyle;
+
+		public string FontSynthesis;
+
+		public string FontVariant;
+
+		public string FontVariantAlternates;
+
+		public string FontVariantCaps;
+
+		public string FontVariantEastAsian;
+
+		public string FontVariantLigatures;
+
+		public string FontVariantNumeric;
+
+		public string FontVariantPosition;
+
+		public string FontWeight;
 
 		public extern CSSValue GetPropertyCSSValue(string property);
 
@@ -785,878 +235,260 @@ namespace Bridge.Html5
 
 		public extern string GetPropertyValue(string property);
 
-		[FieldProperty]
-		public extern string Grid
-		{
-			get;
-			set;
-		}
+		public string Grid;
 
-		[FieldProperty]
-		public extern string GridArea
-		{
-			get;
-			set;
-		}
+		public string GridArea;
 
-		[FieldProperty]
-		public extern string GridAutoColumns
-		{
-			get;
-			set;
-		}
+		public string GridAutoColumns;
 
-		[FieldProperty]
-		public extern string GridAutoFlow
-		{
-			get;
-			set;
-		}
+		public string GridAutoFlow;
 
-		[FieldProperty]
-		public extern string GridAutoPosition
-		{
-			get;
-			set;
-		}
+		public string GridAutoPosition;
 
-		[FieldProperty]
-		public extern string GridAutoRows
-		{
-			get;
-			set;
-		}
+		public string GridAutoRows;
 
-		[FieldProperty]
-		public extern string GridColumn
-		{
-			get;
-			set;
-		}
+		public string GridColumn;
 
-		[FieldProperty]
-		public extern string GridColumnEnd
-		{
-			get;
-			set;
-		}
+		public string GridColumnEnd;
 
-		[FieldProperty]
-		public extern string GridColumnStart
-		{
-			get;
-			set;
-		}
+		public string GridColumnStart;
 
-		[FieldProperty]
-		public extern string GridRow
-		{
-			get;
-			set;
-		}
+		public string GridRow;
 
-		[FieldProperty]
-		public extern string GridRowEnd
-		{
-			get;
-			set;
-		}
+		public string GridRowEnd;
 
-		[FieldProperty]
-		public extern string GridRowStart
-		{
-			get;
-			set;
-		}
+		public string GridRowStart;
 
-		[FieldProperty]
-		public extern string GridTemplate
-		{
-			get;
-			set;
-		}
+		public string GridTemplate;
 
-		[FieldProperty]
-		public extern string GridTemplateAreas
-		{
-			get;
-			set;
-		}
+		public string GridTemplateAreas;
 
-		[FieldProperty]
-		public extern string GridTemplateColumns
-		{
-			get;
-			set;
-		}
+		public string GridTemplateColumns;
 
-		[FieldProperty]
-		public extern string GridTemplateRows
-		{
-			get;
-			set;
-		}
+		public string GridTemplateRows;
 
-		[FieldProperty]
-		public extern string Height
-		{
-			get;
-			set;
-		}
+		public string Height;
 
-		[FieldProperty]
-		public extern string ImageOrientation
-		{
-			get;
-			set;
-		}
+		public string ImageOrientation;
 
-		[FieldProperty]
-		public extern string ImageRendering
-		{
-			get;
-			set;
-		}
+		public string ImageRendering;
 
-		[FieldProperty]
-		public extern string ImeMode
-		{
-			get;
-			set;
-		}
+		public string ImeMode;
 
 		public extern string Item(int index);
 
-		[FieldProperty]
-		public extern string JustifyContent
-		{
-			get;
-			set;
-		}
+		public string JustifyContent;
 
-		[FieldProperty]
-		public extern string Left
-		{
-			get;
-			set;
-		}
+		public string Left;
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
-		[FieldProperty]
-		public extern string LetterSpacing
-		{
-			get;
-			set;
-		}
+		public string LetterSpacing;
 
-		[FieldProperty]
-		public extern string LightingColor
-		{
-			get;
-			set;
-		}
+		public string LightingColor;
 
-		[FieldProperty]
-		public extern string LineHeight
-		{
-			get;
-			set;
-		}
+		public string LineHeight;
 
-		[FieldProperty]
-		public extern string ListStyle
-		{
-			get;
-			set;
-		}
+		public string ListStyle;
 
-		[FieldProperty]
-		public extern string ListStyleImage
-		{
-			get;
-			set;
-		}
+		public string ListStyleImage;
 
-		[FieldProperty]
-		public extern string ListStylePosition
-		{
-			get;
-			set;
-		}
+		public string ListStylePosition;
 
-		[FieldProperty]
-		public extern string ListStyleType
-		{
-			get;
-			set;
-		}
+		public string ListStyleType;
 
-		[FieldProperty]
-		public extern string Margin
-		{
-			get;
-			set;
-		}
+		public string Margin;
 
-		[FieldProperty]
-		public extern string MarginBottom
-		{
-			get;
-			set;
-		}
+		public string MarginBottom;
 
-		[FieldProperty]
-		public extern string MarginLeft
-		{
-			get;
-			set;
-		}
+		public string MarginLeft;
 
-		[FieldProperty]
-		public extern string MarginRight
-		{
-			get;
-			set;
-		}
+		public string MarginRight;
 
-		[FieldProperty]
-		public extern string MarginTop
-		{
-			get;
-			set;
-		}
+		public string MarginTop;
 
-		[FieldProperty]
-		public extern string Marker
-		{
-			get;
-			set;
-		}
+		public string Marker;
 
-		[FieldProperty]
-		public extern string MarkerEnd
-		{
-			get;
-			set;
-		}
+		public string MarkerEnd;
 
-		[FieldProperty]
-		public extern string MarkerMid
-		{
-			get;
-			set;
-		}
+		public string MarkerMid;
 
-		[FieldProperty]
-		public extern string MarkerOffset
-		{
-			get;
-			set;
-		}
+		public string MarkerOffset;
 
-		[FieldProperty]
-		public extern string MarkerStart
-		{
-			get;
-			set;
-		}
+		public string MarkerStart;
 
-		[FieldProperty]
-		public extern string Marks
-		{
-			get;
-			set;
-		}
+		public string Marks;
 
-		[FieldProperty]
-		public extern string Mask
-		{
-			get;
-			set;
-		}
+		public string Mask;
 
-		[FieldProperty]
-		public extern string MaskType
-		{
-			get;
-			set;
-		}
+		public string MaskType;
 
-		[FieldProperty]
-		public extern string MaxHeight
-		{
-			get;
-			set;
-		}
+		public string MaxHeight;
 
-		[FieldProperty]
-		public extern string MaxWidth
-		{
-			get;
-			set;
-		}
+		public string MaxWidth;
 
-		[FieldProperty]
-		public extern string MinHeight
-		{
-			get;
-			set;
-		}
+		public string MinHeight;
 
-		[FieldProperty]
-		public extern string MinWidth
-		{
-			get;
-			set;
-		}
+		public string MinWidth;
 
-		[FieldProperty]
-		public extern string MixBlendMode
-		{
-			get;
-			set;
-		}
+		public string MixBlendMode;
 
-		[FieldProperty]
-		public extern string Opacity
-		{
-			get;
-			set;
-		}
+		public string Opacity;
 
-		[FieldProperty]
-		public extern string Order
-		{
-			get;
-			set;
-		}
+		public string Order;
 
-		[FieldProperty]
-		public extern string Orphans
-		{
-			get;
-			set;
-		}
+		public string Orphans;
 
-		[FieldProperty]
-		public extern string Outline
-		{
-			get;
-			set;
-		}
+		public string Outline;
 
-		[FieldProperty]
-		public extern string OutlineColor
-		{
-			get;
-			set;
-		}
+		public string OutlineColor;
 
-		[FieldProperty]
-		public extern string OutlineOffset
-		{
-			get;
-			set;
-		}
+		public string OutlineOffset;
 
-		[FieldProperty]
-		public extern string OutlineStyle
-		{
-			get;
-			set;
-		}
+		public string OutlineStyle;
 
-		[FieldProperty]
-		public extern string OutlineWidth
-		{
-			get;
-			set;
-		}
+		public string OutlineWidth;
 
-		[FieldProperty]
-		public extern string Overflow
-		{
-			get;
-			set;
-		}
+		public string Overflow;
 
-		[FieldProperty]
-		public extern string OverflowClipBox
-		{
-			get;
-			set;
-		}
+		public string OverflowClipBox;
 
-		[FieldProperty]
-		public extern string OverflowX
-		{
-			get;
-			set;
-		}
+		public string OverflowX;
 
-		[FieldProperty]
-		public extern string OverflowY
-		{
-			get;
-			set;
-		}
+		public string OverflowY;
 
-		[FieldProperty]
-		public extern string Padding
-		{
-			get;
-			set;
-		}
+		public string Padding;
 
-		[FieldProperty]
-		public extern string PaddingBottom
-		{
-			get;
-			set;
-		}
+		public string PaddingBottom;
 
-		[FieldProperty]
-		public extern string PaddingLeft
-		{
-			get;
-			set;
-		}
+		public string PaddingLeft;
 
-		[FieldProperty]
-		public extern string PaddingRight
-		{
-			get;
-			set;
-		}
+		public string PaddingRight;
 
-		[FieldProperty]
-		public extern string PaddingTop
-		{
-			get;
-			set;
-		}
+		public string PaddingTop;
 
-		[FieldProperty]
-		public extern string Page
-		{
-			get;
-			set;
-		}
+		public string Page;
 
-		[FieldProperty]
-		public extern string PageBreakAfter
-		{
-			get;
-			set;
-		}
+		public string PageBreakAfter;
 
-		[FieldProperty]
-		public extern string PageBreakBefore
-		{
-			get;
-			set;
-		}
+		public string PageBreakBefore;
 
-		[FieldProperty]
-		public extern string PageBreakInside
-		{
-			get;
-			set;
-		}
+		public string PageBreakInside;
 
-		[FieldProperty]
-		public extern string PaintOrder
-		{
-			get;
-			set;
-		}
+		public string PaintOrder;
 
-		[FieldProperty]
-		public extern CSSRule ParentRule
-		{
-			get;
-		}
+		public readonly CSSRule ParentRule;
 
-		[FieldProperty]
-		public extern string Perspective
-		{
-			get;
-			set;
-		}
+		public string Perspective;
 
-		[FieldProperty]
-		public extern string PerspectiveOrigin
-		{
-			get;
-			set;
-		}
+		public string PerspectiveOrigin;
 
-		[FieldProperty]
-		public extern string PointerEvents
-		{
-			get;
-			set;
-		}
+		public string PointerEvents;
 
-		[FieldProperty]
-		public extern string Position
-		{
-			get;
-			set;
-		}
+		public string Position;
 
-		[FieldProperty]
-		public extern string Quotes
-		{
-			get;
-			set;
-		}
+		public string Quotes;
 
 		public extern string RemoveProperty(string property);
 
-		[FieldProperty]
-		public extern string Resize
-		{
-			get;
-			set;
-		}
+		public string Resize;
 
-		[FieldProperty]
-		public extern string Right
-		{
-			get;
-			set;
-		}
+		public string Right;
 
 		public extern void SetProperty(string property, string value);
 
 		public extern void SetProperty(string property, string value, string priority);
 
-		[FieldProperty]
-		public extern string ShapeRendering
-		{
-			get;
-			set;
-		}
+		public string ShapeRendering;
 
-		[FieldProperty]
-		public extern string Size
-		{
-			get;
-			set;
-		}
+		public string Size;
 
-		[FieldProperty]
-		public extern string StopColor
-		{
-			get;
-			set;
-		}
+		public string StopColor;
 
-		[FieldProperty]
-		public extern string StopOpacity
-		{
-			get;
-			set;
-		}
+		public string StopOpacity;
 
-		[FieldProperty]
-		public extern string Stroke
-		{
-			get;
-			set;
-		}
+		public string Stroke;
 
-		[FieldProperty]
-		public extern string StrokeDasharray
-		{
-			get;
-			set;
-		}
+		public string StrokeDasharray;
 
-		[FieldProperty]
-		public extern string StrokeDashoffset
-		{
-			get;
-			set;
-		}
+		public string StrokeDashoffset;
 
-		[FieldProperty]
-		public extern string StrokeLinecap
-		{
-			get;
-			set;
-		}
+		public string StrokeLinecap;
 
-		[FieldProperty]
-		public extern string StrokeLinejoin
-		{
-			get;
-			set;
-		}
+		public string StrokeLinejoin;
 
-		[FieldProperty]
-		public extern string StrokeMiterlimit
-		{
-			get;
-			set;
-		}
+		public string StrokeMiterlimit;
 
-		[FieldProperty]
-		public extern string StrokeOpacity
-		{
-			get;
-			set;
-		}
+		public string StrokeOpacity;
 
-		[FieldProperty]
-		public extern string StrokeWidth
-		{
-			get;
-			set;
-		}
+		public string StrokeWidth;
 
-		[FieldProperty]
-		public extern string TableLayout
-		{
-			get;
-			set;
-		}
+		public string TableLayout;
 
-		[FieldProperty]
-		public extern string TextAlign
-		{
-			get;
-			set;
-		}
+		public string TextAlign;
 
-		[FieldProperty]
-		public extern string TextAnchor
-		{
-			get;
-			set;
-		}
+		public string TextAnchor;
 
-		[FieldProperty]
-		public extern string TextCombineHorizontal
-		{
-			get;
-			set;
-		}
+		public string TextCombineHorizontal;
 
-		[FieldProperty]
-		public extern string TextDecoration
-		{
-			get;
-			set;
-		}
+		public string TextDecoration;
 
-		[FieldProperty]
-		public extern string TextIndent
-		{
-			get;
-			set;
-		}
+		public string TextIndent;
 
-		[FieldProperty]
-		public extern string TextOrientation
-		{
-			get;
-			set;
-		}
+		public string TextOrientation;
 
-		[FieldProperty]
-		public extern string TextOverflow
-		{
-			get;
-			set;
-		}
+		public string TextOverflow;
 
-		[FieldProperty]
-		public extern string TextRendering
-		{
-			get;
-			set;
-		}
+		public string TextRendering;
 
-		[FieldProperty]
-		public extern string TextShadow
-		{
-			get;
-			set;
-		}
+		public string TextShadow;
 
-		[FieldProperty]
-		public extern string TextTransform
-		{
-			get;
-			set;
-		}
+		public string TextTransform;
 
-		[FieldProperty]
-		public extern string Top
-		{
-			get;
-			set;
-		}
+		public string Top;
 
-		[FieldProperty]
-		public extern string TouchAction
-		{
-			get;
-			set;
-		}
+		public string TouchAction;
 
-		[FieldProperty]
-		public extern string Transform
-		{
-			get;
-			set;
-		}
+		public string Transform;
 
-		[FieldProperty]
-		public extern string TransformOrigin
-		{
-			get;
-			set;
-		}
+		public string TransformOrigin;
 
-		[FieldProperty]
-		public extern string TransformStyle
-		{
-			get;
-			set;
-		}
+		public string TransformStyle;
 
-		[FieldProperty]
-		public extern string Transition
-		{
-			get;
-			set;
-		}
+		public string Transition;
 
-		[FieldProperty]
-		public extern string TransitionDelay
-		{
-			get;
-			set;
-		}
+		public string TransitionDelay;
 
-		[FieldProperty]
-		public extern string TransitionDuration
-		{
-			get;
-			set;
-		}
+		public string TransitionDuration;
 
-		[FieldProperty]
-		public extern string TransitionProperty
-		{
-			get;
-			set;
-		}
+		public string TransitionProperty;
 
-		[FieldProperty]
-		public extern string TransitionTimingFunction
-		{
-			get;
-			set;
-		}
+		public string TransitionTimingFunction;
 
-		[FieldProperty]
-		public extern string UnicodeBidi
-		{
-			get;
-			set;
-		}
+		public string UnicodeBidi;
 
-		[FieldProperty]
-		public extern string VectorEffect
-		{
-			get;
-			set;
-		}
+		public string VectorEffect;
 
-		[FieldProperty]
-		public extern string VerticalAlign
-		{
-			get;
-			set;
-		}
+		public string VerticalAlign;
 
-		[FieldProperty]
-		public extern string Visibility
-		{
-			get;
-			set;
-		}
+		public string Visibility;
 
-		[FieldProperty]
-		public extern string WhiteSpace
-		{
-			get;
-			set;
-		}
+		public string WhiteSpace;
 
-		[FieldProperty]
-		public extern string Widows
-		{
-			get;
-			set;
-		}
+		public string Widows;
 
-		[FieldProperty]
-		public extern string Width
-		{
-			get;
-			set;
-		}
+		public string Width;
 
-		[FieldProperty]
-		public extern string WillChange
-		{
-			get;
-			set;
-		}
+		public string WillChange;
 
-		[FieldProperty]
-		public extern string WordBreak
-		{
-			get;
-			set;
-		}
+		public string WordBreak;
 
-		[FieldProperty]
-		public extern string WordSpacing
-		{
-			get;
-			set;
-		}
+		public string WordSpacing;
 
-		[FieldProperty]
-		public extern string WordWrap
-		{
-			get;
-			set;
-		}
+		public string WordWrap;
 
-		[FieldProperty]
-		public extern string WritingMode
-		{
-			get;
-			set;
-		}
+		public string WritingMode;
 
-		[FieldProperty]
-		public extern string ZIndex
-		{
-			get;
-			set;
-		}
+		public string ZIndex;
 	}
 }

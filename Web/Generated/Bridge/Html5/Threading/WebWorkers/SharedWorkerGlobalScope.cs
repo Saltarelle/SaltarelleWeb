@@ -44,58 +44,26 @@
 		[ExpandParams]
 		public static extern void ImportScripts(params string[] urls);
 
-		[FieldProperty]
-		public static extern WorkerLocation Location
-		{
-			get;
-		}
+		public static readonly WorkerLocation Location;
 
-		[FieldProperty]
-		public static extern string Name
-		{
-			get;
-		}
+		public static readonly string Name;
 
-		[FieldProperty]
-		public static extern WorkerNavigator Navigator
-		{
-			get;
-		}
+		public static readonly WorkerNavigator Navigator;
 
-		[FieldProperty, Name("onclose")]
-		public static extern HtmlEventHandler OnClose
-		{
-			get;
-			set;
-		}
+		[Name("onclose")]
+		public static HtmlEventHandler OnClose;
 
-		[FieldProperty, Name("onconnect")]
-		public static extern HtmlEventHandler OnConnect
-		{
-			get;
-			set;
-		}
+		[Name("onconnect")]
+		public static HtmlEventHandler OnConnect;
 
-		[FieldProperty, Name("onerror")]
-		public static extern ErrorEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public static ErrorEventHandler OnError;
 
-		[FieldProperty, Name("onoffline")]
-		public static extern HtmlEventHandler OnOffline
-		{
-			get;
-			set;
-		}
+		[Name("onoffline")]
+		public static HtmlEventHandler OnOffline;
 
-		[FieldProperty, Name("ononline")]
-		public static extern HtmlEventHandler OnOnline
-		{
-			get;
-			set;
-		}
+		[Name("ononline")]
+		public static HtmlEventHandler OnOnline;
 
 		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WorkerGlobalScope> listener);
 
@@ -121,11 +89,7 @@
 
 		public static extern void RemoveEventListener(WorkerGlobalScopeEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public static extern WorkerGlobalScope Self
-		{
-			get;
-		}
+		public static readonly WorkerGlobalScope Self;
 
 		public static extern string ToNativeLineEndings(string @string);
 	}

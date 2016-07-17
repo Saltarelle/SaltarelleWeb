@@ -25,57 +25,25 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<BatteryManager> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Charging
-		{
-			get;
-		}
+		public readonly bool Charging;
 
-		[FieldProperty]
-		public extern double ChargingTime
-		{
-			get;
-		}
+		public readonly double ChargingTime;
 
-		[FieldProperty]
-		public extern double DischargingTime
-		{
-			get;
-		}
+		public readonly double DischargingTime;
 
-		[FieldProperty]
-		public extern double Level
-		{
-			get;
-		}
+		public readonly double Level;
 
-		[FieldProperty, Name("onchargingchange")]
-		public extern HtmlEventHandler OnChargingchange
-		{
-			get;
-			set;
-		}
+		[Name("onchargingchange")]
+		public HtmlEventHandler OnChargingchange;
 
-		[FieldProperty, Name("onchargingtimechange")]
-		public extern HtmlEventHandler OnChargingtimechange
-		{
-			get;
-			set;
-		}
+		[Name("onchargingtimechange")]
+		public HtmlEventHandler OnChargingtimechange;
 
-		[FieldProperty, Name("ondischargingtimechange")]
-		public extern HtmlEventHandler OnDischargingtimechange
-		{
-			get;
-			set;
-		}
+		[Name("ondischargingtimechange")]
+		public HtmlEventHandler OnDischargingtimechange;
 
-		[FieldProperty, Name("onlevelchange")]
-		public extern HtmlEventHandler OnLevelchange
-		{
-			get;
-			set;
-		}
+		[Name("onlevelchange")]
+		public HtmlEventHandler OnLevelchange;
 
 		public extern void RemoveEventListener(BatteryManagerEvents type, Action listener);
 

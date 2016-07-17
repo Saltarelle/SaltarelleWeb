@@ -5,17 +5,8 @@
 	{
 		internal extern SVGAnimatedBoolean();
 
-		[FieldProperty]
-		public extern bool AnimVal
-		{
-			get;
-		}
+		public readonly bool AnimVal;
 
-		[FieldProperty]
-		public extern bool BaseVal
-		{
-			get;
-			set;
-		}
+		public bool BaseVal;
 	}
 }

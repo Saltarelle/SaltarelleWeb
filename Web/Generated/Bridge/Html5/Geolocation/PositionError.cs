@@ -5,34 +5,16 @@
 	{
 		internal extern PositionError();
 
-		[FieldProperty]
-		public extern ushort Code
-		{
-			get;
-		}
+		public readonly ushort Code;
 
-		[FieldProperty]
-		public extern string Message
-		{
-			get;
-		}
+		public readonly string Message;
 
-		[FieldProperty, Name("PERMISSION_DENIED")]
-		public extern ushort PERMISSION_DENIED
-		{
-			get;
-		}
+		[Name("PERMISSION_DENIED")]
+		public readonly ushort PERMISSION_DENIED;
 
-		[FieldProperty, Name("POSITION_UNAVAILABLE")]
-		public extern ushort POSITION_UNAVAILABLE
-		{
-			get;
-		}
+		[Name("POSITION_UNAVAILABLE")]
+		public readonly ushort POSITION_UNAVAILABLE;
 
-		[FieldProperty]
-		public extern ushort TIMEOUT
-		{
-			get;
-		}
+		public readonly ushort TIMEOUT;
 	}
 }

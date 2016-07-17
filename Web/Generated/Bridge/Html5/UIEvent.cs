@@ -11,62 +11,25 @@ namespace Bridge.Html5
 
 		public extern UIEvent(string type, UIEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern bool CancelBubble
-		{
-			get;
-			set;
-		}
+		public bool CancelBubble;
 
-		[FieldProperty]
-		public extern int Detail
-		{
-			get;
-		}
+		public readonly int Detail;
 
 		public extern void InitUIEvent(string aType, bool aCanBubble, bool aCancelable, WindowInstance aView, int aDetail);
 
-		[FieldProperty]
-		public extern bool IsChar
-		{
-			get;
-		}
+		public readonly bool IsChar;
 
-		[FieldProperty]
-		public extern int LayerX
-		{
-			get;
-		}
+		public readonly int LayerX;
 
-		[FieldProperty]
-		public extern int LayerY
-		{
-			get;
-		}
+		public readonly int LayerY;
 
-		[FieldProperty]
-		public extern int PageX
-		{
-			get;
-		}
+		public readonly int PageX;
 
-		[FieldProperty]
-		public extern int PageY
-		{
-			get;
-		}
+		public readonly int PageY;
 
-		[FieldProperty]
-		public extern int RangeOffset
-		{
-			get;
-		}
+		public readonly int RangeOffset;
 
-		[FieldProperty]
-		public extern XmlNode RangeParent
-		{
-			get;
-		}
+		public readonly XmlNode RangeParent;
 
 		[Name("SCROLL_PAGE_DOWN")]
 		public const int SCROLL_PAGE_DOWN = 32768;
@@ -74,16 +37,8 @@ namespace Bridge.Html5
 		[Name("SCROLL_PAGE_UP")]
 		public const int SCROLL_PAGE_UP = -32768;
 
-		[FieldProperty]
-		public extern WindowInstance View
-		{
-			get;
-		}
+		public readonly WindowInstance View;
 
-		[FieldProperty]
-		public extern int Which
-		{
-			get;
-		}
+		public readonly int Which;
 	}
 }

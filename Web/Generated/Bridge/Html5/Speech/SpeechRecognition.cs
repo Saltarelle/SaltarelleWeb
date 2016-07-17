@@ -27,117 +27,48 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Continuous
-		{
-			get;
-			set;
-		}
+		public bool Continuous;
 
-		[FieldProperty]
-		public extern SpeechGrammarList Grammars
-		{
-			get;
-			set;
-		}
+		public SpeechGrammarList Grammars;
 
-		[FieldProperty]
-		public extern bool InterimResults
-		{
-			get;
-			set;
-		}
+		public bool InterimResults;
 
-		[FieldProperty]
-		public extern string Lang
-		{
-			get;
-			set;
-		}
+		public string Lang;
 
-		[FieldProperty]
-		public extern int MaxAlternatives
-		{
-			get;
-			set;
-		}
+		public int MaxAlternatives;
 
-		[FieldProperty, Name("onaudioend")]
-		public extern HtmlEventHandler OnAudioend
-		{
-			get;
-			set;
-		}
+		[Name("onaudioend")]
+		public HtmlEventHandler OnAudioend;
 
-		[FieldProperty, Name("onaudiostart")]
-		public extern HtmlEventHandler OnAudiostart
-		{
-			get;
-			set;
-		}
+		[Name("onaudiostart")]
+		public HtmlEventHandler OnAudiostart;
 
-		[FieldProperty, Name("onend")]
-		public extern HtmlEventHandler OnEnd
-		{
-			get;
-			set;
-		}
+		[Name("onend")]
+		public HtmlEventHandler OnEnd;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onnomatch")]
-		public extern HtmlEventHandler OnNomatch
-		{
-			get;
-			set;
-		}
+		[Name("onnomatch")]
+		public HtmlEventHandler OnNomatch;
 
-		[FieldProperty, Name("onresult")]
-		public extern HtmlEventHandler OnResult
-		{
-			get;
-			set;
-		}
+		[Name("onresult")]
+		public HtmlEventHandler OnResult;
 
-		[FieldProperty, Name("onsoundend")]
-		public extern HtmlEventHandler OnSoundend
-		{
-			get;
-			set;
-		}
+		[Name("onsoundend")]
+		public HtmlEventHandler OnSoundend;
 
-		[FieldProperty, Name("onsoundstart")]
-		public extern HtmlEventHandler OnSoundstart
-		{
-			get;
-			set;
-		}
+		[Name("onsoundstart")]
+		public HtmlEventHandler OnSoundstart;
 
-		[FieldProperty, Name("onspeechend")]
-		public extern HtmlEventHandler OnSpeechend
-		{
-			get;
-			set;
-		}
+		[Name("onspeechend")]
+		public HtmlEventHandler OnSpeechend;
 
-		[FieldProperty, Name("onspeechstart")]
-		public extern HtmlEventHandler OnSpeechstart
-		{
-			get;
-			set;
-		}
+		[Name("onspeechstart")]
+		public HtmlEventHandler OnSpeechstart;
 
-		[FieldProperty, Name("onstart")]
-		public extern HtmlEventHandler OnStart
-		{
-			get;
-			set;
-		}
+		[Name("onstart")]
+		public HtmlEventHandler OnStart;
 
 		public extern void RemoveEventListener(SpeechRecognitionEvents type, Action listener);
 
@@ -159,12 +90,7 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SpeechRecognition> listener, bool capture);
 
-		[FieldProperty]
-		public extern string ServiceURI
-		{
-			get;
-			set;
-		}
+		public string ServiceURI;
 
 		public extern void Start();
 

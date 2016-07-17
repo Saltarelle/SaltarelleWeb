@@ -5,16 +5,8 @@
 	{
 		internal extern SVGAnimatedNumberList();
 
-		[FieldProperty]
-		public extern SVGNumberList AnimVal
-		{
-			get;
-		}
+		public readonly SVGNumberList AnimVal;
 
-		[FieldProperty]
-		public extern SVGNumberList BaseVal
-		{
-			get;
-		}
+		public readonly SVGNumberList BaseVal;
 	}
 }

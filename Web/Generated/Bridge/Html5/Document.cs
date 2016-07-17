@@ -9,6 +9,8 @@ namespace Bridge.Html5
 	[Namespace("false"), External, Name("document")]
 	public static partial class Document
 	{
+		public static readonly XmlElement ActiveElement;
+
 		public static extern void AddEventListener(DocumentBaseEvents type, Action listener);
 
 		public static extern void AddEventListener(DocumentBaseEvents type, Action listener, bool capture);
@@ -77,55 +79,24 @@ namespace Bridge.Html5
 
 		public static extern XmlNode AdoptNode(XmlNode node);
 
-		[FieldProperty]
-		public static extern string AlinkColor
-		{
-			get;
-			set;
-		}
+		public static string AlinkColor;
 
-		[FieldProperty]
-		public static extern object All
-		{
-			get;
-		}
+		public static readonly object All;
 
-		[FieldProperty]
-		public static extern ElementCollection Anchors
-		{
-			get;
-		}
+		public static readonly ElementCollection Anchors;
 
 		public static extern XmlNode AppendChild(XmlNode node);
 
-		[FieldProperty]
-		public static extern ElementCollection Applets
-		{
-			get;
-		}
+		public static readonly ElementCollection Applets;
 
 		[Name("ATTRIBUTE_NODE")]
 		public const ushort ATTRIBUTE_NODE = 2;
 
-		[FieldProperty]
-		public static extern string BaseURI
-		{
-			get;
-		}
+		public static readonly string BaseURI;
 
-		[FieldProperty]
-		public static extern string BgColor
-		{
-			get;
-			set;
-		}
+		public static string BgColor;
 
-		[FieldProperty]
-		public static extern Element Body
-		{
-			get;
-			set;
-		}
+		public static Element Body;
 
 		public static extern void CaptureEvents();
 
@@ -134,23 +105,13 @@ namespace Bridge.Html5
 		[Name("CDATA_SECTION_NODE")]
 		public const ushort CDATA_SECTION_NODE = 4;
 
-		[FieldProperty]
-		public static extern string CharacterSet
-		{
-			get;
-		}
+		public static readonly string CharacterSet;
 
-		[FieldProperty]
-		public static extern int ChildElementCount
-		{
-			get;
-		}
+		public static readonly int ChildElementCount;
 
-		[FieldProperty]
-		public static extern XmlNodeList ChildNodes
-		{
-			get;
-		}
+		public static readonly XmlNodeList ChildNodes;
+
+		public static readonly XmlElementCollection Children;
 
 		public static extern void Clear();
 
@@ -165,19 +126,11 @@ namespace Bridge.Html5
 
 		public static extern DocumentPosition CompareDocumentPosition(XmlNode other);
 
-		[FieldProperty]
-		public static extern string CompatMode
-		{
-			get;
-		}
+		public static readonly string CompatMode;
 
 		public static extern bool Contains(XmlNode other);
 
-		[FieldProperty]
-		public static extern string ContentType
-		{
-			get;
-		}
+		public static readonly string ContentType;
 
 		public static extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from);
 
@@ -191,12 +144,7 @@ namespace Bridge.Html5
 
 		public static extern DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
 
-		[FieldProperty]
-		public static extern string Cookie
-		{
-			get;
-			set;
-		}
+		public static string Cookie;
 
 		public static extern XmlAttribute CreateAttribute(string name);
 
@@ -267,33 +215,17 @@ namespace Bridge.Html5
 
 		public static extern TreeWalker CreateTreeWalker(XmlNode root, NodeFilter whatToShow, INodeFilter filter);
 
-		[FieldProperty]
-		public static extern WindowInstance DefaultView
-		{
-			get;
-		}
+		public static readonly XmlElement CurrentScript;
 
-		[FieldProperty]
-		public static extern string DesignMode
-		{
-			get;
-			set;
-		}
+		public static readonly WindowInstance DefaultView;
 
-		[FieldProperty]
-		public static extern string Dir
-		{
-			get;
-			set;
-		}
+		public static string DesignMode;
+
+		public static string Dir;
 
 		public static extern bool DispatchEvent(Event @event);
 
-		[FieldProperty]
-		public static extern DocumentType Doctype
-		{
-			get;
-		}
+		public static readonly DocumentType Doctype;
 
 		[Name("DOCUMENT_FRAGMENT_NODE")]
 		public const ushort DOCUMENT_FRAGMENT_NODE = 11;
@@ -322,27 +254,16 @@ namespace Bridge.Html5
 		[Name("DOCUMENT_TYPE_NODE")]
 		public const ushort DOCUMENT_TYPE_NODE = 10;
 
-		[FieldProperty]
-		public static extern string DocumentURI
-		{
-			get;
-		}
+		public static readonly XmlElement DocumentElement;
 
-		[FieldProperty]
-		public static extern string Domain
-		{
-			get;
-			set;
-		}
+		public static readonly string DocumentURI;
+
+		public static string Domain;
 
 		[Name("ELEMENT_NODE")]
 		public const ushort ELEMENT_NODE = 1;
 
-		[FieldProperty]
-		public static extern ElementCollection Embeds
-		{
-			get;
-		}
+		public static readonly ElementCollection Embeds;
 
 		public static extern void EnableStyleSheetsForSet(string name);
 
@@ -360,24 +281,13 @@ namespace Bridge.Html5
 
 		public static extern bool ExecCommand(string commandId, bool showUI, string value);
 
-		[FieldProperty]
-		public static extern string FgColor
-		{
-			get;
-			set;
-		}
+		public static string FgColor;
 
-		[FieldProperty]
-		public static extern XmlNode FirstChild
-		{
-			get;
-		}
+		public static readonly XmlNode FirstChild;
 
-		[FieldProperty]
-		public static extern ElementCollection Forms
-		{
-			get;
-		}
+		public static readonly XmlElement FirstElementChild;
+
+		public static readonly ElementCollection Forms;
 
 		public static extern DOMQuad[] GetBoxQuads();
 
@@ -399,39 +309,19 @@ namespace Bridge.Html5
 
 		public static extern bool HasFocus();
 
-		[FieldProperty]
-		public static extern HeadElement Head
-		{
-			get;
-		}
+		public static readonly HeadElement Head;
 
-		[FieldProperty]
-		public static extern bool Hidden
-		{
-			get;
-		}
+		public static readonly bool Hidden;
 
-		[FieldProperty]
-		public static extern ElementCollection Images
-		{
-			get;
-		}
+		public static readonly ElementCollection Images;
 
-		[FieldProperty]
-		public static extern DOMImplementation Implementation
-		{
-			get;
-		}
+		public static readonly DOMImplementation Implementation;
 
 		public static extern XmlNode ImportNode(XmlNode node);
 
 		public static extern XmlNode ImportNode(XmlNode node, bool deep);
 
-		[FieldProperty]
-		public static extern string InputEncoding
-		{
-			get;
-		}
+		public static readonly string InputEncoding;
 
 		public static extern XmlNode InsertBefore(XmlNode node, XmlNode child);
 
@@ -439,606 +329,262 @@ namespace Bridge.Html5
 
 		public static extern bool IsEqualNode(XmlNode node);
 
-		[FieldProperty]
-		public static extern XmlNode LastChild
-		{
-			get;
-		}
+		public static readonly XmlNode LastChild;
 
-		[FieldProperty]
-		public static extern string LastModified
-		{
-			get;
-		}
+		public static readonly XmlElement LastElementChild;
 
-		[FieldProperty]
-		public static extern string LastStyleSheetSet
-		{
-			get;
-		}
+		public static readonly string LastModified;
 
-		[FieldProperty]
-		public static extern string LinkColor
-		{
-			get;
-			set;
-		}
+		public static readonly string LastStyleSheetSet;
 
-		[FieldProperty]
-		public static extern ElementCollection Links
-		{
-			get;
-		}
+		public static string LinkColor;
 
-		[FieldProperty]
-		public static extern string LocalName
-		{
-			get;
-		}
+		public static readonly ElementCollection Links;
 
-		[FieldProperty]
-		public static extern Location Location
-		{
-			get;
-		}
+		public static readonly string LocalName;
+
+		public static readonly Location Location;
 
 		public static extern string LookupNamespaceURI(string prefix);
 
 		public static extern string LookupPrefix(string @namespace);
 
-		[FieldProperty]
-		public static extern string NamespaceURI
-		{
-			get;
-		}
+		public static readonly string NamespaceURI;
 
-		[FieldProperty]
-		public static extern XmlNode NextSibling
-		{
-			get;
-		}
+		public static readonly XmlNode NextSibling;
 
-		[FieldProperty]
-		public static extern string NodeName
-		{
-			get;
-		}
+		public static readonly string NodeName;
 
-		[FieldProperty]
-		public static extern XmlNodeType NodeType
-		{
-			get;
-		}
+		public static readonly XmlNodeType NodeType;
 
-		[FieldProperty]
-		public static extern string NodeValue
-		{
-			get;
-			set;
-		}
+		public static string NodeValue;
 
 		public static extern void Normalize();
 
 		[Name("NOTATION_NODE")]
 		public const ushort NOTATION_NODE = 12;
 
-		[FieldProperty, Name("onabort")]
-		public static extern HtmlEventHandler OnAbort
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onafterscriptexecute")]
-		public static extern HtmlEventHandler OnAfterscriptexecute
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onbeforescriptexecute")]
-		public static extern HtmlEventHandler OnBeforescriptexecute
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onblur")]
-		public static extern HtmlEventHandler OnBlur
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncanplay")]
-		public static extern HtmlEventHandler OnCanplay
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncanplaythrough")]
-		public static extern HtmlEventHandler OnCanplaythrough
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onchange")]
-		public static extern HtmlEventHandler OnChange
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onclick")]
-		public static extern HtmlEventHandler OnClick
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncontextmenu")]
-		public static extern HtmlEventHandler OnContextmenu
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncopy")]
-		public static extern HtmlEventHandler OnCopy
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncut")]
-		public static extern HtmlEventHandler OnCut
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondblclick")]
-		public static extern HtmlEventHandler OnDblclick
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondrag")]
-		public static extern HtmlEventHandler OnDrag
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragend")]
-		public static extern HtmlEventHandler OnDragend
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragenter")]
-		public static extern HtmlEventHandler OnDragenter
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragleave")]
-		public static extern HtmlEventHandler OnDragleave
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragover")]
-		public static extern HtmlEventHandler OnDragover
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragstart")]
-		public static extern HtmlEventHandler OnDragstart
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondrop")]
-		public static extern HtmlEventHandler OnDrop
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondurationchange")]
-		public static extern HtmlEventHandler OnDurationchange
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onemptied")]
-		public static extern HtmlEventHandler OnEmptied
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onended")]
-		public static extern HtmlEventHandler OnEnded
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onerror")]
-		public static extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onfocus")]
-		public static extern HtmlEventHandler OnFocus
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oninput")]
-		public static extern HtmlEventHandler OnInput
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oninvalid")]
-		public static extern HtmlEventHandler OnInvalid
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onkeydown")]
-		public static extern HtmlEventHandler OnKeydown
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onkeypress")]
-		public static extern HtmlEventHandler OnKeypress
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onkeyup")]
-		public static extern HtmlEventHandler OnKeyup
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onload")]
-		public static extern HtmlEventHandler OnLoad
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onloadeddata")]
-		public static extern HtmlEventHandler OnLoadeddata
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onloadedmetadata")]
-		public static extern HtmlEventHandler OnLoadedmetadata
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onloadstart")]
-		public static extern HtmlEventHandler OnLoadstart
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmousedown")]
-		public static extern HtmlEventHandler OnMousedown
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseenter")]
-		public static extern HtmlEventHandler OnMouseenter
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseleave")]
-		public static extern HtmlEventHandler OnMouseleave
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmousemove")]
-		public static extern HtmlEventHandler OnMousemove
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseout")]
-		public static extern HtmlEventHandler OnMouseout
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseover")]
-		public static extern HtmlEventHandler OnMouseover
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseup")]
-		public static extern HtmlEventHandler OnMouseup
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpaste")]
-		public static extern HtmlEventHandler OnPaste
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpause")]
-		public static extern HtmlEventHandler OnPause
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onplay")]
-		public static extern HtmlEventHandler OnPlay
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onplaying")]
-		public static extern HtmlEventHandler OnPlaying
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointercancel")]
-		public static extern HtmlEventHandler OnPointercancel
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerdown")]
-		public static extern HtmlEventHandler OnPointerdown
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerenter")]
-		public static extern HtmlEventHandler OnPointerenter
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerleave")]
-		public static extern HtmlEventHandler OnPointerleave
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointermove")]
-		public static extern HtmlEventHandler OnPointermove
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerout")]
-		public static extern HtmlEventHandler OnPointerout
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerover")]
-		public static extern HtmlEventHandler OnPointerover
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerup")]
-		public static extern HtmlEventHandler OnPointerup
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onprogress")]
-		public static extern HtmlEventHandler OnProgress
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onratechange")]
-		public static extern HtmlEventHandler OnRatechange
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onreadystatechange")]
-		public static extern HtmlEventHandler OnReadystatechange
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onreset")]
-		public static extern HtmlEventHandler OnReset
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onscroll")]
-		public static extern HtmlEventHandler OnScroll
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onseeked")]
-		public static extern HtmlEventHandler OnSeeked
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onseeking")]
-		public static extern HtmlEventHandler OnSeeking
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onselect")]
-		public static extern HtmlEventHandler OnSelect
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onshow")]
-		public static extern HtmlEventHandler OnShow
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onstalled")]
-		public static extern HtmlEventHandler OnStalled
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onsubmit")]
-		public static extern HtmlEventHandler OnSubmit
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onsuspend")]
-		public static extern HtmlEventHandler OnSuspend
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontimeupdate")]
-		public static extern HtmlEventHandler OnTimeupdate
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchcancel")]
-		public static extern HtmlEventHandler OnTouchcancel
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchend")]
-		public static extern HtmlEventHandler OnTouchend
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchenter")]
-		public static extern HtmlEventHandler OnTouchenter
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchleave")]
-		public static extern HtmlEventHandler OnTouchleave
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchmove")]
-		public static extern HtmlEventHandler OnTouchmove
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchstart")]
-		public static extern HtmlEventHandler OnTouchstart
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onvolumechange")]
-		public static extern HtmlEventHandler OnVolumechange
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onwaiting")]
-		public static extern HtmlEventHandler OnWaiting
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onwheel")]
-		public static extern HtmlEventHandler OnWheel
-		{
-			get;
-			set;
-		}
+		[Name("onabort")]
+		public static HtmlEventHandler OnAbort;
+
+		[Name("onafterscriptexecute")]
+		public static HtmlEventHandler OnAfterscriptexecute;
+
+		[Name("onbeforescriptexecute")]
+		public static HtmlEventHandler OnBeforescriptexecute;
+
+		[Name("onblur")]
+		public static HtmlEventHandler OnBlur;
+
+		[Name("oncanplay")]
+		public static HtmlEventHandler OnCanplay;
+
+		[Name("oncanplaythrough")]
+		public static HtmlEventHandler OnCanplaythrough;
+
+		[Name("onchange")]
+		public static HtmlEventHandler OnChange;
+
+		[Name("onclick")]
+		public static HtmlEventHandler OnClick;
+
+		[Name("oncontextmenu")]
+		public static HtmlEventHandler OnContextmenu;
+
+		[Name("oncopy")]
+		public static HtmlEventHandler OnCopy;
+
+		[Name("oncut")]
+		public static HtmlEventHandler OnCut;
+
+		[Name("ondblclick")]
+		public static HtmlEventHandler OnDblclick;
+
+		[Name("ondrag")]
+		public static HtmlEventHandler OnDrag;
+
+		[Name("ondragend")]
+		public static HtmlEventHandler OnDragend;
+
+		[Name("ondragenter")]
+		public static HtmlEventHandler OnDragenter;
+
+		[Name("ondragleave")]
+		public static HtmlEventHandler OnDragleave;
+
+		[Name("ondragover")]
+		public static HtmlEventHandler OnDragover;
+
+		[Name("ondragstart")]
+		public static HtmlEventHandler OnDragstart;
+
+		[Name("ondrop")]
+		public static HtmlEventHandler OnDrop;
+
+		[Name("ondurationchange")]
+		public static HtmlEventHandler OnDurationchange;
+
+		[Name("onemptied")]
+		public static HtmlEventHandler OnEmptied;
+
+		[Name("onended")]
+		public static HtmlEventHandler OnEnded;
+
+		[Name("onerror")]
+		public static HtmlEventHandler OnError;
+
+		[Name("onfocus")]
+		public static HtmlEventHandler OnFocus;
+
+		[Name("oninput")]
+		public static HtmlEventHandler OnInput;
+
+		[Name("oninvalid")]
+		public static HtmlEventHandler OnInvalid;
+
+		[Name("onkeydown")]
+		public static HtmlEventHandler OnKeydown;
+
+		[Name("onkeypress")]
+		public static HtmlEventHandler OnKeypress;
+
+		[Name("onkeyup")]
+		public static HtmlEventHandler OnKeyup;
+
+		[Name("onload")]
+		public static HtmlEventHandler OnLoad;
+
+		[Name("onloadeddata")]
+		public static HtmlEventHandler OnLoadeddata;
+
+		[Name("onloadedmetadata")]
+		public static HtmlEventHandler OnLoadedmetadata;
+
+		[Name("onloadstart")]
+		public static HtmlEventHandler OnLoadstart;
+
+		[Name("onmousedown")]
+		public static HtmlEventHandler OnMousedown;
+
+		[Name("onmouseenter")]
+		public static HtmlEventHandler OnMouseenter;
+
+		[Name("onmouseleave")]
+		public static HtmlEventHandler OnMouseleave;
+
+		[Name("onmousemove")]
+		public static HtmlEventHandler OnMousemove;
+
+		[Name("onmouseout")]
+		public static HtmlEventHandler OnMouseout;
+
+		[Name("onmouseover")]
+		public static HtmlEventHandler OnMouseover;
+
+		[Name("onmouseup")]
+		public static HtmlEventHandler OnMouseup;
+
+		[Name("onpaste")]
+		public static HtmlEventHandler OnPaste;
+
+		[Name("onpause")]
+		public static HtmlEventHandler OnPause;
+
+		[Name("onplay")]
+		public static HtmlEventHandler OnPlay;
+
+		[Name("onplaying")]
+		public static HtmlEventHandler OnPlaying;
+
+		[Name("onpointercancel")]
+		public static HtmlEventHandler OnPointercancel;
+
+		[Name("onpointerdown")]
+		public static HtmlEventHandler OnPointerdown;
+
+		[Name("onpointerenter")]
+		public static HtmlEventHandler OnPointerenter;
+
+		[Name("onpointerleave")]
+		public static HtmlEventHandler OnPointerleave;
+
+		[Name("onpointermove")]
+		public static HtmlEventHandler OnPointermove;
+
+		[Name("onpointerout")]
+		public static HtmlEventHandler OnPointerout;
+
+		[Name("onpointerover")]
+		public static HtmlEventHandler OnPointerover;
+
+		[Name("onpointerup")]
+		public static HtmlEventHandler OnPointerup;
+
+		[Name("onprogress")]
+		public static HtmlEventHandler OnProgress;
+
+		[Name("onratechange")]
+		public static HtmlEventHandler OnRatechange;
+
+		[Name("onreadystatechange")]
+		public static HtmlEventHandler OnReadystatechange;
+
+		[Name("onreset")]
+		public static HtmlEventHandler OnReset;
+
+		[Name("onscroll")]
+		public static HtmlEventHandler OnScroll;
+
+		[Name("onseeked")]
+		public static HtmlEventHandler OnSeeked;
+
+		[Name("onseeking")]
+		public static HtmlEventHandler OnSeeking;
+
+		[Name("onselect")]
+		public static HtmlEventHandler OnSelect;
+
+		[Name("onshow")]
+		public static HtmlEventHandler OnShow;
+
+		[Name("onstalled")]
+		public static HtmlEventHandler OnStalled;
+
+		[Name("onsubmit")]
+		public static HtmlEventHandler OnSubmit;
+
+		[Name("onsuspend")]
+		public static HtmlEventHandler OnSuspend;
+
+		[Name("ontimeupdate")]
+		public static HtmlEventHandler OnTimeupdate;
+
+		[Name("ontouchcancel")]
+		public static HtmlEventHandler OnTouchcancel;
+
+		[Name("ontouchend")]
+		public static HtmlEventHandler OnTouchend;
+
+		[Name("ontouchenter")]
+		public static HtmlEventHandler OnTouchenter;
+
+		[Name("ontouchleave")]
+		public static HtmlEventHandler OnTouchleave;
+
+		[Name("ontouchmove")]
+		public static HtmlEventHandler OnTouchmove;
+
+		[Name("ontouchstart")]
+		public static HtmlEventHandler OnTouchstart;
+
+		[Name("onvolumechange")]
+		public static HtmlEventHandler OnVolumechange;
+
+		[Name("onwaiting")]
+		public static HtmlEventHandler OnWaiting;
+
+		[Name("onwheel")]
+		public static HtmlEventHandler OnWheel;
 
 		public static extern DocumentBase Open();
 
@@ -1050,41 +596,19 @@ namespace Bridge.Html5
 
 		public static extern WindowInstance Open(string url, string name, string features, bool replace);
 
-		[FieldProperty]
-		public static extern DocumentBase OwnerDocument
-		{
-			get;
-		}
+		public static readonly DocumentBase OwnerDocument;
 
-		[FieldProperty]
-		public static extern XmlNode ParentNode
-		{
-			get;
-		}
+		public static readonly XmlElement ParentElement;
 
-		[FieldProperty]
-		public static extern ElementCollection Plugins
-		{
-			get;
-		}
+		public static readonly XmlNode ParentNode;
 
-		[FieldProperty]
-		public static extern string PreferredStyleSheetSet
-		{
-			get;
-		}
+		public static readonly ElementCollection Plugins;
 
-		[FieldProperty]
-		public static extern string Prefix
-		{
-			get;
-		}
+		public static readonly string PreferredStyleSheetSet;
 
-		[FieldProperty]
-		public static extern XmlNode PreviousSibling
-		{
-			get;
-		}
+		public static readonly string Prefix;
+
+		public static readonly XmlNode PreviousSibling;
 
 		[Name("PROCESSING_INSTRUCTION_NODE")]
 		public const ushort PROCESSING_INSTRUCTION_NODE = 7;
@@ -1099,17 +623,9 @@ namespace Bridge.Html5
 
 		public static extern string QueryCommandValue(string commandId);
 
-		[FieldProperty]
-		public static extern string ReadyState
-		{
-			get;
-		}
+		public static readonly string ReadyState;
 
-		[FieldProperty]
-		public static extern string Referrer
-		{
-			get;
-		}
+		public static readonly string Referrer;
 
 		public static extern object RegisterElement(string name);
 
@@ -1187,66 +703,26 @@ namespace Bridge.Html5
 
 		public static extern XmlNode ReplaceChild(XmlNode node, XmlNode child);
 
-		[FieldProperty]
-		public static extern ElementCollection Scripts
-		{
-			get;
-		}
+		public static readonly ElementCollection Scripts;
 
-		[FieldProperty]
-		public static extern string SelectedStyleSheetSet
-		{
-			get;
-			set;
-		}
+		public static string SelectedStyleSheetSet;
 
-		[FieldProperty]
-		public static extern StyleSheetList StyleSheets
-		{
-			get;
-		}
+		public static readonly StyleSheetList StyleSheets;
 
-		[FieldProperty]
-		public static extern DOMStringList StyleSheetSets
-		{
-			get;
-		}
+		public static readonly DOMStringList StyleSheetSets;
 
 		[Name("TEXT_NODE")]
 		public const ushort TEXT_NODE = 3;
 
-		[FieldProperty]
-		public static extern string TextContent
-		{
-			get;
-			set;
-		}
+		public static string TextContent;
 
-		[FieldProperty]
-		public static extern string Title
-		{
-			get;
-			set;
-		}
+		public static string Title;
 
-		[FieldProperty]
-		public static extern string URL
-		{
-			get;
-		}
+		public static readonly string URL;
 
-		[FieldProperty]
-		public static extern VisibilityState VisibilityState
-		{
-			get;
-		}
+		public static readonly VisibilityState VisibilityState;
 
-		[FieldProperty]
-		public static extern string VlinkColor
-		{
-			get;
-			set;
-		}
+		public static string VlinkColor;
 
 		[ExpandParams]
 		public static extern void Write(params string[] text);

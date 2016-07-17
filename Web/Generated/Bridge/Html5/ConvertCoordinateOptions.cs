@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class ConvertCoordinateOptions
 	{
-		public extern CSSBoxType FromBox
-		{
-			get;
-			set;
-		}
+		public CSSBoxType FromBox;
 
-		public extern CSSBoxType ToBox
-		{
-			get;
-			set;
-		}
+		public CSSBoxType ToBox;
 	}
 }

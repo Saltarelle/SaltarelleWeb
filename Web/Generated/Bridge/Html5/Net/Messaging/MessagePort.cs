@@ -27,12 +27,8 @@
 
 		public extern void Close();
 
-		[FieldProperty, Name("onmessage")]
-		public extern HtmlEventHandler OnMessage
-		{
-			get;
-			set;
-		}
+		[Name("onmessage")]
+		public HtmlEventHandler OnMessage;
 
 		public extern void PostMessage(object message);
 

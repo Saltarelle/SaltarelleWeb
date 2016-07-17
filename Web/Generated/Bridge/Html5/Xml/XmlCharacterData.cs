@@ -27,34 +27,17 @@
 
 		public extern void AppendData(string data);
 
-		[FieldProperty]
-		public extern string Data
-		{
-			get;
-			set;
-		}
+		public string Data;
 
 		public extern void DeleteData(int offset, int count);
 
 		public extern void InsertData(int offset, string data);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
-		[FieldProperty]
-		public extern XmlElement NextElementSibling
-		{
-			get;
-		}
+		public readonly XmlElement NextElementSibling;
 
-		[FieldProperty]
-		public extern XmlElement PreviousElementSibling
-		{
-			get;
-		}
+		public readonly XmlElement PreviousElementSibling;
 
 		public extern void Remove();
 

@@ -11,10 +11,6 @@
 
 		public extern void InitPageTransitionEvent(string type, bool canBubble, bool cancelable, bool persisted);
 
-		[FieldProperty]
-		public extern bool Persisted
-		{
-			get;
-		}
+		public readonly bool Persisted;
 	}
 }

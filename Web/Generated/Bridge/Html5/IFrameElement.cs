@@ -27,75 +27,27 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern bool AllowFullscreen
-		{
-			get;
-			set;
-		}
+		public bool AllowFullscreen;
 
-		[FieldProperty]
-		public extern DocumentBase ContentDocument
-		{
-			get;
-		}
+		public readonly DocumentBase ContentDocument;
 
-		[FieldProperty]
-		public extern WindowInstance ContentWindow
-		{
-			get;
-		}
+		public readonly WindowInstance ContentWindow;
 
-		[FieldProperty]
-		public extern string FrameBorder
-		{
-			get;
-			set;
-		}
+		public string FrameBorder;
 
 		public extern DocumentBase GetSVGDocument();
 
-		[FieldProperty]
-		public extern string Height
-		{
-			get;
-			set;
-		}
+		public string Height;
 
-		[FieldProperty]
-		public extern string LongDesc
-		{
-			get;
-			set;
-		}
+		public string LongDesc;
 
-		[FieldProperty]
-		public extern string MarginHeight
-		{
-			get;
-			set;
-		}
+		public string MarginHeight;
 
-		[FieldProperty]
-		public extern string MarginWidth
-		{
-			get;
-			set;
-		}
+		public string MarginWidth;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern void RemoveEventListener(IFrameElementEvents type, Action listener);
 
@@ -117,38 +69,14 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<IFrameElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern DOMSettableTokenList Sandbox
-		{
-			get;
-		}
+		public readonly DOMSettableTokenList Sandbox;
 
-		[FieldProperty]
-		public extern string Scrolling
-		{
-			get;
-			set;
-		}
+		public string Scrolling;
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 
-		[FieldProperty]
-		public extern string Srcdoc
-		{
-			get;
-			set;
-		}
+		public string Srcdoc;
 
-		[FieldProperty]
-		public extern string Width
-		{
-			get;
-			set;
-		}
+		public string Width;
 	}
 }

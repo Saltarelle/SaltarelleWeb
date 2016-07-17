@@ -25,29 +25,13 @@
 
 		public extern void AddEventListener(SVGFilterElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGUnitType> FilterUnits
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGUnitType> FilterUnits;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
-		[FieldProperty]
-		public extern SVGAnimatedString Href
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Href;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGUnitType> PrimitiveUnits
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGUnitType> PrimitiveUnits;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFilterElement> listener);
 
@@ -78,22 +62,10 @@
 		[Name("SVG_UNIT_TYPE_USERSPACEONUSE")]
 		public const ushort SVG_UNIT_TYPE_USERSPACEONUSE = 1;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 	}
 }

@@ -5,16 +5,8 @@
 	{
 		internal extern SpeechRecognitionAlternative();
 
-		[FieldProperty]
-		public extern double Confidence
-		{
-			get;
-		}
+		public readonly double Confidence;
 
-		[FieldProperty]
-		public extern string Transcript
-		{
-			get;
-		}
+		public readonly string Transcript;
 	}
 }

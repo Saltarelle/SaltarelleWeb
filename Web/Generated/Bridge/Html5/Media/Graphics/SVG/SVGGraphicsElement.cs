@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(SVGGraphicsElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGElement FarthestViewportElement
-		{
-			get;
-		}
+		public readonly SVGElement FarthestViewportElement;
 
 		public extern SVGRect GetBBox();
 
@@ -41,11 +37,7 @@
 
 		public extern bool HasExtension(string extension);
 
-		[FieldProperty]
-		public extern SVGElement NearestViewportElement
-		{
-			get;
-		}
+		public readonly SVGElement NearestViewportElement;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGGraphicsElement> listener);
 
@@ -67,28 +59,12 @@
 
 		public extern void RemoveEventListener(SVGGraphicsElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGStringList RequiredExtensions
-		{
-			get;
-		}
+		public readonly SVGStringList RequiredExtensions;
 
-		[FieldProperty]
-		public extern SVGStringList RequiredFeatures
-		{
-			get;
-		}
+		public readonly SVGStringList RequiredFeatures;
 
-		[FieldProperty]
-		public extern SVGStringList SystemLanguage
-		{
-			get;
-		}
+		public readonly SVGStringList SystemLanguage;
 
-		[FieldProperty]
-		public extern SVGAnimatedTransformList Transform
-		{
-			get;
-		}
+		public readonly SVGAnimatedTransformList Transform;
 	}
 }

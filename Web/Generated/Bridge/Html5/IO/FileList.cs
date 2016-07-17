@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5.IO
+﻿namespace Bridge.Html5.IO
 {
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class FileList
@@ -13,15 +11,8 @@ namespace Bridge.Html5.IO
 			get;
 		}
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<File> GetEnumerator();
-
 		public extern File Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 	}
 }

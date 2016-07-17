@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class UIEventInit : EventInit
 	{
-		public extern int Detail
-		{
-			get;
-			set;
-		}
+		public int Detail;
 
-		public extern WindowInstance View
-		{
-			get;
-			set;
-		}
+		public WindowInstance View;
 	}
 }

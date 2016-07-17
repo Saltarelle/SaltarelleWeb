@@ -9,16 +9,8 @@
 
 		public extern DOMError(string name, string message);
 
-		[FieldProperty]
-		public extern string Message
-		{
-			get;
-		}
+		public readonly string Message;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 	}
 }

@@ -9,11 +9,7 @@
 
 		public extern CustomEvent(string type, CustomEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern object Detail
-		{
-			get;
-		}
+		public readonly object Detail;
 
 		public extern void InitCustomEvent(string type, bool canBubble, bool cancelable, object detail);
 	}

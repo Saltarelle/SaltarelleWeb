@@ -15,30 +15,14 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void CopyToChannel(Float32Array source, int channelNumber, int startInChannel);
 
-		[FieldProperty]
-		public extern double Duration
-		{
-			get;
-		}
+		public readonly double Duration;
 
 		public extern Float32Array GetChannelData(int channel);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
-		[FieldProperty]
-		public extern int NumberOfChannels
-		{
-			get;
-		}
+		public readonly int NumberOfChannels;
 
-		[FieldProperty]
-		public extern double SampleRate
-		{
-			get;
-		}
+		public readonly double SampleRate;
 	}
 }

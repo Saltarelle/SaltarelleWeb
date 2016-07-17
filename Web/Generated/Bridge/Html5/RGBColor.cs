@@ -5,28 +5,12 @@
 	{
 		internal extern RGBColor();
 
-		[FieldProperty]
-		public extern CSSPrimitiveValue Alpha
-		{
-			get;
-		}
+		public readonly CSSPrimitiveValue Alpha;
 
-		[FieldProperty]
-		public extern CSSPrimitiveValue Blue
-		{
-			get;
-		}
+		public readonly CSSPrimitiveValue Blue;
 
-		[FieldProperty]
-		public extern CSSPrimitiveValue Green
-		{
-			get;
-		}
+		public readonly CSSPrimitiveValue Green;
 
-		[FieldProperty]
-		public extern CSSPrimitiveValue Red
-		{
-			get;
-		}
+		public readonly CSSPrimitiveValue Red;
 	}
 }

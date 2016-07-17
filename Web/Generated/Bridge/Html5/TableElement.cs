@@ -25,47 +25,17 @@
 
 		public extern void AddEventListener(TableElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern string BgColor
-		{
-			get;
-			set;
-		}
+		public string BgColor;
 
-		[FieldProperty]
-		public extern string Border
-		{
-			get;
-			set;
-		}
+		public string Border;
 
-		[FieldProperty]
-		public extern TableCaptionElement Caption
-		{
-			get;
-			set;
-		}
+		public TableCaptionElement Caption;
 
-		[FieldProperty]
-		public extern string CellPadding
-		{
-			get;
-			set;
-		}
+		public string CellPadding;
 
-		[FieldProperty]
-		public extern string CellSpacing
-		{
-			get;
-			set;
-		}
+		public string CellSpacing;
 
 		public extern Element CreateCaption();
 
@@ -83,12 +53,7 @@
 
 		public extern void DeleteTHead();
 
-		[FieldProperty]
-		public extern string Frame
-		{
-			get;
-			set;
-		}
+		public string Frame;
 
 		public extern Element InsertRow();
 
@@ -114,51 +79,18 @@
 
 		public extern void RemoveEventListener(TableElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern ElementCollection Rows
-		{
-			get;
-		}
+		public readonly ElementCollection Rows;
 
-		[FieldProperty]
-		public extern string Rules
-		{
-			get;
-			set;
-		}
+		public string Rules;
 
-		[FieldProperty]
-		public extern string Summary
-		{
-			get;
-			set;
-		}
+		public string Summary;
 
-		[FieldProperty]
-		public extern ElementCollection TBodies
-		{
-			get;
-		}
+		public readonly ElementCollection TBodies;
 
-		[FieldProperty]
-		public extern TableSectionElement TFoot
-		{
-			get;
-			set;
-		}
+		public TableSectionElement TFoot;
 
-		[FieldProperty]
-		public extern TableSectionElement THead
-		{
-			get;
-			set;
-		}
+		public TableSectionElement THead;
 
-		[FieldProperty]
-		public extern string Width
-		{
-			get;
-			set;
-		}
+		public string Width;
 	}
 }

@@ -49,11 +49,6 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ContentElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Select
-		{
-			get;
-			set;
-		}
+		public string Select;
 	}
 }

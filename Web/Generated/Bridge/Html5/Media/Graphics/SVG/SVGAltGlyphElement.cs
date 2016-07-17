@@ -25,25 +25,11 @@
 
 		public extern void AddEventListener(SVGAltGlyphElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Format
-		{
-			get;
-			set;
-		}
+		public string Format;
 
-		[FieldProperty]
-		public extern string GlyphRef
-		{
-			get;
-			set;
-		}
+		public string GlyphRef;
 
-		[FieldProperty]
-		public extern SVGAnimatedString Href
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Href;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGAltGlyphElement> listener);
 

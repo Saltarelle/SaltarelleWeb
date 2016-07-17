@@ -3,10 +3,6 @@
 	[External, Serializable]
 	public partial class UserProximityEventInit : EventInit
 	{
-		public extern bool Near
-		{
-			get;
-			set;
-		}
+		public bool Near;
 	}
 }

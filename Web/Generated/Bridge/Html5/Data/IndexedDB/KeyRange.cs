@@ -11,39 +11,23 @@
 
 		public static extern KeyRange Bound(object lower, object upper, bool lowerOpen, bool upperOpen);
 
-		[FieldProperty]
-		public extern object Lower
-		{
-			get;
-		}
+		public readonly object Lower;
 
 		public static extern KeyRange LowerBound(object lower);
 
 		public static extern KeyRange LowerBound(object lower, bool open);
 
-		[FieldProperty]
-		public extern bool LowerOpen
-		{
-			get;
-		}
+		public readonly bool LowerOpen;
 
 		[Name("only")]
 		public static extern KeyRange OnLy(object value);
 
-		[FieldProperty]
-		public extern object Upper
-		{
-			get;
-		}
+		public readonly object Upper;
 
 		public static extern KeyRange UpperBound(object upper);
 
 		public static extern KeyRange UpperBound(object upper, bool open);
 
-		[FieldProperty]
-		public extern bool UpperOpen
-		{
-			get;
-		}
+		public readonly bool UpperOpen;
 	}
 }

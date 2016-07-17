@@ -25,117 +25,49 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string ALink
-		{
-			get;
-			set;
-		}
+		public string ALink;
 
-		[FieldProperty]
-		public extern string Background
-		{
-			get;
-			set;
-		}
+		public string Background;
 
-		[FieldProperty]
-		public extern string BgColor
-		{
-			get;
-			set;
-		}
+		public string BgColor;
 
-		[FieldProperty]
-		public extern string Link
-		{
-			get;
-			set;
-		}
+		public string Link;
 
-		[FieldProperty, Name("onafterprint")]
-		public extern HtmlEventHandler OnAfterprint
-		{
-			get;
-			set;
-		}
+		[Name("onafterprint")]
+		public HtmlEventHandler OnAfterprint;
 
-		[FieldProperty, Name("onbeforeprint")]
-		public extern HtmlEventHandler OnBeforeprint
-		{
-			get;
-			set;
-		}
+		[Name("onbeforeprint")]
+		public HtmlEventHandler OnBeforeprint;
 
-		[FieldProperty, Name("onbeforeunload")]
-		public extern BeforeUnloadEventHandler OnBeforeunload
-		{
-			get;
-			set;
-		}
+		[Name("onbeforeunload")]
+		public BeforeUnloadEventHandler OnBeforeunload;
 
-		[FieldProperty, Name("onhashchange")]
-		public extern HtmlEventHandler OnHashchange
-		{
-			get;
-			set;
-		}
+		[Name("onhashchange")]
+		public HtmlEventHandler OnHashchange;
 
-		[FieldProperty, Name("onmessage")]
-		public extern HtmlEventHandler OnMessage
-		{
-			get;
-			set;
-		}
+		[Name("onmessage")]
+		public HtmlEventHandler OnMessage;
 
-		[FieldProperty, Name("onoffline")]
-		public extern HtmlEventHandler OnOffline
-		{
-			get;
-			set;
-		}
+		[Name("onoffline")]
+		public HtmlEventHandler OnOffline;
 
-		[FieldProperty, Name("ononline")]
-		public extern HtmlEventHandler OnOnline
-		{
-			get;
-			set;
-		}
+		[Name("ononline")]
+		public HtmlEventHandler OnOnline;
 
-		[FieldProperty, Name("onpagehide")]
-		public extern HtmlEventHandler OnPagehide
-		{
-			get;
-			set;
-		}
+		[Name("onpagehide")]
+		public HtmlEventHandler OnPagehide;
 
-		[FieldProperty, Name("onpageshow")]
-		public extern HtmlEventHandler OnPageshow
-		{
-			get;
-			set;
-		}
+		[Name("onpageshow")]
+		public HtmlEventHandler OnPageshow;
 
-		[FieldProperty, Name("onpopstate")]
-		public extern HtmlEventHandler OnPopstate
-		{
-			get;
-			set;
-		}
+		[Name("onpopstate")]
+		public HtmlEventHandler OnPopstate;
 
-		[FieldProperty, Name("onresize")]
-		public extern HtmlEventHandler OnResize
-		{
-			get;
-			set;
-		}
+		[Name("onresize")]
+		public HtmlEventHandler OnResize;
 
-		[FieldProperty, Name("onunload")]
-		public extern HtmlEventHandler OnUnload
-		{
-			get;
-			set;
-		}
+		[Name("onunload")]
+		public HtmlEventHandler OnUnload;
 
 		public extern void RemoveEventListener(BodyElementEvents type, Action listener);
 
@@ -157,18 +89,8 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<BodyElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Text
-		{
-			get;
-			set;
-		}
+		public string Text;
 
-		[FieldProperty]
-		public extern string VLink
-		{
-			get;
-			set;
-		}
+		public string VLink;
 	}
 }

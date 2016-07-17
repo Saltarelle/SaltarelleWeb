@@ -5,11 +5,6 @@
 	{
 		internal extern SVGPathSegLinetoVerticalAbs();
 
-		[FieldProperty]
-		public extern double Y
-		{
-			get;
-			set;
-		}
+		public double Y;
 	}
 }

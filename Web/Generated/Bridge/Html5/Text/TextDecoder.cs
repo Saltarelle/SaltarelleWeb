@@ -17,10 +17,6 @@ namespace Bridge.Html5.Text
 
 		public extern string Decode(ArrayBufferView input, TextDecodeOptions options);
 
-		[FieldProperty]
-		public extern string Encoding
-		{
-			get;
-		}
+		public readonly string Encoding;
 	}
 }

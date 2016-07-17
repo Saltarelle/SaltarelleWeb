@@ -25,35 +25,15 @@
 
 		public extern void AddEventListener(XmlAttributeEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string LocalName
-		{
-			get;
-		}
+		public readonly string LocalName;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 
-		[FieldProperty]
-		public extern string NamespaceURI
-		{
-			get;
-		}
+		public readonly string NamespaceURI;
 
-		[FieldProperty]
-		public extern XmlElement OwnerElement
-		{
-			get;
-		}
+		public readonly XmlElement OwnerElement;
 
-		[FieldProperty]
-		public extern string Prefix
-		{
-			get;
-		}
+		public readonly string Prefix;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlAttribute> listener);
 
@@ -75,17 +55,8 @@
 
 		public extern void RemoveEventListener(XmlAttributeEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Specified
-		{
-			get;
-		}
+		public readonly bool Specified;
 
-		[FieldProperty]
-		public extern string Value
-		{
-			get;
-			set;
-		}
+		public string Value;
 	}
 }

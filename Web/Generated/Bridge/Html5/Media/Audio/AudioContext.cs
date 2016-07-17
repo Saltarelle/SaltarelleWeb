@@ -89,27 +89,15 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern WaveShaperNode CreateWaveShaper();
 
-		[FieldProperty]
-		public extern double CurrentTime
-		{
-			get;
-		}
+		public readonly double CurrentTime;
 
 		public extern void DecodeAudioData(ArrayBuffer audioData, DecodeSuccessCallback successCallback);
 
 		public extern void DecodeAudioData(ArrayBuffer audioData, DecodeSuccessCallback successCallback, DecodeErrorCallback errorCallback);
 
-		[FieldProperty]
-		public extern AudioDestinationNode Destination
-		{
-			get;
-		}
+		public readonly AudioDestinationNode Destination;
 
-		[FieldProperty]
-		public extern AudioListener Listener
-		{
-			get;
-		}
+		public readonly AudioListener Listener;
 
 		public extern void RemoveEventListener(AudioContextEvents type, Action listener);
 
@@ -131,10 +119,6 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<AudioContext> listener, bool capture);
 
-		[FieldProperty]
-		public extern double SampleRate
-		{
-			get;
-		}
+		public readonly double SampleRate;
 	}
 }

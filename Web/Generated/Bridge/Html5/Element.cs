@@ -7,18 +7,9 @@ namespace Bridge.Html5
 	{
 		internal extern Element();
 
-		[FieldProperty]
-		public extern string AccessKey
-		{
-			get;
-			set;
-		}
+		public string AccessKey;
 
-		[FieldProperty]
-		public extern string AccessKeyLabel
-		{
-			get;
-		}
+		public readonly string AccessKeyLabel;
 
 		public extern void AddEventListener(ElementEvents type, Action listener);
 
@@ -42,628 +33,259 @@ namespace Bridge.Html5
 
 		public extern void Blur();
 
-		[FieldProperty]
-		public extern string ClassName
-		{
-			get;
-			set;
-		}
+		public string ClassName;
 
 		public extern void Click();
 
-		[FieldProperty]
-		public extern string ContentEditable
-		{
-			get;
-			set;
-		}
+		public string ContentEditable;
 
-		[FieldProperty]
-		public extern MenuElement ContextMenu
-		{
-			get;
-		}
+		public readonly MenuElement ContextMenu;
 
-		[FieldProperty]
-		public extern DOMStringMap Dataset
-		{
-			get;
-		}
+		public readonly DOMStringMap Dataset;
 
-		[FieldProperty]
-		public extern string Dir
-		{
-			get;
-			set;
-		}
+		public string Dir;
 
-		[FieldProperty]
-		public extern bool Draggable
-		{
-			get;
-			set;
-		}
+		public bool Draggable;
 
 		public extern void Focus();
 
-		[FieldProperty]
-		public extern bool Hidden
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern bool IsContentEditable
-		{
-			get;
-		}
-
-		[FieldProperty]
-		public extern string ItemId
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern DOMSettableTokenList ItemProp
-		{
-			get;
-		}
-
-		[FieldProperty]
-		public extern DOMSettableTokenList ItemRef
-		{
-			get;
-		}
-
-		[FieldProperty]
-		public extern bool ItemScope
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern DOMSettableTokenList ItemType
-		{
-			get;
-		}
-
-		[FieldProperty]
-		public extern object ItemValue
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern string Lang
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty]
-		public extern int OffsetHeight
-		{
-			get;
-		}
-
-		[FieldProperty]
-		public extern int OffsetLeft
-		{
-			get;
-		}
-
-		[FieldProperty]
-		public extern Element OffsetParent
-		{
-			get;
-		}
-
-		[FieldProperty]
-		public extern int OffsetTop
-		{
-			get;
-		}
-
-		[FieldProperty]
-		public extern int OffsetWidth
-		{
-			get;
-		}
-
-		[FieldProperty, Name("onabort")]
-		public extern HtmlEventHandler OnAbort
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onblur")]
-		public extern HtmlEventHandler OnBlur
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncanplay")]
-		public extern HtmlEventHandler OnCanplay
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncanplaythrough")]
-		public extern HtmlEventHandler OnCanplaythrough
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onchange")]
-		public extern HtmlEventHandler OnChange
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onclick")]
-		public extern HtmlEventHandler OnClick
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncontextmenu")]
-		public extern HtmlEventHandler OnContextmenu
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncopy")]
-		public extern HtmlEventHandler OnCopy
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oncut")]
-		public extern HtmlEventHandler OnCut
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondblclick")]
-		public extern HtmlEventHandler OnDblclick
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondrag")]
-		public extern HtmlEventHandler OnDrag
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragend")]
-		public extern HtmlEventHandler OnDragend
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragenter")]
-		public extern HtmlEventHandler OnDragenter
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragleave")]
-		public extern HtmlEventHandler OnDragleave
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragover")]
-		public extern HtmlEventHandler OnDragover
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondragstart")]
-		public extern HtmlEventHandler OnDragstart
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondrop")]
-		public extern HtmlEventHandler OnDrop
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ondurationchange")]
-		public extern HtmlEventHandler OnDurationchange
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onemptied")]
-		public extern HtmlEventHandler OnEmptied
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onended")]
-		public extern HtmlEventHandler OnEnded
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onfocus")]
-		public extern HtmlEventHandler OnFocus
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oninput")]
-		public extern HtmlEventHandler OnInput
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("oninvalid")]
-		public extern HtmlEventHandler OnInvalid
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onkeydown")]
-		public extern HtmlEventHandler OnKeydown
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onkeypress")]
-		public extern HtmlEventHandler OnKeypress
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onkeyup")]
-		public extern HtmlEventHandler OnKeyup
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onload")]
-		public extern HtmlEventHandler OnLoad
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onloadeddata")]
-		public extern HtmlEventHandler OnLoadeddata
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onloadedmetadata")]
-		public extern HtmlEventHandler OnLoadedmetadata
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onloadstart")]
-		public extern HtmlEventHandler OnLoadstart
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmousedown")]
-		public extern HtmlEventHandler OnMousedown
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseenter")]
-		public extern HtmlEventHandler OnMouseenter
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseleave")]
-		public extern HtmlEventHandler OnMouseleave
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmousemove")]
-		public extern HtmlEventHandler OnMousemove
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseout")]
-		public extern HtmlEventHandler OnMouseout
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseover")]
-		public extern HtmlEventHandler OnMouseover
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onmouseup")]
-		public extern HtmlEventHandler OnMouseup
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpaste")]
-		public extern HtmlEventHandler OnPaste
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpause")]
-		public extern HtmlEventHandler OnPause
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onplay")]
-		public extern HtmlEventHandler OnPlay
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onplaying")]
-		public extern HtmlEventHandler OnPlaying
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointercancel")]
-		public extern HtmlEventHandler OnPointercancel
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerdown")]
-		public extern HtmlEventHandler OnPointerdown
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerenter")]
-		public extern HtmlEventHandler OnPointerenter
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerleave")]
-		public extern HtmlEventHandler OnPointerleave
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointermove")]
-		public extern HtmlEventHandler OnPointermove
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerout")]
-		public extern HtmlEventHandler OnPointerout
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerover")]
-		public extern HtmlEventHandler OnPointerover
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onpointerup")]
-		public extern HtmlEventHandler OnPointerup
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onprogress")]
-		public extern HtmlEventHandler OnProgress
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onratechange")]
-		public extern HtmlEventHandler OnRatechange
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onreset")]
-		public extern HtmlEventHandler OnReset
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onscroll")]
-		public extern HtmlEventHandler OnScroll
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onseeked")]
-		public extern HtmlEventHandler OnSeeked
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onseeking")]
-		public extern HtmlEventHandler OnSeeking
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onselect")]
-		public extern HtmlEventHandler OnSelect
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onshow")]
-		public extern HtmlEventHandler OnShow
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onstalled")]
-		public extern HtmlEventHandler OnStalled
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onsubmit")]
-		public extern HtmlEventHandler OnSubmit
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onsuspend")]
-		public extern HtmlEventHandler OnSuspend
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontimeupdate")]
-		public extern HtmlEventHandler OnTimeupdate
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchcancel")]
-		public extern HtmlEventHandler OnTouchcancel
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchend")]
-		public extern HtmlEventHandler OnTouchend
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchenter")]
-		public extern HtmlEventHandler OnTouchenter
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchleave")]
-		public extern HtmlEventHandler OnTouchleave
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchmove")]
-		public extern HtmlEventHandler OnTouchmove
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("ontouchstart")]
-		public extern HtmlEventHandler OnTouchstart
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onvolumechange")]
-		public extern HtmlEventHandler OnVolumechange
-		{
-			get;
-			set;
-		}
-
-		[FieldProperty, Name("onwaiting")]
-		public extern HtmlEventHandler OnWaiting
-		{
-			get;
-			set;
-		}
+		public bool Hidden;
+
+		public readonly bool IsContentEditable;
+
+		public string ItemId;
+
+		public readonly DOMSettableTokenList ItemProp;
+
+		public readonly DOMSettableTokenList ItemRef;
+
+		public bool ItemScope;
+
+		public readonly DOMSettableTokenList ItemType;
+
+		public object ItemValue;
+
+		public string Lang;
+
+		public readonly int OffsetHeight;
+
+		public readonly int OffsetLeft;
+
+		public readonly Element OffsetParent;
+
+		public readonly int OffsetTop;
+
+		public readonly int OffsetWidth;
+
+		[Name("onabort")]
+		public HtmlEventHandler OnAbort;
+
+		[Name("onblur")]
+		public HtmlEventHandler OnBlur;
+
+		[Name("oncanplay")]
+		public HtmlEventHandler OnCanplay;
+
+		[Name("oncanplaythrough")]
+		public HtmlEventHandler OnCanplaythrough;
+
+		[Name("onchange")]
+		public HtmlEventHandler OnChange;
+
+		[Name("onclick")]
+		public HtmlEventHandler OnClick;
+
+		[Name("oncontextmenu")]
+		public HtmlEventHandler OnContextmenu;
+
+		[Name("oncopy")]
+		public HtmlEventHandler OnCopy;
+
+		[Name("oncut")]
+		public HtmlEventHandler OnCut;
+
+		[Name("ondblclick")]
+		public HtmlEventHandler OnDblclick;
+
+		[Name("ondrag")]
+		public HtmlEventHandler OnDrag;
+
+		[Name("ondragend")]
+		public HtmlEventHandler OnDragend;
+
+		[Name("ondragenter")]
+		public HtmlEventHandler OnDragenter;
+
+		[Name("ondragleave")]
+		public HtmlEventHandler OnDragleave;
+
+		[Name("ondragover")]
+		public HtmlEventHandler OnDragover;
+
+		[Name("ondragstart")]
+		public HtmlEventHandler OnDragstart;
+
+		[Name("ondrop")]
+		public HtmlEventHandler OnDrop;
+
+		[Name("ondurationchange")]
+		public HtmlEventHandler OnDurationchange;
+
+		[Name("onemptied")]
+		public HtmlEventHandler OnEmptied;
+
+		[Name("onended")]
+		public HtmlEventHandler OnEnded;
+
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
+
+		[Name("onfocus")]
+		public HtmlEventHandler OnFocus;
+
+		[Name("oninput")]
+		public HtmlEventHandler OnInput;
+
+		[Name("oninvalid")]
+		public HtmlEventHandler OnInvalid;
+
+		[Name("onkeydown")]
+		public HtmlEventHandler OnKeydown;
+
+		[Name("onkeypress")]
+		public HtmlEventHandler OnKeypress;
+
+		[Name("onkeyup")]
+		public HtmlEventHandler OnKeyup;
+
+		[Name("onload")]
+		public HtmlEventHandler OnLoad;
+
+		[Name("onloadeddata")]
+		public HtmlEventHandler OnLoadeddata;
+
+		[Name("onloadedmetadata")]
+		public HtmlEventHandler OnLoadedmetadata;
+
+		[Name("onloadstart")]
+		public HtmlEventHandler OnLoadstart;
+
+		[Name("onmousedown")]
+		public HtmlEventHandler OnMousedown;
+
+		[Name("onmouseenter")]
+		public HtmlEventHandler OnMouseenter;
+
+		[Name("onmouseleave")]
+		public HtmlEventHandler OnMouseleave;
+
+		[Name("onmousemove")]
+		public HtmlEventHandler OnMousemove;
+
+		[Name("onmouseout")]
+		public HtmlEventHandler OnMouseout;
+
+		[Name("onmouseover")]
+		public HtmlEventHandler OnMouseover;
+
+		[Name("onmouseup")]
+		public HtmlEventHandler OnMouseup;
+
+		[Name("onpaste")]
+		public HtmlEventHandler OnPaste;
+
+		[Name("onpause")]
+		public HtmlEventHandler OnPause;
+
+		[Name("onplay")]
+		public HtmlEventHandler OnPlay;
+
+		[Name("onplaying")]
+		public HtmlEventHandler OnPlaying;
+
+		[Name("onpointercancel")]
+		public HtmlEventHandler OnPointercancel;
+
+		[Name("onpointerdown")]
+		public HtmlEventHandler OnPointerdown;
+
+		[Name("onpointerenter")]
+		public HtmlEventHandler OnPointerenter;
+
+		[Name("onpointerleave")]
+		public HtmlEventHandler OnPointerleave;
+
+		[Name("onpointermove")]
+		public HtmlEventHandler OnPointermove;
+
+		[Name("onpointerout")]
+		public HtmlEventHandler OnPointerout;
+
+		[Name("onpointerover")]
+		public HtmlEventHandler OnPointerover;
+
+		[Name("onpointerup")]
+		public HtmlEventHandler OnPointerup;
+
+		[Name("onprogress")]
+		public HtmlEventHandler OnProgress;
+
+		[Name("onratechange")]
+		public HtmlEventHandler OnRatechange;
+
+		[Name("onreset")]
+		public HtmlEventHandler OnReset;
+
+		[Name("onscroll")]
+		public HtmlEventHandler OnScroll;
+
+		[Name("onseeked")]
+		public HtmlEventHandler OnSeeked;
+
+		[Name("onseeking")]
+		public HtmlEventHandler OnSeeking;
+
+		[Name("onselect")]
+		public HtmlEventHandler OnSelect;
+
+		[Name("onshow")]
+		public HtmlEventHandler OnShow;
+
+		[Name("onstalled")]
+		public HtmlEventHandler OnStalled;
+
+		[Name("onsubmit")]
+		public HtmlEventHandler OnSubmit;
+
+		[Name("onsuspend")]
+		public HtmlEventHandler OnSuspend;
+
+		[Name("ontimeupdate")]
+		public HtmlEventHandler OnTimeupdate;
+
+		[Name("ontouchcancel")]
+		public HtmlEventHandler OnTouchcancel;
+
+		[Name("ontouchend")]
+		public HtmlEventHandler OnTouchend;
+
+		[Name("ontouchenter")]
+		public HtmlEventHandler OnTouchenter;
+
+		[Name("ontouchleave")]
+		public HtmlEventHandler OnTouchleave;
+
+		[Name("ontouchmove")]
+		public HtmlEventHandler OnTouchmove;
+
+		[Name("ontouchstart")]
+		public HtmlEventHandler OnTouchstart;
+
+		[Name("onvolumechange")]
+		public HtmlEventHandler OnVolumechange;
+
+		[Name("onwaiting")]
+		public HtmlEventHandler OnWaiting;
 
 		public extern void RemoveEventListener(ElementEvents type, Action listener);
 
@@ -685,38 +307,14 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Element> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Scrollgrab
-		{
-			get;
-			set;
-		}
+		public bool Scrollgrab;
 
-		[FieldProperty]
-		public extern bool Spellcheck
-		{
-			get;
-			set;
-		}
+		public bool Spellcheck;
 
-		[FieldProperty]
-		public extern Style Style
-		{
-			get;
-		}
+		public readonly Style Style;
 
-		[FieldProperty]
-		public extern int TabIndex
-		{
-			get;
-			set;
-		}
+		public int TabIndex;
 
-		[FieldProperty]
-		public extern string Title
-		{
-			get;
-			set;
-		}
+		public string Title;
 	}
 }

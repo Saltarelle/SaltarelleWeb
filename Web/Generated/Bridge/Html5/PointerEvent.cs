@@ -9,52 +9,20 @@
 
 		public extern PointerEvent(string type, PointerEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern int Height
-		{
-			get;
-		}
+		public readonly int Height;
 
-		[FieldProperty]
-		public extern bool IsPrimary
-		{
-			get;
-		}
+		public readonly bool IsPrimary;
 
-		[FieldProperty]
-		public extern int PointerId
-		{
-			get;
-		}
+		public readonly int PointerId;
 
-		[FieldProperty]
-		public extern string PointerType
-		{
-			get;
-		}
+		public readonly string PointerType;
 
-		[FieldProperty]
-		public extern double Pressure
-		{
-			get;
-		}
+		public readonly double Pressure;
 
-		[FieldProperty]
-		public extern int TiltX
-		{
-			get;
-		}
+		public readonly int TiltX;
 
-		[FieldProperty]
-		public extern int TiltY
-		{
-			get;
-		}
+		public readonly int TiltY;
 
-		[FieldProperty]
-		public extern int Width
-		{
-			get;
-		}
+		public readonly int Width;
 	}
 }

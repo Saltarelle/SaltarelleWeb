@@ -3,22 +3,10 @@
 	[External, Serializable]
 	public partial class ProgressEventInit : EventInit
 	{
-		public extern bool LengthComputable
-		{
-			get;
-			set;
-		}
+		public bool LengthComputable;
 
-		public extern ulong Loaded
-		{
-			get;
-			set;
-		}
+		public ulong Loaded;
 
-		public extern ulong Total
-		{
-			get;
-			set;
-		}
+		public ulong Total;
 	}
 }

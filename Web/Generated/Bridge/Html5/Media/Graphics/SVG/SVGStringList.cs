@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5.Media.Graphics.SVG
+﻿namespace Bridge.Html5.Media.Graphics.SVG
 {
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGStringList
@@ -17,26 +15,15 @@ namespace Bridge.Html5.Media.Graphics.SVG
 
 		public extern void Clear();
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<string> GetEnumerator();
-
 		public extern string GetItem(int index);
 
 		public extern string Initialize(string newItem);
 
 		public extern string InsertItemBefore(string newItem, int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
-		[FieldProperty]
-		public extern int NumberOfItems
-		{
-			get;
-		}
+		public readonly int NumberOfItems;
 
 		public extern string RemoveItem(int index);
 

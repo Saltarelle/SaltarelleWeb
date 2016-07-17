@@ -27,19 +27,11 @@
 
 		public extern void AddEventListener(WorkerEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onmessage")]
-		public extern HtmlEventHandler OnMessage
-		{
-			get;
-			set;
-		}
+		[Name("onmessage")]
+		public HtmlEventHandler OnMessage;
 
 		public extern void PostMessage(object message);
 

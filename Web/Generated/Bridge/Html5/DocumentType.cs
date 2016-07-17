@@ -27,23 +27,11 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture);
 
-		[FieldProperty]
-		public extern string InternalSubset
-		{
-			get;
-		}
+		public readonly string InternalSubset;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 
-		[FieldProperty]
-		public extern string PublicId
-		{
-			get;
-		}
+		public readonly string PublicId;
 
 		public extern void Remove();
 
@@ -67,10 +55,6 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentType> listener, bool capture);
 
-		[FieldProperty]
-		public extern string SystemId
-		{
-			get;
-		}
+		public readonly string SystemId;
 	}
 }

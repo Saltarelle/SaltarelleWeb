@@ -3,40 +3,16 @@
 	[External, Serializable]
 	public partial class RTCIceCandidateStats : RTCStats
 	{
-		public extern string CandidateId
-		{
-			get;
-			set;
-		}
+		public string CandidateId;
 
-		public extern RTCStatsIceCandidateType CandidateType
-		{
-			get;
-			set;
-		}
+		public RTCStatsIceCandidateType CandidateType;
 
-		public extern string ComponentId
-		{
-			get;
-			set;
-		}
+		public string ComponentId;
 
-		public extern string IpAddress
-		{
-			get;
-			set;
-		}
+		public string IpAddress;
 
-		public extern int PortNumber
-		{
-			get;
-			set;
-		}
+		public int PortNumber;
 
-		public extern string Transport
-		{
-			get;
-			set;
-		}
+		public string Transport;
 	}
 }

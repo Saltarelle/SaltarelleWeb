@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioDestinationNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern int MaxChannelCount
-		{
-			get;
-		}
+		public readonly int MaxChannelCount;
 
 		public extern void RemoveEventListener(AudioDestinationNodeEvents type, Action listener);
 

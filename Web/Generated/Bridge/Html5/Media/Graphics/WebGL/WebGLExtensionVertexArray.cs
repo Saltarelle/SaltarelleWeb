@@ -13,10 +13,7 @@
 
 		public extern bool IsVertexArrayOES(WebGLVertexArray arrayObject);
 
-		[FieldProperty, Name("VERTEX_ARRAY_BINDING_OES")]
-		public extern int VERTEX_ARRAY_BINDING_OES
-		{
-			get;
-		}
+		[Name("VERTEX_ARRAY_BINDING_OES")]
+		public readonly int VERTEX_ARRAY_BINDING_OES;
 	}
 }

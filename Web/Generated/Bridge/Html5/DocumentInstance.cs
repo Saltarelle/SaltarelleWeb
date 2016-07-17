@@ -34,44 +34,17 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture);
 
-		[FieldProperty]
-		public extern string AlinkColor
-		{
-			get;
-			set;
-		}
+		public string AlinkColor;
 
-		[FieldProperty]
-		public extern object All
-		{
-			get;
-		}
+		public readonly object All;
 
-		[FieldProperty]
-		public extern ElementCollection Anchors
-		{
-			get;
-		}
+		public readonly ElementCollection Anchors;
 
-		[FieldProperty]
-		public extern ElementCollection Applets
-		{
-			get;
-		}
+		public readonly ElementCollection Applets;
 
-		[FieldProperty]
-		public extern string BgColor
-		{
-			get;
-			set;
-		}
+		public string BgColor;
 
-		[FieldProperty]
-		public extern Element Body
-		{
-			get;
-			set;
-		}
+		public Element Body;
 
 		public extern void CaptureEvents();
 
@@ -79,32 +52,13 @@ namespace Bridge.Html5
 
 		public extern void Close();
 
-		[FieldProperty]
-		public extern string Cookie
-		{
-			get;
-			set;
-		}
+		public string Cookie;
 
-		[FieldProperty]
-		public extern string DesignMode
-		{
-			get;
-			set;
-		}
+		public string DesignMode;
 
-		[FieldProperty]
-		public extern string Domain
-		{
-			get;
-			set;
-		}
+		public string Domain;
 
-		[FieldProperty]
-		public extern ElementCollection Embeds
-		{
-			get;
-		}
+		public readonly ElementCollection Embeds;
 
 		public extern bool ExecCommand(string commandId);
 
@@ -112,18 +66,9 @@ namespace Bridge.Html5
 
 		public extern bool ExecCommand(string commandId, bool showUI, string value);
 
-		[FieldProperty]
-		public extern string FgColor
-		{
-			get;
-			set;
-		}
+		public string FgColor;
 
-		[FieldProperty]
-		public extern ElementCollection Forms
-		{
-			get;
-		}
+		public readonly ElementCollection Forms;
 
 		public extern ElementNodeList GetElementsByName(string elementName);
 
@@ -133,30 +78,13 @@ namespace Bridge.Html5
 
 		public extern Selection GetSelection();
 
-		[FieldProperty]
-		public extern HeadElement Head
-		{
-			get;
-		}
+		public readonly HeadElement Head;
 
-		[FieldProperty]
-		public extern ElementCollection Images
-		{
-			get;
-		}
+		public readonly ElementCollection Images;
 
-		[FieldProperty]
-		public extern string LinkColor
-		{
-			get;
-			set;
-		}
+		public string LinkColor;
 
-		[FieldProperty]
-		public extern ElementCollection Links
-		{
-			get;
-		}
+		public readonly ElementCollection Links;
 
 		public extern DocumentBase Open();
 
@@ -168,11 +96,7 @@ namespace Bridge.Html5
 
 		public extern WindowInstance Open(string url, string name, string features, bool replace);
 
-		[FieldProperty]
-		public extern ElementCollection Plugins
-		{
-			get;
-		}
+		public readonly ElementCollection Plugins;
 
 		public extern bool QueryCommandEnabled(string commandId);
 
@@ -206,18 +130,9 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture);
 
-		[FieldProperty]
-		public extern ElementCollection Scripts
-		{
-			get;
-		}
+		public readonly ElementCollection Scripts;
 
-		[FieldProperty]
-		public extern string VlinkColor
-		{
-			get;
-			set;
-		}
+		public string VlinkColor;
 
 		[ExpandParams]
 		public extern void Write(params string[] text);

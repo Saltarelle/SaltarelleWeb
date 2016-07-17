@@ -5,16 +5,10 @@
 	{
 		internal extern WebGLExtensionTextureFilterAnisotropic();
 
-		[FieldProperty, Name("MAX_TEXTURE_MAX_ANISOTROPY_EXT")]
-		public extern int MAX_TEXTURE_MAX_ANISOTROPY_EXT
-		{
-			get;
-		}
+		[Name("MAX_TEXTURE_MAX_ANISOTROPY_EXT")]
+		public readonly int MAX_TEXTURE_MAX_ANISOTROPY_EXT;
 
-		[FieldProperty, Name("TEXTURE_MAX_ANISOTROPY_EXT")]
-		public extern int TEXTURE_MAX_ANISOTROPY_EXT
-		{
-			get;
-		}
+		[Name("TEXTURE_MAX_ANISOTROPY_EXT")]
+		public readonly int TEXTURE_MAX_ANISOTROPY_EXT;
 	}
 }

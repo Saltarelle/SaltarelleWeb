@@ -11,16 +11,8 @@ namespace Bridge.Html5
 
 		public extern void GetAsString(Action<string> callback);
 
-		[FieldProperty]
-		public extern DataTransferItemKind Kind
-		{
-			get;
-		}
+		public readonly DataTransferItemKind Kind;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-		}
+		public readonly string Type;
 	}
 }

@@ -5,23 +5,11 @@
 	{
 		internal extern KeyboardEvent();
 
-		[FieldProperty]
-		public extern bool AltKey
-		{
-			get;
-		}
+		public readonly bool AltKey;
 
-		[FieldProperty]
-		public extern int CharCode
-		{
-			get;
-		}
+		public readonly int CharCode;
 
-		[FieldProperty]
-		public extern bool CtrlKey
-		{
-			get;
-		}
+		public readonly bool CtrlKey;
 
 		[Name("DOM_KEY_LOCATION_JOYSTICK")]
 		public const int DOM_KEY_LOCATION_JOYSTICK = 5;
@@ -600,40 +588,16 @@
 
 		public extern void InitKeyEvent(string type, bool canBubble, bool cancelable, WindowInstance view, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey, int keyCode, int charCode);
 
-		[FieldProperty]
-		public extern string Key
-		{
-			get;
-		}
+		public readonly string Key;
 
-		[FieldProperty]
-		public extern int KeyCode
-		{
-			get;
-		}
+		public readonly int KeyCode;
 
-		[FieldProperty]
-		public extern int Location
-		{
-			get;
-		}
+		public readonly int Location;
 
-		[FieldProperty]
-		public extern bool MetaKey
-		{
-			get;
-		}
+		public readonly bool MetaKey;
 
-		[FieldProperty]
-		public extern bool Repeat
-		{
-			get;
-		}
+		public readonly bool Repeat;
 
-		[FieldProperty]
-		public extern bool ShiftKey
-		{
-			get;
-		}
+		public readonly bool ShiftKey;
 	}
 }

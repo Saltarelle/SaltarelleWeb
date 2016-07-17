@@ -7,25 +7,10 @@
 
 		public extern RTCIceCandidate(RTCIceCandidateInit candidateInitDict);
 
-		[FieldProperty]
-		public extern string Candidate
-		{
-			get;
-			set;
-		}
+		public string Candidate;
 
-		[FieldProperty]
-		public extern string SdpMid
-		{
-			get;
-			set;
-		}
+		public string SdpMid;
 
-		[FieldProperty]
-		public extern ushort? SdpMLineIndex
-		{
-			get;
-			set;
-		}
+		public ushort? SdpMLineIndex;
 	}
 }

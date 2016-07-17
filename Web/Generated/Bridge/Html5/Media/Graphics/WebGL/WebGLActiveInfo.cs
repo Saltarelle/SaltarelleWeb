@@ -5,22 +5,10 @@
 	{
 		internal extern WebGLActiveInfo();
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 
-		[FieldProperty]
-		public extern int Size
-		{
-			get;
-		}
+		public readonly int Size;
 
-		[FieldProperty]
-		public extern int Type
-		{
-			get;
-		}
+		public readonly int Type;
 	}
 }

@@ -25,35 +25,15 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern AudioParam Attack
-		{
-			get;
-		}
+		public readonly AudioParam Attack;
 
-		[FieldProperty]
-		public extern AudioParam Knee
-		{
-			get;
-		}
+		public readonly AudioParam Knee;
 
-		[FieldProperty]
-		public extern AudioParam Ratio
-		{
-			get;
-		}
+		public readonly AudioParam Ratio;
 
-		[FieldProperty]
-		public extern AudioParam Reduction
-		{
-			get;
-		}
+		public readonly AudioParam Reduction;
 
-		[FieldProperty]
-		public extern AudioParam Release
-		{
-			get;
-		}
+		public readonly AudioParam Release;
 
 		public extern void RemoveEventListener(DynamicsCompressorNodeEvents type, Action listener);
 
@@ -75,10 +55,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DynamicsCompressorNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern AudioParam Threshold
-		{
-			get;
-		}
+		public readonly AudioParam Threshold;
 	}
 }

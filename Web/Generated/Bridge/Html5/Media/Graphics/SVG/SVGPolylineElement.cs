@@ -25,17 +25,9 @@
 
 		public extern void AddEventListener(SVGPolylineElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGPointList AnimatedPoints
-		{
-			get;
-		}
+		public readonly SVGPointList AnimatedPoints;
 
-		[FieldProperty]
-		public extern SVGPointList Points
-		{
-			get;
-		}
+		public readonly SVGPointList Points;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGPolylineElement> listener);
 

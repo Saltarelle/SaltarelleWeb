@@ -25,26 +25,11 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<AudioNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern int ChannelCount
-		{
-			get;
-			set;
-		}
+		public int ChannelCount;
 
-		[FieldProperty]
-		public extern ChannelCountMode ChannelCountMode
-		{
-			get;
-			set;
-		}
+		public ChannelCountMode ChannelCountMode;
 
-		[FieldProperty]
-		public extern ChannelInterpretation ChannelInterpretation
-		{
-			get;
-			set;
-		}
+		public ChannelInterpretation ChannelInterpretation;
 
 		public extern void Connect(AudioNode destination);
 
@@ -56,27 +41,15 @@
 
 		public extern void Connect(AudioParam destination, int output);
 
-		[FieldProperty]
-		public extern AudioContext Context
-		{
-			get;
-		}
+		public readonly AudioContext Context;
 
 		public extern void Disconnect();
 
 		public extern void Disconnect(int output);
 
-		[FieldProperty]
-		public extern int NumberOfInputs
-		{
-			get;
-		}
+		public readonly int NumberOfInputs;
 
-		[FieldProperty]
-		public extern int NumberOfOutputs
-		{
-			get;
-		}
+		public readonly int NumberOfOutputs;
 
 		public extern void RemoveEventListener(AudioNodeEvents type, Action listener);
 

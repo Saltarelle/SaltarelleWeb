@@ -4,17 +4,9 @@
 	public partial class MediaConstraintSet
 	{
 		[Name("OfferToReceiveAudio")]
-		public extern bool OfferToReceiveAudio
-		{
-			get;
-			set;
-		}
+		public bool OfferToReceiveAudio;
 
 		[Name("OfferToReceiveVideo")]
-		public extern bool OfferToReceiveVideo
-		{
-			get;
-			set;
-		}
+		public bool OfferToReceiveVideo;
 	}
 }

@@ -9,16 +9,8 @@
 
 		public extern SpeechRecognitionError(string type, SpeechRecognitionErrorInit eventInitDict);
 
-		[FieldProperty]
-		public extern SpeechRecognitionErrorCode Error
-		{
-			get;
-		}
+		public readonly SpeechRecognitionErrorCode Error;
 
-		[FieldProperty]
-		public extern string Message
-		{
-			get;
-		}
+		public readonly string Message;
 	}
 }

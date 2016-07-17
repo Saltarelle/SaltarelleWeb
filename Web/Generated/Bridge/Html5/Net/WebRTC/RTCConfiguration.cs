@@ -3,10 +3,6 @@
 	[External, Serializable]
 	public partial class RTCConfiguration
 	{
-		public extern RTCIceServer[] IceServers
-		{
-			get;
-			set;
-		}
+		public RTCIceServer[] IceServers;
 	}
 }

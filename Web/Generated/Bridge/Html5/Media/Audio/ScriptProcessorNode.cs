@@ -25,18 +25,10 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ScriptProcessorNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern int BufferSize
-		{
-			get;
-		}
+		public readonly int BufferSize;
 
-		[FieldProperty, Name("onaudioprocess")]
-		public extern HtmlEventHandler OnAudioprocess
-		{
-			get;
-			set;
-		}
+		[Name("onaudioprocess")]
+		public HtmlEventHandler OnAudioprocess;
 
 		public extern void RemoveEventListener(ScriptProcessorNodeEvents type, Action listener);
 

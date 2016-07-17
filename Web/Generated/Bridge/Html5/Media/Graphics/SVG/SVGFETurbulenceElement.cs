@@ -25,29 +25,13 @@
 
 		public extern void AddEventListener(SVGFETurbulenceElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber BaseFrequencyX
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber BaseFrequencyX;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber BaseFrequencyY
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber BaseFrequencyY;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
-		[FieldProperty]
-		public extern SVGAnimatedInteger NumOctaves
-		{
-			get;
-		}
+		public readonly SVGAnimatedInteger NumOctaves;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFETurbulenceElement> listener);
 
@@ -69,23 +53,11 @@
 
 		public extern void RemoveEventListener(SVGFETurbulenceElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Result
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Result;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Seed
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Seed;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGFEStitchType> StitchTiles
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGFEStitchType> StitchTiles;
 
 		[Name("SVG_STITCHTYPE_NOSTITCH")]
 		public const ushort SVG_STITCHTYPE_NOSTITCH = 2;
@@ -105,28 +77,12 @@
 		[Name("SVG_TURBULENCE_TYPE_UNKNOWN")]
 		public const ushort SVG_TURBULENCE_TYPE_UNKNOWN = 0;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGFETurbulenceType> Type
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGFETurbulenceType> Type;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 	}
 }

@@ -6,16 +6,8 @@ namespace Bridge.Html5
 	[External, Serializable]
 	public partial class BoxQuadOptions
 	{
-		public extern CSSBoxType Box
-		{
-			get;
-			set;
-		}
+		public CSSBoxType Box;
 
-		public extern TypeOption<XmlText, Element, DocumentBase> RelativeTo
-		{
-			get;
-			set;
-		}
+		public TypeOption<XmlText, Element, DocumentBase> RelativeTo;
 	}
 }

@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(SVGStyleElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Media
-		{
-			get;
-			set;
-		}
+		public string Media;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStyleElement> listener);
 
@@ -52,32 +47,12 @@
 
 		public extern void RemoveEventListener(SVGStyleElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Scoped
-		{
-			get;
-			set;
-		}
+		public bool Scoped;
 
-		[FieldProperty]
-		public extern string Title
-		{
-			get;
-			set;
-		}
+		public string Title;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 
-		[FieldProperty]
-		public extern string Xmlspace
-		{
-			get;
-			set;
-		}
+		public string Xmlspace;
 	}
 }

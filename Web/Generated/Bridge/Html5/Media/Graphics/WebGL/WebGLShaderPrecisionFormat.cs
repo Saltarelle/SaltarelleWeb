@@ -5,22 +5,10 @@
 	{
 		internal extern WebGLShaderPrecisionFormat();
 
-		[FieldProperty]
-		public extern int Precision
-		{
-			get;
-		}
+		public readonly int Precision;
 
-		[FieldProperty]
-		public extern int RangeMax
-		{
-			get;
-		}
+		public readonly int RangeMax;
 
-		[FieldProperty]
-		public extern int RangeMin
-		{
-			get;
-		}
+		public readonly int RangeMin;
 	}
 }

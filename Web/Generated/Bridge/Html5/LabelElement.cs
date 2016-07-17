@@ -25,24 +25,11 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<LabelElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern Element Control
-		{
-			get;
-		}
+		public readonly Element Control;
 
-		[FieldProperty]
-		public extern FormElement Form
-		{
-			get;
-		}
+		public readonly FormElement Form;
 
-		[FieldProperty]
-		public extern string HtmlFor
-		{
-			get;
-			set;
-		}
+		public string HtmlFor;
 
 		public extern void RemoveEventListener(LabelElementEvents type, Action listener);
 

@@ -15,10 +15,6 @@ namespace Bridge.Html5.Text
 
 		public extern Uint8Array Encode(string input, TextEncodeOptions options);
 
-		[FieldProperty]
-		public extern string Encoding
-		{
-			get;
-		}
+		public readonly string Encoding;
 	}
 }

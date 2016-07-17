@@ -25,47 +25,17 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool Checked
-		{
-			get;
-			set;
-		}
+		public bool Checked;
 
-		[FieldProperty]
-		public extern bool DefaultChecked
-		{
-			get;
-			set;
-		}
+		public bool DefaultChecked;
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern string Icon
-		{
-			get;
-			set;
-		}
+		public string Icon;
 
-		[FieldProperty]
-		public extern string Label
-		{
-			get;
-			set;
-		}
+		public string Label;
 
-		[FieldProperty]
-		public extern string Radiogroup
-		{
-			get;
-			set;
-		}
+		public string Radiogroup;
 
 		public extern void RemoveEventListener(MenuItemElementEvents type, Action listener);
 
@@ -87,11 +57,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MenuItemElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 	}
 }

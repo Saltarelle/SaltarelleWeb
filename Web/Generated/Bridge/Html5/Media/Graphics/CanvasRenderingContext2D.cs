@@ -21,11 +21,7 @@ namespace Bridge.Html5.Media.Graphics
 
 		public extern void BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y);
 
-		[FieldProperty]
-		public extern CanvasElement Canvas
-		{
-			get;
-		}
+		public readonly CanvasElement Canvas;
 
 		public extern void ClearRect(double x, double y, double w, double h);
 
@@ -69,41 +65,21 @@ namespace Bridge.Html5.Media.Graphics
 
 		public extern void FillRect(double x, double y, double w, double h);
 
-		[FieldProperty]
-		public extern TypeOption<string, CanvasGradient, CanvasPattern> FillStyle
-		{
-			get;
-			set;
-		}
+		public TypeOption<string, CanvasGradient, CanvasPattern> FillStyle;
 
 		public extern void FillText(string text, double x, double y);
 
 		public extern void FillText(string text, double x, double y, double maxWidth);
 
-		[FieldProperty]
-		public extern string Font
-		{
-			get;
-			set;
-		}
+		public string Font;
 
 		public extern ImageData GetImageData(double sx, double sy, double sw, double sh);
 
 		public extern double[] GetLineDash();
 
-		[FieldProperty]
-		public extern double GlobalAlpha
-		{
-			get;
-			set;
-		}
+		public double GlobalAlpha;
 
-		[FieldProperty]
-		public extern CompositeOperation GlobalCompositeOperation
-		{
-			get;
-			set;
-		}
+		public CompositeOperation GlobalCompositeOperation;
 
 		public extern bool IsPointInPath(double x, double y);
 
@@ -117,44 +93,19 @@ namespace Bridge.Html5.Media.Graphics
 
 		public extern bool IsPointInStroke(Path2D path, double x, double y);
 
-		[FieldProperty]
-		public extern LineCap LineCap
-		{
-			get;
-			set;
-		}
+		public LineCap LineCap;
 
-		[FieldProperty]
-		public extern double LineDashOffset
-		{
-			get;
-			set;
-		}
+		public double LineDashOffset;
 
-		[FieldProperty]
-		public extern LineJoin LineJoin
-		{
-			get;
-			set;
-		}
+		public LineJoin LineJoin;
 
 		public extern void LineTo(double x, double y);
 
-		[FieldProperty]
-		public extern double LineWidth
-		{
-			get;
-			set;
-		}
+		public double LineWidth;
 
 		public extern TextMetrics MeasureText(string text);
 
-		[FieldProperty]
-		public extern double MiterLimit
-		{
-			get;
-			set;
-		}
+		public double MiterLimit;
 
 		public extern void MoveTo(double x, double y);
 
@@ -180,33 +131,13 @@ namespace Bridge.Html5.Media.Graphics
 
 		public extern void SetTransform(double a, double b, double c, double d, double e, double f);
 
-		[FieldProperty]
-		public extern double ShadowBlur
-		{
-			get;
-			set;
-		}
+		public double ShadowBlur;
 
-		[FieldProperty]
-		public extern string ShadowColor
-		{
-			get;
-			set;
-		}
+		public string ShadowColor;
 
-		[FieldProperty]
-		public extern double ShadowOffsetX
-		{
-			get;
-			set;
-		}
+		public double ShadowOffsetX;
 
-		[FieldProperty]
-		public extern double ShadowOffsetY
-		{
-			get;
-			set;
-		}
+		public double ShadowOffsetY;
 
 		public extern void Stroke();
 
@@ -214,30 +145,15 @@ namespace Bridge.Html5.Media.Graphics
 
 		public extern void StrokeRect(double x, double y, double w, double h);
 
-		[FieldProperty]
-		public extern TypeOption<string, CanvasGradient, CanvasPattern> StrokeStyle
-		{
-			get;
-			set;
-		}
+		public TypeOption<string, CanvasGradient, CanvasPattern> StrokeStyle;
 
 		public extern void StrokeText(string text, double x, double y);
 
 		public extern void StrokeText(string text, double x, double y, double maxWidth);
 
-		[FieldProperty]
-		public extern TextAlign TextAlign
-		{
-			get;
-			set;
-		}
+		public TextAlign TextAlign;
 
-		[FieldProperty]
-		public extern TextBaseline TextBaseline
-		{
-			get;
-			set;
-		}
+		public TextBaseline TextBaseline;
 
 		public extern void Transform(double a, double b, double c, double d, double e, double f);
 

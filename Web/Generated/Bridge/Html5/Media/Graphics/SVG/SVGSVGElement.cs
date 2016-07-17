@@ -43,18 +43,9 @@
 
 		public extern SVGTransform CreateSVGTransformFromMatrix(SVGMatrix matrix);
 
-		[FieldProperty]
-		public extern double CurrentScale
-		{
-			get;
-			set;
-		}
+		public double CurrentScale;
 
-		[FieldProperty]
-		public extern SVGPoint CurrentTranslate
-		{
-			get;
-		}
+		public readonly SVGPoint CurrentTranslate;
 
 		public extern void DeselectAll();
 
@@ -64,31 +55,15 @@
 
 		public extern Element GetElementById(string elementId);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
 		public extern void PauseAnimations();
 
-		[FieldProperty]
-		public extern double PixelUnitToMillimeterX
-		{
-			get;
-		}
+		public readonly double PixelUnitToMillimeterX;
 
-		[FieldProperty]
-		public extern double PixelUnitToMillimeterY
-		{
-			get;
-		}
+		public readonly double PixelUnitToMillimeterY;
 
-		[FieldProperty]
-		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
-		{
-			get;
-		}
+		public readonly SVGAnimatedPreserveAspectRatio PreserveAspectRatio;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGSVGElement> listener);
 
@@ -110,17 +85,9 @@
 
 		public extern void RemoveEventListener(SVGSVGElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern double ScreenPixelToMillimeterX
-		{
-			get;
-		}
+		public readonly double ScreenPixelToMillimeterX;
 
-		[FieldProperty]
-		public extern double ScreenPixelToMillimeterY
-		{
-			get;
-		}
+		public readonly double ScreenPixelToMillimeterY;
 
 		public extern void SetCurrentTime(double seconds);
 
@@ -141,41 +108,16 @@
 
 		public extern void UnsuspendRedrawAll();
 
-		[FieldProperty]
-		public extern bool UseCurrentView
-		{
-			get;
-		}
+		public readonly bool UseCurrentView;
 
-		[FieldProperty]
-		public extern SVGAnimatedRect ViewBox
-		{
-			get;
-		}
+		public readonly SVGAnimatedRect ViewBox;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 
-		[FieldProperty]
-		public extern SVGZoomAndPanType ZoomAndPan
-		{
-			get;
-			set;
-		}
+		public SVGZoomAndPanType ZoomAndPan;
 	}
 }

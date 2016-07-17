@@ -5,48 +5,20 @@
 	{
 		internal extern WorkerNavigator();
 
-		[FieldProperty]
-		public extern string AppCodeName
-		{
-			get;
-		}
+		public readonly string AppCodeName;
 
-		[FieldProperty]
-		public extern string AppName
-		{
-			get;
-		}
+		public readonly string AppName;
 
-		[FieldProperty]
-		public extern string AppVersion
-		{
-			get;
-		}
+		public readonly string AppVersion;
 
-		[FieldProperty]
-		public extern bool OnLine
-		{
-			get;
-		}
+		public readonly bool OnLine;
 
-		[FieldProperty]
-		public extern string Platform
-		{
-			get;
-		}
+		public readonly string Platform;
 
-		[FieldProperty]
-		public extern string Product
-		{
-			get;
-		}
+		public readonly string Product;
 
 		public extern bool TaintEnabled();
 
-		[FieldProperty]
-		public extern string UserAgent
-		{
-			get;
-		}
+		public readonly string UserAgent;
 	}
 }

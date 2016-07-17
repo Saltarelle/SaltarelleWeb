@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<QuoteElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Cite
-		{
-			get;
-			set;
-		}
+		public string Cite;
 
 		public extern void RemoveEventListener(QuoteElementEvents type, Action listener);
 

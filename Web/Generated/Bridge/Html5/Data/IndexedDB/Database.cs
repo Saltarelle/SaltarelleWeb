@@ -33,38 +33,18 @@
 
 		public extern void DeleteObjectStore(string name);
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 
-		[FieldProperty]
-		public extern DOMStringList ObjectStoreNames
-		{
-			get;
-		}
+		public readonly DOMStringList ObjectStoreNames;
 
-		[FieldProperty, Name("onabort")]
-		public extern HtmlEventHandler OnAbort
-		{
-			get;
-			set;
-		}
+		[Name("onabort")]
+		public HtmlEventHandler OnAbort;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onversionchange")]
-		public extern HtmlEventHandler OnVersionchange
-		{
-			get;
-			set;
-		}
+		[Name("onversionchange")]
+		public HtmlEventHandler OnVersionchange;
 
 		public extern void RemoveEventListener(DatabaseEvents type, Action listener);
 
@@ -86,11 +66,7 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Database> listener, bool capture);
 
-		[FieldProperty]
-		public extern StorageType Storage
-		{
-			get;
-		}
+		public readonly StorageType Storage;
 
 		public extern Transaction Transaction(string storeName);
 
@@ -100,10 +76,6 @@
 
 		public extern Transaction Transaction(string[] storeNames, TransactionMode mode);
 
-		[FieldProperty]
-		public extern ulong Version
-		{
-			get;
-		}
+		public readonly ulong Version;
 	}
 }

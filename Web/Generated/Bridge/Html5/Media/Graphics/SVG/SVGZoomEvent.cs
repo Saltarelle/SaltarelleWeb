@@ -5,28 +5,12 @@
 	{
 		internal extern SVGZoomEvent();
 
-		[FieldProperty]
-		public extern double NewScale
-		{
-			get;
-		}
+		public readonly double NewScale;
 
-		[FieldProperty]
-		public extern SVGPoint NewTranslate
-		{
-			get;
-		}
+		public readonly SVGPoint NewTranslate;
 
-		[FieldProperty]
-		public extern double PreviousScale
-		{
-			get;
-		}
+		public readonly double PreviousScale;
 
-		[FieldProperty]
-		public extern SVGPoint PreviousTranslate
-		{
-			get;
-		}
+		public readonly SVGPoint PreviousTranslate;
 	}
 }

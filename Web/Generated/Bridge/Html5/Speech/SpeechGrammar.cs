@@ -5,18 +5,8 @@
 	{
 		public extern SpeechGrammar();
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 
-		[FieldProperty]
-		public extern double Weight
-		{
-			get;
-			set;
-		}
+		public double Weight;
 	}
 }

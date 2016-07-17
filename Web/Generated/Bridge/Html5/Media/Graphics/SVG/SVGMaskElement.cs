@@ -25,23 +25,11 @@
 
 		public extern void AddEventListener(SVGMaskElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGUnitType> MaskContentUnits
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGUnitType> MaskContentUnits;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGUnitType> MaskUnits
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGUnitType> MaskUnits;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGMaskElement> listener);
 
@@ -78,22 +66,10 @@
 		[Name("SVG_UNIT_TYPE_USERSPACEONUSE")]
 		public const ushort SVG_UNIT_TYPE_USERSPACEONUSE = 1;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 	}
 }

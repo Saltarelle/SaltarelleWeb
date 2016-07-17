@@ -9,24 +9,12 @@
 
 		public extern CloseEvent(string type, CloseEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern ushort Code
-		{
-			get;
-		}
+		public readonly ushort Code;
 
 		public extern void InitCloseEvent(string type, bool canBubble, bool cancelable, bool wasClean, ushort code, string reason);
 
-		[FieldProperty]
-		public extern string Reason
-		{
-			get;
-		}
+		public readonly string Reason;
 
-		[FieldProperty]
-		public extern bool WasClean
-		{
-			get;
-		}
+		public readonly bool WasClean;
 	}
 }

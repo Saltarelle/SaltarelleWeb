@@ -5,46 +5,18 @@
 	{
 		internal extern Coordinates();
 
-		[FieldProperty]
-		public extern double Accuracy
-		{
-			get;
-		}
+		public readonly double Accuracy;
 
-		[FieldProperty]
-		public extern double? Altitude
-		{
-			get;
-		}
+		public readonly double? Altitude;
 
-		[FieldProperty]
-		public extern double? AltitudeAccuracy
-		{
-			get;
-		}
+		public readonly double? AltitudeAccuracy;
 
-		[FieldProperty]
-		public extern double? Heading
-		{
-			get;
-		}
+		public readonly double? Heading;
 
-		[FieldProperty]
-		public extern double Latitude
-		{
-			get;
-		}
+		public readonly double Latitude;
 
-		[FieldProperty]
-		public extern double Longitude
-		{
-			get;
-		}
+		public readonly double Longitude;
 
-		[FieldProperty]
-		public extern double? Speed
-		{
-			get;
-		}
+		public readonly double? Speed;
 	}
 }

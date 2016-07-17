@@ -27,107 +27,40 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ObjectElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern string Archive
-		{
-			get;
-			set;
-		}
+		public string Archive;
 
-		[FieldProperty]
-		public extern string Border
-		{
-			get;
-			set;
-		}
+		public string Border;
 
 		[Template("{this}({*arguments})")]
 		public extern object Call(params object[] arguments);
 
 		public extern bool CheckValidity();
 
-		[FieldProperty]
-		public extern string Code
-		{
-			get;
-			set;
-		}
+		public string Code;
 
-		[FieldProperty]
-		public extern string CodeBase
-		{
-			get;
-			set;
-		}
+		public string CodeBase;
 
-		[FieldProperty]
-		public extern string CodeType
-		{
-			get;
-			set;
-		}
+		public string CodeType;
 
-		[FieldProperty]
-		public extern DocumentBase ContentDocument
-		{
-			get;
-		}
+		public readonly DocumentBase ContentDocument;
 
-		[FieldProperty]
-		public extern WindowInstance ContentWindow
-		{
-			get;
-		}
+		public readonly WindowInstance ContentWindow;
 
-		[FieldProperty]
-		public extern string Data
-		{
-			get;
-			set;
-		}
+		public string Data;
 
-		[FieldProperty]
-		public extern bool Declare
-		{
-			get;
-			set;
-		}
+		public bool Declare;
 
-		[FieldProperty]
-		public extern FormElement Form
-		{
-			get;
-		}
+		public readonly FormElement Form;
 
 		public extern DocumentBase GetSVGDocument();
 
-		[FieldProperty]
-		public extern string Height
-		{
-			get;
-			set;
-		}
+		public string Height;
 
-		[FieldProperty]
-		public extern int Hspace
-		{
-			get;
-			set;
-		}
+		public int Hspace;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern void RemoveEventListener(ObjectElementEvents type, Action listener);
 
@@ -151,64 +84,22 @@ namespace Bridge.Html5
 
 		public extern void SetCustomValidity(string error);
 
-		[FieldProperty]
-		public extern string Standby
-		{
-			get;
-			set;
-		}
+		public string Standby;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-			set;
-		}
+		public string Type;
 
-		[FieldProperty]
-		public extern bool TypeMustMatch
-		{
-			get;
-			set;
-		}
+		public bool TypeMustMatch;
 
-		[FieldProperty]
-		public extern string UseMap
-		{
-			get;
-			set;
-		}
+		public string UseMap;
 
-		[FieldProperty]
-		public extern string ValidationMessage
-		{
-			get;
-		}
+		public readonly string ValidationMessage;
 
-		[FieldProperty]
-		public extern ValidityState Validity
-		{
-			get;
-		}
+		public readonly ValidityState Validity;
 
-		[FieldProperty]
-		public extern int Vspace
-		{
-			get;
-			set;
-		}
+		public int Vspace;
 
-		[FieldProperty]
-		public extern string Width
-		{
-			get;
-			set;
-		}
+		public string Width;
 
-		[FieldProperty]
-		public extern bool WillValidate
-		{
-			get;
-		}
+		public readonly bool WillValidate;
 	}
 }

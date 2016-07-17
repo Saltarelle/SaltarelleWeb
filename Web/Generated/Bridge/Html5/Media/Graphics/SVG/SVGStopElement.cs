@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(SVGStopElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Offset
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Offset;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGStopElement> listener);
 

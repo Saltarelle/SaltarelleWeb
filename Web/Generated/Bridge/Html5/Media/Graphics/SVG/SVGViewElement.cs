@@ -25,11 +25,7 @@
 
 		public extern void AddEventListener(SVGViewElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedPreserveAspectRatio PreserveAspectRatio
-		{
-			get;
-		}
+		public readonly SVGAnimatedPreserveAspectRatio PreserveAspectRatio;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGViewElement> listener);
 
@@ -60,23 +56,10 @@
 		[Name("SVG_ZOOMANDPAN_UNKNOWN")]
 		public const ushort SVG_ZOOMANDPAN_UNKNOWN = 0;
 
-		[FieldProperty]
-		public extern SVGAnimatedRect ViewBox
-		{
-			get;
-		}
+		public readonly SVGAnimatedRect ViewBox;
 
-		[FieldProperty]
-		public extern SVGStringList ViewTarget
-		{
-			get;
-		}
+		public readonly SVGStringList ViewTarget;
 
-		[FieldProperty]
-		public extern SVGZoomAndPanType ZoomAndPan
-		{
-			get;
-			set;
-		}
+		public SVGZoomAndPanType ZoomAndPan;
 	}
 }

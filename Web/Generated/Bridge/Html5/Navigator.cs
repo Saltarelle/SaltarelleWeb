@@ -10,109 +10,41 @@ namespace Bridge.Html5
 	[Namespace("false"), External, Name("navigator")]
 	public static partial class Navigator
 	{
-		[FieldProperty]
-		public static extern string AppCodeName
-		{
-			get;
-		}
+		public static readonly string AppCodeName;
 
-		[FieldProperty]
-		public static extern string AppName
-		{
-			get;
-		}
+		public static readonly string AppName;
 
-		[FieldProperty]
-		public static extern string AppVersion
-		{
-			get;
-		}
+		public static readonly string AppVersion;
 
-		[FieldProperty]
-		public static extern BatteryManager Battery
-		{
-			get;
-		}
+		public static readonly BatteryManager Battery;
 
-		[FieldProperty]
-		public static extern string BuildID
-		{
-			get;
-		}
+		public static readonly string BuildID;
 
-		[FieldProperty]
-		public static extern bool CookieEnabled
-		{
-			get;
-		}
+		public static readonly bool CookieEnabled;
 
-		[FieldProperty]
-		public static extern string DoNotTrack
-		{
-			get;
-		}
+		public static readonly string DoNotTrack;
 
-		[FieldProperty]
-		public static extern GeolocationService Geolocation
-		{
-			get;
-		}
+		public static readonly GeolocationService Geolocation;
 
 		public static extern bool JavaEnabled();
 
-		[FieldProperty]
-		public static extern string Language
-		{
-			get;
-		}
+		public static readonly string Language;
 
-		[FieldProperty]
-		public static extern int MaxTouchPoints
-		{
-			get;
-		}
+		public static readonly int MaxTouchPoints;
 
-		[FieldProperty]
-		public static extern MimeTypeArray MimeTypes
-		{
-			get;
-		}
+		public static readonly MimeTypeArray MimeTypes;
 
-		[FieldProperty]
-		public static extern bool OnLine
-		{
-			get;
-		}
+		public static readonly bool OnLine;
 
-		[FieldProperty]
-		public static extern string Oscpu
-		{
-			get;
-		}
+		public static readonly string Oscpu;
 
-		[FieldProperty]
-		public static extern string Platform
-		{
-			get;
-		}
+		public static readonly string Platform;
 
-		[FieldProperty]
-		public static extern PluginArray Plugins
-		{
-			get;
-		}
+		public static readonly PluginArray Plugins;
 
-		[FieldProperty]
-		public static extern string Product
-		{
-			get;
-		}
+		public static readonly string Product;
 
-		[FieldProperty]
-		public static extern string ProductSub
-		{
-			get;
-		}
+		public static readonly string ProductSub;
 
 		public static extern void RegisterContentHandler(string mimeType, string url, string title);
 
@@ -124,23 +56,11 @@ namespace Bridge.Html5
 
 		public static extern bool TaintEnabled();
 
-		[FieldProperty]
-		public static extern string UserAgent
-		{
-			get;
-		}
+		public static readonly string UserAgent;
 
-		[FieldProperty]
-		public static extern string Vendor
-		{
-			get;
-		}
+		public static readonly string Vendor;
 
-		[FieldProperty]
-		public static extern string VendorSub
-		{
-			get;
-		}
+		public static readonly string VendorSub;
 
 		public static extern bool Vibrate(int duration);
 

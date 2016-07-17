@@ -28,19 +28,9 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void AddEventListener(WaveShaperNodeEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern Float32Array Curve
-		{
-			get;
-			set;
-		}
+		public Float32Array Curve;
 
-		[FieldProperty]
-		public extern OverSampleType Oversample
-		{
-			get;
-			set;
-		}
+		public OverSampleType Oversample;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<WaveShaperNode> listener);
 

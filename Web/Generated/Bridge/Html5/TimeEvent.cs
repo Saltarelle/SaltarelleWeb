@@ -5,18 +5,10 @@
 	{
 		internal extern TimeEvent();
 
-		[FieldProperty]
-		public extern int Detail
-		{
-			get;
-		}
+		public readonly int Detail;
 
 		public extern void InitTimeEvent(string aType, WindowInstance aView, int aDetail);
 
-		[FieldProperty]
-		public extern WindowInstance View
-		{
-			get;
-		}
+		public readonly WindowInstance View;
 	}
 }

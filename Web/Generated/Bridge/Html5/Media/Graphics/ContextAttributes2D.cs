@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class ContextAttributes2D
 	{
-		public extern bool Alpha
-		{
-			get;
-			set;
-		}
+		public bool Alpha;
 
-		public extern bool WillReadFrequently
-		{
-			get;
-			set;
-		}
+		public bool WillReadFrequently;
 	}
 }

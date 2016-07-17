@@ -27,12 +27,7 @@ namespace Bridge.Html5
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ShadowRoot> listener, bool capture);
 
-		[FieldProperty]
-		public extern bool ApplyAuthorStyles
-		{
-			get;
-			set;
-		}
+		public bool ApplyAuthorStyles;
 
 		public extern Element GetElementById(string elementId);
 
@@ -42,12 +37,7 @@ namespace Bridge.Html5
 
 		public extern ElementCollection GetElementsByTagNameNS(string @namespace, string localName);
 
-		[FieldProperty]
-		public extern string InnerHTML
-		{
-			get;
-			set;
-		}
+		public string InnerHTML;
 
 		public extern void RemoveEventListener(ShadowRootEvents type, Action listener);
 
@@ -69,10 +59,6 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ShadowRoot> listener, bool capture);
 
-		[FieldProperty]
-		public extern StyleSheetList StyleSheets
-		{
-			get;
-		}
+		public readonly StyleSheetList StyleSheets;
 	}
 }

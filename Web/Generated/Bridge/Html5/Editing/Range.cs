@@ -15,17 +15,9 @@ namespace Bridge.Html5.Editing
 
 		public extern void Collapse(bool toStart);
 
-		[FieldProperty]
-		public extern bool Collapsed
-		{
-			get;
-		}
+		public readonly bool Collapsed;
 
-		[FieldProperty]
-		public extern XmlNode CommonAncestorContainer
-		{
-			get;
-		}
+		public readonly XmlNode CommonAncestorContainer;
 
 		public extern short CompareBoundaryPoints(RangeComparison how, Range sourceRange);
 
@@ -43,17 +35,9 @@ namespace Bridge.Html5.Editing
 		[Name("END_TO_START")]
 		public const ushort END_TO_START = 3;
 
-		[FieldProperty]
-		public extern XmlNode EndContainer
-		{
-			get;
-		}
+		public readonly XmlNode EndContainer;
 
-		[FieldProperty]
-		public extern int EndOffset
-		{
-			get;
-		}
+		public readonly int EndOffset;
 
 		public extern XmlDocumentFragment ExtractContents();
 
@@ -89,17 +73,9 @@ namespace Bridge.Html5.Editing
 		[Name("START_TO_START")]
 		public const ushort START_TO_START = 0;
 
-		[FieldProperty]
-		public extern XmlNode StartContainer
-		{
-			get;
-		}
+		public readonly XmlNode StartContainer;
 
-		[FieldProperty]
-		public extern int StartOffset
-		{
-			get;
-		}
+		public readonly int StartOffset;
 
 		public extern void SurroundContents(XmlNode newParent);
 	}

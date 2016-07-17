@@ -33,32 +33,13 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void AppendBuffer(ArrayBufferView data);
 
-		[FieldProperty]
-		public extern double AppendWindowEnd
-		{
-			get;
-			set;
-		}
+		public double AppendWindowEnd;
 
-		[FieldProperty]
-		public extern double AppendWindowStart
-		{
-			get;
-			set;
-		}
+		public double AppendWindowStart;
 
-		[FieldProperty]
-		public extern TimeRanges Buffered
-		{
-			get;
-		}
+		public readonly TimeRanges Buffered;
 
-		[FieldProperty]
-		public extern SourceBufferAppendMode Mode
-		{
-			get;
-			set;
-		}
+		public SourceBufferAppendMode Mode;
 
 		public extern void Remove(double start, double end);
 
@@ -82,17 +63,8 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SourceBuffer> listener, bool capture);
 
-		[FieldProperty]
-		public extern double TimestampOffset
-		{
-			get;
-			set;
-		}
+		public double TimestampOffset;
 
-		[FieldProperty]
-		public extern bool Updating
-		{
-			get;
-		}
+		public readonly bool Updating;
 	}
 }

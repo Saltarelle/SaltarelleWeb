@@ -5,28 +5,12 @@
 	{
 		internal extern Rect();
 
-		[FieldProperty]
-		public extern CSSPrimitiveValue Bottom
-		{
-			get;
-		}
+		public readonly CSSPrimitiveValue Bottom;
 
-		[FieldProperty]
-		public extern CSSPrimitiveValue Left
-		{
-			get;
-		}
+		public readonly CSSPrimitiveValue Left;
 
-		[FieldProperty]
-		public extern CSSPrimitiveValue Right
-		{
-			get;
-		}
+		public readonly CSSPrimitiveValue Right;
 
-		[FieldProperty]
-		public extern CSSPrimitiveValue Top
-		{
-			get;
-		}
+		public readonly CSSPrimitiveValue Top;
 	}
 }

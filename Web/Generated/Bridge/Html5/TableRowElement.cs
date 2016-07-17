@@ -25,39 +25,15 @@
 
 		public extern void AddEventListener(TableRowElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern string BgColor
-		{
-			get;
-			set;
-		}
+		public string BgColor;
 
-		[FieldProperty]
-		public extern ElementCollection Cells
-		{
-			get;
-		}
+		public readonly ElementCollection Cells;
 
-		[FieldProperty]
-		public extern string Ch
-		{
-			get;
-			set;
-		}
+		public string Ch;
 
-		[FieldProperty]
-		public extern string ChOff
-		{
-			get;
-			set;
-		}
+		public string ChOff;
 
 		public extern void DeleteCell(int index);
 
@@ -85,23 +61,10 @@
 
 		public extern void RemoveEventListener(TableRowElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern int RowIndex
-		{
-			get;
-		}
+		public readonly int RowIndex;
 
-		[FieldProperty]
-		public extern int SectionRowIndex
-		{
-			get;
-		}
+		public readonly int SectionRowIndex;
 
-		[FieldProperty]
-		public extern string VAlign
-		{
-			get;
-			set;
-		}
+		public string VAlign;
 	}
 }

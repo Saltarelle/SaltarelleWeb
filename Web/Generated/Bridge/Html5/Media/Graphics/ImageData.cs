@@ -13,22 +13,10 @@ namespace Bridge.Html5.Media.Graphics
 
 		public extern ImageData(Uint8ClampedArray data, int sw, int sh);
 
-		[FieldProperty]
-		public extern Uint8ClampedArray Data
-		{
-			get;
-		}
+		public readonly Uint8ClampedArray Data;
 
-		[FieldProperty]
-		public extern int Height
-		{
-			get;
-		}
+		public readonly int Height;
 
-		[FieldProperty]
-		public extern int Width
-		{
-			get;
-		}
+		public readonly int Width;
 	}
 }

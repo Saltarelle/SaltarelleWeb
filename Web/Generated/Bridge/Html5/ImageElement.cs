@@ -32,93 +32,31 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Align
-		{
-			get;
-			set;
-		}
+		public string Align;
 
-		[FieldProperty]
-		public extern string Alt
-		{
-			get;
-			set;
-		}
+		public string Alt;
 
-		[FieldProperty]
-		public extern string Border
-		{
-			get;
-			set;
-		}
+		public string Border;
 
-		[FieldProperty]
-		public extern bool Complete
-		{
-			get;
-		}
+		public readonly bool Complete;
 
-		[FieldProperty]
-		public extern string CrossOrigin
-		{
-			get;
-			set;
-		}
+		public string CrossOrigin;
 
-		[FieldProperty]
-		public extern int Height
-		{
-			get;
-			set;
-		}
+		public int Height;
 
-		[FieldProperty]
-		public extern int Hspace
-		{
-			get;
-			set;
-		}
+		public int Hspace;
 
-		[FieldProperty]
-		public extern bool IsMap
-		{
-			get;
-			set;
-		}
+		public bool IsMap;
 
-		[FieldProperty]
-		public extern string LongDesc
-		{
-			get;
-			set;
-		}
+		public string LongDesc;
 
-		[FieldProperty]
-		public extern string Lowsrc
-		{
-			get;
-			set;
-		}
+		public string Lowsrc;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
-		[FieldProperty]
-		public extern int NaturalHeight
-		{
-			get;
-		}
+		public readonly int NaturalHeight;
 
-		[FieldProperty]
-		public extern int NaturalWidth
-		{
-			get;
-		}
+		public readonly int NaturalWidth;
 
 		public extern void RemoveEventListener(ImageElementEvents type, Action listener);
 
@@ -140,44 +78,16 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<ImageElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Src
-		{
-			get;
-			set;
-		}
+		public string Src;
 
-		[FieldProperty]
-		public extern string UseMap
-		{
-			get;
-			set;
-		}
+		public string UseMap;
 
-		[FieldProperty]
-		public extern int Vspace
-		{
-			get;
-			set;
-		}
+		public int Vspace;
 
-		[FieldProperty]
-		public extern int Width
-		{
-			get;
-			set;
-		}
+		public int Width;
 
-		[FieldProperty]
-		public extern int X
-		{
-			get;
-		}
+		public readonly int X;
 
-		[FieldProperty]
-		public extern int Y
-		{
-			get;
-		}
+		public readonly int Y;
 	}
 }

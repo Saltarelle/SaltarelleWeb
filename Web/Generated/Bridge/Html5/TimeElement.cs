@@ -25,12 +25,7 @@
 
 		public extern void AddEventListener(TimeElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern string DateTime
-		{
-			get;
-			set;
-		}
+		public string DateTime;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TimeElement> listener);
 

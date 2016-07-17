@@ -3,40 +3,16 @@
 	[External, Serializable]
 	public partial class WebGLContextAttributes
 	{
-		public extern bool Alpha
-		{
-			get;
-			set;
-		}
+		public bool Alpha;
 
-		public extern bool Antialias
-		{
-			get;
-			set;
-		}
+		public bool Antialias;
 
-		public extern bool Depth
-		{
-			get;
-			set;
-		}
+		public bool Depth;
 
-		public extern bool PremultipliedAlpha
-		{
-			get;
-			set;
-		}
+		public bool PremultipliedAlpha;
 
-		public extern bool PreserveDrawingBuffer
-		{
-			get;
-			set;
-		}
+		public bool PreserveDrawingBuffer;
 
-		public extern bool Stencil
-		{
-			get;
-			set;
-		}
+		public bool Stencil;
 	}
 }

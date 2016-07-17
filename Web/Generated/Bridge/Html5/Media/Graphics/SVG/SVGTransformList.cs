@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5.Media.Graphics.SVG
+﻿namespace Bridge.Html5.Media.Graphics.SVG
 {
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class SVGTransformList
@@ -21,26 +19,15 @@ namespace Bridge.Html5.Media.Graphics.SVG
 
 		public extern SVGTransform CreateSVGTransformFromMatrix(SVGMatrix matrix);
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<SVGTransform> GetEnumerator();
-
 		public extern SVGTransform GetItem(int index);
 
 		public extern SVGTransform Initialize(SVGTransform newItem);
 
 		public extern SVGTransform InsertItemBefore(SVGTransform newItem, int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
-		[FieldProperty]
-		public extern int NumberOfItems
-		{
-			get;
-		}
+		public readonly int NumberOfItems;
 
 		public extern SVGTransform RemoveItem(int index);
 

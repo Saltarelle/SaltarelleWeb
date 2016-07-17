@@ -30,20 +30,12 @@
 		[Name("ATTRIBUTE_NODE")]
 		public const ushort ATTRIBUTE_NODE = 2;
 
-		[FieldProperty]
-		public extern string BaseURI
-		{
-			get;
-		}
+		public readonly string BaseURI;
 
 		[Name("CDATA_SECTION_NODE")]
 		public const ushort CDATA_SECTION_NODE = 4;
 
-		[FieldProperty]
-		public extern XmlNodeList ChildNodes
-		{
-			get;
-		}
+		public readonly XmlNodeList ChildNodes;
 
 		public extern XmlNode CloneNode();
 
@@ -92,11 +84,7 @@
 		[Name("ENTITY_REFERENCE_NODE")]
 		public const ushort ENTITY_REFERENCE_NODE = 5;
 
-		[FieldProperty]
-		public extern XmlNode FirstChild
-		{
-			get;
-		}
+		public readonly XmlNode FirstChild;
 
 		public extern object GetUserData(string key);
 
@@ -110,87 +98,38 @@
 
 		public extern bool IsEqualNode(XmlNode node);
 
-		[FieldProperty]
-		public extern XmlNode LastChild
-		{
-			get;
-		}
+		public readonly XmlNode LastChild;
 
-		[FieldProperty]
-		public extern string LocalName
-		{
-			get;
-		}
+		public readonly string LocalName;
 
 		public extern string LookupNamespaceURI(string prefix);
 
 		public extern string LookupPrefix(string @namespace);
 
-		[FieldProperty]
-		public extern string NamespaceURI
-		{
-			get;
-		}
+		public readonly string NamespaceURI;
 
-		[FieldProperty]
-		public extern XmlNode NextSibling
-		{
-			get;
-		}
+		public readonly XmlNode NextSibling;
 
-		[FieldProperty]
-		public extern string NodeName
-		{
-			get;
-		}
+		public readonly string NodeName;
 
-		[FieldProperty]
-		public extern XmlNodeType NodeType
-		{
-			get;
-		}
+		public readonly XmlNodeType NodeType;
 
-		[FieldProperty]
-		public extern string NodeValue
-		{
-			get;
-			set;
-		}
+		public string NodeValue;
 
 		public extern void Normalize();
 
 		[Name("NOTATION_NODE")]
 		public const ushort NOTATION_NODE = 12;
 
-		[FieldProperty]
-		public extern DocumentBase OwnerDocument
-		{
-			get;
-		}
+		public readonly DocumentBase OwnerDocument;
 
-		[FieldProperty]
-		public extern XmlElement ParentElement
-		{
-			get;
-		}
+		public readonly XmlElement ParentElement;
 
-		[FieldProperty]
-		public extern XmlNode ParentNode
-		{
-			get;
-		}
+		public readonly XmlNode ParentNode;
 
-		[FieldProperty]
-		public extern string Prefix
-		{
-			get;
-		}
+		public readonly string Prefix;
 
-		[FieldProperty]
-		public extern XmlNode PreviousSibling
-		{
-			get;
-		}
+		public readonly XmlNode PreviousSibling;
 
 		[Name("PROCESSING_INSTRUCTION_NODE")]
 		public const ushort PROCESSING_INSTRUCTION_NODE = 7;
@@ -222,11 +161,6 @@
 		[Name("TEXT_NODE")]
 		public const ushort TEXT_NODE = 3;
 
-		[FieldProperty]
-		public extern string TextContent
-		{
-			get;
-			set;
-		}
+		public string TextContent;
 	}
 }

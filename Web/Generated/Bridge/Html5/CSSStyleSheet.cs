@@ -5,20 +5,12 @@
 	{
 		internal extern CSSStyleSheet();
 
-		[FieldProperty]
-		public extern CSSRule[] CssRules
-		{
-			get;
-		}
+		public readonly CSSRule[] CssRules;
 
 		public extern void DeleteRule(int index);
 
 		public extern int InsertRule(string rule, int index);
 
-		[FieldProperty]
-		public extern CSSRule OwnerRule
-		{
-			get;
-		}
+		public readonly CSSRule OwnerRule;
 	}
 }

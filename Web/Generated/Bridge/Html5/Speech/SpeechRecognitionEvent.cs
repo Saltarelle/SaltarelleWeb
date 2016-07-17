@@ -11,28 +11,12 @@ namespace Bridge.Html5.Speech
 
 		public extern SpeechRecognitionEvent(string type, SpeechRecognitionEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern DocumentBase Emma
-		{
-			get;
-		}
+		public readonly DocumentBase Emma;
 
-		[FieldProperty]
-		public extern string Interpretation
-		{
-			get;
-		}
+		public readonly string Interpretation;
 
-		[FieldProperty]
-		public extern int ResultIndex
-		{
-			get;
-		}
+		public readonly int ResultIndex;
 
-		[FieldProperty]
-		public extern object Results
-		{
-			get;
-		}
+		public readonly object Results;
 	}
 }

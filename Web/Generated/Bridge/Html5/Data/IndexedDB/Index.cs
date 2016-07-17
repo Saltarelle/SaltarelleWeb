@@ -11,29 +11,13 @@
 
 		public extern Request GetKey(object key);
 
-		[FieldProperty]
-		public extern object KeyPath
-		{
-			get;
-		}
+		public readonly object KeyPath;
 
-		[FieldProperty]
-		public extern bool MultiEntry
-		{
-			get;
-		}
+		public readonly bool MultiEntry;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-		}
+		public readonly string Name;
 
-		[FieldProperty]
-		public extern ObjectStore ObjectStore
-		{
-			get;
-		}
+		public readonly ObjectStore ObjectStore;
 
 		public extern Request OpenCursor(object range);
 
@@ -43,16 +27,8 @@
 
 		public extern Request OpenKeyCursor(object range, CursorDirection direction);
 
-		[FieldProperty]
-		public extern string StoreName
-		{
-			get;
-		}
+		public readonly string StoreName;
 
-		[FieldProperty]
-		public extern bool Unique
-		{
-			get;
-		}
+		public readonly bool Unique;
 	}
 }

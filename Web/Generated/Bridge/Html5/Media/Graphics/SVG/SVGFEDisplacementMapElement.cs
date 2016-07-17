@@ -25,23 +25,11 @@
 
 		public extern void AddEventListener(SVGFEDisplacementMapElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
-		[FieldProperty]
-		public extern SVGAnimatedString In1
-		{
-			get;
-		}
+		public readonly SVGAnimatedString In1;
 
-		[FieldProperty]
-		public extern SVGAnimatedString In2
-		{
-			get;
-		}
+		public readonly SVGAnimatedString In2;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEDisplacementMapElement> listener);
 
@@ -63,17 +51,9 @@
 
 		public extern void RemoveEventListener(SVGFEDisplacementMapElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Result
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Result;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Scale
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Scale;
 
 		[Name("SVG_CHANNEL_A")]
 		public const ushort SVG_CHANNEL_A = 4;
@@ -90,34 +70,14 @@
 		[Name("SVG_CHANNEL_UNKNOWN")]
 		public const ushort SVG_CHANNEL_UNKNOWN = 0;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector> XChannelSelector
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector> XChannelSelector;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector> YChannelSelector
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGFEDisplacementMapChannelSelector> YChannelSelector;
 	}
 }

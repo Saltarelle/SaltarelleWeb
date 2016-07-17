@@ -65,16 +65,8 @@
 		[Name("PATHSEG_UNKNOWN")]
 		public const ushort PATHSEG_UNKNOWN = 0;
 
-		[FieldProperty]
-		public extern SVGPathSegType PathSegType
-		{
-			get;
-		}
+		public readonly SVGPathSegType PathSegType;
 
-		[FieldProperty]
-		public extern string PathSegTypeAsLetter
-		{
-			get;
-		}
+		public readonly string PathSegTypeAsLetter;
 	}
 }

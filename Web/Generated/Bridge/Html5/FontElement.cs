@@ -25,19 +25,9 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Color
-		{
-			get;
-			set;
-		}
+		public string Color;
 
-		[FieldProperty]
-		public extern string Face
-		{
-			get;
-			set;
-		}
+		public string Face;
 
 		public extern void RemoveEventListener(FontElementEvents type, Action listener);
 
@@ -59,11 +49,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<FontElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Size
-		{
-			get;
-			set;
-		}
+		public string Size;
 	}
 }

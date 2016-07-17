@@ -25,19 +25,9 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<ConvolverNode> listener, bool capture);
 
-		[FieldProperty]
-		public extern AudioBuffer Buffer
-		{
-			get;
-			set;
-		}
+		public AudioBuffer Buffer;
 
-		[FieldProperty]
-		public extern bool Normalize
-		{
-			get;
-			set;
-		}
+		public bool Normalize;
 
 		public extern void RemoveEventListener(ConvolverNodeEvents type, Action listener);
 

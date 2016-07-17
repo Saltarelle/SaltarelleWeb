@@ -27,31 +27,15 @@ namespace Bridge.Html5.Data.IndexedDB
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture);
 
-		[FieldProperty]
-		public extern DOMError Error
-		{
-			get;
-		}
+		public readonly DOMError Error;
 
-		[FieldProperty, Name("onerror")]
-		public extern HtmlEventHandler OnError
-		{
-			get;
-			set;
-		}
+		[Name("onerror")]
+		public HtmlEventHandler OnError;
 
-		[FieldProperty, Name("onsuccess")]
-		public extern HtmlEventHandler OnSuccess
-		{
-			get;
-			set;
-		}
+		[Name("onsuccess")]
+		public HtmlEventHandler OnSuccess;
 
-		[FieldProperty]
-		public extern RequestReadyState ReadyState
-		{
-			get;
-		}
+		public readonly RequestReadyState ReadyState;
 
 		public extern void RemoveEventListener(RequestEvents type, Action listener);
 
@@ -73,22 +57,10 @@ namespace Bridge.Html5.Data.IndexedDB
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Request> listener, bool capture);
 
-		[FieldProperty]
-		public extern object Result
-		{
-			get;
-		}
+		public readonly object Result;
 
-		[FieldProperty]
-		public extern TypeOption<ObjectStore, Index, Cursor> Source
-		{
-			get;
-		}
+		public readonly TypeOption<ObjectStore, Index, Cursor> Source;
 
-		[FieldProperty]
-		public extern Transaction Transaction
-		{
-			get;
-		}
+		public readonly Transaction Transaction;
 	}
 }

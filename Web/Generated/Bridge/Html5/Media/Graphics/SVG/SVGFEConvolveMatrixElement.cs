@@ -25,71 +25,27 @@
 
 		public extern void AddEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Bias
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Bias;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Divisor
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Divisor;
 
-		[FieldProperty]
-		public extern SVGAnimatedEnumeration<SVGFEConvolveMatrixEdgeMode> EdgeMode
-		{
-			get;
-		}
+		public readonly SVGAnimatedEnumeration<SVGFEConvolveMatrixEdgeMode> EdgeMode;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Height
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Height;
 
-		[FieldProperty]
-		public extern SVGAnimatedString In1
-		{
-			get;
-		}
+		public readonly SVGAnimatedString In1;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumberList KernelMatrix
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumberList KernelMatrix;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber KernelUnitLengthX
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber KernelUnitLengthX;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber KernelUnitLengthY
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber KernelUnitLengthY;
 
-		[FieldProperty]
-		public extern SVGAnimatedInteger OrderX
-		{
-			get;
-		}
+		public readonly SVGAnimatedInteger OrderX;
 
-		[FieldProperty]
-		public extern SVGAnimatedInteger OrderY
-		{
-			get;
-		}
+		public readonly SVGAnimatedInteger OrderY;
 
-		[FieldProperty]
-		public extern SVGAnimatedBoolean PreserveAlpha
-		{
-			get;
-		}
+		public readonly SVGAnimatedBoolean PreserveAlpha;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFEConvolveMatrixElement> listener);
 
@@ -111,11 +67,7 @@
 
 		public extern void RemoveEventListener(SVGFEConvolveMatrixElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedString Result
-		{
-			get;
-		}
+		public readonly SVGAnimatedString Result;
 
 		[Name("SVG_EDGEMODE_DUPLICATE")]
 		public const ushort SVG_EDGEMODE_DUPLICATE = 1;
@@ -129,34 +81,14 @@
 		[Name("SVG_EDGEMODE_WRAP")]
 		public const ushort SVG_EDGEMODE_WRAP = 2;
 
-		[FieldProperty]
-		public extern SVGAnimatedInteger TargetX
-		{
-			get;
-		}
+		public readonly SVGAnimatedInteger TargetX;
 
-		[FieldProperty]
-		public extern SVGAnimatedInteger TargetY
-		{
-			get;
-		}
+		public readonly SVGAnimatedInteger TargetY;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Width
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Width;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength X
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength X;
 
-		[FieldProperty]
-		public extern SVGAnimatedLength Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedLength Y;
 	}
 }

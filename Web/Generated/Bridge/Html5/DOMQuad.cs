@@ -15,34 +15,14 @@
 
 		public extern DOMQuad(DOMRectReadOnly rect);
 
-		[FieldProperty]
-		public extern DOMRectReadOnly Bounds
-		{
-			get;
-		}
+		public readonly DOMRectReadOnly Bounds;
 
-		[FieldProperty]
-		public extern DOMPoint P1
-		{
-			get;
-		}
+		public readonly DOMPoint P1;
 
-		[FieldProperty]
-		public extern DOMPoint P2
-		{
-			get;
-		}
+		public readonly DOMPoint P2;
 
-		[FieldProperty]
-		public extern DOMPoint P3
-		{
-			get;
-		}
+		public readonly DOMPoint P3;
 
-		[FieldProperty]
-		public extern DOMPoint P4
-		{
-			get;
-		}
+		public readonly DOMPoint P4;
 	}
 }

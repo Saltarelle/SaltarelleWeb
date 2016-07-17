@@ -25,26 +25,11 @@
 
 		public extern void AddEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Content
-		{
-			get;
-			set;
-		}
+		public string Content;
 
-		[FieldProperty]
-		public extern string HttpEquiv
-		{
-			get;
-			set;
-		}
+		public string HttpEquiv;
 
-		[FieldProperty]
-		public extern string Name
-		{
-			get;
-			set;
-		}
+		public string Name;
 
 		public extern void RemoveEventListener(MetaElementEvents type, Action listener);
 
@@ -66,11 +51,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<MetaElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern string Scheme
-		{
-			get;
-			set;
-		}
+		public string Scheme;
 	}
 }

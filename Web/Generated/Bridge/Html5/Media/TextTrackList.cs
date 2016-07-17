@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5.Media
+﻿namespace Bridge.Html5.Media
 {
 	[Namespace("false"), External(ObeysTypeSystem = true)]
 	public partial class TextTrackList : EventTarget
@@ -33,37 +31,18 @@ namespace Bridge.Html5.Media
 
 		public extern void AddEventListener(TextTrackListEvents type, IEventListener listener, bool capture);
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<TextTrack> GetEnumerator();
-
 		public extern TextTrack GetTrackById(string id);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 
-		[FieldProperty, Name("onaddtrack")]
-		public extern HtmlEventHandler OnAddtrack
-		{
-			get;
-			set;
-		}
+		[Name("onaddtrack")]
+		public HtmlEventHandler OnAddtrack;
 
-		[FieldProperty, Name("onchange")]
-		public extern HtmlEventHandler OnChange
-		{
-			get;
-			set;
-		}
+		[Name("onchange")]
+		public HtmlEventHandler OnChange;
 
-		[FieldProperty, Name("onremovetrack")]
-		public extern HtmlEventHandler OnRemovetrack
-		{
-			get;
-			set;
-		}
+		[Name("onremovetrack")]
+		public HtmlEventHandler OnRemovetrack;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<TextTrackList> listener);
 

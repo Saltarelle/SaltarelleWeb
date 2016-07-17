@@ -3,16 +3,8 @@
 	[External, Serializable]
 	public partial class EventInit
 	{
-		public extern bool Bubbles
-		{
-			get;
-			set;
-		}
+		public bool Bubbles;
 
-		public extern bool Cancelable
-		{
-			get;
-			set;
-		}
+		public bool Cancelable;
 	}
 }

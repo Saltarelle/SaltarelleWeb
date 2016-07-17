@@ -5,18 +5,9 @@
 	{
 		internal extern TreeWalker();
 
-		[FieldProperty]
-		public extern XmlNode CurrentNode
-		{
-			get;
-			set;
-		}
+		public XmlNode CurrentNode;
 
-		[FieldProperty]
-		public extern INodeFilter Filter
-		{
-			get;
-		}
+		public readonly INodeFilter Filter;
 
 		public extern XmlNode FirstChild();
 
@@ -32,16 +23,8 @@
 
 		public extern XmlNode PreviousSibling();
 
-		[FieldProperty]
-		public extern XmlNode Root
-		{
-			get;
-		}
+		public readonly XmlNode Root;
 
-		[FieldProperty]
-		public extern NodeFilter WhatToShow
-		{
-			get;
-		}
+		public readonly NodeFilter WhatToShow;
 	}
 }

@@ -45,11 +45,6 @@
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<PreElement> listener, bool capture);
 
-		[FieldProperty]
-		public extern int Width
-		{
-			get;
-			set;
-		}
+		public int Width;
 	}
 }

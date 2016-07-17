@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Bridge.Html5.Net.Messaging
+﻿namespace Bridge.Html5.Net.Messaging
 {
 	[Namespace("false"), External(ObeysTypeSystem = true), Name("Object")]
 	public partial class MessagePortList
@@ -13,15 +11,8 @@ namespace Bridge.Html5.Net.Messaging
 			get;
 		}
 
-		[EnumerateAsArray, Template("new {$System.ArrayEnumerator}({this})")]
-		public extern IEnumerator<MessagePort> GetEnumerator();
-
 		public extern MessagePort Item(int index);
 
-		[FieldProperty]
-		public extern int Length
-		{
-			get;
-		}
+		public readonly int Length;
 	}
 }

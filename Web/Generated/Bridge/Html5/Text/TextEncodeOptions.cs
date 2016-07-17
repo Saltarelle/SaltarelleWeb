@@ -3,10 +3,6 @@
 	[External, Serializable]
 	public partial class TextEncodeOptions
 	{
-		public extern bool Stream
-		{
-			get;
-			set;
-		}
+		public bool Stream;
 	}
 }

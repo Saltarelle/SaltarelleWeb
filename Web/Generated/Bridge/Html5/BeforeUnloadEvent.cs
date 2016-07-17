@@ -5,11 +5,6 @@
 	{
 		internal extern BeforeUnloadEvent();
 
-		[FieldProperty]
-		public extern string ReturnValue
-		{
-			get;
-			set;
-		}
+		public string ReturnValue;
 	}
 }

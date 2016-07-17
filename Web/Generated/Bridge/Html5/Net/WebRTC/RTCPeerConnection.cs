@@ -62,112 +62,48 @@ namespace Bridge.Html5.Net.WebRTC
 
 		public extern MediaStream GetStreamById(string streamId);
 
-		[FieldProperty]
-		public extern RTCIceConnectionState IceConnectionState
-		{
-			get;
-		}
+		public readonly RTCIceConnectionState IceConnectionState;
 
-		[FieldProperty]
-		public extern RTCIceGatheringState IceGatheringState
-		{
-			get;
-		}
+		public readonly RTCIceGatheringState IceGatheringState;
 
-		[FieldProperty]
-		public extern RTCSessionDescription LocalDescription
-		{
-			get;
-		}
+		public readonly RTCSessionDescription LocalDescription;
 
-		[FieldProperty, Name("onaddstream")]
-		public extern HtmlEventHandler OnAddstream
-		{
-			get;
-			set;
-		}
+		[Name("onaddstream")]
+		public HtmlEventHandler OnAddstream;
 
-		[FieldProperty, Name("onclosedconnection")]
-		public extern HtmlEventHandler OnClosedconnection
-		{
-			get;
-			set;
-		}
+		[Name("onclosedconnection")]
+		public HtmlEventHandler OnClosedconnection;
 
-		[FieldProperty, Name("onconnection")]
-		public extern HtmlEventHandler OnConnection
-		{
-			get;
-			set;
-		}
+		[Name("onconnection")]
+		public HtmlEventHandler OnConnection;
 
-		[FieldProperty, Name("ondatachannel")]
-		public extern HtmlEventHandler OnDatachannel
-		{
-			get;
-			set;
-		}
+		[Name("ondatachannel")]
+		public HtmlEventHandler OnDatachannel;
 
-		[FieldProperty, Name("onicecandidate")]
-		public extern HtmlEventHandler OnIcecandidate
-		{
-			get;
-			set;
-		}
+		[Name("onicecandidate")]
+		public HtmlEventHandler OnIcecandidate;
 
-		[FieldProperty, Name("oniceconnectionstatechange")]
-		public extern HtmlEventHandler OnIceconnectionstatechange
-		{
-			get;
-			set;
-		}
+		[Name("oniceconnectionstatechange")]
+		public HtmlEventHandler OnIceconnectionstatechange;
 
-		[FieldProperty, Name("onidentityresult")]
-		public extern HtmlEventHandler OnIdentityresult
-		{
-			get;
-			set;
-		}
+		[Name("onidentityresult")]
+		public HtmlEventHandler OnIdentityresult;
 
-		[FieldProperty, Name("onnegotiationneeded")]
-		public extern HtmlEventHandler OnNegotiationneeded
-		{
-			get;
-			set;
-		}
+		[Name("onnegotiationneeded")]
+		public HtmlEventHandler OnNegotiationneeded;
 
-		[FieldProperty, Name("onpeeridentity")]
-		public extern HtmlEventHandler OnPeeridentity
-		{
-			get;
-			set;
-		}
+		[Name("onpeeridentity")]
+		public HtmlEventHandler OnPeeridentity;
 
-		[FieldProperty, Name("onremovestream")]
-		public extern HtmlEventHandler OnRemovestream
-		{
-			get;
-			set;
-		}
+		[Name("onremovestream")]
+		public HtmlEventHandler OnRemovestream;
 
-		[FieldProperty, Name("onsignalingstatechange")]
-		public extern HtmlEventHandler OnSignalingstatechange
-		{
-			get;
-			set;
-		}
+		[Name("onsignalingstatechange")]
+		public HtmlEventHandler OnSignalingstatechange;
 
-		[FieldProperty]
-		public extern RTCIdentityAssertion PeerIdentity
-		{
-			get;
-		}
+		public readonly RTCIdentityAssertion PeerIdentity;
 
-		[FieldProperty]
-		public extern RTCSessionDescription RemoteDescription
-		{
-			get;
-		}
+		public readonly RTCSessionDescription RemoteDescription;
 
 		public extern void RemoveEventListener(RTCPeerConnectionEvents type, Action listener);
 
@@ -209,11 +145,7 @@ namespace Bridge.Html5.Net.WebRTC
 
 		public extern void SetRemoteDescription(RTCSessionDescription description, Action successCallback, RTCPeerConnectionErrorCallback failureCallback);
 
-		[FieldProperty]
-		public extern RTCSignalingState SignalingState
-		{
-			get;
-		}
+		public readonly RTCSignalingState SignalingState;
 
 		public extern void UpdateIce();
 

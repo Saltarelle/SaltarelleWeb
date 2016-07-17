@@ -9,29 +9,13 @@
 
 		public extern WheelEvent(string type, WheelEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern WheelDeltaMode DeltaMode
-		{
-			get;
-		}
+		public readonly WheelDeltaMode DeltaMode;
 
-		[FieldProperty]
-		public extern double DeltaX
-		{
-			get;
-		}
+		public readonly double DeltaX;
 
-		[FieldProperty]
-		public extern double DeltaY
-		{
-			get;
-		}
+		public readonly double DeltaY;
 
-		[FieldProperty]
-		public extern double DeltaZ
-		{
-			get;
-		}
+		public readonly double DeltaZ;
 
 		[Name("DOM_DELTA_LINE")]
 		public const int DOM_DELTA_LINE = 1;

@@ -29,19 +29,9 @@ namespace Bridge.Html5
 
 		public extern VideoPlaybackQuality GetVideoPlaybackQuality();
 
-		[FieldProperty]
-		public extern int Height
-		{
-			get;
-			set;
-		}
+		public int Height;
 
-		[FieldProperty]
-		public extern string Poster
-		{
-			get;
-			set;
-		}
+		public string Poster;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<VideoElement> listener);
 
@@ -63,23 +53,10 @@ namespace Bridge.Html5
 
 		public extern void RemoveEventListener(VideoElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern int VideoHeight
-		{
-			get;
-		}
+		public readonly int VideoHeight;
 
-		[FieldProperty]
-		public extern int VideoWidth
-		{
-			get;
-		}
+		public readonly int VideoWidth;
 
-		[FieldProperty]
-		public extern int Width
-		{
-			get;
-			set;
-		}
+		public int Width;
 	}
 }

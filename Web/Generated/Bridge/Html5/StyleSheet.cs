@@ -7,47 +7,18 @@ namespace Bridge.Html5
 	{
 		internal extern StyleSheet();
 
-		[FieldProperty]
-		public extern bool Disabled
-		{
-			get;
-			set;
-		}
+		public bool Disabled;
 
-		[FieldProperty]
-		public extern string Href
-		{
-			get;
-		}
+		public readonly string Href;
 
-		[FieldProperty]
-		public extern MediaList Media
-		{
-			get;
-		}
+		public readonly MediaList Media;
 
-		[FieldProperty]
-		public extern XmlNode OwnerNode
-		{
-			get;
-		}
+		public readonly XmlNode OwnerNode;
 
-		[FieldProperty]
-		public extern StyleSheet ParentStyleSheet
-		{
-			get;
-		}
+		public readonly StyleSheet ParentStyleSheet;
 
-		[FieldProperty]
-		public extern string Title
-		{
-			get;
-		}
+		public readonly string Title;
 
-		[FieldProperty]
-		public extern string Type
-		{
-			get;
-		}
+		public readonly string Type;
 	}
 }

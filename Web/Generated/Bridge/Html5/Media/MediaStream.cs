@@ -8,11 +8,7 @@ namespace Bridge.Html5.Media
 	{
 		internal extern MediaStream();
 
-		[FieldProperty]
-		public extern double CurrentTime
-		{
-			get;
-		}
+		public readonly double CurrentTime;
 
 		public extern AudioStreamTrack[] GetAudioTracks();
 

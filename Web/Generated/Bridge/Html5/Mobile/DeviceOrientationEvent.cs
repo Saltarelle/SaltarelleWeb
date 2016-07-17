@@ -9,29 +9,13 @@
 
 		public extern DeviceOrientationEvent(string type, DeviceOrientationEventInit eventInitDict);
 
-		[FieldProperty]
-		public extern bool Absolute
-		{
-			get;
-		}
+		public readonly bool Absolute;
 
-		[FieldProperty]
-		public extern double Alpha
-		{
-			get;
-		}
+		public readonly double Alpha;
 
-		[FieldProperty]
-		public extern double Beta
-		{
-			get;
-		}
+		public readonly double Beta;
 
-		[FieldProperty]
-		public extern double Gamma
-		{
-			get;
-		}
+		public readonly double Gamma;
 
 		public extern void InitDeviceOrientationEvent(string type, bool canBubble, bool cancelable, double alpha, double beta, double gamma, bool absolute);
 	}

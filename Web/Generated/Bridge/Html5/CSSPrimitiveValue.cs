@@ -93,11 +93,7 @@
 
 		public extern string GetStringValue();
 
-		[FieldProperty]
-		public extern ushort PrimitiveType
-		{
-			get;
-		}
+		public readonly ushort PrimitiveType;
 
 		public extern void SetFloatValue(ushort unitType, double floatValue);
 

@@ -25,29 +25,13 @@
 
 		public extern void AddEventListener(SVGFESpotLightElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber LimitingConeAngle
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber LimitingConeAngle;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber PointsAtX
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber PointsAtX;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber PointsAtY
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber PointsAtY;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber PointsAtZ
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber PointsAtZ;
 
 		public extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<SVGFESpotLightElement> listener);
 
@@ -69,28 +53,12 @@
 
 		public extern void RemoveEventListener(SVGFESpotLightElementEvents type, IEventListener listener, bool capture);
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber SpecularExponent
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber SpecularExponent;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber X
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber X;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Y
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Y;
 
-		[FieldProperty]
-		public extern SVGAnimatedNumber Z
-		{
-			get;
-		}
+		public readonly SVGAnimatedNumber Z;
 	}
 }
