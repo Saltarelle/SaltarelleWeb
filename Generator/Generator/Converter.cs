@@ -794,14 +794,13 @@ namespace Generator
                                 var returnType = ConvertType(@const.Type);
                                 if (noInterfaceObject)
                                 {
-                                    var p = new PropertyDeclaration
+                                    var p = new FieldDeclaration
                                     {
-                                        Modifiers = @public | Modifiers.Extern,
-                                        Name = csharpName,
-                                        ReturnType = returnType,
-                                        Getter = new Accessor() { Body = null }
+                                        Modifiers = @public | Modifiers.Readonly,
+                                        Variables = { new VariableInitializer { Name = csharpName } },
+                                        ReturnType = returnType
                                     };
-                                    AddAttribute(p.Attributes, FieldPropertyAttribute);
+                                    //AddAttribute(p.Attributes, FieldPropertyAttribute);
                                     AddAttributes(p.Attributes, NameAttributeIfRequired(csharpName, name));
                                     members.Add(p);
                                 }
@@ -973,18 +972,24 @@ namespace Generator
                         {
                             string csharpName = GetOrDefaultString(renames, name, name.MakeCSharpName());
                             var attrType = GetOrDefaultAstType(typeOverrides, name, ConvertType(attribute.Type));
-                            var p = new PropertyDeclaration
+                            var p = new FieldDeclaration
                             {
-                                Modifiers = @public
-                                        | ((attribute.Qualifiers & AttributeQualifiers.Static) != 0 ? Modifiers.Static : 0)
-                                        | Modifiers.Extern,
-                                Name = csharpName,
+                                Modifiers = @public,
+                                Variables = { new VariableInitializer { Name = csharpName } },
                                 ReturnType = attrType,
-                                Getter = new Accessor { Body = null },
-                                Setter = (attribute.Qualifiers & AttributeQualifiers.ReadOnly) != 0 ? Accessor.Null : new Accessor { Body = null },
                             };
 
-                            AddAttribute(p.Attributes, FieldPropertyAttribute);
+                            if ((attribute.Qualifiers & AttributeQualifiers.Static) != 0)
+                            {
+                                p.Modifiers |= Modifiers.Readonly;
+                            }
+
+                            if ((attribute.Qualifiers & AttributeQualifiers.ReadOnly) != 0)
+                            {
+                                p.Modifiers |= Modifiers.Readonly;
+                            }
+
+                            //AddAttribute(p.Attributes, FieldPropertyAttribute);
                             AddAttributes(p.Attributes, NameAttributeIfRequired(csharpName, name));
                             members.Add(p);
                         }
@@ -1040,13 +1045,11 @@ namespace Generator
                 {
                     string csharpName = GetOrDefaultString(renames, name, name.MakeCSharpName());
                     var type = GetOrDefaultAstType(typeOverrides, name, ConvertType(sourceMember.Type));
-                    var p = new PropertyDeclaration
+                    var p = new FieldDeclaration
                     {
-                        Modifiers = Modifiers.Public | Modifiers.Extern,
-                        Name = csharpName,
-                        ReturnType = type,
-                        Getter = new Accessor(),
-                        Setter = new Accessor(),
+                        Modifiers = Modifiers.Public,
+                        Variables = { new VariableInitializer { Name = csharpName } },
+                        ReturnType = type
                     };
                     AddAttributes(p.Attributes, NameAttributeIfRequired(csharpName, name));
                     members.Add(p);
