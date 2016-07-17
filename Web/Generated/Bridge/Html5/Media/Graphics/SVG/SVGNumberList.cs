@@ -5,8 +5,7 @@
 	{
 		internal extern SVGNumberList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public SVGNumber this[int index]
+		public extern SVGNumber this[int index]
 		{
 			get;
 		}

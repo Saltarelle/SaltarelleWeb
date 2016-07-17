@@ -5,8 +5,7 @@
 	{
 		internal extern FileList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public File this[int index]
+		public extern File this[int index]
 		{
 			get;
 		}

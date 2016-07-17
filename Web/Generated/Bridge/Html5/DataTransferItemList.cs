@@ -7,8 +7,7 @@ namespace Bridge.Html5
 	{
 		internal extern DataTransferItemList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public DataTransferItem this[int index]
+		public extern DataTransferItem this[int index]
 		{
 			get;
 		}

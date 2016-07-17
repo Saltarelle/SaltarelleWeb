@@ -5,14 +5,12 @@
 	{
 		internal extern PluginArray();
 
-		[IndexerName("__Item"), FieldProperty]
-		public Plugin this[int index]
+		public extern Plugin this[int index]
 		{
 			get;
 		}
 
-		[IndexerName("__Item"), FieldProperty]
-		public Plugin this[string name]
+		public extern Plugin this[string name]
 		{
 			get;
 		}

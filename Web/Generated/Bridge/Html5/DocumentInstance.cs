@@ -8,8 +8,7 @@ namespace Bridge.Html5
 	{
 		internal extern DocumentInstance();
 
-		[IndexerName("__Item"), FieldProperty]
-		public object this[string name]
+		public extern object this[string name]
 		{
 			get;
 		}

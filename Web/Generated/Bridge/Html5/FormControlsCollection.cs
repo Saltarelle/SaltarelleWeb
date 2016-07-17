@@ -5,8 +5,7 @@
 	{
 		internal extern FormControlsCollection();
 
-		[IndexerName("__Item"), FieldProperty]
-		public TypeOption<ElementNodeList, Element> this[string name]
+		public extern TypeOption<ElementNodeList, Element> this[string name]
 		{
 			get;
 		}

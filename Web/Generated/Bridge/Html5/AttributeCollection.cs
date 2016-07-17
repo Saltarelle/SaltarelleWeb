@@ -7,14 +7,12 @@ namespace Bridge.Html5
 	{
 		internal extern AttributeCollection();
 
-		[IndexerName("__Item"), FieldProperty]
-		public XmlAttribute this[int index]
+		public extern XmlAttribute this[int index]
 		{
 			get;
 		}
 
-		[IndexerName("__Item"), FieldProperty]
-		public XmlAttribute this[string name]
+		public extern XmlAttribute this[string name]
 		{
 			get;
 		}

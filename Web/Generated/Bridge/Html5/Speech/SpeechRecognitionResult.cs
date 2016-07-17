@@ -5,8 +5,7 @@
 	{
 		internal extern SpeechRecognitionResult();
 
-		[IndexerName("__Item"), FieldProperty]
-		public SpeechRecognitionAlternative this[int index]
+		public extern SpeechRecognitionAlternative this[int index]
 		{
 			get;
 		}

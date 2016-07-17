@@ -5,8 +5,7 @@
 	{
 		internal extern StyleSheetList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public StyleSheet this[int index]
+		public extern StyleSheet this[int index]
 		{
 			get;
 		}

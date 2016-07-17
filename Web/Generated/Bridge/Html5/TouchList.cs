@@ -5,8 +5,7 @@
 	{
 		internal extern TouchList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public Touch this[int index]
+		public extern Touch this[int index]
 		{
 			get;
 		}

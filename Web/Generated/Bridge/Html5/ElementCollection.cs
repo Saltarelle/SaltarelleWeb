@@ -5,14 +5,12 @@
 	{
 		internal extern ElementCollection();
 
-		[IndexerName("__Item"), FieldProperty]
-		public Element this[int index]
+		public extern Element this[int index]
 		{
 			get;
 		}
 
-		[IndexerName("__Item"), FieldProperty]
-		public Element this[string name]
+		public extern Element this[string name]
 		{
 			get;
 		}

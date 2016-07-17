@@ -5,8 +5,7 @@
 	{
 		internal extern SpeechGrammarList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public SpeechGrammar this[int index]
+		public extern SpeechGrammar this[int index]
 		{
 			get;
 		}

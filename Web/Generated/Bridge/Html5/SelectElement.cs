@@ -7,8 +7,7 @@ namespace Bridge.Html5
 	{
 		internal extern SelectElement();
 
-		[IndexerName("__Item"), FieldProperty]
-		public TypeOption<Element, OptionElement> this[int index]
+		public extern TypeOption<Element, OptionElement> this[int index]
 		{
 			get;
 			set;

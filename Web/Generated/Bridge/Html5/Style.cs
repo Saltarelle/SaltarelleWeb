@@ -5,8 +5,7 @@
 	{
 		internal extern Style();
 
-		[IndexerName("__Item"), FieldProperty]
-		public string this[int index]
+		public extern string this[int index]
 		{
 			get;
 		}

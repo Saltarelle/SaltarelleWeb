@@ -5,8 +5,7 @@
 	{
 		internal extern SVGPointList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public SVGPoint this[int index]
+		public extern SVGPoint this[int index]
 		{
 			get;
 		}

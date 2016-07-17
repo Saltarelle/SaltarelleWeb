@@ -5,8 +5,7 @@
 	{
 		internal extern DOMStringMap();
 
-		[IndexerName("__Item"), FieldProperty]
-		public string this[string name]
+		public extern string this[string name]
 		{
 			get;
 			set;

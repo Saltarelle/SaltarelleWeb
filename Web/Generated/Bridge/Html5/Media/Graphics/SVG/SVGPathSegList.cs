@@ -5,8 +5,7 @@
 	{
 		internal extern SVGPathSegList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public SVGPathSeg this[int index]
+		public extern SVGPathSeg this[int index]
 		{
 			get;
 		}

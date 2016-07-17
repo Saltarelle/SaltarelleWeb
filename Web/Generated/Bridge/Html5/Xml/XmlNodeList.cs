@@ -5,8 +5,7 @@
 	{
 		internal extern XmlNodeList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public XmlNode this[int index]
+		public extern XmlNode this[int index]
 		{
 			get;
 		}

@@ -5,8 +5,7 @@
 	{
 		internal extern SVGTransformList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public SVGTransform this[int index]
+		public extern SVGTransform this[int index]
 		{
 			get;
 		}

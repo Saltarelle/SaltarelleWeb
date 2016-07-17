@@ -5,8 +5,7 @@
 	{
 		internal extern MessagePortList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public MessagePort this[int index]
+		public extern MessagePort this[int index]
 		{
 			get;
 		}

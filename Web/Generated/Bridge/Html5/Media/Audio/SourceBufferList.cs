@@ -5,8 +5,7 @@
 	{
 		internal extern SourceBufferList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public SourceBuffer this[int index]
+		public extern SourceBuffer this[int index]
 		{
 			get;
 		}

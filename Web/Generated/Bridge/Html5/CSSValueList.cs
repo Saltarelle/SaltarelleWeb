@@ -5,8 +5,7 @@
 	{
 		internal extern CSSValueList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public CSSValue this[int index]
+		public extern CSSValue this[int index]
 		{
 			get;
 		}

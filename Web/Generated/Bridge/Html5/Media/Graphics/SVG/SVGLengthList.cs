@@ -5,8 +5,7 @@
 	{
 		internal extern SVGLengthList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public SVGLength this[int index]
+		public extern SVGLength this[int index]
 		{
 			get;
 		}

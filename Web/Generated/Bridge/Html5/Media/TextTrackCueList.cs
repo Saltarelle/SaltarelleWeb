@@ -5,8 +5,7 @@
 	{
 		internal extern TextTrackCueList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public VTTCue this[int index]
+		public extern VTTCue this[int index]
 		{
 			get;
 		}

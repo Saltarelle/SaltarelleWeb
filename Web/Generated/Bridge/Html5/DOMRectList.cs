@@ -5,8 +5,7 @@
 	{
 		internal extern DOMRectList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public DOMRect this[int index]
+		public extern DOMRect this[int index]
 		{
 			get;
 		}

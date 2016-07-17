@@ -5,8 +5,7 @@
 	{
 		internal extern Storage();
 
-		[IndexerName("__Item"), FieldProperty]
-		public string this[string key]
+		public extern string this[string key]
 		{
 			get;
 			set;

@@ -5,14 +5,12 @@
 	{
 		internal extern Plugin();
 
-		[IndexerName("__Item"), FieldProperty]
-		public MimeType this[int index]
+		public extern MimeType this[int index]
 		{
 			get;
 		}
 
-		[IndexerName("__Item"), FieldProperty]
-		public MimeType this[string name]
+		public extern MimeType this[string name]
 		{
 			get;
 		}

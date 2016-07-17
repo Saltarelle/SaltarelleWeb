@@ -5,8 +5,7 @@
 	{
 		internal extern TextTrackList();
 
-		[IndexerName("__Item"), FieldProperty]
-		public TextTrack this[int index]
+		public extern TextTrack this[int index]
 		{
 			get;
 		}
