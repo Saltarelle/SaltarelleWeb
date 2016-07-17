@@ -1144,6 +1144,8 @@ namespace Generator
                             scriptName = GetClosestInterfaceObjectName(type);
                         }
 
+                        AstType enumerableTypeInterface2 = null;
+
                         var baseTypes = (@interface.Base != null ? new[] { @interface.Base } : new string[0]).Concat(@interface.Implements).Select(
                             b =>
                             {
@@ -1156,8 +1158,9 @@ namespace Generator
                                     {
                                         if (baseMeta.TypeKind == TypeKind.Default)
                                             _errors.Add("The type `" + b + "' cannot be implemented by the type `" + @interface.Name + "' because the implemented type is not a C# interface");
+
                                         _types[b].Decompose(
-                                            @interface2 => AddMembers(@interface2.Members, baseMeta.TypeOverrides.ToDictionary(o => o.Identifier, o => o.NewType), b, parsedAttributes.NoInterfaceObject, baseMeta.Renames, baseMeta.TypeKind, baseMeta.Removes, false, members),
+                                            @interface2 => enumerableTypeInterface2 = AddMembers(@interface2.Members, baseMeta.TypeOverrides.ToDictionary(o => o.Identifier, o => o.NewType), b, parsedAttributes.NoInterfaceObject, baseMeta.Renames, baseMeta.TypeKind, baseMeta.Removes, false, members),
                                             callbackInterface => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a callback interface, not an interface"); },
                                             dictionary => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a dictionary, not an interface"); },
                                             @callback => { _errors.Add("Base type `" + b + "' of type `" + @interface.Name + " was a callback, not an interface"); },
@@ -1194,6 +1197,11 @@ namespace Generator
                         if (enumerableType != null)
                         {
                             resultType.BaseTypes.Add(enumerableType);
+                        }
+
+                        if (enumerableTypeInterface2 != null)
+                        {
+                            resultType.BaseTypes.Add(enumerableTypeInterface2);
                         }
                         resultType.Members.AddRange(members.OrderBy(MemberOrderer));
                         AddAttributes(resultType.Attributes, attributes);
