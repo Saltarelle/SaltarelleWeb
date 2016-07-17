@@ -311,7 +311,7 @@ namespace Generator
 
         private static Attribute FieldPropertyAttribute { get { return new Attribute { Type = MakeType("Bridge.FieldProperty") }; } }
 
-        private static Attribute EnumerateAsArrayAttribute { get { return new Attribute { Type = MakeType("Bridge.EnumerateAsArray") }; } }
+        //private static Attribute EnumerateAsArrayAttribute { get { return new Attribute { Type = MakeType("Bridge.EnumerateAsArray") }; } }
 
         private static Attribute IgnoreNamespaceAttribute { get { return new Attribute { Type = MakeType("Bridge.Namespace"), Arguments = { new PrimitiveExpression("false") } }; } }
 
@@ -771,7 +771,7 @@ namespace Generator
             return options.Count > 1 ? MakeType("System.TypeOption", options) : options[0];
         }
 
-        private void AddMembers(IEnumerable<InterfaceMember> source, Dictionary<string, AstType> typeOverrides, string interfaceName, bool noInterfaceObject, IReadOnlyDictionary<string, string> renames, TypeKind typeKind, IReadOnlyList<string> removes, bool addAsInterfaceMembers, List<EntityDeclaration> members)
+        private AstType AddMembers(IEnumerable<InterfaceMember> source, Dictionary<string, AstType> typeOverrides, string interfaceName, bool noInterfaceObject, IReadOnlyDictionary<string, string> renames, TypeKind typeKind, IReadOnlyList<string> removes, bool addAsInterfaceMembers, List<EntityDeclaration> members)
         {
             Modifiers @public = addAsInterfaceMembers ? Modifiers.None : Modifiers.Public;
             var indexedProperties = new Dictionary<string, IndexedPropertyData>();
@@ -1020,7 +1020,8 @@ namespace Generator
                 members.Add(i);
             }
 
-            if (enumerateAsArrayCandidates.Count > 0 && HasIntegerLength(members))
+            //if (enumerateAsArrayCandidates.Count > 0 && HasIntegerLength(members))
+            if (enumerateAsArrayCandidates.Count > 0)
             {
                 var arrayType = MakeTypeOptionIfRequired(enumerateAsArrayCandidates);
                 var m = new MethodDeclaration
@@ -1030,10 +1031,24 @@ namespace Generator
                     ReturnType = MakeType("System.Collections.Generic.IEnumerator", new[] { arrayType.Clone() }),
                     //Body = new BlockStatement { Statements = { new ReturnStatement(new NullReferenceExpression()) } }
                 };
-                AddAttribute(m.Attributes, EnumerateAsArrayAttribute);
-                AddAttribute(m.Attributes, TemplateAttribute("new {$System.ArrayEnumerator}({this})"));
+                //AddAttribute(m.Attributes, EnumerateAsArrayAttribute);
+                //AddAttribute(m.Attributes, TemplateAttribute("new {$System.ArrayEnumerator}({this})"));
+                AddAttribute(m.Attributes, TemplateAttribute("Bridge.getEnumerator({this})"));
                 members.Add(m);
+
+                m = new MethodDeclaration
+                {
+                    Modifiers = Modifiers.Extern,
+                    Name = "IEnumerable.GetEnumerator",
+                    ReturnType = MakeType("System.Collections.IEnumerator"),
+                };
+                AddAttribute(m.Attributes, TemplateAttribute("Bridge.getEnumerator({this})"));
+                members.Add(m);
+
+                return MakeType("System.Collections.Generic.IEnumerable", new [] { arrayType });
             }
+
+            return null;
         }
 
         private void AddMembers(IEnumerable<DictionaryMember> source, Dictionary<string, AstType> typeOverrides, string dictionaryName, IReadOnlyDictionary<string, string> renames, IReadOnlyList<string> removes, List<EntityDeclaration> members)
@@ -1112,7 +1127,8 @@ namespace Generator
                         var members = new List<EntityDeclaration>();
                         if (meta.IncludeConstructors && meta.TypeKind != TypeKind.Interface)
                             AddConstructors(parsedAttributes, typeOverrides, members);
-                        AddMembers(@interface.Members, typeOverrides, @interface.Name, parsedAttributes.NoInterfaceObject, meta.Renames, meta.TypeKind, meta.Removes, meta.TypeKind == TypeKind.Interface, members);
+
+                        var enumerableType = AddMembers(@interface.Members, typeOverrides, @interface.Name, parsedAttributes.NoInterfaceObject, meta.Renames, meta.TypeKind, meta.Removes, meta.TypeKind == TypeKind.Interface, members);
 
                         string scriptName;
                         var attributes = new List<Attribute> { IgnoreNamespaceAttribute };
@@ -1175,6 +1191,10 @@ namespace Generator
                             Name = meta.CSharpName,
                         };
                         resultType.BaseTypes.AddRange(baseTypes.Select(t => t.Clone()));
+                        if (enumerableType != null)
+                        {
+                            resultType.BaseTypes.Add(enumerableType);
+                        }
                         resultType.Members.AddRange(members.OrderBy(MemberOrderer));
                         AddAttributes(resultType.Attributes, attributes);
                         result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
@@ -1191,7 +1211,7 @@ namespace Generator
                         var typeOverrides = meta.TypeOverrides.ToDictionary(t => t.Identifier, t => t.NewType);
 
                         var members = new List<EntityDeclaration>();
-                        AddMembers(callbackInterface.Members, typeOverrides, callbackInterface.Name, true, meta.Renames, TypeKind.Interface, meta.Removes, true, members);
+                        var enumerableType = AddMembers(callbackInterface.Members, typeOverrides, callbackInterface.Name, true, meta.Renames, TypeKind.Interface, meta.Removes, true, members);
 
                         var baseTypes = new AstType[0];
                         if (callbackInterface.Base != null)
@@ -1210,6 +1230,12 @@ namespace Generator
                             Name = meta.CSharpName,
                         };
                         resultType.BaseTypes.AddRange(baseTypes);
+
+                        if (enumerableType != null)
+                        {
+                            resultType.BaseTypes.Add(enumerableType);
+                        }
+
                         resultType.Members.AddRange(members.OrderBy(MemberOrderer));
                         AddAttribute(resultType.Attributes, ExternalAttribute(false));
                         result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
