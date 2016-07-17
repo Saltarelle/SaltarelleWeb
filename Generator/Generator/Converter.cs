@@ -325,7 +325,7 @@ namespace Generator
 
         private static Attribute GlobalMethodsAttribute { get { return new Attribute { Type = MakeType("Bridge.GlobalMethods") }; } }
 
-        private static Attribute FlagsAttribute { get { return new Attribute { Type = MakeType("Bridge.Flags") }; } }
+        private static Attribute FlagsAttribute { get { return new Attribute { Type = MakeType("System.Flags") }; } }
 
         private static Attribute ExpandParamsAttribute { get { return new Attribute { Type = MakeType("Bridge.ExpandParams") }; } }
 
@@ -1413,8 +1413,11 @@ namespace Generator
             }
 
             var attributes = new List<Attribute> { ExternalAttribute(false) };
+
             if (flags)
+            {
                 attributes.Add(FlagsAttribute);
+            }
 
             attributes.AddRange(EnumAndNameAttributes(type == GeneratedEnumSourceType.Constants));
 
