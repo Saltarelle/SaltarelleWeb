@@ -315,9 +315,10 @@ namespace Generator
 
         private static Attribute IgnoreNamespaceAttribute { get { return new Attribute { Type = MakeType("Bridge.Namespace"), Arguments = { new PrimitiveExpression("false") } }; } }
 
-        private static Attribute NamedValuesAttribute
+        private static IEnumerable<Attribute> EnumAndNameAttributes(bool byValue)
         {
-            get { return new Attribute { Type = MakeType("Bridge.Enum"), Arguments = { new MemberReferenceExpression(new IdentifierExpression("Emit"), "StringNamePreserveCase") } }; }
+            yield return NameAttribute(byValue ? "Number" : "String");
+            yield return new Attribute { Type = MakeType("Bridge.Enum"), Arguments = { new MemberReferenceExpression(new IdentifierExpression("Emit"), byValue ? "Value" : "StringNameLowerCase") } };
         }
 
         private static Attribute SerializableAttribute { get { return new Attribute { Type = MakeType("Bridge.Serializable") }; } }
@@ -333,7 +334,7 @@ namespace Generator
             return new Attribute { Type = MakeType("Bridge.Template"), Arguments = { new PrimitiveExpression("\"" + code + "\"", "\"" + code + "\"") } };
         }
 
-        private Attribute NameAttribute(string name)
+        private static Attribute NameAttribute(string name)
         {
             return new Attribute { Type = MakeType("Bridge.Name"), Arguments = { new PrimitiveExpression("\"" + name + "\"", "\"" + name + "\"") } };
         }
@@ -1319,7 +1320,7 @@ namespace Generator
                                                        return e;
                                                    }));
                     AddAttribute(t.Attributes, ExternalAttribute(false));
-                    AddAttribute(t.Attributes, NamedValuesAttribute);
+                    AddAttributes(t.Attributes, EnumAndNameAttributes(false));
                     result = new NamespacedEntityDeclaration(meta.Namespace, t);
                 },
                 declaredInterface =>
@@ -1414,8 +1415,8 @@ namespace Generator
             var attributes = new List<Attribute> { ExternalAttribute(false) };
             if (flags)
                 attributes.Add(FlagsAttribute);
-            if (type == GeneratedEnumSourceType.Attributes)
-                attributes.Add(NamedValuesAttribute);
+
+            attributes.AddRange(EnumAndNameAttributes(type == GeneratedEnumSourceType.Constants));
 
             var t = new TypeDeclaration
             {
