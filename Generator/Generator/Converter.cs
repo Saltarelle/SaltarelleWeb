@@ -1311,14 +1311,16 @@ namespace Generator
                         ClassType = ClassType.Enum,
                         Name = meta.CSharpName,
                     };
-                    t.Members.AddRange(@enum.Values.Where(v => ShouldBeIncluded(v, @enum.Name, null))
-                                                   .Select(v =>
-                                                   {
-                                                       string csharpName = GetOrDefaultString(meta.Renames, v, v.MakeCSharpName());
-                                                       var e = new EnumMemberDeclaration { Name = csharpName };
-                                                       AddAttributes(e.Attributes, NameAttributeIfRequired(csharpName, v));
-                                                       return e;
-                                                   }));
+                    t.Members.AddRange(@enum.Values
+                                        .Where(v => ShouldBeIncluded(v, @enum.Name, null))
+                                        .Select(v =>
+                                        {
+                                            string csharpName = GetOrDefaultString(meta.Renames, v, v.MakeCSharpName());
+                                            var e = new EnumMemberDeclaration { Name = csharpName };
+                                            AddAttributes(e.Attributes, NameAttributeIfRequired(csharpName, v));
+                                            return e;
+                                        })
+                                        .OrderBy(x => x.Name));
                     AddAttribute(t.Attributes, ExternalAttribute(false));
                     AddAttributes(t.Attributes, EnumAndNameAttributes(false));
                     result = new NamespacedEntityDeclaration(meta.Namespace, t);
@@ -1419,7 +1421,8 @@ namespace Generator
                 attributes.Add(FlagsAttribute);
             }
 
-            attributes.AddRange(EnumAndNameAttributes(type == GeneratedEnumSourceType.Constants));
+            var byValue = type == GeneratedEnumSourceType.Constants;
+            attributes.AddRange(EnumAndNameAttributes(byValue));
 
             var t = new TypeDeclaration
             {
@@ -1428,7 +1431,16 @@ namespace Generator
                 Name = enumName
             };
             AddAttributes(t.Attributes, attributes);
-            t.Members.AddRange(enumMembers.OrderBy(m => m.Name));
+
+            if (byValue)
+            {
+                t.Members.AddRange(enumMembers.OrderBy(m => ((PrimitiveExpression)m.Initializer).Value));
+            }
+            else
+            {
+                t.Members.AddRange(enumMembers.OrderBy(m => m.Name));
+            }
+
             _result.Add(new NamespacedEntityDeclaration(enumNamespace, t));
         }
 
