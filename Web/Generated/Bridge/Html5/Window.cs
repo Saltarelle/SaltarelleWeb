@@ -8,7 +8,7 @@ using Bridge.Html5.Xml;
 
 namespace Bridge.Html5
 {
-	[Namespace(false), External, Name("window")]
+	[External, Namespace(false), Name("window")]
 	public static partial class Window
 	{
 		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<WindowInstance> listener);

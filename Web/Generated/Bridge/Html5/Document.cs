@@ -6,7 +6,7 @@ using System;
 
 namespace Bridge.Html5
 {
-	[Namespace(false), External, Name("document")]
+	[External, Namespace(false), Name("document")]
 	public static partial class Document
 	{
 		public static readonly XmlElement ActiveElement;

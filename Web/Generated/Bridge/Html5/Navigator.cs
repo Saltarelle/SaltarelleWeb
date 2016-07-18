@@ -7,7 +7,7 @@ using System;
 
 namespace Bridge.Html5
 {
-	[Namespace(false), External, Name("navigator")]
+	[External, Namespace(false), Name("navigator")]
 	public static partial class Navigator
 	{
 		public static readonly string AppCodeName;
