@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Geolocation
 {
-	[External, Serializable]
+	[External]
 	public partial class PositionOptions
 	{
 		public bool EnableHighAccuracy;

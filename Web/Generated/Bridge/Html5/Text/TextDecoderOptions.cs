@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Text
 {
-	[External, Serializable]
+	[External]
 	public partial class TextDecoderOptions
 	{
 		public bool Fatal;

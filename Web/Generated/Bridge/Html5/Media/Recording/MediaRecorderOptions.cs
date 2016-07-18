@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Recording
 {
-	[External, Serializable]
+	[External]
 	public partial class MediaRecorderOptions
 	{
 		public string MimeType;

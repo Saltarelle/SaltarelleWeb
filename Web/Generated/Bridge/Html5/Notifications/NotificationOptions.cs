@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Notifications
 {
-	[External, Serializable]
+	[External]
 	public partial class NotificationOptions
 	{
 		public string Body;

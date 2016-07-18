@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.IndexedDB
 {
-	[External, Serializable]
+	[External]
 	public partial class ObjectStoreParameters
 	{
 		public bool AutoIncrement;

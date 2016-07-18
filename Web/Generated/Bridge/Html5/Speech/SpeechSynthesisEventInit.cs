@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Speech
 {
-	[External, Serializable]
+	[External]
 	public partial class SpeechSynthesisEventInit : EventInit
 	{
 		public int CharIndex;

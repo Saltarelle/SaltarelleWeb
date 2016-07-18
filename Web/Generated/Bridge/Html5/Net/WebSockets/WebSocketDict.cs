@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net.WebSockets
 {
-	[External, Serializable]
+	[External]
 	public partial class WebSocketDict
 	{
 		public WebSocketElement[] Websockets;

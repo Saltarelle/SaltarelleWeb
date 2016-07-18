@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Mobile
 {
-	[External, Serializable]
+	[External]
 	public partial class DeviceMotionEventInit : EventInit
 	{
 		public DeviceAccelerationInit Acceleration;

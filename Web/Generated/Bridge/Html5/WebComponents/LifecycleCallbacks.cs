@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.WebComponents
 {
-	[External, Serializable]
+	[External]
 	public partial class LifecycleCallbacks
 	{
 		public LifecycleAttachedCallback AttachedCallback;

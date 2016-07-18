@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net.WebRTC
 {
-	[External, Serializable]
+	[External]
 	public partial class RTCStatsReportInternal
 	{
 		public RTCCodecStats[] CodecStats;

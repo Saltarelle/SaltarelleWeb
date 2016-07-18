@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[External, Serializable]
+	[External]
 	public partial class DOMPointInit
 	{
 		public double W;

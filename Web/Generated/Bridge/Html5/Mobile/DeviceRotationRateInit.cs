@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Mobile
 {
-	[External, Serializable]
+	[External]
 	public partial class DeviceRotationRateInit
 	{
 		public double? Alpha;

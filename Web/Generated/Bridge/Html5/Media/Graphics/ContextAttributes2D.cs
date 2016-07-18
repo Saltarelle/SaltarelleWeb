@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics
 {
-	[External, Serializable]
+	[External]
 	public partial class ContextAttributes2D
 	{
 		public bool Alpha;

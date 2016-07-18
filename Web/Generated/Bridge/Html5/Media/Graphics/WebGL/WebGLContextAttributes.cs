@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics.WebGL
 {
-	[External, Serializable]
+	[External]
 	public partial class WebGLContextAttributes
 	{
 		public bool Alpha;

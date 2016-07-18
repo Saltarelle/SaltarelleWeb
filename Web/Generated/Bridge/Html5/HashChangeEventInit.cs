@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5
 {
-	[External, Serializable]
+	[External]
 	public partial class HashChangeEventInit : EventInit
 	{
 		public string NewURL;

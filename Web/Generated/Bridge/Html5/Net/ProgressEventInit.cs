@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net
 {
-	[External, Serializable]
+	[External]
 	public partial class ProgressEventInit : EventInit
 	{
 		public bool LengthComputable;

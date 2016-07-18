@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net.WebRTC
 {
-	[External, Serializable]
+	[External]
 	public partial class MediaConstraintSet
 	{
 		[Name("OfferToReceiveAudio")]

@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Net.Messaging
 {
-	[External, Serializable]
+	[External]
 	public partial class MessageEventInit : EventInit
 	{
 		public object Data;

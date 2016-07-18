@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Speech
 {
-	[External, Serializable]
+	[External]
 	public partial class SpeechRecognitionEventInit : EventInit
 	{
 		public DocumentBase Emma;

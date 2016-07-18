@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Data.WebStorage
 {
-	[External, Serializable]
+	[External]
 	public partial class StorageEventInit : EventInit
 	{
 		public string Key;

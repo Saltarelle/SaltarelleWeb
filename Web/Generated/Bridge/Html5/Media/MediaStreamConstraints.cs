@@ -2,7 +2,7 @@
 
 namespace Bridge.Html5.Media
 {
-	[External, Serializable]
+	[External]
 	public partial class MediaStreamConstraints
 	{
 		public TypeOption<bool, object> Audio;

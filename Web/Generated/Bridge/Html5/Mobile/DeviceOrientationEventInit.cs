@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Mobile
 {
-	[External, Serializable]
+	[External]
 	public partial class DeviceOrientationEventInit : EventInit
 	{
 		public bool Absolute;

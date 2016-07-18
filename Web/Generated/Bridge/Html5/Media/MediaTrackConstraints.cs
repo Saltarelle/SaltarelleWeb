@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media
 {
-	[External, Serializable]
+	[External]
 	public partial class MediaTrackConstraints
 	{
 		public object Mandatory;

@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Net.WebRTC
 {
-	[External, Serializable]
+	[External]
 	public partial class RTCInboundRTPStreamStats : RTCRTPStreamStats
 	{
 		public ulong BytesReceived;

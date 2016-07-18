@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Media.Graphics
 {
-	[External, Serializable]
+	[External]
 	public partial class HitRegionOptions
 	{
 		public Element Control;
