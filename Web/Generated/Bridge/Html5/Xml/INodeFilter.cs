@@ -3,6 +3,6 @@
 	[External]
 	public partial interface INodeFilter
 	{
-		extern NodeFilterReturn AcceptNode(XmlNode node);
+		NodeFilterReturn AcceptNode(XmlNode node);
 	}
 }

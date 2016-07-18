@@ -5,6 +5,6 @@ namespace Bridge.Html5.Security.Cryptography
 	[Namespace(false), External]
 	public partial interface IRandomSource
 	{
-		extern ArrayBufferView GetRandomValues(ArrayBufferView array);
+		ArrayBufferView GetRandomValues(ArrayBufferView array);
 	}
 }
