@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml
 {
-	[External]
+	[External, Name("Object")]
 	public partial interface INodeFilter
 	{
 		NodeFilterReturn AcceptNode(XmlNode node);

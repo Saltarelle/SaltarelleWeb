@@ -3,7 +3,7 @@ using System;
 
 namespace Bridge.Html5
 {
-	[Namespace(false), External]
+	[Namespace(false), External, Name("Object")]
 	public partial interface IGeometryUtils
 	{
 		DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from);

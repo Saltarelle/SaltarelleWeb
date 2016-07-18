@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Html5.Xml.XPath
 {
-	[Namespace(false), External]
+	[Namespace(false), External, Name("Object")]
 	public partial interface IXPathEvaluator
 	{
 		XPathExpression CreateExpression(string expression, XPathNSResolver resolver);
