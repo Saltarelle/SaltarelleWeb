@@ -321,7 +321,7 @@ namespace Generator
             yield return new Attribute { Type = MakeType("Bridge.Enum"), Arguments = { new MemberReferenceExpression(new IdentifierExpression("Emit"), byValue ? "Value" : "StringNameLowerCase") } };
         }
 
-        private static Attribute SerializableAttribute { get { return new Attribute { Type = MakeType("Bridge.Serializable") }; } }
+        //private static Attribute SerializableAttribute { get { return new Attribute { Type = MakeType("Bridge.Serializable") }; } }
 
         private static Attribute GlobalMethodsAttribute { get { return new Attribute { Type = MakeType("Bridge.GlobalMethods") }; } }
 
@@ -1291,7 +1291,7 @@ namespace Generator
                         resultType.BaseTypes.AddRange(baseTypes);
                         resultType.Members.AddRange(members.OrderBy(MemberOrderer));
                         AddAttributes(resultType.Attributes, ExternalAttribute(false));
-                        AddAttribute(resultType.Attributes, SerializableAttribute);
+                        //AddAttribute(resultType.Attributes, SerializableAttribute);
                         result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
                     }
                 },
