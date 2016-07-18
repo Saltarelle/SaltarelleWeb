@@ -774,6 +774,7 @@ namespace Generator
         private AstType AddMembers(IEnumerable<InterfaceMember> source, Dictionary<string, AstType> typeOverrides, string interfaceName, bool noInterfaceObject, IReadOnlyDictionary<string, string> renames, TypeKind typeKind, IReadOnlyList<string> removes, bool addAsInterfaceMembers, List<EntityDeclaration> members)
         {
             Modifiers @public = addAsInterfaceMembers ? Modifiers.None : Modifiers.Public;
+            Modifiers @extern = addAsInterfaceMembers ? Modifiers.None : Modifiers.Extern;
             var indexedProperties = new Dictionary<string, IndexedPropertyData>();
             var enumerateAsArrayCandidates = new List<AstType>();
 
@@ -839,7 +840,7 @@ namespace Generator
                                     {
                                         Modifiers = @public
                                                     | ((operation.Qualifiers & OperationQualifiers.Static) != 0 ? Modifiers.Static : 0)
-                                                    | Modifiers.Extern,
+                                                    | @extern,
                                         Name = csharpName,
                                         ReturnType = returnType,
                                         Body = null
@@ -862,7 +863,7 @@ namespace Generator
                                         {
                                             Modifiers = @public
                                                         | ((operation.Qualifiers & OperationQualifiers.Static) != 0 ? Modifiers.Static : 0)
-                                                        | Modifiers.Extern,
+                                                        | @extern,
                                             Name = "Call",
                                             ReturnType = returnType,
                                             Body = null
@@ -948,7 +949,7 @@ namespace Generator
                                     var indexType = GetOrDefaultAstType(typeOverrides, indexName, ConvertType(operation.Arguments[0].Type));
                                     var m = new MethodDeclaration
                                     {
-                                        Modifiers = @public | Modifiers.Extern,
+                                        Modifiers = @public | @extern,
                                         Name = "Delete",
                                         ReturnType = new PrimitiveType("void"),
                                         Parameters = { new ParameterDeclaration(indexType, indexName) },
