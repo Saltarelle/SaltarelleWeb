@@ -351,14 +351,18 @@ namespace Generator
                 yield return ExpandParamsAttribute;
         }
 
-        private static Attribute ExternalAttribute(bool obeysTypeSystem, string typeCheckCode = null)
+        private static IEnumerable<Attribute> ExternalAttribute(bool nameAsObject, string typeCheckCode = null)
         {
-            var result = new Attribute { Type = MakeType("Bridge.External") };
+            yield return new Attribute { Type = MakeType("Bridge.External") };
+
+            if (nameAsObject)
+            {
+                yield return new Attribute { Type = MakeType("Bridge.Name"), Arguments = { new PrimitiveExpression("Object") } };
+            }
             //if (obeysTypeSystem)
             //    result.Arguments.Add(new NamedExpression("ObeysTypeSystem", new PrimitiveExpression(true, "true")));
             //if (typeCheckCode != null)
             //    result.Arguments.Add(new NamedExpression("TypeCheckCode", new PrimitiveExpression("\"" + typeCheckCode + "\"", "\"" + typeCheckCode + "\"")));
-            return result;
         }
 
         //private static Attribute IndexerNameAttribute(string name)
@@ -1136,12 +1140,12 @@ namespace Generator
                         if (meta.TagNames.Count > 0)
                         {
                             string typeCheckCode = "{$System.Script}.isInstanceOfType({this}, Element) && " + (meta.TagNames.Count > 1 ? "(" : "") + string.Join(" || ", meta.TagNames.Select(t => "{this}.tagName === '" + t.ToUpperInvariant() + "'")) + (meta.TagNames.Count > 1 ? ")" : "");
-                            attributes.Add(ExternalAttribute(false, typeCheckCode));
+                            attributes.AddRange(ExternalAttribute(false, typeCheckCode));
                             scriptName = "Element";
                         }
                         else
                         {
-                            attributes.Add(ExternalAttribute(meta.TypeKind != TypeKind.Interface));
+                            attributes.AddRange(ExternalAttribute(meta.TypeKind == TypeKind.Interface));
                             scriptName = GetClosestInterfaceObjectName(type);
                         }
 
@@ -1246,7 +1250,7 @@ namespace Generator
                         }
 
                         resultType.Members.AddRange(members.OrderBy(MemberOrderer));
-                        AddAttribute(resultType.Attributes, ExternalAttribute(false));
+                        AddAttributes(resultType.Attributes, ExternalAttribute(true));
                         result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
                     }
                 },
@@ -1281,7 +1285,7 @@ namespace Generator
                         };
                         resultType.BaseTypes.AddRange(baseTypes);
                         resultType.Members.AddRange(members.OrderBy(MemberOrderer));
-                        AddAttribute(resultType.Attributes, ExternalAttribute(false));
+                        AddAttributes(resultType.Attributes, ExternalAttribute(false));
                         AddAttribute(resultType.Attributes, SerializableAttribute);
                         result = new NamespacedEntityDeclaration(meta.Namespace, resultType);
                     }
@@ -1356,7 +1360,7 @@ namespace Generator
                                             return e;
                                         })
                                         .OrderBy(x => x, new EnumMemberDeclarationComparer(false)));
-                    AddAttribute(t.Attributes, ExternalAttribute(false));
+                    AddAttributes(t.Attributes, ExternalAttribute(false));
                     AddAttributes(t.Attributes, EnumAndNameAttributes(false));
                     result = new NamespacedEntityDeclaration(meta.Namespace, t);
                 },
@@ -1449,7 +1453,7 @@ namespace Generator
                 );
             }
 
-            var attributes = new List<Attribute> { ExternalAttribute(false) };
+            var attributes = new List<Attribute> (ExternalAttribute(false));
 
             if (flags)
             {
@@ -1609,9 +1613,15 @@ namespace Generator
                 members.RemoveAll(m => meta.Removes.Contains(m.Name));
                 c.Members.AddRange(members.OrderBy(MemberOrderer));
                 if (meta.GlobalMethods)
-                    AddAttributes(c.Attributes, new[] { ExternalAttribute(false), GlobalMethodsAttribute });
+                {
+                    AddAttributes(c.Attributes, ExternalAttribute(false));
+                    AddAttribute(c.Attributes, GlobalMethodsAttribute);
+                }
                 else
-                    AddAttributes(c.Attributes, new[] { IgnoreNamespaceAttribute, ExternalAttribute(false), NameAttribute(meta.InstanceName) });
+                {
+                    AddAttributes(c.Attributes, ExternalAttribute(false));
+                    AddAttributes(c.Attributes, new[] { IgnoreNamespaceAttribute, NameAttribute(meta.InstanceName) });
+                }
 
                 _result.Add(new NamespacedEntityDeclaration(meta.ClassNamespace, c));
             }
