@@ -59,9 +59,9 @@ AsyncScrollEventDetail
 	nogenerate
 
 Attr
-	namespace = Bridge.Html5.Xml
-	typeOverride ownerElement = Bridge.Html5.Xml.XmlElement
-	name = XmlAttribute
+	namespace = Bridge.Html5.Nodes
+	typeOverride ownerElement = Bridge.Html5.Nodes.Node
+	name = Attr
 
 AudioBuffer
 	namespace = Bridge.Html5.Media.Audio
@@ -242,8 +242,8 @@ CaretPosition
 	namespace = Bridge.Html5
 
 CDATASection
-	namespace = Bridge.Html5.Xml
-	name = XmlCDataSection
+	namespace = Bridge.Html5.Nodes
+	name = CDATASection
 
 CFStateChangeEvent
 	nogenerate
@@ -264,8 +264,8 @@ ChannelSplitterNode
 	namespace = Bridge.Html5.Media.Audio
 
 CharacterData
-	namespace = Bridge.Html5.Xml
-	name = XmlCharacterData
+	namespace = Bridge.Html5.Nodes
+	name = CharacterData
 
 ChildNode
 	mixin
@@ -292,8 +292,8 @@ CommandEvent
 	namespace = Bridge.Html5
 
 Comment
-	namespace = Bridge.Html5.Xml
-	name = XmlComment
+	namespace = Bridge.Html5.Nodes
+	name = Comment
 
 CompositionClauseParameters
 	nogenerate
@@ -374,41 +374,41 @@ Crypto
 	namespace = Bridge.Html5.Security.Cryptography
 
 CSS
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 CSS2Properties
-	namespace = Bridge.Html5
-	name = Style
+	namespace = Bridge.Html5.CSS
+	name = CSSStyleDeclaration
 	ScriptName = CSSStyleDeclaration
 
 CSSBoxType
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 CSSPrimitiveValue
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 CSSRule
-	namespace = Bridge.Html5
-	typeOverride type = Bridge.Html5.CSSRuleType
+	namespace = Bridge.Html5.CSS
+	typeOverride type = Bridge.Html5.CSS.CSSRuleType
 	generateEnum CSSRuleType constants "(.+)_RULE"
 
 CSSRuleList
-	alias = Bridge.Html5.CSSRule[]
+	alias = Bridge.Html5.CSS.CSSRule[]
 	nogenerate
 
 CSSStyleDeclaration
-	alias = Bridge.Html5.Style
+	alias = Bridge.Html5.CSS.CSSStyleDeclaration
 	mixin
 	nogenerate
 
 CSSStyleSheet
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 CSSValue
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 CSSValueList
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 CustomEvent
 	namespace = Bridge.Html5
@@ -546,33 +546,33 @@ DNSLookupDict
 	nogenerate
 
 Document
-	namespace = Bridge.Html5.Xml
+	namespace = Bridge.Html5.Elements
 	name = DocumentBase
 	remove getAnonymousElementByAttribute
 	remove getAnonymousNodes
 	remove getBindingParent
 	remove loadBindingDocument
-	typeOverride whatToShow = Bridge.Html5.Xml.NodeFilter
-	typeOverride activeElement = Bridge.Html5.Xml.XmlElement
-	typeOverride createElement = Bridge.Html5.Xml.XmlElement
-	typeOverride createElementNS = Bridge.Html5.Xml.XmlElement
-	typeOverride currentScript = Bridge.Html5.Xml.XmlElement
-	typeOverride documentElement = Bridge.Html5.Xml.XmlElement
-	typeOverride elementFromPoint = Bridge.Html5.Xml.XmlElement
-	typeOverride getElementById = Bridge.Html5.Xml.XmlElement
-	typeOverride querySelector = Bridge.Html5.Xml.XmlElement
-	typeOverride elt = Bridge.Html5.Xml.XmlElement
-	typeOverride getElementsByClassName = Bridge.Html5.Xml.XmlElementCollection
-	typeOverride getElementsByTagName = Bridge.Html5.Xml.XmlElementCollection
-	typeOverride getElementsByTagNameNS = Bridge.Html5.Xml.XmlElementCollection
+	typeOverride whatToShow = Bridge.Html5.Nodes.NodeFilter
+	typeOverride activeElement = Bridge.Html5.Elements.Element
+	typeOverride createElement = Bridge.Html5.Elements.Element
+	typeOverride createElementNS = Bridge.Html5.Elements.Element
+	typeOverride currentScript = Bridge.Html5.Elements.Element
+	typeOverride documentElement = Bridge.Html5.Elements.Element
+	typeOverride elementFromPoint = Bridge.Html5.Elements.Element
+	typeOverride getElementById = Bridge.Html5.Elements.Element
+	typeOverride querySelector = Bridge.Html5.Elements.Element
+	typeOverride elt = Bridge.Html5.Elements.Element
+	typeOverride getElementsByClassName = Bridge.Html5.Elements.ElementCollection
+	typeOverride getElementsByTagName = Bridge.Html5.Elements.ElementCollection
+	typeOverride getElementsByTagNameNS = Bridge.Html5.Elements.ElementCollection
 	remove register
 	remove undoManager
 
 DocumentFragment
-	namespace = Bridge.Html5.Xml
-	name = XmlDocumentFragment
-	typeOverride getElementById = Bridge.Html5.Xml.XmlElement
-	typeOverride querySelector = Bridge.Html5.Xml.XmlElement
+	namespace = Bridge.Html5.Elements
+	name = DocumentFragment
+	typeOverride getElementById = Bridge.Html5.Elements.Element
+	typeOverride querySelector = Bridge.Html5.Elements.Element
 
 DocumentType
 	namespace = Bridge.Html5
@@ -695,16 +695,16 @@ DynamicsCompressorNode
 	namespace = Bridge.Html5.Media.Audio
 
 Element
-	namespace = Bridge.Html5.Xml
-	name = XmlElement
+	namespace = Bridge.Html5.Elements
+	name = Element
 	remove undoManager
 	remove undoScope
-	typeOverride firstElementChild = Bridge.Html5.Xml.XmlElement
-	typeOverride lastElementChild = Bridge.Html5.Xml.XmlElement
-	typeOverride querySelector = Bridge.Html5.Xml.XmlElement
-	typeOverride getElementsByClassName = Bridge.Html5.Xml.XmlElementCollection
-	typeOverride getElementsByTagName = Bridge.Html5.Xml.XmlElementCollection
-	typeOverride getElementsByTagNameNS = Bridge.Html5.Xml.XmlElementCollection
+	typeOverride firstElementChild = Bridge.Html5.Elements.Element
+	typeOverride lastElementChild = Bridge.Html5.Elements.Element
+	typeOverride querySelector = Bridge.Html5.Elements.Element
+	typeOverride getElementsByClassName = Bridge.Html5.Elements.ElementCollection
+	typeOverride getElementsByTagName = Bridge.Html5.Elements.ElementCollection
+	typeOverride getElementsByTagNameNS = Bridge.Html5.Elements.ElementCollection
 	alias = Bridge.Html5.Element
 
 ElementRegistrationOptions
@@ -900,201 +900,201 @@ HitRegionOptions
 	namespace = Bridge.Html5.Media.Graphics
 
 HTMLAnchorElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = a
-	name = AnchorElement
+	name = HTMLAnchorElement
 
 HTMLAppletElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = applet
-	name = AppletElement
+	name = HTMLAppletElement
 
 HTMLAreaElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = area
-	name = AreaElement
+	name = HTMLAreaElement
 
 HTMLAudioElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = audio
-	name = AudioElement
+	name = HTMLAudioElement
 
 HTMLBaseElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = base
-	name = BaseElement
+	name = HTMLBaseElement
 
 HTMLBodyElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = body
-	name = BodyElement
+	name = HTMLBodyElement
 
 HTMLBRElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = br
-	name = BRElement
+	name = HTMLBRElement
 
 HTMLButtonElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = button
-	name = ButtonElement
+	name = HTMLButtonElement
 
 HTMLCanvasElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = canvas
-	name = CanvasElement
+	name = HTMLCanvasElement
 	typeOverride getContext = Bridge.Html5.Media.Graphics.CanvasRenderingContext
 	typeOverride callback = System.Action<Bridge.Html5.IO.Blob>
 
 HTMLCollection
-	namespace = Bridge.Html5
-	name = ElementCollection
+	namespace = Bridge.Html5.Nodes
+	name = HTMLCollection
 
 HTMLContentElement
-	namespace = Bridge.Html5
-	name = ContentElement
+	namespace = Bridge.Html5.Elements
+	name = HTMLContentElement
 
 HTMLDataElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = data
-	name = DataElement
+	name = HTMLDataElement
 
 HTMLDataListElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = datalist
-	name = DataListElement
+	name = HTMLDataListElement
 
 HTMLDirectoryElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = dir
-	name = DirectoryElement
+	name = HTMLDirectoryElement
 
 HTMLDivElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = div
-	name = DivElement
+	name = HTMLDivElement
 
 HTMLDListElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = dl
-	name = DListElement
+	name = HTMLDListElement
 
 HTMLDocument
-	namespace = Bridge.Html5
-	typeOverride getElementsByName = Bridge.Html5.ElementNodeList
-	typeOverride querySelectorAll = Bridge.Html5.ElementNodeList
-	typeOverride getItems = Bridge.Html5.ElementNodeList
+	namespace = Bridge.Html5.Elements
+	typeOverride getElementsByName = Bridge.Html5.Nodes.HTMLCollection
+	typeOverride querySelectorAll = Bridge.Html5.Nodes.HTMLCollection
+	typeOverride getItems = Bridge.Html5.Nodes.HTMLCollection
 	name = DocumentInstance
 
 HTMLElement
-	namespace = Bridge.Html5
-	name = Element
+	namespace = Bridge.Html5.Elements
+	name = HTMLElement
 	remove properties
-	typeOverride base = Bridge.Html5.Xml.XmlElement
+	typeOverride base = Bridge.Html5.Elements.Element
 
 HTMLEmbedElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = embed
-	name = EmbedElement
+	name = HTMLEmbedElement
 
 HTMLFieldSetElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = fieldset
-	name = FieldSetElement
+	name = HTMLFieldSetElement
 
 HTMLFontElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = font
-	name = FontElement
+	name = HTMLFontElement
 
 HTMLFormElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = form
-	name = FormElement
-	typeOverride "getter nsISupports (DOMString name)" = Bridge.Html5.Element
+	name = HTMLFormElement
+	typeOverride "getter nsISupports (DOMString name)" = Bridge.Html5.Elements.HTMLElement
 
 HTMLFormControlsCollection
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	name = FormControlsCollection
-	typeOverride namedItem = Bridge.Html5.TypeOption<Bridge.Html5.ElementNodeList, Bridge.Html5.Element>
+	typeOverride namedItem = Bridge.Html5.TypeOption<Bridge.Html5.Nodes.HTMLCollection, Bridge.Html5.Elements.HTMLElement>
 
 HTMLFrameElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = frame
 	name = FrameElement
 
 HTMLFrameSetElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = frameset
 	name = FrameSetElement
 
 HTMLHeadElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = head
-	name = HeadElement
+	name = HTMLHeadElement
 
 HTMLHeadingElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = h1, h2, h3, h4, h5, h6
-	name = HeadingElement
+	name = HTMLHeadingElement
 
 HTMLHRElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = hr
-	name = HRElement
+	name = HTMLHRElement
 
 HTMLHtmlElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = html
-	name = HtmlElement
+	name = HTMLHtmlElement
 
 HTMLIFrameElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = iframe
 	name = IFrameElement
 
 HTMLImageElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = img
-	name = ImageElement
+	name = HTMLImageElement
 
 HTMLInputElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = input
-	name = InputElement
+	name = HTMLInputElement
 	remove controllers
 	remove "void send(InputStream data)"
 	remove setRangeText
 
 HTMLLabelElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = label
-	name = LabelElement
+	name = HTMLLabelElement
 
 HTMLLegendElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = legend
-	name = LegendElement
+	name = HTMLLegendElement
 
 HTMLLIElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = li
-	name = LIElement
+	name = HTMLLIElement
 
 HTMLLinkElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = link
-	name = LinkElement
+	name = HTMLLinkElement
 
 HTMLMapElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = map
-	name = MapElement
+	name = HTMLMapElement
 
 HTMLMediaElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = media
-	name = MediaElement
+	name = HTMLMediaElement
 	typeOverride networkState = Bridge.Html5.Media.MediaElementNetworkState
 	typeOverride readyState = Bridge.Html5.Media.MediaElementReadyState
 	typeOverride canPlayType = Bridge.Html5.Media.MediaPlayability
@@ -1104,184 +1104,184 @@ HTMLMediaElement
 	generateEnum Bridge.Html5.Media.MediaElementReadyState constants "((?=HAVE_).+)"
 
 HTMLMenuElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = menu
-	name = MenuElement
+	name = HTMLMenuElement
 
 HTMLMenuItemElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = menuitem
-	name = MenuItemElement
+	name = HTMLMenuItemElement
 
 HTMLMetaElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = meta
-	name = MetaElement
+	name = HTMLMetaElement
 
 HTMLMeterElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = meter
-	name = MeterElement
+	name = HTMLMeterElement
 
 HTMLModElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = ins, del
-	name = ModElement
+	name = HTMLModElement
 
 HTMLObjectElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = object
-	name = ObjectElement
+	name = HTMLObjectElement
 
 HTMLOListElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = ol
-	name = OListElement
+	name = HTMLOListElement
 
 HTMLOptGroupElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = optgroup
-	name = OptGroupElement
+	name = HTMLOptGroupElement
 
 HTMLOptionElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = option
-	name = OptionElement
+	name = HTMLOptionElement
 
 HTMLOptionsCollection
-	namespace = Bridge.Html5
-	name = HtmlOptionsCollection
+	namespace = Bridge.Html5.Elements
+	name = HTMLOptionsCollection
 
 HTMLOutputElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = output
-	name = OutputElement
+	name = HTMLOutputElement
 
 HTMLParagraphElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = p
-	name = ParagraphElement
+	name = HTMLParagraphElement
 
 HTMLParamElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = param
-	name = ParamElement
+	name = HTMLParamElement
 
 HTMLPreElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = pre
-	name = PreElement
+	name = HTMLPreElement
 
 HTMLProgressElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = progress
-	name = ProgressElement
+	name = HTMLProgressElement
 
 HTMLPropertiesCollection
 	nogenerate
 
 HTMLQuoteElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = q
-	name = QuoteElement
+	name = HTMLQuoteElement
 
 HTMLScriptElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = script
-	name = ScriptElement
+	name = HTMLScriptElement
 
 HTMLSelectElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = select
-	name = SelectElement
+	name = HTMLSelectElement
 
 HTMLShadowElement
-	namespace = Bridge.Html5
-	name = ShadowElement
+	namespace = Bridge.Html5.Elements
+	name = HTMLShadowElement
 	
 HTMLSourceElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = source
-	name = SourceElement
+	name = HTMLSourceElement
 
 HTMLSpanElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = span
-	name = SpanElement
+	name = HTMLSpanElement
 
 HTMLStyleElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = style
-	name = StyleElement
+	name = HTMLStyleElement
 
 HTMLTableCaptionElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = caption
-	name = TableCaptionElement
+	name = HTMLTableCaptionElement
 
 HTMLTableCellElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = td, th
-	name = TableCellElement
+	name = HTMLTableCellElement
 
 HTMLTableColElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = col, colgroup
-	name = TableColElement
+	name = HTMLTableColElement
 
 HTMLTableElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = table
-	name = TableElement
+	name = HTMLTableElement
 
 HTMLTableRowElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = tr
-	name = TableRowElement
+	name = HTMLTableRowElement
 
 HTMLTableSectionElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = thead, tfoot, tbody
-	name = TableSectionElement
+	name = HTMLTableSectionElement
 
 HTMLTemplateElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = template
-	name = TemplateElement
+	name = HTMLTemplateElement
 
 HTMLTextAreaElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = textarea
-	name = TextAreaElement
+	name = HTMLTextAreaElement
 
 HTMLTimeElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = time
-	name = TimeElement
+	name = HTMLTimeElement
 
 HTMLTitleElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = title
-	name = TitleElement
+	name = HTMLTitleElement
 
 HTMLTrackElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = track
-	name = TrackElement
+	name = HTMLTrackElement
 
 HTMLUListElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = ul
-	name = UListElement
+	name = HTMLUListElement
 
 HTMLUnknownElement
-	namespace = Bridge.Html5
-	name = UnknownElement
+	namespace = Bridge.Html5.Elements
+	name = HTMLUnknownElement
 
 HTMLVideoElement
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.Elements
 	tagname = video
-	name = VideoElement
+	name = HTMLVideoElement
 
 HttpConnDict
 	nogenerate
@@ -1891,33 +1891,33 @@ NetworkStatsGetOptions
 	nogenerate
 
 Node
-	namespace = Bridge.Html5.Xml
-	name = XmlNode
-	typeOverride nodeType = Bridge.Html5.Xml.XmlNodeType
-	typeOverride compareDocumentPosition = Bridge.Html5.Xml.DocumentPosition
-	typeOverride parentElement = Bridge.Html5.Xml.XmlElement
+	namespace = Bridge.Html5.Nodes
+	name = Node
+	typeOverride nodeType = Bridge.Html5.Nodes.NodeType
+	typeOverride compareDocumentPosition = Bridge.Html5.Nodes.DocumentPosition
+	typeOverride parentElement = Bridge.Html5.Nodes.Node
 	remove setUserData
-	generateEnum XmlNodeType constants "(.+)_NODE" rename CDATA_SECTION = CDATA
+	generateEnum NodeType constants "(.+)_NODE" rename CDATA_SECTION = CDATA
 	generateEnum DocumentPosition constants "DOCUMENT_POSITION_(.+)"
 
 NodeFilter
-	namespace = Bridge.Html5.Xml
+	namespace = Bridge.Html5.Nodes
 	name = INodeFilter
-	typeOverride acceptNode = Bridge.Html5.Xml.NodeFilterReturn
-	generateEnum NodeFilterReturn constants "FILTER_(.+)"
+	typeOverride acceptNode = Bridge.Html5.Nodes.NodeFilterResult
+	generateEnum NodeFilterResult constants "FILTER_(.+)"
 	generateEnum NodeFilter constants "((?=SHOW_).+)" flags
 
 NodeIterator
-	namespace = Bridge.Html5.Xml
-	typeOverride whatToShow = Bridge.Html5.Xml.NodeFilter
+	namespace = Bridge.Html5.Nodes
+	typeOverride whatToShow = Bridge.Html5.Elements.NodeFilter
 
 NodeList
-	namespace = Bridge.Html5.Xml
-	name = XmlNodeList
+	namespace = Bridge.Html5.Nodes
+	name = NodeList
 
 NonDocumentTypeChildNode
-	typeOverride nextElementSibling = Bridge.Html5.Xml.XmlElement
-	typeOverride previousElementSibling = Bridge.Html5.Xml.XmlElement
+	typeOverride nextElementSibling = Bridge.Html5.Nodes.Node
+	typeOverride previousElementSibling = Bridge.Html5.Nodes.Node
 	mixin
 
 Notification
@@ -2042,9 +2042,9 @@ PanningModelType
 	namespace = Bridge.Html5.Media.Audio
 
 ParentNode
-	typeOverride firstElementChild = Bridge.Html5.Xml.XmlElement
-	typeOverride lastElementChild = Bridge.Html5.Xml.XmlElement
-	typeOverride children = Bridge.Html5.Xml.XmlElementCollection
+	typeOverride firstElementChild = Bridge.Html5.Elements.Element
+	typeOverride lastElementChild = Bridge.Html5.Elements.Element
+	typeOverride children = Bridge.Html5.Elements.ElementCollection
 	mixin
 
 Path2D
@@ -2131,6 +2131,7 @@ PositionErrorCallback
 
 PositionOptions
 	namespace = Bridge.Html5.Geolocation
+    interface
 
 Principal
 	nogenerate
@@ -2139,8 +2140,8 @@ PrintCallback
 	nogenerate
 
 ProcessingInstruction
-	namespace = Bridge.Html5.Xml
-	name = XmlProcessingInstruction
+	namespace = Bridge.Html5.Nodes
+	name = ProcessingInstruction
 
 ProgressEvent
 	namespace = Bridge.Html5.Net
@@ -2448,22 +2449,22 @@ StyleRuleChangeEventInit
 	namespace = Bridge.Html5
 
 StyleSheet
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 StyleSheetApplicableStateChangeEvent
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 StyleSheetApplicableStateChangeEventInit
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 StyleSheetChangeEvent
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 StyleSheetChangeEventInit
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 StyleSheetList
-	namespace = Bridge.Html5
+	namespace = Bridge.Html5.CSS
 
 SupportedType
 	namespace = Bridge.Html5
@@ -2558,7 +2559,7 @@ SVGDocument
 
 SVGElement
 	namespace = Bridge.Html5.Media.Graphics.SVG
-	typeOverride base = Bridge.Html5.Xml.XmlElement
+	typeOverride base = Bridge.Html5.Elements.Element
 
 SVGEllipseElement
 	namespace = Bridge.Html5.Media.Graphics.SVG
@@ -2921,8 +2922,8 @@ TelephonyCallGroup
 	nogenerate
 
 Text
-	namespace = Bridge.Html5.Xml
-	name = XmlText
+	namespace = Bridge.Html5.Nodes
+	name = Text
 
 TextDecodeOptions
 	namespace = Bridge.Html5.Text
@@ -2991,8 +2992,8 @@ TreeColumns
 	nogenerate
 
 TreeWalker
-	namespace = Bridge.Html5.Xml
-	typeOverride whatToShow = Bridge.Html5.Xml.NodeFilter
+	namespace = Bridge.Html5.Nodes
+	typeOverride whatToShow = Bridge.Html5.Nodes.NodeFilter
 
 UIEvent
 	namespace = Bridge.Html5
@@ -3211,7 +3212,7 @@ Window
 	namespace = Bridge.Html5
 	name = WindowInstance
 	scriptName = Window
-	typeOverride frames = Bridge.Html5.Xml.XmlElement[]
+	typeOverride frames = Bridge.Html5.Elements.Element[]
 	rename window = Instance
 	remove controllers
 	remove pkcs11
@@ -3301,20 +3302,20 @@ XMLStylesheetProcessingInstruction
 	name = XmlStylesheetProcessingInstruction
 
 XPathEvaluator
-	namespace = Bridge.Html5.Xml.XPath
+	namespace = Bridge.Html5.Elements.XPath
 	name = IXPathEvaluator
 	interface
 
 XPathExpression
-	namespace = Bridge.Html5.Xml.XPath
-	typeOverride type = Bridge.Html5.Xml.XPath.ResultType
+	namespace = Bridge.Html5.Elements.XPath
+	typeOverride type = Bridge.Html5.Elements.XPath.ResultType
 
 XPathNSResolver
-	namespace = Bridge.Html5.Xml.XPath
+	namespace = Bridge.Html5.Elements.XPath
 
 XPathResult
-	namespace = Bridge.Html5.Xml.XPath
-	typeOverride resultType = Bridge.Html5.Xml.XPath.ResultType
+	namespace = Bridge.Html5.Elements.XPath
+	typeOverride resultType = Bridge.Html5.Elements.XPath.ResultType
 	generateEnum ResultType constants "(.+)_TYPE"
 
 XULCommandDispatcher
