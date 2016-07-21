@@ -1,4 +1,6 @@
-﻿namespace Bridge.Html5
+﻿using Bridge.Html5.CSS;
+
+namespace Bridge.Html5
 {
 	[External]
 	public partial class StyleRuleChangeEventInit : EventInit

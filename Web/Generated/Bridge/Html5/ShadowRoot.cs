@@ -1,9 +1,11 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.CSS;
+using Bridge.Html5.Elements;
+using Bridge.Html5.Nodes;
 
 namespace Bridge.Html5
 {
 	[Namespace(false), External]
-	public partial class ShadowRoot : XmlDocumentFragment
+	public partial class ShadowRoot : DocumentFragment
 	{
 		internal extern ShadowRoot();
 
@@ -31,11 +33,11 @@ namespace Bridge.Html5
 
 		public extern Element GetElementById(string elementId);
 
-		public extern ElementCollection GetElementsByClassName(string classNames);
+		public extern HTMLCollection GetElementsByClassName(string classNames);
 
-		public extern ElementCollection GetElementsByTagName(string localName);
+		public extern HTMLCollection GetElementsByTagName(string localName);
 
-		public extern ElementCollection GetElementsByTagNameNS(string @namespace, string localName);
+		public extern HTMLCollection GetElementsByTagNameNS(string @namespace, string localName);
 
 		public string InnerHTML;
 

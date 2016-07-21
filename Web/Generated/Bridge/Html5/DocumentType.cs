@@ -1,9 +1,9 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.Nodes;
 
 namespace Bridge.Html5
 {
 	[Namespace(false), External]
-	public partial class DocumentType : XmlNode
+	public partial class DocumentType : Node
 	{
 		internal extern DocumentType();
 

@@ -1,6 +1,6 @@
 ﻿using Bridge.Html5.Collections.TypedArrays;
+using Bridge.Html5.Elements;
 using Bridge.Html5.IO;
-using Bridge.Html5.Xml;
 
 namespace Bridge.Html5.Net
 {

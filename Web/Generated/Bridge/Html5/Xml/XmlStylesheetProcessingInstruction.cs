@@ -1,7 +1,10 @@
-﻿namespace Bridge.Html5.Xml
+﻿using Bridge.Html5.CSS;
+using Bridge.Html5.Nodes;
+
+namespace Bridge.Html5.Xml
 {
 	[Namespace(false), External, Name("XMLStylesheetProcessingInstruction")]
-	public partial class XmlStylesheetProcessingInstruction : XmlProcessingInstruction
+	public partial class XmlStylesheetProcessingInstruction : ProcessingInstruction
 	{
 		internal extern XmlStylesheetProcessingInstruction();
 

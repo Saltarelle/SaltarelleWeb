@@ -1,4 +1,4 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.Nodes;
 
 namespace Bridge.Html5
 {
@@ -11,6 +11,6 @@ namespace Bridge.Html5
 
 		public readonly int Offset;
 
-		public readonly XmlNode OffsetNode;
+		public readonly Node OffsetNode;
 	}
 }

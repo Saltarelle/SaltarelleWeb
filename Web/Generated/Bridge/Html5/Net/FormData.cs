@@ -1,4 +1,5 @@
-﻿using Bridge.Html5.IO;
+﻿using Bridge.Html5.Elements;
+using Bridge.Html5.IO;
 
 namespace Bridge.Html5.Net
 {
@@ -7,7 +8,7 @@ namespace Bridge.Html5.Net
 	{
 		public extern FormData();
 
-		public extern FormData(FormElement form);
+		public extern FormData(HTMLFormElement form);
 
 		public extern void Append(string name, Blob value);
 

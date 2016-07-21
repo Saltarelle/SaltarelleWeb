@@ -1,4 +1,6 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.CSS;
+using Bridge.Html5.Elements;
+using Bridge.Html5.Nodes;
 using System;
 
 namespace Bridge.Html5
@@ -8,6 +10,6 @@ namespace Bridge.Html5
 	{
 		public CSSBoxType Box;
 
-		public TypeOption<XmlText, Element, DocumentBase> RelativeTo;
+		public TypeOption<Text, Element, DocumentBase> RelativeTo;
 	}
 }

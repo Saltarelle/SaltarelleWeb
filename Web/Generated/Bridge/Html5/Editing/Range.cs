@@ -1,4 +1,5 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.Elements;
+using Bridge.Html5.Nodes;
 
 namespace Bridge.Html5.Editing
 {
@@ -7,7 +8,7 @@ namespace Bridge.Html5.Editing
 	{
 		public extern Range();
 
-		public extern XmlDocumentFragment CloneContents();
+		public extern DocumentFragment CloneContents();
 
 		public extern Range CloneRange();
 
@@ -17,13 +18,13 @@ namespace Bridge.Html5.Editing
 
 		public readonly bool Collapsed;
 
-		public readonly XmlNode CommonAncestorContainer;
+		public readonly Node CommonAncestorContainer;
 
 		public extern short CompareBoundaryPoints(RangeComparison how, Range sourceRange);
 
-		public extern short ComparePoint(XmlNode node, int offset);
+		public extern short ComparePoint(Node node, int offset);
 
-		public extern XmlDocumentFragment CreateContextualFragment(string fragment);
+		public extern DocumentFragment CreateContextualFragment(string fragment);
 
 		public extern void DeleteContents();
 
@@ -35,37 +36,37 @@ namespace Bridge.Html5.Editing
 		[Name("END_TO_START")]
 		public const ushort END_TO_START = 3;
 
-		public readonly XmlNode EndContainer;
+		public readonly Node EndContainer;
 
 		public readonly int EndOffset;
 
-		public extern XmlDocumentFragment ExtractContents();
+		public extern DocumentFragment ExtractContents();
 
 		public extern DOMRect GetBoundingClientRect();
 
 		public extern DOMRectList GetClientRects();
 
-		public extern void InsertNode(XmlNode node);
+		public extern void InsertNode(Node node);
 
-		public extern bool IntersectsNode(XmlNode node);
+		public extern bool IntersectsNode(Node node);
 
-		public extern bool IsPointInRange(XmlNode node, int offset);
+		public extern bool IsPointInRange(Node node, int offset);
 
-		public extern void SelectNode(XmlNode refNode);
+		public extern void SelectNode(Node refNode);
 
-		public extern void SelectNodeContents(XmlNode refNode);
+		public extern void SelectNodeContents(Node refNode);
 
-		public extern void SetEnd(XmlNode refNode, int offset);
+		public extern void SetEnd(Node refNode, int offset);
 
-		public extern void SetEndAfter(XmlNode refNode);
+		public extern void SetEndAfter(Node refNode);
 
-		public extern void SetEndBefore(XmlNode refNode);
+		public extern void SetEndBefore(Node refNode);
 
-		public extern void SetStart(XmlNode refNode, int offset);
+		public extern void SetStart(Node refNode, int offset);
 
-		public extern void SetStartAfter(XmlNode refNode);
+		public extern void SetStartAfter(Node refNode);
 
-		public extern void SetStartBefore(XmlNode refNode);
+		public extern void SetStartBefore(Node refNode);
 
 		[Name("START_TO_END")]
 		public const ushort START_TO_END = 1;
@@ -73,10 +74,10 @@ namespace Bridge.Html5.Editing
 		[Name("START_TO_START")]
 		public const ushort START_TO_START = 0;
 
-		public readonly XmlNode StartContainer;
+		public readonly Node StartContainer;
 
 		public readonly int StartOffset;
 
-		public extern void SurroundContents(XmlNode newParent);
+		public extern void SurroundContents(Node newParent);
 	}
 }

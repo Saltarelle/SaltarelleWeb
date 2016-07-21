@@ -1,4 +1,4 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.Elements;
 using System;
 
 namespace Bridge.Html5.Media
@@ -34,7 +34,7 @@ namespace Bridge.Html5.Media
 
 		public double EndTime;
 
-		public extern XmlDocumentFragment GetCueAsHTML();
+		public extern DocumentFragment GetCueAsHTML();
 
 		public string Id;
 

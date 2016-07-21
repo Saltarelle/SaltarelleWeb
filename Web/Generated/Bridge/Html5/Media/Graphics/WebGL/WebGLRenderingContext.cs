@@ -1,4 +1,5 @@
 ﻿using Bridge.Html5.Collections.TypedArrays;
+using Bridge.Html5.Elements;
 
 namespace Bridge.Html5.Media.Graphics.WebGL
 {
@@ -125,7 +126,7 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 
 		public const int BYTE = 5120;
 
-		public readonly CanvasElement Canvas;
+		public readonly HTMLCanvasElement Canvas;
 
 		public const int CCW = 2305;
 
@@ -846,29 +847,29 @@ namespace Bridge.Html5.Media.Graphics.WebGL
 		[Name("SUBPIXEL_BITS")]
 		public const int SUBPIXEL_BITS = 3408;
 
-		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, CanvasElement canvas);
+		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, HTMLCanvasElement canvas);
+
+		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, HTMLImageElement image);
+
+		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, HTMLVideoElement video);
 
 		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, ImageData pixels);
 
-		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, ImageElement image);
-
 		public extern void TexImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, ArrayBufferView pixels);
-
-		public extern void TexImage2D(int target, int level, int internalformat, int format, int type, VideoElement video);
 
 		public extern void TexParameterf(int target, int pname, double param);
 
 		public extern void TexParameteri(int target, int pname, int param);
 
-		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, CanvasElement canvas);
+		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, HTMLCanvasElement canvas);
+
+		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, HTMLImageElement image);
+
+		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, HTMLVideoElement video);
 
 		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, ImageData pixels);
 
-		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, ImageElement image);
-
 		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, ArrayBufferView pixels);
-
-		public extern void TexSubImage2D(int target, int level, int xoffset, int yoffset, int format, int type, VideoElement video);
 
 		public const int TEXTURE = 5890;
 

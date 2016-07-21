@@ -1,4 +1,4 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.Elements;
 
 namespace Bridge.Html5.Media.Graphics.SVG
 {

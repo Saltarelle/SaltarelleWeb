@@ -1,4 +1,4 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.Nodes;
 
 namespace Bridge.Html5.Editing
 {
@@ -9,23 +9,23 @@ namespace Bridge.Html5.Editing
 
 		public extern void AddRange(Range range);
 
-		public readonly XmlNode AnchorNode;
+		public readonly Node AnchorNode;
 
 		public readonly int AnchorOffset;
 
-		public extern void Collapse(XmlNode node, int offset);
+		public extern void Collapse(Node node, int offset);
 
 		public extern void CollapseToEnd();
 
 		public extern void CollapseToStart();
 
-		public extern bool ContainsNode(XmlNode node, bool partlyContained);
+		public extern bool ContainsNode(Node node, bool partlyContained);
 
 		public extern void DeleteFromDocument();
 
-		public extern void Extend(XmlNode node, int offset);
+		public extern void Extend(Node node, int offset);
 
-		public readonly XmlNode FocusNode;
+		public readonly Node FocusNode;
 
 		public readonly int FocusOffset;
 
@@ -41,6 +41,6 @@ namespace Bridge.Html5.Editing
 
 		public extern void RemoveRange(Range range);
 
-		public extern void SelectAllChildren(XmlNode node);
+		public extern void SelectAllChildren(Node node);
 	}
 }

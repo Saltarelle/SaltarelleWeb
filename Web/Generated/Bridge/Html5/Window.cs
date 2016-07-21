@@ -1,10 +1,11 @@
-﻿using Bridge.Html5.Data.IndexedDB;
+﻿using Bridge.Html5.CSS;
+using Bridge.Html5.Data.IndexedDB;
 using Bridge.Html5.Data.Offline;
 using Bridge.Html5.Data.WebStorage;
 using Bridge.Html5.Editing;
+using Bridge.Html5.Elements;
 using Bridge.Html5.Performance;
 using Bridge.Html5.Security.Cryptography;
-using Bridge.Html5.Xml;
 
 namespace Bridge.Html5
 {
@@ -95,17 +96,17 @@ namespace Bridge.Html5
 
 		public static readonly Element FrameElement;
 
-		public static readonly XmlElement[] Frames;
+		public static readonly Element[] Frames;
 
 		public static bool FullScreen;
 
-		public static extern Style GetComputedStyle(Element elt);
+		public static extern CSSStyleDeclaration GetComputedStyle(Element elt);
 
-		public static extern Style GetComputedStyle(Element elt, string pseudoElt);
+		public static extern CSSStyleDeclaration GetComputedStyle(Element elt, string pseudoElt);
 
-		public static extern Style GetDefaultComputedStyle(Element elt);
+		public static extern CSSStyleDeclaration GetDefaultComputedStyle(Element elt);
 
-		public static extern Style GetDefaultComputedStyle(Element elt, string pseudoElt);
+		public static extern CSSStyleDeclaration GetDefaultComputedStyle(Element elt, string pseudoElt);
 
 		public static extern Selection GetSelection();
 

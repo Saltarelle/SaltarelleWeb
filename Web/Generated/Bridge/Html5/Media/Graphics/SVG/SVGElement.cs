@@ -1,9 +1,10 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.CSS;
+using Bridge.Html5.Elements;
 
 namespace Bridge.Html5.Media.Graphics.SVG
 {
 	[Namespace(false), External]
-	public partial class SVGElement : XmlElement
+	public partial class SVGElement : Element
 	{
 		internal extern SVGElement();
 
@@ -263,7 +264,7 @@ namespace Bridge.Html5.Media.Graphics.SVG
 
 		public extern void RemoveEventListener(SVGElementEvents type, IEventListener listener, bool capture);
 
-		public readonly Style Style;
+		public readonly CSSStyleDeclaration Style;
 
 		public readonly SVGElement ViewportElement;
 	}

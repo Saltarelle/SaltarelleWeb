@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bridge.Html5.Elements;
+using System;
 
 namespace Bridge.Html5.Media.Graphics
 {
@@ -21,7 +22,7 @@ namespace Bridge.Html5.Media.Graphics
 
 		public extern void BezierCurveTo(double cp1x, double cp1y, double cp2x, double cp2y, double x, double y);
 
-		public readonly CanvasElement Canvas;
+		public readonly HTMLCanvasElement Canvas;
 
 		public extern void ClearRect(double x, double y, double w, double h);
 
@@ -41,7 +42,7 @@ namespace Bridge.Html5.Media.Graphics
 
 		public extern CanvasGradient CreateLinearGradient(double x0, double y0, double x1, double y1);
 
-		public extern CanvasPattern CreatePattern(TypeOption<ImageElement, CanvasElement, VideoElement> image, string repetition);
+		public extern CanvasPattern CreatePattern(TypeOption<HTMLImageElement, HTMLCanvasElement, HTMLVideoElement> image, string repetition);
 
 		public extern CanvasGradient CreateRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1);
 
@@ -49,11 +50,11 @@ namespace Bridge.Html5.Media.Graphics
 
 		public extern void DrawFocusIfNeeded(Element element);
 
-		public extern void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double dx, double dy);
+		public extern void DrawImage(TypeOption<HTMLImageElement, HTMLCanvasElement, HTMLVideoElement> image, double dx, double dy);
 
-		public extern void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double dx, double dy, double dw, double dh);
+		public extern void DrawImage(TypeOption<HTMLImageElement, HTMLCanvasElement, HTMLVideoElement> image, double dx, double dy, double dw, double dh);
 
-		public extern void DrawImage(TypeOption<ImageElement, CanvasElement, VideoElement> image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
+		public extern void DrawImage(TypeOption<HTMLImageElement, HTMLCanvasElement, HTMLVideoElement> image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
 
 		public extern void Fill();
 

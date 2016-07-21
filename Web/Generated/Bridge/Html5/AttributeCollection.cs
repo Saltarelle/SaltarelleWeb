@@ -1,44 +1,44 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.Nodes;
 using System.Collections;
 using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
 	[Namespace(false), External, Name("Object")]
-	public partial class AttributeCollection : IEnumerable<XmlAttribute>
+	public partial class AttributeCollection : IEnumerable<Attr>
 	{
 		internal extern AttributeCollection();
 
-		public extern XmlAttribute this[int index]
+		public extern Attr this[int index]
 		{
 			get;
 		}
 
-		public extern XmlAttribute this[string name]
+		public extern Attr this[string name]
 		{
 			get;
 		}
 
 		[Template("Bridge.getEnumerator({this})")]
-		public extern IEnumerator<XmlAttribute> GetEnumerator();
+		public extern IEnumerator<Attr> GetEnumerator();
 
-		public extern XmlAttribute GetNamedItem(string name);
+		public extern Attr GetNamedItem(string name);
 
-		public extern XmlAttribute GetNamedItemNS(string namespaceURI, string localName);
+		public extern Attr GetNamedItemNS(string namespaceURI, string localName);
 
 		[Template("Bridge.getEnumerator({this})")]
 		extern IEnumerator IEnumerable.GetEnumerator();
 
-		public extern XmlAttribute Item(int index);
+		public extern Attr Item(int index);
 
 		public readonly int Length;
 
-		public extern XmlAttribute RemoveNamedItem(string name);
+		public extern Attr RemoveNamedItem(string name);
 
-		public extern XmlAttribute RemoveNamedItemNS(string namespaceURI, string localName);
+		public extern Attr RemoveNamedItemNS(string namespaceURI, string localName);
 
-		public extern XmlAttribute SetNamedItem(XmlAttribute arg);
+		public extern Attr SetNamedItem(Attr arg);
 
-		public extern XmlAttribute SetNamedItemNS(XmlAttribute arg);
+		public extern Attr SetNamedItemNS(Attr arg);
 	}
 }

@@ -1,4 +1,4 @@
-﻿using Bridge.Html5.Xml;
+﻿using Bridge.Html5.Nodes;
 
 namespace Bridge.Html5
 {
@@ -29,7 +29,7 @@ namespace Bridge.Html5
 
 		public readonly int RangeOffset;
 
-		public readonly XmlNode RangeParent;
+		public readonly Node RangeParent;
 
 		[Name("SCROLL_PAGE_DOWN")]
 		public const int SCROLL_PAGE_DOWN = 32768;

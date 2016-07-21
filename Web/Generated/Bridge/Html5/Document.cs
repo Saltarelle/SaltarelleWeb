@@ -1,7 +1,9 @@
-﻿using Bridge.Html5.Editing;
+﻿using Bridge.Html5.CSS;
+using Bridge.Html5.Editing;
+using Bridge.Html5.Elements;
+using Bridge.Html5.Elements.XPath;
+using Bridge.Html5.Nodes;
 using Bridge.Html5.WebComponents;
-using Bridge.Html5.Xml;
-using Bridge.Html5.Xml.XPath;
 using System;
 
 namespace Bridge.Html5
@@ -9,7 +11,7 @@ namespace Bridge.Html5
 	[External, Namespace(false), Name("document")]
 	public static partial class Document
 	{
-		public static readonly XmlElement ActiveElement;
+		public static readonly Element ActiveElement;
 
 		public static extern void AddEventListener(DocumentBaseEvents type, Action listener);
 
@@ -43,17 +45,33 @@ namespace Bridge.Html5
 
 		public static extern void AddEventListener(DocumentInstanceEvents type, IEventListener listener, bool capture);
 
+		public static extern void AddEventListener(NodeEvents type, Action listener);
+
+		public static extern void AddEventListener(NodeEvents type, Action listener, bool capture);
+
+		public static extern void AddEventListener(NodeEvents type, HtmlEventHandler listener);
+
+		public static extern void AddEventListener(NodeEvents type, HtmlEventHandler listener, bool capture);
+
+		public static extern void AddEventListener(NodeEvents type, HtmlEventHandlerWithTarget<Node> listener);
+
+		public static extern void AddEventListener(NodeEvents type, HtmlEventHandlerWithTarget<Node> listener, bool capture);
+
+		public static extern void AddEventListener(NodeEvents type, IEventListener listener);
+
+		public static extern void AddEventListener(NodeEvents type, IEventListener listener, bool capture);
+
 		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener);
 
 		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener);
 
-		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener);
+		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Node> listener);
 
 		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture);
 
 		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture);
 
-		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture);
+		public static extern void AddEventListener(string type, HtmlEventHandlerWithTarget<Node> listener, bool capture);
 
 		public static extern void AddEventListener(string type, IEventListener listener);
 
@@ -61,33 +79,17 @@ namespace Bridge.Html5
 
 		public static extern void AddEventListener(string type, IEventListener listener, bool capture, bool? wantsUntrusted);
 
-		public static extern void AddEventListener(XmlNodeEvents type, Action listener);
-
-		public static extern void AddEventListener(XmlNodeEvents type, Action listener, bool capture);
-
-		public static extern void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener);
-
-		public static extern void AddEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture);
-
-		public static extern void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener);
-
-		public static extern void AddEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture);
-
-		public static extern void AddEventListener(XmlNodeEvents type, IEventListener listener);
-
-		public static extern void AddEventListener(XmlNodeEvents type, IEventListener listener, bool capture);
-
-		public static extern XmlNode AdoptNode(XmlNode node);
+		public static extern Node AdoptNode(Node node);
 
 		public static string AlinkColor;
 
 		public static readonly object All;
 
-		public static readonly ElementCollection Anchors;
+		public static readonly HTMLCollection Anchors;
 
-		public static extern XmlNode AppendChild(XmlNode node);
+		public static extern Node AppendChild(Node node);
 
-		public static readonly ElementCollection Applets;
+		public static readonly HTMLCollection Applets;
 
 		[Name("ATTRIBUTE_NODE")]
 		public const ushort ATTRIBUTE_NODE = 2;
@@ -96,7 +98,7 @@ namespace Bridge.Html5
 
 		public static string BgColor;
 
-		public static Element Body;
+		public static HTMLElement Body;
 
 		public static extern void CaptureEvents();
 
@@ -109,70 +111,70 @@ namespace Bridge.Html5
 
 		public static readonly int ChildElementCount;
 
-		public static readonly XmlNodeList ChildNodes;
+		public static readonly NodeList ChildNodes;
 
-		public static readonly XmlElementCollection Children;
+		public static readonly ElementCollection Children;
 
 		public static extern void Clear();
 
-		public static extern XmlNode CloneNode();
+		public static extern Node CloneNode();
 
-		public static extern XmlNode CloneNode(bool deep);
+		public static extern Node CloneNode(bool deep);
 
 		public static extern void Close();
 
 		[Name("COMMENT_NODE")]
 		public const ushort COMMENT_NODE = 8;
 
-		public static extern DocumentPosition CompareDocumentPosition(XmlNode other);
+		public static extern DocumentPosition CompareDocumentPosition(Node other);
 
 		public static readonly string CompatMode;
 
-		public static extern bool Contains(XmlNode other);
+		public static extern bool Contains(Node other);
 
 		public static readonly string ContentType;
 
-		public static extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from);
+		public static extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<Text, Element, DocumentBase> from);
 
-		public static extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
+		public static extern DOMPoint ConvertPointFromNode(DOMPointInit point, TypeOption<Text, Element, DocumentBase> from, ConvertCoordinateOptions options);
 
-		public static extern DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from);
+		public static extern DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<Text, Element, DocumentBase> from);
 
-		public static extern DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
+		public static extern DOMQuad ConvertQuadFromNode(DOMQuad quad, TypeOption<Text, Element, DocumentBase> from, ConvertCoordinateOptions options);
 
-		public static extern DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from);
+		public static extern DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<Text, Element, DocumentBase> from);
 
-		public static extern DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<XmlText, Element, DocumentBase> from, ConvertCoordinateOptions options);
+		public static extern DOMQuad ConvertRectFromNode(DOMRectReadOnly rect, TypeOption<Text, Element, DocumentBase> from, ConvertCoordinateOptions options);
 
 		public static string Cookie;
 
-		public static extern XmlAttribute CreateAttribute(string name);
+		public static extern Attr CreateAttribute(string name);
 
-		public static extern XmlAttribute CreateAttributeNS(string @namespace, string name);
+		public static extern Attr CreateAttributeNS(string @namespace, string name);
 
-		public static extern XmlCDataSection CreateCDATASection(string data);
+		public static extern CDATASection CreateCDATASection(string data);
 
-		public static extern XmlComment CreateComment(string data);
+		public static extern Comment CreateComment(string data);
 
-		public static extern XmlDocumentFragment CreateDocumentFragment();
+		public static extern DocumentFragment CreateDocumentFragment();
 
 		public static extern Event CreateEvent(string @interface);
 
 		public static extern XPathExpression CreateExpression(string expression, XPathNSResolver resolver);
 
-		public static extern NodeIterator CreateNodeIterator(XmlNode root);
+		public static extern NodeIterator CreateNodeIterator(Node root);
 
-		public static extern NodeIterator CreateNodeIterator(XmlNode root, NodeFilter whatToShow);
+		public static extern NodeIterator CreateNodeIterator(Node root, NodeFilter whatToShow);
 
-		public static extern NodeIterator CreateNodeIterator(XmlNode root, NodeFilter whatToShow, INodeFilter filter);
+		public static extern NodeIterator CreateNodeIterator(Node root, NodeFilter whatToShow, INodeFilter filter);
 
-		public static extern XPathNSResolver CreateNSResolver(XmlNode nodeResolver);
+		public static extern XPathNSResolver CreateNSResolver(Node nodeResolver);
 
-		public static extern XmlProcessingInstruction CreateProcessingInstruction(string target, string data);
+		public static extern ProcessingInstruction CreateProcessingInstruction(string target, string data);
 
 		public static extern Range CreateRange();
 
-		public static extern XmlText CreateTextNode(string data);
+		public static extern Text CreateTextNode(string data);
 
 		public static extern Touch CreateTouch();
 
@@ -209,13 +211,13 @@ namespace Bridge.Html5
 
 		public static extern TouchList CreateTouchList(Touch[] touches);
 
-		public static extern TreeWalker CreateTreeWalker(XmlNode root);
+		public static extern TreeWalker CreateTreeWalker(Node root);
 
-		public static extern TreeWalker CreateTreeWalker(XmlNode root, NodeFilter whatToShow);
+		public static extern TreeWalker CreateTreeWalker(Node root, NodeFilter whatToShow);
 
-		public static extern TreeWalker CreateTreeWalker(XmlNode root, NodeFilter whatToShow, INodeFilter filter);
+		public static extern TreeWalker CreateTreeWalker(Node root, NodeFilter whatToShow, INodeFilter filter);
 
-		public static readonly XmlElement CurrentScript;
+		public static readonly Element CurrentScript;
 
 		public static readonly WindowInstance DefaultView;
 
@@ -254,7 +256,7 @@ namespace Bridge.Html5
 		[Name("DOCUMENT_TYPE_NODE")]
 		public const ushort DOCUMENT_TYPE_NODE = 10;
 
-		public static readonly XmlElement DocumentElement;
+		public static readonly Element DocumentElement;
 
 		public static readonly string DocumentURI;
 
@@ -263,7 +265,7 @@ namespace Bridge.Html5
 		[Name("ELEMENT_NODE")]
 		public const ushort ELEMENT_NODE = 1;
 
-		public static readonly ElementCollection Embeds;
+		public static readonly HTMLCollection Embeds;
 
 		public static extern void EnableStyleSheetsForSet(string name);
 
@@ -273,7 +275,7 @@ namespace Bridge.Html5
 		[Name("ENTITY_REFERENCE_NODE")]
 		public const ushort ENTITY_REFERENCE_NODE = 5;
 
-		public static extern XPathResult Evaluate(string expression, XmlNode contextNode, XPathNSResolver resolver, ushort type, XPathResult result);
+		public static extern XPathResult Evaluate(string expression, Node contextNode, XPathNSResolver resolver, ushort type, XPathResult result);
 
 		public static extern bool ExecCommand(string commandId);
 
@@ -283,21 +285,21 @@ namespace Bridge.Html5
 
 		public static string FgColor;
 
-		public static readonly XmlNode FirstChild;
+		public static readonly Node FirstChild;
 
-		public static readonly XmlElement FirstElementChild;
+		public static readonly Element FirstElementChild;
 
-		public static readonly ElementCollection Forms;
+		public static readonly HTMLCollection Forms;
 
 		public static extern DOMQuad[] GetBoxQuads();
 
 		public static extern DOMQuad[] GetBoxQuads(BoxQuadOptions options);
 
-		public static extern ElementNodeList GetElementsByName(string elementName);
+		public static extern HTMLCollection GetElementsByName(string elementName);
 
-		public static extern ElementNodeList GetItems();
+		public static extern HTMLCollection GetItems();
 
-		public static extern ElementNodeList GetItems(string typeNames);
+		public static extern HTMLCollection GetItems(string typeNames);
 
 		public static extern Selection GetSelection();
 
@@ -309,29 +311,29 @@ namespace Bridge.Html5
 
 		public static extern bool HasFocus();
 
-		public static readonly HeadElement Head;
+		public static readonly HTMLHeadElement Head;
 
 		public static readonly bool Hidden;
 
-		public static readonly ElementCollection Images;
+		public static readonly HTMLCollection Images;
 
 		public static readonly DOMImplementation Implementation;
 
-		public static extern XmlNode ImportNode(XmlNode node);
+		public static extern Node ImportNode(Node node);
 
-		public static extern XmlNode ImportNode(XmlNode node, bool deep);
+		public static extern Node ImportNode(Node node, bool deep);
 
 		public static readonly string InputEncoding;
 
-		public static extern XmlNode InsertBefore(XmlNode node, XmlNode child);
+		public static extern Node InsertBefore(Node node, Node child);
 
 		public static extern bool IsDefaultNamespace(string @namespace);
 
-		public static extern bool IsEqualNode(XmlNode node);
+		public static extern bool IsEqualNode(Node node);
 
-		public static readonly XmlNode LastChild;
+		public static readonly Node LastChild;
 
-		public static readonly XmlElement LastElementChild;
+		public static readonly Element LastElementChild;
 
 		public static readonly string LastModified;
 
@@ -339,7 +341,7 @@ namespace Bridge.Html5
 
 		public static string LinkColor;
 
-		public static readonly ElementCollection Links;
+		public static readonly HTMLCollection Links;
 
 		public static readonly string LocalName;
 
@@ -351,11 +353,11 @@ namespace Bridge.Html5
 
 		public static readonly string NamespaceURI;
 
-		public static readonly XmlNode NextSibling;
+		public static readonly Node NextSibling;
 
 		public static readonly string NodeName;
 
-		public static readonly XmlNodeType NodeType;
+		public static readonly NodeType NodeType;
 
 		public static string NodeValue;
 
@@ -598,17 +600,17 @@ namespace Bridge.Html5
 
 		public static readonly DocumentBase OwnerDocument;
 
-		public static readonly XmlElement ParentElement;
+		public static readonly Node ParentElement;
 
-		public static readonly XmlNode ParentNode;
+		public static readonly Node ParentNode;
 
-		public static readonly ElementCollection Plugins;
+		public static readonly HTMLCollection Plugins;
 
 		public static readonly string PreferredStyleSheetSet;
 
 		public static readonly string Prefix;
 
-		public static readonly XmlNode PreviousSibling;
+		public static readonly Node PreviousSibling;
 
 		[Name("PROCESSING_INSTRUCTION_NODE")]
 		public const ushort PROCESSING_INSTRUCTION_NODE = 7;
@@ -635,7 +637,7 @@ namespace Bridge.Html5
 
 		public static extern void ReleaseEvents();
 
-		public static extern XmlNode RemoveChild(XmlNode child);
+		public static extern Node RemoveChild(Node child);
 
 		public static extern void RemoveEventListener(DocumentBaseEvents type, Action listener);
 
@@ -669,41 +671,41 @@ namespace Bridge.Html5
 
 		public static extern void RemoveEventListener(DocumentInstanceEvents type, IEventListener listener, bool capture);
 
+		public static extern void RemoveEventListener(NodeEvents type, Action listener);
+
+		public static extern void RemoveEventListener(NodeEvents type, Action listener, bool capture);
+
+		public static extern void RemoveEventListener(NodeEvents type, HtmlEventHandler listener);
+
+		public static extern void RemoveEventListener(NodeEvents type, HtmlEventHandler listener, bool capture);
+
+		public static extern void RemoveEventListener(NodeEvents type, HtmlEventHandlerWithTarget<Node> listener);
+
+		public static extern void RemoveEventListener(NodeEvents type, HtmlEventHandlerWithTarget<Node> listener, bool capture);
+
+		public static extern void RemoveEventListener(NodeEvents type, IEventListener listener);
+
+		public static extern void RemoveEventListener(NodeEvents type, IEventListener listener, bool capture);
+
 		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener);
 
 		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener);
 
-		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener);
+		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Node> listener);
 
 		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentInstance> listener, bool capture);
 
 		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<DocumentBase> listener, bool capture);
 
-		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture);
+		public static extern void RemoveEventListener(string type, HtmlEventHandlerWithTarget<Node> listener, bool capture);
 
 		public static extern void RemoveEventListener(string type, IEventListener listener);
 
 		public static extern void RemoveEventListener(string type, IEventListener listener, bool capture);
 
-		public static extern void RemoveEventListener(XmlNodeEvents type, Action listener);
+		public static extern Node ReplaceChild(Node node, Node child);
 
-		public static extern void RemoveEventListener(XmlNodeEvents type, Action listener, bool capture);
-
-		public static extern void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener);
-
-		public static extern void RemoveEventListener(XmlNodeEvents type, HtmlEventHandler listener, bool capture);
-
-		public static extern void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener);
-
-		public static extern void RemoveEventListener(XmlNodeEvents type, HtmlEventHandlerWithTarget<XmlNode> listener, bool capture);
-
-		public static extern void RemoveEventListener(XmlNodeEvents type, IEventListener listener);
-
-		public static extern void RemoveEventListener(XmlNodeEvents type, IEventListener listener, bool capture);
-
-		public static extern XmlNode ReplaceChild(XmlNode node, XmlNode child);
-
-		public static readonly ElementCollection Scripts;
+		public static readonly HTMLCollection Scripts;
 
 		public static string SelectedStyleSheetSet;
 

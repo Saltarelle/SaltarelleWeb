@@ -1,4 +1,5 @@
 ﻿using Bridge.Html5.Collections.TypedArrays;
+using Bridge.Html5.Elements;
 
 namespace Bridge.Html5.Media.Audio
 {
@@ -67,7 +68,7 @@ namespace Bridge.Html5.Media.Audio
 
 		public extern ScriptProcessorNode CreateJavaScriptNode(int bufferSize, int numberOfInputChannels, int numberOfOutputChannels);
 
-		public extern MediaElementAudioSourceNode CreateMediaElementSource(MediaElement mediaElement);
+		public extern MediaElementAudioSourceNode CreateMediaElementSource(HTMLMediaElement mediaElement);
 
 		public extern MediaStreamAudioDestinationNode CreateMediaStreamDestination();
 
